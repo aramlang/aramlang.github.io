@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WebVTT Editor</title>
+  <meta name="description" content="A simple utility to easily create WebVTT files.">
+  <meta name="author" content="Greg Borota">
+
+  <meta property="og:title" content="WebVTT Editor">
+  <meta property="og:type" content="webvtt.editor">
+  <meta property="og:url" content="https://aramlang.github.io/webvtt/">
+  <meta property="og:description" content="A simple utility to easily create WebVTT files.">
+  <meta property="og:image" content="http://peshitta.org/images/Yaw2.jpg">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="vtt.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <header class="header container">
+      <div class="stretch">
+        <input type="text" id="media-url-input" placeholder="Enter URL of an audio or video file"
+          title="Enter URL of an audio or video file">
+      </div>
+      <div>
+        <button id="load-button" value="load" title="Load media">Load</button>
+      </div>
+      <div>
+        <span id="video-checkbox-span" title="Loads the video player when checked">
+          <input type="checkbox" id="video-checkbox" checked>
+          <label for="video-checkbox">Video</label>
+        </span>
+      </div>
+    </header>
+    <main class="main container">
+      <div id="media-div">
+        <div class="vertical-spacing">
+          <span title="If checked output WebVTT automatically on each start/stop">
+            <input type="checkbox" id="record-checkbox">
+            <label for="record-checkbox">WebVTT on start/stop</label>
+          </span>
+        </div>
+        <div>
+          <button id="back-button" title="Jump back">&#9664;&nbsp;</button><input type="number" id="back-seconds-input"
+            value="5" min="1" title="Jump back given number of fraction of a second">
+          <label for="current-counter-input">Id:</label><input id="id-prefix-input" title="Id Prefix"><input
+            type="number" id="current-counter-input" value="0" min="0"
+            title="Current start/stop counter - can be changed"><input id="id-suffix-input" title="Id Suffix">
+        </div>
+        <div class="vertical-spacing">
+          <audio id="audio-control" controls preload class="media-hide">
+            <source type="audio/mpeg">
+            <source type="audio/ogg">
+            <source type="audio/wav">
+            Your browser does not support the audio tag.
+          </audio>
+          <video id="video-control" controls preload class="media-show">
+            <source type="video/mp4">
+            <source type="video/webm">
+            <source type="video/ogg">
+            <source type="video/avi">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <button id="record-button" class="recording" title="Time snapshot active">&#11044;</button>
+          <input id="start-time-input" value="00:00:00.000" data-time="0" readonly title="Last start time - editable">
+          <input id="end-time-input" value="00:00:00.000" data-time="0" readonly title="Last end time - editable"><button
+            id="end-time-button" title="Click to jump to time">&#9650;</button>
+          <button id="output-button" title="Output this WebVTT">&#10148;</button>
+        </div>
+        <div id="snapshot-div" class="vertical-spacing">
+          <input id="ss-24" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-23" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-22" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-21" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-20" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-19" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-18" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-17" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-16" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-15" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-14" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-13" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-12" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-11" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-10" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-9" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-8" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-7" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-6" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-5" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-4" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-3" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-2" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+          <input id="ss-1" value="00:00:00.000" data-time="0" readonly title="Click or &lt;ENTER&gt; to jump to time">
+        </div>
+      </div>
+      <div id="output-div" class="stretch">
+        <textarea id="output-textarea" placeholder="WebVTT Output"></textarea>
+        <span>
+          <a id="download-webvtt" download="data.txt" title="Download">D</a>
+        </span>
+      </div>
+    </main>
+    <footer class="footer">
+      <button id="reload-button" title="Reload Media">Reload</button>
+      <button id="clear-button" title="Clear Content">Clear</button>
+      <button id="copy-button" title="Copy to Clipboard">Copy</button>
+      <button id="parse-button" title="Validate WebVTT content">Parse</button>
+      <button id="save-button" title="Download WebVTT content">Save</button>
+      <button id="save-blob-button" title="Download WebVTT content as blob content" class="media-hide">Blob Save</button>
+      <button id="save-json-button" title="Download WebVTT content as JSON" class="media-hide">To Json</button>
+    </footer>
+  </div>
+</body>
+
+</html>

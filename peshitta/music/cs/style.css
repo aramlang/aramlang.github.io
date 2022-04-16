@@ -1,0 +1,130 @@
+body {
+  background-color: white;
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+header div {
+  background-color: white;
+  padding: 5px 3px 7px 3px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a[href$=".mp3"]::after,
+a[href$=".m3u"]::after {
+  content: " \1F50A";
+}
+
+.english-text {
+  text-align: left;
+}
+
+.estrangela {
+  font-family: 'Estrangelo-V1.1';
+  font-size: x-large;
+  font-weight: normal;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: right;
+}
+
+.section-play {
+  font-family: 'Estrangelo-V1.1';
+  font-size: x-large;
+  font-weight: normal;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: center;
+}
+
+.serto {
+  font-family: 'SertoJerusalem';
+  font-size: xx-large;
+  font-weight: bold;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: right;
+}
+
+.swadaya {
+  font-family: 'EastSyriacAdiabene';
+  font-size: xx-large;
+  font-weight: normal;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: right;
+}
+
+.semitic {
+  font-size: 29px;
+  font-weight: bold;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: right;
+}
+
+span.highlight {
+  background-color: #FFFF00;
+}
+
+span.unhighlight {
+  background-color: transparent;
+}
+
+rect.highlight {
+  fill: #FFFF00;
+  opacity: 0.5;
+}
+
+rect.unhighlight {
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.lg {
+  width: 951px;
+  padding-right: 10px;
+}
+
+.lg .item {
+  width: 353px;
+}
+
+.nd {
+  width: 690px;
+  padding-right: 30px;
+}
+
+.nd .item {
+  width: 270px;
+}
+
+.rz {
+  width: 951px;
+  flex-direction: column;
+}
+
+.rz .item {
+  margin-bottom: 10px;
+}
+
+#lg-container span,
+#lg-svg rect,
+#nd-container span,
+#nd-svg rect,
+#rz-container {
+  cursor: pointer;
+}

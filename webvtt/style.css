@@ -1,0 +1,145 @@
+html,
+body {
+  height: 100%;
+  margin: auto;
+}
+
+.box {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.box .header {
+  flex: 0 1 auto;
+  padding: 5px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+
+.box .main {
+  flex: 1 1 auto;
+}
+
+.box .footer {
+  flex: 0 1 37px;
+  text-align: center;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+.box .footer input,
+button {
+  margin: 7px 5px 0px 0px;
+}
+
+.container {
+  display: flex;
+}
+
+.container .stretch {
+  flex-grow: 2;
+}
+
+.media-hide {
+  display: none;
+}
+
+.media-show {
+  display: block;
+}
+
+.vertical-spacing {
+  margin-top: 7px;
+}
+
+#media-url-input {
+  width: 100%;
+}
+
+#load-button {
+  margin: 0px 0px 0px 12px
+}
+
+#video-checkbox-span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#output-textarea {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  resize: none;
+}
+
+#output-div span {
+  display: none;
+}
+
+#media-div {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  resize: horizontal;
+  overflow: auto;
+  width: 300px;
+}
+
+#id-prefix-input {
+  width: 25px;
+  text-align: right;
+  border-right: none;
+}
+
+#id-suffix-input {
+  width: 25px;
+  text-align: left;
+  border-left: none;
+}
+
+#current-counter-input,
+#back-seconds-input {
+  width: 45px;
+  text-align: center;
+}
+
+#record-button {
+  margin: 0;
+  padding: 0px 2px 0px 2px;
+  text-align: center;
+}
+
+.recording {
+  color: red;
+}
+
+#start-time-input,
+#end-time-input {
+  width: 80px;
+  text-align: center;
+}
+
+#snapshot-div {
+  text-align: center;
+}
+
+#snapshot-div input {
+  width: 80px;
+  text-align: center;
+  margin: 5px 0 0 0;
+  cursor: pointer;
+}
+
+#end-time-button {
+  margin: 0px;
+  cursor: pointer;
+  border-left: none;
+  padding: 1px 5px 1px 5px;
+}

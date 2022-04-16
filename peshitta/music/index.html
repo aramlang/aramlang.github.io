@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Aramaic music</title>
+  <link rel="stylesheet" href="cs/font.css">
+  <link rel="stylesheet" href="cs/style.css">
+  <script src="js/audio.js"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+        <input type="checkbox" id="loop" name="loop" value="loop" checked>
+        <label for="loop" title="Play songs continuously">Repeat Songs</label>
+        <input type="checkbox" id="section-loop" name="section-loop" value="section-loop">
+        <label for="section-loop" title="Play song section continuously">Repeat Section</label>
+        <input type="checkbox" id="section-stop" name="section-stop" value="section-stop">
+        <label for="section-stop" title="Stop after playing clicked song section">Section Stop</label>
+        <input type="checkbox" id="word-stop" name="word-stop" value="word-stop" checked>
+        <label for="word-stop" title="Stop after playing clicked word">Word Stop</label>
+    </div>
+    <audio id="audio" controls>
+      <source src="music/classic/song.mp3" type="audio/mp3">
+      <track id="song.mp3-track" default kind="metadata" srclang="en" src="music/classic/song.mp3.txt" />
+      <track id="nash01.mp3-track" default kind="metadata" srclang="en" src="music/classic/nash01.mp3.txt" />
+      <track id="raza.mp3-track" default kind="metadata" srclang="en" src="music/classic/raza.mp3.txt" />
+      Your browser does not support the audio tag.
+    </audio>
+  </header>
+  <main>
+    <section>
+      <hr>
+      <h4><a href="music/classic.m3u" title="Play all songs on page">Play All Music</a></h4>
+    </section>
+    <section>
+      <hr>
+      <img src="images/lindageorge.jpg" title="Linda George"><br>
+      <span id="song.mp3">Linda George</span><br>
+      <h4><a id="song.mp3-a" href="music/classic/song.mp3" title="Play Hallelujah Song">Play Hallelujah</a></h4>
+      <svg id="lg-svg" width="951" height="365" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg">
+        <image width="951" height="365" preserveAspectRatio="none" xlink:href="images/Hallelujah.jpg" />
+        <rect class="unhighlight" id="lg-e-01_$bx" width="48.491001" height="24.932585" x="896.4491" y="17.745317">
+          <title id="title-lg-e1">Shabbakh (Praise)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-02_lmrya" width="60.99099" height="24.932585" x="829.22803" y="17.745001">
+          <title id="title-lg-e2">l'MarYah (the Lord)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-03_bqwd$h" width="81.390999" height="24.932585" x="737.88098" y="17.745001">
+          <title id="title-lg-e3">b'qudsheh (in His Sanctuary)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-04_$bxwhy" width="89.794998" height="29.116493" x="855.16998" y="50.733002">
+          <title id="title-lg-e4">Shabkhoy (Praise Him)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-05_bxyltnwth" width="115.98999" height="29.116493" x="733.46014"
+          y="50.733002">
+          <title id="title-lg-e5">b'khailthanutheh (for His mighty acts)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-06_$bxwhy" width="89.794998" height="32.056179" x="855.16998" y="82.196632">
+          <title id="title-lg-e6">Shabkhoy (Praise Him)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-07_bqla" width="47.582989" height="32.056179" x="803.336" y="82.196999">
+          <title id="title-lg-e7">b'qala (with the sound)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-08_dqrna" width="66.682999" height="32.056179" x="729.98108" y="82.196999">
+          <title id="title-lg-e8">d'qarna (of the trumpet)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-09_$bxwhy" width="89.794998" height="32.056179" x="855.16998" y="115.68727">
+          <title id="title-lg-e9">Shabkhoy (Praise Him)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-10_bqytra" width="82.840996" height="32.056179" x="768.63" y="115.687">
+          <title id="title-lg-e10">b'qeethareh (with the lyre)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-11_wbknra" width="77.640999" height="32.056179" x="683.56299" y="115.687">
+          <title id="title-lg-e11">w'awkhinareh (and with the harp)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-12_$bxwhy" width="89.794998" height="38.679996" x="855.16998" y="147.09801">
+          <title id="title-lg-e12">Shabkhoy (Praise Him)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-13_bccly" width="62.957001" height="38.679996" x="788.84692" y="147.09801">
+          <title id="title-lg-e13">b'sislay (with cymbals)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-14_$mAa" width="56.657001" height="38.679996" x="726.28998" y="147.09801">
+          <title id="title-lg-e14">shimaa (loud)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-15_$bxwhy" width="89.794998" height="24.892" x="855.16998" y="187.28">
+          <title id="title-lg-e15">Shabkhoy (Praise Him)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-16_bqla" width="51.03299" height="26.892" x="800.71497" y="187.28">
+          <title id="title-lg-e16">b'qala (with a song)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-17_wbqAta" width="75.133003" height="26.892" x="718.06598" y="187.28">
+          <title id="title-lg-e17">w'baqatha (and with acclamation)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-18_hllwya" width="81.504974" height="27.307116" x="864.61011" y="250.74533">
+          <title id="title-lg-e18">HalleluYah (Hallelujah)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-19_hllwya" width="81.504997" height="27.306999" x="774.85773" y="250.745">
+          <title id="title-lg-e19">halleluYah (hallelujah)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-20_ahllwya" width="95.586029" height="27.306999" x="676.271" y="250.745">
+          <title id="title-lg-e20">ehalleluYah (yeah hallelujah)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-21_nzyx" width="61.778" height="27.306999" x="889.01343" y="289.185">
+          <title id="title-lg-e21">n'zayyakh (we celebrate)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-22_mwldh" width="69.318024" height="27.306999" x="818.59509" y="289.185">
+          <title id="title-lg-e22">mawladeh (the birth)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-23_dmlka" width="68.192017" height="27.306999" x="747.30334" y="289.185">
+          <title id="title-lg-e23">d'Malka (of the King)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-24_m$yka" width="71.245026" height="27.306999" x="671.45801" y="289.185">
+          <title id="title-lg-e24">Mshikha (Messiah)</title>
+        </rect>
+        <rect class="unhighlight" id="lg-e-25_hllwya" width="81.504997" height="27.306999" x="864.42102" y="321.827">
+          <title id="title-lg-e25">halleluYah (hallelujah)</title>
+        </rect>
+      </svg>
+      <div class="section-play">
+        <a id="lg-bqwd$h" href="#" title="Play Section 1">bqwd4h</a>| <a id="lg-bxyltnwth" href="#"
+          title="Play Section 2">bxyltnwth</a>| <a id="lg-dqrna" href="#" title="Play Section 3">dqrn0</a>| <a
+          id="lg-wbknra" href="#" title="Play Section 4">wbk6nr0</a>| <a id="lg-bccly" href="#"
+          title="Play Section 5">bcc6lY</a>
+      </div>
+      <div id="lg-container" class="container lg">
+        <div class="semitic item">
+          <span id="lg-a-01_$bx" title="Shabbakh (Praise)">שׁבח</span>
+          <span id="lg-a-02_lmrya" title="l'MarYah (the Lord)">למריא</span>
+          <span id="lg-a-03_bqwd$h" title="b'qudsheh (in His Sanctuary)">בקודשׁה</span>
+          <br>
+          <span id="lg-a-04_$bxwhy" title="Shabkhoy (Praise Him)">שׁבחוהי</span>
+          <span id="lg-a-05_bxyltnwth" title="b'khailthanutheh (for His mighty acts)">בחילתנותה</span>
+          <br>
+          <span id="lg-a-06_$bxwhy" title="Shabkhoy (Praise Him)">שׁבחוהי</span>
+          <span id="lg-a-07_bqla" title="b'qala (with the sound)">בקלא</span>
+          <span id="lg-a-08_dqrna" title="d'qarna (of the trumpet)">דקרנא</span>
+          <br>
+          <span id="lg-a-09_$bxwhy" title="Shabkhoy (Praise Him)">שׁבחוהי</span>
+          <span id="lg-a-10_bqytra" title="b'qeethareh (with the lyre)">בקיתרא</span>
+          <span id="lg-a-11_wbknra" title="w'awkhinareh (and with the harp)">ובכנרא</span>
+          <br>
+          <span id="lg-a-12_$bxwhy" title="Shabkhoy (Praise Him)">שׁבחוהי</span>
+          <span id="lg-a-13_bccly" title="b'sislay (with cymbals)">בצצלי</span>
+          <span id="lg-a-14_$mAa" title="shimaa (loud)">שׁמעא</span>
+          <br>
+          <span id="lg-a-15_$bxwhy" title="Shabkhoy (Praise Him)">שׁבחוהי</span>
+          <span id="lg-a-16_bqla" title="b'qala (with a song)">בקלא</span>
+          <span id="lg-a-17_wbqAta" title="w'baqatha (and with acclamation)">ובקעתא</span>
+          <br><br>
+          <span id="lg-a-18_hllwya" title="HalleluYah (Hallelujah)">הללויא</span>
+          <span id="lg-a-19_hllwya" title="halleluYah (hallelujah)">הללויא</span>
+          <span id="lg-a-20_ahllwya" title="ehalleluYah (yeah hallelujah)">אהללויא</span>
+          <span id="lg-a-21_nzyx" title="n'zayyakh (we celebrate)">נזיח</span>
+          <span id="lg-a-22_mwldh" title="mawladeh (the birth)">מולדה</span>
+          <span id="lg-a-23_dmlka" title="d'Malka (of the King)">דמלכא</span>
+          <span id="lg-a-24_m$yka" title="Mshikha (Messiah)">משׁיכא</span>
+          <span id="lg-a-25_hllwya" title="halleluYah (hallelujah)">הללויא</span>
+        </div>
+        <div class="serto item">
+          <span id="lg-s-01_$bx" title="Shabbakh (Praise)">ܫܒܚ</span>
+          <span id="lg-s-02_lmrya" title="l'MarYah (the Lord)">ܠܡܪܝܐ</span>
+          <span id="lg-s-03_bqwd$h" title="b'qudsheh (in His Sanctuary)">ܒܩܘܕܫܗ</span>
+          <br>
+          <span id="lg-s-04_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-s-05_bxyltnwth" title="b'khailthanutheh (for His mighty acts)">ܒܚܝܠܬܢܘܬܗ</span>
+          <br>
+          <span id="lg-s-06_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-s-07_bqla" title="b'qala (with the sound)">ܒܩܠܐ</span>
+          <span id="lg-s-08_dqrna" title="d'qarna (of the trumpet)">ܕܩܪܢܐ</span>
+          <br>
+          <span id="lg-s-09_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-s-10_bqytra" title="b'qeethareh (with the lyre)">ܒܩܝ̈ܬܪܐ</span>
+          <span id="lg-s-11_wbknra" title="w'awkhinareh (and with the harp)">ܘܒܟ̈ܢܪܐ</span>
+          <br>
+          <span id="lg-s-12_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-s-13_bccly" title="b'sislay (with cymbals)">ܒܨܨ̈ܠܝ</span>
+          <span id="lg-s-14_$mAa" title="shimaa (loud)">ܫܡܥܐ</span>
+          <br>
+          <span id="lg-s-15_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-s-16_bqla" title="b'qala (with a song)">ܒܩܠܐ</span>
+          <span id="lg-s-17_wbqAta" title="w'baqatha (and with acclamation)">ܘܒܩܥܬܐ</span>
+          <br>
+          <br>
+          <span id="lg-s-18_hllwya" title="HalleluYah (Hallelujah)">ܗܠܠܘܝܐ</span>
+          <span id="lg-s-19_hllwya" title="halleluYah (hallelujah)">ܗܠܠܘܝܐ</span>
+          <span id="lg-s-20_ahllwya" title="ehalleluYah (yeah hallelujah)">ܐܗܠܠܘܝܐ</span><br>
+          <span id="lg-s-21_nzyx" title="n'zayyakh (we celebrate)">ܢܙܝܚ</span>
+          <span id="lg-s-22_mwldh" title="mawladeh (the birth)">ܡܘܠܕܗ</span>
+          <span id="lg-s-23_dmlka" title="d'Malka (of the King)">ܕܡܠܟܐ</span>
+          <span id="lg-s-24_m$yka" title="Mshikha (Messiah)">ܡܫܝܟܐ</span><br>
+          <span id="lg-s-25_hllwya" title="halleluYah (hallelujah)">ܗܠܠܘܝܐ</span>
+        </div>
+        <div class="swadaya item">
+          <span id="lg-m-01_$bx" title="Shabbakh (Praise)">ܫܒܚ</span>
+          <span id="lg-m-02_lmrya" title="l'MarYah (the Lord)">ܠܡܪܝܐ</span>
+          <span id="lg-m-03_bqwd$h" title="b'qudsheh (in His Sanctuary)">ܒܩܘܕܫܗ</span>
+          <br>
+          <span id="lg-m-04_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-m-05_bxyltnwth" title="b'khailthanutheh (for His mighty acts)">ܒܚܝܠܬܢܘܬܗ</span>
+          <br>
+          <span id="lg-m-06_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-m-07_bqla" title="b'qala (with the sound)">ܒܩܠܐ</span>
+          <span id="lg-m-08_dqrna" title="d'qarna (of the trumpet)">ܕܩܪܢܐ</span>
+          <br>
+          <span id="lg-m-09_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-m-10_bqytra" title="b'qeethareh (with the lyre)">ܒܩܝ̈ܬܪܐ</span>
+          <span id="lg-m-11_wbknra" title="w'awkhinareh (and with the harp)">ܘܒܟ̈ܢܪܐ</span>
+          <br>
+          <span id="lg-m-12_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-m-13_bccly" title="b'sislay (with cymbals)">ܒܨܨ̈ܠܝ</span>
+          <span id="lg-m-14_$mAa" title="shimaa (loud)">ܫܡܥܐ</span>
+          <br>
+          <span id="lg-m-15_$bxwhy" title="Shabkhoy (Praise Him)">ܫܒܚܘܗܝ</span>
+          <span id="lg-m-16_bqla" title="b'qala (with song)">ܒܩܠܐ</span>
+          <span id="lg-m-17_wbqAta" title="w'baqatha (and with acclamation)">ܘܒܩܥܬܐ</span>
+          <br>
+          <br>
+          <span id="lg-m-18_hllwya" title="HalleluYah (Hallelujah)">ܗܠܠܘܝܐ</span>
+          <span id="lg-m-19_hllwya" title="halleluYah (hallelujah)">ܗܠܠܘܝܐ</span>
+          <span id="lg-m-20_ahllwya" title="ehalleluYah (yeah hallelujah)">ܐܗܠܠܘܝܐ</span><br>
+          <span id="lg-m-21_nzyx" title="n'zayyakh (we celebrate)">ܢܙܝܚ</span>
+          <span id="lg-m-22_mwldh" title="mawladeh (the birth)">ܡܘܠܕܗ</span>
+          <span id="lg-m-23_dmlka" title="d'Malka (of the King)">ܕܡܠܟܐ</span>
+          <span id="lg-m-24_m$yka" title="Mshikha (Messiah)">ܡܫܝܟܐ</span><br>
+          <span id="lg-m-25_hllwya" title="halleluYah (hallelujah)">ܗܠܠܘܝܐ</span>
+        </div>
+      </div>
+    </section>
+    <section>
+      <hr>
+      <img src="images/NashDidan.jpg" title="Nash Nidan"><br>
+      <span id="nash01.mp3">Nash Didan</span>
+      <h4><a id="nash01.mp3-a" href="music/classic/nash01.mp3" title="Play Jubillenium Song">Play Jubillenium</a></h4>
+      <svg id="nd-svg" width="690" height="265" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg">
+        <image width="690" height="265" preserveAspectRatio="none" xlink:href="images/Jubillenium.jpg" />
+        <rect class="unhighlight" id="nd-a-01_axnn" width="38.873238" height="17.492958" x="642.70422" y="48.591549">
+          <title id="title2681">We (אנחנו)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-02_awlm" width="45.352142" height="22.452417" x="597.35211" y="43.632088">
+          <title id="title2683">declare (מצהירימ)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-03_mykwlw" width="57.014084" height="22.676056" x="623.91547" y="65.436615">
+          <title id="title2685">Of all (מכל)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-04_mylytyyh" width="74.507027" height="22.676058" x="549.40845"
+          y="65.436615">
+          <title id="title2687">nations (האומות)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-05_alhh" width="49.239433" height="20.732393" x="632.9859" y="86.169014">
+          <title id="title2689">That God (שאלוהים)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-06_bryyln" width="62.84507" height="18.788731" x="570.14081" y="88.112671">
+          <title id="title2691">has created us (ברא אותנו)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-07_bny$nt" width="61.54929" height="18.140844" x="620.02814" y="106.90141">
+          <title id="title2693">For the purpose (במטרת)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-08_$lwm" width="49.887329" height="18.140854" x="570.14081" y="106.9014">
+          <title id="title2695">of peace (שלום)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-09_kpnh" width="43.408451" height="16.197184" x="638.81689" y="130.87323">
+          <title>We'll give (ניתן)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-10_abk" width="45.352119" height="19.436621" x="593.46478" y="130.87323">
+          <title>a hand/shoulder (כתף)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-11_ky" width="23.97183" height="13.605634" x="659.54926" y="152.9014">
+          <title>To (כדי)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-12_awdk" width="49.887299" height="16.845066" x="609.66193" y="153.54929">
+          <title>carry (לעשות)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-13_gl" width="24.619802" height="16.845083" x="659.54919" y="170.39435">
+          <title>With (עם)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-14_gwbylnywm" width="84.225266" height="16.845064" x="575.32391"
+          y="170.39436">
+          <title>the Jubillenium (הג'ובילניום)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-15_kbwd" width="45.352112" height="14.253521" x="637.52112" y="194.3662">
+          <title>Respect (כבוד)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-16_waysTh" width="62.197205" height="21.380295" x="575.32391" y="187.23943">
+          <title>and appreciation (והערכה)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-17_alpt" width="56.366188" height="23.971823" x="631.26758" y="208.61972">
+          <title>The thousand (אלף)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-18_$nh" width="34.56337" height="18.140839" x="596.70422" y="214.4507">
+          <title>years (השנים)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-19_adyynh" width="62.845081" height="16.197176" x="533.85913" y="216.39436">
+          <title>next (הבאות)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-20_alpt" width="51.605644" height="18.14085" x="631.26758" y="232.59154">
+          <title>The thousand of (יהיו אלף)</title>
+        </rect>
+        <rect class="unhighlight" id="nd-a-21_gwbylnywm" width="79.267593" height="18.140848" x="552" y="232.59154">
+          <title>Jubillenium (הג'ובילניום)</title>
+        </rect>
+      </svg>
+      <div class="section-play">
+        <a id="nd-lady" href="#" title="Play Lady Normal Voice">0</a> | <a id="nd-gentleman" href="#"
+          title="Play Gentleman">b</a> | <a id="nd-lady-higher" href="#" title="Play Lady Higher Voice">g</a>
+      </div>
+      <div id="nd-container" class="container nd">
+        <div class="serto item">
+          <span id="nd-s-01_axnn" title="We (אנחנו)">ܐܚܢܢ</span>
+          <span id="nd-s-02_awlm" title="declare (מצהירימ)">ܐܘܠܡ</span>
+          <br>
+          <span id="nd-s-03_mykwlw" title="Of all (מכל)">ܡܝܟܘܠܘ</span>
+          <span id="nd-s-04_mylytyyh" title="nations (האומות)">ܡܝܠܝܬܝܝܗ</span>
+          <br>
+          <span id="nd-s-05_alhh" title="That God (שאלוהים)">ܐܠܗܗ</span>
+          <span id="nd-s-06_bryyln" title="has created us (ברא אותנו)">ܒܪܝܝܠܢ</span>
+          <br>
+          <span id="nd-s-07_bny$nt" title="For the purpose (במטרת)">ܒܢܝܫܢܬ</span>
+          <span id="nd-s-08_$lwm" title="of peace (שלום)">ܫܠܘܡ</span>
+          <br>
+          <span id="nd-s-09_kpnh" title="We'll give (ניתן)">ܟܦܢܗ</span>
+          <span id="nd-s-10_abk" title="a hand/shoulder (כתף)">ܐܒܟ</span>
+          <br>
+          <span id="nd-s-11_ky" title="To (כדי)">ܟܝ</span>
+          <span id="nd-s-12_awdk" title="carry (לעשות)">ܐܘܕܟ</span>
+          <br>
+          <span id="nd-s-13_gl" title="With (עם)">ܓܠ</span>
+          <span id="nd-s-14_gwbylnywm" title="the Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
+          <br>
+          <span id="nd-s-15_kbwd" title="Respect (כבוד)">ܟܒܘܕ</span>
+          <span id="nd-s-16_waysTh" title="and appreciation (והערכה)">ܘܐܝܣܛܗ</span>
+          <br>
+          <span id="nd-s-17_alpt" title="The thousand (אלף)">ܐܠܦܬ</span>
+          <span id="nd-s-18_$nh" title="years (השנים)">ܫܢܗ</span>
+          <span id="nd-s-19_adyynh" title="next (הבאות)">ܐܕܝܝܢܗ</span>
+          <br>
+          <span id="nd-s-20_alpt" title="The thousand of (יהיו אלף)">ܐܠܦܬ</span>
+          <span id="nd-s-21_gwbylnywm" title="Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
+        </div>
+        <div class="swadaya item">
+          <span id="nd-m-01_axnn" title="We (אנחנו)">ܐܚܢܢ</span>
+          <span id="nd-m-02_awlm" title="declare (מצהירימ)">ܐܘܠܡ</span>
+          <br>
+          <span id="nd-m-03_mykwlw" title="Of all (מכל)">ܡܝܟܘܠܘ</span>
+          <span id="nd-m-04_mylytyyh" title="nations (האומות)">ܡܝܠܝܬܝܝܗ</span>
+          <br>
+          <span id="nd-m-05_alhh" title="That God (שאלוהים)">ܐܠܗܗ</span>
+          <span id="nd-m-06_bryyln" title="has created us (ברא אותנו)">ܒܪܝܝܠܢ</span>
+          <br>
+          <span id="nd-m-07_bny$nt" title="For the purpose (במטרת)">ܒܢܝܫܢܬ</span>
+          <span id="nd-m-08_$lwm" title="of peace (שלום)">ܫܠܘܡ</span>
+          <br>
+          <span id="nd-m-09_kpnh" title="We'll give (ניתן)">ܟܦܢܗ</span>
+          <span id="nd-m-10_abk" title="a hand/shoulder (כתף)">ܐܒܟ</span>
+          <br>
+          <span id="nd-m-11_ky" title="To (כדי)">ܟܝ</span>
+          <span id="nd-m-12_awdk" title="carry (לעשות)">ܐܘܕܟ</span>
+          <br>
+          <span id="nd-m-13_gl" title="With (עם)">ܓܠ</span>
+          <span id="nd-m-14_gwbylnywm" title="the Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
+          <br>
+          <span id="nd-m-15_kbwd" title="Respect (כבוד)">ܟܒܘܕ</span>
+          <span id="nd-m-16_waysTh" title="and appreciation (והערכה)">ܘܐܝܣܛܗ</span>
+          <br>
+          <span id="nd-m-17_alpt" title="The thousand (אלף)">ܐܠܦܬ</span>
+          <span id="nd-m-18_$nh" title="years (השנים)">ܫܢܗ</span>
+          <span id="nd-m-19_adyynh" title="next (הבאות)">ܐܕܝܝܢܗ</span>
+          <br>
+          <span id="nd-m-20_alpt" title="The thousand of (יהיו אלף)">ܐܠܦܬ</span>
+          <span id="nd-m-21_gwbylnywm" title="Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
+        </div>
+        <div class="estrangela item">
+          <span id="nd-e-01_axnn" title="We (אנחנו)">0xnN</span>
+          <span id="nd-e-02_awlm" title="declare (מצהירימ)">0wlM</span>
+          <br>
+          <span id="nd-e-03_mykwlw" title="Of all (מכל)">mykwlw</span>
+          <span id="nd-e-04_mylytyyh" title="nations (האומות)">mylytyyh</span>
+          <br>
+          <span id="nd-e-05_alhh" title="That God (שאלוהים)">0lhh</span>
+          <span id="nd-e-06_bryyln" title="has created us (ברא אותנו)">bryylN</span>
+          <br>
+          <span id="nd-e-07_bny$nt" title="For the purpose (במטרת)">bny4nt</span>
+          <span id="nd-e-08_$lwm" title="of peace (שלום)">4lwM</span>
+          <br>
+          <span id="nd-e-09_kpnh" title="We'll give (ניתן)">kpnh</span>
+          <span id="nd-e-10_abk" title="a hand/shoulder (כתף)">0bK</span>
+          <br>
+          <span id="nd-e-11_ky" title="To (כדי)">ky</span>
+          <span id="nd-e-12_awdk" title="carry (לעשות)">0wd&lt;</span>
+          <br>
+          <span id="nd-e-13_gl" title="With (עם)">gl</span>
+          <span id="nd-e-14_gwbylnywm" title="the Jubillenium (הג'ובילניום)">g1wbylnywM</span>
+          <br>
+          <span id="nd-e-15_kbwd" title="Respect (כבוד)">kbwd</span>
+          <span id="nd-e-16_waysTh" title="and appreciation (והערכה)">w0ys=h</span>
+          <br>
+          <span id="nd-e-17_alpt" title="The thousand (אלף)">0lpt</span>
+          <span id="nd-e-18_$nh" title="years (השנים)">4nh</span>
+          <span id="nd-e-19_adyynh" title="next (הבאות)">0dyynh</span>
+          <br>
+          <span id="nd-e-20_alpt" title="The thousand of (יהיו אלף)">0lpt</span>
+          <span id="nd-e-21_gwbylnywm" title="Jubillenium (הג'ובילניום)">g1wbylnywM</span>
+        </div>
+      </div>
+    </section>
+    <section>
+      <hr>
+      <img src="images/ChurchLogo.jpg" title="Church of the East"><br>
+      <span id="raza.mp3">Church of the East</span>
+      <h4><a id="raza.mp3-a" href="music/classic/raza.mp3" title="Play Raza Qaddisha">Play Raza Qaddisha (Holy
+          Liturgy)</a></h4>
+      <div class="section-play">
+        <a id="rz-a-b$m" href="#" title="Play Section 1 (b$m)">0. b4M</a> | <a id="rz-b-abwn" href="#"
+          title="Play Section 2 (abwn)">b. 0bwJ</a>
+        | <a id="rz-g-abwn" href="#" title="Play Section 3 (abwn)">g. 0bwJ</a>
+      </div>
+      <div id="rz-container" class="container rz">
+        <div class="item">
+          <span id="rz-m-01_NA">[Neo-Aramaic]</span>
+        </div>
+        <div class="swadaya">
+          <span id="rz-m-01_b$m">[ܒܫܸܡ]</span>
+          <span id="rz-m-02_aba">ܐܲܒܵܐ</span>
+          <span id="rz-m-03_wbra">ܘܲܒܼܪܵܐ</span>
+          <span id="rz-m-04_wrwxa">ܘܪܘܼܚܵܐ</span>
+          <span id="rz-m-05_dqwd$a">ܕܩܘܼܕܫܵܐ</span>
+          <span id="rz-m-06_lAlmin">ܠܥܵܠܡܝܼܢ</span>
+          <span id="rz-m-07_amyn">ܐܵܡܹܝܢ</span>܀
+          <span id="rz-m-08_t$bwxta">ܬܸܫܒܘܼܚܬܵܐ</span>
+          <span id="rz-m-09_lalha">ܠܐܲܠܵܗܵܐ</span>
+          <span id="rz-m-10_bmrwma">ܒܲܡܪ̈ܵܘܡܹܐ</span>.
+          <span id="rz-m-11_wAl">ܘܥܲܠ</span>
+          <span id="rz-m-12_arAa">ܐܲܪܥܵܐ</span>
+          <span id="rz-m-13_$lma">ܫܠܵܡܵܐ</span>
+          <span id="rz-m-14_wsbra">ܘܣܲܒܼܪܵܐ</span>
+          <span id="rz-m-15_Tba">ܛܵܒܼܵܐ</span>
+          <span id="rz-m-16_lbnyn$a">ܠܲܒܼܢܲܝ̈ܢܵܫܵܐ</span> :
+          <span id="rz-m-17_bklAdn">ܒܟܼܠܥܸܕܵܢ</span>
+          <span id="rz-m-18_lAlmin">ܠܥܵܠܡܝܼܢ</span>
+          <span id="rz-m-19_amyn">ܐܵܡܹܝܢ</span>
+          <span id="rz-m-20_amyn">ܐܵܡܹܝܢ</span>
+          <span id="rz-m-21_brqmry">ܒܲܪܸܩܼܡܵܪܝ</span>.
+        </div>
+        <div class="english-text item">
+          <span id="rz-e-01_b$m">[In the name of]</span>
+          <span id="rz-e-02_aba">the Father</span>
+          <span id="rz-e-03_wbra">and of the Son</span>
+          <span id="rz-e-04_wrwxa~0">and of the</span>
+          <span id="rz-e-05_dqwd$a">Holy</span>
+          <span id="rz-e-04_wrwxa">Spirit</span>
+          <span id="rz-e-06_lAlmin">forever</span>
+          <span id="rz-e-07_amyn">Amen</span>:
+          <span id="rz-e-08_t$bwxta">Glory</span>
+          <span id="rz-e-09_lalha">to God</span>
+          <span id="rz-e-10_bmrwma">in the highest</span>,
+          <span id="rz-e-11_wAl">and on</span>
+          <span id="rz-e-12_arAa">earth</span>
+          <span id="rz-e-13_$lma">peace</span>
+          <span id="rz-e-14_wsbra~0">and</span>
+          <span id="rz-e-15_Tba">good</span>
+          <span id="rz-e-14_wsbra">hope</span>
+          <span id="rz-e-16_lbnyn$a">to men</span>
+          <span id="rz-e-17_bklAdn">always</span>
+          <span id="rz-e-18_lAlmin">and forever</span>:
+          <span id="rz-e-19_amyn">Amen</span>
+          <span id="rz-e-20_amyn">Amen</span>
+          <span id="rz-e-21_brqmry">Bless, O my Lord</span>.
+        </div>
+        <div class="swadaya">
+          <span id="rz-m-22_abwn">ܐܲܒܼܘܼܢ</span>
+          <span id="rz-m-23_db$mya">ܕܒܲܫܡܲܝܵܐ</span>
+          <span id="rz-m-24_ntqd$">ܢܸܬܼܩܲܕܲܫ</span>
+          <span id="rz-m-25_$mk">ܫܡܵܟܼ</span>
+          <span id="rz-m-26_tata">ܬܹܐܬܸܐ</span>
+          <span id="rz-m-27_mlkwtk">ܡܲܠܟܘܼܬܼܵܟܼ</span>.
+          <span id="rz-m-28_qdy$">ܩܲܕܝܼܫ</span>
+          <span id="rz-m-29_qdy$">ܩܲܕܝܼܫ</span>
+          <span id="rz-m-30_qdy$t">ܩܲܕܝܼܫܲܬܿ</span>:
+          <span id="rz-m-31_abwn">ܐܲܒܼܘܼܢ</span>
+          <span id="rz-m-32_db$mya">ܕܒܲܫܡܲܝܵܐ</span>.
+          <span id="rz-m-33_dmlyn">ܕܲܡܠܹܝܢ</span>
+
+          <span id="rz-m-34_$mya">ܫܡܲܝܵܐ</span>
+          <span id="rz-m-35_warAa">ܘܐܲܪܥܵܐ</span>
+          <span id="rz-m-36_rbwt">ܪܲܒܘܼܬܼ</span>
+          <span id="rz-m-37_$wbxk">ܫܘܼܒܼܚܵܟܼ</span> :
+          <span id="rz-m-38_Ayra">ܥܝܼܪܹ̈ܐ</span>
+          <span id="rz-m-39_wan$a">ܘܐ݇ܢܵܫܵܐ</span>
+          <span id="rz-m-40_qAyn">ܩܵܥܹܝܢ݁</span>
+          <span id="rz-m-41_lk">ܠܵܟܼ</span>:
+          <span id="rz-m-42_qdy$">ܩܲܕܝܼܫ</span>
+          <span id="rz-m-43_qdy$">ܩܲܕܝܼܫ</span>
+          <span id="rz-m-44_qdy$t">ܩܲܕܝܼܫܲܬܿ</span>:
+        </div>
+        <div class="english-text item">
+          <span id="rz-e-22_abwn">̄Our Father</span>
+          <span id="rz-e-23_db$mya">in Heaven</span>,
+          <span id="rz-e-24_ntqd$">hallowed be</span>
+          <span id="rz-e-25_$mk">thy name</span>.
+          <span id="rz-e-27_mlkwtk">Thy Kingdom</span>
+          <span id="rz-e-26_tata">come</span>.
+          <span id="rz-e-28_qdy$">Holy</span>,
+          <span id="rz-e-29_qdy$">holy</span>,
+          <span id="rz-e-30_qdy$t">holy art Thou</span>,
+          <span id="rz-e-31_abwn">our Father</span>
+          <span id="rz-e-32_db$mya">in heaven</span>.
+          <span id="rz-e-34_$mya">Heaven</span>
+          <span id="rz-e-35_warAa">and earth</span>
+          <span id="rz-e-33_dmlyn">are full</span>
+          <span id="rz-e-36_rbwt">of the greatnees</span>
+          <span id="rz-e-37_$wbxk">of thy glory</span>.
+          <span id="rz-e-38_Ayra">Angels</span>
+          <span id="rz-e-39_wan$a">and men</span>
+          <span id="rz-e-40_qAyn">cry</span>
+          <span id="rz-e-41_lk">to thee</span>,
+          <span id="rz-e-42_qdy$">Holy</span>,
+          <span id="rz-e-43_qdy$">holy</span>,
+          <span id="rz-e-44_qdy$t">holy art Thou</span>.
+        </div>
+      </div>
+      <br>
+    </section>
+  </main>
+  <footer>
+    <hr>
+    <br />
+    Converted from the Music Links at<br><a href="http://www.peshitta.org/">www.peshitta.org</a>
+  </footer>
+</body>
+
+</html>

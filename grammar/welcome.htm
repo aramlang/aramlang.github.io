@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv='imagetoolbar' content='no'>
+
+<title>Welcome</title>
+<meta NAME="author" CONTENT="Alan S. Aldawood">
+
+<STYLE type=text/css>#clock {
+	FONT-SIZE: 60% ; font-family:verdana;
+}
+a         { text-decoration:none }
+
+</style>
+
+<script language="JavaScript">
+// Center the popup copyright window
+function NewWindow(mypage, myname, w, h, scroll) {
+var winl = (screen.width - w) / 2;
+var wint = (screen.height - h) / 2;
+winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+win = window.open(mypage, myname, winprops)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+</script>
+<SCRIPT language="JavaScript">
+function MakeArray(n) {
+	this.length = n
+	return this
+}
+monthNames = new MakeArray(12)
+monthNames[1] = "January"
+monthNames[2] = "February"
+monthNames[3] = "March"
+monthNames[4] = "April"
+monthNames[5] = "May"
+monthNames[6] = "June"
+monthNames[7] = "July"
+monthNames[8] = "August"
+monthNames[9] = "September"
+monthNames[10] = "October"
+monthNames[11] = "November"
+monthNames[12] = "December"
+dayNames = new MakeArray(7)
+dayNames[1] = "Sunday"
+dayNames[2] = "Monday"
+dayNames[3] = "Tuesday"
+dayNames[4] = "Wednesday"
+dayNames[5] = "Thursday"
+dayNames[6] = "Friday"
+dayNames[7] = "Saturday"
+
+function customDateString(oneDate) {
+	var theDay = dayNames[oneDate.getDay() + 1]
+	var theMonth = monthNames[oneDate.getMonth() + 1]
+	var theYear = oneDate.getYear()
+	if (theYear < 2000)
+	theYear = theYear + 1900
+	return theDay + ", " + theMonth + " " + oneDate.getDate() + ", " + theYear
+}
+function dayPart(oneDate) {
+	var theHour = oneDate.getHours()
+	if (theHour < 12)
+		return "morning"
+	if (theHour < 18)
+		return "afternoon"
+	return "evening"
+}
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+// Check whether IE4 or later.
+var MS = navigator.appVersion.indexOf("MSIE");
+         window.isIE4 = (MS > 0) &&
+         (parseInt(navigator.appVersion.substring(MS + 5, MS + 6))>= 4);
+
+         function lead0(val) {
+            // Add leading 0s when necessary.
+            return (val < 10) ? "0" + val.toString() : val;
+         }
+
+         function buildTime() {
+            var time = new Date();
+            var ampm = " AM";
+            var h = time.getHours();
+            // Fix military time and determine ampm.
+            if (h > 12) {
+               h = h - 12;
+               ampm = " PM";
+            }
+            return lead0(h) + ":" + lead0(time.getMinutes()) + ":" +
+               lead0(time.getSeconds()) + ampm;
+         }
+
+         function tick() {
+            // Replace the clock's time with the current time.
+            document.all.clock.innerText = buildTime();
+         }
+</SCRIPT>
+
+<base target="_self">
+</head>
+
+<body bgcolor="#FFFFFF" onload="window.tmr = setInterval('tick()', 999);" 
+onunload="if (null != window.tmr) clearInterval(window.tmr);">
+
+<div align="center"><center>
+<table border="0" cellspacing="0" width="100%" bgcolor="#CC9900">
+<tr><td><div align="center">
+<table border="0" cellspacing="0" width="100%" cellpadding="2" bgcolor="#FFFFFF">
+<tr><td align="center">
+<div align="center">
+<table border="0" cellpadding="3" cellspacing="0" width="500" height="97">
+<tr><td align="center" height="91">
+<img border="0" src="images/usflag2.gif" width="70" height="84"><br>
+  </td>
+</tr></table></div>&nbsp;
+<table border="0" cellpadding="0" cellspacing="0" width="500" bgcolor="#FFFFFF">
+<tr><td align="right" colspan="2" width="498" height="60">
+
+<SCRIPT language="JavaScript">
+today = new Date()
+var header = "<font face=verdana,Arial,Helvetica size=1>" + "<BR>Good " + "</font>"
+header += "<font face=verdana,Arial,Helvetica size=1>" + dayPart(today) + "</font>" + "." + " "
+header += "<font face=verdana,Arial,Helvetica size=1>" + (customDateString(today)) + "</font>"
+document.write(header)
+</SCRIPT>
+<br>
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" width="280">
+<tr><td bgcolor="#DFDFDF" height="1" valign="top">
+  <img border="0" src="images/trans_1.gif" width="1" height="1"></td></tr></table></div>
+<SPAN id=clock>
+
+<SCRIPT language=JavaScript>
+// Down-level script support --
+// output an initial static time.
+document.write(buildTime());
+</SCRIPT>
+</SPAN></td></tr>
+<tr><td align="left" colspan="2" width="498" valign="top" height="47">
+<div align="left">
+<table border="0" cellpadding="0" cellspacing="0" width="191">
+<tr><td width="105" height="40" valign="top">
+  <img border="0" src="images/welcome_alan.jpg" alt="Welcome" width="93" height="39"></td></tr>
+<tr><td width="105" bgcolor="#CC0000"><img border="0" src="images/trans_1.gif" width="1" height="1"></td></tr></table></div></td></tr>
+<tr><td align="left" valign="middle" width="358"><font face="Verdana,Arial,Helvetical" size="2">
+  &quot;<i>Perhaps the most distinctive feature of being human is the capacity to create and use language and other symbolic forms</i>.&quot;<br><br>
+  &quot;<i>It is hard to imagine how any culture could exist without language. In fact, all fundamental aspects of any culture would be virtually impossible without it</i>.&quot;</font></td>      
+<td align="center" width="138" height="130">
+<img border="0" src="images/alan_photo.jpg" width="115" height="132"><br>
+<font face="Verdana" size="1" color="#008000">Alan Aldawood</font></td></tr>
+<tr><td align="left" colspan="2" width="498" valign="top"><font face="Verdana,Arial,Helvetical" size="2">It has always seemed to me that the greatest honor which can come to a person
+is to have a unique love and desire to learn and preserve his/her own culture and tradition.</font></center>
+</td></tr></table>
+<div align="center"><center>
+<table border="0" cellpadding="2" cellspacing="0" width="500">
+<tr><td width="153" align="center"><img border="0" src="images/susan.jpg" width="100" height="123"><br>
+<font face="Verdana" size="1" color="#008000">Susan Gwarggis</font></td>
+<td width="343"><font face="Verdana,Arial,Helvetical" size="2">       
+<br>Teaching the language has always been one of my life's ambitions. It is a very great pleasure for me, as the Webmaster, to extend to you
+a warm welcome to this site.<br><br>I have divided this site into six levels. Each level contains short lessons. With each lesson I have included audio files to teach you
+the correct pronunciation of a specific word.</font></td></tr>
+<tr><td width="496" colspan="2"><font face="Verdana,Arial,Helvetical" size="2"><br>
+If there is anything that I can do which I have not already done to make this site more
+helpful and pleasant, please let me know. I definitely, would appreciate your feedback and valuable suggestions.</font>
+<p align="right"><font face="Verdana" size="1">Alan Aldawood<br>Webmaster</font></p>
+<p align="right">&nbsp;</p></td></tr></table></center></div>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="500">
+<tr><td align="center" height="30" valign="middle"><font face="Verdana,Arial,Helvetica" size="1">
+<a href="manus/manu01.htm">Old Manuscripts</a> 
+| <a href="credit.htm">Acknowledgments</a>
+| <a href="aboutme.htm">About me</a>
+| <a href="copy.htm">Copyright</a>
+| <a href="help.htm">Help?</a></font></td></tr>
+<tr><td bgcolor="#689CD0"><img border="0" src="images/trans_1.gif" width="1" height="1"></td></tr>
+<tr><td align="center"><font face="Verdana,Arial,Helvetica" size="1" color="#808080">
+Copyright &copy; 2000 Alan Aldawood<br>All rights reserved.</font><p><br>
+</td></tr></table></center></div></td></tr></table></div></td></tr></table></div>
+
+</body>
+</html>

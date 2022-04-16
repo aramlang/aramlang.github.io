@@ -1,0 +1,26 @@
+/* Estrangelo (V1.1) ASCII */
+@font-face {
+  font-family: 'Estrangelo-V1.1';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Estrangelo (V1.1)'), local('Estrangelo (V1.1) Regular'), url(font/Estrangelo.ttf) format('truetype');
+  unicode-range: U+0000-00FF;
+}
+
+/* Serto Jerusalem Bold */
+@font-face {
+  font-family: 'SertoJerusalem';
+  src: local('Serto Jerusalem Bold');
+  src: url('font/syrcomjerusalembold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* East Syriac Adiabene */
+@font-face {
+  font-family: 'EastSyriacAdiabene';
+  src: local('East Syriac Adiabene');
+  src: url('font/syrcomadiabene.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
