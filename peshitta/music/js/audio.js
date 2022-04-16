@@ -544,7 +544,7 @@ window.onload = function () {
   }
 
   function setActiveTrack() {
-    getActiveTrak().selected = true;
+    getActiveTrak().default = true;
   }
 
   // #endregion
