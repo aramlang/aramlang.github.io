@@ -11,20 +11,30 @@ window.onload = function () {
 
   const classic = 'music/classic/';
   const halleluyah = 'song.mp3';
-  const halleluyahPath = classic + halleluyah;
   const jubilenium = 'nash01.mp3';
-  const jubileniumPath = classic + jubilenium;
   const raza = 'raza.mp3';
-  const razaPath = classic + raza;
-  const classicList = [halleluyahPath, jubileniumPath, razaPath];
   const wordAdjustment = 0.01;
   const cueAdjustment = 0.001;
 
-  const tracks = {
-    [halleluyah]: halleluyahPath + '.txt',
-    [jubilenium]: jubileniumPath + '.txt',
-    [raza]: razaPath + '.txt'
-  };
+  const classicList = [];
+  const audios = {};
+  const trackElements = {};
+
+  (function () {
+    const halleluyahPath = classic + halleluyah,
+      jubileniumPath = classic + jubilenium,
+      razaPath = classic + raza,
+      trackIdSuff = '-track';
+
+    classicList.push(halleluyahPath, jubileniumPath, razaPath);
+
+    audios[halleluyah] = halleluyahPath;
+    audios[jubilenium] = jubileniumPath;
+    audios[raza] = razaPath;
+    trackElements[halleluyah] = document.getElementById(halleluyah + trackIdSuff);
+    trackElements[jubilenium] = document.getElementById(jubilenium + trackIdSuff);
+    trackElements[raza] = document.getElementById(raza + trackIdSuff);
+  })();
 
   var songIndex = 0;            // song index in the current playlist
   var playList = classicList;   // currently active playlist
@@ -83,9 +93,7 @@ window.onload = function () {
 
     var song = playList[songIndex];
     currentSong = getFileName(song);
-    pauseMedia();
-    audioElement.setAttribute('src', fixUrl(song));
-    setActiveTrack();
+    loadCurrentSong();
     playMedia();
     // need both calls for window to scroll when hash not changed
     window.location.hash = '#';
@@ -121,10 +129,12 @@ window.onload = function () {
     });
   }
 
-
   function cuechangeHandler(event) {
-    var vttCue = event.target.activeCues[0];
-    var id;
+    var vttCue = event.target.activeCues[0],
+      id,
+      sertoHighlighter,
+      ashuritHighlighter;
+
     if (!vttCue || !(id = vttCue.id)) { return; }
 
     var prefix = getWordIdPrefix();
@@ -138,8 +148,8 @@ window.onload = function () {
     var latinHighlighter0 = document.getElementById(latinId0);
     var swadayatHighlighter = document.getElementById(swadayaId);
     if (currentSong != raza) {
-      var sertoHighlighter = document.getElementById(sertoId);
-      var ashuritHighlighter = document.getElementById(ashuritId);
+      sertoHighlighter = document.getElementById(sertoId);
+      ashuritHighlighter = document.getElementById(ashuritId);
     }
 
     function highlight() {
@@ -215,8 +225,10 @@ window.onload = function () {
 
   function loadedmetadataHandler(event) {
     const unnamedSection = '_unnamed';
-    if (!sections[currentSong]) {
-      var vttCues = getActiveTrak().track.cues;
+    if (!sections[currentSong] || !sections[currentSong].length) {
+      var vttCues = trackElements[currentSong].track.cues;
+      if (!vttCues) { return; }
+
       var songSections = sections[currentSong] = {};
       var songFlatCues = flatCues[currentSong] = [];
       var unnamedIndex = 0, bangIndex = 0, sectionIndex = 0,
@@ -281,6 +293,7 @@ window.onload = function () {
     var element = event.target;
     var wordCompleteId = element.id;
     if (!wordCompleteId || !(element instanceof HTMLSpanElement) && !(element instanceof SVGRectElement)) { return; }
+    event.preventDefault();
 
     var wordId = wordCompleteId.substring(wordCompleteId.lastIndexOf('-') + 1).replace(/~.*/, '');
     function wordClosure() {
@@ -384,18 +397,12 @@ window.onload = function () {
     return path.substring(path.lastIndexOf('/') + 1);
   }
 
-  function fixUrl(url) {
-    return includes(window.location.hostname, 'github')
-      ? 'https://media.githubusercontent.com/media/aramlang/aramlang.github.io/main/peshitta/music/' +
-      classic +
-      getFileName(url)
-      : url;
-  }
-
   function getWordCue(wordId) {
     if (!wordId) { return null; }
 
     if (!activeCue) { activeCue = flatCues[currentSong][0]; }
+    if (!activeCue) { return; }
+
     var forward = wordId >= activeCue.id;
     var search = forward ? searchSectionForward : searchSectionBackward;
     var cue = search(wordId);
@@ -513,7 +520,7 @@ window.onload = function () {
   }
 
   function fromVttCue(vttCue) {
-    var vttCues = getActiveTrak().track.cues;
+    var vttCues = trackElements[currentSong].track.cues;
     for (var i = 0; i < vttCues.length; i++) {
       if (vttCues[i] === vttCue) { break; };
     }
@@ -539,20 +546,32 @@ window.onload = function () {
     return isHandled;
   }
 
-  function getActiveTrak() {
-    return document.getElementById(currentSong + '-track');
+  function fixUrl(url) {
+    return includes(window.location.hostname, 'github')
+      ? 'https://media.githubusercontent.com/media/aramlang/aramlang.github.io/main/peshitta/music/' +
+      classic +
+      getFileName(url)
+      : url;
   }
 
-  function setActiveTrack() {
-    getActiveTrak().default = true;
+  function loadCurrentSong() {
+    var track,
+      activeTrack = trackElements[currentSong];
+    pauseMedia();
+    Object.keys(trackElements).forEach(function (key) {
+      track = trackElements[key];
+      track.default = track == activeTrack;
+      track.track.mode = track == activeTrack ? 'showing' : 'disabled';
+    });
+    audioElement.setAttribute('src', fixUrl(audios[currentSong]));
+    audioElement.load();
   }
 
   // #endregion
 
   // #region Startup
 
-  audioElement.setAttribute('src', fixUrl(halleluyahPath));
-  setActiveTrack();
+  loadCurrentSong();
 
   // #endregion
 };
