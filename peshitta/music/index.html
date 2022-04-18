@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Aramaic music</title>
-  <link rel="stylesheet" href="cs/font.css">
+  <link rel="stylesheet" href="../../font/font.css">
   <link rel="stylesheet" href="cs/style.css">
   <script src="js/audio.js"></script>
 </head>
@@ -12,19 +12,21 @@
 <body>
   <header>
     <div>
-        <input type="checkbox" id="loop" name="loop" value="loop" checked>
-        <label for="loop" title="Play songs continuously">Repeat Songs</label>
-        <input type="checkbox" id="section-loop" name="section-loop" value="section-loop">
-        <label for="section-loop" title="Play song section continuously">Repeat Section</label>
-        <input type="checkbox" id="section-stop" name="section-stop" value="section-stop">
-        <label for="section-stop" title="Stop after playing clicked song section">Section Stop</label>
-        <input type="checkbox" id="word-stop" name="word-stop" value="word-stop" checked>
-        <label for="word-stop" title="Stop after playing clicked word">Word Stop</label>
+      <input type="checkbox" id="loop" name="loop" value="loop" checked>
+      <label for="loop" title="Play songs continuously">Repeat Songs</label>
+      <input type="checkbox" id="section-loop" name="section-loop" value="section-loop">
+      <label for="section-loop" title="Play song section continuously">Repeat Section</label>
+      <input type="checkbox" id="section-stop" name="section-stop" value="section-stop">
+      <label for="section-stop" title="Stop after playing clicked song section">Section Stop</label>
+      <input type="checkbox" id="word-stop" name="word-stop" value="word-stop" checked>
+      <label for="word-stop" title="Stop after playing clicked word">Word Stop</label>
     </div>
     <audio id="audio" controls>
       <source src="music/classic/song.mp3" type="audio/mp3">
-      <track id="song.mp3-track" default label="Hallelujah" kind="metadata" srclang="en-US" src="music/classic/song.mp3.txt" />
-      <track id="nash01.mp3-track" label="Jubillenium" kind="metadata" srclang="en-US" src="music/classic/nash01.mp3.txt" />
+      <track id="song.mp3-track" default label="Hallelujah" kind="metadata" srclang="en-US"
+        src="music/classic/song.mp3.txt" />
+      <track id="nash01.mp3-track" label="Jubillenium" kind="metadata" srclang="en-US"
+        src="music/classic/nash01.mp3.txt" />
       <track id="raza.mp3-track" label="Raza" kind="metadata" srclang="en-US" src="music/classic/raza.mp3.txt" />
       Your browser does not support the audio tag.
     </audio>
@@ -120,13 +122,13 @@
         </rect>
       </svg>
       <div class="section-play">
-        <a id="lg-bqwd$h" href="#" title="Play Section 1">bqwd4h</a>| <a id="lg-bxyltnwth" href="#"
-          title="Play Section 2">bxyltnwth</a>| <a id="lg-dqrna" href="#" title="Play Section 3">dqrn0</a>| <a
-          id="lg-wbknra" href="#" title="Play Section 4">wbk6nr0</a>| <a id="lg-bccly" href="#"
-          title="Play Section 5">bcc6lY</a>
+        <a id="lg-bqwd$h" href="#" title="Play Section 1">ܒܩܘܕܫܗ</a> | <a id="lg-bxyltnwth" href="#"
+          title="Play Section 2">ܒܚܝܠܬܢܘܬܗ</a> | <a id="lg-dqrna" href="#" title="Play Section 3">ܕܩܪܢܐ</a> | <a
+          id="lg-wbknra" href="#" title="Play Section 4">ܘܒܟ̈ܢܪܐ</a> | <a id="lg-bccly" href="#"
+          title="Play Section 5">ܒܨܨ̈ܠܝ</a>
       </div>
       <div id="lg-container" class="container lg">
-        <div class="semitic item">
+        <div class="semitic item-s">
           <span id="lg-a-01_$bx" title="Shabbakh (Praise)">שׁבח</span>
           <span id="lg-a-02_lmrya" title="l'MarYah (the Lord)">למריא</span>
           <span id="lg-a-03_bqwd$h" title="b'qudsheh (in His Sanctuary)">בקודשׁה</span>
@@ -156,10 +158,10 @@
           <span id="lg-a-21_nzyx" title="n'zayyakh (we celebrate)">נזיח</span>
           <span id="lg-a-22_mwldh" title="mawladeh (the birth)">מולדה</span>
           <span id="lg-a-23_dmlka" title="d'Malka (of the King)">דמלכא</span>
-          <span id="lg-a-24_m$yka" title="Mshikha (Messiah)">משׁיכא</span>
+          <span id="lg-a-24_m$yka" title="Mshikha (Messiah)">משׁיכא</span><br>
           <span id="lg-a-25_hllwya" title="halleluYah (hallelujah)">הללויא</span>
         </div>
-        <div class="serto item">
+        <div class="serto item-s">
           <span id="lg-s-01_$bx" title="Shabbakh (Praise)">ܫܒܚ</span>
           <span id="lg-s-02_lmrya" title="l'MarYah (the Lord)">ܠܡܪܝܐ</span>
           <span id="lg-s-03_bqwd$h" title="b'qudsheh (in His Sanctuary)">ܒܩܘܕܫܗ</span>
@@ -193,7 +195,7 @@
           <span id="lg-s-24_m$yka" title="Mshikha (Messiah)">ܡܫܝܟܐ</span><br>
           <span id="lg-s-25_hllwya" title="halleluYah (hallelujah)">ܗܠܠܘܝܐ</span>
         </div>
-        <div class="swadaya item">
+        <div class="swadaya item-m">
           <span id="lg-m-01_$bx" title="Shabbakh (Praise)">ܫܒܚ</span>
           <span id="lg-m-02_lmrya" title="l'MarYah (the Lord)">ܠܡܪܝܐ</span>
           <span id="lg-m-03_bqwd$h" title="b'qudsheh (in His Sanctuary)">ܒܩܘܕܫܗ</span>
@@ -304,8 +306,8 @@
         </rect>
       </svg>
       <div class="section-play">
-        <a id="nd-lady" href="#" title="Play Lady Normal Voice">0</a> | <a id="nd-gentleman" href="#"
-          title="Play Gentleman">b</a> | <a id="nd-lady-higher" href="#" title="Play Lady Higher Voice">g</a>
+        <a id="nd-lady" href="#" title="Play Lady Normal Voice">ܐ</a> | <a id="nd-gentleman" href="#"
+          title="Play Gentleman">ܒ</a> | <a id="nd-lady-higher" href="#" title="Play Lady Higher Voice">ܓ</a>
       </div>
       <div id="nd-container" class="container nd">
         <div class="serto item">
@@ -373,36 +375,36 @@
           <span id="nd-m-21_gwbylnywm" title="Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
         </div>
         <div class="estrangela item">
-          <span id="nd-e-01_axnn" title="We (אנחנו)">0xnN</span>
-          <span id="nd-e-02_awlm" title="declare (מצהירימ)">0wlM</span>
+          <span id="nd-e-01_axnn" title="We (אנחנו)">ܐܚܢܢ</span>
+          <span id="nd-e-02_awlm" title="declare (מצהירימ)">ܐܘܠܡ</span>
           <br>
-          <span id="nd-e-03_mykwlw" title="Of all (מכל)">mykwlw</span>
-          <span id="nd-e-04_mylytyyh" title="nations (האומות)">mylytyyh</span>
+          <span id="nd-e-03_mykwlw" title="Of all (מכל)">ܡܝܟܘܠܘ</span>
+          <span id="nd-e-04_mylytyyh" title="nations (האומות)">ܡܝܠܝܬܝܝܗ</span>
           <br>
-          <span id="nd-e-05_alhh" title="That God (שאלוהים)">0lhh</span>
-          <span id="nd-e-06_bryyln" title="has created us (ברא אותנו)">bryylN</span>
+          <span id="nd-e-05_alhh" title="That God (שאלוהים)">ܐܠܗܗ</span>
+          <span id="nd-e-06_bryyln" title="has created us (ברא אותנו)">ܒܪܝܝܠܢ</span>
           <br>
-          <span id="nd-e-07_bny$nt" title="For the purpose (במטרת)">bny4nt</span>
-          <span id="nd-e-08_$lwm" title="of peace (שלום)">4lwM</span>
+          <span id="nd-e-07_bny$nt" title="For the purpose (במטרת)">ܒܢܝܫܢܬ</span>
+          <span id="nd-e-08_$lwm" title="of peace (שלום)">ܫܠܘܡ</span>
           <br>
-          <span id="nd-e-09_kpnh" title="We'll give (ניתן)">kpnh</span>
-          <span id="nd-e-10_abk" title="a hand/shoulder (כתף)">0bK</span>
+          <span id="nd-e-09_kpnh" title="We'll give (ניתן)">ܟܦܢܗ</span>
+          <span id="nd-e-10_abk" title="a hand/shoulder (כתף)">ܐܒܟ</span>
           <br>
-          <span id="nd-e-11_ky" title="To (כדי)">ky</span>
-          <span id="nd-e-12_awdk" title="carry (לעשות)">0wd&#60;</span>
+          <span id="nd-e-11_ky" title="To (כדי)">ܟܝ</span>
+          <span id="nd-e-12_awdk" title="carry (לעשות)">ܐܘܕܟ</span>
           <br>
-          <span id="nd-e-13_gl" title="With (עם)">gl</span>
-          <span id="nd-e-14_gwbylnywm" title="the Jubillenium (הג'ובילניום)">g1wbylnywM</span>
+          <span id="nd-e-13_gl" title="With (עם)">ܓܠ</span>
+          <span id="nd-e-14_gwbylnywm" title="the Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
           <br>
-          <span id="nd-e-15_kbwd" title="Respect (כבוד)">kbwd</span>
-          <span id="nd-e-16_waysTh" title="and appreciation (והערכה)">w0ys=h</span>
+          <span id="nd-e-15_kbwd" title="Respect (כבוד)">ܟܒܘܕ</span>
+          <span id="nd-e-16_waysTh" title="and appreciation (והערכה)">ܘܐܝܣܛܗ</span>
           <br>
-          <span id="nd-e-17_alpt" title="The thousand (אלף)">0lpt</span>
-          <span id="nd-e-18_$nh" title="years (השנים)">4nh</span>
-          <span id="nd-e-19_adyynh" title="next (הבאות)">0dyynh</span>
+          <span id="nd-e-17_alpt" title="The thousand (אלף)">ܐܠܦܬ</span>
+          <span id="nd-e-18_$nh" title="years (השנים)">ܫܢܗ</span>
+          <span id="nd-e-19_adyynh" title="next (הבאות)">ܐܕܝܝܢܗ</span>
           <br>
-          <span id="nd-e-20_alpt" title="The thousand of (יהיו אלף)">0lpt</span>
-          <span id="nd-e-21_gwbylnywm" title="Jubillenium (הג'ובילניום)">g1wbylnywM</span>
+          <span id="nd-e-20_alpt" title="The thousand of (יהיו אלף)">ܐܠܦܬ</span>
+          <span id="nd-e-21_gwbylnywm" title="Jubillenium (הג'ובילניום)">ܓ̰ܘܒܝܠܢܝܘܡ</span>
         </div>
       </div>
     </section>
@@ -413,16 +415,16 @@
       <h4><a id="raza.mp3-a" href="music/classic/raza.mp3" title="Play Raza Qaddisha">Play Raza Qaddisha (Holy
           Liturgy)</a></h4>
       <div class="section-play">
-        <a id="rz-a-b$m" href="#" title="Play Section 1 (b$m)">0. b4M</a> | <a id="rz-b-abwn" href="#"
-          title="Play Section 2 (abwn)">b. 0bwJ</a>
-        | <a id="rz-g-abwn" href="#" title="Play Section 3 (abwn)">g. 0bwJ</a>
+        <a id="rz-a-b$m" href="#" title="Play Section 1 (b$m)">ܐ. ܒܫܸܡ</a> | <a id="rz-b-abwn" href="#"
+          title="Play Section 2 (abwn)">ܒ. ܐܲܒܼܘܼܢ</a>
+        | <a id="rz-g-abwn" href="#" title="Play Section 3 (abwn)">ܓ. ܐܲܒܼܘܼܢ</a>
       </div>
       <div id="rz-container" class="container rz">
         <div class="item">
-          <span id="rz-m-01_NA">[Neo-Aramaic]</span>
+          <br><span id="rz-m-01_NA">[Neo-Aramaic]</span>
         </div>
         <div class="swadaya">
-          <span id="rz-m-01_b$m">[ܒܫܸܡ]</span>
+          <span id="rz-m-01_b$m">ܒܫܸܡ</span>
           <span id="rz-m-02_aba">ܐܲܒܵܐ</span>
           <span id="rz-m-03_wbra">ܘܲܒܼܪܵܐ</span>
           <span id="rz-m-04_wrwxa">ܘܪܘܼܚܵܐ</span>

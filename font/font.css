@@ -1,0 +1,26 @@
+/* Estrangelo Esarhaddon */
+@font-face {
+  font-family: 'Estrangelo Esarhaddon';
+  src: local('Estrangelo Esarhaddon'),
+  url('EstrangeloEsarhaddon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* East Assyrian */
+@font-face {
+  font-family: 'EastAssyrian';
+  src: local('EastAssyrian');
+  src: url('EastAssyrian.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Serto Jerusalem Bold */
+@font-face {
+  font-family: 'SertoJerusalem';
+  src: local('Serto Jerusalem Bold');
+  src: url('syrcomjerusalembold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

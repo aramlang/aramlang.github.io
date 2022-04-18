@@ -28,46 +28,32 @@ a[href$=".m3u"]::after {
 }
 
 .estrangela {
-  font-family: 'Estrangelo-V1.1';
-  font-size: x-large;
-  font-weight: normal;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+  font-family: 'Estrangelo Esarhaddon';
+  font-size: xx-large;
   text-align: right;
 }
 
 .section-play {
-  font-family: 'Estrangelo-V1.1';
-  font-size: x-large;
-  font-weight: normal;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+  font-family: 'Estrangelo Esarhaddon';
+  font-size: xx-large;
   text-align: center;
 }
 
 .serto {
   font-family: 'SertoJerusalem';
   font-size: xx-large;
-  font-weight: bold;
-  direction: rtl;
-  unicode-bidi: bidi-override;
   text-align: right;
 }
 
 .swadaya {
-  font-family: 'EastSyriacAdiabene';
-  font-size: xx-large;
-  font-weight: normal;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+  font-family: 'EastAssyrian';
+  font-size: 29px;
   text-align: right;
 }
 
 .semitic {
-  font-size: 29px;
+  font-size: 30px;
   font-weight: bold;
-  direction: rtl;
-  unicode-bidi: bidi-override;
   text-align: right;
 }
 
@@ -96,12 +82,21 @@ rect.unhighlight {
 
 .lg {
   width: 951px;
-  padding-right: 10px;
 }
 
-.lg .item {
-  width: 353px;
+
+.lg .item-m {
+  min-width: 323px;
+  padding: 0;
+  margin: 0;
 }
+
+.lg .item-s {
+  min-width: 314px;
+  padding: 0;
+  margin: 0;
+}
+
 
 .nd {
   width: 690px;
