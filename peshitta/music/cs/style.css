@@ -41,7 +41,7 @@ a[href$=".m3u"]::after {
 
 .serto {
   font-family: 'SertoJerusalem';
-  font-size: xx-large;
+  font-size: 30px;
   text-align: right;
 }
 
@@ -52,8 +52,7 @@ a[href$=".m3u"]::after {
 }
 
 .semitic {
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 28px;
   text-align: right;
 }
 
