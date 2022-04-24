@@ -58,6 +58,11 @@ const map = {
   [atorLetter.kaphBoth]: letter.kaph,
   [atorLetter.kaphFinal]: letter.kaph,
 
+  [atorLetter.lamadh]: letter.lamadh,
+  [atorLetter.lamadhLeft]: letter.lamadh,
+  [atorLetter.lamadhBoth]: letter.lamadh,
+  [atorLetter.lamadhFinal]: letter.lamadh,
+
   [atorLetter.mim]: letter.mim,
   [atorLetter.mimLeft]: letter.mim,
   [atorLetter.mimBoth]: letter.mim,
@@ -185,11 +190,11 @@ const map = {
     group.secondLetter = letter.yudh;
   },
 
-  [atorLetter.lamadAlap]: function (group) {
+  [atorLetter.lamadhAlap]: function (group) {
     group.letter = letter.lamadh;
     group.secondLetter = letter.alap;
   },
-  [atorLetter.lamadAlapJoined]: function (group) {
+  [atorLetter.lamadhAlapJoined]: function (group) {
     group.letter = letter.lamadh;
     group.secondLetter = letter.alap;
   },

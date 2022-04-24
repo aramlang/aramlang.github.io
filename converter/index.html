@@ -48,26 +48,41 @@
   <span>Source Ator ASCII text</span><br>
   <textarea id="source" rows="3" title="Source text" class="ator" spellcheck="false"
     placeholder="”„´JÒO²}J ”S´N²N @‚ÔC²N¸ ”C²´@¸ i…·C"></textarea> <br>
-  <input id="hexa-char" class="hexa" spellcheck="false" readonly><br>
-  <input id="source-char" class="ator" spellcheck="false" readonly><br><br>
+  <input id="source-char" class="ator" style="height: 40px" spellcheck="false" readonly><br>
+  <input id="hexa-char" class="hexa" spellcheck="false" readonly><br><br>
   <button id="convert" type="button">Convert</button> <br><br>
   <textarea id="output" rows="3" title="Converted text" class="assyrian"
-    placeholder="ܒܫܸܡ ܐܲܒ݂ܵܐ ܘܲܒ݂ܪܵܐ ܘܪܘܼܚܵܐ ܕܩܘܼܕܼܫܵܐ"></textarea>
+    placeholder="ܒܫܸܡ ܐܲܒ݂ܵܐ ܘܲܒ݂ܪܵܐ ܘܪܘܼܚܵܐ ܕܩܘܼܕܼܫܵܐ" dir="rtl"></textarea>
   <script>
     var source = document.getElementById('source'),
       hexaChar = document.getElementById('hexa-char'),
       sourceChar = document.getElementById('source-char'),
       output = document.getElementById('output');
     document.getElementById('convert').addEventListener('click', function () {
-      var str = source.value.trim(), hexa = '', char, spacedSource = '', group = {}, assyr = '', conv;
-      for (var i = str.length - 1; i >= 0; i--) {
-        char = str.charCodeAt(i);
-        hexa = hexa + hexaConvert(char) + ' ';
-        spacedSource = spacedSource + String.fromCharCode(char) + ' ';
-        conv = mapChar(char, group);
-        if (conv) {
-          assyr = assyr + conv;
-          group = {};
+      var str = source.value.trim().replace('\r\n', '\n').replace('\r', '\n');
+      source.value = str;
+      var lines = str.split('\n'),
+        hexa = '',
+        spacedSource = '',
+        assyr = '',
+        line, group, char, conv;
+      for (var l = 0; l < lines.length; l++) {
+        line = lines[l];
+        group = {};
+        char = '';
+        conv = '';
+        for (var i = line.length - 1; i >= 0; i--) {
+          char = line.charCodeAt(i);
+          hexa = hexa + hexaConvert(char) + ' ';
+          spacedSource = spacedSource + String.fromCharCode(char) + ' ';
+          conv = mapChar(char, group);
+          if (conv) {
+            assyr = assyr + conv;
+            group = {};
+          }
+        }
+        if (l < lines.length - 1) {
+          assyr = assyr + '\n';
         }
       }
       hexaChar.value = hexa;

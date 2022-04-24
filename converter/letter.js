@@ -113,8 +113,8 @@ const atorLetter = {
   dalathRishDotless: 0x2030, // ܖ
   heYod: 0x2022,
 
-  lamadAlap: 0x2014,
-  lamadAlapJoined: 0x2DC,
+  lamadhAlap: 0x2014,
+  lamadhAlapJoined: 0x2DC,
 
   rishSyame: 0xE002,
   rishSyame1: 0xE003
