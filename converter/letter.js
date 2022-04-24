@@ -1,99 +1,129 @@
 // according to Atornew98 font
-const atorLetter = {
-  sadheNun:       0x22,
-  alap:           0x40,
+const atorHamza = {
   alaphSuperscript: 0xCD,    // ܑ
-  alapMedial:     0x41,
-  beth:           0x42,
-  bethLeft:       0x43,
-  bethBoth:       0x44,
-  bethFinal:      0x45,
-  gamal:          0x46,
-  gamalLeft:      0x47,
-  gamalBoth:      0x48,
-  gamalFinal:     0x49,
-  dalath:         0x4A,
-  dalathJoined:   0x4B,
+};
 
-  he:             0x4C,
-  heJoined:       0x4D,
+const hamza = {
+  alaphSuperscript: 0x711,    // ܑ
+};
 
-  waw:            0x4E,
-  wawJoined:      0x4F,
+const atorLetter = {
+  sadheNun: 0x22,
 
-  zain:           0x50,
-  zainJoined:     0x51,
+  alap: 0x40,
+  alapMedial: 0x41,
+  alapMedial1: 0x2018,
+  alapFinal: 0x201C,
+  alapFinal1: 0x201D,
 
-  heth:           0x52,
-  hethLeft:       0x53,
-  hethBoth:       0x54,
-  hethFinal:      0x55,
+  beth: 0x42,
+  bethLeft: 0x43,
+  bethBoth: 0x44,
+  bethFinal: 0x45,
 
-  teth:           0x56,
-  tethLeft:       0x57,
-  tethBoth:       0x58,
-  tethFinal:      0x59,
+  gamal: 0x46,
+  gamalLeft: 0x47,
+  gamalBoth: 0x48,
+  gamalFinal: 0x49,
 
-  yudh:           0x5A,
-  yudhLeft:       0x5B,
-  yudhBoth:       0x5C,
-  yudhFinal:      0x5D,
+  dalath: 0x4A,
+  dalathJoined: 0x4B,
 
-  kaph:           0x5E,
-  kaphLeft:       0x5F,
-  kaphBoth:       0x60,
-  kaphFinal:      0x61,
+  he: 0x4C,
+  heJoined: 0x4D,
 
-  lamadh:         0x62,
-  lamadhLeft:     0x63,
-  lamadhBoth:     0x64,
-  lamadhFinal:    0x65,
+  waw: 0x4E,
+  wawJoined: 0x4F,
 
-  mim:            0x66,
-  mimLeft:        0x67,
-  mimBoth:        0x68,
-  mimFinal:       0x69,
+  zain: 0x50,
+  zainJoined: 0x51,
 
-  nun:            0x6A,
-  nunLeft:        0x6B,
-  nunBoth:        0x6C,
-  nunFinal:       0x6D,
+  heth: 0x52,
+  hethLeft: 0x53,
+  hethBoth: 0x54,
+  hethFinal: 0x55,
 
-  semkath:        0x6E,
-  semkathLeft:    0x6F,
-  semkathBoth:    0x70,
-  semkathFinal:   0x71,
+  teth: 0x56,
+  tethLeft: 0x57,
+  tethBoth: 0x58,
+  tethFinal: 0x59,
 
-  e:              0x72,
-  eLeft:          0x73,
-  eBoth:          0x74,
-  eFinal:         0x75,
+  yudh: 0x5A,
+  yudhLeft: 0x5B,
+  yudhBoth: 0x5C,
+  yudhFinal: 0x5D,
 
-  pe:             0x76,
-  peLeft:         0x77,
-  peBoth:         0x78,
-  peFinal:        0x79,
+  kaph: 0x5E,
+  kaphLeft: 0x5F,
+  kaphBoth: 0x60,
+  kaphFinal: 0x61,
 
-  sadhe:          0x7A,
-  sadheJoined:    0x7B,
+  lamadh: 0x62,
+  lamadhLeft: 0x63,
+  lamadhBoth: 0x64,
+  lamadhFinal: 0x65,
 
-  qaph:           0x7C,
-  qaphLeft:       0x7D,
-  qaphBoth:       0x7E,
-  
+  mim: 0x66,
+  mimLeft: 0x67,
+  mimBoth: 0x68,
+  mimFinal: 0x69,
+
+  nun: 0x6A,
+  nunLeft: 0x6B,
+  nunBoth: 0x6C,
+  nunFinal: 0x6D,
+
+  semkath: 0x6E,
+  semkathLeft: 0x6F,
+  semkathBoth: 0x70,
+  semkathFinal: 0x71,
+
+  e: 0x72,
+  eLeft: 0x73,
+  eBoth: 0x74,
+  eFinal: 0x75,
+
+  pe: 0x76,
+  peLeft: 0x77,
+  peBoth: 0x78,
+  peFinal: 0x79,
+
+  sadhe: 0x7A,
+  sadheJoined: 0x7B,
+
+  qaph: 0x7C,
+  qaphLeft: 0x7D,
+  qaphBoth: 0x7E,
+  qaphFinal: 0xE004,
+
   finalTawAlapJoined: 0x153,
   finalTawAlapUnjoined: 0x161,
 
   shin: 0x192,
+  shinLeft: 0x201E,
+  shinBoth: 0x2026,
+  shinFinal: 0x2020,
+
   taw: 0x2C6,
+  tawJoined: 0x2021,
+
+  rish: 0xE001,
+  rishJoined: 0x201A,
+
+  dalathRishDotless: 0x2030, // ܖ
+  heYod: 0x2022,
+
+  lamadAlap: 0x2014,
   lamadAlapJoined: 0x2DC,
+
+  rishSyame: 0xE002,
+  rishSyame1: 0xE003
 }
 
 // according to EastAssyrian font
 const letter = {
   alap: 0x710,                // ܐ
   alaph: 0x710,               // ܐ
-  alaphSuperscript: 0x711,    // ܑ
   beth: 0x712,                // ܒ
   gamal: 0x713,               // ܓ
   gamalGarshuni: 0x714,       // ܔ

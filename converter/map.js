@@ -1,5 +1,6 @@
 
 const map = {
+  [atorPunct.newLine]: punct.newLine,
   [atorPunct.space]: punct.space,
   [atorLetter.sadheNun]: punct.harkleanAsteriscus, // according to assyrian font
   [atorPunct.tatweel]: punct.tatweel,
@@ -10,6 +11,10 @@ const map = {
 
   [atorLetter.alap]: letter.alap,
   [atorLetter.alapMedial]: letter.alap,
+  [atorLetter.alapMedial1]: letter.alap,
+  [atorLetter.alapFinal]: letter.alap,
+  [atorLetter.alapFinal1]: letter.alap,
+  [atorHamza.alaphSuperscript]: hamza.alaphSuperscript,
 
   [atorLetter.beth]: letter.beth,
   [atorLetter.bethLeft]: letter.beth,
@@ -27,8 +32,8 @@ const map = {
   [atorLetter.he]: letter.he,
   [atorLetter.heJoined]: letter.he,
 
-  [atorLetter.wow]: letter.wow,
-  [atorLetter.wowJoined]: letter.wow,
+  [atorLetter.waw]: letter.waw,
+  [atorLetter.wawJoined]: letter.waw,
 
   [atorLetter.zain]: letter.zain,
   [atorLetter.zainJoined]: letter.zain,
@@ -84,16 +89,17 @@ const map = {
   [atorLetter.qaph]: letter.qaph,
   [atorLetter.qaphLeft]: letter.qaph,
   [atorLetter.qaphBoth]: letter.qaph,
+  [atorLetter.qaphBoth]: letter.qaph,
 
   [atorPunct.endOfParagraph]: punct.endOfParagraph,
   [atorPunct.colonSkewedLeft]: punct.colonSkewedLeft,
   [atorPunct.arabicSemicolon]: punct.arabicSemicolon,
   [atorPunct.period]: punct.period,
   [atorSyame.combiningDiaeresis]: syame.combiningDiaeresis,
-  [atourVowel.rwaha]: function (group) {
+  [atorVowel.rwaha]: function (group) {
     // TODO it has overloaded meanings test well
     switch (group.letter) {
-      case letter.wow:
+      case letter.waw:
         group.vowel = vowel.rwaha;
         break;
       case letter.beth:
@@ -109,10 +115,10 @@ const map = {
         break;
     }
   },
-  [atourVowel.hbasaEsataDotted]: function (group) {
+  [atorVowel.hbasaEsataDotted]: function (group) {
     // TODO it has overloaded meanings test well
     switch (group.letter) {
-      case letter.wow:
+      case letter.waw:
       case letter.yudh:
         group.vowel = vowel.hbasaEsataDotted;
         break;
@@ -129,37 +135,70 @@ const map = {
         break;
     }
   },
-  [atourVowel.zqaphaDotted]: vowel.zqaphaDotted,
-  [atourVowel.zqaphaDotted1]: vowel.zqaphaDotted,
-  [atourVowel.zqaphaDotted2]: vowel.zqaphaDotted,
-  [atourVowel.zqaphaDotted3]: vowel.zqaphaDotted,
-  [atourVowel.zlamaDottedAngular]: vowel.zlamaDottedAngular,
-  [atourVowel.zlamaDottedAngular1]: vowel.zlamaDottedAngular,
-  [atourVowel.zlamaDottedHorizontal]: vowel.zlamaDottedHorizontal,
-  [atourVowel.zlamaDottedHorizontal1]: vowel.zlamaDottedHorizontal,
-  [atourVowel.pthahaDotted]: vowel.pthahaDotted,
-  [atourVowel.pthahaDotted1]: vowel.pthahaDotted,
-  [atourVowel.pthahaDotted2]: vowel.pthahaDotted,
-  [atourMark.feminineDot]: mark.feminineDot,
+  [atorVowel.zqaphaDotted]: vowel.zqaphaDotted,
+  [atorVowel.zqaphaDotted1]: vowel.zqaphaDotted,
+  [atorVowel.zqaphaDotted2]: vowel.zqaphaDotted,
+  [atorVowel.zqaphaDotted3]: vowel.zqaphaDotted,
+  [atorVowel.zlamaDottedAngular]: vowel.zlamaDottedAngular,
+  [atorVowel.zlamaDottedAngular1]: vowel.zlamaDottedAngular,
+  [atorVowel.zlamaDottedHorizontal]: vowel.zlamaDottedHorizontal,
+  [atorVowel.zlamaDottedHorizontal1]: vowel.zlamaDottedHorizontal,
+  [atorVowel.pthahaDotted]: vowel.pthahaDotted,
+  [atorVowel.pthahaDotted1]: vowel.pthahaDotted,
+  [atorVowel.pthahaDotted2]: vowel.pthahaDotted,
+  [atorMark.feminineDot]: mark.feminineDot,
   [atorSpirant.qushshaya]: spirant.qushshaya,
   [atorSpirant.rukkakha]: spirant.rukkakha,
-  [atourMark.obliqueLineAbove]: mark.obliqueLineAbove,
-  [atourMark.obliqueLineAbove1]: mark.obliqueLineAbove,
-  [atourMark.cedilla]: mark.cedilla,
-  [atourMark.combiningMacron]: mark.combiningMacron,
-  [atourMark.combiningMacronBellow]: mark.combiningMacronBellow,
-  [atourMark.combiningMacronBellow1]: mark.combiningMacronBellow,
-  [atorLetter.alaphSuperscript]: letter.alaphSuperscript,
+  [atorSpirant.rukkakhaLow]: vowel.hbasaEsataDotted, // Ouch
+  [atorSpirant.combiningBreveBelow]: spirant.combiningBreveBelow,
+  [atorMark.obliqueLineAbove]: mark.obliqueLineAbove,
+  [atorMark.obliqueLineAbove1]: mark.obliqueLineAbove,
+  [atorMark.cedilla]: mark.cedilla,
+  [atorMark.combiningMacron]: mark.combiningMacron,
+  [atorMark.combiningMacronBellow]: mark.combiningMacronBellow,
+  [atorMark.combiningMacronBellow1]: mark.combiningMacronBellow,
   [atorPunct.cross]: punct.cross,
-  [atorLetter.finalTawAlapJoined]: function(group) {
+  [atorLetter.finalTawAlapJoined]: function (group) {
     group.letter = letter.taw;
     group.secondLetter = letter.alap;
   },
-  [atorLetter.finalTawAlapUnjoined]: function(group) {
+  [atorLetter.finalTawAlapUnjoined]: function (group) {
     group.letter = letter.taw;
     group.secondLetter = letter.alap;
   },
   [atorLetter.shin]: letter.shin,
+  [atorLetter.shinLeft]: letter.shin,
+  [atorLetter.shinBoth]: letter.shin,
+  [atorLetter.shinFinal]: letter.shin,
+
   [atorLetter.taw]: letter.taw,
-  
-}
+  [atorLetter.tawJoined]: letter.taw,
+
+  [atorVowel.zlamaDottedAngular2]: vowel.zlamaDottedAngular,
+
+  [atorLetter.rish]: letter.rish,
+  [atorLetter.rishJoined]: letter.rish,
+  [atorLetter.dalathRishDotless]: letter.dalathRishDotless,
+
+  [atorLetter.heYod]: function (group) {
+    group.letter = letter.he;
+    group.secondLetter = letter.yudh;
+  },
+
+  [atorLetter.lamadAlap]: function (group) {
+    group.letter = letter.lamadh;
+    group.secondLetter = letter.alap;
+  },
+  [atorLetter.lamadAlapJoined]: function (group) {
+    group.letter = letter.lamadh;
+    group.secondLetter = letter.alap;
+  },
+  [atorLetter.rishSyame]: function (group) {
+    group.letter = letter.rish;
+    group.syame = syame.combiningDiaeresis;
+  },
+  [atorLetter.rishSyame1]: function (group) {
+    group.letter = letter.rish;
+    group.syame = syame.combiningDiaeresis;
+  }
+};

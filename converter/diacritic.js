@@ -2,28 +2,30 @@
 const atorSpirant = {
   qushshaya: 0xBA,             // ܒ݁
   rukkakha: 0xBB,              // ܒ݂
-  combiningBreveBelow: 0x2E,   // ̮ 
-}
+  rukkakhaLow: 0xD2,           // ܒ݂
+  combiningBreveBelow: 0x2E    // ̮ 
+};
 
 // according to EastAssyrian font
 const spirant = {
   qushshaya: 0x741,             // ܒ݁
   rukkakha: 0x742,              // ܒ݂
-  combiningBreveBelow: 0xBF,    // ̮ 
-}
+  combiningBreveBelow: 0xBF     // ̮ 
+};
 
 // according to Atornew98 font
 const atorSyame = {
-  combiningDiaeresis: 0xB0,       // ̈ : 
-}
+  combiningDiaeresis: 0xB0        // ̈ 
+};
 
 // according to EastAssyrian font
 const syame = {
-  combiningDiaeresis: 0x308,      // ̈ : 
-}
+  combiningDiaeresis: 0x308,      // ̈ 
+  combiningDiaeresisBellow: 0x324 // ̤
+};
 
 // according to Atornew98 font
-const atourVowel = {
+const atorVowel = {
   rwaha: 0xB1,                   // ܘܿ TODO test more, has overloaded uses
   hbasaEsataDotted: 0xB2,        // ܘܼ TODO test more, has overloaded uses
   zqaphaDotted: 0xB3,            // ܒܵ
@@ -32,13 +34,13 @@ const atourVowel = {
   zqaphaDotted3: 0xD4,           // ܒܵ
   zlamaDottedAngular: 0xB6,      // ܒܹ
   zlamaDottedAngular1: 0xD5,     // ܒܹ
+  zlamaDottedAngular2: 0x3BC,    // ܒܹ
   zlamaDottedHorizontal: 0xB7,   // ܒܸ
   zlamaDottedHorizontal1: 0xB7,  // ܒܸ
   pthahaDotted: 0xB8,            // ܒܲ
   pthahaDotted1: 0xD8,           // ܒܲ
-  pthahaDotted2: 0xE8,           // ܒܲ
-
-}
+  pthahaDotted2: 0xE8            // ܒܲ
+};
 
 // according to EastAssyrian font
 const vowel = {
@@ -58,7 +60,7 @@ const vowel = {
   esasaAbove: 0x73D,            // ܽ
   esasaBelow: 0x73E,            // ܾ 
   rwaha: 0x73F                  // ܘܿ
-}
+};
 
 // anything else
 
@@ -70,8 +72,8 @@ const atorMark = {
   cedilla: 0xC1,               // ///
   combiningMacron: 0xC3,       // ̄
   combiningMacronBellow: 0xC4, // ̱
-  combiningMacronBellow1: 0xF4,// ̱
-}
+  combiningMacronBellow1: 0xF4 // ̱
+};
 
 // according to EastAssyrian font
 const mark = {
@@ -80,5 +82,5 @@ const mark = {
   feminineDot: 0x740,           // ܒ݀
   cedilla: 0xB8,                // ///
   combiningMacron: 0x304,       // ̄
-  combiningMacronBellow: 0x331, // ̱
-}
+  combiningMacronBellow: 0x331  // ̱
+};

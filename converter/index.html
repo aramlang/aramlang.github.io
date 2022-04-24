@@ -28,7 +28,19 @@
       width: 100%;
       text-align: right;
     }
+
+    .hexa {
+      text-align: right;
+      font-size: large;
+      width: 100%;
+    }
   </style>
+
+  <script src="diacritic.js"></script>
+  <script src="letter.js"></script>
+  <script src="punct.js"></script>
+  <script src="map.js"></script>
+  <script src="main.js"></script>
 </head>
 
 <body>
@@ -36,161 +48,31 @@
   <span>Source Ator ASCII text</span><br>
   <textarea id="source" rows="3" title="Source text" class="ator" spellcheck="false"
     placeholder="”„´JÒO²}J ”S´N²N @‚ÔC²N¸ ”C²´@¸ i…·C"></textarea> <br>
+  <input id="hexa-char" class="hexa" spellcheck="false" readonly><br>
   <input id="source-char" class="ator" spellcheck="false" readonly><br><br>
   <button id="convert" type="button">Convert</button> <br><br>
   <textarea id="output" rows="3" title="Converted text" class="assyrian"
-    placeholder="ܒܫܸܡ ܐܲܒܵܐ ܘܲܒܼܪܵܐ ܘܪܘܼܚܵܐ ܕܩܘܼܕܫܵܐ"></textarea>
+    placeholder="ܒܫܸܡ ܐܲܒ݂ܵܐ ܘܲܒ݂ܪܵܐ ܘܪܘܼܚܵܐ ܕܩܘܼܕܼܫܵܐ"></textarea>
   <script>
-    const map = {
-      [String.fromCharCode(0x20)]: String.fromCharCode(0x20),
-      [String.fromCharCode(0x22)]: String.fromCharCode(0x070D),
-      [String.fromCharCode(0x23)]: String.fromCharCode(0x0640),
-      [String.fromCharCode(0x28)]: String.fromCharCode(0x28),
-      [String.fromCharCode(0x29)]: String.fromCharCode(0x29),
-      [String.fromCharCode(0x31)]: String.fromCharCode(0x31),
-      [String.fromCharCode(0x3A)]: String.fromCharCode(0x060C),
-      [String.fromCharCode(0x40)]: String.fromCharCode(0x0710),
-      [String.fromCharCode(0x41)]: String.fromCharCode(0x0710),
-      [String.fromCharCode(0x2018)]: String.fromCharCode(0x0710),
-      [String.fromCharCode(0x201C)]: String.fromCharCode(0x0710),
-      [String.fromCharCode(0x201D)]: String.fromCharCode(0x0710),
-      [String.fromCharCode(0xCD)]: String.fromCharCode(0x0711), // Superscript Alaph
-      [String.fromCharCode(0x42)]: String.fromCharCode(0x0712),
-      [String.fromCharCode(0x43)]: String.fromCharCode(0x0712),
-      [String.fromCharCode(0x44)]: String.fromCharCode(0x0712),
-      [String.fromCharCode(0x45)]: String.fromCharCode(0x0712),
-      [String.fromCharCode(0x46)]: String.fromCharCode(0x0713),
-      [String.fromCharCode(0x47)]: String.fromCharCode(0x0713),
-      [String.fromCharCode(0x48)]: String.fromCharCode(0x0713),
-      [String.fromCharCode(0x49)]: String.fromCharCode(0x0713),
-      [String.fromCharCode(0x4A)]: String.fromCharCode(0x0715),
-      [String.fromCharCode(0x4B)]: String.fromCharCode(0x0715),
-      [String.fromCharCode(0x4C)]: String.fromCharCode(0x0717),
-      [String.fromCharCode(0x4D)]: String.fromCharCode(0x0717),
-      [String.fromCharCode(0x4E)]: String.fromCharCode(0x0718),
-      [String.fromCharCode(0x4F)]: String.fromCharCode(0x0718),
-      [String.fromCharCode(0x50)]: String.fromCharCode(0x0719),
-      [String.fromCharCode(0x51)]: String.fromCharCode(0x0719),
-      [String.fromCharCode(0x52)]: String.fromCharCode(0x071A),
-      [String.fromCharCode(0x53)]: String.fromCharCode(0x071A),
-      [String.fromCharCode(0x54)]: String.fromCharCode(0x071A),
-      [String.fromCharCode(0x55)]: String.fromCharCode(0x071A),
-      [String.fromCharCode(0x56)]: String.fromCharCode(0x071B),
-      [String.fromCharCode(0x57)]: String.fromCharCode(0x071B),
-      [String.fromCharCode(0x58)]: String.fromCharCode(0x071B),
-      [String.fromCharCode(0x59)]: String.fromCharCode(0x071B),
-      [String.fromCharCode(0x5A)]: String.fromCharCode(0x071D),
-      [String.fromCharCode(0x5B)]: String.fromCharCode(0x071D),
-      [String.fromCharCode(0x5C)]: String.fromCharCode(0x071D),
-      [String.fromCharCode(0x5D)]: String.fromCharCode(0x071D),
-      [String.fromCharCode(0x5E)]: String.fromCharCode(0x071F),
-      [String.fromCharCode(0x5F)]: String.fromCharCode(0x071F),
-      [String.fromCharCode(0x60)]: String.fromCharCode(0x071F),
-      [String.fromCharCode(0x61)]: String.fromCharCode(0x071F),
-      [String.fromCharCode(0x62)]: String.fromCharCode(0x0720),
-      [String.fromCharCode(0x63)]: String.fromCharCode(0x0720),
-      [String.fromCharCode(0x64)]: String.fromCharCode(0x0720),
-      [String.fromCharCode(0x65)]: String.fromCharCode(0x0720),
-      [String.fromCharCode(0x66)]: String.fromCharCode(0x0721),
-      [String.fromCharCode(0x67)]: String.fromCharCode(0x0721),
-      [String.fromCharCode(0x68)]: String.fromCharCode(0x0721),
-      [String.fromCharCode(0x69)]: String.fromCharCode(0x0721),
-      [String.fromCharCode(0x6A)]: String.fromCharCode(0x0722),
-      [String.fromCharCode(0x6B)]: String.fromCharCode(0x0722),
-      [String.fromCharCode(0x6C)]: String.fromCharCode(0x0722),
-      [String.fromCharCode(0x6D)]: String.fromCharCode(0x0722),
-      [String.fromCharCode(0x6E)]: String.fromCharCode(0x0723),
-      [String.fromCharCode(0x6F)]: String.fromCharCode(0x0723),
-      [String.fromCharCode(0x70)]: String.fromCharCode(0x0723),
-      [String.fromCharCode(0x71)]: String.fromCharCode(0x0723),
-      [String.fromCharCode(0x72)]: String.fromCharCode(0x0725),
-      [String.fromCharCode(0x73)]: String.fromCharCode(0x0725),
-      [String.fromCharCode(0x74)]: String.fromCharCode(0x0725),
-      [String.fromCharCode(0x75)]: String.fromCharCode(0x0725),
-      [String.fromCharCode(0x76)]: String.fromCharCode(0x0726),
-      [String.fromCharCode(0x77)]: String.fromCharCode(0x0726),
-      [String.fromCharCode(0x78)]: String.fromCharCode(0x0726),
-      [String.fromCharCode(0x79)]: String.fromCharCode(0x0726),
-      [String.fromCharCode(0x7A)]: String.fromCharCode(0x0728),
-      [String.fromCharCode(0x7B)]: String.fromCharCode(0x0728),
-      [String.fromCharCode(0x7C)]: String.fromCharCode(0x0729), // qaph
-      [String.fromCharCode(0x7D)]: String.fromCharCode(0x0729),
-      [String.fromCharCode(0x7E)]: String.fromCharCode(0x0729),
-      [String.fromCharCode(0xE004)]: String.fromCharCode(0x0729),
-      [String.fromCharCode(0x201A)]: String.fromCharCode(0x072A), // resh
-      [String.fromCharCode(0xE001)]: String.fromCharCode(0x072A),
-      [String.fromCharCode(0xE002)]: String.fromCharCode(0x072A) + String.fromCharCode(0x0732), // Resh sayame
-      [String.fromCharCode(0xE003)]: String.fromCharCode(0x072A) + String.fromCharCode(0x0732),
-      [String.fromCharCode(0x0192)]: String.fromCharCode(0x072B), // shin
-      [String.fromCharCode(0x201E)]: String.fromCharCode(0x072B),
-      [String.fromCharCode(0x2026)]: String.fromCharCode(0x072B),
-      [String.fromCharCode(0x2020)]: String.fromCharCode(0x072B),
-      [String.fromCharCode(0x02C6)]: String.fromCharCode(0x072C), // taw
-      [String.fromCharCode(0x2021)]: String.fromCharCode(0x072C),
-      [String.fromCharCode(0x2030)]: String.fromCharCode(0x0716), // Dotless Dalath Rish
-      [String.fromCharCode(0x0153)]: String.fromCharCode(0x072C) + String.fromCharCode(0x0710), // Final Taw Alap unatached
-      [String.fromCharCode(0x0161)]: String.fromCharCode(0x072C) + String.fromCharCode(0x0710), // Final Taw Alap atached
-      [String.fromCharCode(0x02DC)]: String.fromCharCode(0x0720) + String.fromCharCode(0x0710), // Lamad Alap connected
-      [String.fromCharCode(0x2014)]: String.fromCharCode(0x0720) + String.fromCharCode(0x0710), // Lamad Alap unconnected
-      [String.fromCharCode(0x2022)]: String.fromCharCode(0x0717) + String.fromCharCode(0x071D), // He Yod
-      // Punctuation
-      [String.fromCharCode(0xAB)]: String.fromCharCode(0x0700), // End of paragraph
-
-      // Vowels
-      [String.fromCharCode(0xB7)]: String.fromCharCode(0x0738), // Zlama psheeqa
-      [String.fromCharCode(0xD7)]: String.fromCharCode(0x0738),
-
-      [String.fromCharCode(0xB8)]: String.fromCharCode(0x0732), // Pthaha
-      [String.fromCharCode(0xD8)]: String.fromCharCode(0x0732), // ? switched towards right
-      [String.fromCharCode(0xE8)]: String.fromCharCode(0x0732),
-
-      [String.fromCharCode(0xB3)]: String.fromCharCode(0x0735), // Zqapha
-      [String.fromCharCode(0xB4)]: String.fromCharCode(0x0735),
-      [String.fromCharCode(0xD3)]: String.fromCharCode(0x0735),
-      [String.fromCharCode(0xD4)]: String.fromCharCode(0x0735),
-
-      [String.fromCharCode(0xB2)]: String.fromCharCode(0x0742), // Rukkakha
-      [String.fromCharCode(0xD2)]: String.fromCharCode(0x0742),
-    }
-
-    function isDiacritic(char) {
-      switch (char) {
-        case String.fromCharCode(0xB7):
-        case String.fromCharCode(0xD7):
-        case String.fromCharCode(0xB8):
-        case String.fromCharCode(0xD8):
-        case String.fromCharCode(0xE8):
-        case String.fromCharCode(0xB3):
-        case String.fromCharCode(0xB4):
-        case String.fromCharCode(0xD3):
-        case String.fromCharCode(0xD4):
-        case String.fromCharCode(0xB2):
-        case String.fromCharCode(0xD2):
-          return true;
-        default:
-          return false;
-      }
-    }
-
-    function convert(char) {
-      var m = map[char];
-      return m || char;
-    }
-
     var source = document.getElementById('source'),
+      hexaChar = document.getElementById('hexa-char'),
       sourceChar = document.getElementById('source-char'),
       output = document.getElementById('output');
     document.getElementById('convert').addEventListener('click', function () {
-      var str = source.value, stack = [], out = '', inChar, outChar, last = [], lc;
-      sourceChar.value = '';
-      for (var i = 0; i < str.length; i++) {
-        inChar = str.charAt(i);
-        sourceChar.value = sourceChar.value + inChar + '  ';
-        outChar = convert(inChar);
-        stack.push(outChar);
+      var str = source.value.trim(), hexa = '', char, spacedSource = '', group = {}, assyr = '', conv;
+      for (var i = str.length - 1; i >= 0; i--) {
+        char = str.charCodeAt(i);
+        hexa = hexa + hexaConvert(char) + ' ';
+        spacedSource = spacedSource + String.fromCharCode(char) + ' ';
+        conv = mapChar(char, group);
+        if (conv) {
+          assyr = assyr + conv;
+          group = {};
+        }
       }
-
-      output.value = stack.join('');
+      hexaChar.value = hexa;
+      sourceChar.value = spacedSource;
+      output.value = assyr;
     });
   </script>
 </body>

@@ -1,5 +1,6 @@
 // according to Atornew98 font
 const atorPunct = {
+  newLine: 0xA,                     // \n
   space: 0x20,                      // ' '
   tatweel: 0x23,                    // ـ
   parenLeft: 0x28,                  // (
@@ -15,6 +16,7 @@ const atorPunct = {
 
 // according to EastAssyrian font
 const punct = {
+  newLine: 0xA,                     // \n
   space: 0x20,                      // ' '
   tatweel: 0x640,                   // ـ
   parenLeft: 0x28,                  // (
