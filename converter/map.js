@@ -3,7 +3,7 @@ const map = {
   [atorPunct.newLine]: punct.newLine,
   [atorPunct.space]: punct.space,
   [atorLetter.sadheNun]: function(group) {  //punct.harkleanAsteriscus, // according to assyrian font
-    group.letter = letter.lamadh;
+    group.letter = letter.sadhe;
     group.secondLetter = letter.nun;
   },
   [atorPunct.tatweel]: punct.tatweel,

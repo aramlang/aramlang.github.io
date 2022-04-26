@@ -59,7 +59,7 @@ function mapGroup(value, group, nextChar, isPunct) {
     group.function(group, nextChar);
   }
 
-  var out = String.fromCharCode(group.letter);
+  var out = isPunct ? '' : String.fromCharCode(group.letter);
   if (group.hamza) {
     out = out + String.fromCharCode(group.hamza);
   }
