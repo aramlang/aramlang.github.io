@@ -50,11 +50,13 @@ function hexaConvert(number) {
   return "0x" + str;
 };
 
-function mapLetter(value, group) {
-  group.letter = value;
+function mapGroup(value, group, nextChar, isPunct) {
+  if (!isPunct) {
+    group.letter = value;
+  }
 
   if (group.function) {
-    group.function(group);
+    group.function(group, nextChar);
   }
 
   var out = String.fromCharCode(group.letter);
@@ -80,13 +82,13 @@ function mapLetter(value, group) {
   return out;
 }
 
-function mapChar(char, group) {
+function mapChar(char, group, nextChar) {
   var value = map[char];
 
   if (typeof value === 'function') {
     group.function = value;
     return isLetter(char)
-      ? mapLetter(value, group)
+      ? mapGroup(value, group)
       : null;
   }
 
@@ -116,7 +118,8 @@ function mapChar(char, group) {
   }
 
   if (isPunct(char)) {
-    return String.fromCharCode(value);
+    var group = mapGroup(value, group, nextChar, true);
+    return String.fromCharCode(value) + (group ? group : '');
   }
 
   // assuming if gotten here it is a letter
@@ -125,5 +128,5 @@ function mapChar(char, group) {
     return null;
   }
 
-  return mapLetter(value, group);
+  return mapGroup(value, group, nextChar);
 }

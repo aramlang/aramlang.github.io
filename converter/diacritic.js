@@ -1,8 +1,7 @@
 // according to Atornew98 font
 const atorSpirant = {
   qushshaya: 0xBA,             // ܒ݁
-  rukkakha: 0xBB,              // ܒ݂
-  rukkakhaLow: 0xD2,           // ܒ݂
+  rukkakha: 0xD2,              // ܒ݂
   combiningBreveBelow: 0x2E    // ̮ 
 };
 
@@ -15,7 +14,8 @@ const spirant = {
 
 // according to Atornew98 font
 const atorSyame = {
-  combiningDiaeresis: 0xB0        // ̈ 
+  combiningDiaeresis: 0xB0,      // ̈ 
+  combiningDiaeresis1: 0xD0      // ̈ 
 };
 
 // according to EastAssyrian font
@@ -70,6 +70,7 @@ const atorMark = {
   obliqueLineAbove: 0xBC,      // ܒ݇
   obliqueLineAbove1: 0xDC,     // ܒ݇
   cedilla: 0xC1,               // ///
+  combiningDotBelow: 0xBB,     // ̣
   combiningMacron: 0xC3,       // ̄
   combiningMacronBellow: 0xC4, // ̱
   combiningMacronBellow1: 0xF4 // ̱

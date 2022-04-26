@@ -6,6 +6,7 @@ const atorPunct = {
   parenLeft: 0x28,                  // (
   parenRight: 0x29,                 // )
   one: 0x31,                        // 1
+
   arabicComma: 0x3A,                // ،
   endOfParagraph: 0xAB,             // ܀
   colonSkewedLeft: 0xAC,            // ܒ܆

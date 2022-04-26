@@ -2,7 +2,10 @@
 const map = {
   [atorPunct.newLine]: punct.newLine,
   [atorPunct.space]: punct.space,
-  [atorLetter.sadheNun]: punct.harkleanAsteriscus, // according to assyrian font
+  [atorLetter.sadheNun]: function(group) {  //punct.harkleanAsteriscus, // according to assyrian font
+    group.letter = letter.lamadh;
+    group.secondLetter = letter.nun;
+  },
   [atorPunct.tatweel]: punct.tatweel,
   [atorPunct.parenLeft]: punct.parenLeft,
   [atorPunct.parenRight]: punct.parenRight,
@@ -101,6 +104,7 @@ const map = {
   [atorPunct.arabicSemicolon]: punct.arabicSemicolon,
   [atorPunct.period]: punct.period,
   [atorSyame.combiningDiaeresis]: syame.combiningDiaeresis,
+  [atorSyame.combiningDiaeresis1]: syame.combiningDiaeresis,
   [atorVowel.rwaha]: function (group) {
     // TODO it has overloaded meanings test well
     switch (group.letter) {
@@ -120,17 +124,22 @@ const map = {
         break;
     }
   },
-  [atorVowel.hbasaEsataDotted]: function (group) {
+  [atorMark.combiningDotBelow]: mark.combiningDotBelow,
+  [atorVowel.hbasaEsataDotted]: function (group, nextChar) {
     // TODO it has overloaded meanings test well
     switch (group.letter) {
       case letter.waw:
       case letter.yudh:
         group.vowel = vowel.hbasaEsataDotted;
         break;
+      case letter.kaph:
+        group.mark = nextChar == letter.lamadh // account for KUL
+          ? mark.combiningDotBelow
+          : spirant.rukkakha;
+        break;
       case letter.beth:
       case letter.gamal:
       case letter.dalath:
-      case letter.kaph:
       case letter.pe:
       case letter.taw:
         group.spirant = spirant.rukkakha;
@@ -152,9 +161,23 @@ const map = {
   [atorVowel.pthahaDotted1]: vowel.pthahaDotted,
   [atorVowel.pthahaDotted2]: vowel.pthahaDotted,
   [atorMark.feminineDot]: mark.feminineDot,
-  [atorSpirant.qushshaya]: spirant.qushshaya,
-  [atorSpirant.rukkakha]: spirant.rukkakha,
-  [atorSpirant.rukkakhaLow]: vowel.hbasaEsataDotted, // Ouch
+  [atorSpirant.qushshaya]: function (group) {
+    // TODO it has overloaded meanings test well
+    switch (group.letter) {
+      case letter.beth:
+      case letter.gamal:
+      case letter.dalath:
+      case letter.kaph:
+      case letter.pe:
+      case letter.taw:
+        group.spirant = spirant.qushshaya;
+        break;
+      default:
+        group.mark = mark.combiningDotAbove;
+        break;
+    }
+  },
+  [atorSpirant.rukkakha]: spirant.rukkakha,  // Ouch: vowel.hbasaEsataDotted for EastAssyrian?
   [atorSpirant.combiningBreveBelow]: spirant.combiningBreveBelow,
   [atorMark.obliqueLineAbove]: mark.obliqueLineAbove,
   [atorMark.obliqueLineAbove1]: mark.obliqueLineAbove,

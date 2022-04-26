@@ -48,7 +48,7 @@
   <span>Source Ator ASCII text</span><br>
   <textarea id="source" rows="3" title="Source text" class="ator" spellcheck="false"
     placeholder="”„´JÒO²}J ”S´N²N @‚ÔC²N¸ ”C²´@¸ i…·C"></textarea> <br>
-  <input id="source-char" class="ator" style="height: 40px" spellcheck="false" readonly><br>
+  <textarea id="source-char" class="ator" spellcheck="false" readonly></textarea><br>
   <input id="source-hexa" class="hexa" spellcheck="false" readonly><br><br>
   <button id="convert" type="button">Convert</button> <br><br>
   <textarea id="output" rows="3" title="Converted text" class="assyrian"
@@ -69,17 +69,19 @@
           hexa = '',
           spacedSource = '',
           assyr = '',
-          line, group, char, conv;
+          line, group, char, nextChar, conv;
         for (var l = 0; l < lines.length; l++) {
           line = lines[l];
           group = {};
           char = '';
+          nextChar = '';
           conv = '';
           for (var i = line.length - 1; i >= 0; i--) {
             char = line.charCodeAt(i);
+            nextChar = line.charCodeAt(i - 1);
             hexa = hexa + hexaConvert(char) + ' ';
             spacedSource = spacedSource + String.fromCharCode(char) + ' ';
-            conv = mapChar(char, group);
+            conv = mapChar(char, group, nextChar);
             if (conv) {
               assyr = assyr + conv;
               group = {};
