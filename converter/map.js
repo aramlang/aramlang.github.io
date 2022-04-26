@@ -133,7 +133,7 @@ const map = {
         group.vowel = vowel.hbasaEsataDotted;
         break;
       case letter.kaph:
-        group.mark = nextChar == letter.lamadh // account for KUL
+        group.mark = map[nextChar] == letter.lamadh // account for KUL
           ? mark.combiningDotBelow
           : spirant.rukkakha;
         break;
