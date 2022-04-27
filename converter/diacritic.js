@@ -78,8 +78,9 @@ const atorMark = {
 
 // according to EastAssyrian font
 const mark = {
+  obliqueLineAbove: 0x747,      // ݇
   combiningDotAbove: 0x307,     // ̇
-  combiningDotBelow: 0x323,     // 
+  combiningDotBelow: 0x323,     // ̣
   feminineDot: 0x740,           // ܒ݀
   cedilla: 0xB8,                // ///
   combiningMacron: 0x304,       // ̄
