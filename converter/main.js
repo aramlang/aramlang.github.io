@@ -67,7 +67,9 @@ function mapGroup(value, group, nextChar, isPunct) {
     out = out + String.fromCharCode(group.spirant);
   }
   if (group.mark) { // should other marks come after spirants?
-    out = out + String.fromCharCode(group.mark);
+    group.mark.forEach(function(v) {
+      out = out + String.fromCharCode(v);
+    });
   }
   if (group.syame) {
     out = out + String.fromCharCode(group.syame);
@@ -80,6 +82,13 @@ function mapGroup(value, group, nextChar, isPunct) {
   }
 
   return out;
+}
+
+function addMark(group, value) {
+  if (!group.mark) {
+    group.mark = [];
+  }
+  group.mark.push(value);
 }
 
 function mapChar(char, group, nextChar) {
@@ -103,7 +112,7 @@ function mapChar(char, group, nextChar) {
   }
 
   if (isMark(char)) {
-    group.mark = value;
+    addMark(group, value);
     return null;
   }
 

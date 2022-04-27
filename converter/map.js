@@ -120,7 +120,7 @@ const map = {
         group.spirant = spirant.qushshaya;
         break;
       default:
-        group.mark = mark.combiningDotAbove;
+        addMark(group, mark.combiningDotAbove);
         break;
     }
   },
@@ -133,9 +133,9 @@ const map = {
         group.vowel = vowel.hbasaEsataDotted;
         break;
       case letter.kaph:
-        group.mark = map[nextChar] == letter.lamadh // account for KUL
+        addMark(group, map[nextChar] == letter.lamadh // account for KUL
           ? mark.combiningDotBelow
-          : spirant.rukkakha;
+          : spirant.rukkakha);
         break;
       case letter.beth:
       case letter.gamal:
@@ -145,7 +145,7 @@ const map = {
         group.spirant = spirant.rukkakha;
         break;
       default:
-        group.mark = mark.combiningDotBelow;
+        addMark(group, mark.combiningDotBelow);
         break;
     }
   },

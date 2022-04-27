@@ -36,7 +36,7 @@ const atorVowel = {
   zlamaDottedAngular1: 0xD5,     // ܒܹ
   zlamaDottedAngular2: 0x3BC,    // ܒܹ
   zlamaDottedHorizontal: 0xB7,   // ܒܸ
-  zlamaDottedHorizontal1: 0xB7,  // ܒܸ
+  zlamaDottedHorizontal1: 0xD7,  // ܒܸ
   pthahaDotted: 0xB8,            // ܒܲ
   pthahaDotted1: 0xD8,           // ܒܲ
   pthahaDotted2: 0xE8            // ܒܲ
