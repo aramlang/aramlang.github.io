@@ -2,7 +2,7 @@
 const map = {
   [atorPunct.newLine]: punct.newLine,
   [atorPunct.space]: punct.space,
-  [atorLetter.sadheNun]: function(group) {  //punct.harkleanAsteriscus, // according to assyrian font
+  [atorLetter.sadheNun]: function (group) {  //punct.harkleanAsteriscus for east assyrian font?
     group.letter = letter.sadhe;
     group.secondLetter = letter.nun;
   },
@@ -161,22 +161,7 @@ const map = {
   [atorVowel.pthahaDotted1]: vowel.pthahaDotted,
   [atorVowel.pthahaDotted2]: vowel.pthahaDotted,
   [atorMark.feminineDot]: mark.feminineDot,
-  [atorSpirant.qushshaya]: function (group) {
-    // TODO it has overloaded meanings test well
-    switch (group.letter) {
-      case letter.beth:
-      case letter.gamal:
-      case letter.dalath:
-      case letter.kaph:
-      case letter.pe:
-      case letter.taw:
-        group.spirant = spirant.qushshaya;
-        break;
-      default:
-        group.mark = mark.combiningDotAbove;
-        break;
-    }
-  },
+  [atorSpirant.qushshaya]: mark.combiningDotAbove,
   [atorSpirant.rukkakha]: spirant.rukkakha,  // Ouch: vowel.hbasaEsataDotted for EastAssyrian?
   [atorSpirant.combiningBreveBelow]: spirant.combiningBreveBelow,
   [atorMark.obliqueLineAbove]: mark.obliqueLineAbove,
