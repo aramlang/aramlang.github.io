@@ -26,6 +26,8 @@ window.onload = function () {
 
   var backButton = document.getElementById('back-button');
   var backSecondsInput = document.getElementById('back-seconds-input');
+  var gotoInput = document.getElementById('goto-input');
+  var gotoButton = document.getElementById('goto-button');
   var currentCounterInput = document.getElementById('current-counter-input');
   var recordButton = document.getElementById('record-button');
   var startTimeInput = document.getElementById('start-time-input');
@@ -150,6 +152,24 @@ window.onload = function () {
     setSuspendSnapshot(false);
     media.currentTime = startTime;
     currentCounterInput.value = currentCounter;
+  });
+
+  function gotoHandler() {
+    var media = getMedia();
+    if (!isFinite(media.duration)) { return; }
+
+    var time = getSeekTime(gotoInput, true);
+    media.currentTime = time;
+  }
+
+  gotoButton.addEventListener('click', gotoHandler);
+  gotoButton.addEventListener('keyup', function (event) {
+    if (event.key != 'Enter') { return; }
+    gotoHandler();
+  });
+  gotoInput.addEventListener('keyup', function (event) {
+    if (event.key != 'Enter') { return; }
+    gotoHandler();
   });
 
   function snapshotHandler(event) {

@@ -121,11 +121,12 @@ button {
 }
 
 #start-time-input,
-#end-time-input {
+#end-time-input,
+#goto-input {
   width: 80px;
   text-align: center;
 }
-
+ 
 #snapshot-div {
   text-align: center;
 }
