@@ -154,19 +154,19 @@ window.onload = function () {
 
     function highlight() {
       // setAttribute works for both svg and html
-      if (latinHighlighter) { latinHighlighter.setAttribute('class', 'highlight'); }
-      if (latinHighlighter0) { latinHighlighter0.setAttribute('class', 'highlight'); }
-      if (swadayatHighlighter) { swadayatHighlighter.setAttribute('class', 'highlight'); }
-      if (sertoHighlighter) { sertoHighlighter.setAttribute('class', 'highlight'); }
-      if (ashuritHighlighter) { ashuritHighlighter.setAttribute('class', 'highlight'); }
+      if (latinHighlighter) { setClass(latinHighlighter, 'highlight', 'unhighlight'); }
+      if (latinHighlighter0) { setClass(latinHighlighter0, 'highlight', 'unhighlight'); }
+      if (swadayatHighlighter) { setClass(swadayatHighlighter, 'highlight', 'unhighlight'); }
+      if (sertoHighlighter) { setClass(sertoHighlighter, 'highlight', 'unhighlight'); }
+      if (ashuritHighlighter) { setClass(ashuritHighlighter, 'highlight', 'unhighlight'); }
     }
 
     function unhighlight() {
-      if (latinHighlighter) { latinHighlighter.setAttribute('class', 'unhighlight'); }
-      if (latinHighlighter0) { latinHighlighter0.setAttribute('class', 'unhighlight'); }
-      if (swadayatHighlighter) { swadayatHighlighter.setAttribute('class', 'unhighlight'); }
-      if (sertoHighlighter) { sertoHighlighter.setAttribute('class', 'unhighlight'); }
-      if (ashuritHighlighter) { ashuritHighlighter.setAttribute('class', 'unhighlight'); }
+      if (latinHighlighter) { setClass(latinHighlighter, 'unhighlight', 'highlight'); }
+      if (latinHighlighter0) { setClass(latinHighlighter0, 'unhighlight', 'highlight'); }
+      if (swadayatHighlighter) { setClass(swadayatHighlighter, 'unhighlight', 'highlight'); }
+      if (sertoHighlighter) { setClass(sertoHighlighter, 'unhighlight', 'highlight'); }
+      if (ashuritHighlighter) { setClass(ashuritHighlighter, 'unhighlight', 'highlight'); }
     }
 
     if (
@@ -517,6 +517,15 @@ window.onload = function () {
 
   function getWordId(completeWordId) {
     return completeWordId.replace(/!.*/g, '');
+  }
+
+  function setClass(element, addClass, removeClass) {
+    var newClass = element.getAttribute('class');
+    if (newClass) {
+      newClass = newClass.replace(removeClass, '').trim();
+    }
+    newClass = newClass + ' ' + addClass;
+    element.setAttribute('class', newClass);
   }
 
   function fromVttCue(vttCue) {

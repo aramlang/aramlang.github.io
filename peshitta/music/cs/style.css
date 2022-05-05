@@ -122,3 +122,15 @@ rect.unhighlight {
 #rz-container {
   cursor: pointer;
 }
+
+.all {
+  color: forestgreen;
+}
+
+.amma {
+  color: steelblue;
+}
+
+.shamasha {
+  color: lightsteelblue;
+}
