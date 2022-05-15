@@ -1,0 +1,85 @@
+body {
+  background-color: white;
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+header div {
+  background-color: white;
+  padding: 5px 3px 7px 3px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a[href$=".mp3"]::after,
+a[href$="#"]::before {
+  content: " \1f508";
+}
+
+.english-text {
+  text-align: left;
+}
+
+.estrangela {
+  font-family: 'Estrangelo Esarhaddon';
+  font-size: xx-large;
+  text-align: right;
+}
+
+.section-play {
+  font-family: 'Estrangelo Esarhaddon';
+  font-size: x-large;
+  text-align: center;
+}
+
+.serto {
+  font-family: 'SertoJerusalem';
+  font-size: 30px;
+  text-align: right;
+}
+
+.swadaya {
+  font-family: 'EastAssyrian';
+  font-size: 29px;
+  text-align: right;
+}
+
+.semitic {
+  font-size: 28px;
+  text-align: right;
+}
+
+span.highlight {
+  background-color: #FFFF00;
+}
+
+span.unhighlight {
+  background-color: transparent;
+}
+
+rect.highlight {
+  fill: #FFFF00;
+  opacity: 0.5;
+}
+
+rect.unhighlight {
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#lg-container span,
+#lg-svg rect {
+  cursor: pointer;
+}

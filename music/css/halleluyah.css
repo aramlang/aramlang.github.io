@@ -1,0 +1,15 @@
+.lg {
+  width: 951px;
+}
+
+.lg .item-m {
+  min-width: 323px;
+  padding: 0;
+  margin: 0;
+}
+
+.lg .item-s {
+  min-width: 314px;
+  padding: 0;
+  margin: 0;
+}
