@@ -22,7 +22,7 @@ function setupAudio(
     '</div>' +
     '<audio id="audio" loop preload controls>' +
     '<source src="' + songSrc + '" type="audio/mp3">' +
-    '<track default kind="metadata" srclang="en-US" src="' + songCueFile + '" />' +
+    '<track id="track" default kind="metadata" srclang="en-US" src="' + songCueFile + '" />' +
     'Your browser does not support the audio tag.' +
     'You can <a href="' + songSrc + '">download media</a> instead.' +
     '</audio>';
@@ -34,6 +34,8 @@ function setupAudio(
   const sectionStop = document.getElementById('section-stop');
   const wordLoop = document.getElementById('word-loop');
   const wordStop = document.getElementById('word-stop');
+  var sections = {};  // song sections build from cue info, after song has loaded
+  var flatCues = [];  // cue dtos arrays
   const data = {
   };
 
@@ -86,7 +88,7 @@ function setupAudio(
     function highlight() {
       for (var h = 0; h < phrases.length; h++) {
         setClass(phrases[h], 'highlight', 'unhighlight');
-      } 
+      }
     }
 
     function unhighlight() {
@@ -97,13 +99,63 @@ function setupAudio(
 
     highlight(); // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     vttCue.addEventListener('exit', unhighlight);
-    data.unhighlight = unhighlight;
   }
 
   var textTracks = audio.textTracks;
   for (var i = 0; i < textTracks.length; i++) {
     textTracks[i].addEventListener('cuechange', cuechangeHandler);
   }
+
+  audio.addEventListener('loadedmetadata', function (event) {
+    const unnamedSection = '_unnamed';
+    if (flatCues.length) { return; }
+
+    var vttCues = document.getElementById('track').track.cues;
+    if (!vttCues) { return; }
+
+    var unnamedIndex = 0, bangIndex = 0, sectionIndex = 0,
+      lastSection = null, section = null, cue = null, id = null,
+      initSection = function () {
+        if (!lastSection) { lastSection = unnamedSection + (++unnamedIndex); }
+        if (sections[lastSection]) { return; };
+        sectionIndex = 0;
+        sections[lastSection] = [];
+      },
+      addCue = function (vttCue, cueIndex) {
+        initSection();
+        var cue = {
+          id: removeSectionId(id),
+          startTime: vttCue.startTime,
+          endTime: vttCue.endTime,
+
+          section: lastSection,
+          sectionIndex: sectionIndex++,
+          cueIndex: cueIndex
+        };
+        sections[lastSection].push(cue);
+        flatCues.push(cue);
+      };
+
+    for (var i = 0; i < vttCues.length; i++) {
+      cue = vttCues[i];
+      id = cue.id;
+      if (!id || (bangIndex = id.indexOf('!')) < 0) {
+        // within current section scope or unnamed section
+        addCue(cue, i);
+        continue;
+      }
+      section = id.substring(bangIndex + 1);
+      if (!section) {
+        // end section marker
+        addCue(cue, i);
+        lastSection = null;
+        continue;
+      }
+      // start section
+      lastSection = section;
+      addCue(cue, i);
+    }
+  });
 
   // #endregion
 
@@ -126,7 +178,11 @@ function setupAudio(
   // #region Helper
 
   function playSong() {
+    if (audio.currentTime) {
+      audio.currentTime = 0;
+    }
     playAudio();
+
     // need both calls for window to scroll when hash not changed
     if (hashId) {
       window.location.hash = '#';
