@@ -160,6 +160,8 @@ window.onload = function () {
 
     var time = getSeekTime(gotoInput, true);
     media.currentTime = time;
+    startTimeInput.value = gotoInput.value;
+    startTimeInput.dataset.time = time;
   }
 
   gotoButton.addEventListener('click', gotoHandler);
