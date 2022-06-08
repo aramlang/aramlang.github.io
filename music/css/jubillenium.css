@@ -1,0 +1,13 @@
+.nd {
+  width: 690px;
+}
+
+.nd .item {
+  width: 270px;
+}
+
+#nd-container span,
+#nd-svg rect,
+#t-00_instrumental {
+  cursor: pointer;
+}

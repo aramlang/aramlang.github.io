@@ -78,8 +78,3 @@ rect.unhighlight {
   justify-content: center;
   margin: auto;
 }
-
-#lg-container span,
-#lg-svg rect {
-  cursor: pointer;
-}
