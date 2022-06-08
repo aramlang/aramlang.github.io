@@ -1,0 +1,24 @@
+.rz {
+  width: 951px;
+  flex-direction: column;
+}
+
+.rz .item {
+  margin-bottom: 10px;
+}
+
+#rz-container {
+  cursor: pointer;
+}
+
+.all {
+  color: forestgreen;
+}
+
+.amma {
+  color: steelblue;
+}
+
+.shamasha {
+  color: lightsteelblue;
+}
