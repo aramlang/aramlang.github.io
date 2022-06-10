@@ -22,3 +22,8 @@
 .shamasha {
   color: lightsteelblue;
 }
+
+.transcript {
+  text-align: left;
+  font-size: small;
+}
