@@ -3,10 +3,6 @@
   flex-direction: column;
 }
 
-.rz .item {
-  margin-bottom: 10px;
-}
-
 #rz-container {
   cursor: pointer;
 }
@@ -24,6 +20,6 @@
 }
 
 .transcript {
-  text-align: left;
+  text-align: right;
   font-size: small;
 }
