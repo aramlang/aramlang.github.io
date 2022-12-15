@@ -19,8 +19,6 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-touch-callout: none;
-  position: sticky;
-  top: 10px;
 }
 
 .no_result {
