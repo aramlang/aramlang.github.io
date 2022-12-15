@@ -101,7 +101,7 @@ body {
 }
 
 main {
-  max-width: 640px;
+  max-width: 600px;
 }
 
 .letter {
@@ -118,4 +118,16 @@ main {
   font-family: 'EastAssyrian';
   font-size: xx-large;
   text-align: right;
+}
+
+a              { text-decoration:none }
+a:visited      { color: #008080 }
+a:hover        { color: #CC3333;text-decoration:underline; }
+
+a[href$=".mp3"]:after {
+  content:" \1f508";
+  vertical-align:top;
+  font-size:8px;
+  position: relative;
+  left: 1px;
 }

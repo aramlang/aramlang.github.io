@@ -1,5 +1,12 @@
 [
   {
+    "English": "alap",
+    "Aramaic": "ܐܠܦ",
+    "Assyrian": "ܐܠܦ",
+    "Aramaic Vocalized": "ܐܵܠܲܦ",
+    "Assyrian Vocalized": "ܐܵܠܲܦ"
+  },
+  {
     "English": "language",
     "Aramaic": "ܠܫܢܐ",
     "Assyrian": "ܠܫܢܐ",
@@ -7,10 +14,17 @@
     "Assyrian Vocalized": "ܠܸܫܵܢܵܐ"
   },
   {
-    "English": "lord",
-    "Aramaic": "ܠܫܢܐ",
-    "Assyrian": "ܠܫܢܐ",
-    "Aramaic Vocalized": "ܠܸܫܵܢܵܐ",
-    "Assyrian Vocalized": "ܠܸܫܵܢܵܐ"
+    "English": "of our lord",
+    "Aramaic": "ܕܡܪܢ",
+    "Assyrian": "ܕܡܪܢ",
+    "Aramaic Vocalized": "ܕܡܵܪܲܢ",
+    "Assyrian Vocalized": "ܕܡܵܪܲܢ"
+  },
+  {
+    "English": "our lord",
+    "Aramaic": "ܡܪܢ",
+    "Assyrian": "ܡܪܢ",
+    "Aramaic Vocalized": "ܡܵܪܲܢ",
+    "Assyrian Vocalized": "ܡܵܪܲܢ"
   }
 ]
