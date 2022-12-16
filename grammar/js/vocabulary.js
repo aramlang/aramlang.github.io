@@ -1,9 +1,16 @@
+function groupBy(xs, key) {
+  return xs.reduce(function(rv, x) {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
+};
+
 const autoCompleteJS = new autoComplete({
   data: {
     src: async () => {
       try {
         document.getElementById("autoComplete").setAttribute("placeholder", "Loading...");
-        const source = await fetch("./db/vocabulary.json");
+        const source = await fetch("db/vocabulary.json");
         const data = await source.json();
         document.getElementById("autoComplete").setAttribute("placeholder", autoCompleteJS.placeHolder);
         return data;
@@ -11,7 +18,7 @@ const autoCompleteJS = new autoComplete({
         return error;
       }
     },
-    keys: ["English", "Aramaic", "Assyrian", "Aramaic Vocalized", "Assyrian Vocalized"],
+    keys: ["en", "ar", "sy", "av", "sv"],
     cache: true,
     filter: (list) => {
       // Filter duplicates in case of multiple data keys usage
@@ -42,20 +49,40 @@ const autoCompleteJS = new autoComplete({
       item.style = "display: flex; justify-content: space-between;";
       let content = data.match;
       switch (data.key) {
-        case "English":
-          content = `<span>${content}</span> <span class="swadaya">${data.value["Assyrian Vocalized"]}</span> <span class="estrangela">${data.value["Aramaic Vocalized"]}</span>`;
+        case "en":
+          content = `<span>${content}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
           break;
-        case "Aramaic":
-          content = `<span class="estrangela">${content}</span> <span>${data.value["English"]}</span> <span class="swadaya">${data.value["Assyrian Vocalized"]}</span>`;
+        case "ar":
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${content}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
           break;
-        case "Assyrian":
-          content = `<span class="swadaya">${content}</span> <span>${data.value["English"]}</span> <span class="estrangela">${data.value["Aramaic Vocalized"]}</span>`;
+        case "sy":
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${content}</span>`;
           break;
-        case "Aramaic Vocalized":
-          content = `<span class="estrangela">${content}</span> <span>${data.value["English"]}</span> <span class="swadaya">${data.value["Assyrian Vocalized"]}</span>`;
+        case "av":
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${content}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
           break;
-        case "Assyrian Vocalized":
-          content = `<span class="swadaya">${content}</span> <span>${data.value["English"]}</span> <span class="estrangela">${data.value["Aramaic Vocalized"]}</span>`;
+        case "sv":
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${content}</span>`;
+          break;
+        default:
+          break;
+      }
+      let category = "English";
+      switch (data.key) {
+        case "en":
+          category = "English";
+          break;
+        case "ar":
+          category = "Aramaic";
+          break;
+        case "sy":
+          category = "Assyrian";
+          break;
+        case "av":
+          category = "Vocalized Aramaic";
+          break;
+        case "sv":
+          category = "Vocalized Assyrian";
           break;
         default:
           break;
@@ -65,7 +92,7 @@ const autoCompleteJS = new autoComplete({
         ${content}
       </span>
       <span style="display: flex; align-items: center; font-size: 13px; font-weight: 100; color: rgba(0,0,0,.2);">
-        ${data.key}
+        ${category}
       </span>`;
     },
     highlight: true,
@@ -80,7 +107,7 @@ const autoCompleteJS = new autoComplete({
         elems.length && elems[0].classList.remove("selection");
         const feedback = event.detail;
         autoCompleteJS.input.blur();
-        const hash = feedback.selection.value["English"];
+        const hash = feedback.selection.value["en"];
         const selection = feedback.selection.value[feedback.selection.key];
         const elem = document.getElementById(hash);
         if (elem) {
@@ -88,7 +115,6 @@ const autoCompleteJS = new autoComplete({
           elem.scrollIntoView();
         }
         autoCompleteJS.input.value = selection;
-        console.log(feedback);
       },
     },
   },

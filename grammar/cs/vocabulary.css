@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  max-width: 600px;
 }
 
 .header {
@@ -39,7 +40,8 @@ body {
 }
 
 .mode {
-  display: inline-block
+  margin-top: 7px;
+  display: inline-block;
 }
 
 .toggle {
@@ -98,12 +100,14 @@ body {
   color: #64ceaa;
 }
 
-main {
-  max-width: 600px;
+/* vocabulary */
+
+.finder {
+  padding: 10px;
 }
 
-.letter {
-  margin-left: 30px;
+main {
+  margin-bottom: 10px;
 }
 
 .estrangela {
@@ -120,12 +124,16 @@ main {
 
 a              { text-decoration:none }
 a:visited      { color: #008080 }
-a:hover        { color: #CC3333;text-decoration:underline; }
+a:hover        { color: #CC3333 }
 
 a[href$=".mp3"]:after {
-  content:" \1f508";
+  content:"\1F569";
   vertical-align:top;
-  font-size:8px;
+  font-size:12px;
   position: relative;
-  left: 1px;
+  left: 2px;
+}
+
+mark {
+  direction: rtl;
 }

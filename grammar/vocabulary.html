@@ -14,7 +14,8 @@
   <link rel="stylesheet" type="text/css" media="screen" href="cs/vocabulary.css">
   <link rel="stylesheet" type="text/css" media="screen" href="../font/font.css">
 
-  <script language="JavaScript" src="js/audio.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="https://unpkg.com/browse/core-js-bundle@3.26.1/minified.js"></script>
 </head>
 
 <body>
@@ -23,8 +24,7 @@
     Your browser does not support the audio tag.
   </audio>
   <header id="header" class="header">
-    <br />
-    <div class="body" align="center">
+    <div class="finder">
       <input id="autoComplete" type="text" dir="ltr" spellcheck="false" autocorrect="off" autocomplete="off"
         autocapitalize="off" maxlength="2048" tabindex="1">
       <div class="mode">
@@ -33,10 +33,7 @@
         </div>
       </div>
     </div>
-  </header>
-  <main>
-    <br />
-    <div class="letter">
+    <div>
       <a href="#A">A</a>&nbsp;&nbsp;
       <a href="#B">B</a>&nbsp;&nbsp;
       <a href="#C">C</a>&nbsp;&nbsp;
@@ -62,69 +59,88 @@
       <a href="#W">W</a>&nbsp;&nbsp;
       <a href="#X">X</a>&nbsp;&nbsp;
       <a href="#Y">Y</a>&nbsp;&nbsp;
-      <a href="#Z">Z</a>
+      <a href="#Z">Z</a>&nbsp;&nbsp;
     </div>
-    <br />
-    <div id="A" class="letter"><a href="#header">A</a></div>
+  </header>
+  <main>
+    <div id="A"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;A</a></div>
     <ul>
       <dt id="alap"><b>alap</b></dt>
-      <dd class="estrangela">
+      <dd class="estrangela" dir="rtl">
         <a href="Level_One/01_sound/01_alap.mp3">ܐܵܠܲܦ</a>
       </dd>
-      <dd class="swadaya">
+      <dd class="swadaya" dir="rtl">
         <a href="Level_One/01_sound/01_alap.mp3">ܐܵܠܲܦ</a>
       </dd>
     </ul>
-    <div id="B" class="letter"><a href="#header">B</a></div>
-    <div id="C" class="letter"><a href="#header">C</a></div>
-    <div id="D" class="letter"><a href="#header">D</a></div>
-    <div id="E" class="letter"><a href="#header">E</a></div>
-    <div id="F" class="letter"><a href="#header">F</a></div>
-    <div id="G" class="letter"><a href="#header">G</a></div>
-    <div id="H" class="letter"><a href="#header">H</a></div>
-    <div id="I" class="letter"><a href="#header">I</a></div>
-    <div id="J" class="letter"><a href="#header">J</a></div>
-    <div id="K" class="letter"><a href="#header">K</a></div>
-    <div id="L" class="letter"><a href="#header">L</a></div>
+    <div id="B"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;B</a></div>
+    <ul>
+      <dt id="bet"><b>bet</b></dt>
+      <dd class="estrangela" dir="rtl">
+        <a href="Level_One/01_sound/02_beith.mp3">ܒܹܝܬ݂</a>
+      </dd>
+      <dd class="swadaya" dir="rtl">
+        <a href="Level_One/01_sound/02_beith.mp3">ܒܹܝܬ݂</a>
+      </dd>
+    </ul>
+    <div id="C"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;C</a></div>
+    <div id="D"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;D</a></div>
+    <div id="E"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;E</a></div>
+    <div id="F"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;F</a></div>
+    <div id="G"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;G</a></div>
+    <ul>
+      <dt id="gamal"><b>gamal</b></dt>
+      <dd class="estrangela" dir="rtl">
+        <a href="Level_One/01_sound/03_gamal.mp3">ܓܵܡܲܠ</a>
+      </dd>
+      <dd class="swadaya" dir="rtl">
+        <a href="Level_One/01_sound/03_gamal.mp3">ܓܵܡܲܠ</a>
+      </dd>
+    </ul>
+    <div id="H"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;H</a></div>
+    <div id="I"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;I</a></div>
+    <div id="J"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;J</a></div>
+    <div id="K"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;K</a></div>
+    <div id="L"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;L</a></div>
     <ul>
       <dl>
         <dt id="language"><b>language</b></dt>
-        <dd class="estrangela">
-          ܠܸܫܵܢܵܐ
+        <dd class="estrangela" dir="rtl">
+          <a href="Level_One/01_sound/03_gamal.mp3">ܠܸܫܵܢܵܐ</a>
         </dd>
-        <dd class="swadaya">
+        <dd class="swadaya" dir="rtl">
           ܠܸܫܵܢܵܐ
         </dd>
         <dt id="of our lord">of our <b>lord</b></dt>
-        <dd class="estrangela">
+        <dd class="estrangela" dir="rtl">
           ܕܡܵܪܲܢ
         </dd>
-        <dd class="swadaya">
+        <dd class="swadaya" dir="rtl">
           ܕܡܵܪܲܢ
         </dd>
         <dt id="our lord">our <b>lord</b></dt>
-        <dd class="estrangela">
+        <dd class="estrangela" dir="rtl">
           ܡܵܪܲܢ
         </dd>
-        <dd class="swadaya">
+        <dd class="swadaya" dir="rtl">
           ܡܵܪܲܢ
         </dd>
       </dl>
     </ul>
-    <div id="M" class="letter"><a href="#header">M</a></div>
-    <div id="N" class="letter"><a href="#header">N</a></div>
-    <div id="O" class="letter"><a href="#header">O</a></div>
-    <div id="P" class="letter"><a href="#header">P</a></div>
-    <div id="Q" class="letter"><a href="#header">Q</a></div>
-    <div id="R" class="letter"><a href="#header">R</a></div>
-    <div id="S" class="letter"><a href="#header">S</a></div>
-    <div id="T" class="letter"><a href="#header">T</a></div>
-    <div id="U" class="letter"><a href="#header">U</a></div>
-    <div id="V" class="letter"><a href="#header">V</a></div>
-    <div id="W" class="letter"><a href="#header">W</a></div>
-    <div id="X" class="letter"><a href="#header">X</a></div>
-    <div id="Y" class="letter"><a href="#header">Y</a></div>
-    <div id="Z" class="letter"><a href="#header">Z</a></div>
+    <div id="M"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;M</a></div>
+    <div id="N"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;N</a></div>
+    <div id="O"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;O</a></div>
+    <div id="P"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;P</a></div>
+    <div id="Q"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;Q</a></div>
+    <div id="R"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;R</a></div>
+    <div id="S"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;S</a></div>
+    <div id="T"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;T</a></div>
+    <div id="U"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;U</a></div>
+    <div id="V"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;V</a></div>
+    <div id="W"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;W</a></div>
+    <div id="X"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;X</a></div>
+    <div id="Y"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;Y</a></div>
+    <div id="Z"><a href="#header">&nbsp;&nbsp;&nbsp;&nbsp;Z</a></div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
   <script src="./js/vocabulary.js"></script>

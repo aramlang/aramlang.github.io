@@ -1,30 +1,44 @@
 [
   {
-    "English": "alap",
-    "Aramaic": "ܐܠܦ",
-    "Assyrian": "ܐܠܦ",
-    "Aramaic Vocalized": "ܐܵܠܲܦ",
-    "Assyrian Vocalized": "ܐܵܠܲܦ"
+    "en": "alap",
+    "ar": "ܐܠܦ",
+    "sy": "ܐܠܦ",
+    "av": "ܐܵܠܲܦ",
+    "sv": "ܐܵܠܲܦ"
   },
   {
-    "English": "language",
-    "Aramaic": "ܠܫܢܐ",
-    "Assyrian": "ܠܫܢܐ",
-    "Aramaic Vocalized": "ܠܸܫܵܢܵܐ",
-    "Assyrian Vocalized": "ܠܸܫܵܢܵܐ"
+    "en": "bet",
+    "ar": "ܒܝܬ",
+    "sy": "ܒܝܬ",
+    "av": "ܒܹܝܬ݂",
+    "sv": "ܒܹܝܬ݂"
   },
   {
-    "English": "of our lord",
-    "Aramaic": "ܕܡܪܢ",
-    "Assyrian": "ܕܡܪܢ",
-    "Aramaic Vocalized": "ܕܡܵܪܲܢ",
-    "Assyrian Vocalized": "ܕܡܵܪܲܢ"
+    "en": "gamal",
+    "ar": "ܓܡܠ",
+    "sy": "ܓܡܠ",
+    "av": "ܓܵܡܲܠ",
+    "sv": "ܓܵܡܲܠ"
   },
   {
-    "English": "our lord",
-    "Aramaic": "ܡܪܢ",
-    "Assyrian": "ܡܪܢ",
-    "Aramaic Vocalized": "ܡܵܪܲܢ",
-    "Assyrian Vocalized": "ܡܵܪܲܢ"
+    "en": "language",
+    "ar": "ܠܫܢܐ",
+    "sy": "ܠܫܢܐ",
+    "av": "ܠܸܫܵܢܵܐ",
+    "sv": "ܠܸܫܵܢܵܐ"
+  },
+  {
+    "en": "of our lord",
+    "ar": "ܕܡܪܢ",
+    "sy": "ܕܡܪܢ",
+    "av": "ܕܡܵܪܲܢ",
+    "sv": "ܕܡܵܪܲܢ"
+  },
+  {
+    "en": "our lord",
+    "ar": "ܡܪܢ",
+    "sy": "ܡܪܢ",
+    "av": "ܡܵܪܲܢ",
+    "sv": "ܡܵܪܲܢ"
   }
 ]
