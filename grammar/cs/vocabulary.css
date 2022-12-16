@@ -15,10 +15,12 @@ body {
 }
 
 .header {
+  text-align: center;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-touch-callout: none;
+  padding: 7px;
 }
 
 .no_result {
@@ -40,6 +42,7 @@ body {
 
 .mode {
   margin-top: 7px;
+  margin-bottom: 7px;
 }
 
 .toggle {
@@ -100,12 +103,12 @@ body {
 
 /* vocabulary */
 
-.finder {
-  padding: 10px;
+.letters {
+  margin-bottom: 7px;
 }
 
 main {
-  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .estrangela {
@@ -127,9 +130,16 @@ a:hover        { color: #CC3333 }
 a[href$=".mp3"]:after {
   content:"\1F569";
   vertical-align:top;
-  font-size:12px;
+  font-size:10px;
   position: relative;
-  left: 2px;
+}
+
+dd {
+  margin-inline-start: 10px;
+}
+
+ul {
+  padding-inline-start: 10px;
 }
 
 .autoComplete_wrapper > input {
