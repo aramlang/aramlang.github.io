@@ -15,7 +15,6 @@ body {
 }
 
 .header {
-  text-align: center;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -41,7 +40,6 @@ body {
 
 .mode {
   margin-top: 7px;
-  display: inline-block;
 }
 
 .toggle {
@@ -112,13 +110,13 @@ main {
 
 .estrangela {
   font-family: 'Estrangelo Esarhaddon';
-  font-size: xx-large;
+  font-size: x-large;
   text-align: right;
 }
 
 .swadaya {
   font-family: 'EastAssyrian';
-  font-size: xx-large;
+  font-size: x-large;
   text-align: right;
 }
 
@@ -134,6 +132,11 @@ a[href$=".mp3"]:after {
   left: 2px;
 }
 
-mark {
-  direction: rtl;
+.autoComplete_wrapper > input {
+  font-size: x-large;
+  width: 100%;
+}
+
+.autoComplete_wrapper {
+  width: 100%;
 }

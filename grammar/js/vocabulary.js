@@ -1,10 +1,3 @@
-function groupBy(xs, key) {
-  return xs.reduce(function(rv, x) {
-    (rv[x[key]] = rv[x[key]] || []).push(x);
-    return rv;
-  }, {});
-};
-
 const autoCompleteJS = new autoComplete({
   data: {
     src: async () => {
@@ -21,12 +14,36 @@ const autoCompleteJS = new autoComplete({
     keys: ["en", "ar", "sy", "av", "sv"],
     cache: true,
     filter: (list) => {
-      // Filter duplicates in case of multiple data keys usage
-      const filteredResults = Array.from(new Set(list.map((value) => value.match))).map((food) => {
-        return list.find((value) => value.match === food);
-      });
+      if (!list || !list.length) {
+        return list;
+      }
 
-      return filteredResults;
+      // return a single result per English match
+      let result = [];
+      let lastEntry = list[0];
+      let lastKey = lastEntry.key;
+      let lastEn = lastEntry.value.en;
+
+      for (let i = 1; i < list.length; i++) {
+        let entry = list[i];
+        if (lastEn === entry.value.en) {
+          if (lastKey === "en" || lastKey == "av" || lastKey == "sv" || lastKey == "ar") {
+            continue; // already have highest precedence entry
+          }
+          lastEntry = entry;
+          lastKey = entry.key;
+        }
+        else {
+          result.push(lastEntry)
+          lastEntry = entry
+          lastEn = entry.value.en;
+          lastKey = entry.key;
+        }
+      }
+
+      result.push(lastEntry);
+
+      return result;
     },
   },
   placeHolder: "Search for Words",
@@ -79,10 +96,10 @@ const autoCompleteJS = new autoComplete({
           category = "Assyrian";
           break;
         case "av":
-          category = "Vocalized Aramaic";
+          category = "Aramaic";
           break;
         case "sv":
-          category = "Vocalized Assyrian";
+          category = "Assyrian";
           break;
         default:
           break;
@@ -136,5 +153,12 @@ document.querySelector(".toggler").addEventListener("click", () => {
     document.querySelector(".toggler").innerHTML = "Strict";
     autoCompleteJS.searchEngine = "strict";
   }
+});
+
+document.getElementById("autoComplete").addEventListener("keyup", (event) => {
+  var input = event.target;
+  console.log(input.value);
+  console.log(input.value.charCodeAt(0));
+  input.dir = (!input.value || input.value.charCodeAt(0) < 255) ? "ltr" : "rtl";
 });
 
