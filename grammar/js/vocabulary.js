@@ -89,13 +89,13 @@ const autoCompleteJS = new autoComplete({
         case "en":
           category = "English";
           break;
-          case "av":
-            category = "Vocalized Aramaic";
-            break;
-          case "sv":
-            category = "Vocalized Assyrian";
-            break;
-          case "ar":
+        case "av":
+          category = "Vocalized Aramaic";
+          break;
+        case "sv":
+          category = "Vocalized Assyrian";
+          break;
+        case "ar":
           category = "Aramaic";
           break;
         case "sy":
@@ -156,6 +156,20 @@ document.querySelector(".toggler").addEventListener("click", () => {
 });
 
 document.getElementById("autoComplete").addEventListener("keyup", (event) => {
-  var input = event.target;
+  let input = event.target;
   input.dir = !input.value || /^[\u0000-\u007F]+$/.test(input.value) ? "ltr" : "rtl";
+});
+
+document.querySelectorAll('[href="#header"]').forEach((element) => {
+  element.addEventListener("click", (event) => {
+    window.scrollTo(0, 0);
+    event.preventDefault();
+  });
+});
+
+document.getElementById("letters").addEventListener("click", (event) => {
+  let href = event.target.href;
+  let id = href.charAt(href.length - 1)
+  document.getElementById(id).scrollIntoView();
+  event.preventDefault();
 });
