@@ -93,8 +93,8 @@ body {
 }
 
 .selection {
-  color: #ffc6c6;
-  transition: var(--transition-1);
+  color: crimson;
+  transition: var(--transition-2);
 }
 
 .selection::selection {

@@ -121,15 +121,31 @@ const autoCompleteJS = new autoComplete({
       },
       selection(event) {
         const elems = document.getElementsByClassName("selection");
+        if (elems) {
+          for(let i = 0; i < elems.length; i++) {
+            let elem = elems[0];
+            elem.classList.remove("selection");
+          }
+        }
         elems.length && elems[0].classList.remove("selection");
         const feedback = event.detail;
         autoCompleteJS.input.blur();
         const hash = feedback.selection.value["en"];
         const selection = feedback.selection.value[feedback.selection.key];
-        const elem = document.getElementById(hash);
-        if (elem) {
-          elem.classList.add("selection");
-          elem.scrollIntoView();
+        const eng = document.getElementById(hash);
+        const ara = document.getElementById(`${hash}-ar`)
+        const ass = document.getElementById(`${hash}-sy`)
+        if (eng) {
+          eng.classList.add("selection");
+          eng.scrollIntoView();
+        }
+        if (ara) {
+          ara.classList.add("selection");
+          eng || ara.scrollIntoView();
+        }
+        if (ass) {
+          ass.classList.add("selection");
+          eng || ara || ass.scrollIntoView();
         }
         autoCompleteJS.input.value = selection;
       },
