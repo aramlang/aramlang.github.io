@@ -11,7 +11,7 @@ const autoCompleteJS = new autoComplete({
         return error;
       }
     },
-    keys: ["en", "ar", "sy", "av", "sv"],
+    keys: ["en", "av", "sv", "ar", "sy"],
     cache: true,
     filter: (list) => {
       if (!list || !list.length) {
@@ -64,7 +64,7 @@ const autoCompleteJS = new autoComplete({
   resultItem: {
     element: (item, data) => {
       item.style = "display: flex; justify-content: space-between;";
-      let content = data.match;
+      let content = data.match.replace(/(<\/mark>)([\u0730-\u074A]+)/g, "$2$1"); // put diacritics inside mark tag 
       switch (data.key) {
         case "en":
           content = `<span>${content}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
@@ -89,16 +89,16 @@ const autoCompleteJS = new autoComplete({
         case "en":
           category = "English";
           break;
-        case "ar":
+          case "av":
+            category = "Vocalized Aramaic";
+            break;
+          case "sv":
+            category = "Vocalized Assyrian";
+            break;
+          case "ar":
           category = "Aramaic";
           break;
         case "sy":
-          category = "Assyrian";
-          break;
-        case "av":
-          category = "Aramaic";
-          break;
-        case "sv":
           category = "Assyrian";
           break;
         default:
@@ -157,8 +157,5 @@ document.querySelector(".toggler").addEventListener("click", () => {
 
 document.getElementById("autoComplete").addEventListener("keyup", (event) => {
   var input = event.target;
-  console.log(input.value);
-  console.log(input.value.charCodeAt(0));
-  input.dir = (!input.value || input.value.charCodeAt(0) < 255) ? "ltr" : "rtl";
+  input.dir = !input.value || /^[\u0000-\u007F]+$/.test(input.value) ? "ltr" : "rtl";
 });
-
