@@ -1,15 +1,11 @@
-a[href$=".mp3"]:after {
-  content:" \1f508";
+a[href$=".mp3"]:before {
+  content:"\1F569";
   vertical-align:top;
-  font-size:8px;
-  position: relative;
-  left: -4px;
+  font-size:10px;
 }
 
-.missing-sound:after {
+.missing-sound:before {
   content:" \1f507" !important;
   vertical-align:top !important;
   font-size:8px !important;
-  position: relative !important;
-  left: -4px !important;
 }
