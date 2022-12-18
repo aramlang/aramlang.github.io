@@ -67,19 +67,19 @@ const autoCompleteJS = new autoComplete({
       let content = data.match.replace(/(<\/mark>)([\u0730-\u074A]+)/g, "$2$1"); // put diacritics inside mark tag 
       switch (data.key) {
         case "en":
-          content = `<span>${content}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
+          content = `<span>${content}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> | <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
           break;
         case "ar":
-          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${content}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${content}</span> | <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
           break;
         case "sy":
-          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${content}</span>`;
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> | <span class="swadaya" dir="rtl">${content} ؛ </span>`;
           break;
         case "av":
-          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${content}</span> <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${content}</span> | <span class="swadaya" dir="rtl">${data.value["sv"]}</span>`;
           break;
         case "sv":
-          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> <span class="swadaya" dir="rtl">${content}</span>`;
+          content = `<span>${data.value["en"]}</span> <span class="estrangela" dir="rtl">${data.value["av"]}</span> | <span class="swadaya" dir="rtl">${content}</span>`;
           break;
         default:
           break;
@@ -90,10 +90,10 @@ const autoCompleteJS = new autoComplete({
           category = "English";
           break;
         case "av":
-          category = "Vocalized Aramaic";
+          category = "Aramaic";
           break;
         case "sv":
-          category = "Vocalized Assyrian";
+          category = "Assyrian";
           break;
         case "ar":
           category = "Aramaic";
