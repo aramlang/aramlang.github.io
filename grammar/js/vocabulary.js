@@ -130,7 +130,7 @@ const autoCompleteJS = new autoComplete({
         elems.length && elems[0].classList.remove("selection");
         const feedback = event.detail;
         autoCompleteJS.input.blur();
-        const hash = feedback.selection.value["en"];
+        const hash = feedback.selection.value["en"].replace(" ", "_");
         const selection = feedback.selection.value[feedback.selection.key];
         const eng = document.getElementById(hash);
         const ara = document.getElementById(`${hash}-ar`)
