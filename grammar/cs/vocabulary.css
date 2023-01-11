@@ -96,6 +96,11 @@ body {
   transition: var(--transition-2);
 }
 
+.selection > a {
+  color: crimson;
+  transition: var(--transition-2);
+}
+
 .selection::selection {
   color: #64ceaa;
 }
