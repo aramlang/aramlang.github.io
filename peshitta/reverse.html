@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reverse Text</title>
+</head>
+
+<body style="text-align: center">
+  <header>Reverse Text Tool</header><br>
+  <main>
+    <label for="reverse-box">Enter text to reverse</label>
+    <textarea id="reverse-box" rows="5" style="width:100%" onclick="this.setSelectionRange(0, this.value.length)"></textarea>
+    <div>
+      <button onclick="reverseString()">Reverse</button>
+    </div>
+    <br>
+    <label for="output-box">Reversed text</label>
+    <textarea id="output-box" readonly rows="5" style="width:100%"  onclick="document.execCommand('copy')"></textarea>
+  </main>
+  <footer style=" position:absolute; bottom:0; width:95%; margin:10px;">
+    <br>
+    - Public Domain -<br>unless otherwise specified
+  </footer>
+  <script>
+    function reverseString() {
+      var output = document.getElementById('output-box');
+      output.value = document.getElementById('reverse-box').value.trim().split('').reverse().join('');
+      output.focus();
+      output.setSelectionRange(0, output.value.length);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.swadaya {
+  font-family: 'EastAssyrian';
+  direction: rtl;
+  text-align: right;
+  font-size: x-large;
+}
+
+table {
+  width: 100%; 
+}
+
+h3 {
+  text-align: center;
+}
+
+.xlarger {
+  font-size: x-large;
+}
+
+.larger {
+  font-size: large;
+}
+
+.right {
+  text-align: right;
+}
