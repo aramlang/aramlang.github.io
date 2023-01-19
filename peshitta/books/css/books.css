@@ -5,8 +5,18 @@
   font-size: x-large;
 }
 
+table.header {
+  width: 100%;
+}
+
 table {
-  width: 100%; 
+  width: auto;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+td {
+  padding-right: 7px;
 }
 
 h3 {
