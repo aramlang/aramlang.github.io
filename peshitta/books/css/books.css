@@ -23,6 +23,10 @@ h3 {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .xlarger {
   font-size: x-large;
 }
