@@ -13,3 +13,12 @@ document.querySelectorAll('[href="#header"]').forEach((element) => {
     event.preventDefault();
   });
 });
+
+document.getElementById("font-family").addEventListener("change", function (event) {
+  let fontFamily = event.target.value;
+  var elements = document.getElementsByClassName("swadaya");
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements.item(i);
+    element.style.fontFamily = fontFamily;
+  }
+});
