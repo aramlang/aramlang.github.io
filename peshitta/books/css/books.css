@@ -27,6 +27,18 @@ a {
   text-decoration: none;
 }
 
+sup {
+  color: red;
+}
+
+hr {
+  color: blue;
+}
+
+li {
+  font-style: italic;
+}
+
 .xlarger {
   font-size: x-large;
 }
