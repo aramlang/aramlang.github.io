@@ -55,3 +55,7 @@ div {
   text-align: right;
   color: blue
 }
+
+.hidden {
+  visibility: hidden;
+}
