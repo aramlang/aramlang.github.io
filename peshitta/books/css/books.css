@@ -10,6 +10,7 @@ table.header {
 }
 
 table {
+  border-collapse: collapse;
   width: auto;
   margin-right: 0px;
   margin-left: auto;
