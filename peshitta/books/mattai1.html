@@ -12,22 +12,24 @@
   <header>
     <h3>Peshitta Aramaic/English Interlinear New Testament</h3>
     <div style="text-align: center">
-      Font <select id="font-family">
+      Font&nbsp;<select id="font-family">
         <option value="EastAssyrian">East Assyrian</option>
         <option value="Estrangelo Esarhaddon">Estrangela</option>
       </select>
-    </div>
-    <div id="sskhakha" class="swadaya" style="text-align: center;">
-      <a href="#alap">&nbsp;ܐ&nbsp;</a>
-      <a href="#beth">&nbsp;ܒ&nbsp;</a>
-      <a href="#gamal">&nbsp;ܓ&nbsp;</a>
-      <a href="#dalath">&nbsp;ܕ&nbsp;</a>
-      <a href="#he">&nbsp;ܗ&nbsp;</a>
-      <a href="#waw">&nbsp;ܘ&nbsp;</a>
-      <a href="#zayn">&nbsp;ܙ&nbsp;</a>
-      <a href="#kheth">&nbsp;ܚ&nbsp;</a>
-      <a href="#teth">&nbsp;ܛ&nbsp;</a>
-      <a href="#yodh">&nbsp;ܝ&nbsp;</a>
+      &nbsp;<label for="loop">Loop Audio</label>
+      <input type="checkbox" id="loop" checked>
+      Start&nbsp;Verse&nbsp;<select id="start-verse">
+      </select>
+      End&nbsp;Verse&nbsp;<select id="end-verse">
+      </select>
+      <div style="padding-top: 10px">
+        <audio id="audio" controls loop>
+          <source src="MatthewAllap.mp3" type="audio/mp3">
+          <track id="MatthewAllap-track" default label="Matthew Allap" kind="metadata" srclang="en-US"
+            src="MatthewAllap.txt" />
+          Your browser does not support the audio tag!
+        </audio>
+      </div>
     </div>
   </header>
   <main>
@@ -892,6 +894,9 @@
   </ol>
   <br>
   <script src="js/books.js"></script>
+  <script>
+    setupLoop(25);
+  </script>
 </body>
 
 </html>
