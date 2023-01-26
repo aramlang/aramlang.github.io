@@ -60,3 +60,7 @@ div {
 .hidden {
   visibility: hidden;
 }
+
+td.highlight {
+  background-color: #FFFF00;
+}
