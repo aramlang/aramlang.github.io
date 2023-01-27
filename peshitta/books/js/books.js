@@ -1,18 +1,20 @@
 function setupAudio(maxVerse) {
+  'use strict';
 
   // #region Init
 
-  const audio = document.getElementById("audio");
-  const audioTrack = document.getElementById("audio-track");
-  const loop = document.getElementById("loop");
-  const startVerse = document.getElementById("start-verse");
-  const endVerse = document.getElementById("end-verse");
-  const adjustment = 0.002;
-  let startTime = adjustment;
-  let endTime;
-  const cues = {};  // cue dtos
+  const audio = document.getElementById('audio');
+  const audioTrack = document.getElementById('audio-track');
+  const loop = document.getElementById('loop');
+  const startVerse = document.getElementById('start-verse');
+  const endVerse = document.getElementById('end-verse');
 
-  if (!audio || !audioTrack || !startVerse || !endVerse) {
+  const cueAdjustment = 0.015;   // adjustment for timerupdate granularity
+  const cues = {};               // cue dtos
+  let startTime = cueAdjustment; // current loop start time
+  let endTime;                   // current loop end time
+
+  if (!audio || !audioTrack || !loop || !startVerse || !endVerse) {
     return;
   }
 
@@ -26,8 +28,13 @@ function setupAudio(maxVerse) {
     }
   }
 
+  function seekStart() {
+    if (!startTime || !endTime || startTime >= endTime) { return; }
+    audio.currentTime = startTime;
+  }
+
   function unhighlight() {
-    document.querySelectorAll(".highlight").forEach(elem => elem.classList.remove("highlight"));
+    document.querySelectorAll('.highlight').forEach(elem => elem.classList.remove('highlight'));
   }
 
   audio.textTracks[0].addEventListener('cuechange', function (event) {
@@ -36,18 +43,18 @@ function setupAudio(maxVerse) {
 
     id = vttCue.id;
     aramaic = document.getElementById(id);
-    english = document.getElementById(id + "e");
+    english = document.getElementById(id + 'e');
     if (!aramaic || !english) { return; }
 
     function highlight() {
-      aramaic.classList.add("highlight");
-      english.classList.add("highlight");
+      aramaic.classList.add('highlight');
+      english.classList.add('highlight');
     }
     // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
   });
 
-  audio.addEventListener("loadedmetadata", function (event) {
+  audio.addEventListener('loadedmetadata', function (event) {
     if (Object.keys(cues).length) { return; }
 
     endTime = audio.duration;
@@ -57,7 +64,7 @@ function setupAudio(maxVerse) {
     for (let i = 0; i < vttCues.length; i++) {
       let vttCue = vttCues[i];
       let id = vttCue.id;
-      let verse = id.split("-")[0];
+      let verse = id.split('-')[0];
       let cue = {
         id: id,
         startTime: vttCue.startTime,
@@ -71,27 +78,28 @@ function setupAudio(maxVerse) {
     }
   });
 
-  audio.addEventListener("seeked", unhighlight);
+  audio.addEventListener('seeked', unhighlight);
+  audio.addEventListener('ended', unhighlight);
 
-  audio.addEventListener("timeupdate", function (event) {
+  audio.addEventListener('timeupdate', function (event) {
     if (!loop.checked) { return; }
     let time = event.target.currentTime;
     if (!time || !startTime || !endTime || startTime >= endTime) { return; }
 
     if (time < startTime) {
-      audio.currentTime = startTime - adjustment;
+      seekStart();
     }
 
     if (time >= endTime) {
-      audio.currentTime = startTime - adjustment;
+      seekStart();
     }
   });
 
-  audio.addEventListener("error", function (e) {
-    var src = audio.getAttribute("src");
+  audio.addEventListener('error', function (e) {
+    var src = audio.getAttribute('src');
     switch (e.target.error.code) {
       case e.target.error.MEDIA_ERR_ABORTED:
-        alert("You aborted the audio playback.");
+        alert('You aborted the audio playback.');
         break;
       case e.target.error.MEDIA_ERR_NETWORK:
         alert(
@@ -100,7 +108,7 @@ function setupAudio(maxVerse) {
         break;
       case e.target.error.MEDIA_ERR_DECODE:
         alert(
-          "The audio playback was aborted due to a corruption problem or because your browser does not support it."
+          'The audio playback was aborted due to a corruption problem or because your browser does not support it.'
         );
         break;
       case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
@@ -111,7 +119,7 @@ function setupAudio(maxVerse) {
         );
         break;
       default:
-        alert("An unknown error occurred.");
+        alert('An unknown error occurred.');
         break;
     }
   });
@@ -121,45 +129,43 @@ function setupAudio(maxVerse) {
   // #region Setup
 
   function setupLoop() {
-    if (!startVerse || !endVerse) {
-      return;
-    }
     function setStartTime() {
       let words, word;
       if ((words = cues[startVerse.value]) && (word = words[0])) {
-        startTime = word.startTime;
+        let loopStart = word.startTime - cueAdjustment;
+        startTime = loopStart < cueAdjustment ? cueAdjustment : loopStart;
       }
     }
 
     function setEndTime() {
       let words, word;
       if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
-        endTime = word.endTime;
+        let loopEnd = word.endTime - cueAdjustment;
+        endTime = loopEnd < cueAdjustment ? cueAdjustment : loopEnd;
       }
     }
 
     for (let i = 1; i <= maxVerse; i++) {
-      let opt = document.createElement("option");
+      let opt = document.createElement('option');
       opt.value = i;
-      opt.id = "start" + i;
+      opt.id = 'start' + i;
       opt.innerHTML = i;
       startVerse.appendChild(opt);
 
-      opt = document.createElement("option");
-      opt.id = "end" + i;
+      opt = document.createElement('option');
+      opt.id = 'end' + i;
       opt.value = i;
       opt.innerHTML = i;
       endVerse.appendChild(opt);
     }
+
     endVerse.value = maxVerse;
-    startVerse.addEventListener("change", function () {
+
+    startVerse.addEventListener('change', function () {
       let start = parseInt(startVerse.value);
       let end = parseInt(endVerse.value);
       if (start > end) {
-        for (let i = 1; i <= maxVerse; i++) {
-          document.getElementById("end" + i).removeAttribute("selected");
-        }
-        document.getElementById("end" + start).setAttribute("selected", true);
+        endVerse.value = startVerse.value;
         setEndTime();
       }
 
@@ -169,14 +175,11 @@ function setupAudio(maxVerse) {
       }
     });
 
-    endVerse.addEventListener("change", function () {
+    endVerse.addEventListener('change', function () {
       let start = parseInt(startVerse.value);
       let end = parseInt(endVerse.value);
       if (start > end) {
-        for (let i = 1; i <= maxVerse; i++) {
-          document.getElementById("start" + i).removeAttribute("selected");
-        }
-        document.getElementById("start" + end).setAttribute("selected", true);
+        startVerse.value = endVerse.value;
         setStartTime();
       }
 
@@ -188,22 +191,22 @@ function setupAudio(maxVerse) {
   }
 
   document.querySelectorAll('[href="#header"]').forEach((element) => {
-    element && element.addEventListener("click", (event) => {
+    element && element.addEventListener('click', (event) => {
       window.scrollTo(0, 0);
       event.preventDefault();
     });
   });
 
-  document.getElementById("font-family").addEventListener("change", function (event) {
+  document.getElementById('font-family').addEventListener('change', function (event) {
     let fontFamily = event.target.value;
-    let elements = document.getElementsByClassName("swadaya");
+    let elements = document.getElementsByClassName('swadaya');
     for (let i = 0; i < elements.length; i++) {
       const element = elements.item(i);
       element.style.fontFamily = fontFamily;
     }
   });
 
-  loop.addEventListener("click", function () {
+  loop.addEventListener('click', function () {
     audio.loop = loop.checked;
   })
 
