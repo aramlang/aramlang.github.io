@@ -5,6 +5,10 @@
   font-size: x-large;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+} 
+
 table.header {
   width: 100%;
 }
