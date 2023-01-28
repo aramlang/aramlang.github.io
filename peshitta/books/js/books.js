@@ -12,10 +12,11 @@ function setupAudio(
   const startVerse = document.getElementById('start-verse');
   const endVerse = document.getElementById('end-verse');
 
-  const cueAdjustment = 0.015;   // adjustment for timerupdate granularity
-  const cues = {};               // cue dtos
-  let startTime = cueAdjustment; // current loop start time
-  let endTime;                   // current loop end time
+  const startAdjustment = 0.015;   // adjustment for start of loop due to low timerupdate frequency
+  const endAdjustment = 0.250;     // adjustment for end of loop due to low timerupdate frequency
+  const cues = {};                 // cue dtos
+  let startTime = startAdjustment; // current loop start time
+  let endTime;                     // current loop end time
 
   if (!audio || !audioTrack || !loop || !startVerse || !endVerse) {
     return;
@@ -139,16 +140,16 @@ function setupAudio(
     function setStartTime() {
       let words, word;
       if ((words = cues[startVerse.value]) && (word = words[0])) {
-        let loopStart = word.startTime - cueAdjustment;
-        startTime = loopStart < cueAdjustment ? cueAdjustment : loopStart;
+        let loopStart = word.startTime - startAdjustment;
+        startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
       }
     }
 
     function setEndTime() {
       let words, word;
       if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
-        let loopEnd = word.endTime - cueAdjustment;
-        endTime = loopEnd < cueAdjustment ? cueAdjustment : loopEnd;
+        let loopEnd = word.endTime - endAdjustment;
+        endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
       }
     }
 
