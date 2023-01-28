@@ -10,56 +10,91 @@
 
 <body>
   <header>
-    <h3>Peshitta Aramaic/English Interlinear New Testament</h3>
-    <div style="text-align: center">
-      Font&nbsp;<select id="font-family">
-        <option value="EastAssyrian">East Assyrian</option>
-        <option value="Estrangelo Esarhaddon">Estrangela</option>
-      </select>
-    </div>
-    <div style="text-align: center; padding-top: 12px">
-      <label for="loop" title="Loop selected verses">Loop</label>
-      <input type="checkbox" id="loop" checked title="Loop selected verses">
-      Start&nbsp;Verse&nbsp;<select id="start-verse">
-      </select>
-      End&nbsp;Verse&nbsp;<select id="end-verse">
-      </select>
-      <div style="padding-top: 7px">
-        <audio id="audio" controls loop>
-          <source src="MatthewAllap.mp3" type="audio/mp3">
-          <track id="audio-track" default label="Matthew Allap" kind="metadata" srclang="en-US"
-            src="MatthewAllap.txt" />
-          Your browser does not support the audio tag!
-        </audio>
-      </div>
+    <div>
+      <table class="header">
+        <tr>
+          <td></td>
+          <td class="center larger">
+            <b>Peshitta Aramaic/English Interlinear New Testament</b>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="larger">The Preaching of Mattai</td>
+          <td class="center">
+            <label for="loop" title="Loop selected verses">Loop</label>
+            <input type="checkbox" id="loop" checked title="Loop selected verses">
+            &nbsp;Verse&nbsp;<select id="start-verse">
+            </select>
+            &nbsp;-&nbsp;&nbsp;<select id="end-verse">
+            </select>
+          </td>
+          <td class="swadaya">
+            <span class="show-text">ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ</span>
+            <span class="hide-text">ܟܪܘܙܘܬܐ ܕܡܬܝ</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="large">Chapter: 1</span><br>
+          </td>
+          <td class="center" rowspan="2">
+            <audio id="audio" controls loop>
+              <source src="MatthewAllap.mp3" type="audio/mp3">
+              <track id="audio-track" default label="Matthew Allap" kind="metadata" srclang="en-US"
+                src="MatthewAllap.txt" />
+              Your browser does not support the audio tag!
+            </audio>
+          </td>
+          <td class="swadaya">
+            <span class="show-text">ܨܚܵܚܵܐ: ܐ.</span>
+            <span class="hide-text">ܨܚܚܐ: ܐ.</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Font&nbsp;<select id="font-family">
+              <option value="EastAssyrian">East Assyrian</option>
+              <option value="Estrangelo Esarhaddon">Estrangela</option>
+            </select>
+          </td>
+          <td class="swadaya">
+            <label for="zawae" title="Show/hide vowels and punctuation" class="swadaya">
+              <span class="show-text">ܙܵܘܥܹ̈ܐ</span>
+              <span class="hide-text">ܙܘܥܐ</span></label>
+            <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation">
+          </td>
+        </tr>
+      </table>
     </div>
   </header>
   <main>
-    <table class="header">
-      <tr class="xlarger">
-        <td>The Preaching of Mattai</td>
-        <td class="swadaya">ܟܵܪܘܼܙܘܼܬܵܐ ܕܡܲܬܲܝ</td>
-      </tr>
-      <tr class="larger">
-        <td>Chapter: 1</td>
-        <td class="swadaya">ܨܚܵܚܵܐ: ܐ.</td>
-      </tr>
-    </table>
     <div>
       <br>
       <table>
-        <tr class="swadaya">
+        <tr class="swadaya show-row">
           <td class="sun">. &#9788;</td>
-          <td id="1-8">ܕܐܲܒ݂ܪܵܗܵܡ</td>
-          <td id="1-7">ܒܪܹܗ</td>
+          <td id="1-8v">ܕܐܲܒ݂ܪܵܗܵܡ</td>
+          <td id="1-7v">ܒܪܹܗ</td>
           <td class="point">:&nbsp;</td>
-          <td id="1-6">ܕܕ݂ܘܝܼܕ</td>
-          <td id="1-5">ܒܪܹܗ</td>
+          <td id="1-6v">ܕܕ݂ܘܝܼܕ</td>
+          <td id="1-5v">ܒܪܹܗ</td>
           <td class="point">:&nbsp;</td>
-          <td id="1-4">ܡܫܝܼܚܵܐ</td>
-          <td id="1-3">ܕܝܼܫܘܿܥ</td>
-          <td id="1-2">ܕܝܼܠܝܼܕ݂ܘܼܬܹܗ</td>
-          <td id="1-1">ܟܬ݂ܵܒ݂ܵܐ</td>
+          <td id="1-4v">ܡܫܝܼܚܵܐ</td>
+          <td id="1-3v">ܕܝܼܫܘܿܥ</td>
+          <td id="1-2v">ܕܝܼܠܝܼܕ݂ܘܼܬܹܗ</td>
+          <td id="1-1v">ܟܬ݂ܵܒ݂ܵܐ</td>
+          <td><a href="#header">1.</a></td>
+        </tr>
+        <tr class="swadaya hide-row">
+          <td id="1-8" colspan="2">ܕܐܒܪܗܡ</td>
+          <td id="1-7">ܒܪܗ</td>
+          <td id="1-6" colspan="2">ܕܕܘܝܕ</td>
+          <td id="1-5">ܒܪܗ</td>
+          <td id="1-4" colspan="2">ܡܫܝܚܐ</td>
+          <td id="1-3">ܕܝܫܘܥ</td>
+          <td id="1-2">ܕܝܠܝܕܘܬܗ</td>
+          <td id="1-1">ܟܬܒܐ</td>
           <td><a href="#header">1.</a></td>
         </tr>
         <tr class="right">
@@ -77,6 +112,7 @@
       <br>
       <table>
         <tr class="swadaya">
+          <td></td>
           <td class="sun">. &#9788;</td>
           <td id="2-10">ܘܠܲܐܚܵܘ̈ܗܝ</td>
           <td id="2-9">ܠܲܝܗܘܼܕܵܐ</td>
@@ -93,7 +129,7 @@
           <td><a href="#header">2.</a></td>
         </tr>
         <tr class="right">
-          <td id="2-10e" colspan="2">and his brothers</td>
+          <td id="2-10e" colspan="3">and his brothers</td>
           <td id="2-9e">Yehuda</td>
           <td id="2-8e">fathered</td>
           <td id="2-7e">Yaqub</td>
@@ -120,7 +156,7 @@
           <td id="3-4">ܘܲܠܙܲܪܚ</td>
           <td id="3-3">ܠܦܲܪܨ</td>
           <td id="3-2">ܐܵܘܠܸܕ</td>
-          <td id="3-1">ܝܼܗܘܼܕ݂ܵܐ</td>
+          <td id="3-1">ܝܼܗܘܼܕܵܐ</td>
           <td><a href="#header">3.</a></td>
         </tr>
         <tr class="right">
@@ -895,7 +931,7 @@
   <br>
   <script src="js/books.js"></script>
   <script>
-    setupAudio(25, ['', 'e']);
+    setupAudio(25, ['', 'v', 'e']);
   </script>
 </body>
 

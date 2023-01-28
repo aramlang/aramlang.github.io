@@ -49,6 +49,10 @@ div {
 }
 
 .larger {
+  font-size: larger;
+}
+
+.large {
   font-size: large;
 }
 
@@ -75,4 +79,24 @@ td.highlight {
 .point {
   padding: 0;
   margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.show-row {
+  display: table-row;
+}
+
+.hide-row {
+  display: none;
+}
+
+.show-text {
+  display: inline;
+}
+
+.hide-text {
+  display: none;
 }

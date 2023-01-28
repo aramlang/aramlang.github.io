@@ -11,6 +11,7 @@ function setupAudio(
   const loop = document.getElementById('loop');
   const startVerse = document.getElementById('start-verse');
   const endVerse = document.getElementById('end-verse');
+  const zawae = document.getElementById('zawae');
 
   const startAdjustment = 0.015;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.250;     // adjustment for end of loop due to low timerupdate frequency
@@ -213,6 +214,29 @@ function setupAudio(
       element.style.fontFamily = fontFamily;
     }
   });
+
+  zawae.addEventListener('click', function () {
+    const textShows = document.querySelectorAll('.show-text');
+    const textHides = document.querySelectorAll('.hide-text');
+    const rowShows = document.querySelectorAll('.show-row');
+    const rowHides = document.querySelectorAll('.hide-row');
+    textShows.forEach(elem => {
+      elem.classList.remove('show-text');
+      elem.classList.add('hide-text');
+    });
+    textHides.forEach(elem => {
+      elem.classList.remove('hide-text');
+      elem.classList.add('show-text');
+    });
+    rowShows.forEach(elem => {
+      elem.classList.remove('show-row');
+      elem.classList.add('hide-row');
+    });
+    rowHides.forEach(elem => {
+      elem.classList.remove('hide-row');
+      elem.classList.add('show-row');
+    });
+  })
 
   loop.addEventListener('click', function () {
     audio.loop = loop.checked;
