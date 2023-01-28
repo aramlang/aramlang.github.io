@@ -1,4 +1,7 @@
-function setupAudio(maxVerse) {
+function setupAudio(
+  maxVerse, // number of verses in this chapter
+  suffixes  // list of id suffixes to highlight in page
+) {
   'use strict';
 
   // #region Init
@@ -38,18 +41,22 @@ function setupAudio(maxVerse) {
   }
 
   audio.textTracks[0].addEventListener('cuechange', function (event) {
-    let vttCue = event.target.activeCues[0], aramaic, english, id;
+    let vttCue = event.target.activeCues[0], id;
     if (!vttCue || !vttCue.id) { return; }
 
     id = vttCue.id;
-    aramaic = document.getElementById(id);
-    english = document.getElementById(id + 'e');
-    if (!aramaic || !english) { return; }
 
     function highlight() {
-      aramaic.classList.add('highlight');
-      english.classList.add('highlight');
+      for (let i = 0; i < suffixes.length; i++) {
+        let suffix = suffixes[i];
+        let eid = suffix ? (id + suffix) : id;
+        let elem = document.getElementById(eid);
+        if (elem) {
+          elem.classList.add('highlight');
+        }
+      }
     }
+
     // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
   });
