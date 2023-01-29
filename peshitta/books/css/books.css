@@ -74,6 +74,7 @@ td.highlight {
 }
 
 .sun {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   font-size: small;
   font-weight: bold;
   padding: 0;
@@ -81,6 +82,7 @@ td.highlight {
 }
 
 .nosun {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   font-size: small;
   font-weight: bold;
   padding: 0;
@@ -117,4 +119,11 @@ td.highlight {
 
 .hide-text {
   display: none;
+}
+
+.vno {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  direction: ltr;
+  text-align: center;
+  font-size: small;
 }
