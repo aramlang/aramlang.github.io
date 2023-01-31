@@ -11,7 +11,7 @@ function setupAudio(
   const loop = document.getElementById('loop');
   const startVerse = document.getElementById('start-verse');
   const endVerse = document.getElementById('end-verse');
-  
+
   const startAdjustment = 0.015;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.250;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
@@ -30,6 +30,16 @@ function setupAudio(
     if (!audio.paused) {
       audio.pause();
     }
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
   }
 
   function seekStart() {
@@ -54,6 +64,9 @@ function setupAudio(
         let elem = document.getElementById(eid);
         if (elem) {
           elem.classList.add('highlight');
+          if(!isInViewport(elem)) {
+            elem.scrollIntoView();
+          }
         }
       }
     }

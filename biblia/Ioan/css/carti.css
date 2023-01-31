@@ -44,10 +44,6 @@ li {
   font-style: italic;
 }
 
-div {
-  min-width: 860px;
-}
-
 .xlarger {
   font-size: x-large;
 }
@@ -69,7 +65,7 @@ div {
   visibility: hidden;
 }
 
-p.highlight {
+div.highlight {
   background-color: #FFFF00;
 }
 
