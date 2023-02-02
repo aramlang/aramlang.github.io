@@ -51,6 +51,14 @@ function setupAudio(
     document.querySelectorAll('.highlight').forEach(elem => elem.classList.remove('highlight'));
   }
 
+  function getVerse(id) {
+    return id && id.split('-')[0];
+  }
+
+  function getWord(id) {
+    return id && id.split('-')[1];
+  }
+
   audio.textTracks[0].addEventListener('cuechange', function (event) {
     let vttCue = event.target.activeCues[0], id;
     if (!vttCue || !vttCue.id) { return; }
@@ -86,7 +94,7 @@ function setupAudio(
     for (let i = 0; i < vttCues.length; i++) {
       let vttCue = vttCues[i];
       let id = vttCue.id;
-      let verse = id.split('-')[0];
+      let verse = getVerse(id);
       let cue = {
         id: id,
         startTime: vttCue.startTime,
@@ -132,7 +140,7 @@ function setupAudio(
   });
 
   audio.addEventListener('error', function (e) {
-    var src = audio.getAttribute('src');
+    let src = audio.getAttribute('src');
     switch (e.target.error.code) {
       case e.target.error.MEDIA_ERR_ABORTED:
         alert('You aborted the audio playback.');
@@ -164,23 +172,23 @@ function setupAudio(
 
   // #region Setup
 
+  function setStartTime() {
+    let words, word;
+    if ((words = cues[startVerse.value]) && (word = words[0])) {
+      let loopStart = word.startTime - startAdjustment;
+      startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
+    }
+  }
+
+  function setEndTime() {
+    let words, word;
+    if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
+      let loopEnd = word.endTime - endAdjustment;
+      endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
+    }
+  }
+
   function setupLoop() {
-    function setStartTime() {
-      let words, word;
-      if ((words = cues[startVerse.value]) && (word = words[0])) {
-        let loopStart = word.startTime - startAdjustment;
-        startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
-      }
-    }
-
-    function setEndTime() {
-      let words, word;
-      if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
-        let loopEnd = word.endTime - endAdjustment;
-        endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
-      }
-    }
-
     for (let i = 1; i <= maxVerse; i++) {
       let opt = document.createElement('option');
       opt.value = i;
@@ -226,10 +234,40 @@ function setupAudio(
     });
   }
 
+  document.querySelectorAll('div.text div[id]').forEach((div) =>
+    div.addEventListener('click', function (event) {
+      let target = event.currentTarget;
+      if (!target || target.nodeName != 'DIV' || !target.id) { return; }
+
+      let id = target.id.match(/(\d+-\d+)/);
+      if (!id || !(id = id[0])) { return; }
+      let verseId = getVerse(id);
+      let wordId = getWord(id);
+      let verse, word;
+      if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
+      audio.currentTime = word.startTime - startAdjustment;
+      if (!loop.checked) { return; }
+
+      let verseNo = parseInt(verseId);
+      let startNo = parseInt(startVerse.value);
+      let endNo = parseInt(endVerse.value);
+      if (verseNo < startNo) {
+        startVerse.value = verseId;
+        setStartTime();
+      }
+
+      if (verseNo > endNo) {
+        endVerse.value = verseId;
+        setEndTime();
+      }
+    })
+  );
+
   document.querySelectorAll('[href="#header"]').forEach((element) => {
     element && element.addEventListener('click', (event) => {
       window.scrollTo(0, 0);
       event.preventDefault();
+      event.stopImmediatePropagation();
     });
   });
 

@@ -135,7 +135,10 @@ h2, h4, h5, p {
 div.title {
 	font-style:italic;
 }
-.verseno {
+.no {
   font-size: smaller;
 	font-weight: bold;
+}
+div.text div[id] {
+  cursor: pointer;
 }

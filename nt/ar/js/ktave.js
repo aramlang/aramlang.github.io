@@ -248,12 +248,15 @@ function setupAudio(
       audio.currentTime = word.startTime - startAdjustment;
       if (!loop.checked) { return; }
 
-      if (verseId < startVerse.value) {
+      let verseNo = parseInt(verseId);
+      let startNo = parseInt(startVerse.value);
+      let endNo = parseInt(endVerse.value);
+      if (verseNo < startNo) {
         startVerse.value = verseId;
         setStartTime();
       }
 
-      if (verseId > endVerse.value) {
+      if (verseNo > endNo) {
         endVerse.value = verseId;
         setEndTime();
       }
@@ -264,6 +267,7 @@ function setupAudio(
     element && element.addEventListener('click', (event) => {
       window.scrollTo(0, 0);
       event.preventDefault();
+      event.stopImmediatePropagation();
     });
   });
 
