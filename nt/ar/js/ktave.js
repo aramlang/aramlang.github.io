@@ -38,6 +38,16 @@ function setupAudio(
     audio.currentTime = startTime;
   }
 
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
   function unhighlight() {
     document.querySelectorAll('.highlight').forEach(elem => elem.classList.remove('highlight'));
   }
@@ -55,6 +65,9 @@ function setupAudio(
         let elem = document.getElementById(eid);
         if (elem) {
           elem.classList.add('highlight');
+          if (!isInViewport(elem)) {
+            elem.scrollIntoView();
+          }
         }
       }
     }
@@ -84,6 +97,9 @@ function setupAudio(
         cues[verse] = [];
       }
       cues[verse].push(cue);
+      if (!i && vttCue.startTime < startAdjustment) {
+        console.warn(`First cue startTime '${vttCue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+      }
     }
   });
 
@@ -91,9 +107,20 @@ function setupAudio(
   audio.addEventListener('ended', unhighlight);
 
   audio.addEventListener('timeupdate', function (event) {
-    if (!loop.checked) { return; }
+    if (!loop.checked) {
+      return;
+    }
+
     let time = event.target.currentTime;
-    if (!time || !startTime || !endTime || startTime >= endTime) { return; }
+    if (!time || !startTime || !endTime || startTime >= endTime) {
+      console.warn("Exiting 'timeupdate' doing nothing");
+      console.warn({
+        time,
+        startTime,
+        endTime
+      })
+      return;
+    }
 
     if (time < startTime) {
       seekStart();
