@@ -32,6 +32,12 @@ function setupAudio(
     }
   }
 
+  function play() {
+    if (audio.paused) {
+      audio.play();
+    }
+  }
+
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -261,6 +267,7 @@ function setupAudio(
         setEndTime();
       }
 
+      play();
       event.preventDefault();
       event.stopImmediatePropagation();
     })

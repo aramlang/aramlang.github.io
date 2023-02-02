@@ -33,6 +33,12 @@ function setupAudio(
     }
   }
 
+  function play() {
+    if (audio.paused) {
+      audio.play();
+    }
+  }
+  
   function seekStart() {
     if (!startTime || !endTime || startTime >= endTime) { return; }
     audio.currentTime = startTime;
@@ -261,6 +267,7 @@ function setupAudio(
         setEndTime();
       }
       
+      play();
       event.preventDefault();
       event.stopImmediatePropagation();
     })
