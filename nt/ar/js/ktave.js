@@ -260,6 +260,9 @@ function setupAudio(
         endVerse.value = verseId;
         setEndTime();
       }
+      
+      event.preventDefault();
+      event.stopImmediatePropagation();
     })
   );
 
