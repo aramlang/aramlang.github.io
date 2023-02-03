@@ -1,16 +1,13 @@
-.swadaya {
-  font-family: 'EastAssyrian';
-  direction: rtl;
-  text-align: right;
-  font-size: x-large;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-table.header>tbody>tr>td {
-  padding-right: 10px;
+table.wide {
+  width: 100%;
+}
+
+table.wide>tbody>tr>td {
+  width: 33%;
 }
 
 table {
@@ -37,6 +34,11 @@ li {
   font-style: italic;
 }
 
+.chapter {
+  font-weight: bolder;
+  font-size: larger
+}
+
 .xlarger {
   font-size: x-large;
 }
@@ -51,7 +53,6 @@ li {
 
 .right {
   text-align: right;
-  color: blue
 }
 
 .hidden {
@@ -141,4 +142,8 @@ div.title {
 
 div.text div[id] {
   cursor: pointer;
+}
+
+.vtop {
+  vertical-align: top;
 }

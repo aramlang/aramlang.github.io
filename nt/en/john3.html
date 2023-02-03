@@ -9,12 +9,13 @@
 
 <body>
   <header>
-    <table class="header">
+    <table class="wide">
       <tr>
-        <td colspan="3">
+        <td colspan="3" class="center">
+          John <a href="john2.html" title="Go To Chapter 2">&nbsp;&#171;&nbsp;</a>
           <a href="john1.html" title="Go To Chapter 1">&nbsp;1&nbsp;</a>
           <a href="john2.html" title="Go To Chapter 2">&nbsp;2&nbsp;</a>
-          &nbsp;3&nbsp;
+          <span class="chapter">&nbsp;3&nbsp;</span>
           <a href="john4.html" onclick="event.preventDefault()" title="Go To Chapter 4">&nbsp;4&nbsp;</a>
           <a href="john5.html" onclick="event.preventDefault()" title="Go To Chapter 5">&nbsp;5&nbsp;</a>
           <a href="john6.html" onclick="event.preventDefault()" title="Go To Chapter 6">&nbsp;6&nbsp;</a>
@@ -33,31 +34,11 @@
           <a href="john19.html" onclick="event.preventDefault()" title="Go To Chapter 2">&nbsp;19&nbsp;</a>
           <a href="john20.html" onclick="event.preventDefault()" title="Go To Chapter 20">&nbsp;20&nbsp;</a>
           <a href="john21.html" onclick="event.preventDefault()" title="Go To Chapter 21">&nbsp;21&nbsp;</a>
+          <a href="john1.html" title="Go To Chapter 1">&nbsp;&#187;&nbsp;</a>
         </td>
       </tr>
       <tr>
-        <td>
-          <table>
-            <tr>
-              <td>
-                Gospel of John
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Chapter 3
-              </td>
-            </tr>
-          </table>
-        </td>
-        <td class="center">
-          <audio id="audio" controls loop>
-            <source src="https://audio.esv.org/david-cochran-heath/mq/John+3.mp3" type="audio/mp3">
-            <track id="audio-track" default label="John 1" kind="metadata" srclang="en-US" src="mp/john3.txt" />
-            Your browser does not support the audio tag!
-          </audio>
-        </td>
-        <td>
+        <td class="vtop">
           <table>
             <tr>
               <td>
@@ -88,6 +69,16 @@
               </td>
             </tr>
           </table>
+        </td>
+        <td class="center">
+          <audio id="audio" controls loop>
+            <source src="https://audio.esv.org/david-cochran-heath/mq/John+1.mp3" type="audio/mp3">
+            <track id="audio-track" default label="John 1" kind="metadata" srclang="en-US" src="mp/john1.txt" />
+            Your browser does not support the audio tag!
+          </audio>
+        </td>
+        <td class="vtop right">
+          ESV Bible Translation
         </td>
       </tr>
     </table>
