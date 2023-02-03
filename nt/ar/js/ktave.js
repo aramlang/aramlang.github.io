@@ -27,12 +27,6 @@ function setupAudio(
 
   // #region Audio
 
-  function pause() {
-    if (!audio.paused) {
-      audio.pause();
-    }
-  }
-
   function play() {
     if (audio.paused) {
       audio.play();
@@ -220,9 +214,6 @@ function setupAudio(
       }
 
       setStartTime();
-      if (loop.checked) {
-        pause();
-      }
     });
 
     endVerse.addEventListener('change', function () {
@@ -234,9 +225,6 @@ function setupAudio(
       }
 
       setEndTime();
-      if (loop.checked) {
-        pause();
-      }
     });
   }
 

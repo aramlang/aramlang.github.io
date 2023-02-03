@@ -26,12 +26,6 @@ function setupAudio(
 
   // #region Audio
 
-  function pause() {
-    if (!audio.paused) {
-      audio.pause();
-    }
-  }
-
   function play() {
     if (audio.paused) {
       audio.play();
@@ -88,7 +82,7 @@ function setupAudio(
     // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
     vttCue.addEventListener('exit', unhighlight);
-  });
+  }, { passive: true });
 
   audio.addEventListener('loadedmetadata', function (event) {
     if (Object.keys(cues).length) { return; }
@@ -220,10 +214,14 @@ function setupAudio(
       }
 
       setStartTime();
-      if (loop.checked) {
-        pause();
-      }
-    });
+
+      console.log({
+        startVerse: startVerse.value,
+        endVerse: endVerse.value,
+        startTime,
+        endTime
+      })
+    }, { passive: true });
 
     endVerse.addEventListener('change', function () {
       let start = parseInt(startVerse.value);
@@ -234,10 +232,14 @@ function setupAudio(
       }
 
       setEndTime();
-      if (loop.checked) {
-        pause();
-      }
-    });
+
+      console.log({
+        startVerse: startVerse.value,
+        endVerse: endVerse.value,
+        startTime,
+        endTime
+      })
+    }, { passive: true });
   }
 
   document.querySelectorAll('div.text div[id]').forEach((div) =>
@@ -274,11 +276,11 @@ function setupAudio(
 
   document.querySelectorAll('[href="#header"]').forEach((element) => {
     element && element.addEventListener('click', (event) => {
-      window.scrollTo(0, 0);
       event.preventDefault();
       event.stopImmediatePropagation();
+      window.scrollTo(0, 0);
     });
-  });
+  }, { passive: true });
 
 
   loop.addEventListener('click', function () {
