@@ -252,7 +252,6 @@ function setupAudio(
       let verse, word;
       if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
       audio.currentTime = word.startTime - startAdjustment;
-      if (!loop.checked) { return; }
 
       let verseNo = parseInt(verseId);
       let startNo = parseInt(startVerse.value);
