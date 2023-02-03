@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Gospel According to John</title>
+  <title>Gospel of John - 1</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/books.css">
 </head>
 
@@ -11,31 +11,83 @@
   <header>
     <table class="header">
       <tr>
-        <td>Gospel of John</td>
-        <td class="center">
-          <label for="loop" title="Repet selected verses">Loop</label>
-          <input type="checkbox" id="loop" checked title="Repet selected verses">
-          &nbsp;Verses&nbsp;<select id="start-verse">
-          </select>
-          &nbsp;-&nbsp;&nbsp;<select id="end-verse">
-          </select>
-        </td>
-        <td>
-          ESV Bible Translantion
+        <td colspan="3">
+          &nbsp;1&nbsp;
+          <a href="john2.html" title="Go To Chapter 2">&nbsp;2&nbsp;</a>
+          <a href="john3.html" title="Go To Chapter 3">&nbsp;3&nbsp;</a>
+          <a href="john4.html" onclick="event.preventDefault()" title="Go To Chapter 4">&nbsp;4&nbsp;</a>
+          <a href="john5.html" onclick="event.preventDefault()" title="Go To Chapter 5">&nbsp;5&nbsp;</a>
+          <a href="john6.html" onclick="event.preventDefault()" title="Go To Chapter 6">&nbsp;6&nbsp;</a>
+          <a href="john7.html" onclick="event.preventDefault()" title="Go To Chapter 7">&nbsp;7&nbsp;</a>
+          <a href="john8.html" onclick="event.preventDefault()" title="Go To Chapter 8">&nbsp;8&nbsp;</a>
+          <a href="john9.html" onclick="event.preventDefault()" title="Go To Chapter 9">&nbsp;9&nbsp;</a>
+          <a href="john10.html" onclick="event.preventDefault()" title="Go To Chapter 10">&nbsp;10&nbsp;</a>
+          <a href="john11.html" onclick="event.preventDefault()" title="Go To Chapter 11">&nbsp;11&nbsp;</a>
+          <a href="john12.html" onclick="event.preventDefault()" title="Go To Chapter 12">&nbsp;12&nbsp;</a>
+          <a href="john13.html" onclick="event.preventDefault()" title="Go To Chapter 13">&nbsp;13&nbsp;</a>
+          <a href="john14.html" onclick="event.preventDefault()" title="Go To Chapter 14">&nbsp;14&nbsp;</a>
+          <a href="john15.html" onclick="event.preventDefault()" title="Go To Chapter 15">&nbsp;15&nbsp;</a>
+          <a href="john16.html" onclick="event.preventDefault()" title="Go To Chapter 16">&nbsp;16&nbsp;</a>
+          <a href="john17.html" onclick="event.preventDefault()" title="Go To Chapter 17">&nbsp;17&nbsp;</a>
+          <a href="john18.html" onclick="event.preventDefault()" title="Go To Chapter 18">&nbsp;18&nbsp;</a>
+          <a href="john19.html" onclick="event.preventDefault()" title="Go To Chapter 2">&nbsp;19&nbsp;</a>
+          <a href="john20.html" onclick="event.preventDefault()" title="Go To Chapter 20">&nbsp;20&nbsp;</a>
+          <a href="john21.html" onclick="event.preventDefault()" title="Go To Chapter 21">&nbsp;21&nbsp;</a>
         </td>
       </tr>
       <tr>
         <td>
-          Chapter 1
+          <table>
+            <tr>
+              <td>
+                Gospel of John
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chapter 1
+              </td>
+            </tr>
+          </table>
         </td>
-        <td class="center" rowspan="2">
+        <td class="center">
           <audio id="audio" controls loop>
-            <source src="mp/john1.mp3" type="audio/mp3">
+            <source src="https://audio.esv.org/david-cochran-heath/mq/John+1.mp3" type="audio/mp3">
             <track id="audio-track" default label="John 1" kind="metadata" srclang="en-US" src="mp/john1.txt" />
             Your browser does not support the audio tag!
           </audio>
         </td>
         <td>
+          <table>
+            <tr>
+              <td>
+                <input type="checkbox" id="loop" checked="true" title="Repet selected verses">
+                <label for="loop" title="Repet selected verses">Loop Verse</label>
+              </td>
+              <td>
+                <select id="start-verse">
+                </select>
+              </td>
+              <td>
+                &nbsp;-&nbsp;&nbsp;<select id="end-verse">
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="chapter-loop" title="Repet selected chapters">
+                <label for="chapter-loop" title="Repet selected chapters">Loop Chapter</label>
+              </td>
+              <td>
+                <select id="start-chapter">
+                </select>
+              </td>
+              <td>
+                &nbsp;-&nbsp;&nbsp;<select id="end-chapter">
+                </select>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
@@ -150,7 +202,7 @@
       <div class="title">
         <h5>Jesus Calls Philip and Nathanael</h5>
       </div>
-      <div>
+      <div class="text">
         <div id="43-1"><a class="no" href="#header" title="Go Up">43.</a>&nbsp;The next day Jesus decided to go to
           Galilee. He found Philip and said to him, “Follow me.”</div>
         <div id="44-1"><a class="no" href="#header" title="Go Up">44.</a>&nbsp;Now Philip was from Bethsaida, the city
@@ -176,7 +228,7 @@
   <br>
   <script src="js/books.js"></script>
   <script>
-    setupAudio(51, ['']);
+    setupAudio(51, 3, [''], 'john', 1);
   </script>
 </body>
 

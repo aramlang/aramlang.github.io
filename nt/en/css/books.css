@@ -7,21 +7,14 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-} 
+}
 
-table.header {
-  width: 100%;
+table.header>tbody>tr>td {
+  padding-right: 10px;
 }
 
 table {
   border-collapse: collapse;
-  width: auto;
-  margin-right: 0px;
-  margin-left: auto;
-}
-
-td {
-  padding-right: 7px;
 }
 
 h3 {
@@ -125,20 +118,27 @@ div.highlight {
 }
 
 h5 {
-	font-size:100%;
-	font-weight:normal;
+  font-size: 100%;
+  font-weight: normal;
 }
-h2, h4, h5, p {
-	padding: 10px;
-	margin: 0;
+
+h2,
+h4,
+h5,
+p {
+  padding: 10px;
+  margin: 0;
 }
+
 div.title {
-	font-style:italic;
+  font-style: italic;
 }
+
 .no {
   font-size: smaller;
-	font-weight: bold;
+  font-weight: bold;
 }
+
 div.text div[id] {
   cursor: pointer;
 }
