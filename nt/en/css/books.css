@@ -2,18 +2,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-table.wide {
-  width: 100%;
-}
-
-table.wide>tbody>tr>td {
-  width: 33%;
-}
-
-table {
-  border-collapse: collapse;
-}
-
 a {
   text-decoration: none;
 }
@@ -69,4 +57,23 @@ div.text div[id] {
 
 .vtop {
   vertical-align: top;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+}
+
+.grid-item {
+  padding-bottom: 5px;
+  padding-right: 5px;
 }

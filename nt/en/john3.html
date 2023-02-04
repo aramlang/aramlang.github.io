@@ -9,79 +9,71 @@
 
 <body>
   <header>
-    <table class="wide">
-      <tr>
-        <td colspan="3" class="center">
-          John <a href="john2.html" title="Go To Chapter 2">&nbsp;&#171;&nbsp;</a>
-          <a href="john1.html" title="Go To Chapter 1">&nbsp;1&nbsp;</a>
-          <a href="john2.html" title="Go To Chapter 2">&nbsp;2&nbsp;</a>
-          <span class="chapter">&nbsp;3&nbsp;</span>
-          <a href="john4.html" onclick="event.preventDefault()" title="Go To Chapter 4">&nbsp;4&nbsp;</a>
-          <a href="john5.html" onclick="event.preventDefault()" title="Go To Chapter 5">&nbsp;5&nbsp;</a>
-          <a href="john6.html" onclick="event.preventDefault()" title="Go To Chapter 6">&nbsp;6&nbsp;</a>
-          <a href="john7.html" onclick="event.preventDefault()" title="Go To Chapter 7">&nbsp;7&nbsp;</a>
-          <a href="john8.html" onclick="event.preventDefault()" title="Go To Chapter 8">&nbsp;8&nbsp;</a>
-          <a href="john9.html" onclick="event.preventDefault()" title="Go To Chapter 9">&nbsp;9&nbsp;</a>
-          <a href="john10.html" onclick="event.preventDefault()" title="Go To Chapter 10">&nbsp;10&nbsp;</a>
-          <a href="john11.html" onclick="event.preventDefault()" title="Go To Chapter 11">&nbsp;11&nbsp;</a>
-          <a href="john12.html" onclick="event.preventDefault()" title="Go To Chapter 12">&nbsp;12&nbsp;</a>
-          <a href="john13.html" onclick="event.preventDefault()" title="Go To Chapter 13">&nbsp;13&nbsp;</a>
-          <a href="john14.html" onclick="event.preventDefault()" title="Go To Chapter 14">&nbsp;14&nbsp;</a>
-          <a href="john15.html" onclick="event.preventDefault()" title="Go To Chapter 15">&nbsp;15&nbsp;</a>
-          <a href="john16.html" onclick="event.preventDefault()" title="Go To Chapter 16">&nbsp;16&nbsp;</a>
-          <a href="john17.html" onclick="event.preventDefault()" title="Go To Chapter 17">&nbsp;17&nbsp;</a>
-          <a href="john18.html" onclick="event.preventDefault()" title="Go To Chapter 18">&nbsp;18&nbsp;</a>
-          <a href="john19.html" onclick="event.preventDefault()" title="Go To Chapter 2">&nbsp;19&nbsp;</a>
-          <a href="john20.html" onclick="event.preventDefault()" title="Go To Chapter 20">&nbsp;20&nbsp;</a>
-          <a href="john21.html" onclick="event.preventDefault()" title="Go To Chapter 21">&nbsp;21&nbsp;</a>
-          <a href="john1.html" title="Go To Chapter 1">&nbsp;&#187;&nbsp;</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="vtop">
-          <table>
-            <tr>
-              <td>
-                <input type="checkbox" id="loop" checked="true" title="Repet selected verses">
-                <label for="loop" title="Repet selected verses">Loop Verse</label>
-              </td>
-              <td>
-                <select id="start-verse">
-                </select>
-              </td>
-              <td>
-                &nbsp;-&nbsp;&nbsp;<select id="end-verse">
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" id="chapter-loop" title="Repet selected chapters">
-                <label for="chapter-loop" title="Repet selected chapters">Loop Chapter</label>
-              </td>
-              <td>
-                <select id="start-chapter">
-                </select>
-              </td>
-              <td>
-                &nbsp;-&nbsp;&nbsp;<select id="end-chapter">
-                </select>
-              </td>
-            </tr>
-          </table>
-        </td>
-        <td class="center">
-          <audio id="audio" controls loop>
-            <source src="https://audio.esv.org/david-cochran-heath/mq/John+3.mp3" type="audio/mp3">
-            <track id="audio-track" default label="John 3" kind="metadata" srclang="en-US" src="mp/john3.txt" />
-            Your browser does not support the audio tag!
-          </audio>
-        </td>
-        <td class="vtop right">
-          ESV Bible Translation
-        </td>
-      </tr>
-    </table>
+    <div class="center">
+      John <a href="john2.html" title="Go To Chapter 2">&nbsp;&#171;&nbsp;</a>
+      <a href="john1.html" title="Go To Chapter 1">&nbsp;1&nbsp;</a>
+      <a href="john2.html" title="Go To Chapter 2">&nbsp;2&nbsp;</a>
+      <span class="chapter">&nbsp;3&nbsp;</span>
+      <a href="john4.html" onclick="event.preventDefault()" title="Go To Chapter 4">&nbsp;4&nbsp;</a>
+      <a href="john5.html" onclick="event.preventDefault()" title="Go To Chapter 5">&nbsp;5&nbsp;</a>
+      <a href="john6.html" onclick="event.preventDefault()" title="Go To Chapter 6">&nbsp;6&nbsp;</a>
+      <a href="john7.html" onclick="event.preventDefault()" title="Go To Chapter 7">&nbsp;7&nbsp;</a>
+      <a href="john8.html" onclick="event.preventDefault()" title="Go To Chapter 8">&nbsp;8&nbsp;</a>
+      <a href="john9.html" onclick="event.preventDefault()" title="Go To Chapter 9">&nbsp;9&nbsp;</a>
+      <a href="john10.html" onclick="event.preventDefault()" title="Go To Chapter 10">&nbsp;10&nbsp;</a>
+      <a href="john11.html" onclick="event.preventDefault()" title="Go To Chapter 11">&nbsp;11&nbsp;</a>
+      <a href="john12.html" onclick="event.preventDefault()" title="Go To Chapter 12">&nbsp;12&nbsp;</a>
+      <a href="john13.html" onclick="event.preventDefault()" title="Go To Chapter 13">&nbsp;13&nbsp;</a>
+      <a href="john14.html" onclick="event.preventDefault()" title="Go To Chapter 14">&nbsp;14&nbsp;</a>
+      <a href="john15.html" onclick="event.preventDefault()" title="Go To Chapter 15">&nbsp;15&nbsp;</a>
+      <a href="john16.html" onclick="event.preventDefault()" title="Go To Chapter 16">&nbsp;16&nbsp;</a>
+      <a href="john17.html" onclick="event.preventDefault()" title="Go To Chapter 17">&nbsp;17&nbsp;</a>
+      <a href="john18.html" onclick="event.preventDefault()" title="Go To Chapter 18">&nbsp;18&nbsp;</a>
+      <a href="john19.html" onclick="event.preventDefault()" title="Go To Chapter 2">&nbsp;19&nbsp;</a>
+      <a href="john20.html" onclick="event.preventDefault()" title="Go To Chapter 20">&nbsp;20&nbsp;</a>
+      <a href="john21.html" onclick="event.preventDefault()" title="Go To Chapter 21">&nbsp;21&nbsp;</a>
+      <a href="john1.html" title="Go To Chapter 1">&nbsp;&#187;&nbsp;</a>
+    </div>
+    <div class="row">
+      <div class="col vtop">
+        <div class="grid-container ">
+          <div class="grid-item">
+            <input type="checkbox" id="loop" checked="true" title="Repet selected verses">
+            <label for="loop" title="Repet selected verses">Loop Verse</label>
+          </div>
+          <div class="grid-item">
+            <select id="start-verse">
+            </select>
+          </div>
+          <div class="grid-item">
+            -&nbsp;<select id="end-verse">
+            </select>
+          </div>
+          <div class="grid-item">
+            <input type="checkbox" id="chapter-loop" title="Repet selected chapters">
+            <label for="chapter-loop" title="Repet selected chapters">Loop Chapter</label>
+          </div>
+          <div class="grid-item">
+            <select id="start-chapter">
+            </select>
+          </div>
+          <div class="grid-item">
+            -&nbsp;<select id="end-chapter">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col center">
+        <audio id="audio" controls loop>
+          <source src="https://audio.esv.org/david-cochran-heath/mq/John+3.mp3" type="audio/mp3">
+          <track id="audio-track" default label="John 3" kind="metadata" srclang="en-US" src="mp/john3.txt" />
+          Your browser does not support the audio tag!
+        </audio>
+      </div>
+      <div class="col vtop right">
+        ESV Bible Translation
+      </div>
+    </div>
   </header>
   <main>
     <div class="title">
