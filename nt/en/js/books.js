@@ -22,6 +22,7 @@ function setupAudio(
   const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
+  let passiveSupported = false;    // let setPassiveSupported detect if true
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
 
@@ -29,6 +30,23 @@ function setupAudio(
     console.error('Could not find page element');
     return;
   }
+
+  function setPassiveSupported() {
+    try {
+      const options = {
+        get passive() { // This function will be called when the browser attempts to access the passive property.
+          passiveSupported = true;
+          return false;
+        }
+      };
+
+      window.addEventListener("test", null, options);
+      window.removeEventListener("test", null, options);
+    } catch (err) {
+      passiveSupported = false;
+    }
+  }
+  setPassiveSupported();
 
   // #endregion
 
@@ -89,8 +107,8 @@ function setupAudio(
 
     // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
-    vttCue.addEventListener('exit', unhighlight);
-  }, { passive: true });
+    vttCue.addEventListener('exit', unhighlight, (passiveSupported ? { passive: true } : false));
+  }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
     if (Object.keys(cues).length) { return; }
@@ -117,9 +135,9 @@ function setupAudio(
         console.warn(`First cue startTime '${vttCue.startTime}' is less than startAdjustment '${startAdjustment}'`)
       }
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
-  audio.addEventListener('seeked', unhighlight);
+  audio.addEventListener('seeked', unhighlight, (passiveSupported ? { passive: true } : false));
   audio.addEventListener('ended', function () {
     unhighlight();
 
@@ -134,7 +152,7 @@ function setupAudio(
 
     let next = (chapter < end ? (chapter + 1) : start) + '';
     window.location.href = `${book}${next}.html${hashPrefix}${start}-${end}`;
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('timeupdate', function (event) {
     if (!loop.checked) {
@@ -159,7 +177,7 @@ function setupAudio(
     if (time >= endTime) {
       seekStart();
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
     let src = audio.getAttribute('src');
@@ -188,7 +206,7 @@ function setupAudio(
         alert('An unknown error occurred.');
         break;
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   // #endregion
 
@@ -242,8 +260,8 @@ function setupAudio(
         endVerse: endVerse.value,
         startTime,
         endTime
-      })
-    }, { passive: true });
+      });
+    }, (passiveSupported ? { passive: true } : false));
 
     endVerse.addEventListener('change', function () {
       let start = parseInt(startVerse.value);
@@ -260,8 +278,8 @@ function setupAudio(
         endVerse: endVerse.value,
         startTime,
         endTime
-      })
-    }, { passive: true });
+      });
+    }, (passiveSupported ? { passive: true } : false));
   }
 
   function setupChapterLoop() {
@@ -309,7 +327,7 @@ function setupAudio(
       if (start > end) {
         endChapter.value = startChapter.value;
       }
-    });
+    }, (passiveSupported ? { passive: true } : false));
 
     endChapter.addEventListener('change', function () {
       let start = parseInt(startChapter.value);
@@ -317,7 +335,7 @@ function setupAudio(
       if (start > end) {
         startChapter.value = endChapter.value;
       }
-    });
+    }, (passiveSupported ? { passive: true } : false));
   }
 
   document.querySelectorAll('div.text div[id]').forEach((div) =>
@@ -349,7 +367,7 @@ function setupAudio(
       play();
       event.preventDefault();
       event.stopImmediatePropagation();
-    })
+    }, (passiveSupported ? { passive: true } : false))
   );
 
   document.querySelectorAll('[href="#header"]').forEach((element) => {
@@ -357,19 +375,18 @@ function setupAudio(
       event.preventDefault();
       event.stopImmediatePropagation();
       window.scrollTo(0, 0);
-    });
-  }, { passive: true });
-
+    }, (passiveSupported ? { passive: true } : false));
+  });
 
   loop.addEventListener('click', function () {
     loop.checked && (chapterLoop.checked = false);
     audio.loop = loop.checked;
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   chapterLoop.addEventListener('click', function () {
     chapterLoop.checked && (loop.checked = false);
     audio.loop = loop.checked;
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   // #endregion
 
