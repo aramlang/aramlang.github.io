@@ -19,8 +19,8 @@ function setupAudio(
   const endChapter = document.getElementById('end-chapter');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
-  const startAdjustment = 0.015;   // adjustment for start of loop due to low timerupdate frequency
-  const endAdjustment = 0.250;     // adjustment for end of loop due to low timerupdate frequency
+  const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
+  const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
