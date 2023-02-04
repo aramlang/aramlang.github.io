@@ -57,6 +57,12 @@ function setupAudio(
       audio.play();
     }
   }
+  
+  function pause() {
+    if (!audio.paused) {
+      audio.pause();
+    }
+  }
 
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -349,7 +355,8 @@ function setupAudio(
       let wordId = getWord(id);
       let verse, word;
       if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
-      audio.currentTime = word.startTime - startAdjustment;
+
+      pause();
 
       let verseNo = parseInt(verseId);
       let startNo = parseInt(startVerse.value);
@@ -364,8 +371,9 @@ function setupAudio(
         setEndTime();
       }
 
+      audio.currentTime = word.startTime - startAdjustment;
       play();
-      event.preventDefault();
+
       event.stopImmediatePropagation();
     }, (passiveSupported ? { passive: true } : false))
   );
@@ -375,7 +383,7 @@ function setupAudio(
       event.preventDefault();
       event.stopImmediatePropagation();
       window.scrollTo(0, 0);
-    }, (passiveSupported ? { passive: true } : false));
+    });
   });
 
   loop.addEventListener('click', function () {
