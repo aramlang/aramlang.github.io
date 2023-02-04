@@ -1,6 +1,9 @@
 function setupAudio(
-  maxVerse, // number of verses in this chapter
-  suffixes  // list of id suffixes to highlight in page
+  maxVerse,   // number of verses in this chapter
+  maxChapter, // number of chapters in this book
+  suffixes,   // list of id suffixes to highlight in page,
+  book,       // current book name
+  chapter     // current chapter
 ) {
   'use strict';
 
@@ -9,16 +12,21 @@ function setupAudio(
   const audio = document.getElementById('audio');
   const audioTrack = document.getElementById('audio-track');
   const loop = document.getElementById('loop');
+  const chapterLoop = document.getElementById('chapter-loop');
   const startVerse = document.getElementById('start-verse');
   const endVerse = document.getElementById('end-verse');
+  const startChapter = document.getElementById('start-chapter');
+  const endChapter = document.getElementById('end-chapter');
 
+  const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.015;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.250;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
 
-  if (!audio || !audioTrack || !loop || !startVerse || !endVerse) {
+  if (!audio || !audioTrack || !loop || !startVerse || !endVerse || !chapterLoop || !startChapter || !endChapter) {
+    console.error('Could not find page element');
     return;
   }
 
@@ -113,6 +121,22 @@ function setupAudio(
 
   audio.addEventListener('seeked', unhighlight);
   audio.addEventListener('ended', unhighlight);
+
+  audio.addEventListener('ended', function () {
+    unhighlight();
+
+    if (!chapterLoop.checked) { return; }
+
+    let start = parseInt(startChapter.value);
+    let end = parseInt(endChapter.value);
+    if (start == end == chapter) {
+      play();
+      return;
+    }
+
+    let next = (chapter < end ? (chapter + 1) : start) + '';
+    window.location.href = `${book}${next}.html${hashPrefix}${start}-${end}`;
+  });
 
   audio.addEventListener('timeupdate', function (event) {
     if (!loop.checked) {
@@ -228,6 +252,62 @@ function setupAudio(
     });
   }
 
+  function setupChapterLoop() {
+    for (let i = 1; i <= maxChapter; i++) {
+      let opt = document.createElement('option');
+      opt.value = i;
+      opt.id = 'startChapter' + i;
+      opt.innerHTML = i;
+      startChapter.appendChild(opt);
+
+      opt = document.createElement('option');
+      opt.id = 'endChapter' + i;
+      opt.value = i;
+      opt.innerHTML = i;
+      endChapter.appendChild(opt);
+    }
+
+    let startValue = 1;
+    let endValue = maxChapter;
+    if (window.location.hash) {
+      var hash = window.location.hash.replace(hashPrefix, '');
+      let split = hash.split('-');
+      let start = parseInt(split[0]);
+      let end = parseInt(split[1]);
+
+      if (start > 0 && start <= maxChapter) {
+        startValue = start;
+      }
+
+      if (end > 0 && end <= maxChapter) {
+        endValue = end;
+      }
+
+      audio.loop = loop.checked = false;
+      chapterLoop.checked = true;
+      play();
+    }
+
+    startChapter.value = startValue;
+    endChapter.value = endValue;
+
+    startChapter.addEventListener('change', function () {
+      let start = parseInt(startChapter.value);
+      let end = parseInt(endChapter.value);
+      if (start > end) {
+        endChapter.value = startChapter.value;
+      }
+    });
+
+    endChapter.addEventListener('change', function () {
+      let start = parseInt(startChapter.value);
+      let end = parseInt(endChapter.value);
+      if (start > end) {
+        startChapter.value = endChapter.value;
+      }
+    });
+  }
+
   document.querySelectorAll('div.text div[id]').forEach((div) =>
     div.addEventListener('click', function (event) {
       let target = event.currentTarget;
@@ -261,10 +341,17 @@ function setupAudio(
   );
 
   loop.addEventListener('click', function () {
+    loop.checked && (chapterLoop.checked = false);
     audio.loop = loop.checked;
-  })
+  });
+
+  chapterLoop.addEventListener('click', function () {
+    chapterLoop.checked && (loop.checked = false);
+    audio.loop = loop.checked;
+  });
 
   // #endregion
 
   setupLoop();
+  setupChapterLoop();
 }

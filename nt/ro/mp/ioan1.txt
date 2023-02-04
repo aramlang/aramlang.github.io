@@ -1,6 +1,6 @@
 WEBVTT
 
-NOTE Ioan1.mp3
+NOTE Ioan 1 - Cornilescu
 
 1-1
 00:00:00.101 --> 00:00:08.998

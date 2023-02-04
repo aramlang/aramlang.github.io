@@ -3,39 +3,82 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Evanghelia după Ioan</title>
+  <title>Evanghelia după Ioan - 1</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/carti.css">
 </head>
 
 <body>
   <header>
-    <table class="header">
+      <table class="wide">
       <tr>
-        <td>Evanghelia după Ioan</td>
-        <td class="center">
-          <label for="loop" title="Repetă versetele selectate">Repetă</label>
-          <input type="checkbox" id="loop" checked title="Repetă versetele selectate">
-          &nbsp;Versete&nbsp;<select id="start-verse">
-          </select>
-          &nbsp;-&nbsp;&nbsp;<select id="end-verse">
-          </select>
-        </td>
-        <td>
-          Biblia Cornilescu 1924
+        <td colspan="3" class="center">
+          Ioan <a href="ioan3.html" title="Navighează la capitolul 3">&nbsp;&#171;&nbsp;</a>
+          <span id="0-1" class="chapter">&nbsp;1&nbsp;</span>
+          <a href="ioan2.html" title="Navighează la capitolul 2">&nbsp;2&nbsp;</a>
+          <a href="ioan3.html" title="Navighează la capitolul 3">&nbsp;3&nbsp;</a>
+          <a href="ioan4.html" onclick="event.preventDefault()" title="Navighează la capitolul 4">&nbsp;4&nbsp;</a>
+          <a href="ioan5.html" onclick="event.preventDefault()" title="Navighează la capitolul 5">&nbsp;5&nbsp;</a>
+          <a href="ioan6.html" onclick="event.preventDefault()" title="Navighează la capitolul 6">&nbsp;6&nbsp;</a>
+          <a href="ioan7.html" onclick="event.preventDefault()" title="Navighează la capitolul 7">&nbsp;7&nbsp;</a>
+          <a href="ioan8.html" onclick="event.preventDefault()" title="Navighează la capitolul 8">&nbsp;8&nbsp;</a>
+          <a href="ioan9.html" onclick="event.preventDefault()" title="Navighează la capitolul 9">&nbsp;9&nbsp;</a>
+          <a href="ioan10.html" onclick="event.preventDefault()" title="Navighează la capitolul 10">&nbsp;10&nbsp;</a>
+          <a href="ioan11.html" onclick="event.preventDefault()" title="Navighează la capitolul 11">&nbsp;11&nbsp;</a>
+          <a href="ioan12.html" onclick="event.preventDefault()" title="Navighează la capitolul 12">&nbsp;12&nbsp;</a>
+          <a href="ioan13.html" onclick="event.preventDefault()" title="Navighează la capitolul 13">&nbsp;13&nbsp;</a>
+          <a href="ioan14.html" onclick="event.preventDefault()" title="Navighează la capitolul 14">&nbsp;14&nbsp;</a>
+          <a href="ioan15.html" onclick="event.preventDefault()" title="Navighează la capitolul 15">&nbsp;15&nbsp;</a>
+          <a href="ioan16.html" onclick="event.preventDefault()" title="Navighează la capitolul 16">&nbsp;16&nbsp;</a>
+          <a href="ioan17.html" onclick="event.preventDefault()" title="Navighează la capitolul 17">&nbsp;17&nbsp;</a>
+          <a href="ioan18.html" onclick="event.preventDefault()" title="Navighează la capitolul 18">&nbsp;18&nbsp;</a>
+          <a href="ioan19.html" onclick="event.preventDefault()" title="Navighează la capitolul 2">&nbsp;19&nbsp;</a>
+          <a href="ioan20.html" onclick="event.preventDefault()" title="Navighează la capitolul 20">&nbsp;20&nbsp;</a>
+          <a href="ioan21.html" onclick="event.preventDefault()" title="Navighează la capitolul 21">&nbsp;21&nbsp;</a>
+          <a href="ioan2.html" title="Navighează la capitolul 2">&nbsp;&#187;&nbsp;</a>
         </td>
       </tr>
       <tr>
-        <td>
-          Capitolul 1
+        <td class="vtop">
+          <table>
+            <tr>
+              <td>
+                <input type="checkbox" id="loop" checked="true" title="Repetă versetele selectate">
+                <label for="loop" title="Repetă versetele selectate">Repetă verset</label>
+              </td>
+              <td>
+                <select id="start-verse">
+                </select>
+              </td>
+              <td>
+                &nbsp;-&nbsp;&nbsp;<select id="end-verse">
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="chapter-loop" title="Repetă capitolele selectate">
+                <label for="chapter-loop" title="Repetă capitolele selectate">Repetă capitol&nbsp;</label>
+              </td>
+              <td>
+                <select id="start-chapter">
+                </select>
+              </td>
+              <td>
+                &nbsp;-&nbsp;&nbsp;<select id="end-chapter">
+                </select>
+              </td>
+            </tr>
+          </table>
         </td>
-        <td class="center" rowspan="2">
+        <td class="center">
           <audio id="audio" controls loop>
             <source src="mp/ioan1.mp3" type="audio/mp3">
             <track id="audio-track" default label="Ioan 1" kind="metadata" srclang="en-US" src="mp/ioan1.txt" />
             Your browser does not support the audio tag!
           </audio>
         </td>
-        <td>
+        <td class="vtop right">
+          Biblia Cornilescu 1924
         </td>
       </tr>
     </table>
@@ -158,7 +201,7 @@
   <br>
   <script src="js/carti.js"></script>
   <script>
-    setupAudio(51, ['']);
+    setupAudio(51, 3, [''], 'ioan', 1);
   </script>
 </body>
 

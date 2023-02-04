@@ -2,39 +2,25 @@ body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 } 
 
-table.header {
+table.wide {
   width: 100%;
+}
+
+table.wide>tbody>tr>td {
+  width: 33%;
 }
 
 table {
   border-collapse: collapse;
-  width: auto;
-  margin-right: 0px;
-  margin-left: auto;
-}
-
-td {
-  padding-right: 7px;
-}
-
-h3 {
-  text-align: center;
 }
 
 a {
   text-decoration: none;
 }
 
-sup {
-  color: red;
-}
-
-hr {
-  color: blue;
-}
-
-li {
-  font-style: italic;
+.chapter {
+  font-weight: bolder;
+  font-size: larger
 }
 
 .xlarger {
@@ -51,87 +37,40 @@ li {
 
 .right {
   text-align: right;
-  color: blue
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 div.highlight {
   background-color: #FFFF00;
 }
 
-.sun {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  font-size: small;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-}
-
-.nosun {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  font-size: small;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-  visibility: hidden;
-}
-
-.point {
-  padding: 0;
-  margin: 0;
-}
-
-.nopoint {
-  padding: 0;
-  margin: 0;
-  visibility: hidden;
+span.highlight {
+  background-color: #FFFF00;
 }
 
 .center {
   text-align: center;
 }
 
-.show-row {
-  display: table-row;
-}
-
-.hide-row {
-  display: none;
-}
-
-.show-text {
-  display: inline;
-}
-
-.hide-text {
-  display: none;
-}
-
-.vno {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  direction: ltr;
-  text-align: center;
-  font-size: small;
-}
-
 h5 {
-	font-size:100%;
-	font-weight:normal;
+  font-size:100%;
+  font-weight:normal;
+  padding: 10px;
+  margin: 0;
 }
-h2, h4, h5, p {
-	padding: 10px;
-	margin: 0;
-}
+
 div.title {
-	font-style:italic;
+  font-style:italic;
 }
+
 .no {
   font-size: small;
-	font-weight: bold;
+  font-weight: bold;
 }
+
 div.text div[id] {
   cursor: pointer;
+}
+
+.vtop {
+  vertical-align: top;
 }
