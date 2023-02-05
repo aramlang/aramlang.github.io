@@ -131,3 +131,33 @@ td.highlight {
 .clickable td[id] {
   cursor: pointer;
 }
+
+.chapter {
+  font-weight: bolder;
+  font-size: smaller;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 3px;
+  /* border: 1px solid blue */
+}
+
+.item-top {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /* border: 1px solid blue */
+}
+
+.item-audio {
+  grid-row: 3 / span 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* border: 1px solid blue*/
+}
+
+/* 
+.item {
+ border: 1px solid blue
+}*/
