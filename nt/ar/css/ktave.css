@@ -21,6 +21,10 @@ table {
   margin-left: auto;
 }
 
+table.header {
+  width: 100%;
+}
+
 td {
   padding-right: 7px;
 }
@@ -102,26 +106,26 @@ td.highlight {
   text-align: center;
 }
 
-.show-row {
+tr.show-row {
   display: table-row;
 }
 
-.hide-row {
+tr.hide-row {
   display: none;
 }
 
-.show-text {
+span.show-text {
   display: inline;
 }
 
-.hide-text {
+span.hide-text {
   display: none;
 }
 
 .vno {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   direction: ltr;
-  text-align: center;
+  text-align: right;
   font-size: small;
 }
 
@@ -132,22 +136,4 @@ td.highlight {
 .chapter {
   font-weight: bolder;
   font-size: smaller;
-}
-
-.header {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-row-gap: 3px;
-  /* border: 1px solid blue */
-}
-
-.header-top {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-.header-audio {
-  grid-row: 3 / span 2;
-  grid-column-start: 2;
-  grid-column-end: 3;
 }
