@@ -57,7 +57,7 @@ function setupAudio(
       audio.play();
     }
   }
-  
+
   function pause() {
     if (!audio.paused) {
       audio.pause();

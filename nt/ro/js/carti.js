@@ -57,7 +57,7 @@ function setupAudio(
       audio.play();
     }
   }
-  
+
   function pause() {
     if (!audio.paused) {
       audio.pause();
@@ -371,12 +371,11 @@ function setupAudio(
         setEndTime();
       }
 
-      event.preventDefault()
-      event.stopImmediatePropagation();
-
       audio.currentTime = word.startTime - startAdjustment;
       play();
-    })
+
+      event.stopImmediatePropagation();
+    }, (passiveSupported ? { passive: true } : false))
   );
 
   loop.addEventListener('click', function () {
