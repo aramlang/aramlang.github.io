@@ -9,6 +9,11 @@ body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
+header,
+main {
+  min-width: 860px;
+}
+
 table.header {
   width: 100%;
 }
@@ -42,10 +47,6 @@ hr {
 
 li {
   font-style: italic;
-}
-
-div {
-  min-width: 860px;
 }
 
 .xlarger {
@@ -147,17 +148,10 @@ td.highlight {
 .item-top {
   grid-column-start: 1;
   grid-column-end: 4;
-  /* border: 1px solid blue */
 }
 
 .item-audio {
   grid-row: 3 / span 2;
   grid-column-start: 2;
   grid-column-end: 3;
-  /* border: 1px solid blue*/
 }
-
-/* 
-.item {
- border: 1px solid blue
-}*/
