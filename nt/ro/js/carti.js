@@ -371,11 +371,12 @@ function setupAudio(
         setEndTime();
       }
 
+      event.preventDefault()
+      event.stopImmediatePropagation();
+
       audio.currentTime = word.startTime - startAdjustment;
       play();
-
-      event.stopImmediatePropagation();
-    }, (passiveSupported ? { passive: true } : false))
+    })
   );
 
   loop.addEventListener('click', function () {
