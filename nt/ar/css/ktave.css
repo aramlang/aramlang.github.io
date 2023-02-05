@@ -14,10 +14,6 @@ main {
   min-width: 860px;
 }
 
-table.header {
-  width: 100%;
-}
-
 table {
   border-collapse: collapse;
   width: auto;
@@ -138,19 +134,19 @@ td.highlight {
   font-size: smaller;
 }
 
-.container {
+.header {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-row-gap: 3px;
   /* border: 1px solid blue */
 }
 
-.item-top {
+.header-top {
   grid-column-start: 1;
   grid-column-end: 4;
 }
 
-.item-audio {
+.header-audio {
   grid-row: 3 / span 2;
   grid-column-start: 2;
   grid-column-end: 3;
