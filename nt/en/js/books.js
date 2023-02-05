@@ -137,8 +137,12 @@ function setupAudio(
         cues[verse] = [];
       }
       cues[verse].push(cue);
-      if (!i && vttCue.startTime < startAdjustment) {
-        console.warn(`First cue startTime '${vttCue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+      if (i == 1) {
+        if (cue.startTime < startAdjustment) {
+          console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+          cue.startTime = startAdjustment;
+        }
+        startTime = cue.startTime -startAdjustment;
       }
     }
   }, (passiveSupported ? { passive: true } : false));
@@ -166,7 +170,7 @@ function setupAudio(
     }
 
     let time = event.target.currentTime;
-    if (!time || !startTime || !endTime || startTime >= endTime) {
+    if (!startTime || !endTime || startTime >= endTime) {
       console.warn("Exiting 'timeupdate' doing nothing");
       console.warn({
         time,
@@ -378,14 +382,6 @@ function setupAudio(
     }, (passiveSupported ? { passive: true } : false))
   );
 
-  document.querySelectorAll('[href="#header"]').forEach((element) => {
-    element && element.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      window.scrollTo(0, 0);
-    });
-  });
-
   loop.addEventListener('click', function () {
     loop.checked && (chapterLoop.checked = false);
     audio.loop = loop.checked;
@@ -395,6 +391,14 @@ function setupAudio(
     chapterLoop.checked && (loop.checked = false);
     audio.loop = loop.checked;
   }, (passiveSupported ? { passive: true } : false));
+
+  document.querySelectorAll('[href="#header"]').forEach((element) => {
+    element && element.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      window.scrollTo(0, 0);
+    }, (passiveSupported ? { passive: true } : false));
+  });
 
   // #endregion
 

@@ -1,42 +1,17 @@
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-} 
-
-table.wide {
-  width: 100%;
-}
-
-table.wide>tbody>tr>td {
-  width: 33%;
-}
-
-table {
-  border-collapse: collapse;
+  font-size: large;
 }
 
 a {
   text-decoration: none;
 }
 
-.chapter {
-  font-weight: bolder;
-  font-size: larger
-}
-
-.xlarger {
-  font-size: x-large;
-}
-
-.larger {
-  font-size: larger;
-}
-
-.large {
-  font-size: large;
-}
-
-.right {
-  text-align: right;
+h5 {
+  font-size: 100%;
+  font-weight: normal;
+  padding: 10px;
+  margin: 0;
 }
 
 div.highlight {
@@ -47,30 +22,51 @@ span.highlight {
   background-color: #FFFF00;
 }
 
-.center {
-  text-align: center;
-}
-
-h5 {
-  font-size:100%;
-  font-weight:normal;
-  padding: 10px;
-  margin: 0;
-}
-
 div.title {
-  font-style:italic;
-}
-
-.no {
-  font-size: small;
-  font-weight: bold;
+  font-style: italic;
 }
 
 div.text div[id] {
   cursor: pointer;
 }
 
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.chapter {
+  font-weight: bolder;
+  font-size: larger
+}
+
+.no {
+  font-size: smaller;
+  font-weight: bold;
+}
+
 .vtop {
   vertical-align: top;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+}
+
+.grid-item {
+  padding-bottom: 5px;
+  padding-right: 5px;
 }

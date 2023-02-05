@@ -18,6 +18,10 @@ div.highlight {
   background-color: #FFFF00;
 }
 
+span.highlight {
+  background-color: #FFFF00;
+}
+
 div.title {
   font-style: italic;
 }

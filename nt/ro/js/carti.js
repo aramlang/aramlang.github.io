@@ -137,8 +137,12 @@ function setupAudio(
         cues[verse] = [];
       }
       cues[verse].push(cue);
-      if (!i && vttCue.startTime < startAdjustment) {
-        console.warn(`First cue startTime '${vttCue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+      if (i == 1) {
+        if (cue.startTime < startAdjustment) {
+          console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+          cue.startTime = startAdjustment;
+        }
+        startTime = cue.startTime -startAdjustment;
       }
     }
   }, (passiveSupported ? { passive: true } : false));
@@ -166,7 +170,7 @@ function setupAudio(
     }
 
     let time = event.target.currentTime;
-    if (!time || !startTime || !endTime || startTime >= endTime) {
+    if (!startTime || !endTime || startTime >= endTime) {
       console.warn("Exiting 'timeupdate' doing nothing");
       console.warn({
         time,
