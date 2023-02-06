@@ -28,6 +28,7 @@ window.onload = function () {
   var backSecondsInput = document.getElementById('back-seconds-input');
   var gotoInput = document.getElementById('goto-input');
   var gotoButton = document.getElementById('goto-button');
+  var speedSelect = document.getElementById('speed-select');
   var currentCounterInput = document.getElementById('current-counter-input');
   var recordButton = document.getElementById('record-button');
   var startTimeInput = document.getElementById('start-time-input');
@@ -144,7 +145,7 @@ window.onload = function () {
     }
 
     log(getId(++currentCounter) + '\n' + startTimeInput.value + ' --> ' + endTimeInput.value + '\n');
-    
+
     startTime = endTime + startAdjustment;
     if (startTime > media.duration) { startTime = media.duration; }
     setStartTime(startTime);
@@ -172,6 +173,42 @@ window.onload = function () {
   gotoInput.addEventListener('keyup', function (event) {
     if (event.key != 'Enter') { return; }
     gotoHandler();
+  });
+
+  let fromSpeed = false;
+  function speedHandler() {
+    fromSpeed = true;
+    var speed = parseFloat(speedSelect.value);
+    if (isFinite(audio.duration)) {
+      audio.playbackRate = speed;
+    }
+    audio.defaultPlaybackRate = speed;
+    if (isFinite(video.duration)) {
+      video.playbackRate = speed;
+    }
+    video.defaultPlaybackRate = speed;
+  }
+  speedSelect.addEventListener('change', speedHandler);
+
+  audio.addEventListener('ratechange', function () {
+    if (fromSpeed) {
+      return;
+    }
+    var speed = parseFloat(speedSelect.value);
+    if (speed != audio.playbackRate) {
+      speedSelect.value = audio.playbackRate + '';
+    }
+  });
+
+  video.addEventListener('ratechange', function () {
+    if (fromSpeed) {
+      fromSpeed = false;
+      return;
+    }
+    var speed = parseFloat(speedSelect.value);
+    if (speed != video.playbackRate) {
+      speedSelect.value = video.playbackRate + '';
+    }
   });
 
   function snapshotHandler(event) {
