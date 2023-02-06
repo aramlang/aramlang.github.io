@@ -13,15 +13,33 @@ function setupAudio(
   const endVerse = document.getElementById('end-verse');
   const zawae = document.getElementById('zawae');
 
-  const startAdjustment = 0.015;   // adjustment for start of loop due to low timerupdate frequency
-  const endAdjustment = 0.250;     // adjustment for end of loop due to low timerupdate frequency
+  const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
+  const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
+  let passiveSupported = false;    // let setPassiveSupported detect if true
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
 
   if (!audio || !audioTrack || !loop || !startVerse || !endVerse) {
     return;
   }
+
+  function setPassiveSupported() {
+    try {
+      const options = {
+        get passive() { // This function will be called when the browser attempts to access the passive property.
+          passiveSupported = true;
+          return false;
+        }
+      };
+
+      window.addEventListener("test", null, options);
+      window.removeEventListener("test", null, options);
+    } catch (err) {
+      passiveSupported = false;
+    }
+  }
+  setPassiveSupported();
 
   // #endregion
 
@@ -32,7 +50,13 @@ function setupAudio(
       audio.play();
     }
   }
-  
+
+  function pause() {
+    if (!audio.paused) {
+      audio.pause();
+    }
+  }
+
   function seekStart() {
     if (!startTime || !endTime || startTime >= endTime) { return; }
     audio.currentTime = startTime;
@@ -60,29 +84,48 @@ function setupAudio(
     return id && id.split('-')[1];
   }
 
+  function isFirstWord(word) {
+    return '1' == word;
+  }
+
+  function isHidden(elem) {
+    if (!elem || !elem.parentNode) {
+      return true;
+    }
+
+    var computedStyle = window.getComputedStyle(elem.parentNode, null);
+    return computedStyle.display == 'none' || computedStyle.visibility == 'hidden';
+  }
+
   audio.textTracks[0].addEventListener('cuechange', function (event) {
-    let vttCue = event.target.activeCues[0], id;
+    let vttCue = event.target.activeCues[0], id, isFirst;
     if (!vttCue || !vttCue.id) { return; }
 
     id = vttCue.id;
+    isFirst = isFirstWord(getWord(id));
+    if (isFirst) {
+      unhighlight();
+    }
 
     function highlight() {
       for (let i = 0; i < suffixes.length; i++) {
         let suffix = suffixes[i];
         let eid = suffix ? (id + suffix) : id;
         let elem = document.getElementById(eid);
-        if (elem) {
-          elem.classList.add('highlight');
-          if (!isInViewport(elem)) {
-            elem.scrollIntoView();
-          }
+        if (isHidden(elem)) {
+          continue;
+        }
+
+        elem.classList.add('highlight');
+        if (isFirst && !isInViewport(elem)) {
+          elem.scrollIntoView();
         }
       }
     }
 
     // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
     if (Object.keys(cues).length) { return; }
@@ -105,14 +148,18 @@ function setupAudio(
         cues[verse] = [];
       }
       cues[verse].push(cue);
-      if (!i && vttCue.startTime < startAdjustment) {
-        console.warn(`First cue startTime '${vttCue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+      if (i == 1) {
+        if (cue.startTime < startAdjustment) {
+          console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
+          cue.startTime = startAdjustment;
+        }
+        startTime = cue.startTime - startAdjustment;
       }
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
-  audio.addEventListener('seeked', unhighlight);
-  audio.addEventListener('ended', unhighlight);
+  audio.addEventListener('seeked', unhighlight, (passiveSupported ? { passive: true } : false));
+  audio.addEventListener('ended', unhighlight, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('timeupdate', function (event) {
     if (!loop.checked) {
@@ -120,7 +167,7 @@ function setupAudio(
     }
 
     let time = event.target.currentTime;
-    if (!time || !startTime || !endTime || startTime >= endTime) {
+    if (!startTime || !endTime || startTime >= endTime) {
       console.warn("Exiting 'timeupdate' doing nothing");
       console.warn({
         time,
@@ -137,7 +184,7 @@ function setupAudio(
     if (time >= endTime) {
       seekStart();
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
     let src = audio.getAttribute('src');
@@ -166,7 +213,7 @@ function setupAudio(
         alert('An unknown error occurred.');
         break;
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   // #endregion
 
@@ -214,7 +261,7 @@ function setupAudio(
       }
 
       setStartTime();
-    });
+    }, (passiveSupported ? { passive: true } : false));
 
     endVerse.addEventListener('change', function () {
       let start = parseInt(startVerse.value);
@@ -225,7 +272,7 @@ function setupAudio(
       }
 
       setEndTime();
-    });
+    }, (passiveSupported ? { passive: true } : false));
   }
 
   document.querySelectorAll('table:not(.header)').forEach((table) =>
@@ -239,7 +286,8 @@ function setupAudio(
       let wordId = getWord(id);
       let verse, word;
       if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
-      audio.currentTime = word.startTime - startAdjustment;
+
+      pause();
 
       let verseNo = parseInt(verseId);
       let startNo = parseInt(startVerse.value);
@@ -253,10 +301,11 @@ function setupAudio(
         endVerse.value = verseId;
         setEndTime();
       }
-      
-      play();
       event.preventDefault();
       event.stopImmediatePropagation();
+
+      audio.currentTime = word.startTime - startAdjustment;
+      play();
     })
   );
 
@@ -275,7 +324,7 @@ function setupAudio(
       const element = elements.item(i);
       element.style.fontFamily = fontFamily;
     }
-  });
+  }, (passiveSupported ? { passive: true } : false));
 
   zawae.addEventListener('click', function () {
     const textShows = document.querySelectorAll('.show-text');
@@ -298,11 +347,11 @@ function setupAudio(
       elem.classList.remove('hide-row');
       elem.classList.add('show-row');
     });
-  })
+  }), (passiveSupported ? { passive: true } : false)
 
   loop.addEventListener('click', function () {
     audio.loop = loop.checked;
-  })
+  }), (passiveSupported ? { passive: true } : false)
 
   // #endregion
 
