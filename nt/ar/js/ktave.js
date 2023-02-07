@@ -16,6 +16,7 @@ function setupAudio(
   const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
+  let highlighted = [];            // highlighted elements
   let passiveSupported = false;    // let setPassiveSupported detect if true
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
@@ -73,7 +74,8 @@ function setupAudio(
   }
 
   function unhighlight() {
-    document.querySelectorAll('.highlight').forEach(elem => elem.classList.remove('highlight'));
+    highlighted.forEach(elem => elem.classList.remove('highlight'));
+    highlighted = [];
   }
 
   function getVerse(id) {
@@ -116,6 +118,7 @@ function setupAudio(
           continue;
         }
 
+        highlighted.push(elem);
         elem.classList.add('highlight');
         if (isFirst && !isInViewport(elem)) {
           elem.scrollIntoView();
