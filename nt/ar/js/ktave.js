@@ -58,11 +58,6 @@ function setupAudio(
     }
   }
 
-  function seekStart() {
-    if (!startTime || !endTime || startTime >= endTime) { return; }
-    audio.currentTime = startTime;
-  }
-
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -87,6 +82,16 @@ function setupAudio(
     return id && id.split('-')[1];
   }
 
+  function getVerseWord(id) {
+    if (id) { return; }
+    var split = id.split('-');
+    if (!split.length) { return; }
+    return {
+      verse: split[0],
+      word: split[1]
+    };
+  }
+
   function isFirstWord(word) {
     return '1' == word;
   }
@@ -98,6 +103,10 @@ function setupAudio(
 
     var computedStyle = window.getComputedStyle(elem.parentNode, null);
     return computedStyle.display == 'none' || computedStyle.visibility == 'hidden';
+  }
+
+  function isSet(variable) {
+    return typeof variable != "undefined";
   }
 
   audio.textTracks[0].addEventListener('cuechange', function (event) {
@@ -150,10 +159,11 @@ function setupAudio(
         endTime: vttCue.endTime,
         cueIndex: i
       };
-      if (!cues[verse]) {
-        cues[verse] = [];
+      let verseCues = cues[verse];
+      if (!verseCues) {
+        verseCues = cues[verse] = [];
       }
-      cues[verse].push(cue);
+      verseCues.push(cue);
       if (i == 1) {
         if (cue.startTime < startAdjustment) {
           console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
@@ -174,7 +184,7 @@ function setupAudio(
     }
 
     let time = event.target.currentTime;
-    if (!startTime || !endTime || startTime >= endTime) {
+    if (!isSet(startTime) || !isSet(endTime) || startTime >= endTime) {
       console.warn("Exiting 'timeupdate' doing nothing");
       console.warn({
         time,
@@ -185,11 +195,14 @@ function setupAudio(
     }
 
     if (time < startTime) {
-      seekStart();
+      pause();
+      audio.currentTime = startTime;
+      play();
     }
-
-    if (time >= endTime) {
-      seekStart();
+    else if (time >= endTime) {
+      pause();
+      audio.currentTime = startTime;
+      play();
     }
   }, (passiveSupported ? { passive: true } : false));
 
@@ -300,8 +313,7 @@ function setupAudio(
 
     let id = target.id.match(/(\d+-\d+)/);
     if (!id || !(id = id[0])) { return; }
-    let verseId = getVerse(id);
-    let wordId = getWord(id);
+    let [verseId, wordId] = getVerseWord(id);
     let verse, word;
     if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
 
