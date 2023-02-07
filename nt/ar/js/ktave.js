@@ -158,7 +158,7 @@ function setupAudio(
         if (cue.startTime < startAdjustment) {
           console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
         }
-        
+
         setAdjustedStartTime(cue.startTime);
       }
     }
@@ -293,48 +293,36 @@ function setupAudio(
     }, (passiveSupported ? { passive: true } : false));
   }
 
-  document.querySelectorAll('table:not(.header)').forEach((table) =>
-    table.addEventListener('click', function (event) {
-      event.stopImmediatePropagation();
-      event.preventDefault();
+  document.querySelector('main').addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    let target = event.target;
+    if (!target || target.nodeName != 'TD' || !target.id) { return; }
 
-      let target = event.target;
-      if (!target || target.nodeName != 'TD' || !target.id) { return; }
+    let id = target.id.match(/(\d+-\d+)/);
+    if (!id || !(id = id[0])) { return; }
+    let verseId = getVerse(id);
+    let wordId = getWord(id);
+    let verse, word;
+    if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
 
-      let id = target.id.match(/(\d+-\d+)/);
-      if (!id || !(id = id[0])) { return; }
-      let verseId = getVerse(id);
-      let wordId = getWord(id);
-      let verse, word;
-      if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
+    pause();
 
-      pause();
+    let verseNo = parseInt(verseId);
+    let startNo = parseInt(startVerse.value);
+    let endNo = parseInt(endVerse.value);
+    if (verseNo < startNo) {
+      startVerse.value = verseId;
+      setStartTime();
+    }
 
-      let verseNo = parseInt(verseId);
-      let startNo = parseInt(startVerse.value);
-      let endNo = parseInt(endVerse.value);
-      if (verseNo < startNo) {
-        startVerse.value = verseId;
-        setStartTime();
-      }
+    if (verseNo > endNo) {
+      endVerse.value = verseId;
+      setEndTime();
+    }
 
-      if (verseNo > endNo) {
-        endVerse.value = verseId;
-        setEndTime();
-      }
-
-      audio.currentTime = word.startTime - startAdjustment;
-      play();
-    })
-  );
-
-  document.querySelectorAll('[href="#header"]').forEach((element) => {
-    element && element.addEventListener('click', (event) => {
-      event.stopImmediatePropagation();
-      event.preventDefault();
-      window.scrollTo(0, 0);
-    });
-  });
+    audio.currentTime = word.startTime - startAdjustment;
+    play();
+  }, (passiveSupported ? { passive: true } : false));
 
   document.getElementById('font-family').addEventListener('change', function (event) {
     event.stopImmediatePropagation();
@@ -374,6 +362,14 @@ function setupAudio(
     event.stopImmediatePropagation();
     audio.loop = loop.checked;
   }), (passiveSupported ? { passive: true } : false)
+ 
+  document.querySelectorAll('[href="#header"]').forEach((element) => {
+    element && element.addEventListener('click', (event) => {
+      event.stopImmediatePropagation();
+      event.preventDefault();
+      window.scrollTo(0, 0);
+    });
+  });
 
   // #endregion
 

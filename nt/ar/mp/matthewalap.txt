@@ -2,7 +2,7 @@ WEBVTT
 
 NOTE Matthew Alap - Aramaic
 
-1-0
+0-1
 00:00:00.001 --> 00:00:00.718
 
 1-1

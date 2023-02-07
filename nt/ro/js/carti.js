@@ -353,38 +353,36 @@ function setupAudio(
     }, (passiveSupported ? { passive: true } : false));
   }
 
-  document.querySelectorAll('div.text div[id]').forEach((div) =>
-    div.addEventListener('click', function (event) {
-      event.stopImmediatePropagation();
-      let target = event.currentTarget;
-      if (!target || target.nodeName != 'DIV' || !target.id) { return; }
+  document.querySelector('main').addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    let target = event.target;
+    if (!target || target.nodeName != 'DIV' || !target.id) { return; }
 
-      let id = target.id.match(/(\d+-\d+)/);
-      if (!id || !(id = id[0])) { return; }
-      let verseId = getVerse(id);
-      let wordId = getWord(id);
-      let verse, word;
-      if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
+    let id = target.id.match(/(\d+-\d+)/);
+    if (!id || !(id = id[0])) { return; }
+    let verseId = getVerse(id);
+    let wordId = getWord(id);
+    let verse, word;
+    if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
 
-      pause();
+    pause();
 
-      let verseNo = parseInt(verseId);
-      let startNo = parseInt(startVerse.value);
-      let endNo = parseInt(endVerse.value);
-      if (verseNo < startNo) {
-        startVerse.value = verseId;
-        setStartTime();
-      }
+    let verseNo = parseInt(verseId);
+    let startNo = parseInt(startVerse.value);
+    let endNo = parseInt(endVerse.value);
+    if (verseNo < startNo) {
+      startVerse.value = verseId;
+      setStartTime();
+    }
 
-      if (verseNo > endNo) {
-        endVerse.value = verseId;
-        setEndTime();
-      }
+    if (verseNo > endNo) {
+      endVerse.value = verseId;
+      setEndTime();
+    }
 
-      audio.currentTime = word.startTime - startAdjustment;
-      play();
-    }, (passiveSupported ? { passive: true } : false))
-  );
+    audio.currentTime = word.startTime - startAdjustment;
+    play();
+  }, (passiveSupported ? { passive: true } : false));
 
   loop.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
@@ -397,6 +395,14 @@ function setupAudio(
     chapterLoop.checked && (loop.checked = false);
     audio.loop = loop.checked;
   }, (passiveSupported ? { passive: true } : false));
+
+  document.querySelectorAll('[href="#header"]').forEach((element) => {
+    element && element.addEventListener('click', (event) => {
+      event.stopImmediatePropagation();
+      event.preventDefault();
+      window.scrollTo(0, 0);
+    });
+  });
 
   // #endregion
 
