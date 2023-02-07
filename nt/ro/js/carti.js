@@ -80,7 +80,8 @@ function setupAudio(
     audio.currentTime = startTime;
   }
 
-  function unhighlight() {
+  function unhighlight(event) {
+    event && event.stopImmediatePropagation();
     highlighted.forEach(elem => elem.classList.remove('highlight'));
     highlighted = [];
   }
@@ -94,6 +95,7 @@ function setupAudio(
   }
 
   audio.textTracks[0].addEventListener('cuechange', function (event) {
+    event.stopImmediatePropagation();
     let vttCue = event.target.activeCues[0], id;
     if (!vttCue || !vttCue.id) { return; }
 
@@ -120,9 +122,10 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
+    event.stopImmediatePropagation();
     if (Object.keys(cues).length) { return; }
 
-    endTime = audio.duration;
+    setAdjustedEndTime(audio.duration);
     const vttCues = audioTrack.track.cues;
     if (!vttCues) { return; }
 
@@ -143,15 +146,15 @@ function setupAudio(
       if (i == 1) {
         if (cue.startTime < startAdjustment) {
           console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
-          cue.startTime = startAdjustment;
         }
-        startTime = cue.startTime - startAdjustment;
+        setAdjustedStartTime(cue.startTime);
       }
     }
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('seeked', unhighlight, (passiveSupported ? { passive: true } : false));
-  audio.addEventListener('ended', function () {
+  audio.addEventListener('ended', function (event) {
+    event.stopImmediatePropagation();
     unhighlight();
 
     if (!chapterLoop.checked) { return; }
@@ -168,6 +171,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('timeupdate', function (event) {
+    event.stopImmediatePropagation();
     if (!loop.checked) {
       return;
     }
@@ -193,6 +197,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
+    e.stopImmediatePropagation();
     let src = audio.getAttribute('src');
     switch (e.target.error.code) {
       case e.target.error.MEDIA_ERR_ABORTED:
@@ -225,19 +230,27 @@ function setupAudio(
 
   // #region Setup
 
+  function setAdjustedStartTime(newStartTime) {
+    const loopStart = newStartTime - startAdjustment;
+    startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
+  }
+
+  function setAdjustedEndTime(newEndTime) {
+    const loopEnd = newEndTime - endAdjustment;
+    endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
+  }
+
   function setStartTime() {
     let words, word;
     if ((words = cues[startVerse.value]) && (word = words[0])) {
-      let loopStart = word.startTime - startAdjustment;
-      startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
+      setAdjustedStartTime(word.startTime);
     }
   }
 
   function setEndTime() {
     let words, word;
     if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
-      let loopEnd = word.endTime - endAdjustment;
-      endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
+      setAdjustedEndTime(word.endTime);
     }
   }
 
@@ -258,7 +271,8 @@ function setupAudio(
 
     endVerse.value = maxVerse;
 
-    startVerse.addEventListener('change', function () {
+    startVerse.addEventListener('change', function (event) {
+      event.stopImmediatePropagation();
       let start = parseInt(startVerse.value);
       let end = parseInt(endVerse.value);
       if (start > end) {
@@ -267,16 +281,10 @@ function setupAudio(
       }
 
       setStartTime();
-
-      console.log({
-        startVerse: startVerse.value,
-        endVerse: endVerse.value,
-        startTime,
-        endTime
-      });
     }, (passiveSupported ? { passive: true } : false));
 
-    endVerse.addEventListener('change', function () {
+    endVerse.addEventListener('change', function (event) {
+      event.stopImmediatePropagation();
       let start = parseInt(startVerse.value);
       let end = parseInt(endVerse.value);
       if (start > end) {
@@ -285,13 +293,6 @@ function setupAudio(
       }
 
       setEndTime();
-
-      console.log({
-        startVerse: startVerse.value,
-        endVerse: endVerse.value,
-        startTime,
-        endTime
-      });
     }, (passiveSupported ? { passive: true } : false));
   }
 
@@ -334,7 +335,8 @@ function setupAudio(
     startChapter.value = startValue;
     endChapter.value = endValue;
 
-    startChapter.addEventListener('change', function () {
+    startChapter.addEventListener('change', function (event) {
+      event.stopImmediatePropagation();
       let start = parseInt(startChapter.value);
       let end = parseInt(endChapter.value);
       if (start > end) {
@@ -353,6 +355,7 @@ function setupAudio(
 
   document.querySelectorAll('div.text div[id]').forEach((div) =>
     div.addEventListener('click', function (event) {
+      event.stopImmediatePropagation();
       let target = event.currentTarget;
       if (!target || target.nodeName != 'DIV' || !target.id) { return; }
 
@@ -380,17 +383,17 @@ function setupAudio(
 
       audio.currentTime = word.startTime - startAdjustment;
       play();
-
-      event.stopImmediatePropagation();
     }, (passiveSupported ? { passive: true } : false))
   );
 
-  loop.addEventListener('click', function () {
+  loop.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
     loop.checked && (chapterLoop.checked = false);
     audio.loop = loop.checked;
   }, (passiveSupported ? { passive: true } : false));
 
-  chapterLoop.addEventListener('click', function () {
+  chapterLoop.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
     chapterLoop.checked && (loop.checked = false);
     audio.loop = loop.checked;
   }, (passiveSupported ? { passive: true } : false));
