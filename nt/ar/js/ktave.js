@@ -136,7 +136,7 @@ function setupAudio(
     event.stopImmediatePropagation();
     if (Object.keys(cues).length) { return; }
 
-    endTime = audio.duration;
+    setAdjustedEndTime(audio.duration);
     const vttCues = audioTrack.track.cues;
     if (!vttCues) { return; }
 
@@ -157,9 +157,9 @@ function setupAudio(
       if (i == 1) {
         if (cue.startTime < startAdjustment) {
           console.warn(`Verse ${1} cue startTime '${cue.startTime}' is less than startAdjustment '${startAdjustment}'`)
-          cue.startTime = startAdjustment;
         }
-        startTime = cue.startTime - startAdjustment;
+        
+        setAdjustedStartTime(cue.startTime);
       }
     }
   }, (passiveSupported ? { passive: true } : false));
@@ -227,19 +227,27 @@ function setupAudio(
 
   // #region Setup
 
+  function setAdjustedStartTime(newStartTime) {
+    const loopStart = newStartTime - startAdjustment;
+    startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
+  }
+
+  function setAdjustedEndTime(newEndTime) {
+    const loopEnd = newEndTime - endAdjustment;
+    endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
+  }
+
   function setStartTime() {
     let words, word;
     if ((words = cues[startVerse.value]) && (word = words[0])) {
-      let loopStart = word.startTime - startAdjustment;
-      startTime = loopStart < startAdjustment ? startAdjustment : loopStart;
+      setAdjustedStartTime(word.startTime);
     }
   }
 
   function setEndTime() {
     let words, word;
     if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
-      let loopEnd = word.endTime - endAdjustment;
-      endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
+      setAdjustedEndTime(word.endTime);
     }
   }
 
