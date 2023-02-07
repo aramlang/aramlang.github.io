@@ -73,7 +73,8 @@ function setupAudio(
     );
   }
 
-  function unhighlight() {
+  function unhighlight(event) {
+    event && event.stopImmediatePropagation();
     highlighted.forEach(elem => elem.classList.remove('highlight'));
     highlighted = [];
   }
@@ -100,6 +101,7 @@ function setupAudio(
   }
 
   audio.textTracks[0].addEventListener('cuechange', function (event) {
+    event.stopImmediatePropagation();
     let vttCue = event.target.activeCues[0], id, isFirst;
     if (!vttCue || !vttCue.id) { return; }
 
@@ -131,6 +133,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
+    event.stopImmediatePropagation();
     if (Object.keys(cues).length) { return; }
 
     endTime = audio.duration;
@@ -165,6 +168,7 @@ function setupAudio(
   audio.addEventListener('ended', unhighlight, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('timeupdate', function (event) {
+    event.stopImmediatePropagation();
     if (!loop.checked) {
       return;
     }
@@ -190,6 +194,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
+    e.stopImmediatePropagation();
     let src = audio.getAttribute('src');
     switch (e.target.error.code) {
       case e.target.error.MEDIA_ERR_ABORTED:
@@ -255,7 +260,8 @@ function setupAudio(
 
     endVerse.value = maxVerse;
 
-    startVerse.addEventListener('change', function () {
+    startVerse.addEventListener('change', function (event) {
+      event.stopImmediatePropagation();
       let start = parseInt(startVerse.value);
       let end = parseInt(endVerse.value);
       if (start > end) {
@@ -266,7 +272,8 @@ function setupAudio(
       setStartTime();
     }, (passiveSupported ? { passive: true } : false));
 
-    endVerse.addEventListener('change', function () {
+    endVerse.addEventListener('change', function (event) {
+      event.stopImmediatePropagation();
       let start = parseInt(startVerse.value);
       let end = parseInt(endVerse.value);
       if (start > end) {
@@ -280,6 +287,9 @@ function setupAudio(
 
   document.querySelectorAll('table:not(.header)').forEach((table) =>
     table.addEventListener('click', function (event) {
+      event.stopImmediatePropagation();
+      event.preventDefault();
+
       let target = event.target;
       if (!target || target.nodeName != 'TD' || !target.id) { return; }
 
@@ -304,8 +314,6 @@ function setupAudio(
         endVerse.value = verseId;
         setEndTime();
       }
-      event.preventDefault();
-      event.stopImmediatePropagation();
 
       audio.currentTime = word.startTime - startAdjustment;
       play();
@@ -314,13 +322,14 @@ function setupAudio(
 
   document.querySelectorAll('[href="#header"]').forEach((element) => {
     element && element.addEventListener('click', (event) => {
-      window.scrollTo(0, 0);
-      event.preventDefault();
       event.stopImmediatePropagation();
+      event.preventDefault();
+      window.scrollTo(0, 0);
     });
   });
 
   document.getElementById('font-family').addEventListener('change', function (event) {
+    event.stopImmediatePropagation();
     let fontFamily = event.target.value;
     let elements = document.getElementsByClassName('swadaya');
     for (let i = 0; i < elements.length; i++) {
@@ -329,7 +338,8 @@ function setupAudio(
     }
   }, (passiveSupported ? { passive: true } : false));
 
-  zawae.addEventListener('click', function () {
+  zawae.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
     const textShows = document.querySelectorAll('.show-text');
     const textHides = document.querySelectorAll('.hide-text');
     const rowShows = document.querySelectorAll('.show-row');
@@ -352,7 +362,8 @@ function setupAudio(
     });
   }), (passiveSupported ? { passive: true } : false)
 
-  loop.addEventListener('click', function () {
+  loop.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
     audio.loop = loop.checked;
   }), (passiveSupported ? { passive: true } : false)
 
