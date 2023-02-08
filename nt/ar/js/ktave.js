@@ -46,10 +46,10 @@ function setupAudio(
 
   // #region Audio
 
-  const { startTimer, clearTimer } = (function () {
+  const [startTimer, clearTimer] = (function () {
     let currentTimer;
 
-    function clearTimer() {
+    function clear() {
       if (!currentTimer) {
         return;
       }
@@ -58,9 +58,9 @@ function setupAudio(
       currentTimer = null;
     }
 
-    function startTimer() {
+    function start() {
       clearTimer();
-      // if maxVerse, 'ended' event handles looping
+      // 'ended' event handles looping when maxVerse
       if (!loop.checked || endVerse.value == maxVerse + '' || audio.paused) {
         return;
       }
@@ -70,10 +70,7 @@ function setupAudio(
       currentTimer = window.setTimeout(seekStart, (timeout * 1000 * 1) / audio.playbackRate);
     }
 
-    return {
-      startTimer,
-      clearTimer
-    };
+    return [start, clear];
   })();
 
   function play() {
@@ -99,6 +96,10 @@ function setupAudio(
   }
 
   function unhighlight() {
+    if (!highlighted || !highlighted.length) {
+      return;
+    }
+
     highlighted.forEach(elem => elem.classList.remove('highlight'));
     highlighted = [];
   }
@@ -147,8 +148,8 @@ function setupAudio(
       });
       return;
     }
-
-    audio.currentTime = startTime; // will trigger seeked
+    // will trigger 'seeked/playing'
+    audio.currentTime = startTime;
   }
 
   function seekWord(word) {
@@ -158,7 +159,8 @@ function setupAudio(
     }
 
     const loopStart = word.startTime - startAdjustment;
-    audio.currentTime = loopStart < startAdjustment ? startAdjustment : loopStart; // will trigger seeked
+    // will trigger 'seeked/playing'
+    audio.currentTime = loopStart < startAdjustment ? startAdjustment : loopStart;
   }
 
   audio.textTracks[0].addEventListener('cuechange', function (event) {
@@ -194,6 +196,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
+    // console.log('loadedmetadata')
     event.stopImmediatePropagation();
     if (Object.keys(cues).length) { return; }
 
@@ -228,6 +231,7 @@ function setupAudio(
 
 
   audio.addEventListener('playing', function (event) {
+    // console.log('playing')
     event.stopImmediatePropagation();
     if (!loop.checked) {
       return;
@@ -235,29 +239,27 @@ function setupAudio(
 
     if (audio.currentTime < startTime || audio.currentTime > endTime) {
       seekStart();
-      return;
     }
-
-    startTimer();
+    else {
+      startTimer();
+    }
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('seeked', function (event) {
+    // console.log('seeked')
     event.stopImmediatePropagation();
     unhighlight();
-    if (!loop.checked) {
-      clearTimer();
-      return;
-    }
-
-    startTimer();
+    clearTimer();
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ratechange', function (event) {
+    // console.log('ratechange')
     event.stopImmediatePropagation();
     startTimer();
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ended', function (event) {
+    // console.log('ended')
     event.stopImmediatePropagation();
     unhighlight();
     if (loop.checked) {
@@ -267,6 +269,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
+    // console.log('error')
     e.stopImmediatePropagation();
     let src = audio.getAttribute('src');
     switch (e.target.error.code) {
@@ -343,8 +346,9 @@ function setupAudio(
 
     startVerse.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
-      let start = parseInt(startVerse.value);
-      let end = parseInt(endVerse.value);
+      const start = parseInt(startVerse.value);
+      const end = parseInt(endVerse.value);
+
       if (start > end) {
         endVerse.value = startVerse.value;
         setEndTimeFromCue();
@@ -358,16 +362,17 @@ function setupAudio(
 
       if (audio.currentTime < startTime || audio.currentTime > endTime) {
         seekStart();
-        return;
       }
-
-      startTimer();
+      else {
+        startTimer();
+      }
     }, (passiveSupported ? { passive: true } : false));
 
     endVerse.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
-      let start = parseInt(startVerse.value);
-      let end = parseInt(endVerse.value);
+      const start = parseInt(startVerse.value);
+      const end = parseInt(endVerse.value);
+
       if (start > end) {
         startVerse.value = endVerse.value;
         setStartTimeFromCue();
@@ -381,10 +386,10 @@ function setupAudio(
 
       if (audio.currentTime < startTime || audio.currentTime > endTime) {
         seekStart();
-        return;
       }
-
-      startTimer();
+      else {
+        startTimer();
+      }
     }, (passiveSupported ? { passive: true } : false));
   }
 
