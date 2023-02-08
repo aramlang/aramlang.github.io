@@ -196,7 +196,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
-    // console.log('loadedmetadata')
+    console.log('loadedmetadata')
     event.stopImmediatePropagation();
     if (Object.keys(cues).length) { return; }
 
@@ -231,7 +231,7 @@ function setupAudio(
 
 
   audio.addEventListener('playing', function (event) {
-    // console.log('playing')
+    console.log('playing')
     event.stopImmediatePropagation();
     if (!loop.checked) {
       return;
@@ -246,20 +246,20 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('seeked', function (event) {
-    // console.log('seeked')
+    console.log('seeked')
     event.stopImmediatePropagation();
     unhighlight();
     clearTimer();
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ratechange', function (event) {
-    // console.log('ratechange')
+    console.log('ratechange')
     event.stopImmediatePropagation();
     startTimer();
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ended', function (event) {
-    // console.log('ended')
+    console.log('ended')
     event.stopImmediatePropagation();
     unhighlight();
     if (loop.checked) {
@@ -269,7 +269,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
-    // console.log('error')
+    console.log('error')
     e.stopImmediatePropagation();
     let src = audio.getAttribute('src');
     switch (e.target.error.code) {
