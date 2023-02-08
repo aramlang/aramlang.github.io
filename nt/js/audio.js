@@ -1,6 +1,9 @@
 function setupAudio(
-  maxVerse, // number of verses in this chapter
-  suffixes  // list of id suffixes to highlight in page
+  maxVerse,   // number of verses in this chapter
+  maxChapter, // number of chapters in this book
+  suffixes,   // list of id suffixes to highlight in page,
+  book,       // current book name
+  chapter     // current chapter
 ) {
   'use strict';
 
@@ -9,10 +12,16 @@ function setupAudio(
   const audio = document.getElementById('audio');
   const audioTrack = document.getElementById('audio-track');
   const loop = document.getElementById('loop');
+  const chapterLoop = document.getElementById('chapter-loop');
   const startVerse = document.getElementById('start-verse');
   const endVerse = document.getElementById('end-verse');
+  const startChapter = document.getElementById('start-chapter');
+  const endChapter = document.getElementById('end-chapter');
+
+  const fontFamily = document.getElementById('font-family');
   const zawae = document.getElementById('zawae');
 
+  const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
@@ -21,7 +30,8 @@ function setupAudio(
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
 
-  if (!audio || !audioTrack || !loop || !startVerse || !endVerse) {
+  if (!audio || !audioTrack || !loop || !startVerse || !endVerse || !chapterLoop || !startChapter || !endChapter) {
+    console.error('Could not find required page element');
     return;
   }
 
@@ -67,7 +77,7 @@ function setupAudio(
 
       const isPartial = audio.currentTime > startTime + startAdjustment;
       const timeout = isPartial ? endTime - audio.currentTime : endTime - startTime;
-      currentTimer = window.setTimeout(seekStart, (timeout * 1000 * 1) / audio.playbackRate);
+      currentTimer = window.setTimeout(seekStart, (timeout * 1000) / audio.playbackRate);
     }
 
     return [start, clear];
@@ -76,12 +86,6 @@ function setupAudio(
   function play() {
     if (audio.paused) {
       audio.play();
-    }
-  }
-
-  function pause() {
-    if (!audio.paused) {
-      audio.pause();
     }
   }
 
@@ -122,12 +126,8 @@ function setupAudio(
   }
 
   function isHidden(elem) {
-    if (!elem || !elem.parentNode) {
-      return true;
-    }
-
-    var computedStyle = window.getComputedStyle(elem.parentNode, null);
-    return computedStyle.display == 'none' || computedStyle.visibility == 'hidden';
+    return !elem || !elem.parentNode ||
+      elem.parentNode.classList.contains('hide-row');
   }
 
   function isSet(variable) {
@@ -163,6 +163,18 @@ function setupAudio(
     audio.currentTime = loopStart < startAdjustment ? startAdjustment : loopStart;
   }
 
+  function nextChapter() {
+    const start = parseInt(startChapter.value);
+    const end = parseInt(endChapter.value);
+    if (start == end == chapter) {
+      play();
+    }
+
+    const next = (chapter < end ? (chapter + 1) : start) + '';
+    window.location.href = `${book}${next}.html${hashPrefix}${start}-${end}`;
+    return true;
+  }
+
   audio.textTracks[0].addEventListener('cuechange', function (event) {
     event.stopImmediatePropagation();
     let vttCue = event.target.activeCues[0], id, isFirst;
@@ -196,7 +208,7 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
-    console.log('loadedmetadata')
+    // console.log('loadedmetadata')
     event.stopImmediatePropagation();
     if (Object.keys(cues).length) { return; }
 
@@ -231,7 +243,7 @@ function setupAudio(
 
 
   audio.addEventListener('playing', function (event) {
-    console.log('playing')
+    // console.log('playing')
     event.stopImmediatePropagation();
     if (!loop.checked) {
       return;
@@ -246,30 +258,31 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('seeked', function (event) {
-    console.log('seeked')
+    // console.log('seeked')
     event.stopImmediatePropagation();
     unhighlight();
     clearTimer();
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ratechange', function (event) {
-    console.log('ratechange')
+    // console.log('ratechange')
     event.stopImmediatePropagation();
     startTimer();
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ended', function (event) {
-    console.log('ended')
+    // console.log('ended')
     event.stopImmediatePropagation();
     unhighlight();
     if (loop.checked) {
       play();
-      seekStart();
+    } else if (chapterLoop.checked) {
+      nextChapter();
     }
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('error', function (e) {
-    console.log('error')
+    // console.log('error')
     e.stopImmediatePropagation();
     let src = audio.getAttribute('src');
     switch (e.target.error.code) {
@@ -326,17 +339,100 @@ function setupAudio(
       setAdjustedEndTime(word.endTime);
     }
   }
+  
+  document.querySelector('main').addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    const target = event.target;
+    if (!target || !target.id) { return; }
+
+    let id = target.id.match(/(\d+-\d+)/);
+    if (!id || !(id = id[0])) { return; }
+    const [verseId, wordId] = getVerseWord(id);
+    let verse, word;
+    if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
+
+    const verseNo = parseInt(verseId);
+    const startNo = parseInt(startVerse.value);
+    const endNo = parseInt(endVerse.value);
+    if (verseNo < startNo) {
+      startVerse.value = verseId;
+      setStartTimeFromCue();
+    }
+
+    if (verseNo > endNo) {
+      endVerse.value = verseId;
+      setEndTimeFromCue();
+    }
+
+    seekWord(word);
+    play();
+  }, (passiveSupported ? { passive: true } : false));
+
+  loop.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    if (loop.checked) {
+      chapterLoop.checked = false
+    }
+    else {
+      clearTimer();
+    }
+  }), (passiveSupported ? { passive: true } : false)
+
+  chapterLoop.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    chapterLoop.checked && (loop.checked = false);
+  }, (passiveSupported ? { passive: true } : false));
+
+  document.querySelectorAll('[href="#header"]').forEach((element) => {
+    element && element.addEventListener('click', (event) => {
+      event.stopImmediatePropagation();
+      event.preventDefault();
+      window.scrollTo(0, 0);
+    });
+  });
+  
+  fontFamily && fontFamily.addEventListener('change', function (event) {
+    event.stopImmediatePropagation();
+    let fontFamily = event.target.value;
+    let elements = document.getElementsByClassName('swadaya');
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements.item(i);
+      element.style.fontFamily = fontFamily;
+    }
+  }, (passiveSupported ? { passive: true } : false));
+
+  zawae && zawae.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    const textShows = document.querySelectorAll('.show-text');
+    const textHides = document.querySelectorAll('.hide-text');
+    const rowShows = document.querySelectorAll('.show-row');
+    const rowHides = document.querySelectorAll('.hide-row');
+    textShows.forEach(elem => {
+      elem.classList.remove('show-text');
+      elem.classList.add('hide-text');
+    });
+    textHides.forEach(elem => {
+      elem.classList.remove('hide-text');
+      elem.classList.add('show-text');
+    });
+    rowShows.forEach(elem => {
+      elem.classList.remove('show-row');
+      elem.classList.add('hide-row');
+    });
+    rowHides.forEach(elem => {
+      elem.classList.remove('hide-row');
+      elem.classList.add('show-row');
+    });
+  }), (passiveSupported ? { passive: true } : false)
 
   function setupLoop() {
     for (let i = 1; i <= maxVerse; i++) {
       let opt = document.createElement('option');
       opt.value = i;
-      opt.id = 'start' + i;
       opt.innerHTML = i;
       startVerse.appendChild(opt);
 
       opt = document.createElement('option');
-      opt.id = 'end' + i;
       opt.value = i;
       opt.innerHTML = i;
       endVerse.appendChild(opt);
@@ -393,84 +489,66 @@ function setupAudio(
     }, (passiveSupported ? { passive: true } : false));
   }
 
-  document.querySelector('main').addEventListener('click', function (event) {
-    event.stopImmediatePropagation();
-    const target = event.target;
-    if (!target || target.nodeName != 'TD' || !target.id) { return; }
+  function setupChapterLoop() {
+    for (let i = 1; i <= maxChapter; i++) {
+      let opt = document.createElement('option');
+      opt.value = i;
+      opt.innerHTML = i;
+      startChapter.appendChild(opt);
 
-    let id = target.id.match(/(\d+-\d+)/);
-    if (!id || !(id = id[0])) { return; }
-    const [verseId, wordId] = getVerseWord(id);
-    let verse, word;
-    if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
-
-    const verseNo = parseInt(verseId);
-    const startNo = parseInt(startVerse.value);
-    const endNo = parseInt(endVerse.value);
-    if (verseNo < startNo) {
-      startVerse.value = verseId;
-      setStartTimeFromCue();
+      opt = document.createElement('option');
+      opt.value = i;
+      opt.innerHTML = i;
+      endChapter.appendChild(opt);
     }
 
-    if (verseNo > endNo) {
-      endVerse.value = verseId;
-      setEndTimeFromCue();
+    let startValue = 1;
+    let endValue = maxChapter;
+
+    let hash = window.location.hash;
+    if (hash && hash.startsWith(hashPrefix)) {
+      hash = hash.replace(hashPrefix, '');
+      const split = hash.split('-');
+      const start = parseInt(split[0]);
+      const end = parseInt(split[1]);
+
+      if (start > 0 && start <= maxChapter) {
+        startValue = start;
+      }
+
+      if (end > 0 && end <= maxChapter) {
+        endValue = end;
+      }
+
+      loop.checked = false;
+      chapterLoop.checked = true;
+      play();
     }
 
-    seekWord(word);
-    play();
-  }, (passiveSupported ? { passive: true } : false));
+    startChapter.value = startValue;
+    endChapter.value = endValue;
 
-  document.getElementById('font-family').addEventListener('change', function (event) {
-    event.stopImmediatePropagation();
-    let fontFamily = event.target.value;
-    let elements = document.getElementsByClassName('swadaya');
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements.item(i);
-      element.style.fontFamily = fontFamily;
-    }
-  }, (passiveSupported ? { passive: true } : false));
-
-  zawae.addEventListener('click', function (event) {
-    event.stopImmediatePropagation();
-    const textShows = document.querySelectorAll('.show-text');
-    const textHides = document.querySelectorAll('.hide-text');
-    const rowShows = document.querySelectorAll('.show-row');
-    const rowHides = document.querySelectorAll('.hide-row');
-    textShows.forEach(elem => {
-      elem.classList.remove('show-text');
-      elem.classList.add('hide-text');
-    });
-    textHides.forEach(elem => {
-      elem.classList.remove('hide-text');
-      elem.classList.add('show-text');
-    });
-    rowShows.forEach(elem => {
-      elem.classList.remove('show-row');
-      elem.classList.add('hide-row');
-    });
-    rowHides.forEach(elem => {
-      elem.classList.remove('hide-row');
-      elem.classList.add('show-row');
-    });
-  }), (passiveSupported ? { passive: true } : false)
-
-  loop.addEventListener('click', function (event) {
-    event.stopImmediatePropagation();
-    if (!loop.checked) {
-      clearTimer();
-    }
-  }), (passiveSupported ? { passive: true } : false)
-
-  document.querySelectorAll('[href="#header"]').forEach((element) => {
-    element && element.addEventListener('click', (event) => {
+    startChapter.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
-      event.preventDefault();
-      window.scrollTo(0, 0);
-    });
-  });
+      let start = parseInt(startChapter.value);
+      let end = parseInt(endChapter.value);
+      if (start > end) {
+        endChapter.value = startChapter.value;
+      }
+    }, (passiveSupported ? { passive: true } : false));
+
+    endChapter.addEventListener('change', function () {
+      let start = parseInt(startChapter.value);
+      let end = parseInt(endChapter.value);
+      if (start > end) {
+        startChapter.value = endChapter.value;
+      }
+    }, (passiveSupported ? { passive: true } : false));
+  }
 
   // #endregion
 
   setupLoop();
+  setupChapterLoop();
+  audio.loop && (audio.loop = false); // looping handled via events
 }

@@ -21,7 +21,7 @@ table {
   margin-left: auto;
 }
 
-table.header {
+.wide {
   width: 100%;
 }
 
@@ -107,7 +107,7 @@ span.hide-text {
 
 .chapter {
   font-weight: bolder;
-  font-size: smaller;
+  font-size: larger;
 }
 
 .underline {
@@ -156,4 +156,19 @@ span.hide-text {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   font-size: small;
   content: ':\00a0\0263c'
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+}
+
+.grid-item {
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.side {
+  min-width: 225px;
 }

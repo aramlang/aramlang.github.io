@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Preaching of Mattai</title>
+  <title>The Preaching of Mattai - 1</title>
   <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/ktave.css">
 </head>
 
 <body>
   <header>
-    <table class="header">
+    <table class="wide">
       <tr>
         <td class="center" colspan="3">
           <a href="mattai3.html" title="Go To Chapter 3">&nbsp;&#171;&nbsp;</a>
-          <span class="chapter">&nbsp;1&nbsp;</span>
+          <span id="0-1" class="chapter" title="Chapter: 1">&nbsp;1&nbsp;</span>
           <a href="mattai2.html" title="Go To Chapter 2">&nbsp;2&nbsp;</a>
           <a href="mattai3.html" title="Go To Chapter 3">&nbsp;3&nbsp;</a>
           <span style="display: none">
@@ -41,26 +41,43 @@
         </td>
       </tr>
       <tr>
-        <td>
+        <td rowspan="2">
+          <div class="grid-container side">
+            <div class="grid-item">
+              <input type="checkbox" id="loop" checked="true" title="Repet selected verses">
+              <label for="loop" title="Repet selected verses">Loop&nbsp;Verse</label>
+            </div>
+            <div class="grid-item">
+              <select id="start-verse">
+              </select>
+            </div>
+            <div class="grid-item">
+              -&nbsp;<select id="end-verse">
+              </select>
+            </div>
+            <div class="grid-item">
+              <input type="checkbox" id="chapter-loop" title="Repet selected chapters">
+              <label for="chapter-loop" title="Repet selected chapters">Loop&nbsp;Chapter</label>
+            </div>
+            <div class="grid-item">
+              <select id="start-chapter">
+              </select>
+            </div>
+            <div class="grid-item">
+              -&nbsp;<select id="end-chapter">
+              </select>
+            </div>
+          </div>
+        </td>
+        <td class="center wide" title="Chapter: 1">
           The Preaching of Mattai
         </td>
-        <td class="center">
-          <label for="loop" title="Loop selected verses">Loop</label>
-          <input type="checkbox" id="loop" checked title="Loop selected verses">
-          &nbsp;Verse&nbsp;<select id="start-verse">
-          </select>
-          &nbsp;-&nbsp;&nbsp;<select id="end-verse">
-          </select>
-        </td>
-        <td class="swadaya">
-          <span class="show-text">ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ</span>
-          <span class="hide-text">ܟܪܘܙܘܬܐ ܕܡܬܝ</span>
+        <td class="swadaya side">
+          <span class="show-text">ܟܵܪܘܼܙܘܼܬ݂ܵܐ&nbsp;ܕܡܲܬܲܝ</span>
+          <span class="hide-text">ܟܪܘܙܘܬܐ&nbsp;ܕܡܬܝ</span>
         </td>
       </tr>
       <tr>
-        <td>
-          <span id="0-1">Chapter: 1</span>
-        </td>
         <td rowspan="2" class="center">
           <audio id="audio" controls>
             <source src="mp/matthewalap.mp3" type="audio/mp3">
@@ -70,8 +87,8 @@
           </audio>
         </td>
         <td class="swadaya">
-          <span class="show-text">ܨܚܵܚܵܐ: ܐ.</span>
-          <span class="hide-text">ܨܚܚܐ: ܐ.</span>
+          <span class="show-text">ܨܚܵܚܵܐ:&nbsp;ܐ.</span>
+          <span class="hide-text">ܨܚܚܐ:&nbsp;ܐ.</span>
         </td>
       </tr>
       <tr>
@@ -997,7 +1014,7 @@
         <td id="20-7e">an angel</td>
         <td id="20-6e">to him</td>
         <td id="20-5e">appeared</td>
-        <td id="20-4e" >he was thinking</td>
+        <td id="20-4e">he was thinking</td>
         <td id="20-3e">now</td>
         <td id="20-2e">these [things]</td>
         <td id="20-1e">while</td>
@@ -1297,9 +1314,9 @@
     <li>Literally, <q>her lord</q>.</li>
   </ol>
   <br>
-  <script src="js/ktave.js"></script>
+  <script src="../js/audio.js"></script>
   <script>
-    setupAudio(25, ['', 'v', 'e']);
+    setupAudio(25, 3, ['', 'v', 'e'], 'mattai', 1);
   </script>
 </body>
 

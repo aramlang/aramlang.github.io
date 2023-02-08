@@ -14,7 +14,7 @@
         John <a href="john2.html" title="Go To Chapter 2">&nbsp;&#171;&nbsp;</a>
         <a href="john1.html" title="Go To Chapter 1">&nbsp;1&nbsp;</a>
         <a href="john2.html" title="Go To Chapter 2">&nbsp;2&nbsp;</a>
-        <span id="0-1" class="chapter">&nbsp;3&nbsp;</span>
+        <span id="0-1" class="chapter" title="Chapter: 3">&nbsp;3&nbsp;</span>
         <span style="display: none">
           <a href="john4.html" onclick="event.preventDefault()" title="Go To Chapter 4">&nbsp;4&nbsp;</a>
           <a href="john5.html" onclick="event.preventDefault()" title="Go To Chapter 5">&nbsp;5&nbsp;</a>
@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="col center">
-        <audio id="audio" controls loop>
+        <audio id="audio" controls>
           <source src="https://audio.esv.org/david-cochran-heath/mq/John+3.mp3" type="audio/mp3">
           <track id="audio-track" default label="John 3" kind="metadata" srclang="en-US" src="mp/john3.txt" />
           Your browser does not support the audio tag!
@@ -175,7 +175,7 @@
     </div>
   </main>
   <br>
-  <script src="js/books.js"></script>
+  <script src="../js/audio.js"></script>
   <script>
     setupAudio(36, 3, [''], 'john', 3);
   </script>
