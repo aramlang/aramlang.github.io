@@ -46,6 +46,36 @@ function setupAudio(
 
   // #region Audio
 
+  const { startTimer, clearTimer } = (function () {
+    let currentTimer;
+
+    function clearTimer() {
+      if (!currentTimer) {
+        return;
+      }
+
+      window.clearTimeout(currentTimer);
+      currentTimer = null;
+    }
+
+    function startTimer() {
+      clearTimer();
+      // if maxVerse, 'ended' event handles looping
+      if (!loop.checked || endVerse.value == maxVerse + '' || audio.paused) {
+        return;
+      }
+
+      const isPartial = audio.currentTime > startTime + startAdjustment;
+      const timeout = isPartial ? endTime - audio.currentTime : endTime - startTime;
+      currentTimer = window.setTimeout(seekStart, (timeout * 1000 * 1) / audio.playbackRate);
+    }
+
+    return {
+      startTimer,
+      clearTimer
+    };
+  })();
+
   function play() {
     if (audio.paused) {
       audio.play();
@@ -68,8 +98,7 @@ function setupAudio(
     );
   }
 
-  function unhighlight(event) {
-    event && event.stopImmediatePropagation();
+  function unhighlight() {
     highlighted.forEach(elem => elem.classList.remove('highlight'));
     highlighted = [];
   }
@@ -104,6 +133,34 @@ function setupAudio(
     return typeof variable != "undefined";
   }
 
+  function isLoaded() {
+    return window.isFinite(audio.duration) && !window.isNaN(audio.duration);
+  }
+
+  function seekStart() {
+    if (!isSet(startTime) || !isSet(endTime) || startTime >= endTime || !isLoaded()) {
+      console.warn("Exiting 'seekStart' doing nothing", {
+        isLoaded: isLoaded(),
+        duration: audio.duration,
+        startTime,
+        endTime
+      });
+      return;
+    }
+
+    audio.currentTime = startTime; // will trigger seeked
+  }
+
+  function seekWord(word) {
+    if (!isSet(word) || !isLoaded()) {
+      console.warn("Exiting 'seekWord' doing nothing");
+      return;
+    }
+
+    const loopStart = word.startTime - startAdjustment;
+    audio.currentTime = loopStart < startAdjustment ? startAdjustment : loopStart; // will trigger seeked
+  }
+
   audio.textTracks[0].addEventListener('cuechange', function (event) {
     event.stopImmediatePropagation();
     let vttCue = event.target.activeCues[0], id, isFirst;
@@ -126,7 +183,7 @@ function setupAudio(
 
         highlighted.push(elem);
         elem.classList.add('highlight');
-        if (isFirst && !isInViewport(elem)) {
+        if (isFirst && !audio.seeking && !audio.paused && !isInViewport(elem)) {
           elem.scrollIntoView();
         }
       }
@@ -169,35 +226,43 @@ function setupAudio(
     }
   }, (passiveSupported ? { passive: true } : false));
 
-  audio.addEventListener('seeked', unhighlight, (passiveSupported ? { passive: true } : false));
-  audio.addEventListener('ended', unhighlight, (passiveSupported ? { passive: true } : false));
 
-  audio.addEventListener('timeupdate', function (event) {
+  audio.addEventListener('playing', function (event) {
     event.stopImmediatePropagation();
     if (!loop.checked) {
       return;
     }
 
-    let time = event.target.currentTime;
-    if (!isSet(startTime) || !isSet(endTime) || startTime >= endTime) {
-      console.warn("Exiting 'timeupdate' doing nothing");
-      console.warn({
-        time,
-        startTime,
-        endTime
-      })
+    if (audio.currentTime < startTime || audio.currentTime > endTime) {
+      seekStart();
       return;
     }
 
-    if (time < startTime) {
-      pause();
-      audio.currentTime = startTime;
-      play();
+    startTimer();
+  }, (passiveSupported ? { passive: true } : false));
+
+  audio.addEventListener('seeked', function (event) {
+    event.stopImmediatePropagation();
+    unhighlight();
+    if (!loop.checked) {
+      clearTimer();
+      return;
     }
-    else if (time >= endTime) {
-      pause();
-      audio.currentTime = startTime;
+
+    startTimer();
+  }, (passiveSupported ? { passive: true } : false));
+
+  audio.addEventListener('ratechange', function (event) {
+    event.stopImmediatePropagation();
+    startTimer();
+  }, (passiveSupported ? { passive: true } : false));
+
+  audio.addEventListener('ended', function (event) {
+    event.stopImmediatePropagation();
+    unhighlight();
+    if (loop.checked) {
       play();
+      seekStart();
     }
   }, (passiveSupported ? { passive: true } : false));
 
@@ -245,14 +310,14 @@ function setupAudio(
     endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
   }
 
-  function setStartTime() {
+  function setStartTimeFromCue() {
     let words, word;
     if ((words = cues[startVerse.value]) && (word = words[0])) {
       setAdjustedStartTime(word.startTime);
     }
   }
 
-  function setEndTime() {
+  function setEndTimeFromCue() {
     let words, word;
     if ((words = cues[endVerse.value]) && (word = words[words.length - 1])) {
       setAdjustedEndTime(word.endTime);
@@ -282,10 +347,21 @@ function setupAudio(
       let end = parseInt(endVerse.value);
       if (start > end) {
         endVerse.value = startVerse.value;
-        setEndTime();
+        setEndTimeFromCue();
       }
 
-      setStartTime();
+      setStartTimeFromCue();
+
+      if (!loop.checked || !isLoaded()) {
+        return;
+      }
+
+      if (audio.currentTime < startTime || audio.currentTime > endTime) {
+        seekStart();
+        return;
+      }
+
+      startTimer();
     }, (passiveSupported ? { passive: true } : false));
 
     endVerse.addEventListener('change', function (event) {
@@ -294,40 +370,49 @@ function setupAudio(
       let end = parseInt(endVerse.value);
       if (start > end) {
         startVerse.value = endVerse.value;
-        setStartTime();
+        setStartTimeFromCue();
       }
 
-      setEndTime();
+      setEndTimeFromCue();
+
+      if (!loop.checked || !isLoaded()) {
+        return;
+      }
+
+      if (audio.currentTime < startTime || audio.currentTime > endTime) {
+        seekStart();
+        return;
+      }
+
+      startTimer();
     }, (passiveSupported ? { passive: true } : false));
   }
 
   document.querySelector('main').addEventListener('click', function (event) {
     event.stopImmediatePropagation();
-    let target = event.target;
+    const target = event.target;
     if (!target || target.nodeName != 'TD' || !target.id) { return; }
 
     let id = target.id.match(/(\d+-\d+)/);
     if (!id || !(id = id[0])) { return; }
-    let [verseId, wordId] = getVerseWord(id);
+    const [verseId, wordId] = getVerseWord(id);
     let verse, word;
     if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
 
-    pause();
-
-    let verseNo = parseInt(verseId);
-    let startNo = parseInt(startVerse.value);
-    let endNo = parseInt(endVerse.value);
+    const verseNo = parseInt(verseId);
+    const startNo = parseInt(startVerse.value);
+    const endNo = parseInt(endVerse.value);
     if (verseNo < startNo) {
       startVerse.value = verseId;
-      setStartTime();
+      setStartTimeFromCue();
     }
 
     if (verseNo > endNo) {
       endVerse.value = verseId;
-      setEndTime();
+      setEndTimeFromCue();
     }
 
-    audio.currentTime = word.startTime - startAdjustment;
+    seekWord(word);
     play();
   }, (passiveSupported ? { passive: true } : false));
 
@@ -367,7 +452,9 @@ function setupAudio(
 
   loop.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
-    audio.loop = loop.checked;
+    if (!loop.checked) {
+      clearTimer();
+    }
   }), (passiveSupported ? { passive: true } : false)
 
   document.querySelectorAll('[href="#header"]').forEach((element) => {
