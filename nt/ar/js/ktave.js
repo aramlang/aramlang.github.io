@@ -83,13 +83,8 @@ function setupAudio(
   }
 
   function getVerseWord(id) {
-    if (id) { return; }
-    var split = id.split('-');
-    if (!split.length) { return; }
-    return {
-      verse: split[0],
-      word: split[1]
-    };
+    let split;
+    return id && (split = id.split('-')).length > 1 ? split : [null, null];
   }
 
   function isFirstWord(word) {
@@ -374,7 +369,7 @@ function setupAudio(
     event.stopImmediatePropagation();
     audio.loop = loop.checked;
   }), (passiveSupported ? { passive: true } : false)
- 
+
   document.querySelectorAll('[href="#header"]').forEach((element) => {
     element && element.addEventListener('click', (event) => {
       event.stopImmediatePropagation();
