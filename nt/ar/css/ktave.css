@@ -69,24 +69,12 @@ td.highlight {
   background-color: #FFFF00;
 }
 
+div.highlight {
+  background-color: #FFFF00;
+}
+
 .center {
   text-align: center;
-}
-
-tr.show-row {
-  display: table-row;
-}
-
-tr.hide-row {
-  display: none;
-}
-
-span.show-text {
-  display: inline;
-}
-
-span.hide-text {
-  display: none;
 }
 
 .vno {
@@ -97,6 +85,10 @@ span.hide-text {
 }
 
 .clickable td[id] {
+  cursor: pointer;
+}
+
+.clickable div[id] {
   cursor: pointer;
 }
 
