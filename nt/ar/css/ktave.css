@@ -184,7 +184,6 @@ span.hide-text {
 .col {
   display: flex;
   flex-direction: column;
-  text-align: right;
   /* border: 1px solid red;  */
 }
 
@@ -195,7 +194,8 @@ span.hide-text {
   font-size: x-large;
 }
 
-.en {
+.eng {
+  text-align: right;
   color: blue
 }
 
