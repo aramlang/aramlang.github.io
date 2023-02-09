@@ -403,25 +403,15 @@ function setupAudio(
 
   zawae && zawae.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
-    const textShows = document.querySelectorAll('.show-text');
-    const textHides = document.querySelectorAll('.hide-text');
-    const rowShows = document.querySelectorAll('.show-row');
-    const rowHides = document.querySelectorAll('.hide-row');
-    textShows.forEach(elem => {
-      elem.classList.remove('show-text');
-      elem.classList.add('hide-text');
+    const shows = document.querySelectorAll('.show');
+    const hides = document.querySelectorAll('.hide');
+    shows.forEach(elem => {
+      elem.classList.remove('show');
+      elem.classList.add('hide');
     });
-    textHides.forEach(elem => {
-      elem.classList.remove('hide-text');
-      elem.classList.add('show-text');
-    });
-    rowShows.forEach(elem => {
-      elem.classList.remove('show-row');
-      elem.classList.add('hide-row');
-    });
-    rowHides.forEach(elem => {
-      elem.classList.remove('hide-row');
-      elem.classList.add('show-row');
+    hides.forEach(elem => {
+      elem.classList.remove('hide');
+      elem.classList.add('show');
     });
   }), (passiveSupported ? { passive: true } : false)
 

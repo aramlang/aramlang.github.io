@@ -73,8 +73,8 @@
           The Preaching of Mattai
         </td>
         <td class="swadaya side">
-          <span class="show-text">ܟܵܪܘܼܙܘܼܬ݂ܵܐ&nbsp;ܕܡܲܬܲܝ</span>
-          <span class="hide-text">ܟܪܘܙܘܬܐ&nbsp;ܕܡܬܝ</span>
+          <span class="show">ܟܵܪܘܼܙܘܼܬ݂ܵܐ&nbsp;ܕܡܲܬܲܝ</span>
+          <span class="hide">ܟܪܘܙܘܬܐ&nbsp;ܕܡܬܝ</span>
         </td>
       </tr>
       <tr>
@@ -87,8 +87,8 @@
           </audio>
         </td>
         <td class="swadaya">
-          <span class="show-text">ܨܚܵܚܵܐ:&nbsp;ܒ.</span>
-          <span class="hide-text">ܨܚܚܐ:&nbsp;ܒ.</span>
+          <span class="show">ܨܚܵܚܵܐ:&nbsp;ܒ.</span>
+          <span class="hide">ܨܚܚܐ:&nbsp;ܒ.</span>
         </td>
       </tr>
       <tr>
@@ -100,8 +100,8 @@
         </td>
         <td class="swadaya">
           <label for="zawae" title="Show/hide vowels and punctuation" class="swadaya">
-            <span class="show-text">ܙܵܘܥܹ̈ܐ</span>
-            <span class="hide-text">ܙܘܥܐ</span></label>
+            <span class="show">ܙܵܘܥܹ̈ܐ</span>
+            <span class="hide">ܙܘܥܐ</span></label>
           <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
         </td>
       </tr>
@@ -109,59 +109,84 @@
   </header>
   <main class="clickable">
     <br>
-    <table>
-      <tr class="swadaya show-row">
-        <td id="1-14v" class="sun">ܠܐܘܪܫܠܡ</td>
-        <td id="1-13v">ܡܕܢܚܐ</td>
-        <td id="1-12v">ܡܢ</td>
-        <td id="1-11v">ܡܓܘܫܐ</td>
-        <td id="1-10v">ܐܬܘ</td>
-        <td id="1-9v" class="cln">ܡܠܟܐ</td>
-        <td id="1-8v">ܗܪܘܕܣ</td>
-        <td id="1-7v">ܒܝܘܡܝ</td>
-        <td id="1-6v" class="cln">ܕܝܗܘܕܐ</td>
-        <td id="1-5v">ܒܒܝܬܠܚܡ</td>
-        <td id="1-4v">ܝܫܘܥ</td>
-        <td id="1-3v">ܐܬܝܠܕ</td>
-        <td id="1-2v">ܕܝܢ</td>
-        <td id="1-1v">ܟܕ</td>
-        <td><a href="#header" title="Go Up" class="vno">1.</a></td>
-      </tr>
-      <tr class="swadaya hide-row">
-        <td id="1-14" class="nsun">ܠܐܘܪܫܠܡ</td>
-        <td id="1-13">ܡܕܢܚܐ</td>
-        <td id="1-12">ܡܢ</td>
-        <td id="1-11">ܡܓܘܫܐ</td>
-        <td id="1-10">ܐܬܘ</td>
-        <td id="1-9" class="ncln">ܡܠܟܐ</td>
-        <td id="1-8">ܗܪܘܕܣ</td>
-        <td id="1-7">ܒܝܘܡܝ</td>
-        <td id="1-6" class="ncln">ܕܝܗܘܕܐ</td>
-        <td id="1-5">ܒܒܝܬܠܚܡ</td>
-        <td id="1-4">ܝܫܘܥ</td>
-        <td id="1-3">ܐܬܝܠܕ</td>
-        <td id="1-2">ܕܝܢ</td>
-        <td id="1-1">ܟܕ</td>
-        <td><a href="#header" title="Go Up" class="vno">1.</a></td>
-      </tr>
-      <tr class="right">
-        <td id="1-14e">to Urishlim</td>
-        <td id="1-13e">the East</td>
-        <td id="1-12e">from</td>
-        <td id="1-11e">Magoshi</td>
-        <td id="1-10e">&lt;they&gt; came</td>
-        <td id="1-9e">the king</td>
-        <td id="1-8e">Herodus</td>
-        <td id="1-7e">in the days of</td>
-        <td id="1-6e">of Yehuda</td>
-        <td id="1-5e" class="underline">in Beth-Lekhem</td>
-        <td id="1-4e">Yeshua</td>
-        <td id="1-3e">was born</td>
-        <td id="1-2e">and</td>
-        <td id="1-1e">when</td>
-        <td></td>
-      </tr>
-    </table>
+    <div class="row">
+      <div class="col">
+        <div class="show"><a href="#header" title="Go Up" class="vno">1.</a></div>
+        <div class="hide"><a href="#header" title="Go Up" class="vno">1.</a></div>
+        <div><a href="#header" title="Go Up" class="vno">&nbsp;</a></div>
+      </div>
+      <div class="col">
+        <div id="1-1v" class="syr show">ܟܕ</div>
+        <div id="1-1" class="syr hide">ܟܕ</div>
+        <div id="1-1e" class="en">when</div>
+      </div>
+      <div class="col">
+        <div id="1-2v" class="syr show">ܕܝܢ</div>
+        <div id="1-2" class="syr hide">ܕܝܢ</div>
+        <div id="1-2e" class="en">and</div>
+      </div>
+      <div class="col">
+        <div id="1-3v" class="syr show">ܐܬܝܠܕ</div>
+        <div id="1-3" class="syr hide">ܐܬܝܠܕ</div>
+        <div id="1-3e" class="en">was born</div>
+      </div>
+      <div class="col">
+        <div id="1-4v" class="syr show">ܝܫܘܥ</div>
+        <div id="1-4" class="syr hide">ܝܫܘܥ</div>
+        <div id="1-4e" class="en">Yeshua</div>
+      </div>
+      <div class="col">
+        <div id="1-5v" class="syr show">ܒܒܝܬܠܚܡ</div>
+        <div id="1-5" class="syr hide">ܒܒܝܬܠܚܡ</div>
+        <div id="1-5e" class="en underline">in Beth-Lekhem</div>
+      </div>
+      <div class="col">
+        <div id="1-6v" class="syr show cln">ܕܝܗܘܕܐ</div>
+        <div id="1-6" class="syr hide ncln">ܕܝܗܘܕܐ</div>
+        <div id="1-6e" class="en">of Yehuda</div>
+      </div>
+      <div class="col">
+        <div id="1-7v" class="syr show">ܒܝܘܡܝ</div>
+        <div id="1-7" class="syr hide">ܒܝܘܡܝ</div>
+        <div id="1-7e" class="en">in the days of</div>
+      </div>
+      <div class="col">
+        <div id="1-8v" class="syr show">ܗܪܘܕܣ</div>
+        <div id="1-8" class="syr hide">ܗܪܘܕܣ</div>
+        <div id="1-8e" class="en">Herodus</div>
+      </div>
+      <div class="col">
+        <div id="1-9v" class="syr show cln">ܡܠܟܐ</div>
+        <div id="1-9" class="syr hide ncln">ܡܠܟܐ</div>
+        <div id="1-9e" class="en">the king</div>
+      </div>
+      <div class="col">
+        <div id="1-10v" class="syr show">ܐܬܘ</div>
+        <div id="1-10" class="syr hide">ܐܬܘ</div>
+        <div id="1-10e" class="en">&lt;they&gt; came</div>
+      </div>
+      <div class="col">
+        <div id="1-11v" class="syr show">ܡܓܘܫܐ</div>
+        <div id="1-11" class="syr hide">ܡܓܘܫܐ</div>
+        <div id="1-11e" class="en">Magoshi</div>
+      </div>
+      <div class="col">
+        <div id="1-12v" class="syr show">ܡܢ</div>
+        <div id="1-12" class="syr hide">ܡܢ</div>
+        <div id="1-12e" class="en">from</div>
+      </div>
+      <div class="col">
+        <div id="1-13v" class="syr show">ܡܕܢܚܐ</div>
+        <div id="1-13" class="syr hide">ܡܕܢܚܐ</div>
+        <div id="1-13e" class="en">the East</div>
+      </div>
+      <div class="col">
+        <div id="1-14v" class="syr show sun">ܠܐܘܪܫܠܡ</div>
+        <div id="1-14" class="syr hide nsun">ܠܐܘܪܫܠܡ</div>
+        <div id="1-14e" class="en">to Urishlim</div>
+      </div>
+    </div>
+    <br>
   </main>
   <script src="../js/audio.js"></script>
   <script>
