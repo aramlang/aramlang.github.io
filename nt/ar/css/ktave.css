@@ -9,11 +9,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-header,
-main {
-  min-width: 860px;
-}
-
 table {
   border-collapse: collapse;
   width: auto;
@@ -158,35 +153,6 @@ span.hide-text {
   content: ':\00a0\0263c'
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: start;
-}
-
-.grid-item {
-  padding-bottom: 5px;
-  padding-right: 5px;
-}
-
-.side {
-  min-width: 225px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 8px;
-  direction: rtl;
-  /* border: 1px solid red;*/ 
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid red;  */
-}
-
 .syr {
   font-family: 'EastAssyrian';
   direction: rtl;
@@ -209,4 +175,39 @@ span.show {
 
 .hide {
   display: none;
+}
+
+.side {
+  min-width: 225px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+}
+
+.grid-item {
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  direction: rtl;
+  /* border: 1px solid red;*/
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red;  */
+}
+
+.hrow {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red;*/
 }
