@@ -383,7 +383,7 @@ function setupAudio(
     chapterLoop.checked && (loop.checked = false);
   }, (passiveSupported ? { passive: true } : false));
 
-  document.querySelectorAll('[href="#header"]').forEach((element) => {
+  document.querySelectorAll('[href="#up"]').forEach((element) => {
     element && element.addEventListener('click', (event) => {
       event.stopImmediatePropagation();
       event.preventDefault();
