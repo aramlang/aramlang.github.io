@@ -1,0 +1,148 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+header {
+  background-color: #E6F3F2;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+span.label {
+  white-space: nowrap;
+}
+
+.xlarger {
+  font-size: x-large;
+}
+
+.larger {
+  font-size: larger;
+}
+
+.large {
+  font-size: large;
+}
+
+div.highlight {
+  background-color: #FFFF00;
+}
+
+.center {
+  text-align: center;
+}
+
+.clickable div[id] {
+  cursor: pointer;
+}
+
+.chapter {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.heb.cln::after {
+  content: '׃'
+}
+
+.heb.cmm::after {
+  content: ','
+}
+
+.heb.ncmm::after {
+  visibility: hidden;
+  content: ','
+}
+
+.dot::after {
+  content: '.'
+}
+
+.rashi {
+  font-family: 'Noto Rashi Hebrew';
+  direction: rtl;
+  text-align: right;
+  font-size: x-large;
+}
+
+.heb {
+  font-family: 'David';
+  direction: rtl;
+  text-align: right;
+  font-size: 165%;
+}
+
+.no {
+  font-family: 'David';
+  direction: rtl;
+  text-align: right;
+  font-size: 165%;
+  font-weight: bold;
+}
+
+.eng {
+  text-align: right;
+  color: blue
+}
+
+.vno {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  text-align: right;
+  font-weight: bold;
+}
+
+.book {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+div.show {
+  display: block;
+}
+
+span.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+  row-gap: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  direction: rtl;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: space-between;
+}
+
+.hrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 10px 7px 10px;
+  justify-content: space-between;
+}
