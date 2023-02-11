@@ -1,3 +1,7 @@
+'use strict';
+window.sapra = window.sapra || {};
+window.sapra.passiveSupported = false;
+
 function setupAudio(
   maxVerse,   // number of verses in this chapter
   maxChapter, // number of chapters in this book
@@ -5,7 +9,6 @@ function setupAudio(
   book,       // current book name
   chapter     // current chapter
 ) {
-  'use strict';
 
   // #region Init
 
@@ -18,7 +21,6 @@ function setupAudio(
   const startChapter = document.getElementById('start-chapter');
   const endChapter = document.getElementById('end-chapter');
 
-  const fontFamily = document.getElementById('font-family');
   const zawae = document.getElementById('zawae');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
@@ -51,6 +53,7 @@ function setupAudio(
     }
   }
   setPassiveSupported();
+  window.sapra.passiveSupported = passiveSupported;
 
   // #endregion
 
@@ -339,7 +342,7 @@ function setupAudio(
       setAdjustedEndTime(word.endTime);
     }
   }
-  
+
   document.querySelector('main').addEventListener('click', function (event) {
     event.stopImmediatePropagation();
     const target = event.target;
@@ -390,16 +393,6 @@ function setupAudio(
       window.scrollTo(0, 0);
     });
   });
-  
-  fontFamily && fontFamily.addEventListener('change', function (event) {
-    event.stopImmediatePropagation();
-    let fontFamily = event.target.value;
-    let elements = document.getElementsByClassName('swadaya');
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements.item(i);
-      element.style.fontFamily = fontFamily;
-    }
-  }, (passiveSupported ? { passive: true } : false));
 
   zawae && zawae.addEventListener('click', function (event) {
     event.stopImmediatePropagation();

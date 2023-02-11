@@ -145,6 +145,13 @@ div.highlight {
   font-size: x-large;
 }
 
+.est {
+  font-family: 'Estrangelo Esarhaddon';
+  direction: rtl;
+  text-align: right;
+  font-size: x-large;
+}
+
 .eng {
   text-align: right;
   color: blue

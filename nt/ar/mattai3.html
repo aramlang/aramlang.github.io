@@ -68,8 +68,8 @@
           </div>
           <div>
             Font&nbsp;<select id="font-family">
-              <option value="EastAssyrian">East Assyrian</option>
-              <option value="Estrangelo Esarhaddon">Estrangela</option>
+              <option value="syr">East Assyrian</option>
+              <option value="est">Estrangela</option>
             </select>
           </div>
         </div>
@@ -86,17 +86,17 @@
             </audio>
           </div>
         </div>
-        <div class="col">
-          <div class="syr">
+        <div class="col syr">
+          <div>
             <span class="show">ܟܵܪܘܼܙܘܼܬ݂ܵܐ&nbsp;ܕܡܲܬܲܝ</span>
             <span class="hide">ܟܪܘܙܘܬܐ&nbsp;ܕܡܬܝ</span>
           </div>
-          <div class="syr">
+          <div>
             <span class="show">ܨܚܵܚܵܐ:&nbsp;ܓ.</span>
             <span class="hide">ܨܚܚܐ:&nbsp;ܓ.</span>
           </div>
-          <div class="syr">
-            <label for="zawae" title="Show/hide vowels and punctuation" class="syr">
+          <div>
+            <label for="zawae" title="Show/hide vowels and punctuation">
               <span class="show">ܙܵܘܥܹ̈ܐ</span>
               <span class="hide">ܙܘܥܐ</span></label>
             <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
@@ -171,6 +171,7 @@
     </div>
   </main>
   <script src="../../common/js/audio.js"></script>
+  <script src="js/ar.js"></script>
   <script>
     setupAudio(17, 3, ['', 'v', 'e'], 'mattai', 3);
   </script>
