@@ -3,15 +3,16 @@ body {
   font-size: large;
 }
 
+header {
+  background-color: #fc0;
+}
+
 a {
   text-decoration: none;
 }
 
-h5 {
-  font-size: 100%;
-  font-weight: normal;
-  padding: 10px;
-  margin: 0;
+span.label {
+  white-space: nowrap;
 }
 
 div.highlight {
@@ -54,6 +55,7 @@ div.text div[id] {
 
 .row {
   display: flex;
+  padding: 5px 10px 5px 10px;
 }
 
 .col {
@@ -64,9 +66,5 @@ div.text div[id] {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
-}
-
-.grid-item {
-  padding-bottom: 5px;
-  padding-right: 5px;
+  row-gap: 10px;
 }
