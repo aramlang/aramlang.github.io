@@ -9,6 +9,14 @@ table {
   margin-left: auto;
 }
 
+header {
+  background-color: #C5E3E1;
+}
+
+span.label {
+  white-space: nowrap;
+}
+
 .wide {
   width: 100%;
 }
@@ -70,13 +78,6 @@ div.highlight {
   text-align: center;
 }
 
-.vno {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  direction: ltr;
-  text-align: right;
-  font-size: small;
-}
-
 .clickable td[id] {
   cursor: pointer;
 }
@@ -92,6 +93,10 @@ div.highlight {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .cln::after {
@@ -152,6 +157,22 @@ div.highlight {
   font-size: x-large;
 }
 
+.no {
+  color: blue;
+  font-size: smaller;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.vno {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  direction: ltr;
+  text-align: right;
+  font-size: smaller;
+}
+
 .eng {
   text-align: right;
   color: blue
@@ -169,19 +190,11 @@ span.show {
   display: none;
 }
 
-.side {
-  min-width: 225px;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
-}
-
-.grid-item {
-  padding-bottom: 5px;
-  padding-right: 5px;
+  row-gap: 10px;
 }
 
 .row {
@@ -189,17 +202,17 @@ span.show {
   flex-wrap: wrap;
   column-gap: 8px;
   direction: rtl;
-  /* border: 1px solid red;*/
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red;  */
+  row-gap: 10px;
+  justify-content: space-between;
 }
 
 .hrow {
   display: flex;
+  padding: 7px 10px 7px 10px;
   justify-content: space-between;
-  /* border: 1px solid red;*/
 }
