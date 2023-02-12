@@ -115,6 +115,14 @@ span.show {
   display: inline;
 }
 
+div.tran {
+  display: block;
+}
+
+div.ntran {
+  display: none;
+}
+
 .hide {
   display: none;
 }
@@ -136,7 +144,7 @@ span.show {
 .col {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+
   justify-content: space-between;
 }
 

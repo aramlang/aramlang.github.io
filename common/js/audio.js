@@ -21,6 +21,7 @@ function setupAudio(
 
   const fontFamily = document.getElementById('font-family');
   const zawae = document.getElementById('zawae');
+  const transliterate = document.getElementById('transliterate');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
@@ -411,15 +412,21 @@ function setupAudio(
     event.stopImmediatePropagation();
     const shows = document.querySelectorAll('.show');
     const hides = document.querySelectorAll('.hide');
-    shows.forEach(elem => {
-      elem.classList.remove('show');
-      elem.classList.add('hide');
-    });
-    hides.forEach(elem => {
-      elem.classList.remove('hide');
-      elem.classList.add('show');
-    });
-  }), (passiveSupported ? { passive: true } : false)
+    shows.forEach(elem => elem.classList.replace('show', 'hide'));
+    hides.forEach(elem => elem.classList.replace('hide', 'show'));
+  }), (passiveSupported ? { passive: true } : false);
+
+  transliterate && transliterate.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    if (transliterate.checked) {
+      document.querySelectorAll('.ntran').forEach(
+        ntran => ntran.classList.replace('ntran', 'tran'));
+    }
+    else {
+      document.querySelectorAll('.tran').forEach(
+        tran => tran.classList.replace('tran', 'ntran'));
+    }
+  }, (passiveSupported ? { passive: true } : false));
 
   function setupLoop() {
     for (let i = 1; i <= maxVerse; i++) {
