@@ -48,59 +48,42 @@ div.highlight {
   text-decoration-line: underline;
 }
 
-.heb.cln::after {
-  content: '׃'
-}
-
-.heb.cmm::after {
-  content: ','
-}
-
-.heb.ncmm::after {
-  visibility: hidden;
-  content: ','
-}
-
-.dot::after {
-  content: '.'
+.heb {
+  font-family: 'David';
+  font-size: 160%;
+  direction: rtl;
+  text-align: right;
 }
 
 .rashi {
   font-family: 'Noto Rashi Hebrew';
-  direction: rtl;
-  text-align: right;
   font-size: x-large;
-}
-
-.heb {
-  font-family: 'David';
   direction: rtl;
   text-align: right;
-  font-size: 165%;
 }
 
 .no {
+  line-height: 0.7;
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
+.ivn {
   font-family: 'David';
-  direction: rtl;
-  text-align: right;
-  font-size: 165%;
-  font-weight: bold;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.enn {
+  font-size: 80%;
+  padding: 0;
+  margin: 0;
 }
 
 .eng {
-  text-align: right;
+  direction: ltr;
   color: blue
-}
-
-.vno {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  text-align: right;
-  font-weight: bold;
-}
-
-.book {
-  font-size: larger;
-  font-weight: bold;
 }
 
 .bold {
@@ -117,10 +100,12 @@ span.show {
 
 div.tran {
   display: block;
+  direction: ltr;
 }
 
 div.ntran {
   display: none;
+  direction: ltr;
 }
 
 .hide {
@@ -135,16 +120,17 @@ div.ntran {
 }
 
 .row {
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 8px;
   direction: rtl;
+  text-align: right;
 }
 
 .col {
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
 }
 
