@@ -1,8 +1,6 @@
 'use strict';
 
 function setupAudio(
-  maxVerse,   // number of verses in this chapter
-  maxChapter, // number of chapters in this book
   suffixes,   // list of id suffixes to highlight in page,
   book,       // current book name
   chapter     // current chapter
@@ -27,6 +25,7 @@ function setupAudio(
   const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
   const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
+
   let highlighted = [];            // highlighted elements
   let passiveSupported = false;    // let setPassiveSupported detect if true
   let startTime = startAdjustment; // current loop start time
@@ -36,6 +35,9 @@ function setupAudio(
     console.error('Could not find required page element');
     return;
   }
+
+  const maxVerse = startVerse.options.length;     // number of verses in this chapter
+  const maxChapter = startChapter.options.length; // number of chapters in this book
 
   function setPassiveSupported() {
     try {
@@ -396,7 +398,7 @@ function setupAudio(
   fontFamily && fontFamily.addEventListener('change', function (event) {
     event.stopImmediatePropagation();
     let newFont = fontFamily.value;
-    var options = fontFamily.children;
+    var options = fontFamily.otions;
     for (let i = 0; i < options.length; i++) {
       let oldFont = options[i].value;
       if (oldFont == newFont) {
@@ -429,20 +431,6 @@ function setupAudio(
   }, (passiveSupported ? { passive: true } : false));
 
   function setupLoop() {
-    for (let i = 1; i <= maxVerse; i++) {
-      let opt = document.createElement('option');
-      opt.value = i;
-      opt.innerHTML = i;
-      startVerse.appendChild(opt);
-
-      opt = document.createElement('option');
-      opt.value = i;
-      opt.innerHTML = i;
-      endVerse.appendChild(opt);
-    }
-
-    endVerse.value = maxVerse;
-
     startVerse.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
       const start = parseInt(startVerse.value);
@@ -493,23 +481,11 @@ function setupAudio(
   }
 
   function setupChapterLoop() {
-    for (let i = 1; i <= maxChapter; i++) {
-      let opt = document.createElement('option');
-      opt.value = i;
-      opt.innerHTML = i;
-      startChapter.appendChild(opt);
-
-      opt = document.createElement('option');
-      opt.value = i;
-      opt.innerHTML = i;
-      endChapter.appendChild(opt);
-    }
-
-    let startValue = 1;
-    let endValue = maxChapter;
-
     let hash = window.location.hash;
     if (hash && hash.startsWith(hashPrefix)) {
+      let startValue = 1;
+      let endValue = maxChapter;
+  
       hash = hash.replace(hashPrefix, '');
       const split = hash.split('-');
       const start = parseInt(split[0]);
@@ -523,13 +499,13 @@ function setupAudio(
         endValue = end;
       }
 
+      startChapter.value = startValue;
+      endChapter.value = endValue;
+  
       loop.checked = false;
       chapterLoop.checked = true;
       play();
     }
-
-    startChapter.value = startValue;
-    endChapter.value = endValue;
 
     startChapter.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
