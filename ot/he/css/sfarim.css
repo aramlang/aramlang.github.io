@@ -101,6 +101,11 @@ span.show {
 div.tran {
   display: block;
   direction: ltr;
+  text-align: right;
+}
+
+div.parsh {
+  text-align: center;
 }
 
 div.ntran {
