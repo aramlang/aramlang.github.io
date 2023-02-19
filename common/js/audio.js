@@ -398,7 +398,7 @@ function setupAudio(
   fontFamily && fontFamily.addEventListener('change', function (event) {
     event.stopImmediatePropagation();
     let newFont = fontFamily.value;
-    var options = fontFamily.otions;
+    var options = fontFamily.options;
     for (let i = 0; i < options.length; i++) {
       let oldFont = options[i].value;
       if (oldFont == newFont) {
