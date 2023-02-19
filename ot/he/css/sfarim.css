@@ -55,6 +55,13 @@ div.highlight {
   text-align: right;
 }
 
+.heb-larger {
+  font-family: 'David';
+  direction: rtl;
+  font-size: larger;
+  text-align: right;
+}
+
 .rashi {
   font-family: 'Noto Rashi Hebrew';
   font-size: x-large;
