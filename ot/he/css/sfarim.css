@@ -15,16 +15,28 @@ span.label {
   white-space: nowrap;
 }
 
-.xlarger {
+.x/*-large*/ 
+{
   font-size: x-large;
 }
 
-.larger {
+.la/*rger*/ {
   font-size: larger;
 }
 
-.large {
+.l/*arge*/ {
   font-size: large;
+}
+
+.t/*ext*/
+{
+  font-size: 160%;
+}
+
+.r/*egular*/ {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 div.highlight {
@@ -50,21 +62,12 @@ div.highlight {
 
 .heb {
   font-family: 'David';
-  font-size: 160%;
   direction: rtl;
-  text-align: right;
-}
-
-.heb-larger {
-  font-family: 'David';
-  direction: rtl;
-  font-size: larger;
   text-align: right;
 }
 
 .rashi {
   font-family: 'Noto Rashi Hebrew';
-  font-size: x-large;
   direction: rtl;
   text-align: right;
 }
@@ -72,13 +75,6 @@ div.highlight {
 .no {
   line-height: 0.7;
   padding: 5px 0 0 0;
-  margin: 0;
-}
-
-.ivn {
-  font-family: 'David';
-  font-size: 100%;
-  padding: 0;
   margin: 0;
 }
 
