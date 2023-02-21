@@ -142,9 +142,23 @@ div.ntran {
   justify-content: space-between;
 }
 
+.vcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+
 .hrow {
   display: flex;
   justify-content: space-between;
+}
+
+.vrow {
+  display: flex;
+  flex-direction: column;
+}
+
+header>div.vrow {
   padding: 7px 10px 7px 10px;
-  justify-content: space-between;
 }

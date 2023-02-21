@@ -20,6 +20,7 @@ function setupAudio(
   const fontFamily = document.getElementById('font-family');
   const zawae = document.getElementById('zawae');
   const transliterate = document.getElementById('transliterate');
+  const speed = document.getElementById('speed');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
@@ -28,6 +29,7 @@ function setupAudio(
 
   let highlighted = [];            // highlighted elements
   let passiveSupported = false;    // let setPassiveSupported detect if true
+  let changedFromSpeed = false;    // flag to prevent event circular running
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
 
@@ -272,6 +274,28 @@ function setupAudio(
     // console.log('ratechange')
     event.stopImmediatePropagation();
     startTimer();
+    if (!speed) { return; }
+    
+    if (changedFromSpeed) { // avoid circular event invocation
+      changedFromSpeed = false;
+      return;
+    }
+
+    let rate = audio.playbackRate;
+    let checked = document.querySelector('input[name="speed"]:checked');
+    if (rate != 0.25 && rate != 0.5 && rate != 0.75 && rate != 1 && checked) {
+      checked.checked = false;
+    }
+
+    let toCheck = document.getElementById('speed-' + rate.toString());
+    if (!toCheck) {
+      return;
+    }
+
+    let speedRate = parseFloat(toCheck.value);
+    if (speedRate != rate || !toCheck.checked) {
+      toCheck.checked = true;
+    }
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ended', function (event) {
@@ -430,6 +454,20 @@ function setupAudio(
     }
   }, (passiveSupported ? { passive: true } : false));
 
+  speed && speed.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    let target = event.target;
+    if (!target || !target.id || !target.id.startsWith('speed') || !target.checked) {
+      return;
+    }
+
+    changedFromSpeed = true;
+    let rate = parseFloat(target.value);
+    if (isFinite(audio.duration) && isFinite(rate)) {
+      audio.playbackRate = rate;
+    }
+  }, (passiveSupported ? { passive: true } : false));
+
   function setupLoop() {
     startVerse.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
@@ -485,7 +523,7 @@ function setupAudio(
     if (hash && hash.startsWith(hashPrefix)) {
       let startValue = 1;
       let endValue = maxChapter;
-  
+
       hash = hash.replace(hashPrefix, '');
       const split = hash.split('-');
       const start = parseInt(split[0]);
@@ -501,7 +539,7 @@ function setupAudio(
 
       startChapter.value = startValue;
       endChapter.value = endValue;
-  
+
       loop.checked = false;
       chapterLoop.checked = true;
       play();
