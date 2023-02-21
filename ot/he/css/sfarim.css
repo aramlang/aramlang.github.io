@@ -15,25 +15,28 @@ span.label {
   white-space: nowrap;
 }
 
-.x/*-large*/ 
-{
+/* x-large */
+.x {
   font-size: x-large;
 }
 
-.la/*rger*/ {
+/* larger */
+.la {
   font-size: larger;
 }
 
-.l/*arge*/ {
+/* large */
+.l {
   font-size: large;
 }
 
-.t/*ext*/
-{
+/* text */
+.t {
   font-size: 160%;
 }
 
-.r/*egular*/ {
+/* regular */
+.r {
   font-size: 100%;
   padding: 0;
   margin: 0;
@@ -152,6 +155,7 @@ div.ntran {
 .hrow {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .vrow {
