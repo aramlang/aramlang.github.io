@@ -275,7 +275,7 @@ function setupAudio(
     event.stopImmediatePropagation();
     startTimer();
     if (!speed) { return; }
-    
+
     if (changedFromSpeed) { // avoid circular event invocation
       changedFromSpeed = false;
       return;
@@ -565,7 +565,33 @@ function setupAudio(
 
   // #endregion
 
+  function includes(str, search) {
+    return str.indexOf(search) != -1;
+  }
+
+  function fixAudioSrc() {
+    if (!includes(window.location.hostname, 'github')) {
+      return;
+    }
+    const aacSrc = document.getElementById('m4a-src');
+    const mp3Src = document.getElementById('mp3-src');
+    let src, path = window.location.pathname;
+    if (path.endsWith('.html')) {
+      path = path.substring(0, path.lastIndexOf('/') + 1)
+    }
+    const lfs = 'https://media.githubusercontent.com/media/aramlang/aramlang.github.io/main';
+    if (aacSrc && aacSrc.src) {
+      src = aacSrc.src.substring(aacSrc.src.indexOf(path))
+      aacSrc.src = `${lfs}${src}`;
+    }
+    if (mp3Src && mp3Src.src) {
+      src = mp3Src.src.substring(mp3Src.src.indexOf(path))
+      mp3Src.src = `${lfs}${src}`;
+    }
+  }
+
   setupLoop();
   setupChapterLoop();
+  fixAudioSrc();
   audio.loop && (audio.loop = false); // looping handled via events
 }
