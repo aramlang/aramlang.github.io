@@ -593,5 +593,6 @@ function setupAudio(
   setupLoop();
   setupChapterLoop();
   fixAudioSrc();
+  (audio.preload == 'none') && audio.load();
   audio.loop && (audio.loop = false); // looping handled via events
 }
