@@ -203,8 +203,12 @@ function setupAudio(
 
         highlighted.push(elem);
         elem.classList.add('highlight');
-        if (isFirst && !audio.seeking && !audio.paused && !isInViewport(elem)) {
-          elem.scrollIntoView();
+        if (!audio.seeking && !audio.paused && !isInViewport(elem)) {
+          elem.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest"
+          });
         }
       }
     }

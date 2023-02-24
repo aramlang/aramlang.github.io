@@ -11,6 +11,9 @@ table {
 
 header {
   background-color: #C5E3E1;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 8px;
 }
 
 span.label {

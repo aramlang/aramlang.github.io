@@ -4,7 +4,9 @@ body {
 
 header {
   background-color: #E6F3F2;
-  margin-top: 10px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 8px;
 }
 
 a {
