@@ -203,7 +203,7 @@ function setupAudio(
 
         highlighted.push(elem);
         elem.classList.add('highlight');
-        if (!audio.seeking && !audio.paused && !isInViewport(elem)) {
+        if (isFirst && !audio.seeking && !audio.paused && !isInViewport(elem)) {
           elem.scrollIntoView({
             behavior: "smooth",
             block: "center",
