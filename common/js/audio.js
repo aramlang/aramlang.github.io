@@ -192,6 +192,10 @@ function setupAudio(
         let suffix = suffixes[i];
         let eid = suffix ? (id + suffix) : id;
         let elem = document.getElementById(eid);
+        
+        if (!elem) {
+          continue;
+        }
 
         highlighted.push(elem);
         elem.classList.add('highlight');
