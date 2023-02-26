@@ -131,11 +131,6 @@ function setupAudio(
     return '1' == word;
   }
 
-  function isHidden(elem) {
-    return !elem || !elem.parentNode ||
-      elem.parentNode.classList.contains('hide-row');
-  }
-
   function isSet(variable) {
     return typeof variable != "undefined";
   }
@@ -197,9 +192,6 @@ function setupAudio(
         let suffix = suffixes[i];
         let eid = suffix ? (id + suffix) : id;
         let elem = document.getElementById(eid);
-        if (isHidden(elem)) {
-          continue;
-        }
 
         highlighted.push(elem);
         elem.classList.add('highlight');
