@@ -4,7 +4,8 @@ body {
 
 header {
   background-color: #E6F3F2;
-  position: -webkit-sticky; /* Safari */
+    /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 8px;
 }
@@ -57,7 +58,6 @@ div.highlight {
 }
 
 .chapter {
-  font-size: larger;
   font-weight: bolder;
 }
 
@@ -66,7 +66,7 @@ div.highlight {
 }
 
 .heb {
-  font-family: 'David';
+  font-family: David, 'Taamey D Web';
   direction: rtl;
   text-align: right;
 }
@@ -96,6 +96,10 @@ div.highlight {
 
 .bold {
   font-weight: bold;
+}
+
+.right {
+  text-align: right;
 }
 
 div.show {
@@ -129,7 +133,7 @@ div.ntran {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
-  row-gap: 10px;
+  row-gap: 5px;
 }
 
 .row {
@@ -166,5 +170,5 @@ div.ntran {
 }
 
 header>div.vrow {
-  padding: 7px 10px 7px 10px;
+  padding: 0 10px 7px 10px;
 }

@@ -30,3 +30,12 @@
   font-family: 'Noto Rashi Hebrew';
   src: url('NotoRashiHebrew-VariableFont_wght.ttf');
 }
+
+@font-face {    
+  font-family: 'Taamey D Web';
+  src: url('Taamey_D.woff2') format('woff2'),
+    url('Taamey_D.woff') format('woff') ;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

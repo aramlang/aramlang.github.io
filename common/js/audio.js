@@ -1,5 +1,24 @@
 'use strict';
 
+function getPassiveSupported() {
+  let passiveSupported = false;
+  try {
+    const options = {
+      // This function will be called when the browser attempts to access the passive property.
+      get passive() {
+        passiveSupported = true;
+        return false;
+      }
+    };
+
+    window.addEventListener("test", null, options);
+    window.removeEventListener("test", null, options);
+  } catch (err) {
+    passiveSupported = false;
+  }
+  return passiveSupported;
+}
+
 function setupAudio(
   suffixes,   // list of id suffixes to highlight in page,
   book,       // current book name
@@ -18,7 +37,6 @@ function setupAudio(
   const endChapter = document.getElementById('end-chapter');
 
   const fontFamily = document.getElementById('font-family');
-  const zawae = document.getElementById('zawae');
   const transliterate = document.getElementById('transliterate');
   const speed = document.getElementById('speed');
 
@@ -28,7 +46,6 @@ function setupAudio(
   const cues = {};                 // cue dtos
 
   let highlighted = [];            // highlighted elements
-  let passiveSupported = false;    // let setPassiveSupported detect if true
   let changedFromSpeed = false;    // flag to prevent event circular running
   let startTime = startAdjustment; // current loop start time
   let endTime;                     // current loop end time
@@ -40,23 +57,7 @@ function setupAudio(
 
   const maxVerse = startVerse.options.length;     // number of verses in this chapter
   const maxChapter = startChapter.options.length; // number of chapters in this book
-
-  function setPassiveSupported() {
-    try {
-      const options = {
-        get passive() { // This function will be called when the browser attempts to access the passive property.
-          passiveSupported = true;
-          return false;
-        }
-      };
-
-      window.addEventListener("test", null, options);
-      window.removeEventListener("test", null, options);
-    } catch (err) {
-      passiveSupported = false;
-    }
-  }
-  setPassiveSupported();
+  const passiveSupported = getPassiveSupported(); // let getPassiveSupported detect if true
 
   // #endregion
 
@@ -404,7 +405,7 @@ function setupAudio(
     else {
       clearTimer();
     }
-  }), (passiveSupported ? { passive: true } : false)
+  }, (passiveSupported ? { passive: true } : false));
 
   chapterLoop.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
@@ -433,14 +434,6 @@ function setupAudio(
       );
     }
   }, (passiveSupported ? { passive: true } : false));
-
-  zawae && zawae.addEventListener('click', function (event) {
-    event.stopImmediatePropagation();
-    const shows = document.querySelectorAll('.show');
-    const hides = document.querySelectorAll('.hide');
-    shows.forEach(elem => elem.classList.replace('show', 'hide'));
-    hides.forEach(elem => elem.classList.replace('hide', 'show'));
-  }), (passiveSupported ? { passive: true } : false);
 
   transliterate && transliterate.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
