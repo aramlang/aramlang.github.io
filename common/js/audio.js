@@ -37,7 +37,6 @@ function setupAudio(
   const endChapter = document.getElementById('end-chapter');
 
   const fontFamily = document.getElementById('font-family');
-  const transliterate = document.getElementById('transliterate');
   const speed = document.getElementById('speed');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
@@ -432,18 +431,6 @@ function setupAudio(
       document.querySelectorAll(`.${oldFont}`).forEach(
         element => element.classList.replace(oldFont, newFont)
       );
-    }
-  }, (passiveSupported ? { passive: true } : false));
-
-  transliterate && transliterate.addEventListener('click', function (event) {
-    event.stopImmediatePropagation();
-    if (transliterate.checked) {
-      document.querySelectorAll('.ntran').forEach(
-        ntran => ntran.classList.replace('ntran', 'tran'));
-    }
-    else {
-      document.querySelectorAll('.tran').forEach(
-        tran => tran.classList.replace('tran', 'ntran'));
     }
   }, (passiveSupported ? { passive: true } : false));
 

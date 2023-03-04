@@ -1,13 +1,33 @@
+html,
+body,
+div,
+label {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 header {
   background-color: #E6F3F2;
-    /* Safari */
+  /* Safari */
   position: -webkit-sticky;
   position: sticky;
-  top: 8px;
+  top: 5px;
+}
+
+header>div.vrow {
+  padding: 0 10px 7px 10px;
+}
+
+main {
+  padding: 0 10px 7px 10px;
+}
+
+main.clickable div[id] {
+  cursor: pointer;
 }
 
 a {
@@ -53,16 +73,8 @@ div.highlight {
   text-align: center;
 }
 
-.clickable div[id] {
-  cursor: pointer;
-}
-
 .chapter {
   font-weight: bolder;
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .heb {
@@ -78,7 +90,7 @@ div.highlight {
 }
 
 .no {
-  line-height: 0.7;
+  line-height: 0.5;
   padding: 7px 0 0 0;
   margin: 0;
 }
@@ -133,29 +145,15 @@ div.ntran {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
-  row-gap: 5px;
 }
 
 .row {
   margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 8px;
+  column-gap: 10px;
   direction: rtl;
   text-align: right;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.vcol {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-content: flex-end;
 }
 
 .hrow {
@@ -169,6 +167,16 @@ div.ntran {
   flex-direction: column;
 }
 
-header>div.vrow {
-  padding: 0 10px 7px 10px;
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: flex-end;
 }

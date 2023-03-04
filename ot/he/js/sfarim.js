@@ -2,10 +2,11 @@
 
 (function () {
   const niqqud = document.getElementById('niqqud');
+  const transliterate = document.getElementById('transliterate');
   const passiveSupported = window.getPassiveSupported();
 
-  if (!niqqud) {
-    console.error('Could not find required niqqud element');
+  if (!niqqud || !transliterate) {
+    console.error('Could not find required page element');
     return;
   }
 
@@ -31,4 +32,16 @@
     hides.forEach(elem => elem.classList.replace('hide', 'show'));
   }
   niqqud.addEventListener('change', toggleText, (passiveSupported ? { passive: true } : false));
+
+  transliterate.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    if (transliterate.value == 'academic' || transliterate.value == 'general') {
+      document.querySelectorAll('.ntran').forEach(
+        ntran => ntran.classList.replace('ntran', 'tran'));
+    }
+    else {
+      document.querySelectorAll('.tran').forEach(
+        tran => tran.classList.replace('tran', 'ntran'));
+    }
+  }, (passiveSupported ? { passive: true } : false));
 })();
