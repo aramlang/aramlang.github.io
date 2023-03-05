@@ -192,7 +192,7 @@ function setupAudio(
         let suffix = suffixes[i];
         let eid = suffix ? (id + suffix) : id;
         let elem = document.getElementById(eid);
-        
+
         if (!elem) {
           continue;
         }
@@ -553,7 +553,8 @@ function setupAudio(
     if (!includes(window.location.hostname, 'github')) {
       return;
     }
-    const aacSrc = document.getElementById('m4a-src');
+    const aacSrc = document.getElementById('aac-src');
+    const m4aSrc = document.getElementById('m4a-src');
     const mp3Src = document.getElementById('mp3-src');
     let src, path = window.location.pathname;
     if (path.endsWith('.html')) {
@@ -563,6 +564,10 @@ function setupAudio(
     if (aacSrc && aacSrc.src) {
       src = aacSrc.src.substring(aacSrc.src.indexOf(path))
       aacSrc.src = `${lfs}${src}`;
+    }
+    if (m4aSrc && m4aSrc.src) {
+      src = m4aSrc.src.substring(m4aSrc.src.indexOf(path))
+      m4aSrc.src = `${lfs}${src}`;
     }
     if (mp3Src && mp3Src.src) {
       src = mp3Src.src.substring(mp3Src.src.indexOf(path))
