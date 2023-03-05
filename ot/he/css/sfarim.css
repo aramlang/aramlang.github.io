@@ -162,6 +162,14 @@ div.ntran {
   align-items: flex-end;
 }
 
+.lrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
 .vrow {
   display: flex;
   flex-direction: column;
