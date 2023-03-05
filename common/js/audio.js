@@ -40,8 +40,8 @@ function setupAudio(
   const speed = document.getElementById('speed');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
-  const startAdjustment = 0.010;   // adjustment for start of loop due to low timerupdate frequency
-  const endAdjustment = 0.100;     // adjustment for end of loop due to low timerupdate frequency
+  const startAdjustment = 0.01;    // adjustment for start of loop due to low timerupdate frequency
+  const endAdjustment = 0.01;      // adjustment for end of loop due to low timerupdate frequency
   const cues = {};                 // cue dtos
 
   let highlighted = [];            // highlighted elements
@@ -350,7 +350,7 @@ function setupAudio(
   }
 
   function setAdjustedEndTime(newEndTime) {
-    const loopEnd = newEndTime - endAdjustment;
+    const loopEnd = newEndTime + endAdjustment;
     endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
   }
 

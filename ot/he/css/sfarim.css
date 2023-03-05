@@ -65,7 +65,7 @@ span.label {
   margin: 0;
 }
 
-div.highlight {
+.highlight {
   background-color: #FFFF00;
 }
 
@@ -138,6 +138,14 @@ div.ntran {
 }
 
 .hide {
+  display: none;
+}
+
+span.s {
+  display: inline;
+}
+
+span.h {
   display: none;
 }
 
