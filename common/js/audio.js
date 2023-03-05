@@ -40,8 +40,8 @@ function setupAudio(
   const speed = document.getElementById('speed');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
-  const startAdjustment = 0.01;    // adjustment for start of loop due to low timerupdate frequency
-  const endAdjustment = 0.01;      // adjustment for end of loop due to low timerupdate frequency
+  const startAdjustment = 0.01;    // some start time tolerance
+  const endAdjustment = 0.01;      // some end time tolerance
   const cues = {};                 // cue dtos
 
   let highlighted = [];            // highlighted elements
