@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="sticky">
     <div class="vrow">
       <div class="lrow">
         <div>
@@ -269,12 +269,19 @@
                 </select>
               </span>
             </div>
-          </div>
-          <div title="Select Hebrew font">
-            &nbsp;Font&nbsp;<select id="font-family">
-              <option value="heb">Ashurit</option>
-              <option value="rashi">Rashi</option>
-            </select>
+            <div>
+              &nbsp;<select id="font-family" title="Select Hebrew Font">
+                <option value="heb">Ashurit</option>
+                <option value="rashi">Rashi</option>
+              </select>
+              <label for="font-family" title="Select Hebrew Font">Font</label>
+            </div>
+            <div class="right">
+              <input type="checkbox" id="sticky-header" checked="true" title="Check for header to float">
+            </div>
+            <div>
+              <label for="sticky-header" title="Check for header to float">&nbsp;&nbsp;&nbsp;Sticky</label>
+            </div>
           </div>
         </div>
         <div class="vcol">
@@ -380,8 +387,10 @@
         <div id="1-5v" lang="he" class="heb t show">הַשָּׁמַיִם</div>
         <div id="1-5c" lang="he" class="heb t hide">השמים</div>
         <div id="1-5e" class="eng">the heavens</div>
-        <div id="1-5t" class="ntran">haš<span class="h">·</span>šā<span class="h">·</span>ma<span class="h">·</span>yim</div>
-        <div id="1-5g" class="ntran">hash<span class="h">·</span>sha<span class="h">·</span>Ma<span class="h">·</span>yim</div>
+        <div id="1-5t" class="ntran">haš<span class="h">·</span>šā<span class="h">·</span>ma<span class="h">·</span>yim
+        </div>
+        <div id="1-5g" class="ntran">hash<span class="h">·</span>sha<span class="h">·</span>Ma<span
+            class="h">·</span>yim</div>
       </div>
       <div class="col">
         <div id="1-6a" lang="he" class="heb t hide">וְאֵ֥ת</div>
@@ -397,7 +406,7 @@
         <div id="1-7c" lang="he" class="heb t hide">הארץ׃</div>
         <div id="1-7e" class="eng">the earth</div>
         <div id="1-7t" class="ntran">hā<span class="h">·</span>’ā<span class="h">·</span>reṣ</div>
-        <div id="1-7g" class="ntran">ha<span class="h">·</span>'A<span class="h">·</span>retz.</div>      
+        <div id="1-7g" class="ntran">ha<span class="h">·</span>'A<span class="h">·</span>retz.</div>
       </div>
     </div>
     <div class="row">

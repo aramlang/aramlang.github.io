@@ -12,6 +12,10 @@ body {
 
 header {
   background-color: #E6F3F2;
+  margin-top: 5px;
+}
+
+header.sticky {
   /* Safari */
   position: -webkit-sticky;
   position: sticky;

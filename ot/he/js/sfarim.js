@@ -4,9 +4,10 @@
   const niqqud = document.getElementById('niqqud');
   const transliterate = document.getElementById('transliterate');
   const syllables = document.getElementById('syllables');
+  const stickyHeader = document.getElementById('sticky-header');
   const passiveSupported = window.getPassiveSupported();
 
-  if (!niqqud || !transliterate || !syllables) {
+  if (!niqqud || !transliterate || !syllables || !stickyHeader) {
     console.error('Could not find required page element');
     return;
   }
@@ -61,5 +62,14 @@
     }
     document.querySelectorAll('span.s').forEach(
       s => s.classList.replace('s', 'h'));
+  }, (passiveSupported ? { passive: true } : false));
+
+  stickyHeader.addEventListener('click', function (event) {
+    event.stopImmediatePropagation();
+    if (stickyHeader.checked) {
+      document.getElementsByTagName('header')[0].classList.add('sticky');
+    } else {
+      document.getElementsByTagName('header')[0].classList.remove('sticky');
+    }
   }, (passiveSupported ? { passive: true } : false));
 })();
