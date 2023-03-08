@@ -38,6 +38,7 @@ function setupAudio(
 
   const fontFamily = document.getElementById('font-family');
   const speed = document.getElementById('speed');
+  const gotoChapter = document.getElementById('goto-chapter');
 
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.005;   // some start time tolerance
@@ -446,6 +447,19 @@ function setupAudio(
     if (isFinite(audio.duration) && isFinite(rate)) {
       audio.playbackRate = rate;
     }
+  }, (passiveSupported ? { passive: true } : false));
+
+  gotoChapter && gotoChapter.addEventListener('change', function (event) {
+    event.stopImmediatePropagation();
+    if (gotoChapter.value == chapter) {
+      return;
+    }
+
+    var navChapter = gotoChapter.value;
+    gotoChapter.value = chapter;
+    const padChapter = `${navChapter}`.padStart(2, "0");
+    const page = `${book}${padChapter}.html`;
+    window.location.href = page;
   }, (passiveSupported ? { passive: true } : false));
 
   function setupLoop() {
