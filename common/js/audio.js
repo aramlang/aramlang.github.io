@@ -90,10 +90,12 @@ function setupAudio(
     }
 
     function startPause(wordLength) {
-      const timeout = (wordLength * 1000) / audio.playbackRate;
       clearTimer();
       pause();
-      window.setTimeout(play, timeout); // TODO take into account looping
+
+       // TODO take into account looping
+      const timeout = (wordLength * 1000 * getWordPause()) / audio.playbackRate;
+      window.setTimeout(play, timeout);
     }
 
     return [start, clear, startPause];
@@ -109,6 +111,10 @@ function setupAudio(
     if (!audio.paused) {
       audio.pause();
     }
+  }
+
+  function getWordPause() {
+    return wordPause ? parseFloat(wordPause.value) : 0;
   }
 
   function isInViewport(element) {
@@ -239,19 +245,19 @@ function setupAudio(
       }
     }
 
-    function handlePause(event) {
-      var times = wordPause ? parseFloat(wordPause.value) : 0;
+    function handlePause() {
+      const times = getWordPause();
       if (!times) {
         return;
       }
 
-      const wordLength = vttCue.endTime - vttCue.startTime; 
+      const wordLength = vttCue.endTime - vttCue.startTime;
       startPauseTimer(wordLength);
     }
 
-    // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
+    // vttCue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
-    vttCue.addEventListener('exit', handlePause);
+    vttCue.addEventListener('exit', handlePause); 
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
@@ -292,7 +298,8 @@ function setupAudio(
   audio.addEventListener('playing', function (event) {
     // console.log('playing')
     event.stopImmediatePropagation();
-    if (!loop.checked) {
+    if (!loop.checked || getWordPause()) {
+      clearTimer();
       return;
     }
 
