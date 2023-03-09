@@ -65,7 +65,7 @@ function setupAudio(
 
   // #region Audio
 
-  const [startTimer, clearTimer, startPauseTimer] = (function () {
+  const [startTimer, clearTimer] = (function () {
     let currentTimer;
 
     function clear() {
@@ -77,28 +77,25 @@ function setupAudio(
       currentTimer = null;
     }
 
-    function start() {
+    function start(rewind, pauseFactor, wordLength) {
+      const timeout = (wordLength * pauseFactor * 1000) / audio.playbackRate;
       clearTimer();
-      // 'ended' event handles looping when maxVerse
-      if (!loop.checked || endVerse.value == maxVerse + '' || audio.paused) {
+      if (!timeout && rewind) {
+        seekStart();
         return;
       }
 
-      const isPartial = audio.currentTime > startTime + startAdjustment;
-      const timeout = isPartial ? endTime - audio.currentTime : endTime - startTime;
-      currentTimer = window.setTimeout(seekStart, (timeout * 1000) / audio.playbackRate);
-    }
-
-    function startPause(wordLength) {
-      clearTimer();
+      function handler() {
+        if (rewind) {
+          seekStart();
+        }
+        play();
+      }
       pause();
-
-       // TODO take into account looping
-      const timeout = (wordLength * 1000 * getWordPause()) / audio.playbackRate;
-      window.setTimeout(play, timeout);
+      window.setTimeout(handler, timeout);
     }
 
-    return [start, clear, startPause];
+    return [start, clear];
   })();
 
   function play() {
@@ -140,10 +137,6 @@ function setupAudio(
     return id && id.split('-')[0];
   }
 
-  function getWord(id) {
-    return id && id.split('-')[1];
-  }
-
   function getVerseWord(id) {
     let split;
     return id && (split = id.split('-')).length > 1 ? split : [null, null];
@@ -151,6 +144,11 @@ function setupAudio(
 
   function isFirstWord(word) {
     return '1' == word;
+  }
+
+  function isLastWord(verseId, wordId) {
+    const words = cues[verseId];
+    return words.length == wordId;
   }
 
   function isSet(variable) {
@@ -218,7 +216,8 @@ function setupAudio(
     if (!vttCue || !vttCue.id) { return; }
 
     id = vttCue.id;
-    isFirst = isFirstWord(getWord(id));
+    const [verseId, wordId] = getVerseWord(id);
+    isFirst = isFirstWord(wordId);
     if (isFirst) {
       unhighlight();
     }
@@ -245,19 +244,21 @@ function setupAudio(
       }
     }
 
-    function handlePause() {
-      const times = getWordPause();
-      if (!times) {
-        return;
-      }
-
-      const wordLength = vttCue.endTime - vttCue.startTime;
-      startPauseTimer(wordLength);
+    function exitHandler() {
+      const wordLength = pauseFactor ? vttCue.endTime - vttCue.startTime : 0;
+      startTimer(rewind, pauseFactor, wordLength);
     }
 
     // vttCue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
-    vttCue.addEventListener('exit', handlePause); 
+
+    const rewind = loop.checked &&
+      window.parseInt(endVerse.value) == verseId &&
+      isLastWord(verseId, wordId);
+    const pauseFactor = getWordPause();
+    if (rewind || pauseFactor) {
+      vttCue.addEventListener('exit', exitHandler);
+    }
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
@@ -306,9 +307,6 @@ function setupAudio(
     if (audio.currentTime < startTime || audio.currentTime > endTime) {
       seekStart();
     }
-    else {
-      startTimer();
-    }
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('seeked', function (event) {
@@ -321,7 +319,6 @@ function setupAudio(
   audio.addEventListener('ratechange', function (event) {
     // console.log('ratechange')
     event.stopImmediatePropagation();
-    startTimer();
     if (!speed) { return; }
 
     if (changedFromSpeed) { // avoid circular event invocation
@@ -413,6 +410,7 @@ function setupAudio(
     let verse, word;
     if (!verseId || !wordId || !(verse = cues[verseId]) || !(word = verse[wordId - 1])) { return; }
 
+    clearTimer();
     const verseNo = parseInt(verseId);
     const startNo = parseInt(startVerse.value);
     const endNo = parseInt(endVerse.value);
@@ -495,6 +493,11 @@ function setupAudio(
     window.location.href = page;
   }, (passiveSupported ? { passive: true } : false));
 
+  wordPause && wordPause.addEventListener('change', function (event) {
+    event.stopImmediatePropagation();
+    clearTimer();
+  }, (passiveSupported ? { passive: true } : false));
+
   function setupLoop() {
     startVerse.addEventListener('change', function (event) {
       event.stopImmediatePropagation();
@@ -514,9 +517,6 @@ function setupAudio(
 
       if (audio.currentTime < startTime || audio.currentTime > endTime) {
         seekStart();
-      }
-      else {
-        startTimer();
       }
     }, (passiveSupported ? { passive: true } : false));
 
@@ -538,9 +538,6 @@ function setupAudio(
 
       if (audio.currentTime < startTime || audio.currentTime > endTime) {
         seekStart();
-      }
-      else {
-        startTimer();
       }
     }, (passiveSupported ? { passive: true } : false));
   }
