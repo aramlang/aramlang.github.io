@@ -40,6 +40,7 @@ function setupAudio(
   const speed = document.getElementById('speed');
   const gotoChapter = document.getElementById('goto-chapter');
 
+  const supportedRates = [];       // supported audio speed rates
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.005;   // some start time tolerance
   const endAdjustment = 0.005;     // some end time tolerance
@@ -177,6 +178,20 @@ function setupAudio(
     return true;
   }
 
+  function getClosestRate(newRate) {
+    let closestRate = supportedRates[0];
+    let closestDifference = Math.abs(newRate - closestRate);
+
+    supportedRates.forEach((rate) => {
+      const difference = Math.abs(newRate - rate);
+      if (difference < closestDifference) {
+        closestRate = rate;
+        closestDifference = difference;
+      }
+    });
+    return closestRate;
+  }
+
   audio.textTracks[0].addEventListener('cuechange', function (event) {
     event.stopImmediatePropagation();
     let vttCue = event.target.activeCues[0], id, isFirst;
@@ -282,21 +297,7 @@ function setupAudio(
       return;
     }
 
-    let rate = audio.playbackRate;
-    let checked = document.querySelector('input[name="speed"]:checked');
-    if (rate != 0.25 && rate != 0.5 && rate != 0.75 && rate != 1 && checked) {
-      checked.checked = false;
-    }
-
-    let toCheck = document.getElementById('speed-' + rate.toString());
-    if (!toCheck) {
-      return;
-    }
-
-    let speedRate = parseFloat(toCheck.value);
-    if (speedRate != rate || !toCheck.checked) {
-      toCheck.checked = true;
-    }
+    speed.value = getClosestRate(audio.playbackRate)
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('ended', function (event) {
@@ -435,10 +436,10 @@ function setupAudio(
     }
   }, (passiveSupported ? { passive: true } : false));
 
-  speed && speed.addEventListener('click', function (event) {
+  speed && speed.addEventListener('change', function (event) {
     event.stopImmediatePropagation();
     let target = event.target;
-    if (!target || !target.id || !target.id.startsWith('speed') || !target.checked) {
+    if (!target || !target.id || !target.id.startsWith('speed')) {
       return;
     }
 
@@ -589,9 +590,17 @@ function setupAudio(
     }
   }
 
+  function setSupportedRates() {
+    for (let i = 0; i < speed.options.length; i++) {
+      supportedRates.push(window.parseFloat(speed.options[i].value));
+    }
+  }
+
   setupLoop();
   setupChapterLoop();
   fixAudioSrc();
+  setSupportedRates();
+
   (audio.preload == 'none') && audio.load();
   audio.loop && (audio.loop = false); // looping handled via events
 }

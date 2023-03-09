@@ -175,9 +175,10 @@ span.h {
   justify-content: space-between;
 }
 
-.frow {
+.srow {
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
   padding-top: 2px;
 }

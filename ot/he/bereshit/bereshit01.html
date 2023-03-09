@@ -22,7 +22,7 @@
           </span>
         </div>
         <div>
-          <select id="start-verse" class="right">
+          <select id="start-verse">
             <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -58,7 +58,7 @@
         </div>
         <div>
           <span class="label">
-            &nbsp;-&nbsp;<select id="end-verse" class="right">
+            &nbsp;-&nbsp;<select id="end-verse">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -101,7 +101,7 @@
         </div>
         <div>
           <select id="start-chapter">
-            <option value="1" selected class="right">1</option>
+            <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -155,7 +155,7 @@
         </div>
         <div>
           <span class="label">
-            &nbsp;-&nbsp;<select id="end-chapter" class="right">
+            &nbsp;-&nbsp;<select id="end-chapter">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -210,14 +210,14 @@
           </span>
         </div>
       </div>
-      <div class="frow">
+      <div class="srow">
         <div title="Header will float, if checked">
           <input type="checkbox" id="sticky-header" checked="true">
           <label for="sticky-header">Float Header</label>
         </div>
         <div title="Select Hebrew Script">
           <select id="font-family">
-            <option value="heb">Ktav Ashuri</option>
+            <option value="heb" selected>Ktav Ashuri</option>
             <option value="rashi">Ktav Rashi</option>
           </select>
         </div>
@@ -228,7 +228,7 @@
         <a href="../index.html" title="תנ״ך">TaNaK</a>
         <a href="bereshit50.html" title="Go To Chapter 50">&lt;&nbsp;Prev</a>
         <span class="label" title="Navigate to selected chapter">
-          &nbsp;&nbsp;<select id="goto-chapter" class="right">
+          &nbsp;&nbsp;<select id="goto-chapter">
             <option value="1" title="Chapter: 1" selected>1</option>
             <option value="2" title="Go To Chapter 2">2</option>
             <option value="3" title="Go To Chapter 3">3</option>
@@ -291,15 +291,35 @@
           Your browser does not support the audio tag!
         </audio>
       </div>
-      <div class="center smaller" id="speed"><span title="Select Playback Speed">Speed</span>
-        <input type="radio" id="speed-0.25" name="speed" value="0.25" title="Slowest speed">
-        <label for="speed-0.25" title="Slowest speed">0.25</label>
-        <input type="radio" id="speed-0.5" name="speed" value="0.5" title="Slow speed">
-        <label for="speed-0.5" title="Slow speed">0.5</label>
-        <input type="radio" id="speed-0.75" name="speed" value="0.75" title="Slower speed">
-        <label for="speed-0.75" title="Slower speed">0.75</label>
-        <input type="radio" id="speed-1" name="speed" value="1" checked title="Normal speed">
-        <label for="speed-1" title="Normal speed">1</label>
+      <div class="srow smaller">
+        <div title="Not functional yet! Select amount of time to pause after each word">
+          <span class="label">
+            <label for="word-pause">Word Pause</label>
+            <select id="word-pause" disabled="true">
+              <option value="0" selected title="No pause after word">None</option>
+              <option value="2" title="Pause 2 &times; Word duration">2.00&times;</option>
+              <option value="1.5" title="Pause 1.5 &times; Word duration">1.50&times;</option>
+              <option value="1.25" title="Pause 1.25 &times; Word duration">1.25&times;</option>
+              <option value="1" title="Pause length same as Word duration">1.00&times;</option>
+              <option value="0.75" title="Pause 0.75 &times; Word duration">0.75&times;</option>
+            </select>
+          </span>
+        </div>
+        <div title="Select Playback Speed">
+          <span class="label">
+            <label for="speed">Speed</label>
+            <select id="speed">
+              <option value="0.25" title="Slowest speed">0.25&times;</option>
+              <option value="0.5" title="Slow speed">0.50&times;</option>
+              <option value="0.75" title="Slower speed">0.75&times;</option>
+              <option value="1" id="speed-1" selected title="Normal speed">Normal</option>
+              <option value="1.25" id="speed-1.25" title="Faster speed">1.25&times;</option>
+              <option value="1.5" id="speed-1.5" title="Fast speed">1.50&times;</option>
+              <option value="1.75" id="speed-1.75" title="Very Fast speed">1.75&times;</option>
+              <option value="2" id="speed-2" title="Fastest speed">2.00&times;</option>
+            </select>
+          </span>
+        </div>
       </div>
     </div>
     <div class="hcol">
@@ -312,7 +332,7 @@
         <span class="label">
           <label for="niqqud" title="נִקּוּד">Niqqud</label>
           <select id="niqqud">
-            <option value="vowels">Vowels</option>
+            <option value="vowels" selected>Vowels</option>
             <option value="cantillation">Accents</option>
             <option value="consonants">None</option>
           </select>
@@ -322,7 +342,7 @@
         <span class="label">
           <label for="transliterate" title="תַּעֲתִּיק">Translit</label>
           <select id="transliterate">
-            <option value="none">None</option>
+            <option value="none" selected>None</option>
             <option value="general">Phonetic</option>
             <option value="academic">Precise</option>
           </select>
