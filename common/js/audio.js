@@ -39,6 +39,7 @@ function setupAudio(
   const fontFamily = document.getElementById('font-family');
   const speed = document.getElementById('speed');
   const gotoChapter = document.getElementById('goto-chapter');
+  const wordPause = document.getElementById('word-pause');
 
   const supportedRates = [];       // supported audio speed rates
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
@@ -64,7 +65,7 @@ function setupAudio(
 
   // #region Audio
 
-  const [startTimer, clearTimer] = (function () {
+  const [startTimer, clearTimer, startPauseTimer] = (function () {
     let currentTimer;
 
     function clear() {
@@ -88,12 +89,25 @@ function setupAudio(
       currentTimer = window.setTimeout(seekStart, (timeout * 1000) / audio.playbackRate);
     }
 
-    return [start, clear];
+    function startPause(wordLength) {
+      const timeout = (wordLength * 1000) / audio.playbackRate;
+      clearTimer();
+      pause();
+      window.setTimeout(play, timeout); // TODO take into account looping
+    }
+
+    return [start, clear, startPause];
   })();
 
   function play() {
     if (audio.paused) {
       audio.play();
+    }
+  }
+
+  function pause() {
+    if (!audio.paused) {
+      audio.pause();
     }
   }
 
@@ -225,8 +239,19 @@ function setupAudio(
       }
     }
 
+    function handlePause(event) {
+      var times = wordPause ? parseFloat(wordPause.value) : 0;
+      if (!times) {
+        return;
+      }
+
+      const wordLength = vttCue.endTime - vttCue.startTime; 
+      startPauseTimer(wordLength);
+    }
+
     // cue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
+    vttCue.addEventListener('exit', handlePause);
   }, (passiveSupported ? { passive: true } : false));
 
   audio.addEventListener('loadedmetadata', function (event) {
