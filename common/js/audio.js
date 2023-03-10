@@ -77,22 +77,13 @@ function setupAudio(
       currentTimer = null;
     }
 
-    function start(rewind, pauseFactor, wordLength) {
-      const timeout = (wordLength * pauseFactor * 1000) / audio.playbackRate;
+    function start(vttCue, rewind, pauseFactor) {
       clearTimer();
-      if (!timeout && rewind) {
-        seekStart();
-        return;
+      const wordLength = vttCue.endTime - vttCue.startTime;
+      if (rewind) {
+        const timeout = (wordLength * 1000) / audio.playbackRate;
+        window.setTimeout(seekStart, timeout);
       }
-
-      function handler() {
-        if (rewind) {
-          seekStart();
-        }
-        play();
-      }
-      pause();
-      window.setTimeout(handler, timeout);
     }
 
     return [start, clear];
@@ -189,11 +180,11 @@ function setupAudio(
     const end = parseInt(endChapter.value);
     if (start == end == chapter) {
       play();
+      return;
     }
 
     const next = (chapter < end ? (chapter + 1) : start) + '';
     window.location.href = `${book}${next}.html${hashPrefix}${start}-${end}`;
-    return true;
   }
 
   function getClosestRate(newRate) {
@@ -244,12 +235,6 @@ function setupAudio(
       }
     }
 
-    function exitHandler() {
-      const wordLength = pauseFactor ? vttCue.endTime - vttCue.startTime : 0;
-      startTimer(rewind, pauseFactor, wordLength);
-    }
-
-    // vttCue.addEventListener('enter', highlight); seems to be called only for captions/subtitles with videos
     highlight();
 
     const rewind = loop.checked &&
@@ -257,7 +242,7 @@ function setupAudio(
       isLastWord(verseId, wordId);
     const pauseFactor = getWordPause();
     if (rewind || pauseFactor) {
-      vttCue.addEventListener('exit', exitHandler);
+      startTimer(vttCue, rewind, pauseFactor);
     }
   }, (passiveSupported ? { passive: true } : false));
 
@@ -333,9 +318,7 @@ function setupAudio(
     // console.log('ended')
     event.stopImmediatePropagation();
     unhighlight();
-    if (loop.checked) {
-      play();
-    } else if (chapterLoop.checked) {
+    if (chapterLoop.checked) {
       nextChapter();
     }
   }, (passiveSupported ? { passive: true } : false));
