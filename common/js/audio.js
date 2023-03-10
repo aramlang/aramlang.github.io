@@ -39,7 +39,7 @@ function setupAudio(
   const fontFamily = document.getElementById('font-family');
   const speed = document.getElementById('speed');
   const gotoChapter = document.getElementById('goto-chapter');
-  const wordPause = document.getElementById('word-pause');
+  const audioReset = document.getElementById('audio-reset');
 
   const supportedRates = [];       // supported audio speed rates
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
@@ -77,13 +77,10 @@ function setupAudio(
       currentTimer = null;
     }
 
-    function start(vttCue, rewind, pauseFactor) {
+    function start(vttCue) {
       clearTimer();
-      const wordLength = vttCue.endTime - vttCue.startTime;
-      if (rewind) {
-        const timeout = (wordLength * 1000) / audio.playbackRate;
-        window.setTimeout(seekStart, timeout);
-      }
+      const timeout = (vttCue.endTime - vttCue.startTime) * 1000 / audio.playbackRate;
+      currentTimer = window.setTimeout(seekStart, timeout);
     }
 
     return [start, clear];
@@ -99,10 +96,6 @@ function setupAudio(
     if (!audio.paused) {
       audio.pause();
     }
-  }
-
-  function getWordPause() {
-    return wordPause ? parseFloat(wordPause.value) : 0;
   }
 
   function isInViewport(element) {
@@ -240,9 +233,9 @@ function setupAudio(
     const rewind = loop.checked &&
       window.parseInt(endVerse.value) == verseId &&
       isLastWord(verseId, wordId);
-    const pauseFactor = getWordPause();
-    if (rewind || pauseFactor) {
-      startTimer(vttCue, rewind, pauseFactor);
+
+    if (verseId && verseId != '0' && rewind) {
+      startTimer(vttCue);
     }
   }, (passiveSupported ? { passive: true } : false));
 
@@ -284,7 +277,7 @@ function setupAudio(
   audio.addEventListener('playing', function (event) {
     // console.log('playing')
     event.stopImmediatePropagation();
-    if (!loop.checked || getWordPause()) {
+    if (!loop.checked) {
       clearTimer();
       return;
     }
@@ -476,9 +469,9 @@ function setupAudio(
     window.location.href = page;
   }, (passiveSupported ? { passive: true } : false));
 
-  wordPause && wordPause.addEventListener('change', function (event) {
+  audioReset && audioReset.addEventListener('click', function (event) {
     event.stopImmediatePropagation();
-    clearTimer();
+    audio.playbackRate = 1;
   }, (passiveSupported ? { passive: true } : false));
 
   function setupLoop() {
