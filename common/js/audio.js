@@ -92,12 +92,6 @@ function setupAudio(
     }
   }
 
-  function pause() {
-    if (!audio.paused) {
-      audio.pause();
-    }
-  }
-
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
