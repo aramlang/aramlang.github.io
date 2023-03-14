@@ -44,7 +44,6 @@ function setupAudio(
   const supportedRates = [];       // supported audio speed rates
   const hashPrefix = '#ch'         // prefix to prepend to next page hash
   const startAdjustment = 0.005;   // some start time tolerance
-  const endAdjustment = 0.005;     // some end time tolerance
   const cues = {};                 // cue dtos
 
   let highlighted = [];            // highlighted elements
@@ -351,8 +350,7 @@ function setupAudio(
   }
 
   function setAdjustedEndTime(newEndTime) {
-    const loopEnd = newEndTime + endAdjustment;
-    endTime = loopEnd < endAdjustment ? endAdjustment : loopEnd;
+    endTime = newEndTime;
   }
 
   function setStartTimeFromCue() {
