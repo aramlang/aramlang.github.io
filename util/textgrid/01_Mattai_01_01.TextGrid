@@ -1,0 +1,94 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 7.15966
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 7.15966
+		intervals: size = 8
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.70197
+				text = "ܟܬ݂ܵܒ݂ܵܐ"
+			intervals [2]:
+				xmin = 1.70197
+				xmax = 2.80659
+				text = "ܕܝܼܠܝܼܕ݂ܘܼܬܹܗ"
+			intervals [3]:
+				xmin = 2.80659
+				xmax = 3.34217
+				text = "ܕܝܼܫܘܿܥ"
+			intervals [4]:
+				xmin = 3.34217
+				xmax = 4.1857
+				text = "ܡܫܝܼܚܵܐ"
+			intervals [5]:
+				xmin = 4.1857
+				xmax = 4.60746
+				text = "ܒܪܹܗ"
+			intervals [6]:
+				xmin = 4.60746
+				xmax = 5.36974
+				text = "ܕܕ݂ܘܝܼܕ"
+			intervals [7]:
+				xmin = 5.36974
+				xmax = 5.79912
+				text = "ܒܪܹܗ"
+			intervals [8]:
+				xmin = 5.79912
+				xmax = 7.15966
+				text = "ܕܐܲܒ݂ܪܵܗܵܡ"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 7.15966
+		intervals: size = 8
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.70197
+				text = "the book"
+			intervals [2]:
+				xmin = 1.70197
+				xmax = 2.80659
+				text = "of the genealogy"
+			intervals [3]:
+				xmin = 2.80659
+				xmax = 3.34217
+				text = "of Yeshua"
+			intervals [4]:
+				xmin = 3.34217
+				xmax = 4.1857
+				text = "the Messiah"
+			intervals [5]:
+				xmin = 4.1857
+				xmax = 4.60746
+				text = "the son"
+			intervals [6]:
+				xmin = 4.60746
+				xmax = 5.36974
+				text = "of Dawed"
+			intervals [7]:
+				xmin = 5.36974
+				xmax = 5.79912
+				text = "the son"
+			intervals [8]:
+				xmin = 5.79912
+				xmax = 7.15966
+				text = "of Awraham"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 7.15966
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 7.15966
+				text = "ܟܬ݂ܵܒ݂ܵܐ ܕܝܼܠܝܼܕ݂ܘܼܬܹܗ ܕܝܼܫܘܿܥ ܡܫܝܼܚܵܐ ܒܪܹܗ ܕܕ݂ܘܝܼܕ ܒܪܹܗ ܕܐܲܒ݂ܪܵܗܵܡ"
