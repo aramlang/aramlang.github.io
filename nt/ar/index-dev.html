@@ -14,7 +14,7 @@
   </div>
   <header class="sticky hrow">
     <div class="hcol">
-      <div class="bold" title="ܡܲܬܲܝ ܐ">
+      <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
         The Preaching of Mattai
       </div>
       <div class="gridContainer">
@@ -25,7 +25,7 @@
           </span>
         </div>
         <div>
-          <select id="startVerse">
+          <select id="startVerse" title="Start Verse">
             <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -55,7 +55,7 @@
         </div>
         <div>
           <span class="label">
-            &nbsp;-&nbsp;<select id="endVerse">
+            &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -91,7 +91,7 @@
           </span>
         </div>
         <div style="visibility:hidden;">
-          <select id="startChapter">
+          <select id="startChapter" title="Start Chapter">
             <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -124,7 +124,7 @@
         </div>
         <div style="visibility:hidden;">
           <span class="label">
-            &nbsp;-&nbsp;<select id="endChapter">
+            &nbsp;-&nbsp;<select id="endChapter" title="End Chapter">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -162,7 +162,7 @@
           <input type="checkbox" id="stickyHeader" checked="true">
           <label for="stickyHeader">Float Bar</label>
         </div>
-        <div title="Select Font">
+        <div title="Select Text Font">
           <select id="fontFamily">
             <option value="syr">East Assyrian</option>
             <option value="est">Estrangela</option>
@@ -171,7 +171,7 @@
       </div>
     </div>
     <div class="hcol">
-      <div class="center smaller">
+      <div class="center smaller" style="visibility:hidden;">
         <a href="../index.html" title="ܦܸܫܝܼܛܬܵܐ">Peshitta</a>
         <a href="bereshit50.html" title="Go To Chapter 28">&lt;&nbsp;Prev</a>
         <span class="label" title="Navigate to selected chapter">
@@ -245,34 +245,19 @@
       <div class="center">
       </div>
     </div>
-    <div class="hcol">
-      <div lang="syc" class="syr" title="Mattai Chapter 1">
-        <span id="bookAndChapter"></span>
+    <div lang="syc" class="hcol syr">
+      <div class="" title="The preaching of Mattai">
+        <span id="book">&nbsp;ܟܵܪܘܼܙܘܼܬ݂ܵܐ&nbsp;ܕܡܲܬܲܝ</span>
       </div>
-      <div class="right" title="Show/hide vowels and punctuation">
+      <div class="syr" title="Chapter 1">
+        <span id="chapter">&nbsp;ܨܚܵܚܵܐ&nbsp;ܐ</span>
+      </div>
+      <div class="syr">
         <span class="label">
-          <label for="niqqud" title="נִקּוּד">Niqqud</label>
-          <select id="niqqud">
-            <option value="consonants" selected>None</option>
-            <option value="vowels">Vowels</option>
-            <option value="accents">Accents&nbsp;</option>
-          </select>
-        </span>
-      </div>
-      <div class="right" title="Transliterate to latin characters">
-        <span class="label">
-          <label for="transliterate" title="תַּעֲתִּיק">Translit</label>
-          <select id="transliterate">
-            <option value="none" selected>None</option>
-            <option value="phonetic">Phonetic</option>
-            <option value="latin">Precise</option>
-          </select>
-        </span>
-      </div>
-      <div class="right">
-        <span class="label" title="Show syllables">
-          <input type="checkbox" id="syllables" disabled>
-          <label for="syllables" title="הֲבָרוֹת">Show Syllables</label>
+          <label for="zawae" title="Show/hide vowels and punctuation">
+            <span id="zawaeLabel">&nbsp;ܙܵܘܥܹ̈ܐ</span>
+          </label>
+          <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
         </span>
       </div>
     </div>
@@ -281,7 +266,7 @@
     <div class="row">
       <div class="col">
         <div class="no">
-          <a href="#" title="Go Up" lang="syc" class="heb r">א&nbsp;</a><br>
+          <a href="#" title="Go Up" lang="syc" class="syr r">ܐ&nbsp;</a><br>
           <a href="#" title="Go Up" class="enn">1&nbsp;</a>
         </div>
         <div class="tran hide"><a href="#" title="Go Up">&nbsp;&nbsp;</a></div>
@@ -289,37 +274,34 @@
       <div class="col">
         <div id="1-1w" lang="syc" class="syr"></div>
         <div id="1-1i" class="eng"></div>
-        <div id="1-1t" class="tran hide"></div>
       </div>
       <div class="col">
         <div id="1-2w" lang="syc" class="syr"></div>
         <div id="1-2i" class="eng"></div>
-        <div id="1-2t" class="tran hide"></div>
       </div>
       <div class="col">
         <div id="1-3w" lang="syc" class="syr"></div>
         <div id="1-3i" class="eng"></div>
-        <div id="1-3t" class="tran hide"></div>
       </div>
       <div class="col">
         <div id="1-4w" lang="syc" class="syr"></div>
         <div id="1-4i" class="eng"></div>
-        <div id="1-4t" class="tran hide"></div>
       </div>
       <div class="col">
         <div id="1-5w" lang="syc" class="syr"></div>
         <div id="1-5i" class="eng"></div>
-        <div id="1-5t" class="tran hide"></div>
       </div>
       <div class="col">
         <div id="1-6w" lang="syc" class="syr"></div>
         <div id="1-6i" class="eng"></div>
-        <div id="1-6t" class="tran hide"></div>
       </div>
       <div class="col">
         <div id="1-7w" lang="syc" class="syr"></div>
         <div id="1-7i" class="eng"></div>
-        <div id="1-7t" class="tran hide"></div>
+      </div>
+      <div class="col">
+        <div id="1-8w" lang="syc" class="syr"></div>
+        <div id="1-8i" class="eng"></div>
       </div>
     </div>
     <div class="row">
