@@ -65,7 +65,7 @@ window.peshitta || (window.peshitta = {});
         page.elements.word[id] = document.getElementById(id + 'w');
         page.elements.inter[id] = document.getElementById(id + 'i');
 
-        page.elements.word[id].innerText = getConsonants(word);
+        page.elements.word[id].innerText = word;
         page.elements.inter[id].innerText = interlinear;
       }
     }
