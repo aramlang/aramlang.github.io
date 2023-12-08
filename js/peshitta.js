@@ -1,7 +1,6 @@
 'use strict';
-window.peshitta || (window.peshitta = {});
 
-peshitta.books = [
+export default [
   ["ܡܲܬܲܝ", "Mattai"],
   [ // Book 1 - Mattai
     ["Chapters"],

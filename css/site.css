@@ -96,12 +96,6 @@ span.label {
   text-align: right;
 }
 
-.rashi {
-  font-family: 'Noto Rashi Hebrew';
-  direction: rtl;
-  text-align: right;
-}
-
 .no {
   line-height: 0.5;
   padding: 7px 0 0 0;

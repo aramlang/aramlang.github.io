@@ -72,10 +72,7 @@ document.addEventListener('pageCompleted', (event) => {
         }
 
         window.requestAnimationFrame(() => {
-          let elem = page.elements.translit[id];
-          if (elem.classList.contains('hide')) {
-            elem = page.elements.inter[id];
-          }
+          const elem = page.elements.inter[id];
           if (!isInViewport(elem)) {
             elem.scrollIntoView({
               behavior: "smooth",

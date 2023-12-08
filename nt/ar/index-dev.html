@@ -165,6 +165,7 @@
         <div title="Select Text Font">
           <select id="fontFamily">
             <option value="syr">East Assyrian</option>
+            <option value="heb">Ktav Ashuri</option>
             <option value="est">Estrangela</option>
           </select>
         </div>
@@ -272,35 +273,35 @@
         <div class="tran hide"><a href="#" title="Go Up">&nbsp;&nbsp;</a></div>
       </div>
       <div class="col">
-        <div id="1-1w" lang="syc" class="syr"></div>
+        <div id="1-1w" lang="syc" class="syr t"></div>
         <div id="1-1i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-2w" lang="syc" class="syr"></div>
+        <div id="1-2w" lang="syc" class="syr t"></div>
         <div id="1-2i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-3w" lang="syc" class="syr"></div>
+        <div id="1-3w" lang="syc" class="syr t"></div>
         <div id="1-3i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-4w" lang="syc" class="syr"></div>
+        <div id="1-4w" lang="syc" class="syr t"></div>
         <div id="1-4i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-5w" lang="syc" class="syr"></div>
+        <div id="1-5w" lang="syc" class="syr t"></div>
         <div id="1-5i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-6w" lang="syc" class="syr"></div>
+        <div id="1-6w" lang="syc" class="syr t"></div>
         <div id="1-6i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-7w" lang="syc" class="syr"></div>
+        <div id="1-7w" lang="syc" class="syr t"></div>
         <div id="1-7i" class="eng"></div>
       </div>
       <div class="col">
-        <div id="1-8w" lang="syc" class="syr"></div>
+        <div id="1-8w" lang="syc" class="syr t"></div>
         <div id="1-8i" class="eng"></div>
       </div>
     </div>
@@ -316,11 +317,20 @@
 
   <!-- Scripts -->
   <script src="../../js/howler.core.min.js"></script>
-  <script src="../../js/peshitta.js"></script>
-  <script src="../../js/site.js"></script>
-  <script src="../../js/player.js"></script>
-  <script>
-    peshitta.init(1, 1);
+
+  <script type="module" src="../../js/aramaic-mapper.js"></script>
+  <script type="module" src="../../js/cal-code-util.js"></script>
+  <script type="module" src="../../js/syriac-code-util.js"></script>
+  <script type="module" src="../../js/syriac-cal.js"></script>
+  <script type="module" src="../../js/hebrew-code-util.js"></script>
+  <script type="module" src="../../js/cal-hebrew.js"></script>
+  <script type="module" src="../../js/syriac-code-util.js"></script>
+  <script type="module" src="../../js/peshitta.js"></script>
+  <script type="module" src="../../js/player.js"></script>
+  <script type="module" src="../../js/site.js"></script>
+  <script type="module">
+    import initPage from '../../js/site.js';
+    initPage(1, 1);
   </script>
 </body>
 
