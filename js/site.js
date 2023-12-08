@@ -1,5 +1,8 @@
 'use strict';
 import books from './peshitta.js'
+import { toCal as syriacToCal } from './syriac-cal.js';
+import { toHebrew } from './cal-hebrew.js';
+import { toWesternSyriac } from './cal-syriac.js';
 
 export default (bookNo, chapterNo) => {
   verses = books[bookNo][chapterNo];
@@ -89,6 +92,10 @@ const getConsonants = (text) => {
   return (text.match(consonantsRegex) || []).join('');
 }
 
+const getHebrew = (text) => toHebrew(syriacToCal(text));
+
+const getSerto = (text) => toWesternSyriac(syriacToCal(text));
+
 const getBook = (key) => {
   let cached = bookCache[key]
   if (cached) {
@@ -96,9 +103,25 @@ const getBook = (key) => {
   }
 
   const prefix = 'ܟܵܪܘܼܙܘܼܬ݂ܵܐ';
-  cached = controls.zawae.checked
-    ? `&nbsp;${prefix}&nbsp;ܕ${page.info.book.w}`
-    : `&nbsp;${getConsonants(prefix)}&nbsp;ܕ${getConsonants(page.info.book.w)}`;
+  switch (controls.fontFamily.value) {
+    case 'syr':
+    case 'est':
+      cached = controls.zawae.checked
+        ? `&nbsp;${prefix}&nbsp;ܕ${page.info.book.w}`
+        : `&nbsp;${getConsonants(prefix)}&nbsp;ܕ${getConsonants(page.info.book.w)}`;
+      break;
+    case 'heb':
+      cached = controls.zawae.checked
+        ? `&nbsp;${getHebrew(prefix)}&nbsp;${getHebrew('ܕ')}${getHebrew(page.info.book.w)}`
+        : `&nbsp;${getHebrew(getConsonants(prefix))}&nbsp;${getHebrew('ܕ')}${getHebrew(getConsonants(page.info.book.w))}`;
+      break;
+    default:
+      cached = controls.zawae.checked
+        ? `&nbsp;${getSerto(prefix)}&nbsp;ܕ${page.info.book.w}`
+        : `&nbsp;${getConsonants(prefix)}&nbsp;ܕ${getConsonants(page.info.book.w)}`;
+      break;
+  }
+
   bookCache[key] = cached
   return cached;
 }
@@ -110,9 +133,25 @@ const getChapter = (key) => {
   }
 
   const prefix = 'ܨܚܵܚܵܐ';
-  cached = controls.zawae.checked
-    ? `&nbsp;${prefix}&nbsp;${page.info.chapter.w}`
-    : `&nbsp;${getConsonants(prefix)}&nbsp;${getConsonants(page.info.chapter.w)}`;
+  switch (controls.fontFamily.value) {
+    case 'syr':
+    case 'est':
+      cached = controls.zawae.checked
+        ? `&nbsp;${prefix}&nbsp;${page.info.chapter.w}`
+        : `&nbsp;${getConsonants(prefix)}&nbsp;${getConsonants(page.info.chapter.w)}`;
+      break;
+    case 'heb':
+      cached = controls.zawae.checked
+        ? `&nbsp;${getHebrew(prefix)}&nbsp;${getHebrew(page.info.chapter.w)}`
+        : `&nbsp;${getHebrew(getConsonants(prefix))}&nbsp;${getHebrew(getConsonants(page.info.chapter.w))}`;
+      break;
+    default:
+      cached = controls.zawae.checked
+        ? `&nbsp;${getSerto(prefix)}&nbsp;${page.info.chapter.w}`
+        : `&nbsp;${getConsonants(prefix)}&nbsp;${getConsonants(page.info.chapter.w)}`;
+      break;
+  }
+
   chapterCache[key] = cached
   return cached;
 }
@@ -124,17 +163,43 @@ const getZawaeLabel = (key) => {
   }
 
   const text = 'ܙܵܘܥܹ̈ܐ';
-  cached = controls.zawae.checked
-    ? `&nbsp;${text}`
-    : `&nbsp;${getConsonants(text)}`;
+  switch (controls.fontFamily.value) {
+    case 'syr':
+    case 'est':
+      cached = controls.zawae.checked
+        ? `&nbsp;${text}`
+        : `&nbsp;${getConsonants(text)}`;
+      break;
+    case 'heb':
+      cached = controls.zawae.checked
+        ? `&nbsp;${getHebrew(text)}`
+        : `&nbsp;${getHebrew(getConsonants(text))}`;
+      break;
+    default:
+      cached = controls.zawae.checked
+        ? `&nbsp;${getSerto(text)}`
+        : `&nbsp;${getConsonants(text)}`;
+      break;
+  }
+
   zawaeLabelCache[key] = cached
   return cached;
 }
 
-const getWordKey = () => controls.zawae.checked ? 'w' : 'c';
+const getWordKey = () => {
+  switch (controls.fontFamily.value) {
+    case 'syr':
+    case 'est':
+      return controls.zawae.checked ? 'w' : 'c';
+    case 'heb':
+      return controls.zawae.checked ? 'h' : 'j';
+    default:
+      return controls.zawae.checked ? 's' : 'q';
+  }
+}
 
 const toggleText = (event) => {
-  event.stopImmediatePropagation();
+  event && event.stopImmediatePropagation();
 
   const key = getWordKey();
   controls.book.innerHTML = getBook(key);
@@ -146,7 +211,18 @@ const toggleText = (event) => {
       let wobj = words[j];
       let word = wobj[key];
       if (!word) {
-        wobj[key] = word = controls.zawae.checked ? wobj.w : getConsonants((wobj.w));
+        switch (controls.fontFamily.value) {
+          case 'syr':
+          case 'est':
+            wobj[key] = word = controls.zawae.checked ? wobj.w : getConsonants((wobj.w));
+            break;
+          case 'heb':
+            wobj[key] = word = controls.zawae.checked ? getHebrew(wobj.w) : getHebrew(getConsonants((wobj.w)));
+            break;
+          default:
+            wobj[key] = word = controls.zawae.checked ? getSerto(wobj.w) : getConsonants((wobj.w));
+            break;
+        }
       }
       page.elements.word[i + '-' + j].innerText = word;
     }
@@ -166,6 +242,7 @@ controls.fontFamily.addEventListener('change', (event) => {
       element => element.classList.replace(oldFont, newFont)
     );
   }
+  toggleText();
 }, (passiveSupported ? { passive: true } : false));
 
 controls.zawae.addEventListener('change', toggleText, (passiveSupported ? { passive: true } : false));
