@@ -22,11 +22,15 @@ export default (bookNo, chapterNo) => {
     var cues = [0];
     page.cues.push(cues);
     let words = verses[i];
-    for (let j = 1; j < words.length; j++) {
+    for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
       let word = wobj.w;
-      let interlinear = wobj.i;
       let id = i + '-' + j;
+      if (j == 0) {
+        page.elements.word[id] = document.getElementById(id + 'w');
+        continue;
+      }
+      let interlinear = wobj.i;
       cues.push(wobj.t);
 
       // cache DOM refs
@@ -74,6 +78,59 @@ for (let i = 0; i < elemIds.length; i++) {
     alert(msg);
     throw new Error(msg);
   }
+}
+
+const syr_heb_no = {
+  "ܐ": "א",
+  "ܒ": "ב",
+  "ܓ": "ג",
+  "ܕ": "ד",
+  "ܗ": "ה",
+  "ܘ": "ו",
+  "ܙ": "ז",
+  "ܚ": "ח",
+  "ܛ": "ט",
+  "ܝ": "י",
+  "ܝܐ": "יא",
+  "ܝܒ": "יב",
+  "ܝܓ": "יג",
+  "ܝܕ": "יד",
+  "ܝܗ": "טו",
+  "ܝܘ": "טז",
+  "ܝܙ": "יז",
+  "ܝܚ": "יח",
+  "ܝܛ": "יט",
+  "ܟ": "כ",
+  "ܟܐ": "כא",
+  "ܟܒ": "כב",
+  "ܟܓ": "כג",
+  "ܟܕ": "כד",
+  "ܟܗ": "כה",
+  "ܟܘ": "כו",
+  "ܟܙ": "כז",
+  "ܟܚ": "כח",
+  "ܟܛ": "כט",
+  "ܠ": "ל",
+  "ܠܐ": "לא",
+  "ܠܒ": "לב",
+  "ܠܓ": "לג",
+  "ܠܕ": "לד",
+  "ܠܗ": "לה",
+  "ܠܘ": "לו",
+  "ܠܙ": "לז",
+  "ܠܚ": "לח",
+  "ܠܛ": "לט",
+  "ܡ": "מ",
+  "ܡܐ": "מא",
+  "ܡܒ": "מב",
+  "ܡܓ": "מג",
+  "ܡܕ": "מד",
+  "ܡܗ": "מה",
+  "ܡܘ": "מו",
+  "ܡܙ": "מז",
+  "ܡܚ": "מח",
+  "ܡܛ": "מט",
+  "ܢ": "נ"
 }
 
 page.cues = [[]]; // 1 based indexes
@@ -207,7 +264,7 @@ const toggleText = (event) => {
   controls.zawaeLabel.innerHTML = getZawaeLabel(key);
   for (let i = 1; i < verses.length; i++) {
     let words = verses[i];
-    for (let j = 1; j < words.length; j++) {
+    for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
       let word = wobj[key];
       if (!word) {
@@ -217,7 +274,12 @@ const toggleText = (event) => {
             wobj[key] = word = controls.zawae.checked ? wobj.w : getConsonants((wobj.w));
             break;
           case 'heb':
-            wobj[key] = word = controls.zawae.checked ? getHebrew(wobj.w) : getHebrew(getConsonants((wobj.w)));
+            if (j == 0) {
+              wobj[key] = word = syr_heb_no[wobj.w];
+            }
+            else {
+              wobj[key] = word = controls.zawae.checked ? getHebrew(wobj.w) : getHebrew(getConsonants((wobj.w)));
+            }
             break;
           default:
             wobj[key] = word = controls.zawae.checked ? getSerto(wobj.w) : getConsonants((wobj.w));

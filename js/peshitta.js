@@ -7,7 +7,7 @@ export default [
     [ // Chapter 1
       ["ܐ"],
       [ // Verse 1
-        {},
+        { w: "ܐ" },
         {
           w: "ܟܬ݂ܵܒ݂ܵܐ",
           i: "the book",
