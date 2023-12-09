@@ -91,7 +91,7 @@ span.label {
 }
 
 .heb {
-  font-family: David, 'Taamey D Web';
+  font-family: 'Taamey D Web', David;
   direction: rtl;
   text-align: right;
 }
