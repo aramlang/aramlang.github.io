@@ -108,8 +108,8 @@ def create_html_file(words, filename):
     html_template = Template('''    <div class="row">
       <div class="col">
         <div class="no">
-          <a href="#" title="Go Up" lang="syc" class="syr r">$aramaic_verse&nbsp;</a><br>
-          <a href="#" title="Go Up" class="enn">$verse&nbsp;</a>
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="$verse-0w"></span>&nbsp;</a><br>
+          <a href="#" title="Go Up" class="enn">$html_verse&nbsp;</a>
         </div>
       </div>
 $content    </div>
@@ -121,15 +121,11 @@ $content    </div>
         <div id="{verse}-{word}i" class="eng"></div>
       </div>
 '''
-    html_aramaic_verse = f'<span id="{verse}-0w">{_numbers[verse]}</span>'
-    if len(_numbers[verse]) == 1:
-        html_aramaic_verse += '&nbsp;'
-    html_verse = str(verse)
+    html_verse = verse = str(verse)
     if len(html_verse) == 1:
         html_verse += '&nbsp;'
 
-    html_content = html_template.substitute(
-        aramaic_verse=html_aramaic_verse, verse=html_verse, content=content)
+    html_content = html_template.substitute(verse=verse, html_verse=html_verse, content=content)
     with open(out_folder + filename, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
@@ -142,56 +138,56 @@ def create_directory_if_not_exists(directory_name):
 
 
 _numbers = {
-    1: "ܐ",
-    2: "ܒ",
-    3: "ܓ",
-    4: "ܕ",
-    5: "ܗ",
-    6: "ܘ",
-    7: "ܙ",
-    8: "ܚ",
-    9: "ܛ",
-    10: "ܝ",
-    11: "ܝܐ",
-    12: "ܝܒ",
-    13: "ܝܓ",
-    14: "ܝܕ",
-    15: "ܝܗ",
-    16: "ܝܘ",
-    17: "ܝܙ",
-    18: "ܝܚ",
-    19: "ܝܛ",
-    20: "ܟ",
-    21: "ܟܐ",
-    22: "ܟܒ",
-    23: "ܟܓ",
-    24: "ܟܕ",
-    25: "ܟܗ",
-    26: "ܟܘ",
-    27: "ܟܙ",
-    28: "ܟܚ",
-    29: "ܟܛ",
-    30: "ܠ",
-    31: "ܠܐ",
-    32: "ܠܒ",
-    33: "ܠܓ",
-    34: "ܠܕ",
-    35: "ܠܗ",
-    36: "ܠܘ",
-    37: "ܠܙ",
-    38: "ܠܚ",
-    39: "ܠܛ",
-    40: "ܡ",
-    41: "ܡܐ",
-    42: "ܡܒ",
-    43: "ܡܓ",
-    44: "ܡܕ",
-    45: "ܡܗ",
-    46: "ܡܘ",
-    47: "ܡܙ",
-    48: "ܡܚ",
-    49: "ܡܛ",
-    50: "ܢ"
+    1: ")",
+    2: "b",
+    3: "g",
+    4: "d",
+    5: "h",
+    6: "w",
+    7: "z",
+    8: "x",
+    9: "T",
+    10: "y",
+    11: "y)",
+    12: "yb",
+    13: "yg",
+    14: "yd",
+    15: "yh",
+    16: "yw",
+    17: "yz",
+    18: "yx",
+    19: "yT",
+    20: "k",
+    21: "k)",
+    22: "kb",
+    23: "kg",
+    24: "kd",
+    25: "kh",
+    26: "kw",
+    27: "kz",
+    28: "kx",
+    29: "kT",
+    30: "l",
+    31: "l)",
+    32: "lb",
+    33: "lg",
+    34: "ld",
+    35: "lh",
+    36: "lw",
+    37: "lz",
+    38: "lx",
+    39: "lT",
+    40: "m",
+    41: "m)",
+    42: "mb",
+    43: "mg",
+    44: "md",
+    45: "mh",
+    46: "mw",
+    47: "mz",
+    48: "mx",
+    49: "mT",
+    50: "n"
 }
 
 # Main execution
