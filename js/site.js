@@ -34,7 +34,12 @@ export default (bookNo, chapterNo) => {
       // cache DOM refs
       let id = i + '-' + j;
       page.elements.word[id] = document.getElementById(id + 'w');
-      page.elements.word[id].innerText = word;
+      if (j == 0 && word.length == 1) {
+        page.elements.word[id].innerHTML = word + '&nbsp;';
+      }
+      else {
+        page.elements.word[id].innerText = word;
+      }
       if (j) {
         page.elements.inter[id] = document.getElementById(id + 'i');
         page.elements.inter[id].innerText = wobj.i;
@@ -341,7 +346,13 @@ const toggleText = (event) => {
             break;
         }
       }
-      page.elements.word[i + '-' + j].innerText = word;
+      const id = i + '-' + j;
+      if (j == 0 && word.length == 1) {
+        page.elements.word[id].innerHTML = word + '&nbsp;';
+      }
+      else {
+        page.elements.word[id].innerText = word;
+      }
     }
   }
 }

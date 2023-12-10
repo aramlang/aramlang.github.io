@@ -109,7 +109,7 @@ def create_html_file(words, filename):
       <div class="col">
         <div class="no">
           <a href="#" title="Go Up" lang="syc" class="syr r"><span id="$verse-0w"></span>&nbsp;</a><br>
-          <a href="#" title="Go Up" class="enn">$html_verse&nbsp;</a>
+          <a href="#" title="Go Up" class="enn">$verse</a>
         </div>
       </div>
 $content    </div>
@@ -121,11 +121,8 @@ $content    </div>
         <div id="{verse}-{word}i" class="eng"></div>
       </div>
 '''
-    html_verse = verse = str(verse)
-    if len(html_verse) == 1:
-        html_verse += '&nbsp;'
 
-    html_content = html_template.substitute(verse=verse, html_verse=html_verse, content=content)
+    html_content = html_template.substitute(verse=verse, content=content)
     with open(out_folder + filename, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
