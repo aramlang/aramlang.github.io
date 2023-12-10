@@ -1,15 +1,15 @@
 'use strict';
 import books from './peshitta.js'
-import { toCal as syriacToCal } from './syriac-cal.js';
+import { removeDotting } from './cal-code-util.js'
 import { toHebrew } from './cal-hebrew.js';
-import { toWesternSyriac } from './cal-syriac.js';
+import { toEasternSyriac, toWesternSyriac } from './cal-syriac.js';
 
 export default (bookNo, chapterNo) => {
   verses = books[bookNo][chapterNo];
   page.info = {
     book: {
       w: books[0][0],
-      p: books[0][1],
+      i: books[0][1],
       n: bookNo
     },
     chapter: {
@@ -18,27 +18,28 @@ export default (bookNo, chapterNo) => {
     }
   };
 
+  const key = getWordKey();
+  controls.book.innerHTML = getBook(key);
+  controls.chapter.innerHTML = getChapter(key);
+  controls.zawaeLabel.innerHTML = getZawaeLabel(key);
   for (let i = 1; i < verses.length; i++) {
     var cues = [0];
     page.cues.push(cues);
     let words = verses[i];
     for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
-      let word = wobj.w;
-      let id = i + '-' + j;
-      if (j == 0) {
-        page.elements.word[id] = document.getElementById(id + 'w');
-        continue;
-      }
-      let interlinear = wobj.i;
-      cues.push(wobj.t);
+      let word = j ? toEasternSyriac(wobj.w) : cal_syr_no[wobj.w];
+      wobj[key] = word;
 
       // cache DOM refs
+      let id = i + '-' + j;
       page.elements.word[id] = document.getElementById(id + 'w');
-      page.elements.inter[id] = document.getElementById(id + 'i');
-
       page.elements.word[id].innerText = word;
-      page.elements.inter[id].innerText = interlinear;
+      if (j) {
+        page.elements.inter[id] = document.getElementById(id + 'i');
+        page.elements.inter[id].innerText = wobj.i;
+        cues.push(wobj.t);
+      }
     }
   }
   let event = new CustomEvent('pageCompleted', { detail: page });
@@ -80,57 +81,110 @@ for (let i = 0; i < elemIds.length; i++) {
   }
 }
 
-const syr_heb_no = {
-  "ܐ": "א",
-  "ܒ": "ב",
-  "ܓ": "ג",
-  "ܕ": "ד",
-  "ܗ": "ה",
-  "ܘ": "ו",
-  "ܙ": "ז",
-  "ܚ": "ח",
-  "ܛ": "ט",
-  "ܝ": "י",
-  "ܝܐ": "יא",
-  "ܝܒ": "יב",
-  "ܝܓ": "יג",
-  "ܝܕ": "יד",
-  "ܝܗ": "טו",
-  "ܝܘ": "טז",
-  "ܝܙ": "יז",
-  "ܝܚ": "יח",
-  "ܝܛ": "יט",
-  "ܟ": "כ",
-  "ܟܐ": "כא",
-  "ܟܒ": "כב",
-  "ܟܓ": "כג",
-  "ܟܕ": "כד",
-  "ܟܗ": "כה",
-  "ܟܘ": "כו",
-  "ܟܙ": "כז",
-  "ܟܚ": "כח",
-  "ܟܛ": "כט",
-  "ܠ": "ל",
-  "ܠܐ": "לא",
-  "ܠܒ": "לב",
-  "ܠܓ": "לג",
-  "ܠܕ": "לד",
-  "ܠܗ": "לה",
-  "ܠܘ": "לו",
-  "ܠܙ": "לז",
-  "ܠܚ": "לח",
-  "ܠܛ": "לט",
-  "ܡ": "מ",
-  "ܡܐ": "מא",
-  "ܡܒ": "מב",
-  "ܡܓ": "מג",
-  "ܡܕ": "מד",
-  "ܡܗ": "מה",
-  "ܡܘ": "מו",
-  "ܡܙ": "מז",
-  "ܡܚ": "מח",
-  "ܡܛ": "מט",
-  "ܢ": "נ"
+const cal_syr_no = {
+  ")": "ܐ",
+  "b": "ܒ",
+  "g": "ܓ",
+  "d": "ܕ",
+  "h": "ܗ",
+  "w": "ܘ",
+  "z": "ܙ",
+  "x": "ܚ",
+  "T": "ܛ",
+  "y": "ܝ",
+  "y)": "ܝܐ",
+  "yb": "ܝܒ",
+  "yg": "ܝܓ",
+  "yd": "ܝܕ",
+  "yh": "ܝܗ",
+  "yw": "ܝܘ",
+  "yz": "ܝܙ",
+  "yx": "ܝܚ",
+  "yT": "ܝܛ",
+  "k": "ܟ",
+  "k)": "ܟܐ",
+  "kb": "ܟܒ",
+  "kg": "ܟܓ",
+  "kd": "ܟܕ",
+  "kh": "ܟܗ",
+  "kw": "ܟܘ",
+  "kz": "ܟܙ",
+  "kx": "ܟܚ",
+  "kT": "ܟܛ",
+  "l": "ܠ",
+  "l)": "ܠܐ",
+  "lb": "ܠܒ",
+  "lg": "ܠܓ",
+  "ld": "ܠܕ",
+  "lh": "ܠܗ",
+  "lw": "ܠܘ",
+  "lz": "ܠܙ",
+  "lx": "ܠܚ",
+  "lT": "ܠܛ",
+  "m": "ܡ",
+  "m)": "ܡܐ",
+  "mb": "ܡܒ",
+  "mg": "ܡܓ",
+  "md": "ܡܕ",
+  "mh": "ܡܗ",
+  "mw": "ܡܘ",
+  "mz": "ܡܙ",
+  "mx": "ܡܚ",
+  "mT": "ܡܛ",
+  "n": "ܢ"
+}
+
+const cal_heb_no = {
+  ")": "א",
+  "b": "ב",
+  "g": "ג",
+  "d": "ד",
+  "h": "ה",
+  "w": "ו",
+  "z": "ז",
+  "x": "ח",
+  "T": "ט",
+  "y": "י",
+  "y)": "יא",
+  "yb": "יב",
+  "yg": "יג",
+  "yd": "יד",
+  "yh": "טו",
+  "yw": "טז",
+  "yz": "יז",
+  "yx": "יח",
+  "yT": "יט",
+  "k": "כ",
+  "k)": "כא",
+  "kb": "כב",
+  "kg": "כג",
+  "kd": "כד",
+  "kh": "כה",
+  "kw": "כו",
+  "kz": "כז",
+  "kx": "כח",
+  "kT": "כט",
+  "l": "ל",
+  "l)": "לא",
+  "lb": "לב",
+  "lg": "לג",
+  "ld": "לד",
+  "lh": "לה",
+  "lw": "לו",
+  "lz": "לז",
+  "lx": "לח",
+  "lT": "לט",
+  "m": "מ",
+  "m)": "מא",
+  "mb": "מב",
+  "mg": "מג",
+  "md": "מד",
+  "mh": "מה",
+  "mw": "מו",
+  "mz": "מז",
+  "mx": "מח",
+  "mT": "מט",
+  "n": "נ"
 }
 
 page.cues = [[]]; // 1 based indexes
@@ -142,16 +196,6 @@ let verses;
 const bookCache = {};
 const chapterCache = {};
 const zawaeLabelCache = {};
-const consonantsRegex = /[\u0710-\u072F]+/gu;
-
-const getConsonants = (text) => {
-  if (typeof text !== 'string') return '';
-  return (text.match(consonantsRegex) || []).join('');
-}
-
-const getHebrew = (text) => toHebrew(syriacToCal(text));
-
-const getSerto = (text) => toWesternSyriac(syriacToCal(text));
 
 const getBook = (key) => {
   let cached = bookCache[key]
@@ -159,23 +203,23 @@ const getBook = (key) => {
     return cached;
   }
 
-  const prefix = 'ܟܵܪܘܼܙܘܼܬ݂ܵܐ';
+  const prefix = 'korwuzwut,o)';
   switch (controls.fontFamily.value) {
     case 'syr':
     case 'est':
       cached = controls.zawae.checked
-        ? `&nbsp;${prefix}&nbsp;ܕ${page.info.book.w}`
-        : `&nbsp;${getConsonants(prefix)}&nbsp;ܕ${getConsonants(page.info.book.w)}`;
+        ? `&nbsp;${toEasternSyriac(prefix)}&nbsp;ܕ${toEasternSyriac(page.info.book.w)}`
+        : `&nbsp;${toEasternSyriac(removeDotting(prefix))}&nbsp;ܕ${toEasternSyriac(removeDotting(page.info.book.w))}`;
       break;
     case 'heb':
       cached = controls.zawae.checked
-        ? `&nbsp;${getHebrew(prefix)}&nbsp;${getHebrew('ܕ')}${getHebrew(page.info.book.w)}`
-        : `&nbsp;${getHebrew(getConsonants(prefix))}&nbsp;${getHebrew('ܕ')}${getHebrew(getConsonants(page.info.book.w))}`;
+        ? `&nbsp;${toHebrew(prefix)}&nbsp;ד${toHebrew(page.info.book.w)}`
+        : `&nbsp;${toHebrew(removeDotting(prefix))}&nbsp;ד${toHebrew(removeDotting(page.info.book.w))}`;
       break;
     default:
       cached = controls.zawae.checked
-        ? `&nbsp;${getSerto(prefix)}&nbsp;ܕ${page.info.book.w}`
-        : `&nbsp;${getConsonants(prefix)}&nbsp;ܕ${getConsonants(page.info.book.w)}`;
+        ? `&nbsp;${toWesternSyriac(prefix)}&nbsp;ܕ${toWesternSyriac(page.info.book.w)}`
+        : `&nbsp;${toWesternSyriac(removeDotting(prefix))}&nbsp;ܕ${toWesternSyriac(removeDotting(page.info.book.w))}`;
       break;
   }
 
@@ -189,23 +233,23 @@ const getChapter = (key) => {
     return cached;
   }
 
-  const prefix = 'ܨܚܵܚܵܐ';
+  const prefix = 'cxoxo)';
   switch (controls.fontFamily.value) {
     case 'syr':
     case 'est':
       cached = controls.zawae.checked
-        ? `&nbsp;${prefix}&nbsp;${page.info.chapter.w}`
-        : `&nbsp;${getConsonants(prefix)}&nbsp;${getConsonants(page.info.chapter.w)}`;
+        ? `&nbsp;${toEasternSyriac(prefix)}&nbsp;${cal_syr_no[page.info.chapter.w]}`
+        : `&nbsp;${toEasternSyriac(removeDotting(prefix))}&nbsp;${cal_syr_no[page.info.chapter.w]}`;
       break;
     case 'heb':
       cached = controls.zawae.checked
-        ? `&nbsp;${getHebrew(prefix)}&nbsp;${getHebrew(page.info.chapter.w)}`
-        : `&nbsp;${getHebrew(getConsonants(prefix))}&nbsp;${getHebrew(getConsonants(page.info.chapter.w))}`;
+        ? `&nbsp;${toHebrew(prefix)}&nbsp;${cal_heb_no[page.info.chapter.w]}`
+        : `&nbsp;${toHebrew(removeDotting(prefix))}&nbsp;${cal_heb_no[page.info.chapter.w]}`;
       break;
     default:
       cached = controls.zawae.checked
-        ? `&nbsp;${getSerto(prefix)}&nbsp;${page.info.chapter.w}`
-        : `&nbsp;${getConsonants(prefix)}&nbsp;${getConsonants(page.info.chapter.w)}`;
+        ? `&nbsp;${toWesternSyriac(prefix)}&nbsp;${cal_syr_no[page.info.chapter.w]}`
+        : `&nbsp;${toWesternSyriac(removeDotting(prefix))}&nbsp;${cal_syr_no[page.info.chapter.w]}`;
       break;
   }
 
@@ -219,23 +263,23 @@ const getZawaeLabel = (key) => {
     return cached;
   }
 
-  const text = 'ܙܵܘܥܹ̈ܐ';
+  const text = 'zow(*e)';
   switch (controls.fontFamily.value) {
     case 'syr':
     case 'est':
       cached = controls.zawae.checked
-        ? `&nbsp;${text}`
-        : `&nbsp;${getConsonants(text)}`;
+        ? `&nbsp;${toEasternSyriac(text)}`
+        : `&nbsp;${toEasternSyriac(removeDotting(text))}`;
       break;
     case 'heb':
       cached = controls.zawae.checked
-        ? `&nbsp;${getHebrew(text)}`
-        : `&nbsp;${getHebrew(getConsonants(text))}`;
+        ? `&nbsp;${toHebrew(text)}`
+        : `&nbsp;${toHebrew(removeDotting(text))}`;
       break;
     default:
       cached = controls.zawae.checked
-        ? `&nbsp;${getSerto(text)}`
-        : `&nbsp;${getConsonants(text)}`;
+        ? `&nbsp;${toWesternSyriac(text)}`
+        : `&nbsp;${toWesternSyriac(removeDotting(text))}`;
       break;
   }
 
@@ -247,42 +291,53 @@ const getWordKey = () => {
   switch (controls.fontFamily.value) {
     case 'syr':
     case 'est':
-      return controls.zawae.checked ? 'w' : 'c';
+      return controls.zawae.checked ? 'a' : 'c';
     case 'heb':
       return controls.zawae.checked ? 'h' : 'j';
+    case 'ser':
+      return controls.zawae.checked ? 's' : 'c'; // consonant can be re-used for serto
     default:
-      return controls.zawae.checked ? 's' : 'q';
+      return '';
   }
 }
 
 const toggleText = (event) => {
   event && event.stopImmediatePropagation();
 
-  const key = getWordKey();
-  controls.book.innerHTML = getBook(key);
-  controls.chapter.innerHTML = getChapter(key);
-  controls.zawaeLabel.innerHTML = getZawaeLabel(key);
+  const globalKey = getWordKey();
+  controls.book.innerHTML = getBook(globalKey);
+  controls.chapter.innerHTML = getChapter(globalKey);
+  controls.zawaeLabel.innerHTML = getZawaeLabel(globalKey);
   for (let i = 1; i < verses.length; i++) {
     let words = verses[i];
     for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
+      // verse number have no vowels so we can re-use 'h' or 'a' cache
+      const key = j == 0 ? (controls.fontFamily.value == 'heb' ? 'h' : 'a') : globalKey;
       let word = wobj[key];
       if (!word) {
-        switch (controls.fontFamily.value) {
+        const fontFamily = controls.fontFamily.value
+        switch (fontFamily) {
           case 'syr':
           case 'est':
-            wobj[key] = word = controls.zawae.checked ? wobj.w : getConsonants((wobj.w));
+          case 'ser':
+            if (controls.zawae.checked) {
+              wobj[key] = word = toWesternSyriac(wobj.w); // eastern is already cached from page loading
+            }
+            else {
+              wobj[key] = word = toEasternSyriac(removeDotting((wobj.w))); // consonant is good for all 3
+            }
             break;
           case 'heb':
             if (j == 0) {
-              wobj[key] = word = syr_heb_no[wobj.w];
+              wobj[key] = word = cal_heb_no[wobj.w];
             }
             else {
-              wobj[key] = word = controls.zawae.checked ? getHebrew(wobj.w) : getHebrew(getConsonants((wobj.w)));
+              wobj[key] = word = toHebrew(controls.zawae.checked ? wobj.w : removeDotting((wobj.w)));
             }
             break;
           default:
-            wobj[key] = word = controls.zawae.checked ? getSerto(wobj.w) : getConsonants((wobj.w));
+            alert('Unexpected un-cached font family ' + fontFamily);
             break;
         }
       }

@@ -175,7 +175,7 @@ document.addEventListener('pageCompleted', (event) => {
     }
     loadPlaylist(rate) {
       const self = this;
-      const book = page.info.book.p;
+      const book = page.info.book.i;
       const bookNo = page.info.book.n.toString().padStart(2, '0');
       const chapterNo = page.info.chapter.n.toString().padStart(2, '0');
       const playlist = [{}]; // 1 based index
