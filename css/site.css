@@ -441,3 +441,47 @@ span.h {
   text-align: right;
   font-size: x-large;
 }
+
+.cln::after {
+  content: ':'
+}
+
+.dot::after {
+  content: '.'
+}
+
+.sun::after {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: small;
+  content: '.\00a0\0263c'
+}
+
+.sunc::after {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: small;
+  content: ':\00a0\0263c'
+}
+
+.ncln::after {
+  visibility: hidden;
+  content: ':'
+}
+
+.ndot::after {
+  visibility: hidden;
+  content: '.'
+}
+
+.nsun::after {
+  visibility: hidden;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: small;
+  content: '.\00a0\0263c'
+}
+
+.nsunc::after {
+  visibility: hidden;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: small;
+  content: ':\00a0\0263c'
+}

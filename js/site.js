@@ -306,6 +306,21 @@ const getWordKey = () => {
   }
 }
 
+const replacePunctuation = (elem) => {
+  if (controls.zawae.checked) {
+    elem.classList.replace('nsunc', 'sunc');
+    elem.classList.replace('nsun', 'sun');
+    elem.classList.replace('ndot', 'dot');
+    elem.classList.replace('ncln', 'cln');
+  }
+  else {
+    elem.classList.replace('sunc', 'nsunc');
+    elem.classList.replace('sun', 'nsun');
+    elem.classList.replace('dot', 'ndot');
+    elem.classList.replace('cln', 'ncln');
+  }
+}
+
 const toggleText = (event) => {
   event && event.stopImmediatePropagation();
 
@@ -351,6 +366,7 @@ const toggleText = (event) => {
         page.elements.word[id].innerHTML = word + '&nbsp;';
       }
       else {
+        j && replacePunctuation(page.elements.word[id]);
         page.elements.word[id].innerText = word;
       }
     }

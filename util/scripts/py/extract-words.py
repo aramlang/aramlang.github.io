@@ -1,9 +1,10 @@
 import re
+import os
 import sys
+import json
 from textgrid import TextGrid
 from string import Template
 from pydub import AudioSegment
-import os
 
 out_folder = 'out'
 
@@ -103,7 +104,7 @@ def create_javascript_file(words, filename):
         f.write(file_content)
 
 
-def create_html_file(words, filename):
+def create_html_file(words, filename, punctuations):
     verse = int(extract_verse_number(filename))
     html_template = Template('''    <div class="row">
       <div class="col">
@@ -114,10 +115,13 @@ def create_html_file(words, filename):
       </div>
 $content    </div>
 ''')
+    verse_punctuation = punctuations.get(str(verse))
     content = ''
     for word, _ in enumerate(words, start=1):
+        word_punctuation = verse_punctuation.get(str(word))
+        punctuation_class = f' {word_punctuation}' if word_punctuation else ''
         content = content + f'''      <div class="col">
-        <div id="{verse}-{word}w" lang="syc" class="syr t"></div>
+        <div id="{verse}-{word}w" lang="syc" class="syr t{punctuation_class}"></div>
         <div id="{verse}-{word}i" class="eng"></div>
       </div>
 '''
@@ -187,6 +191,12 @@ _numbers = {
     50: "n"
 }
 
+
+def read_json_from_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return json.load(file)
+
+
 # Main execution
 if len(sys.argv) < 2:
     print("Usage: python extract-verse.py <filename>")
@@ -199,5 +209,6 @@ timestamps = data[1]
 
 create_directory_if_not_exists(out_folder)
 create_javascript_file(words, filename.replace('.TextGrid', '.js'))
-create_html_file(words, filename.replace('.TextGrid', '.html'))
+create_html_file(words, filename.replace('.TextGrid', '.html'),
+                 read_json_from_file(filename[:-12] + '.json'))
 insert_blanks_in_audio(timestamps, filename.replace('.TextGrid', ''))
