@@ -485,3 +485,15 @@ span.h {
   font-size: small;
   content: ':\00a0\0263c'
 }
+
+sup {
+  color: red;
+}
+
+hr {
+  color: blue;
+}
+
+li {
+  font-style: italic;
+}

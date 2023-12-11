@@ -1,6 +1,6 @@
 @echo off
 IF "%~1"=="" (
-  set TEXTGRID=01_Bereshit_001.TextGrid
+  set TEXTGRID=wav\01_Mattai_01.TextGrid
 ) ELSE (
   set TEXTGRID=%1.
 )

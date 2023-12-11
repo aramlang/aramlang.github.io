@@ -92,10 +92,10 @@ def create_javascript_file(words, filename):
     file_template = Template(
         '      [ // Verse $verse_number\n        { w: "$aramaic_verse_number" },\n$content      ],\n')
     content_template = Template(
-        '        {\n          w: "$w",\n          i: "$i",\n          t: { s: $s, e: $e }\n        }')
+        '        {\n          w: "$w",\n          t: { s: $s, e: $e }\n        }')
     content = ''
     for index, word in enumerate(words):
-        content = content + content_template.substitute(w=word["w"], i=word["i"],
+        content = content + content_template.substitute(w=word["w"],
                                                         s=word["t"]["s"], e=word["t"]["e"]) + ('\n' if index == len(words) - 1 else ',\n')
 
     file_content = file_template.substitute(
@@ -117,12 +117,12 @@ $content    </div>
 ''')
     verse_punctuation = punctuations.get(str(verse))
     content = ''
-    for word, _ in enumerate(words, start=1):
-        word_punctuation = verse_punctuation.get(str(word))
+    for wordNo, word in enumerate(words, start=1):
+        word_punctuation = verse_punctuation.get(str(wordNo))
         punctuation_class = f' {word_punctuation}' if word_punctuation else ''
         content = content + f'''      <div class="col">
-        <div id="{verse}-{word}w" lang="syc" class="syr t{punctuation_class}"></div>
-        <div id="{verse}-{word}i" class="eng"></div>
+        <div id="{verse}-{wordNo}w" lang="syc" class="syr t{punctuation_class}"></div>
+        <div id="{verse}-{wordNo}i" class="eng">{word["i"]}</div>
       </div>
 '''
 

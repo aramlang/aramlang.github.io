@@ -1,0 +1,110 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 9.06386 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 9.06386 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.13526 
+            text = "ya(qwOb," 
+        intervals [2]:
+            xmin = 1.13526 
+            xmax = 1.56625 
+            text = ")owlEd" 
+        intervals [3]:
+            xmin = 1.56625 
+            xmax = 2.67453 
+            text = "lyowsEp" 
+        intervals [4]:
+            xmin = 2.67453 
+            xmax = 3.35866 
+            text = "gab,roh" 
+        intervals [5]:
+            xmin = 3.35866 
+            xmax = 4.63113 
+            text = "dmaryam" 
+        intervals [6]:
+            xmin = 4.63113 
+            xmax = 5.44523 
+            text = "dmEnoh" 
+        intervals [7]:
+            xmin = 5.44523 
+            xmax = 6.12936 
+            text = ")Et,yilEd" 
+        intervals [8]:
+            xmin = 6.12936 
+            xmax = 6.85453 
+            text = "yi$wO(" 
+        intervals [9]:
+            xmin = 6.85453 
+            xmax = 7.43603 
+            text = "dmEt,_qrE)" 
+        intervals [10]:
+            xmin = 7.43603 
+            xmax = 9.06386 
+            text = "m$yixo)" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 9.06386 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.13526 
+            text = "Yaqub" 
+        intervals [2]:
+            xmin = 1.13526 
+            xmax = 1.56625 
+            text = "fathered" 
+        intervals [3]:
+            xmin = 1.56625 
+            xmax = 2.67453 
+            text = "Yosip" 
+        intervals [4]:
+            xmin = 2.67453 
+            xmax = 3.35866 
+            text = "the kinsman<a href=""#gabra""><sup>1</sup></a>" 
+        intervals [5]:
+            xmin = 3.35866 
+            xmax = 4.63113 
+            text = "of Maryam" 
+        intervals [6]:
+            xmin = 4.63113 
+            xmax = 5.44523 
+            text = "from whom" 
+        intervals [7]:
+            xmin = 5.44523 
+            xmax = 6.12936 
+            text = "was born" 
+        intervals [8]:
+            xmin = 6.12936 
+            xmax = 6.85453 
+            text = "Yeshua" 
+        intervals [9]:
+            xmin = 6.85453 
+            xmax = 7.43603 
+            text = "who is called" 
+        intervals [10]:
+            xmin = 7.43603 
+            xmax = 9.06386 
+            text = "the Messiah" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 9.06386 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.06386 
+            text = "ya(qwOb, )owlEd lyowsEp gab,roh dmaryam dmEnoh )Et,yilEd yi$wO( dmEt,_qrE) m$yixo)" 

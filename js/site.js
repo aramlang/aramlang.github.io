@@ -42,7 +42,6 @@ export default (bookNo, chapterNo) => {
       }
       if (j) {
         page.elements.inter[id] = document.getElementById(id + 'i');
-        page.elements.inter[id].innerText = wobj.i;
         cues.push(wobj.t);
       }
     }

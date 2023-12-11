@@ -15,35 +15,35 @@ item []:
 			intervals [1]:
 				xmin = 0.0
 				xmax = 1.70197
-				text = "ܟܬ݂ܵܒ݂ܵܐ"
+				text = "kt,ob,o)"
 			intervals [2]:
 				xmin = 1.70197
 				xmax = 2.80659
-				text = "ܕܝܼܠܝܼܕ݂ܘܼܬܹܗ"
+				text = "dyilyid,wuteh"
 			intervals [3]:
 				xmin = 2.80659
 				xmax = 3.34217
-				text = "ܕܝܼܫܘܿܥ"
+				text = "dyi$wO("
 			intervals [4]:
 				xmin = 3.34217
 				xmax = 4.1857
-				text = "ܡܫܝܼܚܵܐ"
+				text = "m$yixo)"
 			intervals [5]:
 				xmin = 4.1857
 				xmax = 4.60746
-				text = "ܒܪܹܗ"
+				text = "breh"
 			intervals [6]:
 				xmin = 4.60746
 				xmax = 5.36974
-				text = "ܕܕ݂ܘܝܼܕ"
+				text = "dd,wyid"
 			intervals [7]:
 				xmin = 5.36974
 				xmax = 5.79912
-				text = "ܒܪܹܗ"
+				text = "breh"
 			intervals [8]:
 				xmin = 5.79912
 				xmax = 7.15966
-				text = "ܕܐܲܒ݂ܪܵܗܵܡ"
+				text = "d)ab,rohom"
 	item [2]:
 		class = "IntervalTier"
 		name = "Inter"
@@ -91,4 +91,4 @@ item []:
 			intervals [1]:
 				xmin = 0.0
 				xmax = 7.15966
-				text = "ܟܬ݂ܵܒ݂ܵܐ ܕܝܼܠܝܼܕ݂ܘܼܬܹܗ ܕܝܼܫܘܿܥ ܡܫܝܼܚܵܐ ܒܪܹܗ ܕܕ݂ܘܝܼܕ ܒܪܹܗ ܕܐܲܒ݂ܪܵܗܵܡ"
+				text = "kt,ob,o) dyilyid,wuteh dyi$wO( m$yixo) breh dd,wyid breh d)ab,rohom"
