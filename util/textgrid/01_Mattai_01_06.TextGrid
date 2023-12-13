@@ -1,0 +1,110 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.30962 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 8.30962 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.313 
+            text = ")yi$ay" 
+        intervals [2]:
+            xmin = 1.313 
+            xmax = 1.67003 
+            text = ")owlEd" 
+        intervals [3]:
+            xmin = 1.67003 
+            xmax = 2.36357 
+            text = "ldowyid" 
+        intervals [4]:
+            xmin = 2.36357 
+            xmax = 3.82146 
+            text = "malko)" 
+        intervals [5]:
+            xmin = 3.82146 
+            xmax = 4.67353 
+            text = "dowyid" 
+        intervals [6]:
+            xmin = 4.67353 
+            xmax = 5.09278 
+            text = ")owlEd" 
+        intervals [7]:
+            xmin = 5.09278 
+            xmax = 6.05513 
+            text = "la$leymwOn" 
+        intervals [8]:
+            xmin = 6.05513 
+            xmax = 6.39774 
+            text = "m,n" 
+        intervals [9]:
+            xmin = 6.39774 
+            xmax = 6.9613 
+            text = ")an_tteh" 
+        intervals [10]:
+            xmin = 6.9613 
+            xmax = 8.30962 
+            text = "d)wOryio)" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.30962 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.313 
+            text = "Aeshe" 
+        intervals [2]:
+            xmin = 1.313 
+            xmax = 1.67003 
+            text = "fathered" 
+        intervals [3]:
+            xmin = 1.67003 
+            xmax = 2.36357 
+            text = "Dawed" 
+        intervals [4]:
+            xmin = 2.36357 
+            xmax = 3.82146 
+            text = "the king" 
+        intervals [5]:
+            xmin = 3.82146 
+            xmax = 4.67353 
+            text = "Dawed" 
+        intervals [6]:
+            xmin = 4.67353 
+            xmax = 5.09278 
+            text = "fathered" 
+        intervals [7]:
+            xmin = 5.09278 
+            xmax = 6.05513 
+            text = "Shlemon" 
+        intervals [8]:
+            xmin = 6.05513 
+            xmax = 6.39774 
+            text = "by" 
+        intervals [9]:
+            xmin = 6.39774 
+            xmax = 6.9613 
+            text = "the wife" 
+        intervals [10]:
+            xmin = 6.9613 
+            xmax = 8.30962 
+            text = "of Awrea" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 8.30962 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.30962 
+            text = ")yi$ay )owlEd ldowyid malko) dowyid )owlEd la$leymwOn m,n )an_tteh d)wOryio)" 
