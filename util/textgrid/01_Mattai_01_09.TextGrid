@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 9.27576
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 9.27576
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.43477
+				text = "(wOzyio)"
+			intervals [2]:
+				xmin = 1.43477
+				xmax = 1.8896
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 1.8896
+				xmax = 3.46512
+				text = "lywOt,om"
+			intervals [4]:
+				xmin = 3.46512
+				xmax = 4.40342
+				text = "ywOt,om"
+			intervals [5]:
+				xmin = 4.40342
+				xmax = 4.81081
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 4.81081
+				xmax = 6.26638
+				text = "l)oxoz"
+			intervals [7]:
+				xmin = 6.26638
+				xmax = 7.2147
+				text = ")oxoz"
+			intervals [8]:
+				xmin = 7.2147
+				xmax = 7.65832
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 7.65832
+				xmax = 9.27576
+				text = "lxezaqyo)"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 9.27576
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.43477
+				text = "Awazea"
+			intervals [2]:
+				xmin = 1.43477
+				xmax = 1.8896
+				text = "fathered"
+			intervals [3]:
+				xmin = 1.8896
+				xmax = 3.46512
+				text = "Yotham"
+			intervals [4]:
+				xmin = 3.46512
+				xmax = 4.40342
+				text = "Yotham"
+			intervals [5]:
+				xmin = 4.40342
+				xmax = 4.81081
+				text = "fathered"
+			intervals [6]:
+				xmin = 4.81081
+				xmax = 6.26638
+				text = "Akhaz"
+			intervals [7]:
+				xmin = 6.26638
+				xmax = 7.2147
+				text = "Akhaz"
+			intervals [8]:
+				xmin = 7.2147
+				xmax = 7.65832
+				text = "fathered"
+			intervals [9]:
+				xmin = 7.65832
+				xmax = 9.27576
+				text = "Khizaqea"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 9.27576
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 9.27576
+				text = "(wOzyio) )owlEd lywOt,om ywOt,om )owlEd l)oxoz )oxoz )owlEd lxezaqyo)"
