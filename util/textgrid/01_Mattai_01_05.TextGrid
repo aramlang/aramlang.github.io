@@ -1,0 +1,134 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 11.01556
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 11.01556
+		intervals: size = 13
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.60412
+				text = "salmwOn"
+			intervals [2]:
+				xmin = 1.60412
+				xmax = 2.02019
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 2.02019
+				xmax = 2.68515
+				text = "lb,o(az"
+			intervals [4]:
+				xmin = 2.68515
+				xmax = 3.02665
+				text = "m,n"
+			intervals [5]:
+				xmin = 3.02665
+				xmax = 4.3805
+				text = "roxob"
+			intervals [6]:
+				xmin = 4.3805
+				xmax = 5.42068
+				text = "bo(az"
+			intervals [7]:
+				xmin = 5.42068
+				xmax = 5.86161
+				text = ")owlEd"
+			intervals [8]:
+				xmin = 5.86161
+				xmax = 6.66724
+				text = "l(wOb,yid"
+			intervals [9]:
+				xmin = 6.66724
+				xmax = 6.90017
+				text = "m,n"
+			intervals [10]:
+				xmin = 6.90017
+				xmax = 8.47341
+				text = "r(wOt,"
+			intervals [11]:
+				xmin = 8.47341
+				xmax = 9.1956
+				text = "(wOb,yid"
+			intervals [12]:
+				xmin = 9.1956
+				xmax = 9.59469
+				text = ")owlEd"
+			intervals [13]:
+				xmin = 9.59469
+				xmax = 11.01556
+				text = "l)yi$ay"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 11.01556
+		intervals: size = 13
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.60412
+				text = "Salmon"
+			intervals [2]:
+				xmin = 1.60412
+				xmax = 2.02019
+				text = "fathered"
+			intervals [3]:
+				xmin = 2.02019
+				xmax = 2.68515
+				text = "Baz"
+			intervals [4]:
+				xmin = 2.68515
+				xmax = 3.02665
+				text = "by"
+			intervals [5]:
+				xmin = 3.02665
+				xmax = 4.3805
+				text = "Rakhab"
+			intervals [6]:
+				xmin = 4.3805
+				xmax = 5.42068
+				text = "Baz"
+			intervals [7]:
+				xmin = 5.42068
+				xmax = 5.86161
+				text = "fathered"
+			intervals [8]:
+				xmin = 5.86161
+				xmax = 6.66724
+				text = "Awbed"
+			intervals [9]:
+				xmin = 6.66724
+				xmax = 6.90017
+				text = "by"
+			intervals [10]:
+				xmin = 6.90017
+				xmax = 8.47341
+				text = "Rawth"
+			intervals [11]:
+				xmin = 8.47341
+				xmax = 9.1956
+				text = "Awbed"
+			intervals [12]:
+				xmin = 9.1956
+				xmax = 9.59469
+				text = "fathered"
+			intervals [13]:
+				xmin = 9.59469
+				xmax = 11.01556
+				text = "Aeshe"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 11.01556
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 11.01556
+				text = "salmwOn )owlEd lb,o(az m,n roxob bo(az )owlEd l(wOb,yid m,n r(wOt, (wOb,yid )owlEd l)yi$ay"

@@ -305,7 +305,7 @@ const getWordKey = () => {
   }
 }
 
-const replacePunctuation = (elem) => {
+const togglePunctuation = (elem) => {
   if (controls.zawae.checked) {
     elem.classList.replace('nsunc', 'sunc');
     elem.classList.replace('nsun', 'sun');
@@ -365,7 +365,7 @@ const toggleText = (event) => {
         page.elements.word[id].innerHTML = word + '&nbsp;';
       }
       else {
-        j && replacePunctuation(page.elements.word[id]);
+        j && togglePunctuation(page.elements.word[id]);
         page.elements.word[id].innerText = word;
       }
     }

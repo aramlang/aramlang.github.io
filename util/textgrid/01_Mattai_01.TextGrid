@@ -31,11 +31,11 @@ item []:
         intervals [5]:
             xmin = 44.97701 
             xmax = 54.31484 
-            text = "Verse_4" 
+            text = ")orom )owlEd l(amyinod,ob, (amyinod,ob, )owlEd lnEx$wOn nEx$wOn )owlEd lsalmwOn" 
         intervals [6]:
             xmin = 54.31484 
             xmax = 65.33039 
-            text = "Verse_5" 
+            text = "salmwOn )owlEd lb,o(az m,n roxob bo(az )owlEd l(wOb,yid m,n r(wOt, (wOb,yid )owlEd l)yi$ay" 
         intervals [7]:
             xmin = 65.33039 
             xmax = 73.63999 
@@ -133,23 +133,23 @@ item []:
         intervals [2]:
             xmin = 17.39811 
             xmax = 24.55779 
-            text = "1" 
+            text = "the book	of the genealogy	of Yeshua	the Messiah	the son	of Dawed	the son	of Awraham" 
         intervals [3]:
             xmin = 24.55779 
             xmax = 34.2634 
-            text = "2" 
+            text = "Awraham	fathered	Aeskhaq	Aeskhaq	fathered	Yaqub	Yaqub	fathered	Yehuda	and his brothers" 
         intervals [4]:
             xmin = 34.2634 
             xmax = 44.97701 
-            text = "3" 
+            text = "Yehuda	fathered	Pares	and Zarakh	by	Thamar	Pares	fathered	Khisron	Khisron	fathered	Aram" 
         intervals [5]:
             xmin = 44.97701 
             xmax = 54.31484 
-            text = "4" 
+            text = "Aram	fathered	Amenadab	Amenadab	fathered	Nikhshon	Nikhshon	fathered	Salmon" 
         intervals [6]:
             xmin = 54.31484 
             xmax = 65.33039 
-            text = "5" 
+            text = "Salmon	fathered	Baz	by	Rakhab	Baz	fathered	Awbed	by	Rawth	Awbed	fathered	Aeshe" 
         intervals [7]:
             xmin = 65.33039 
             xmax = 73.63999 
