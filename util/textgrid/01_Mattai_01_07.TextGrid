@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 9.58247
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 9.58247
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.52568
+				text = "$leymwOn"
+			intervals [2]:
+				xmin = 1.52568
+				xmax = 2.0609
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 2.0609
+				xmax = 3.66656
+				text = "larxEb,(am"
+			intervals [4]:
+				xmin = 3.66656
+				xmax = 4.65026
+				text = "rxEb,(am"
+			intervals [5]:
+				xmin = 4.65026
+				xmax = 5.03385
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 5.03385
+				xmax = 6.74767
+				text = "l)ab,yio)"
+			intervals [7]:
+				xmin = 6.74767
+				xmax = 7.77471
+				text = ")ab,yio)"
+			intervals [8]:
+				xmin = 7.77471
+				xmax = 8.20294
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 8.20294
+				xmax = 9.58247
+				text = "l)oso)"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 9.58247
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.52568
+				text = "Shlemon"
+			intervals [2]:
+				xmin = 1.52568
+				xmax = 2.0609
+				text = "fathered"
+			intervals [3]:
+				xmin = 2.0609
+				xmax = 3.66656
+				text = "Rkhebam"
+			intervals [4]:
+				xmin = 3.66656
+				xmax = 4.65026
+				text = "Rkhebam"
+			intervals [5]:
+				xmin = 4.65026
+				xmax = 5.03385
+				text = "fathered"
+			intervals [6]:
+				xmin = 5.03385
+				xmax = 6.74767
+				text = "Abea"
+			intervals [7]:
+				xmin = 6.74767
+				xmax = 7.77471
+				text = "Abea"
+			intervals [8]:
+				xmin = 7.77471
+				xmax = 8.20294
+				text = "fathered"
+			intervals [9]:
+				xmin = 8.20294
+				xmax = 9.58247
+				text = "Asa"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 9.58247
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 9.58247
+				text = "$leymwOn )owlEd larxEb,(am rxEb,(am )owlEd l)ab,yio) )ab,yio) )owlEd l)oso)"
