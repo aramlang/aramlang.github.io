@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 9.33782 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 9.33782 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.03735 
+            text = ")orom" 
+        intervals [2]:
+            xmin = 1.03735 
+            xmax = 1.4438 
+            text = ")owlEd" 
+        intervals [3]:
+            xmin = 1.4438 
+            xmax = 3.33332 
+            text = "l(amyinod,ob," 
+        intervals [4]:
+            xmin = 3.33332 
+            xmax = 4.52459 
+            text = "(amyinod,ob," 
+        intervals [5]:
+            xmin = 4.52459 
+            xmax = 4.9684 
+            text = ")owlEd" 
+        intervals [6]:
+            xmin = 4.9684 
+            xmax = 6.41996 
+            text = "lnEx$wOn" 
+        intervals [7]:
+            xmin = 6.41996 
+            xmax = 7.49869 
+            text = "nEx$wOn" 
+        intervals [8]:
+            xmin = 7.49869 
+            xmax = 7.95569 
+            text = ")owlEd" 
+        intervals [9]:
+            xmin = 7.95569 
+            xmax = 9.33782 
+            text = "lsalmwOn" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 9.33782 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.03735 
+            text = "Aram" 
+        intervals [2]:
+            xmin = 1.03735 
+            xmax = 1.4438 
+            text = "fathered" 
+        intervals [3]:
+            xmin = 1.4438 
+            xmax = 3.33332 
+            text = "Amenadab" 
+        intervals [4]:
+            xmin = 3.33332 
+            xmax = 4.52459 
+            text = "Amenadab" 
+        intervals [5]:
+            xmin = 4.52459 
+            xmax = 4.9684 
+            text = "fathered" 
+        intervals [6]:
+            xmin = 4.9684 
+            xmax = 6.41996 
+            text = "Nikhshon" 
+        intervals [7]:
+            xmin = 6.41996 
+            xmax = 7.49869 
+            text = "Nikhshon" 
+        intervals [8]:
+            xmin = 7.49869 
+            xmax = 7.95569 
+            text = "fathered" 
+        intervals [9]:
+            xmin = 7.95569 
+            xmax = 9.33782 
+            text = "Salmon" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 9.33782 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.33782 
+            text = ")orom )owlEd l(amyinod,ob, (amyinod,ob, )owlEd lnEx$wOn nEx$wOn )owlEd lsalmwOn" 
