@@ -1,0 +1,126 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 10.7136
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 10.7136
+		intervals: size = 12
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.84344
+				text = "yihwudo)"
+			intervals [2]:
+				xmin = 1.84344
+				xmax = 2.27228
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 2.27228
+				xmax = 3.09784
+				text = "lparc"
+			intervals [4]:
+				xmin = 3.09784
+				xmax = 3.80034
+				text = "walzarx"
+			intervals [5]:
+				xmin = 3.80034
+				xmax = 4.12402
+				text = "m,n"
+			intervals [6]:
+				xmin = 4.12402
+				xmax = 5.49847
+				text = "tomar"
+			intervals [7]:
+				xmin = 5.49847
+				xmax = 6.40402
+				text = "parc"
+			intervals [8]:
+				xmin = 6.40402
+				xmax = 6.95436
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 6.95436
+				xmax = 8.3294
+				text = "lxEcrwOn"
+			intervals [10]:
+				xmin = 8.3294
+				xmax = 9.13828
+				text = "xEcrwOn"
+			intervals [11]:
+				xmin = 9.13828
+				xmax = 9.59067
+				text = ")owlEd"
+			intervals [12]:
+				xmin = 9.59067
+				xmax = 10.7136
+				text = "l)orom"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 10.7136
+		intervals: size = 12
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.84344
+				text = "Yehuda"
+			intervals [2]:
+				xmin = 1.84344
+				xmax = 2.27228
+				text = "fathered"
+			intervals [3]:
+				xmin = 2.27228
+				xmax = 3.09784
+				text = "Pares"
+			intervals [4]:
+				xmin = 3.09784
+				xmax = 3.80034
+				text = "and Zarakh"
+			intervals [5]:
+				xmin = 3.80034
+				xmax = 4.12402
+				text = "by"
+			intervals [6]:
+				xmin = 4.12402
+				xmax = 5.49847
+				text = "Thamar"
+			intervals [7]:
+				xmin = 5.49847
+				xmax = 6.40402
+				text = "Pares"
+			intervals [8]:
+				xmin = 6.40402
+				xmax = 6.95436
+				text = "fathered"
+			intervals [9]:
+				xmin = 6.95436
+				xmax = 8.3294
+				text = "Khisron"
+			intervals [10]:
+				xmin = 8.3294
+				xmax = 9.13828
+				text = "Khisron"
+			intervals [11]:
+				xmin = 9.13828
+				xmax = 9.59067
+				text = "fathered"
+			intervals [12]:
+				xmin = 9.59067
+				xmax = 10.7136
+				text = "Aram"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 10.7136
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 10.7136
+				text = "yihwudo) )owlEd lparc walzarx m,n tomar parc )owlEd lxEcrwOn xEcrwOn )owlEd l)orom"

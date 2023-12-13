@@ -1,0 +1,110 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 9.70562
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 9.70562
+		intervals: size = 10
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.48676
+				text = ")ab,rohom"
+			intervals [2]:
+				xmin = 1.48676
+				xmax = 1.97
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 1.97
+				xmax = 3.20063
+				text = "l)yisxoq"
+			intervals [4]:
+				xmin = 3.20063
+				xmax = 4.036
+				text = ")yisxoq"
+			intervals [5]:
+				xmin = 4.036
+				xmax = 4.49013
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 4.49013
+				xmax = 5.721
+				text = "lya(qwOb,"
+			intervals [7]:
+				xmin = 5.721
+				xmax = 6.59247
+				text = "ya(qwOb,"
+			intervals [8]:
+				xmin = 6.59247
+				xmax = 7.01768
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 7.01768
+				xmax = 7.86089
+				text = "layhwudo)"
+			intervals [10]:
+				xmin = 7.86089
+				xmax = 9.70562
+				text = "wla)xow*hy"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 9.70562
+		intervals: size = 10
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.48676
+				text = "Awraham"
+			intervals [2]:
+				xmin = 1.48676
+				xmax = 1.97
+				text = "fathered"
+			intervals [3]:
+				xmin = 1.97
+				xmax = 3.20063
+				text = "Aeskhaq"
+			intervals [4]:
+				xmin = 3.20063
+				xmax = 4.036
+				text = "Aeskhaq"
+			intervals [5]:
+				xmin = 4.036
+				xmax = 4.49013
+				text = "fathered"
+			intervals [6]:
+				xmin = 4.49013
+				xmax = 5.721
+				text = "Yaqub"
+			intervals [7]:
+				xmin = 5.721
+				xmax = 6.59247
+				text = "Yaqub"
+			intervals [8]:
+				xmin = 6.59247
+				xmax = 7.01768
+				text = "fathered"
+			intervals [9]:
+				xmin = 7.01768
+				xmax = 7.86089
+				text = "Yehuda"
+			intervals [10]:
+				xmin = 7.86089
+				xmax = 9.70562
+				text = "and his brothers"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 9.70562
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 9.70562
+				text = ")ab,rohom )owlEd l)yisxoq )yisxoq )owlEd lya(qwOb, ya(qwOb, )owlEd layhwudo) wla)xow*hy"

@@ -1,236 +1,236 @@
 File type = "ooTextFile"
 Object class = "TextGrid"
 
-xmin = 0.0
-xmax = 283.887
-tiers? <exists>
-size = 2
-item []:
-	item [1]:
-		class = "IntervalTier"
-		name = "Verse"
-		xmin = 0.0
-		xmax = 283.887
-		intervals: size = 27
-			intervals [1]:
-				xmin = 0.0
-				xmax = 17.39811
-				text = ""
-			intervals [2]:
-				xmin = 17.39811
-				xmax = 24.55779
-				text = "kt,ob,o) dyilyid,wuteh dyi$wO( m$yixo) breh dd,wyid breh d)ab,rohom"
-			intervals [3]:
-				xmin = 24.55779
-				xmax = 34.2634
-				text = ")ab,rohom )owlEd l)yisxoq )yisxoq )owlEd lya(qwOb, ya(qwOb, )owlEd layhwudo) wla)xow*hy"
-			intervals [4]:
-				xmin = 34.2634
-				xmax = 44.97701
-				text = "Verse_3"
-			intervals [5]:
-				xmin = 44.97701
-				xmax = 54.31484
-				text = "Verse_4"
-			intervals [6]:
-				xmin = 54.31484
-				xmax = 65.33039
-				text = "Verse_5"
-			intervals [7]:
-				xmin = 65.33039
-				xmax = 73.63999
-				text = "Verse_6"
-			intervals [8]:
-				xmin = 73.63999
-				xmax = 83.22248
-				text = "Verse_7"
-			intervals [9]:
-				xmin = 83.22248
-				xmax = 93.10703
-				text = "Verse_8"
-			intervals [10]:
-				xmin = 93.10703
-				xmax = 102.38278
-				text = "Verse_9"
-			intervals [11]:
-				xmin = 102.38278
-				xmax = 112.39012
-				text = "Verse_10"
-			intervals [12]:
-				xmin = 112.39012
-				xmax = 118.43313
-				text = "Verse_11"
-			intervals [13]:
-				xmin = 118.43313
-				xmax = 128.47693
-				text = "Verse_12"
-			intervals [14]:
-				xmin = 128.47693
-				xmax = 138.7564
-				text = "Verse_13"
-			intervals [15]:
-				xmin = 138.7564
-				xmax = 147.47347
-				text = "Verse_14"
-			intervals [16]:
-				xmin = 147.47347
-				xmax = 156.98303
-				text = "Verse_15"
-			intervals [17]:
-				xmin = 156.98303
-				xmax = 166.0469
-				text = "ya(qwOb, )owlEd lyowsEp gab,roh dmaryam dmEnoh )Et,yilEd yi$wO( dmEt,_qrE) m$yixo)"
-			intervals [18]:
-				xmin = 166.0469
-				xmax = 192.41391
-				text = "Verse_17"
-			intervals [19]:
-				xmin = 192.41391
-				xmax = 210.52693
-				text = "Verse_18"
-			intervals [20]:
-				xmin = 210.52693
-				xmax = 221.32628
-				text = "Verse_19"
-			intervals [21]:
-				xmin = 221.32628
-				xmax = 239.75643
-				text = "Verse_20"
-			intervals [22]:
-				xmin = 239.75643
-				xmax = 249.10084
-				text = "Verse_21"
-			intervals [23]:
-				xmin = 249.10084
-				xmax = 256.88985
-				text = "Verse_22"
-			intervals [24]:
-				xmin = 256.88985
-				xmax = 267.0221
-				text = "Verse_23"
-			intervals [25]:
-				xmin = 267.0221
-				xmax = 276.16673
-				text = "Verse_24"
-			intervals [26]:
-				xmin = 276.16673
-				xmax = 283.4127
-				text = "Verse_25"
-			intervals [27]:
-				xmin = 283.4127
-				xmax = 283.887
-				text = ""
-	item [2]:
-		class = "IntervalTier"
-		name = "VerseNo"
-		xmin = 0.0
-		xmax = 283.887
-		intervals: size = 27
-			intervals [1]:
-				xmin = 0.0
-				xmax = 17.39811
-				text = "0"
-			intervals [2]:
-				xmin = 17.39811
-				xmax = 24.55779
-				text = "1"
-			intervals [3]:
-				xmin = 24.55779
-				xmax = 34.2634
-				text = "2"
-			intervals [4]:
-				xmin = 34.2634
-				xmax = 44.97701
-				text = "3"
-			intervals [5]:
-				xmin = 44.97701
-				xmax = 54.31484
-				text = "4"
-			intervals [6]:
-				xmin = 54.31484
-				xmax = 65.33039
-				text = "5"
-			intervals [7]:
-				xmin = 65.33039
-				xmax = 73.63999
-				text = "6"
-			intervals [8]:
-				xmin = 73.63999
-				xmax = 83.22248
-				text = "7"
-			intervals [9]:
-				xmin = 83.22248
-				xmax = 93.10703
-				text = "8"
-			intervals [10]:
-				xmin = 93.10703
-				xmax = 102.38278
-				text = "9"
-			intervals [11]:
-				xmin = 102.38278
-				xmax = 112.39012
-				text = "10"
-			intervals [12]:
-				xmin = 112.39012
-				xmax = 118.43313
-				text = "11"
-			intervals [13]:
-				xmin = 118.43313
-				xmax = 128.47693
-				text = "12"
-			intervals [14]:
-				xmin = 128.47693
-				xmax = 138.7564
-				text = "13"
-			intervals [15]:
-				xmin = 138.7564
-				xmax = 147.47347
-				text = "14"
-			intervals [16]:
-				xmin = 147.47347
-				xmax = 156.98303
-				text = "15"
-			intervals [17]:
-				xmin = 156.98303
-				xmax = 166.0469
-				text = "16"
-			intervals [18]:
-				xmin = 166.0469
-				xmax = 192.41391
-				text = "17"
-			intervals [19]:
-				xmin = 192.41391
-				xmax = 210.52693
-				text = "18"
-			intervals [20]:
-				xmin = 210.52693
-				xmax = 221.32628
-				text = "19"
-			intervals [21]:
-				xmin = 221.32628
-				xmax = 239.75643
-				text = "20"
-			intervals [22]:
-				xmin = 239.75643
-				xmax = 249.10084
-				text = "21"
-			intervals [23]:
-				xmin = 249.10084
-				xmax = 256.88985
-				text = "22"
-			intervals [24]:
-				xmin = 256.88985
-				xmax = 267.0221
-				text = "23"
-			intervals [25]:
-				xmin = 267.0221
-				xmax = 276.16673
-				text = "24"
-			intervals [26]:
-				xmin = 276.16673
-				xmax = 283.4127
-				text = "25"
-			intervals [27]:
-				xmin = 283.4127
-				xmax = 283.887
-				text = ""
+xmin = 0 
+xmax = 283.887 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 283.887 
+        intervals: size = 27 
+        intervals [1]:
+            xmin = 0 
+            xmax = 17.39811 
+            text = "" 
+        intervals [2]:
+            xmin = 17.39811 
+            xmax = 24.55779 
+            text = "kt,ob,o) dyilyid,wuteh dyi$wO( m$yixo) breh dd,wyid breh d)ab,rohom" 
+        intervals [3]:
+            xmin = 24.55779 
+            xmax = 34.2634 
+            text = ")ab,rohom )owlEd l)yisxoq )yisxoq )owlEd lya(qwOb, ya(qwOb, )owlEd layhwudo) wla)xow*hy" 
+        intervals [4]:
+            xmin = 34.2634 
+            xmax = 44.97701 
+            text = "yihwudo) )owlEd lparc walzarx m,n tomar parc )owlEd lxEcrwOn xEcrwOn )owlEd l)orom" 
+        intervals [5]:
+            xmin = 44.97701 
+            xmax = 54.31484 
+            text = "Verse_4" 
+        intervals [6]:
+            xmin = 54.31484 
+            xmax = 65.33039 
+            text = "Verse_5" 
+        intervals [7]:
+            xmin = 65.33039 
+            xmax = 73.63999 
+            text = "Verse_6" 
+        intervals [8]:
+            xmin = 73.63999 
+            xmax = 83.22248 
+            text = "Verse_7" 
+        intervals [9]:
+            xmin = 83.22248 
+            xmax = 93.10703 
+            text = "Verse_8" 
+        intervals [10]:
+            xmin = 93.10703 
+            xmax = 102.38278 
+            text = "Verse_9" 
+        intervals [11]:
+            xmin = 102.38278 
+            xmax = 112.39012 
+            text = "Verse_10" 
+        intervals [12]:
+            xmin = 112.39012 
+            xmax = 118.43313 
+            text = "Verse_11" 
+        intervals [13]:
+            xmin = 118.43313 
+            xmax = 128.47693 
+            text = "Verse_12" 
+        intervals [14]:
+            xmin = 128.47693 
+            xmax = 138.7564 
+            text = "Verse_13" 
+        intervals [15]:
+            xmin = 138.7564 
+            xmax = 147.47347 
+            text = "Verse_14" 
+        intervals [16]:
+            xmin = 147.47347 
+            xmax = 156.98303 
+            text = "Verse_15" 
+        intervals [17]:
+            xmin = 156.98303 
+            xmax = 166.0469 
+            text = "ya(qwOb, )owlEd lyowsEp gab,roh dmaryam dmEnoh )Et,yilEd yi$wO( dmEt,_qrE) m$yixo)" 
+        intervals [18]:
+            xmin = 166.0469 
+            xmax = 192.41391 
+            text = "Verse_17" 
+        intervals [19]:
+            xmin = 192.41391 
+            xmax = 210.52693 
+            text = "Verse_18" 
+        intervals [20]:
+            xmin = 210.52693 
+            xmax = 221.32628 
+            text = "Verse_19" 
+        intervals [21]:
+            xmin = 221.32628 
+            xmax = 239.75643 
+            text = "Verse_20" 
+        intervals [22]:
+            xmin = 239.75643 
+            xmax = 249.10084 
+            text = "Verse_21" 
+        intervals [23]:
+            xmin = 249.10084 
+            xmax = 256.88985 
+            text = "Verse_22" 
+        intervals [24]:
+            xmin = 256.88985 
+            xmax = 267.0221 
+            text = "Verse_23" 
+        intervals [25]:
+            xmin = 267.0221 
+            xmax = 276.16673 
+            text = "Verse_24" 
+        intervals [26]:
+            xmin = 276.16673 
+            xmax = 283.4127 
+            text = "Verse_25" 
+        intervals [27]:
+            xmin = 283.4127 
+            xmax = 283.887 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "VerseNo" 
+        xmin = 0 
+        xmax = 283.887 
+        intervals: size = 27 
+        intervals [1]:
+            xmin = 0 
+            xmax = 17.39811 
+            text = "0" 
+        intervals [2]:
+            xmin = 17.39811 
+            xmax = 24.55779 
+            text = "1" 
+        intervals [3]:
+            xmin = 24.55779 
+            xmax = 34.2634 
+            text = "2" 
+        intervals [4]:
+            xmin = 34.2634 
+            xmax = 44.97701 
+            text = "3" 
+        intervals [5]:
+            xmin = 44.97701 
+            xmax = 54.31484 
+            text = "4" 
+        intervals [6]:
+            xmin = 54.31484 
+            xmax = 65.33039 
+            text = "5" 
+        intervals [7]:
+            xmin = 65.33039 
+            xmax = 73.63999 
+            text = "6" 
+        intervals [8]:
+            xmin = 73.63999 
+            xmax = 83.22248 
+            text = "7" 
+        intervals [9]:
+            xmin = 83.22248 
+            xmax = 93.10703 
+            text = "8" 
+        intervals [10]:
+            xmin = 93.10703 
+            xmax = 102.38278 
+            text = "9" 
+        intervals [11]:
+            xmin = 102.38278 
+            xmax = 112.39012 
+            text = "10" 
+        intervals [12]:
+            xmin = 112.39012 
+            xmax = 118.43313 
+            text = "11" 
+        intervals [13]:
+            xmin = 118.43313 
+            xmax = 128.47693 
+            text = "12" 
+        intervals [14]:
+            xmin = 128.47693 
+            xmax = 138.7564 
+            text = "13" 
+        intervals [15]:
+            xmin = 138.7564 
+            xmax = 147.47347 
+            text = "14" 
+        intervals [16]:
+            xmin = 147.47347 
+            xmax = 156.98303 
+            text = "15" 
+        intervals [17]:
+            xmin = 156.98303 
+            xmax = 166.0469 
+            text = "16" 
+        intervals [18]:
+            xmin = 166.0469 
+            xmax = 192.41391 
+            text = "17" 
+        intervals [19]:
+            xmin = 192.41391 
+            xmax = 210.52693 
+            text = "18" 
+        intervals [20]:
+            xmin = 210.52693 
+            xmax = 221.32628 
+            text = "19" 
+        intervals [21]:
+            xmin = 221.32628 
+            xmax = 239.75643 
+            text = "20" 
+        intervals [22]:
+            xmin = 239.75643 
+            xmax = 249.10084 
+            text = "21" 
+        intervals [23]:
+            xmin = 249.10084 
+            xmax = 256.88985 
+            text = "22" 
+        intervals [24]:
+            xmin = 256.88985 
+            xmax = 267.0221 
+            text = "23" 
+        intervals [25]:
+            xmin = 267.0221 
+            xmax = 276.16673 
+            text = "24" 
+        intervals [26]:
+            xmin = 276.16673 
+            xmax = 283.4127 
+            text = "25" 
+        intervals [27]:
+            xmin = 283.4127 
+            xmax = 283.887 
+            text = "" 
