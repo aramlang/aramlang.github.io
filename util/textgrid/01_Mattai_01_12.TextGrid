@@ -14,14 +14,14 @@ item []:
 		intervals: size = 10
 			intervals [1]:
 				xmin = 0.0
-				xmax = 1.43342
+				xmax = 1.37166
 				text = "wmn\u00A0bot,ar"
 			intervals [2]:
-				xmin = 1.43342
-				xmax = 2.15219
+				xmin = 1.37166
+				xmax = 2.10646
 				text = "golwut,o)"
 			intervals [3]:
-				xmin = 2.15219
+				xmin = 2.10646
 				xmax = 2.45705
 				text = "dyen"
 			intervals [4]:
@@ -60,14 +60,14 @@ item []:
 		intervals: size = 10
 			intervals [1]:
 				xmin = 0.0
-				xmax = 1.43342
+				xmax = 1.37166
 				text = "<span class=""underline"">and after</span>"
 			intervals [2]:
-				xmin = 1.43342
-				xmax = 2.15219
+				xmin = 1.37166
+				xmax = 2.10646
 				text = "the captivity"
 			intervals [3]:
-				xmin = 2.15219
+				xmin = 2.10646
 				xmax = 2.45705
 				text = "now"
 			intervals [4]:
