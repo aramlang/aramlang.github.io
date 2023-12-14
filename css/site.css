@@ -497,3 +497,7 @@ hr {
 li {
   font-style: italic;
 }
+
+.underline {
+  text-decoration-line: underline;
+}

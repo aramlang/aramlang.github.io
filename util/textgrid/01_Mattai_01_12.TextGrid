@@ -1,0 +1,110 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 10.04381
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 10.04381
+		intervals: size = 10
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.43342
+				text = "wmn\u00A0bot,ar"
+			intervals [2]:
+				xmin = 1.43342
+				xmax = 2.15219
+				text = "golwut,o)"
+			intervals [3]:
+				xmin = 2.15219
+				xmax = 2.45705
+				text = "dyen"
+			intervals [4]:
+				xmin = 2.45705
+				xmax = 3.81323
+				text = "db,obel"
+			intervals [5]:
+				xmin = 3.81323
+				xmax = 4.78329
+				text = "ywOkanyo)"
+			intervals [6]:
+				xmin = 4.78329
+				xmax = 5.25257
+				text = ")owlEd"
+			intervals [7]:
+				xmin = 5.25257
+				xmax = 7.03158
+				text = "l$elat,)eyl"
+			intervals [8]:
+				xmin = 7.03158
+				xmax = 8.09102
+				text = "$elat,)eyl"
+			intervals [9]:
+				xmin = 8.09102
+				xmax = 8.56463
+				text = ")owlEd"
+			intervals [10]:
+				xmin = 8.56463
+				xmax = 10.04381
+				text = "lzwurbobel"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 10.04381
+		intervals: size = 10
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.43342
+				text = "<span class=""underline"">and after</span>"
+			intervals [2]:
+				xmin = 1.43342
+				xmax = 2.15219
+				text = "the captivity"
+			intervals [3]:
+				xmin = 2.15219
+				xmax = 2.45705
+				text = "now"
+			intervals [4]:
+				xmin = 2.45705
+				xmax = 3.81323
+				text = "of Babel"
+			intervals [5]:
+				xmin = 3.81323
+				xmax = 4.78329
+				text = "Yokhanea"
+			intervals [6]:
+				xmin = 4.78329
+				xmax = 5.25257
+				text = "fathered"
+			intervals [7]:
+				xmin = 5.25257
+				xmax = 7.03158
+				text = "Shilathiel"
+			intervals [8]:
+				xmin = 7.03158
+				xmax = 8.09102
+				text = "Shilathiel"
+			intervals [9]:
+				xmin = 8.09102
+				xmax = 8.56463
+				text = "fathered"
+			intervals [10]:
+				xmin = 8.56463
+				xmax = 10.04381
+				text = "Zerubabel"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 10.04381
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 10.04381
+				text = "wmn\u00A0bot,ar golwut,o) dyen db,obel ywOkanyo) )owlEd l$elat,)eyl $elat,)eyl )owlEd lzwurbobel"

@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 10.00732
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 10.00732
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.83515
+				text = "xezaqyo)"
+			intervals [2]:
+				xmin = 1.83515
+				xmax = 2.22358
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 2.22358
+				xmax = 4.04031
+				text = "lamna$e)"
+			intervals [4]:
+				xmin = 4.04031
+				xmax = 5.13608
+				text = "mna$e)"
+			intervals [5]:
+				xmin = 5.13608
+				xmax = 5.51418
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 5.51418
+				xmax = 7.0692
+				text = "l)amwOn"
+			intervals [7]:
+				xmin = 7.0692
+				xmax = 8.05944
+				text = ")amwOn"
+			intervals [8]:
+				xmin = 8.05944
+				xmax = 8.45857
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 8.45857
+				xmax = 10.00732
+				text = "lywO$yio)"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 10.00732
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.83515
+				text = "Khizaqea"
+			intervals [2]:
+				xmin = 1.83515
+				xmax = 2.22358
+				text = "fathered"
+			intervals [3]:
+				xmin = 2.22358
+				xmax = 4.04031
+				text = "Mnashe"
+			intervals [4]:
+				xmin = 4.04031
+				xmax = 5.13608
+				text = "Mnashe"
+			intervals [5]:
+				xmin = 5.13608
+				xmax = 5.51418
+				text = "fathered"
+			intervals [6]:
+				xmin = 5.51418
+				xmax = 7.0692
+				text = "Amon"
+			intervals [7]:
+				xmin = 7.0692
+				xmax = 8.05944
+				text = "Amon"
+			intervals [8]:
+				xmin = 8.05944
+				xmax = 8.45857
+				text = "fathered"
+			intervals [9]:
+				xmin = 8.45857
+				xmax = 10.00732
+				text = "Yoshea"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 10.00732
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 10.00732
+				text = "xezaqyo) )owlEd lamna$e) mna$e) )owlEd l)amwOn )amwOn )owlEd lywO$yio)"

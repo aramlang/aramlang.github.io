@@ -1,0 +1,78 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 6.04302
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 6.04302
+		intervals: size = 6
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.38157
+				text = "ywO$yio)"
+			intervals [2]:
+				xmin = 1.38157
+				xmax = 1.77515
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 1.77515
+				xmax = 2.51263
+				text = "lywOkanyo)"
+			intervals [4]:
+				xmin = 2.51263
+				xmax = 3.90863
+				text = "wla)xow*hy"
+			intervals [5]:
+				xmin = 3.90863
+				xmax = 4.81518
+				text = "bg,olwut,o)"
+			intervals [6]:
+				xmin = 4.81518
+				xmax = 6.04302
+				text = "db,obel"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 6.04302
+		intervals: size = 6
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.38157
+				text = "Yoshea"
+			intervals [2]:
+				xmin = 1.38157
+				xmax = 1.77515
+				text = "fathered"
+			intervals [3]:
+				xmin = 1.77515
+				xmax = 2.51263
+				text = "Yokhanea"
+			intervals [4]:
+				xmin = 2.51263
+				xmax = 3.90863
+				text = "and his brothers"
+			intervals [5]:
+				xmin = 3.90863
+				xmax = 4.81518
+				text = "in the captivity"
+			intervals [6]:
+				xmin = 4.81518
+				xmax = 6.04302
+				text = "of Babel"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 6.04302
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 6.04302
+				text = "ywO$yio) )owlEd lywOkanyo) wla)xow*hy bg,olwut,o) db,obel"
