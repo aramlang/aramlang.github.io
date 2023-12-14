@@ -41,6 +41,19 @@ export default (bookNo, chapterNo) => {
       }
     }
   }
+
+  let maxWidth = 0;
+  const noElems = document.querySelectorAll('.no');
+  for (let i = 0; i < noElems.length; i++) {
+    const width = noElems[i].getBoundingClientRect().width;
+    if (width > maxWidth) {
+      maxWidth = width;
+    }
+  }
+  for (let i = 0; i < noElems.length; i++) {
+    noElems[i].style.width = maxWidth + 'px';
+  }
+
   let event = new CustomEvent('pageCompleted', { detail: page });
   document.dispatchEvent(event);
 }

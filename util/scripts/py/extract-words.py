@@ -109,7 +109,7 @@ def create_html_file(words, filename, punctuations):
     html_template = Template('''    <div class="row">
       <div class="col">
         <div class="no">
-          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="$verse-0w"></span>&nbsp;</a><br>
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="$verse-0w"></span></a><br>
           <a href="#" title="Go Up" class="enn">$verse</a>
         </div>
       </div>
