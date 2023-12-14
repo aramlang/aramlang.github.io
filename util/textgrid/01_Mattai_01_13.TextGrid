@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 10.27946
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 10.27946
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.35787
+				text = "zwurbobel"
+			intervals [2]:
+				xmin = 1.35787
+				xmax = 1.85431
+				text = ")owlEd,"
+			intervals [3]:
+				xmin = 1.85431
+				xmax = 3.71775
+				text = "l)ab,yiwOd"
+			intervals [4]:
+				xmin = 3.71775
+				xmax = 4.91821
+				text = ")ab,yiwOd"
+			intervals [5]:
+				xmin = 4.91821
+				xmax = 5.36945
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 5.36945
+				xmax = 7.17625
+				text = "l)Elyoqyim"
+			intervals [7]:
+				xmin = 7.17625
+				xmax = 8.34037
+				text = ")Elyoqyim"
+			intervals [8]:
+				xmin = 8.34037
+				xmax = 8.80612
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 8.80612
+				xmax = 10.27946
+				text = "l(ozwOr"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 10.27946
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.35787
+				text = "Zerubabel"
+			intervals [2]:
+				xmin = 1.35787
+				xmax = 1.85431
+				text = "fathered"
+			intervals [3]:
+				xmin = 1.85431
+				xmax = 3.71775
+				text = "Awiud"
+			intervals [4]:
+				xmin = 3.71775
+				xmax = 4.91821
+				text = "Awiud"
+			intervals [5]:
+				xmin = 4.91821
+				xmax = 5.36945
+				text = "fathered"
+			intervals [6]:
+				xmin = 5.36945
+				xmax = 7.17625
+				text = "Eleakem"
+			intervals [7]:
+				xmin = 7.17625
+				xmax = 8.34037
+				text = "Eleakem"
+			intervals [8]:
+				xmin = 8.34037
+				xmax = 8.80612
+				text = "fathered"
+			intervals [9]:
+				xmin = 8.80612
+				xmax = 10.27946
+				text = "Azor"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 10.27946
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 10.27946
+				text = "zwurbobel )owlEd, l)ab,yiwOd )ab,yiwOd )owlEd l)Elyoqyim )Elyoqyim )owlEd l(ozwOr"

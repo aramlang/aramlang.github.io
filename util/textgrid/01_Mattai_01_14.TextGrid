@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 8.71707
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 8.71707
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.12514
+				text = "(ozwOr"
+			intervals [2]:
+				xmin = 1.12514
+				xmax = 1.59172
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 1.59172
+				xmax = 3.06567
+				text = "lzodwOq"
+			intervals [4]:
+				xmin = 3.06567
+				xmax = 4.00615
+				text = "zod,wOq"
+			intervals [5]:
+				xmin = 4.00615
+				xmax = 4.42773
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 4.42773
+				xmax = 5.8114
+				text = "l)ak,yin"
+			intervals [7]:
+				xmin = 5.8114
+				xmax = 6.67082
+				text = ")ak,yin"
+			intervals [8]:
+				xmin = 6.67082
+				xmax = 7.08573
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 7.08573
+				xmax = 8.71707
+				text = "l)elyiwOd"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 8.71707
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.12514
+				text = "Azor"
+			intervals [2]:
+				xmin = 1.12514
+				xmax = 1.59172
+				text = "fathered"
+			intervals [3]:
+				xmin = 1.59172
+				xmax = 3.06567
+				text = "Zadoq"
+			intervals [4]:
+				xmin = 3.06567
+				xmax = 4.00615
+				text = "Zadoq"
+			intervals [5]:
+				xmin = 4.00615
+				xmax = 4.42773
+				text = "fathered"
+			intervals [6]:
+				xmin = 4.42773
+				xmax = 5.8114
+				text = "Akhen"
+			intervals [7]:
+				xmin = 5.8114
+				xmax = 6.67082
+				text = "Akhen"
+			intervals [8]:
+				xmin = 6.67082
+				xmax = 7.08573
+				text = "fathered"
+			intervals [9]:
+				xmin = 7.08573
+				xmax = 8.71707
+				text = "Eleud"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 8.71707
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 8.71707
+				text = "(ozwOr )owlEd lzodwOq zod,wOq )owlEd l)ak,yin )ak,yin )owlEd l)elyiwOd"

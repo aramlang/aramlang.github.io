@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 9.50957
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 9.50957
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.28455
+				text = ")elyiwOd"
+			intervals [2]:
+				xmin = 1.28455
+				xmax = 1.75053
+				text = ")owlEd"
+			intervals [3]:
+				xmin = 1.75053
+				xmax = 3.53815
+				text = "l)elyi(ozar"
+			intervals [4]:
+				xmin = 3.53815
+				xmax = 4.75092
+				text = ")elyi(ozar"
+			intervals [5]:
+				xmin = 4.75092
+				xmax = 5.14633
+				text = ")owlEd"
+			intervals [6]:
+				xmin = 5.14633
+				xmax = 6.75384
+				text = "lmot,,an "
+			intervals [7]:
+				xmin = 6.75384
+				xmax = 7.75847
+				text = "mot,,an"
+			intervals [8]:
+				xmin = 7.75847
+				xmax = 8.20264
+				text = ")owlEd"
+			intervals [9]:
+				xmin = 8.20264
+				xmax = 9.50957
+				text = "lya(qwOb,"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 9.50957
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.28455
+				text = "Eleud"
+			intervals [2]:
+				xmin = 1.28455
+				xmax = 1.75053
+				text = "fathered"
+			intervals [3]:
+				xmin = 1.75053
+				xmax = 3.53815
+				text = "Eleazar"
+			intervals [4]:
+				xmin = 3.53815
+				xmax = 4.75092
+				text = "Eleazar"
+			intervals [5]:
+				xmin = 4.75092
+				xmax = 5.14633
+				text = "fathered"
+			intervals [6]:
+				xmin = 5.14633
+				xmax = 6.75384
+				text = "Matan"
+			intervals [7]:
+				xmin = 6.75384
+				xmax = 7.75847
+				text = "Matan"
+			intervals [8]:
+				xmin = 7.75847
+				xmax = 8.20264
+				text = "fathered"
+			intervals [9]:
+				xmin = 8.20264
+				xmax = 9.50957
+				text = "Yaqub"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 9.50957
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 9.50957
+				text = ")elyiwOd )owlEd l)elyi(ozar )elyi(ozar )owlEd lmot,,an mot,,an )owlEd lya(qwOb,"
