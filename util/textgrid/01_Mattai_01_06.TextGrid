@@ -14,42 +14,42 @@ item []:
         intervals: size = 10 
         intervals [1]:
             xmin = 0 
-            xmax = 1.313 
+            xmax = 1.3130011337868481 
             text = ")yi$ay" 
         intervals [2]:
-            xmin = 1.313 
-            xmax = 1.67003 
+            xmin = 1.3130011337868481 
+            xmax = 1.6700295837825112 
             text = ")owlEd" 
         intervals [3]:
-            xmin = 1.67003 
-            xmax = 2.36357 
+            xmin = 1.6700295837825112 
+            xmax = 2.3635663627152987 
             text = "ldowyid" 
         intervals [4]:
-            xmin = 2.36357 
-            xmax = 3.82146 
+            xmin = 2.3635663627152987 
+            xmax = 3.8214647973010343 
             text = "malko)" 
         intervals [5]:
-            xmin = 3.82146 
-            xmax = 4.67353 
+            xmin = 3.8214647973010343 
+            xmax = 4.673529565672422 
             text = "dowyid" 
         intervals [6]:
-            xmin = 4.67353 
-            xmax = 5.09278 
+            xmin = 4.673529565672422 
+            xmax = 5.0927806292177555 
             text = ")owlEd" 
         intervals [7]:
-            xmin = 5.09278 
-            xmax = 6.05513 
+            xmin = 5.0927806292177555 
+            xmax = 6.0551334295776185 
             text = "la$leymwOn" 
         intervals [8]:
-            xmin = 6.05513 
-            xmax = 6.39774 
+            xmin = 6.0551334295776185 
+            xmax = 6.397736094437775 
             text = "m,n" 
         intervals [9]:
-            xmin = 6.39774 
-            xmax = 6.9613 
+            xmin = 6.397736094437775 
+            xmax = 6.9613015873015875 
             text = ")an_tteh" 
         intervals [10]:
-            xmin = 6.9613 
+            xmin = 6.9613015873015875 
             xmax = 8.30962 
             text = "d)wOryio)" 
     item [2]:
