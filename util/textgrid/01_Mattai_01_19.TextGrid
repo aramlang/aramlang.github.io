@@ -1,0 +1,118 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 10.79934
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 10.79934
+		intervals: size = 11
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.36027
+				text = "yowsEp"
+			intervals [2]:
+				xmin = 1.36027
+				xmax = 1.7028
+				text = "dyen"
+			intervals [3]:
+				xmin = 1.7028
+				xmax = 2.30631
+				text = "ba(loh"
+			intervals [4]:
+				xmin = 2.30631
+				xmax = 2.79537
+				text = "ke)no)"
+			intervals [5]:
+				xmin = 2.79537
+				xmax = 4.15567
+				text = "h_wo)"
+			intervals [6]:
+				xmin = 4.15567
+				xmax = 4.85748
+				text = "wlo)"
+			intervals [7]:
+				xmin = 4.85748
+				xmax = 5.37888
+				text = "cb,o)"
+			intervals [8]:
+				xmin = 5.37888
+				xmax = 7.22784
+				text = "danparseyh"
+			intervals [9]:
+				xmin = 7.22784
+				xmax = 8.30579
+				text = "w)Et,ra(yi\u00A0h_wo)"
+			intervals [10]:
+				xmin = 8.30579
+				xmax = 9.31567
+				text = "d,maT$_yo)yit,"
+			intervals [11]:
+				xmin = 9.31567
+				xmax = 10.79934
+				text = "nE$reyh"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 10.79934
+		intervals: size = 11
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.36027
+				text = "Yosip"
+			intervals [2]:
+				xmin = 1.36027
+				xmax = 1.7028
+				text = "but"
+			intervals [3]:
+				xmin = 1.7028
+				xmax = 2.30631
+				text = "her husband<a href="#lord"><sup>2</sup></a>"
+			intervals [4]:
+				xmin = 2.30631
+				xmax = 2.79537
+				text = "just"
+			intervals [5]:
+				xmin = 2.79537
+				xmax = 4.15567
+				text = "was"
+			intervals [6]:
+				xmin = 4.15567
+				xmax = 4.85748
+				text = "and not"
+			intervals [7]:
+				xmin = 4.85748
+				xmax = 5.37888
+				text = "did desire"
+			intervals [8]:
+				xmin = 5.37888
+				xmax = 7.22784
+				text = "to expose her"
+			intervals [9]:
+				xmin = 7.22784
+				xmax = 8.30579
+				text = "<span class=""underline"">yet he was thinking</span>"
+			intervals [10]:
+				xmin = 8.30579
+				xmax = 9.31567
+				text = "that in secret"
+			intervals [11]:
+				xmin = 9.31567
+				xmax = 10.79934
+				text = "he would dismiss her"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 10.79934
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 10.79934
+				text = "yowsEp dyen ba(loh ke)no) h_wo) wlo) cb,o) danparseyh w)Et,ra(yi\u00A0h_wo) d,maT$_yo)yit, nE$reyh"

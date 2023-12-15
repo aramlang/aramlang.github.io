@@ -1,0 +1,182 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 18.11304
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 18.11304
+		intervals: size = 19
+			intervals [1]:
+				xmin = 0.0
+				xmax = 3.09067
+				text = "yaldeh"
+			intervals [2]:
+				xmin = 3.09067
+				xmax = 3.45418
+				text = "deyn"
+			intervals [3]:
+				xmin = 3.45418
+				xmax = 3.98347
+				text = "dyi$wO("
+			intervals [4]:
+				xmin = 3.98347
+				xmax = 4.76651
+				text = "m$y,xo)"
+			intervals [5]:
+				xmin = 4.76651
+				xmax = 5.36415
+				text = "hokano)"
+			intervals [6]:
+				xmin = 5.36415
+				xmax = 7.12957
+				text = "hwo)"
+			intervals [7]:
+				xmin = 7.12957
+				xmax = 7.76962
+				text = "kad"
+			intervals [8]:
+				xmin = 7.76962
+				xmax = 8.44932
+				text = "mk,yiro)"
+			intervals [9]:
+				xmin = 8.44932
+				xmax = 8.76454
+				text = "h_wot,"
+			intervals [10]:
+				xmin = 8.76454
+				xmax = 9.49377
+				text = "maryam"
+			intervals [11]:
+				xmin = 9.49377
+				xmax = 9.86408
+				text = ")Emeh"
+			intervals [12]:
+				xmin = 9.86408
+				xmax = 11.74647
+				text = "lyowsEp"
+			intervals [13]:
+				xmin = 11.74647
+				xmax = 12.68624
+				text = "(ad,lo)"
+			intervals [14]:
+				xmin = 12.68624
+				xmax = 14.55003
+				text = "nE$towtpwOn"
+			intervals [15]:
+				xmin = 14.55003
+				xmax = 15.52658
+				text = ")E$tak,xat"
+			intervals [16]:
+				xmin = 15.52658
+				xmax = 15.96758
+				text = "baTno)"
+			intervals [17]:
+				xmin = 15.96758
+				xmax = 16.18556
+				text = "mn"
+			intervals [18]:
+				xmin = 16.18556
+				xmax = 16.64416
+				text = "rwuxo)"
+			intervals [19]:
+				xmin = 16.64416
+				xmax = 18.11304
+				text = "dqwud$o)"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 18.11304
+		intervals: size = 19
+			intervals [1]:
+				xmin = 0.0
+				xmax = 3.09067
+				text = "the birth"
+			intervals [2]:
+				xmin = 3.09067
+				xmax = 3.45418
+				text = "now"
+			intervals [3]:
+				xmin = 3.45418
+				xmax = 3.98347
+				text = "of Yeshua"
+			intervals [4]:
+				xmin = 3.98347
+				xmax = 4.76651
+				text = "the Messiah"
+			intervals [5]:
+				xmin = 4.76651
+				xmax = 5.36415
+				text = "like this"
+			intervals [6]:
+				xmin = 5.36415
+				xmax = 7.12957
+				text = "[it] was"
+			intervals [7]:
+				xmin = 7.12957
+				xmax = 7.76962
+				text = "while"
+			intervals [8]:
+				xmin = 7.76962
+				xmax = 8.44932
+				text = "betrothed"
+			intervals [9]:
+				xmin = 8.44932
+				xmax = 8.76454
+				text = "was"
+			intervals [10]:
+				xmin = 8.76454
+				xmax = 9.49377
+				text = "Maryam"
+			intervals [11]:
+				xmin = 9.49377
+				xmax = 9.86408
+				text = "his mother"
+			intervals [12]:
+				xmin = 9.86408
+				xmax = 11.74647
+				text = "to Yosip"
+			intervals [13]:
+				xmin = 11.74647
+				xmax = 12.68624
+				text = "without"
+			intervals [14]:
+				xmin = 12.68624
+				xmax = 14.55003
+				text = "them being united"
+			intervals [15]:
+				xmin = 14.55003
+				xmax = 15.52658
+				text = "she was found"
+			intervals [16]:
+				xmin = 15.52658
+				xmax = 15.96758
+				text = "pregnant"
+			intervals [17]:
+				xmin = 15.96758
+				xmax = 16.18556
+				text = "by"
+			intervals [18]:
+				xmin = 16.18556
+				xmax = 16.64416
+				text = "the Spirit"
+			intervals [19]:
+				xmin = 16.64416
+				xmax = 18.11304
+				text = "Holy"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 18.11304
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 18.11304
+				text = "yaldeh deyn dyi$wO( m$y,xo) hokano) hwo) kad mk,yiro) h_wot, maryam )Emeh lyowsEp (ad,lo) nE$towtpwOn )E$tak,xat baTno) mn rwuxo) dqwud$o)"
