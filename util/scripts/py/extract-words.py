@@ -106,24 +106,26 @@ def create_javascript_file(words, filename):
 
 def create_html_file(words, filename, punctuations):
     verse = int(extract_verse_number(filename))
-    html_template = Template('''    <div class="row">
-      <div class="col">
+    html_template = Template('''    <div class="verse">
+      <div class="verse-number">
         <div class="no">
           <a href="#" title="Go Up" lang="syc" class="syr r"><span id="$verse-0w"></span></a><br>
           <a href="#" title="Go Up" class="enn">$verse</a>
         </div>
       </div>
-$content    </div>
+      <div class="verse-text">
+$content      </div>
+    </div>
 ''')
     verse_punctuation = punctuations.get(str(verse))
     content = ''
     for wordNo, word in enumerate(words, start=1):
         word_punctuation = verse_punctuation.get(str(wordNo))
         punctuation_class = f' {word_punctuation}' if word_punctuation else ''
-        content = content + f'''      <div class="col">
-        <div id="{verse}-{wordNo}w" lang="syc" class="syr t{punctuation_class}"></div>
-        <div id="{verse}-{wordNo}i" class="eng">{word["i"]}</div>
-      </div>
+        content = content + f'''        <div class="col">
+          <div id="{verse}-{wordNo}w" lang="syc" class="syr t{punctuation_class}"></div>
+          <div id="{verse}-{wordNo}i" class="eng">{word["i"]}</div>
+        </div>
 '''
 
     html_content = html_template.substitute(verse=verse, content=content)
