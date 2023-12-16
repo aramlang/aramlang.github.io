@@ -1,0 +1,118 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 10.13227
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 10.13227
+		intervals: size = 11
+			intervals [1]:
+				xmin = 0.0
+				xmax = 0.96304
+				text = "dho)"
+			intervals [2]:
+				xmin = 0.96304
+				xmax = 1.56764
+				text = "bt,wulto)"
+			intervals [3]:
+				xmin = 1.56764
+				xmax = 2.11054
+				text = "tEb,Tan"
+			intervals [4]:
+				xmin = 2.11054
+				xmax = 2.69961
+				text = "wte)lad,"
+			intervals [5]:
+				xmin = 2.69961
+				xmax = 3.87734
+				text = "bro)"
+			intervals [6]:
+				xmin = 3.87734
+				xmax = 4.69558
+				text = "wnEqrwOn"
+			intervals [7]:
+				xmin = 4.69558
+				xmax = 5.25344
+				text = "$meh"
+			intervals [8]:
+				xmin = 5.25344
+				xmax = 7.01997
+				text = "(amanwu)eyl"
+			intervals [9]:
+				xmin = 7.01997
+				xmax = 8.27456
+				text = "dmEt'targam"
+			intervals [10]:
+				xmin = 8.27456
+				xmax = 8.74821
+				text = "(amn"
+			intervals [11]:
+				xmin = 8.74821
+				xmax = 10.13227
+				text = ")alohan"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 10.13227
+		intervals: size = 11
+			intervals [1]:
+				xmin = 0.0
+				xmax = 0.96304
+				text = "behold"
+			intervals [2]:
+				xmin = 0.96304
+				xmax = 1.56764
+				text = "a virgin"
+			intervals [3]:
+				xmin = 1.56764
+				xmax = 2.11054
+				text = "will conceive"
+			intervals [4]:
+				xmin = 2.11054
+				xmax = 2.69961
+				text = "and give birth to"
+			intervals [5]:
+				xmin = 2.69961
+				xmax = 3.87734
+				text = "a son"
+			intervals [6]:
+				xmin = 3.87734
+				xmax = 4.69558
+				text = "and they will call"
+			intervals [7]:
+				xmin = 4.69558
+				xmax = 5.25344
+				text = "his name"
+			intervals [8]:
+				xmin = 5.25344
+				xmax = 7.01997
+				text = "Ammanuel"
+			intervals [9]:
+				xmin = 7.01997
+				xmax = 8.27456
+				text = "which is interpreted"
+			intervals [10]:
+				xmin = 8.27456
+				xmax = 8.74821
+				text = "[is] with us"
+			intervals [11]:
+				xmin = 8.74821
+				xmax = 10.13227
+				text = "our God"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 10.13227
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 10.13227
+				text = "dho) bt,wulto) tEb,Tan wte)lad, bro) wnEqrwOn $meh (amanwu)eyl dmEt'targam (amn )alohan"

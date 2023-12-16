@@ -1,0 +1,246 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 18.43016
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 18.43016
+		intervals: size = 27
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.10883
+				text = "kad"
+			intervals [2]:
+				xmin = 1.10883
+				xmax = 1.55802
+				text = "holeyn"
+			intervals [3]:
+				xmin = 1.55802
+				xmax = 1.73925
+				text = "deyn"
+			intervals [4]:
+				xmin = 1.73925
+				xmax = 3.33098
+				text = ")Et,ra(yi"
+			intervals [5]:
+				xmin = 3.33098
+				xmax = 4.12896
+				text = ")Et,_xzyi"
+			intervals [6]:
+				xmin = 4.12896
+				xmax = 4.29981
+				text = "leh"
+			intervals [7]:
+				xmin = 4.29981
+				xmax = 4.86593
+				text = "mala)k,o)"
+			intervals [8]:
+				xmin = 4.86593
+				xmax = 5.36875
+				text = "dmoryo)"
+			intervals [9]:
+				xmin = 5.36875
+				xmax = 5.9184
+				text = "bxElmo)"
+			intervals [10]:
+				xmin = 5.9184
+				xmax = 6.43859
+				text = "w)Emar"
+			intervals [11]:
+				xmin = 6.43859
+				xmax = 7.94932
+				text = "leh"
+			intervals [12]:
+				xmin = 7.94932
+				xmax = 8.68718
+				text = "yowsEp"
+			intervals [13]:
+				xmin = 8.68718
+				xmax = 9.07442
+				text = "breh"
+			intervals [14]:
+				xmin = 9.07442
+				xmax = 10.4515
+				text = "ddowyid"
+			intervals [15]:
+				xmin = 10.4515
+				xmax = 10.90651
+				text = "lo)"
+			intervals [16]:
+				xmin = 10.90651
+				xmax = 11.40874
+				text = "tEd,xal"
+			intervals [17]:
+				xmin = 11.40874
+				xmax = 12.03157
+				text = "lmEsab,"
+			intervals [18]:
+				xmin = 12.03157
+				xmax = 12.62412
+				text = "lmaryam"
+			intervals [19]:
+				xmin = 12.62412
+				xmax = 14.08973
+				text = ")an_t't,ok"
+			intervals [20]:
+				xmin = 14.08973
+				xmax = 14.78995
+				text = "hw"
+			intervals [21]:
+				xmin = 14.78995
+				xmax = 15.10787
+				text = "geyr"
+			intervals [22]:
+				xmin = 15.10787
+				xmax = 15.82255
+				text = "d)Et,yilEd,"
+			intervals [23]:
+				xmin = 15.82255
+				xmax = 16.30046
+				text = "boh"
+			intervals [24]:
+				xmin = 16.30046
+				xmax = 16.44511
+				text = "mn"
+			intervals [25]:
+				xmin = 16.44511
+				xmax = 17.01294
+				text = "rwuxo)"
+			intervals [26]:
+				xmin = 17.01294
+				xmax = 17.11358
+				text = "h_w"
+			intervals [27]:
+				xmin = 17.11358
+				xmax = 18.43016
+				text = "dqw,d$o)"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 18.43016
+		intervals: size = 27
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.10883
+				text = "while"
+			intervals [2]:
+				xmin = 1.10883
+				xmax = 1.55802
+				text = "these [things]"
+			intervals [3]:
+				xmin = 1.55802
+				xmax = 1.73925
+				text = "now"
+			intervals [4]:
+				xmin = 1.73925
+				xmax = 3.33098
+				text = "he was thinking"
+			intervals [5]:
+				xmin = 3.33098
+				xmax = 4.12896
+				text = "appeared"
+			intervals [6]:
+				xmin = 4.12896
+				xmax = 4.29981
+				text = "to him"
+			intervals [7]:
+				xmin = 4.29981
+				xmax = 4.86593
+				text = "an angel"
+			intervals [8]:
+				xmin = 4.86593
+				xmax = 5.36875
+				text = "of the LORD"
+			intervals [9]:
+				xmin = 5.36875
+				xmax = 5.9184
+				text = "in a dream"
+			intervals [10]:
+				xmin = 5.9184
+				xmax = 6.43859
+				text = "and said"
+			intervals [11]:
+				xmin = 6.43859
+				xmax = 7.94932
+				text = "to him"
+			intervals [12]:
+				xmin = 7.94932
+				xmax = 8.68718
+				text = "Yosip"
+			intervals [13]:
+				xmin = 8.68718
+				xmax = 9.07442
+				text = "the son"
+			intervals [14]:
+				xmin = 9.07442
+				xmax = 10.4515
+				text = "of Dawed"
+			intervals [15]:
+				xmin = 10.4515
+				xmax = 10.90651
+				text = "not"
+			intervals [16]:
+				xmin = 10.90651
+				xmax = 11.40874
+				text = "do have fear"
+			intervals [17]:
+				xmin = 11.40874
+				xmax = 12.03157
+				text = "to take"
+			intervals [18]:
+				xmin = 12.03157
+				xmax = 12.62412
+				text = "Maryam"
+			intervals [19]:
+				xmin = 12.62412
+				xmax = 14.08973
+				text = "[as] your wife"
+			intervals [20]:
+				xmin = 14.08973
+				xmax = 14.78995
+				text = "he"
+			intervals [21]:
+				xmin = 14.78995
+				xmax = 15.10787
+				text = "for"
+			intervals [22]:
+				xmin = 15.10787
+				xmax = 15.82255
+				text = "that is begotten"
+			intervals [23]:
+				xmin = 15.82255
+				xmax = 16.30046
+				text = "in her"
+			intervals [24]:
+				xmin = 16.30046
+				xmax = 16.44511
+				text = "from"
+			intervals [25]:
+				xmin = 16.44511
+				xmax = 17.01294
+				text = "Spirit"
+			intervals [26]:
+				xmin = 17.01294
+				xmax = 17.11358
+				text = "the"
+			intervals [27]:
+				xmin = 17.11358
+				xmax = 18.43016
+				text = "Holy"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 18.43016
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 18.43016
+				text = "kad holeyn deyn )Et,ra(yi )Et,_xzyi leh mala)k,o) dmoryo) bxElmo) w)Emar leh yowsEp breh ddowyid lo) tEd,xal lmEsab, lmaryam )an_t't,ok hw geyr d)Et,yilEd, boh mn rwuxo) h_w dqw,d$o)"

@@ -1,0 +1,126 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 9.3444 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 9.3444 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2611145261317378 
+            text = "te)lad," 
+        intervals [2]:
+            xmin = 1.2611145261317378 
+            xmax = 1.5870222019155922 
+            text = "deyn" 
+        intervals [3]:
+            xmin = 1.5870222019155922 
+            xmax = 2.5719045206735176 
+            text = "bro)" 
+        intervals [4]:
+            xmin = 2.5719045206735176 
+            xmax = 3.3428565395115917 
+            text = "wtEqre)" 
+        intervals [5]:
+            xmin = 3.3428565395115917 
+            xmax = 3.8012039833984135 
+            text = "$meh" 
+        intervals [6]:
+            xmin = 3.8012039833984135 
+            xmax = 5.071800401978973 
+            text = "yi$wO(" 
+        intervals [7]:
+            xmin = 5.071800401978973 
+            xmax = 5.585783613992045 
+            text = "hw" 
+        intervals [8]:
+            xmin = 5.585783613992045 
+            xmax = 5.846984114172976 
+            text = "geyr" 
+        intervals [9]:
+            xmin = 5.846984114172976 
+            xmax = 6.439082529894452 
+            text = "naxeywhy" 
+        intervals [10]:
+            xmin = 6.439082529894452 
+            xmax = 7.14409829034253 
+            text = "l(ameh" 
+        intervals [11]:
+            xmin = 7.14409829034253 
+            xmax = 7.341806683838584 
+            text = "mn" 
+        intervals [12]:
+            xmin = 7.341806683838584 
+            xmax = 9.3444 
+            text = "xTohayh*wOn" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 9.3444 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.26208 
+            text = "she will bear" 
+        intervals [2]:
+            xmin = 1.26208 
+            xmax = 1.58652 
+            text = "and" 
+        intervals [3]:
+            xmin = 1.58652 
+            xmax = 2.57394 
+            text = "a son" 
+        intervals [4]:
+            xmin = 2.57394 
+            xmax = 3.34271 
+            text = "and she will call" 
+        intervals [5]:
+            xmin = 3.34271 
+            xmax = 3.80116 
+            text = "his name" 
+        intervals [6]:
+            xmin = 3.80116 
+            xmax = 5.07069 
+            text = "Yeshua" 
+        intervals [7]:
+            xmin = 5.07069 
+            xmax = 5.58556 
+            text = "he" 
+        intervals [8]:
+            xmin = 5.58556 
+            xmax = 5.84652 
+            text = "for" 
+        intervals [9]:
+            xmin = 5.84652 
+            xmax = 6.43897 
+            text = "will save" 
+        intervals [10]:
+            xmin = 6.43897 
+            xmax = 7.14427 
+            text = "his people" 
+        intervals [11]:
+            xmin = 7.14427 
+            xmax = 7.34175 
+            text = "from" 
+        intervals [12]:
+            xmin = 7.34175 
+            xmax = 9.3444 
+            text = "their sins" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 9.3444 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.3444 
+            text = "te)lad, deyn bro) wtEqre) $meh yi$wO( hw geyr naxeywhy l(ameh mn xTohayh*wOn" 

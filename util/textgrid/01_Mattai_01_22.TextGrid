@@ -1,0 +1,118 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 7.789
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 7.789
+		intervals: size = 11
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.46984
+				text = "hode)"
+			intervals [2]:
+				xmin = 1.46984
+				xmax = 1.80444
+				text = "deyn"
+			intervals [3]:
+				xmin = 1.80444
+				xmax = 2.17437
+				text = "kloh"
+			intervals [4]:
+				xmin = 2.17437
+				xmax = 3.5976
+				text = "dahwot,"
+			intervals [5]:
+				xmin = 3.5976
+				xmax = 4.49008
+				text = "dnEt,male)"
+			intervals [6]:
+				xmin = 4.49008
+				xmax = 4.98885
+				text = "mEdE'm"
+			intervals [7]:
+				xmin = 4.98885
+				xmax = 5.6993
+				text = "d)Et,)_mar"
+			intervals [8]:
+				xmin = 5.6993
+				xmax = 5.92423
+				text = "mn"
+			intervals [9]:
+				xmin = 5.92423
+				xmax = 6.29051
+				text = "moryo)"
+			intervals [10]:
+				xmin = 6.29051
+				xmax = 6.50862
+				text = "byad"
+			intervals [11]:
+				xmin = 6.50862
+				xmax = 7.789
+				text = "nb,yio)"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 7.789
+		intervals: size = 11
+			intervals [1]:
+				xmin = 0.0
+				xmax = 1.46984
+				text = "this"
+			intervals [2]:
+				xmin = 1.46984
+				xmax = 1.80444
+				text = "and"
+			intervals [3]:
+				xmin = 1.80444
+				xmax = 2.17437
+				text = "all"
+			intervals [4]:
+				xmin = 2.17437
+				xmax = 3.5976
+				text = "happened"
+			intervals [5]:
+				xmin = 3.5976
+				xmax = 4.49008
+				text = "that it might be fulfilled"
+			intervals [6]:
+				xmin = 4.49008
+				xmax = 4.98885
+				text = "what"
+			intervals [7]:
+				xmin = 4.98885
+				xmax = 5.6993
+				text = "was said"
+			intervals [8]:
+				xmin = 5.6993
+				xmax = 5.92423
+				text = "from"
+			intervals [9]:
+				xmin = 5.92423
+				xmax = 6.29051
+				text = "the LORD"
+			intervals [10]:
+				xmin = 6.29051
+				xmax = 6.50862
+				text = "by"
+			intervals [11]:
+				xmin = 6.50862
+				xmax = 7.789
+				text = "the prophet"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 7.789
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 7.789
+				text = "hode) deyn kloh dahwot, dnEt,male) mEdE'm d)Et,)_mar mn moryo) byad nb,yio)"
