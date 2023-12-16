@@ -1,0 +1,102 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 7.24596
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 7.24596
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 0.95674
+				text = "wlo)"
+			intervals [2]:
+				xmin = 0.95674
+				xmax = 1.82078
+				text = "xak,moh"
+			intervals [3]:
+				xmin = 1.82078
+				xmax = 2.43968
+				text = "(damo)"
+			intervals [4]:
+				xmin = 2.43968
+				xmax = 3.08407
+				text = "dyilEd,teh"
+			intervals [5]:
+				xmin = 3.08407
+				xmax = 3.55451
+				text = "lab,roh"
+			intervals [6]:
+				xmin = 3.55451
+				xmax = 4.71954
+				text = "bwuk,ro)"
+			intervals [7]:
+				xmin = 4.71954
+				xmax = 5.50732
+				text = "waqrot"
+			intervals [8]:
+				xmin = 5.50732
+				xmax = 6.19098
+				text = "$meh"
+			intervals [9]:
+				xmin = 6.19098
+				xmax = 7.24596
+				text = "yi$wO("
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 7.24596
+		intervals: size = 9
+			intervals [1]:
+				xmin = 0.0
+				xmax = 0.95674
+				text = "and not"
+			intervals [2]:
+				xmin = 0.95674
+				xmax = 1.82078
+				text = "he did know her"
+			intervals [3]:
+				xmin = 1.82078
+				xmax = 2.43968
+				text = "until"
+			intervals [4]:
+				xmin = 2.43968
+				xmax = 3.08407
+				text = "she had given birth"
+			intervals [5]:
+				xmin = 3.08407
+				xmax = 3.55451
+				text = "to her son"
+			intervals [6]:
+				xmin = 3.55451
+				xmax = 4.71954
+				text = "first-born"
+			intervals [7]:
+				xmin = 4.71954
+				xmax = 5.50732
+				text = "and she called"
+			intervals [8]:
+				xmin = 5.50732
+				xmax = 6.19098
+				text = "his name"
+			intervals [9]:
+				xmin = 6.19098
+				xmax = 7.24596
+				text = "Yeshua"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 7.24596
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 7.24596
+				text = "wlo) xak,moh (damo) dyilEd,teh lab,roh bwuk,ro) waqrot $meh yi$wO("

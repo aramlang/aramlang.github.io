@@ -1,0 +1,142 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.0
+xmax = 9.14463
+tiers? <exists>
+size = 3
+item []:
+	item [1]:
+		class = "IntervalTier"
+		name = "Words"
+		xmin = 0.0
+		xmax = 9.14463
+		intervals: size = 14
+			intervals [1]:
+				xmin = 0.0
+				xmax = 0.90355
+				text = "kad"
+			intervals [2]:
+				xmin = 0.90355
+				xmax = 1.19473
+				text = "qom"
+			intervals [3]:
+				xmin = 1.19473
+				xmax = 1.4006
+				text = "deyn"
+			intervals [4]:
+				xmin = 1.4006
+				xmax = 1.78729
+				text = "yowsEp"
+			intervals [5]:
+				xmin = 1.78729
+				xmax = 1.99415
+				text = "mn"
+			intervals [6]:
+				xmin = 1.99415
+				xmax = 3.45132
+				text = "$Enteh"
+			intervals [7]:
+				xmin = 3.45132
+				xmax = 4.07195
+				text = "(bad"
+			intervals [8]:
+				xmin = 4.07195
+				xmax = 4.70046
+				text = ")aykano)"
+			intervals [9]:
+				xmin = 4.70046
+				xmax = 5.12739
+				text = "dapqad,"
+			intervals [10]:
+				xmin = 5.12739
+				xmax = 5.46608
+				text = "leh"
+			intervals [11]:
+				xmin = 5.46608
+				xmax = 5.95635
+				text = "mala)keh"
+			intervals [12]:
+				xmin = 5.95635
+				xmax = 7.25257
+				text = "dmoryo)"
+			intervals [13]:
+				xmin = 7.25257
+				xmax = 8.06795
+				text = "wdab,roh"
+			intervals [14]:
+				xmin = 8.06795
+				xmax = 9.14463
+				text = "l)an_t'teh"
+	item [2]:
+		class = "IntervalTier"
+		name = "Inter"
+		xmin = 0.0
+		xmax = 9.14463
+		intervals: size = 14
+			intervals [1]:
+				xmin = 0.0
+				xmax = 0.90355
+				text = "when"
+			intervals [2]:
+				xmin = 0.90355
+				xmax = 1.19473
+				text = "rose"
+			intervals [3]:
+				xmin = 1.19473
+				xmax = 1.4006
+				text = "now"
+			intervals [4]:
+				xmin = 1.4006
+				xmax = 1.78729
+				text = "Yosip"
+			intervals [5]:
+				xmin = 1.78729
+				xmax = 1.99415
+				text = "from"
+			intervals [6]:
+				xmin = 1.99415
+				xmax = 3.45132
+				text = "his sleep"
+			intervals [7]:
+				xmin = 3.45132
+				xmax = 4.07195
+				text = "he did"
+			intervals [8]:
+				xmin = 4.07195
+				xmax = 4.70046
+				text = "as"
+			intervals [9]:
+				xmin = 4.70046
+				xmax = 5.12739
+				text = "commanded"
+			intervals [10]:
+				xmin = 5.12739
+				xmax = 5.46608
+				text = "him"
+			intervals [11]:
+				xmin = 5.46608
+				xmax = 5.95635
+				text = "the angel"
+			intervals [12]:
+				xmin = 5.95635
+				xmax = 7.25257
+				text = "of the LORD"
+			intervals [13]:
+				xmin = 7.25257
+				xmax = 8.06795
+				text = "and he took"
+			intervals [14]:
+				xmin = 8.06795
+				xmax = 9.14463
+				text = "his wife"
+	item [3]:
+		class = "IntervalTier"
+		name = "Segment"
+		xmin = 0.0
+		xmax = 9.14463
+		intervals: size = 1
+			intervals [1]:
+				xmin = 0.0
+				xmax = 9.14463
+				text = "kad qom deyn yowsEp mn $Enteh (bad )aykano) dapqad, leh mala)keh dmoryo) wdab,roh l)an_t'teh"
