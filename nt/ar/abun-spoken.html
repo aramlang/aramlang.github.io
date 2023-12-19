@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mattai - 1</title>
+  <title>Mattai 6 - Our Father</title>
   <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
   <link rel="stylesheet" type="text/css" media="screen" href="../../css/site.css">
 </head>
@@ -15,7 +15,7 @@
   <header class="sticky hrow">
     <div class="hcol">
       <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
-        The Preaching of Mattai
+        The Preaching of Mattai - Our Father
       </div>
       <div class="gridContainer">
         <div>
@@ -27,20 +27,20 @@
         <div>
           <select id="startVerse" title="Start Verse">
             <option value="9" selected>9</option>
-            <option value="10">10</option>
+            <!--<option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
-            <option value="13">13</option>
+            <option value="13">13</option>-->
           </select>
         </div>
         <div>
           <span class="label">
             &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
-              <option value="9">9</option>
-              <option value="10">10</option>
+              <option value="9" selected>9</option>
+              <!--<option value="10">10</option>
               <option value="11">11</option>
               <option value="12">12</option>
-              <option value="13" selected>13</option>
+              <option value="13">13</option>-->
             </select>
           </span>
         </div>
@@ -184,21 +184,10 @@
   <!-- Scripts -->
   <script src="../../js/howler.core.min.js"></script>
 
-  <script type="module" src="../../js/aramaic-mapper.js"></script>
-
-  <script type="module" src="../../js/cal-code-util.js"></script>
-  <script type="module" src="../../js/syriac-code-util.js"></script>
-  <script type="module" src="../../js/hebrew-code-util.js"></script>
-
-  <script type="module" src="../../js/cal-syriac.js"></script>
-  <script type="module" src="../../js/cal-hebrew.js"></script>
-
-  <script type="module" src="../../js/peshitta.js"></script>
-  <script type="module" src="../../js/player.js"></script>
-  <script type="module" src="../../js/site.js"></script>
+  <script type="module" src="../../js/player-dev.js"></script>
   <script type="module">
-    import init from '../../js/site.js';
-    init(1, 6, 9, 10);
+    import init from '../../js/site-dev.js';
+    init(1, 6);
   </script>
 </body>
 

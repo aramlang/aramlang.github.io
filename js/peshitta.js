@@ -1244,6 +1244,22 @@ export default [
     ],
     [ // Chapter 6
       ["w"],
+      [ // Verse 1
+      ],
+      [ // Verse 2
+      ],
+      [ // Verse 3
+      ],
+      [ // Verse 4
+      ],
+      [ // Verse 5
+      ],
+      [ // Verse 6
+      ],
+      [ // Verse 7
+      ],
+      [ // Verse 8
+      ],
       [ // Verse 9
         { w: "T" },
         {
@@ -1278,24 +1294,7 @@ export default [
           w: "$mok",
           t: { s: 7.3976, e: 8.5827 }
         }
-      ],
-      [ // Verse 2
-      ],
-      [ // Verse 3
-      ],
-      [ // Verse 4
-      ],
-      [ // Verse 5
-      ],
-      [ // Verse 6
-      ],
-      [ // Verse 7
-      ],
-      [ // Verse 8
-      ],
-      [ // Verse 9
-      ],
-      [ // Verse 10
+      ], [ // Verse 10
       ],
       [ // Verse 11
       ],
