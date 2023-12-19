@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mattai - 1</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../css/site.css">
+</head>
+
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="spinner"></div>
+  </div>
+  <header class="sticky hrow">
+    <div class="hcol">
+      <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
+        The Preaching of Mattai
+      </div>
+      <div class="gridContainer">
+        <div>
+          <span class="label">
+            <input type="checkbox" id="loop" checked="true" title="Repet selected verses">
+            <label for="loop" title="Repet selected verses">Loop&nbsp;Verse</label>
+          </span>
+        </div>
+        <div>
+          <select id="startVerse" title="Start Verse">
+            <option value="9" selected>9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+          </select>
+        </div>
+        <div>
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13" selected>13</option>
+            </select>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          &nbsp;
+        </div>
+        <div style="visibility:hidden;">
+          &nbsp;
+        </div>
+        <div style="visibility:hidden;">
+          &nbsp;
+        </div>
+      </div>
+      <div class="srow">
+        <div title="Header will float, if checked">
+          <input type="checkbox" id="stickyHeader" checked="true">
+          <label for="stickyHeader">Float Bar</label>
+        </div>
+        <div title="Select Text Font">
+          <select id="fontFamily">
+            <option value="syr">East Assyrian</option>
+            <option value="ser">Serto</option>
+            <option value="est">Estrangela</option>
+            <option value="heb">Kthav Ashuri</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="hcol">
+      <div class="center smaller" style="visibility:hidden;">
+        &nbsp;
+      </div>
+      <div class="srow smaller">
+        <div title="Select Playback Speed">
+          <span class="label">
+            <label for="speed">Speed</label>
+            <select id="speed">
+              <option value="0.5" title="Slow speed">0.50&times;</option>
+              <option value="0.75" title="Slower speed">0.75&times;</option>
+              <option value="1" selected title="Normal speed">Normal</option>
+              <option value="1.25" title="Faster speed">1.25&times;</option>
+              <option value="1.5" title="Fast speed">1.50&times;</option>
+              <option value="1.75" title="Very Fast speed">1.75&times;</option>
+              <option value="2" title="Fastest speed">2.00&times;</option>
+            </select>
+            &nbsp;
+          </span>
+        </div>
+        <!-- Controls -->
+        <div>
+          <div id="loading"></div>
+          <div class="btn" id="playBtn" title="Play Audio"></div>
+          <div class="btn" id="pauseBtn" title="Pause Audio"></div>
+        </div>
+        <div>
+          <div class="btn" id="volumeBtn" style="margin-left: 5px;" title="Audio Volume"></div>
+        </div>
+        <div>
+          <span class="label" title="Pause After Each Word">
+            <span title="Pause After Each Word">&nbsp;Pause</span>
+            <input type="number" min="0" max="100" value="0" id="wordPause">
+            <label for="wordPause" title="Pause After Each Word">Seconds</label>
+          </span>
+        </div>
+      </div>
+      <div class="center">
+      </div>
+    </div>
+    <div lang="syc" class="hcol syr t">
+      <div class="" title="The preaching of Mattai">
+        <span id="book"></span>
+      </div>
+      <div title="Chapter 1">
+        <span id="chapter"></span>
+      </div>
+      <div>
+        <span class="label">
+          <label for="zawae" title="Show/hide vowels and punctuation">
+            <span id="zawaeLabel"></span>
+          </label>
+          <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="clickable">
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="9-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">9</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="9-1w" lang="syc" class="syr t"></div>
+          <div id="9-1i" class="eng">like this</div>
+        </div>
+        <div class="col">
+          <div id="9-2w" lang="syc" class="syr t"></div>
+          <div id="9-2i" class="eng">therefore</div>
+        </div>
+        <div class="col">
+          <div id="9-3w" lang="syc" class="syr t"></div>
+          <div id="9-3i" class="eng">pray</div>
+        </div>
+        <div class="col">
+          <div id="9-4w" lang="syc" class="syr t cln"></div>
+          <div id="9-4i" class="eng">you</div>
+        </div>
+        <div class="col">
+          <div id="9-5w" lang="syc" class="syr t"></div>
+          <div id="9-5i" class="eng">our Father</div>
+        </div>
+        <div class="col">
+          <div id="9-6w" lang="syc" class="syr t"></div>
+          <div id="9-6i" class="eng">in heaven</div>
+        </div>
+        <div class="col">
+          <div id="9-7w" lang="syc" class="syr t"></div>
+          <div id="9-7i" class="eng">hallowed be</div>
+        </div>
+        <div class="col">
+          <div id="9-8w" lang="syc" class="syr t sun"></div>
+          <div id="9-8i" class="eng">thy name</div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </main>
+  <hr>
+
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../../js/howler.core.min.js"></script>
+
+  <script type="module" src="../../js/aramaic-mapper.js"></script>
+
+  <script type="module" src="../../js/cal-code-util.js"></script>
+  <script type="module" src="../../js/syriac-code-util.js"></script>
+  <script type="module" src="../../js/hebrew-code-util.js"></script>
+
+  <script type="module" src="../../js/cal-syriac.js"></script>
+  <script type="module" src="../../js/cal-hebrew.js"></script>
+
+  <script type="module" src="../../js/peshitta.js"></script>
+  <script type="module" src="../../js/player.js"></script>
+  <script type="module" src="../../js/site.js"></script>
+  <script type="module">
+    import init from '../../js/site.js';
+    init(1, 6, 9, 10);
+  </script>
+</body>
+
+</html>

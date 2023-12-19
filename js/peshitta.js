@@ -1233,7 +1233,77 @@ export default [
           t: { s: 6.19098, e: 7.24596 }
         }
       ],
-    ]
+    ],
+    [ // Chapter 2
+    ],
+    [ // Chapter 3
+    ],
+    [ // Chapter 4
+    ],
+    [ // Chapter 5
+    ],
+    [ // Chapter 6
+      ["w"],
+      [ // Verse 9
+        { w: "T" },
+        {
+          w: "hokano)",
+          t: { s: 0.5, e: 1.36685 }
+        },
+        {
+          w: "hokeyl",
+          t: { s: 1.36685, e: 1.74872 }
+        },
+        {
+          w: "calaw",
+          t: { s: 1.74872, e: 2.24769 }
+        },
+        {
+          w: ")an_t'wOn",
+          t: { s: 2.24769, e: 3.73749 }
+        },
+        {
+          w: ")ab,wun",
+          t: { s: 3.73749, e: 4.62437 }
+        },
+        {
+          w: "dba$mayo)",
+          t: { s: 4.62437, e: 6.08987 }
+        },
+        {
+          w: "nEt,qada$",
+          t: { s: 6.08987, e: 7.3976 }
+        },
+        {
+          w: "$mok",
+          t: { s: 7.3976, e: 8.5827 }
+        }
+      ],
+      [ // Verse 2
+      ],
+      [ // Verse 3
+      ],
+      [ // Verse 4
+      ],
+      [ // Verse 5
+      ],
+      [ // Verse 6
+      ],
+      [ // Verse 7
+      ],
+      [ // Verse 8
+      ],
+      [ // Verse 9
+      ],
+      [ // Verse 10
+      ],
+      [ // Verse 11
+      ],
+      [ // Verse 12
+      ],
+      [ // Verse 13
+      ],
+    ],
   ],
   [ // Shemot
   ]
