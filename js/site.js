@@ -17,14 +17,18 @@ export default (bookNo, chapterNo) => {
       n: chapterNo
     }
   };
+  page.range = {
+    minVerse: parseInt(controls.startVerse.value),
+    maxVerse: parseInt(controls.endVerse.value)
+  };
 
   const key = getWordKey();
   controls.book.innerHTML = getBook(key);
   controls.chapter.innerHTML = getChapter(key);
   controls.zawaeLabel.innerHTML = getZawaeLabel(key);
-  for (let i = 1; i < verses.length; i++) {
+  for (let i = page.range.minVerse; i <= page.range.maxVerse; i++) {
     var cues = [0];
-    page.cues.push(cues);
+    page.cues[i] = cues;
     let words = verses[i];
     for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
@@ -83,7 +87,7 @@ const passiveSupported = page.passiveSupported = (() => {
 })();
 
 const controls = {};
-const elemIds = ['stickyHeader', 'fontFamily', 'book', 'chapter', 'zawae', 'zawaeLabel'];
+const elemIds = ['stickyHeader', 'fontFamily', 'book', 'chapter', 'zawae', 'zawaeLabel', 'startVerse', 'endVerse'];
 for (let i = 0; i < elemIds.length; i++) {
   const elemId = elemIds[i];
   if (!(controls[elemId] = document.getElementById(elemId))) {
@@ -319,12 +323,16 @@ const togglePunctuation = (elem) => {
     elem.classList.replace('nsun', 'sun');
     elem.classList.replace('ndot', 'dot');
     elem.classList.replace('ncln', 'cln');
+    elem.classList.replace('nsunp', 'sunp');
+    elem.classList.replace('nlpar', 'lpar');
   }
   else {
     elem.classList.replace('sunc', 'nsunc');
     elem.classList.replace('sun', 'nsun');
     elem.classList.replace('dot', 'ndot');
     elem.classList.replace('cln', 'ncln');
+    elem.classList.replace('sunp', 'nsunp');
+    elem.classList.replace('lpar', 'nlpar');
   }
 }
 
@@ -335,7 +343,7 @@ const toggleText = (event) => {
   controls.book.innerHTML = getBook(globalKey);
   controls.chapter.innerHTML = getChapter(globalKey);
   controls.zawaeLabel.innerHTML = getZawaeLabel(globalKey);
-  for (let i = 1; i < verses.length; i++) {
+  for (let i = page.range.minVerse; i <= page.range.maxVerse; i++) {
     let words = verses[i];
     for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
@@ -381,7 +389,7 @@ controls.fontFamily.addEventListener('change', (event) => {
   let options = controls.fontFamily.options;
   for (let i = 0; i < options.length; i++) {
     let oldFont = options[i].value;
-    if (oldFont == newFont || !page.elements.word['1-1'].classList.contains(oldFont)) {
+    if (oldFont == newFont || !page.elements.word[`${page.range.minVerse}-1`].classList.contains(oldFont)) {
       continue;
     }
     document.querySelectorAll(`.${oldFont}`).forEach(
