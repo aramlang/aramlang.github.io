@@ -8,11 +8,11 @@ document.addEventListener('pageCompleted', (event) => {
       this.playlist = this.regularPlaylist;
       this.highlighted = {};
       this.paused = {};
-      for (let i = 1; i < this.playlist.length; i++) {
+      for (let i = page.range.minVerse; i <= page.range.maxVerse; i++) {
         this.highlighted[i] = {};
         this.paused[i] = {}
       }
-      this.index = 1;
+      this.index = page.range.minVerse;
       this.requestHighlightId = 0;
       this.startWord = 1;       // to prevent pausing before saying the word
       this.suspendStep = false; // set to true if suspending of this.step logic is wanted
@@ -100,10 +100,10 @@ document.addEventListener('pageCompleted', (event) => {
     }
     skip(direction) {
       // Get the next track based on the direction of the track.
-      let index = 1;
+      let index = page.range.minVerse;
       if (direction === 'prev') {
         index = this.index - 1;
-        if (index < 1 || index < parseInt(controls.startVerse.value)) {
+        if (index < parseInt(controls.startVerse.value)) {
           index = controls.endVerse.value;
           if (controls.loop.checked) {
             this.skipTo(index);
@@ -117,7 +117,7 @@ document.addEventListener('pageCompleted', (event) => {
         }
       } else {
         index = this.index + 1;
-        if (index >= this.playlist.length || index > parseInt(controls.endVerse.value)) {
+        if (index > parseInt(controls.endVerse.value)) {
           index = parseInt(controls.startVerse.value);
           if (controls.loop.checked) {
             this.skipTo(index);
@@ -163,13 +163,13 @@ document.addEventListener('pageCompleted', (event) => {
     }
     rate(rate) {
       // enumerate Howls and set the rate for all.
-      for (let i = 1; i < this.regularPlaylist.length; i++) {
+      for (let i = page.range.minVerse; i <= page.range.maxVerse; i++) {
         this.regularPlaylist[i].howl.rate(rate);
       }
       if (!this.pausePlaylist) {
         return;
       }
-      for (let i = 1; i < this.pausePlaylist.length; i++) {
+      for (let i = page.range.minVerse; i <= page.range.maxVerse; i++) {
         this.pausePlaylist[i].howl.rate(rate);
       }
     }
@@ -179,10 +179,9 @@ document.addEventListener('pageCompleted', (event) => {
       const bookNo = page.info.book.n.toString().padStart(2, '0');
       const chapterNo = page.info.chapter.n.toString().padStart(2, '0');
       const playlist = [{}]; // 1 based index
-      const playlistLength = page.cues.length - 1;
       const ext = [page.isMobileEdge ? 'mp3' : 'm4a', page.isMobileEdge ? 'm4a' : 'mp3'];
       const usePause = this.hasPause;
-      let unloadedTracks = playlistLength;
+      let pendingTracks = page.range.maxVerse - page.range.minVerse + 1;
       let audioPrefix = '';
 
       if (usePause) {
@@ -190,7 +189,7 @@ document.addEventListener('pageCompleted', (event) => {
         audioPrefix = 'P_';
       }
 
-      for (let i = 1; i <= playlistLength; i++) {
+      for (let i = page.range.minVerse; i <= page.range.maxVerse; i++) {
         const verseNo = i.toString().padStart(2, '0');
         const title = `${book} ${chapterNo}:${verseNo}`;
         const file = `${bookNo}_${book}_${chapterNo}_${verseNo}`;
@@ -236,11 +235,11 @@ document.addEventListener('pageCompleted', (event) => {
           howl.rate(rate);
         }
         howl.once('load', () => {
-          if (--unloadedTracks < 1) {
+          if (--pendingTracks < 1) {
             controls.loadingScreen.style.display = 'none';
           }
         });
-        playlist.push({ title, howl });
+        playlist[i] = { title, howl };
       }
       return playlist;
     }
