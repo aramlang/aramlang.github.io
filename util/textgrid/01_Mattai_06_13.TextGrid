@@ -35,7 +35,7 @@ item []:
         intervals [6]:
             xmin = 4.4256982793117245 
             xmax = 4.722367553081838 
-            text = "mn" 
+            text = "m,n" 
         intervals [7]:
             xmin = 4.722367553081838 
             xmax = 5.9660322389825495 
