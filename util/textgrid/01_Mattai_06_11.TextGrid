@@ -1,0 +1,70 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.960998 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 3.960998 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6906760074060205 
+            text = "hab," 
+        intervals [2]:
+            xmin = 0.6906760074060205 
+            xmax = 0.9955015767239841 
+            text = "lan" 
+        intervals [3]:
+            xmin = 0.9955015767239841 
+            xmax = 1.4317139398132135 
+            text = "laxmo)" 
+        intervals [4]:
+            xmin = 1.4317139398132135 
+            xmax = 2.4152535850020755 
+            text = "dswunqonan" 
+        intervals [5]:
+            xmin = 2.4152535850020755 
+            xmax = 3.960998 
+            text = "yowmono)" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 3.960998 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6906760074060205 
+            text = "give" 
+        intervals [2]:
+            xmin = 0.6906760074060205 
+            xmax = 0.9955015767239841 
+            text = "us" 
+        intervals [3]:
+            xmin = 0.9955015767239841 
+            xmax = 1.4317139398132135 
+            text = "the bread" 
+        intervals [4]:
+            xmin = 1.4317139398132135 
+            xmax = 2.4152535850020755 
+            text = "of our need" 
+        intervals [5]:
+            xmin = 2.4152535850020755 
+            xmax = 3.960998 
+            text = "this day" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 3.960998 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.960998 
+            text = "hab, lan laxmo) dswunqonan yowmono)" 

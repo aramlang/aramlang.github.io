@@ -1,0 +1,94 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.82839 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 8.82839 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9119854875283447 
+            text = "te)te)" 
+        intervals [2]:
+            xmin = 0.9119854875283447 
+            xmax = 2.391803736419941 
+            text = "malk'wOt,ok" 
+        intervals [3]:
+            xmin = 2.391803736419941 
+            xmax = 3.198091425001724 
+            text = "nEhwe)" 
+        intervals [4]:
+            xmin = 3.198091425001724 
+            xmax = 4.784917800453515 
+            text = "cEb,yonok" 
+        intervals [5]:
+            xmin = 4.784917800453515 
+            xmax = 5.796971779060548 
+            text = ")aykano)" 
+        intervals [6]:
+            xmin = 5.796971779060548 
+            xmax = 7.14955328798186 
+            text = "dba$mayo)" 
+        intervals [7]:
+            xmin = 7.14955328798186 
+            xmax = 7.6501067610717755 
+            text = ")op" 
+        intervals [8]:
+            xmin = 7.6501067610717755 
+            xmax = 8.82839 
+            text = "b)ar(o)" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.82839 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9119854875283447 
+            text = "come" 
+        intervals [2]:
+            xmin = 0.9119854875283447 
+            xmax = 2.391803736419941 
+            text = "thy kingdom" 
+        intervals [3]:
+            xmin = 2.391803736419941 
+            xmax = 3.198091425001724 
+            text = "be done" 
+        intervals [4]:
+            xmin = 3.198091425001724 
+            xmax = 4.784917800453515 
+            text = "thy will" 
+        intervals [5]:
+            xmin = 4.784917800453515 
+            xmax = 5.796971779060548 
+            text = "as" 
+        intervals [6]:
+            xmin = 5.796971779060548 
+            xmax = 7.14955328798186 
+            text = "in heaven" 
+        intervals [7]:
+            xmin = 7.14955328798186 
+            xmax = 7.6501067610717755 
+            text = "so" 
+        intervals [8]:
+            xmin = 7.6501067610717755 
+            xmax = 8.82839 
+            text = "on earth" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 8.82839 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.82839 
+            text = "te)te) malk'wOt,ok nEhwe) cEb,yonok )aykano) dba$mayo) )op b)ar(o)" 

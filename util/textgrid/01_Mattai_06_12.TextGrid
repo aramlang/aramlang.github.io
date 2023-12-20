@@ -1,0 +1,94 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 7.112109 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 7.112109 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8794323049084954 
+            text = "wa$b,wOq" 
+        intervals [2]:
+            xmin = 0.8794323049084954 
+            xmax = 1.1002110565745284 
+            text = "lan" 
+        intervals [3]:
+            xmin = 1.1002110565745284 
+            xmax = 2.667173887098699 
+            text = "xowbay*n" 
+        intervals [4]:
+            xmin = 2.667173887098699 
+            xmax = 3.5043754898617316 
+            text = ")aykano)" 
+        intervals [5]:
+            xmin = 3.5043754898617316 
+            xmax = 3.988801278086992 
+            text = "d)op" 
+        intervals [6]:
+            xmin = 3.988801278086992 
+            xmax = 4.627413620815558 
+            text = "xnan" 
+        intervals [7]:
+            xmin = 4.627413620815558 
+            xmax = 5.271140541746869 
+            text = "$baqn" 
+        intervals [8]:
+            xmin = 5.271140541746869 
+            xmax = 7.112109 
+            text = "lxayobay*n" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 7.112109 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8794323049084954 
+            text = "and forgive" 
+        intervals [2]:
+            xmin = 0.8794323049084954 
+            xmax = 1.1002110565745284 
+            text = "us" 
+        intervals [3]:
+            xmin = 1.1002110565745284 
+            xmax = 2.667173887098699 
+            text = "our offences" 
+        intervals [4]:
+            xmin = 2.667173887098699 
+            xmax = 3.5043754898617316 
+            text = "as" 
+        intervals [5]:
+            xmin = 3.5043754898617316 
+            xmax = 3.988801278086992 
+            text = "also" 
+        intervals [6]:
+            xmin = 3.988801278086992 
+            xmax = 4.627413620815558 
+            text = "we" 
+        intervals [7]:
+            xmin = 4.627413620815558 
+            xmax = 5.271140541746869 
+            text = "have forgiven" 
+        intervals [8]:
+            xmin = 5.271140541746869 
+            xmax = 7.112109 
+            text = "those who have offended us" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 7.112109 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.112109 
+            text = "wa$b,wOq lan xowbay*n )aykano) d)op xnan $baqn lxayobay*n" 

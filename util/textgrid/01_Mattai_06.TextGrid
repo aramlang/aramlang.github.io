@@ -1,0 +1,300 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 390.49 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 390.49 
+        intervals: size = 35 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.389118611547183 
+            text = "" 
+        intervals [2]:
+            xmin = 5.389118611547183 
+            xmax = 21.71296776368205 
+            text = "Verse_1" 
+        intervals [3]:
+            xmin = 21.71296776368205 
+            xmax = 37.26530920228788 
+            text = "Verse_2" 
+        intervals [4]:
+            xmin = 37.26530920228788 
+            xmax = 41.27315117157974 
+            text = "Verse_3" 
+        intervals [5]:
+            xmin = 41.27315117157974 
+            xmax = 45.94005520018953 
+            text = "Verse_4" 
+        intervals [6]:
+            xmin = 45.94005520018953 
+            xmax = 57.42564172335601 
+            text = "Verse_5" 
+        intervals [7]:
+            xmin = 57.42564172335601 
+            xmax = 68.91015335583053 
+            text = "Verse_6" 
+        intervals [8]:
+            xmin = 68.91015335583053 
+            xmax = 80.39530095027702 
+            text = "Verse_7" 
+        intervals [9]:
+            xmin = 80.39530095027702 
+            xmax = 115.88881671367734 
+            text = "Verse_8" 
+        intervals [10]:
+            xmin = 115.88881671367734 
+            xmax = 124.47152272503205 
+            text = "hokano) hokeyl calaw )an_t'wOn )ab,wun dba$mayo) nEt,qada$ $mok" 
+        intervals [11]:
+            xmin = 124.47152272503205 
+            xmax = 133.29990258688508 
+            text = "te)te) malk'wOt,ok nEhwe) cEb,yonok )aykano) dba$mayo) )op b)ar(o)" 
+        intervals [12]:
+            xmin = 133.29990258688508 
+            xmax = 137.26089755027692 
+            text = "hab, lan laxmo) dswunqonan yowmono)" 
+        intervals [13]:
+            xmin = 137.26089755027692 
+            xmax = 144.3730264871906 
+            text = "wa$b,wOq lan xowbay*n )aykano) d)op xnan $baqn lxayobay*n" 
+        intervals [14]:
+            xmin = 144.3730264871906 
+            xmax = 159.4858688224148 
+            text = "wlo) ta(lan lnEsywOno) )Elo) pacon mn byi$o) mETl dd,yilok, h_y malkwut,o) wxaylo) wtE$b'wOxto) l(olam\u00A0(olmyin )omeyn" 
+        intervals [15]:
+            xmin = 159.4858688224148 
+            xmax = 160.7897931587102 
+            text = "Verse_14" 
+        intervals [16]:
+            xmin = 160.7897931587102 
+            xmax = 172.274933313995 
+            text = "Verse_15" 
+        intervals [17]:
+            xmin = 172.274933313995 
+            xmax = 183.75971814122474 
+            text = "Verse_16" 
+        intervals [18]:
+            xmin = 183.75971814122474 
+            xmax = 195.2449255623487 
+            text = "Verse_17" 
+        intervals [19]:
+            xmin = 195.2449255623487 
+            xmax = 206.7301567753538 
+            text = "Verse_18" 
+        intervals [20]:
+            xmin = 206.7301567753538 
+            xmax = 218.21500075585791 
+            text = "Verse_19" 
+        intervals [21]:
+            xmin = 218.21500075585791 
+            xmax = 229.7000046060091 
+            text = "Verse_20" 
+        intervals [22]:
+            xmin = 229.7000046060091 
+            xmax = 241.18522151652422 
+            text = "Verse_21" 
+        intervals [23]:
+            xmin = 241.18522151652422 
+            xmax = 252.6695443622336 
+            text = "Verse_22" 
+        intervals [24]:
+            xmin = 252.6695443622336 
+            xmax = 264.15451955782316 
+            text = "Verse_23" 
+        intervals [25]:
+            xmin = 264.15451955782316 
+            xmax = 275.64101183562855 
+            text = "Verse_24" 
+        intervals [26]:
+            xmin = 275.64101183562855 
+            xmax = 287.1250949357521 
+            text = "Verse_25" 
+        intervals [27]:
+            xmin = 287.1250949357521 
+            xmax = 298.60955050324225 
+            text = "Verse_26" 
+        intervals [28]:
+            xmin = 298.60955050324225 
+            xmax = 310.09496768707487 
+            text = "Verse_27" 
+        intervals [29]:
+            xmin = 310.09496768707487 
+            xmax = 321.5796789554532 
+            text = "Verse_28" 
+        intervals [30]:
+            xmin = 321.5796789554532 
+            xmax = 333.0654246547104 
+            text = "Verse_29" 
+        intervals [31]:
+            xmin = 333.0654246547104 
+            xmax = 344.54992994364045 
+            text = "Verse_30" 
+        intervals [32]:
+            xmin = 344.54992994364045 
+            xmax = 356.03465008992106 
+            text = "Verse_31" 
+        intervals [33]:
+            xmin = 356.03465008992106 
+            xmax = 367.5199493168989 
+            text = "Verse_32" 
+        intervals [34]:
+            xmin = 367.5199493168989 
+            xmax = 379.0055611214183 
+            text = "Verse_33" 
+        intervals [35]:
+            xmin = 379.0055611214183 
+            xmax = 390.49 
+            text = "Verse_34" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "VerseNo" 
+        xmin = 0 
+        xmax = 390.49 
+        intervals: size = 35 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.387854558358151 
+            text = "0" 
+        intervals [2]:
+            xmin = 5.387854558358151 
+            xmax = 21.71378356524571 
+            text = "1" 
+        intervals [3]:
+            xmin = 21.71378356524571 
+            xmax = 37.26521603830575 
+            text = "2" 
+        intervals [4]:
+            xmin = 37.26521603830575 
+            xmax = 41.273107070509774 
+            text = "3" 
+        intervals [5]:
+            xmin = 41.273107070509774 
+            xmax = 45.94 
+            text = "4" 
+        intervals [6]:
+            xmin = 45.94 
+            xmax = 57.425 
+            text = "5" 
+        intervals [7]:
+            xmin = 57.425 
+            xmax = 68.91 
+            text = "6" 
+        intervals [8]:
+            xmin = 68.91 
+            xmax = 80.395 
+            text = "7" 
+        intervals [9]:
+            xmin = 80.395 
+            xmax = 115.88875980798963 
+            text = "8" 
+        intervals [10]:
+            xmin = 115.88875980798963 
+            xmax = 124.47062817638127 
+            text = "like this	therefore	pray	you	our Father	in heaven	hallowed be	thy name" 
+        intervals [11]:
+            xmin = 124.47062817638127 
+            xmax = 133.30003210048665 
+            text = "come	thy kingdom	be done	thy will	as	in heaven	so	on earth" 
+        intervals [12]:
+            xmin = 133.30003210048665 
+            xmax = 137.26263622837197 
+            text = "give	us	the bread	of our need	this day" 
+        intervals [13]:
+            xmin = 137.26263622837197 
+            xmax = 144.37268020640622 
+            text = "and forgive	us	our offences	as	also	we	have forgiven	those who have offended us" 
+        intervals [14]:
+            xmin = 144.37268020640622 
+            xmax = 159.48589917440293 
+            text = "and not	bring us	into trial	but	deliver us	from	the evil one	for	thine	is	the kingdom	and the power	and the glory	<span class=""underline"">forever and ever</span>	amen" 
+        intervals [15]:
+            xmin = 159.48589917440293 
+            xmax = 160.79 
+            text = "14" 
+        intervals [16]:
+            xmin = 160.79 
+            xmax = 172.275 
+            text = "15" 
+        intervals [17]:
+            xmin = 172.275 
+            xmax = 183.76 
+            text = "16" 
+        intervals [18]:
+            xmin = 183.76 
+            xmax = 195.245 
+            text = "17" 
+        intervals [19]:
+            xmin = 195.245 
+            xmax = 206.73 
+            text = "18" 
+        intervals [20]:
+            xmin = 206.73 
+            xmax = 218.215 
+            text = "19" 
+        intervals [21]:
+            xmin = 218.215 
+            xmax = 229.7 
+            text = "20" 
+        intervals [22]:
+            xmin = 229.7 
+            xmax = 241.185 
+            text = "21" 
+        intervals [23]:
+            xmin = 241.185 
+            xmax = 252.67 
+            text = "22" 
+        intervals [24]:
+            xmin = 252.67 
+            xmax = 264.155 
+            text = "23" 
+        intervals [25]:
+            xmin = 264.155 
+            xmax = 275.64 
+            text = "24" 
+        intervals [26]:
+            xmin = 275.64 
+            xmax = 287.125 
+            text = "25" 
+        intervals [27]:
+            xmin = 287.125 
+            xmax = 298.61 
+            text = "26" 
+        intervals [28]:
+            xmin = 298.61 
+            xmax = 310.095 
+            text = "27" 
+        intervals [29]:
+            xmin = 310.095 
+            xmax = 321.58 
+            text = "28" 
+        intervals [30]:
+            xmin = 321.58 
+            xmax = 333.065 
+            text = "29" 
+        intervals [31]:
+            xmin = 333.065 
+            xmax = 344.55 
+            text = "30" 
+        intervals [32]:
+            xmin = 344.55 
+            xmax = 356.035 
+            text = "31" 
+        intervals [33]:
+            xmin = 356.035 
+            xmax = 367.52 
+            text = "32" 
+        intervals [34]:
+            xmin = 367.52 
+            xmax = 379.005 
+            text = "33" 
+        intervals [35]:
+            xmin = 379.005 
+            xmax = 390.49 
+            text = "34" 

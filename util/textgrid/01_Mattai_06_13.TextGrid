@@ -1,0 +1,150 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 15.112857 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Words" 
+        xmin = 0 
+        xmax = 15.112857 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.0944286226731748 
+            text = "wlo)" 
+        intervals [2]:
+            xmin = 1.0944286226731748 
+            xmax = 1.5959674981103553 
+            text = "ta(lan" 
+        intervals [3]:
+            xmin = 1.5959674981103553 
+            xmax = 3.1821835894851764 
+            text = "lnEsywOno)" 
+        intervals [4]:
+            xmin = 3.1821835894851764 
+            xmax = 3.912139575128297 
+            text = ")Elo)" 
+        intervals [5]:
+            xmin = 3.912139575128297 
+            xmax = 4.4256982793117245 
+            text = "pacon" 
+        intervals [6]:
+            xmin = 4.4256982793117245 
+            xmax = 4.722367553081838 
+            text = "mn" 
+        intervals [7]:
+            xmin = 4.722367553081838 
+            xmax = 5.9660322389825495 
+            text = "byi$o)" 
+        intervals [8]:
+            xmin = 5.9660322389825495 
+            xmax = 6.7634449362074145 
+            text = "mETl" 
+        intervals [9]:
+            xmin = 6.7634449362074145 
+            xmax = 7.401311292517007 
+            text = "dd,yilok," 
+        intervals [10]:
+            xmin = 7.401311292517007 
+            xmax = 7.5621117387825825 
+            text = "h_y" 
+        intervals [11]:
+            xmin = 7.5621117387825825 
+            xmax = 9.068333738257207 
+            text = "malkwut,o)" 
+        intervals [12]:
+            xmin = 9.068333738257207 
+            xmax = 10.402528344671202 
+            text = "wxaylo)" 
+        intervals [13]:
+            xmin = 10.402528344671202 
+            xmax = 11.828315617913832 
+            text = "wtE$b'wOxto)" 
+        intervals [14]:
+            xmin = 11.828315617913832 
+            xmax = 13.812991577583414 
+            text = "l(olam\u00A0(olmyin" 
+        intervals [15]:
+            xmin = 13.812991577583414 
+            xmax = 15.112857 
+            text = ")omeyn" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 15.112857 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.0944286226731748 
+            text = "and not" 
+        intervals [2]:
+            xmin = 1.0944286226731748 
+            xmax = 1.5959674981103553 
+            text = "bring us" 
+        intervals [3]:
+            xmin = 1.5959674981103553 
+            xmax = 3.1821835894851764 
+            text = "into trial" 
+        intervals [4]:
+            xmin = 3.1821835894851764 
+            xmax = 3.912139575128297 
+            text = "but" 
+        intervals [5]:
+            xmin = 3.912139575128297 
+            xmax = 4.4256982793117245 
+            text = "deliver us" 
+        intervals [6]:
+            xmin = 4.4256982793117245 
+            xmax = 4.722367553081838 
+            text = "from" 
+        intervals [7]:
+            xmin = 4.722367553081838 
+            xmax = 5.9660322389825495 
+            text = "the evil one" 
+        intervals [8]:
+            xmin = 5.9660322389825495 
+            xmax = 6.7634449362074145 
+            text = "for" 
+        intervals [9]:
+            xmin = 6.7634449362074145 
+            xmax = 7.401311292517007 
+            text = "thine" 
+        intervals [10]:
+            xmin = 7.401311292517007 
+            xmax = 7.5621117387825825 
+            text = "is" 
+        intervals [11]:
+            xmin = 7.5621117387825825 
+            xmax = 9.068333738257207 
+            text = "the kingdom" 
+        intervals [12]:
+            xmin = 9.068333738257207 
+            xmax = 10.402528344671202 
+            text = "and the power" 
+        intervals [13]:
+            xmin = 10.402528344671202 
+            xmax = 11.828315617913832 
+            text = "and the glory" 
+        intervals [14]:
+            xmin = 11.828315617913832 
+            xmax = 13.812991577583414 
+            text = "<span class=""underline"">forever and ever</span>" 
+        intervals [15]:
+            xmin = 13.812991577583414 
+            xmax = 15.112857 
+            text = "amen" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Segment" 
+        xmin = 0 
+        xmax = 15.112857 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 15.112857 
+            text = "wlo) ta(lan lnEsywOno) )Elo) pacon mn byi$o) mETl dd,yilok, h_y malkwut,o) wxaylo) wtE$b'wOxto) l(olam\u00A(olmyin )omeyn" 
