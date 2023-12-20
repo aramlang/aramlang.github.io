@@ -152,6 +152,8 @@ export const vowels = Object.freeze(commonVowels.concat(easternVowels));
  * 2. rukkakha: __,__ - dot below
  * 3. lineaOccultans: **_** - linea occultans
  * 4. seyame: __*__ - seyame, rebwe
+ * 5. seyame: __`__ - misc dot above TODO
+ * 6. seyame: __~__ - misc dot below
  * @constant
  * @type { Object.<string, string> }
  */
