@@ -20,7 +20,7 @@ Insert interval tier: 2, tierName$
 for interval to numberOfIntervals
     endTime = Get end time of interval: 1, interval
 
-    # Insert boundary at the start time if not the first interval
+    # Insert boundary at the end time if not the last interval
     if interval < numberOfIntervals
         Insert boundary: 2, endTime
     endif
