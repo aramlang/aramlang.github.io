@@ -2,7 +2,7 @@ File type = "ooTextFile"
 Object class = "TextGrid"
 
 xmin = 0 
-xmax = 7.112109 
+xmax = 7.107188 
 tiers? <exists> 
 size = 3 
 item []: 
@@ -10,85 +10,85 @@ item []:
         class = "IntervalTier" 
         name = "Words" 
         xmin = 0 
-        xmax = 7.112109 
+        xmax = 7.107188 
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 0.8794323049084954 
+            xmax = 1.314738427357475 
             text = "wa$b,wOq" 
         intervals [2]:
-            xmin = 0.8794323049084954 
-            xmax = 1.1002110565745284 
+            xmin = 1.314738427357475 
+            xmax = 1.535517179023508 
             text = "lan" 
         intervals [3]:
-            xmin = 1.1002110565745284 
-            xmax = 2.667173887098699 
+            xmin = 1.535517179023508 
+            xmax = 3.1024800095476786 
             text = "xowbay*n" 
         intervals [4]:
-            xmin = 2.667173887098699 
-            xmax = 3.5043754898617316 
+            xmin = 3.1024800095476786 
+            xmax = 3.9587761647179045 
             text = ")aykano)" 
         intervals [5]:
-            xmin = 3.5043754898617316 
-            xmax = 3.988801278086992 
+            xmin = 3.9587761647179045 
+            xmax = 4.424107400535972 
             text = "d)op" 
         intervals [6]:
-            xmin = 3.988801278086992 
-            xmax = 4.627413620815558 
+            xmin = 4.424107400535972 
+            xmax = 5.062719743264537 
             text = "xnan" 
         intervals [7]:
-            xmin = 4.627413620815558 
-            xmax = 5.271140541746869 
+            xmin = 5.062719743264537 
+            xmax = 5.706446664195848 
             text = "$baqn" 
         intervals [8]:
-            xmin = 5.271140541746869 
-            xmax = 7.112109 
+            xmin = 5.706446664195848 
+            xmax = 7.107188 
             text = "lxayobay*n" 
     item [2]:
         class = "IntervalTier" 
         name = "Inter" 
         xmin = 0 
-        xmax = 7.112109 
+        xmax = 7.107188 
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 0.8794323049084954 
+            xmax = 1.314738427357475 
             text = "and forgive" 
         intervals [2]:
-            xmin = 0.8794323049084954 
-            xmax = 1.1002110565745284 
+            xmin = 1.314738427357475 
+            xmax = 1.535517179023508 
             text = "us" 
         intervals [3]:
-            xmin = 1.1002110565745284 
-            xmax = 2.667173887098699 
+            xmin = 1.535517179023508 
+            xmax = 3.1024800095476786 
             text = "our offences" 
         intervals [4]:
-            xmin = 2.667173887098699 
-            xmax = 3.5043754898617316 
+            xmin = 3.1024800095476786 
+            xmax = 3.9587761647179045 
             text = "as" 
         intervals [5]:
-            xmin = 3.5043754898617316 
-            xmax = 3.988801278086992 
+            xmin = 3.9587761647179045 
+            xmax = 4.424107400535972 
             text = "also" 
         intervals [6]:
-            xmin = 3.988801278086992 
-            xmax = 4.627413620815558 
+            xmin = 4.424107400535972 
+            xmax = 5.062719743264537 
             text = "we" 
         intervals [7]:
-            xmin = 4.627413620815558 
-            xmax = 5.271140541746869 
+            xmin = 5.062719743264537 
+            xmax = 5.706446664195848 
             text = "have forgiven" 
         intervals [8]:
-            xmin = 5.271140541746869 
-            xmax = 7.112109 
+            xmin = 5.706446664195848 
+            xmax = 7.107188 
             text = "those who have offended us" 
     item [3]:
         class = "IntervalTier" 
         name = "Segment" 
         xmin = 0 
-        xmax = 7.112109 
+        xmax = 7.107188 
         intervals: size = 1 
         intervals [1]:
             xmin = 0 
-            xmax = 7.112109 
+            xmax = 7.107188 
             text = "wa$b,wOq lan xowbay*n )aykano) d)op xnan $baqn lxayobay*n" 

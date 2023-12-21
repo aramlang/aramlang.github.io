@@ -2,7 +2,7 @@ File type = "ooTextFile"
 Object class = "TextGrid"
 
 xmin = 0 
-xmax = 8.582698 
+xmax = 9.287302 
 tiers? <exists> 
 size = 3 
 item []: 
@@ -10,85 +10,85 @@ item []:
         class = "IntervalTier" 
         name = "Words" 
         xmin = 0 
-        xmax = 8.582698 
+        xmax = 9.287302 
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 1.3668516740029346 
+            xmax = 2.547531946111778 
             text = "hokano)" 
         intervals [2]:
-            xmin = 1.3668516740029346 
-            xmax = 1.7487244527440606 
+            xmin = 2.547531946111778 
+            xmax = 2.9294047248529043 
             text = "hokeyl" 
         intervals [3]:
-            xmin = 1.7487244527440606 
-            xmax = 2.2476893723715623 
+            xmin = 2.9294047248529043 
+            xmax = 3.428369644480406 
             text = "calaw" 
         intervals [4]:
-            xmin = 2.2476893723715623 
-            xmax = 3.7374931972789116 
+            xmin = 3.428369644480406 
+            xmax = 4.9181897203325775 
             text = ")an_t'wOn" 
         intervals [5]:
-            xmin = 3.7374931972789116 
-            xmax = 4.6243684387335176 
+            xmin = 4.9181897203325775 
+            xmax = 5.805048710842361 
             text = ")ab,wun" 
         intervals [6]:
-            xmin = 4.6243684387335176 
-            xmax = 6.089872448979591 
+            xmin = 5.805048710842361 
+            xmax = 7.2705527210884355 
             text = "dba$mayo)" 
         intervals [7]:
-            xmin = 6.089872448979591 
-            xmax = 7.397598775510204 
+            xmin = 7.2705527210884355 
+            xmax = 8.578279047619048 
             text = "nEt,qada$" 
         intervals [8]:
-            xmin = 7.397598775510204 
-            xmax = 8.582698 
+            xmin = 8.578279047619048 
+            xmax = 9.287302 
             text = "$mok" 
     item [2]:
         class = "IntervalTier" 
         name = "Inter" 
         xmin = 0 
-        xmax = 8.582698 
+        xmax = 9.287302 
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 1.3665032310053868 
+            xmax = 2.547531946111778 
             text = "like this" 
         intervals [2]:
-            xmin = 1.3665032310053868 
-            xmax = 1.748708990408891 
+            xmin = 2.547531946111778 
+            xmax = 2.9294047248529043 
             text = "therefore" 
         intervals [3]:
-            xmin = 1.748708990408891 
-            xmax = 2.2475198967490577 
+            xmin = 2.9294047248529043 
+            xmax = 3.428369644480406 
             text = "pray" 
         intervals [4]:
-            xmin = 2.2475198967490577 
-            xmax = 3.7374745520508545 
+            xmin = 3.428369644480406 
+            xmax = 4.9181897203325775 
             text = "you" 
         intervals [5]:
-            xmin = 3.7374745520508545 
-            xmax = 4.624969281513229 
+            xmin = 4.9181897203325775 
+            xmax = 5.805048710842361 
             text = "our Father" 
         intervals [6]:
-            xmin = 4.624969281513229 
-            xmax = 6.089011681940211 
+            xmin = 5.805048710842361 
+            xmax = 7.2705527210884355 
             text = "in heaven" 
         intervals [7]:
-            xmin = 6.089011681940211 
-            xmax = 7.397580553118311 
+            xmin = 7.2705527210884355 
+            xmax = 8.578279047619048 
             text = "hallowed be" 
         intervals [8]:
-            xmin = 7.397580553118311 
-            xmax = 8.582698 
+            xmin = 8.578279047619048 
+            xmax = 9.287302 
             text = "thy name" 
     item [3]:
         class = "IntervalTier" 
         name = "Segment" 
         xmin = 0 
-        xmax = 8.582698 
+        xmax = 9.287302 
         intervals: size = 1 
         intervals [1]:
             xmin = 0 
-            xmax = 8.582698 
+            xmax = 9.287302 
             text = "hokano) hokeyl calaw )an_t'wOn )ab,wun dba$mayo) nEt,qada$ $mok" 

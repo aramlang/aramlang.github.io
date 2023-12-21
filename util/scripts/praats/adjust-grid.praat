@@ -21,17 +21,17 @@ Insert interval tier: 2, tierName$
 
 # Loop through each interval in the first tier
 for interval to numberOfIntervals
-    # Get label from the first tier
-    label$ = Get label of interval: 1, interval
     # Get end time from the first tier
     endTime = Get end time of interval: 1, interval
-
-    # Set the label for the new tier
-    Set interval text: 2, interval, label$
     # Insert adjusted boundary at the end time if not last interval
     if interval < numberOfIntervals
         Insert boundary: 2, endTime + adjustment_number
     endif
+
+    # Get label from the first tier
+    label$ = Get label of interval: 1, interval
+    # Set the label for the new tier
+     Set interval text: 2, interval, label$
 endfor
 
 # Remove the original first tier

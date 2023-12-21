@@ -2,7 +2,7 @@ File type = "ooTextFile"
 Object class = "TextGrid"
 
 xmin = 0 
-xmax = 3.960998 
+xmax = 3.866213 
 tiers? <exists> 
 size = 3 
 item []: 
@@ -10,61 +10,61 @@ item []:
         class = "IntervalTier" 
         name = "Words" 
         xmin = 0 
-        xmax = 3.960998 
+        xmax = 3.866213 
         intervals: size = 5 
         intervals [1]:
             xmin = 0 
-            xmax = 0.6906760074060205 
+            xmax = 1.0311975493561338 
             text = "hab," 
         intervals [2]:
-            xmin = 0.6906760074060205 
-            xmax = 0.9955015767239841 
+            xmin = 1.0311975493561338 
+            xmax = 1.3360231186740976 
             text = "lan" 
         intervals [3]:
-            xmin = 0.9955015767239841 
-            xmax = 1.4317139398132135 
+            xmin = 1.3360231186740976 
+            xmax = 1.7722138420585627 
             text = "laxmo)" 
         intervals [4]:
-            xmin = 1.4317139398132135 
-            xmax = 2.4152535850020755 
+            xmin = 1.7722138420585627 
+            xmax = 2.755775126952189 
             text = "dswunqonan" 
         intervals [5]:
-            xmin = 2.4152535850020755 
-            xmax = 3.960998 
+            xmin = 2.755775126952189 
+            xmax = 3.866213 
             text = "yowmono)" 
     item [2]:
         class = "IntervalTier" 
         name = "Inter" 
         xmin = 0 
-        xmax = 3.960998 
+        xmax = 3.866213 
         intervals: size = 5 
         intervals [1]:
             xmin = 0 
-            xmax = 0.6906760074060205 
+            xmax = 1.0311975493561338 
             text = "give" 
         intervals [2]:
-            xmin = 0.6906760074060205 
-            xmax = 0.9955015767239841 
+            xmin = 1.0311975493561338 
+            xmax = 1.3360231186740976 
             text = "us" 
         intervals [3]:
-            xmin = 0.9955015767239841 
-            xmax = 1.4317139398132135 
+            xmin = 1.3360231186740976 
+            xmax = 1.7722138420585627 
             text = "the bread" 
         intervals [4]:
-            xmin = 1.4317139398132135 
-            xmax = 2.4152535850020755 
+            xmin = 1.7722138420585627 
+            xmax = 2.755775126952189 
             text = "of our need" 
         intervals [5]:
-            xmin = 2.4152535850020755 
-            xmax = 3.960998 
+            xmin = 2.755775126952189 
+            xmax = 3.866213 
             text = "this day" 
     item [3]:
         class = "IntervalTier" 
         name = "Segment" 
         xmin = 0 
-        xmax = 3.960998 
+        xmax = 3.866213 
         intervals: size = 1 
         intervals [1]:
             xmin = 0 
-            xmax = 3.960998 
+            xmax = 3.866213 
             text = "hab, lan laxmo) dswunqonan yowmono)" 

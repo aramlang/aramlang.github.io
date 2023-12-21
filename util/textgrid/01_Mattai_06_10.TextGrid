@@ -2,7 +2,7 @@ File type = "ooTextFile"
 Object class = "TextGrid"
 
 xmin = 0 
-xmax = 8.82839 
+xmax = 8.963968 
 tiers? <exists> 
 size = 3 
 item []: 
@@ -10,85 +10,85 @@ item []:
         class = "IntervalTier" 
         name = "Words" 
         xmin = 0 
-        xmax = 8.82839 
+        xmax = 8.963968 
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 0.9119854875283447 
+            xmax = 1.388085260770975 
             text = "te)te)" 
         intervals [2]:
-            xmin = 0.9119854875283447 
-            xmax = 2.391803736419941 
+            xmin = 1.388085260770975 
+            xmax = 2.8679035096625713 
             text = "malk'wOt,ok" 
         intervals [3]:
-            xmin = 2.391803736419941 
-            xmax = 3.198091425001724 
+            xmin = 2.8679035096625713 
+            xmax = 3.6741911982443543 
             text = "nEhwe)" 
         intervals [4]:
-            xmin = 3.198091425001724 
-            xmax = 4.784917800453515 
+            xmin = 3.6741911982443543 
+            xmax = 5.2610175736961455 
             text = "cEb,yonok" 
         intervals [5]:
-            xmin = 4.784917800453515 
-            xmax = 5.796971779060548 
+            xmin = 5.2610175736961455 
+            xmax = 6.273071552303178 
             text = ")aykano)" 
         intervals [6]:
-            xmin = 5.796971779060548 
-            xmax = 7.14955328798186 
+            xmin = 6.273071552303178 
+            xmax = 7.62565306122449 
             text = "dba$mayo)" 
         intervals [7]:
-            xmin = 7.14955328798186 
-            xmax = 7.6501067610717755 
+            xmin = 7.62565306122449 
+            xmax = 8.126206534314406 
             text = ")op" 
         intervals [8]:
-            xmin = 7.6501067610717755 
-            xmax = 8.82839 
+            xmin = 8.126206534314406 
+            xmax = 8.963968 
             text = "b)ar(o)" 
     item [2]:
         class = "IntervalTier" 
         name = "Inter" 
         xmin = 0 
-        xmax = 8.82839 
+        xmax = 8.963968 
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 0.9119854875283447 
+            xmax = 1.388085260770975 
             text = "come" 
         intervals [2]:
-            xmin = 0.9119854875283447 
-            xmax = 2.391803736419941 
+            xmin = 1.388085260770975 
+            xmax = 2.8679035096625713 
             text = "thy kingdom" 
         intervals [3]:
-            xmin = 2.391803736419941 
-            xmax = 3.198091425001724 
+            xmin = 2.8679035096625713 
+            xmax = 3.6741911982443543 
             text = "be done" 
         intervals [4]:
-            xmin = 3.198091425001724 
-            xmax = 4.784917800453515 
+            xmin = 3.6741911982443543 
+            xmax = 5.2610175736961455 
             text = "thy will" 
         intervals [5]:
-            xmin = 4.784917800453515 
-            xmax = 5.796971779060548 
+            xmin = 5.2610175736961455 
+            xmax = 6.273071552303178 
             text = "as" 
         intervals [6]:
-            xmin = 5.796971779060548 
-            xmax = 7.14955328798186 
+            xmin = 6.273071552303178 
+            xmax = 7.62565306122449 
             text = "in heaven" 
         intervals [7]:
-            xmin = 7.14955328798186 
-            xmax = 7.6501067610717755 
+            xmin = 7.62565306122449 
+            xmax = 8.126206534314406 
             text = "so" 
         intervals [8]:
-            xmin = 7.6501067610717755 
-            xmax = 8.82839 
+            xmin = 8.126206534314406 
+            xmax = 8.963968 
             text = "on earth" 
     item [3]:
         class = "IntervalTier" 
         name = "Segment" 
         xmin = 0 
-        xmax = 8.82839 
+        xmax = 8.963968 
         intervals: size = 1 
         intervals [1]:
             xmin = 0 
-            xmax = 8.82839 
+            xmax = 8.963968 
             text = "te)te) malk'wOt,ok nEhwe) cEb,yonok )aykano) dba$mayo) )op b)ar(o)" 

@@ -2,6 +2,7 @@
 
 IF "%~1"=="" (
     ECHO Please provide a command line argument.
+    ECHO .\create-words.cmd 01_Mattai_06_09
     EXIT /b
 )
 
