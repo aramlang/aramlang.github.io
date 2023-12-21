@@ -110,7 +110,11 @@ span.label {
 
 .eng {
   direction: ltr;
-  color: blue
+  color: blue;
+}
+
+.cal {
+  direction: ltr;
 }
 
 .right {
@@ -539,4 +543,10 @@ li {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.nfo {
+  font-size: smaller;
+  text-align: center;
+  padding: 5px;
 }
