@@ -5,32 +5,34 @@ if numberOfTiers < 2
     exit "The TextGrid must have at least two tiers."
 endif
 
-# Assuming you have a TextGrid with at least two tiers
-
-# Get the name of the second tier
-tierName$ = Get tier name: 2
-
-# Get the number of intervals in the first tier
 numberOfIntervals = Get number of intervals: 1
-
-# Add a new tier after the first tier
-Insert interval tier: 2, tierName$
-
-# Loop through each interval in the first tier
-for interval to numberOfIntervals
-    endTime = Get end time of interval: 1, interval
-
-    # Insert boundary at the end time if not the last interval
-    if interval < numberOfIntervals
-        Insert boundary: 2, endTime
-    endif
-
-    # Get label from the second tier (which is now the third tier)
-    label$ = Get label of interval: 3, interval
-
-    # Set the label for the new tier
-    Set interval text: 2, interval, label$
+for interval from 1 to numberOfIntervals
+    endTimes[interval] = Get end time of interval: 1, interval
 endfor
 
-# Remove the original second tier (which is now the third tier)
-Remove tier: 3
+for tier from 2 to numberOfTiers
+    skipTier = 1
+    tierIntervals = Get number of intervals: tier
+    if tierIntervals == numberOfIntervals
+        for tierInterval from 1 to tierIntervals
+            content$[tierInterval] = Get label of interval: tier, tierInterval
+            tierEndTime = Get end time of interval: tier, tierInterval
+            if tierEndTime <> endTimes[tierInterval]
+                skipTier = 0
+            endif
+        endfor
+        if skipTier == 0
+            for tierInterval from 1 to tierIntervals - 1
+                Remove right boundary: tier, 1
+            endfor
+            for tierInterval from 1 to tierIntervals
+                # Insert boundary at the end time if not the last interval
+                if tierInterval < tierIntervals
+                    Insert boundary: tier, endTimes[tierInterval]
+                endif
+                # Copy back the labels
+                Set interval text: tier, tierInterval, content$[tierInterval]
+            endfor
+        endif
+    endif
+endfor
