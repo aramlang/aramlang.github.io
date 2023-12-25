@@ -16,11 +16,11 @@ verse$ = info$()
 @isNumeric: verse$
 if isNumeric.result == 0
   tiers = Get number of tiers
-  verseTier = tiers - 2
-  todoTier = tiers
-  intervals = Get number of intervals: todoTier
+  verseTier = tiers - 1
+  statusTier = tiers
+  intervals = Get number of intervals: statusTier
   for i from 1 to intervals
-      todo$ = Get label of interval: todoTier, i
+      todo$ = Get label of interval: statusTier, i
       if todo$ == "TODO"
           verse$ = Get label of interval: verseTier, i
           i = intervals

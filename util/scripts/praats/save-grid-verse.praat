@@ -16,17 +16,16 @@ procedure isNumeric: .number$
     endif
 endproc
 
-clearinfo
 verse$ = Get label of interval
 @isNumeric: verse$
-while isNumeric.result == 0 and (length(verse$) == 3 or length(verse$) == 2)
+appendInfoLine: isNumeric.result 
+while isNumeric.result == 0 or (length(verse$) <> 3 and length(verse$) == 2)
     Select next tier
     verse$ = Get label of interval
     appendInfoLine: verse$
-    @isNumeric: verse$   
+    @isNumeric: verse$
+    appendInfoLine: isNumeric.result
 endwhile
-Select previous tier
-Select previous tier
 Select previous tier
 fileBaseName$ = Get label of interval
 Select next tier
@@ -53,4 +52,6 @@ if uScores == 2
   Save selected sound as WAV file: wavFile$
   clearinfo
   writeInfoLine: verse$
+else
+    # TODO verse extraction
 endif
