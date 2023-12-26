@@ -29,9 +29,9 @@ paddedBook$ = left$(soundObjectName$, firstUscore - 1)
 paddedChapter$ = right$(soundObjectName$, length(soundObjectName$) - lastUscore)
 verses = books[paddedBook$ + "-" + paddedChapter$]
 if length (paddedChapter$) == 3
-    tiers$ = "Text Inter Phonetic Latin Section Path Verse Status"
+    tiers$ = "Text Inter Phonetic Latin Section Verse Status Path"
 else
-    tiers$ = "Text Inter Path Verse Status"
+    tiers$ = "Text Inter Verse Status Path"
 endif
 
 tiers = 0
@@ -55,15 +55,15 @@ textGridId = To TextGrid: tiers$, ""
 for interval to verses
     endTime = interval * size
     if interval < verses
-        for i to tiers
+        for i to tiers - 1
             Insert boundary: i, endTime
         endfor
     endif
     @zeroPadded: paddedChapter$, interval
-    Set interval text: tiers - 2, interval, nfo$
-    Set interval text: tiers - 1, interval, zeroPadded.verse$
-    Set interval text: tiers, interval, "TODO"
+    Set interval text: tiers - 2, interval, zeroPadded.verse$
+    Set interval text: tiers - 1, interval, "TODO"
 endfor
+Set interval text: tiers, 1, nfo$
 
 plusObject: "Sound " + soundObjectName$
 View & Edit

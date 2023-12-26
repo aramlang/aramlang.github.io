@@ -9,8 +9,7 @@ if numberOfTiers < 2
     exit "The TextGrid must have at least two tiers."
 endif
 
-gridName$ = selected$("TextGrid")
-editor TextGrid 'gridName$'
+editor(textGridObject)
     runScript: "zero-crossing.praat"
 endeditor
 
@@ -46,7 +45,7 @@ for tier from 2 to numberOfTiers
     endif
 endfor
 
-editor TextGrid 'gridName$'
+editor(textGridObject)
     runScript: "save-grid-verse.praat"
 endeditor
 plusObject: soundObject

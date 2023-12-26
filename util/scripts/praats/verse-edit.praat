@@ -93,7 +93,7 @@ if tiers > 5
   verse$ = Get label of interval: 7, verse
   statusTier = 8
 
-  tiers$ = "Words Inter Phonetic Latin Section Path Verse Status"
+  tiers$ = "Words Inter Phonetic Latin Section Verse Status Path"
   pathTier = 6
   verseTier = 7
 else
@@ -101,13 +101,12 @@ else
   verse$ = Get label of interval: 4, verse
   statusTier = 5
 
-  tiers$ = "Words Inter Path Verse status"
+  tiers$ = "Words Inter Verse status Path"
   pathTier = 3
   verseTier = 4
 endif
 
-; ~~~~~ TODO UNCOMMENT ~~~~~
-;Set interval text: statusTier, verse, "DONE: " +  date$()
+Set interval text: statusTier, verse, "DONE: " +  date$()
 editor: gridId
   Save whole TextGrid as text file: chapterPath$ + ".TextGrid"
 endeditor
