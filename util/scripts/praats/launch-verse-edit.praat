@@ -20,10 +20,12 @@ if isNumeric.result == 0
   tiers = Get number of tiers
   verseTier = tiers - 1
   statusTier = tiers
+  verse$ = Get label of interval: verseTier, 1
+  
   intervals = Get number of intervals: statusTier
   for i from 1 to intervals
-      todo$ = Get label of interval: statusTier, i
-      if todo$ == "TODO"
+      status$ = Get label of interval: statusTier, i
+      if status$ == "TODO"
           verse$ = Get label of interval: verseTier, i
           i = intervals
       endif

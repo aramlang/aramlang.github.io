@@ -1,3 +1,5 @@
+include commons.praat
+
 soundObject = selected("Sound")
 textGridObject = selected("TextGrid")
 
@@ -6,11 +8,11 @@ numberOfTiers = Get number of tiers
 
 if numberOfTiers < 2
     plusObject: soundObject
-    exit "The TextGrid must have at least two tiers."
+    exitScript: "The TextGrid must have at least two tiers."
 endif
 
 editor(textGridObject)
-    runScript: "zero-crossing.praat"
+    @zeroCross
 endeditor
 
 numberOfIntervals = Get number of intervals: 1
@@ -46,6 +48,6 @@ for tier from 2 to numberOfTiers
 endfor
 
 editor(textGridObject)
-    #runScript: "save-grid-verse.praat"
+    runScript: "save-grid-verse.praat"
 endeditor
 plusObject: soundObject

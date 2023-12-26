@@ -31,6 +31,16 @@ procedure zeroPadded: .paddedChapter$ .verse
   endif
 endproc
 
+procedure uscores: .text$
+    .count = 0
+    .len = length(.text$)
+    for .i from 1 to .len
+        if (mid$(.text$, .i, 1) = "_")
+            .count = .count + 1
+        endif
+    endfor
+endproc
+
 procedure extractNfoValue .text$, .label$
   .labelPosition = index(.text$, .label$)
   if .labelPosition > 0
@@ -69,4 +79,29 @@ procedure assureFirstTier .nfo$
     .error$ = "Please select working interval on tier #1." + newline$ + "Only a point selection has been found." + newline$
     exitScript: .error$
   endif
+endproc
+
+procedure zeroCross
+    .nfo$ = Editor info
+    @assureFirstTier: .nfo$
+    
+    .cnt = 0
+    .initialStartTime = Get starting point of interval
+    if .initialStartTime <> 0
+        Move to nearest zero crossing
+        .cnt = .cnt + 1
+        .initialStartTime = Get starting point of interval
+    endif
+
+    Select next interval
+    .startTime = Get starting point of interval
+
+    while .startTime <> .initialStartTime
+        if .startTime <> 0
+            Move to nearest zero crossing
+            .cnt = .cnt + 1
+        endif
+        Select next interval
+        .startTime = Get starting point of interval
+    endwhile
 endproc

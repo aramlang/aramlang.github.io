@@ -1,12 +1,12 @@
 include commons.praat
 
 editorNfo$ = Editor info
-@assureFirstTier editorNfo$
+@assureFirstTier: editorNfo$
 
 @extractNfoValue: editorNfo$, "Data name: "
-dateName$ = extractNfoValue.result$
-lastUScore = rindex(dateName$, "_")
-isTorah = length(mid$(dateName$, lastUScore + 1, length(dateName$) - lastUScore)) == 3
+fileName$ = extractNfoValue.result$
+lastUScore = rindex(fileName$, "_")
+isTorah = length(mid$(fileName$, lastUScore + 1, length(fileName$) - lastUScore)) == 3
 
 if isTorah == 1
   Select next tier
@@ -29,32 +29,21 @@ endif
 
 Select next tier
 Select next tier
-fileBaseName$ = Get label of interval
-textGridFile$ = fileBaseName$ + ".TextGrid"
 
-# TODO go back to 1st tier and selected interval
+if isTorah == 0
+  # TODO go back selected interval
+endif
+
+folderName$ = environment$("PRAAT_WORK")
+fileBaseName$ = folderName$ + fileName$
+textGridFile$ = fileBaseName$ + ".TextGrid"
 
 Save whole TextGrid as text file: textGridFile$
 
-clearinfo
-
-lastSlash = rindex(fileBaseName$, "/")
-fileName$ = right$(fileBaseName$, length(fileBaseName$) - lastSlash)
-folderName$ = left$(fileBaseName$, lastSlash)
-appendInfoLine: "fileName$: " + fileName$
-appendInfoLine: "folderName$: " + folderName$
-exit
-
-uScores = 0
-len = length(fileName$)
-for i from 1 to len
-  if (mid$(fileName$, i, 1) = "_")
-    uScores = uScores + 1
-  endif
-endfor
+@uscores: fileName$
 
 # is it a chapter file
-if uScores == 2
+if uscores.count == 2
   wavFile$ = fileBaseName$ + "_" + verse$ + ".wav"
   Save selected sound as WAV file: wavFile$
   clearinfo
@@ -63,7 +52,7 @@ else
   outPath$ = folderName$ + "out/"
   appendInfoLine: outPath$
   exit
-  command$ = "mkdir '" + outPath$ + "'"
+  command$ = "mkdir '" + outPath$ + "' 2>nul"
   runSystem: command$
   
   if length(verse$) = 3
