@@ -72,36 +72,29 @@ else
   verseTier = 3 ; Peshitta has the verse at tier #3
 endif
 
-clearinfo
 verse$ = Get label of interval
 @isNumeric: verse$
 if isNumeric.result == 0
   exitScript: "Expected a verse number at tier #" + string$(verseTier) + " but found " + "'" + verse$ + "'" + newline$
 endif
 
-exit
-
-@isNumeric: verse$
-while isNumeric.result == 0 or (length(verse$) <> 3 and length(verse$) == 2)
-    Select next tier
-    verse$ = Get label of interval
-    @isNumeric: verse$
-endwhile
-Select previous tier
+Select next tier
+Select next tier
 fileBaseName$ = Get label of interval
-Select next tier
-Select next tier
-Select next tier
-
-appendInfoLine: "fileBaseName$: " + fileBaseName$
 textGridFile$ = fileBaseName$ + ".TextGrid"
+
+# TODO go back to 1st tier and selected interval
+
 Save whole TextGrid as text file: textGridFile$
+
+clearinfo
 
 lastSlash = rindex(fileBaseName$, "/")
 fileName$ = right$(fileBaseName$, length(fileBaseName$) - lastSlash)
 folderName$ = left$(fileBaseName$, lastSlash)
 appendInfoLine: "fileName$: " + fileName$
 appendInfoLine: "folderName$: " + folderName$
+exit
 
 uScores = 0
 len = length(fileName$)

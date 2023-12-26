@@ -29,9 +29,9 @@ paddedBook$ = left$(soundObjectName$, firstUscore - 1)
 paddedChapter$ = right$(soundObjectName$, length(soundObjectName$) - lastUscore)
 verses = books[paddedBook$ + "-" + paddedChapter$]
 if length (paddedChapter$) == 3
-    tiers$ = "Text Inter Phonetic Latin Section Verse Status Path"
+    tiers$ = "Text Inter Phonetic Latin Section Verse Status"
 else
-    tiers$ = "Text Inter Verse Status Path"
+    tiers$ = "Text Inter Verse Status"
 endif
 
 tiers = 0
@@ -42,12 +42,6 @@ for i from 1 to length(tiers$)
 endfor
 tiers += 1
 
-nfo$ = Info
-newlineIndex = index_regex(nfo$, "\n")
-nfo$ = replace$(mid$(nfo$, newlineIndex + 1, length(nfo$) - newlineIndex - 1), "Associated file: ", "", 1)
-newlineIndex = index_regex(nfo$, "\n")
-nfo$ = replace$(left$(nfo$, newlineIndex - 5), "\", "/", 0)
-
 totalDuration = Get total duration
 size = totalDuration / verses
 
@@ -55,20 +49,18 @@ textGridId = To TextGrid: tiers$, ""
 for interval to verses
     endTime = interval * size
     if interval < verses
-        for i to tiers - 1
+        for i to tiers
             Insert boundary: i, endTime
         endfor
     endif
     @zeroPadded: paddedChapter$, interval
-    Set interval text: tiers - 2, interval, zeroPadded.verse$
-    Set interval text: tiers - 1, interval, "TODO"
+    Set interval text: tiers - 1, interval, zeroPadded.verse$
+    Set interval text: tiers, interval, "TODO"
 endfor
-Set interval text: tiers, 1, nfo$
 
 plusObject: "Sound " + soundObjectName$
 View & Edit
 
-# select first interval
 editor: textGridId
     startTime = Get starting point of interval
     while startTime <> 0
