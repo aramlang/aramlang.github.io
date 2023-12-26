@@ -46,6 +46,6 @@ for tier from 2 to numberOfTiers
 endfor
 
 editor(textGridObject)
-    runScript: "save-grid-verse.praat"
+    #runScript: "save-grid-verse.praat"
 endeditor
 plusObject: soundObject

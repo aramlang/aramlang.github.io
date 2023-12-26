@@ -1,3 +1,5 @@
+include commons.praat
+
 books["01-01"] = 25 ; Mattai 1 has 25 verses
 books["01-06"] = 34 ; Mattai 6
 
@@ -6,21 +8,6 @@ books["01-002"] = 25 ; Genesis 2
 
 books["02-001"] = 22 ; Exodus 1
 books["02-020"] = 23 ; Exodus 20
-
-procedure zeroPadded: .paddedChapter$ .verse
-    .verse$ = string$(.verse)
-    if length(.paddedChapter$) == 3
-        if .verse < 10
-            .verse$ = "00" + .verse$
-        elsif .verse < 100
-            .verse$ = "0" + .verse$
-        endif
-    else
-        if .verse < 10
-            .verse$ = "0" + .verse$
-        endif
-    endif
-endproc
 
 soundObjectName$ = selected$("Sound")
 firstUscore = index(soundObjectName$, "_")
