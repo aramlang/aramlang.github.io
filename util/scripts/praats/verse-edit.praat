@@ -2,8 +2,10 @@ form Read Verse to Edit
   natural verse 1
 endform
 if verse > 176
-  exit "You cannot have a verse number higher than 176"
+  exitScript: "You cannot have a verse number higher than 176"
 endif
+
+include commons.praat
 
 procedure split .string$, .delimiter$
   .len = 0
@@ -30,14 +32,20 @@ endproc
 
 select all
 soundId = selected("Sound")
+selectObject: soundId
+nfo$ = Info
+@extractNfoValue: nfo$, "Associated file: "
+chapterPath$ = left$(extractNfoValue.result$, length(extractNfoValue.result$) - 4) 
 
 select all
 gridId = selected("TextGrid")
 selectObject: gridId
+
 tiers = Get number of tiers
+verseTier = tiers - 1
+statusTier = tiers
 
 delim$ = " "
-tabDelim$ = "	"
 text$ = Get label of interval: 1, verse
 @split: text$, delim$
 words = split.len
@@ -51,7 +59,7 @@ for i from 1 to words
 endfor
 
 inter$ = Get label of interval: 2, verse
-@split: inter$, tabDelim$
+@split: inter$, tab$
 inters = split.len
 for i from 1 to inters
   inters$[i] = splits$[i]
@@ -87,29 +95,12 @@ if tiers > 5
     exitScript: error$ 
   endif
 
-  section$ = Get label of interval: 5, verse
-
-  chapterPath$ = Get label of interval: 6, verse
-  verse$ = Get label of interval: 7, verse
-  statusTier = 8
-
-  tiers$ = "Words Inter Phonetic Latin Section Verse Status Path"
-  pathTier = 6
-  verseTier = 7
+  section$ = Get label of interval: verseTier - 1, verse
+  tiers$ = "Words Inter Phonetic Latin Section Verse Status"
 else
-  chapterPath$ = Get label of interval: 3, verse
-  verse$ = Get label of interval: 4, verse
-  statusTier = 5
-
-  tiers$ = "Words Inter Verse status Path"
-  pathTier = 3
-  verseTier = 4
+  tiers$ = "Words Inter Verse Status"
 endif
-
-Set interval text: statusTier, verse, "DONE: " +  date$()
-editor: gridId
-  Save whole TextGrid as text file: chapterPath$ + ".TextGrid"
-endeditor
+verse$ = Get label of interval: verseTier, verse
 
 startTime = Get start time of interval: 1, verse
 endTime = Get end time of interval: 1, verse
@@ -142,9 +133,10 @@ endfor
 if tiers > 5
   Set interval text: 5, 1, section$
 endif
-Set interval text: pathTier, 1, versePath$
 Set interval text: verseTier, 1, verse$
 Set interval text: statusTier, 1, "TODO"
 
 plusObject: verseSoundId
 View & Edit
+
+@selectFirstInterval: verseGridId

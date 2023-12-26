@@ -1,14 +1,9 @@
 include commons.praat
 
 textGrid$ = selected$("TextGrid")
- 
-uscores = 0
-for i from 1 to length(textGrid$)
-    if mid$(textGrid$, i, 1) = "_"
-        uscores += 1
-    endif
-endfor
-if uscores <> 2
+
+@uscores: textGrid$
+if uscores.count <> 2
     exitScript: "A chapter textgrid should have 2 underscores. '" + textGrid$ + "' has " + string$(uscores)
 endif
 
@@ -32,4 +27,4 @@ if isNumeric.result == 0
   endfor
 endif
 
-runScript: "verse-edit.praat", verse$
+runScript: "verse-edit.praat", number(verse$)

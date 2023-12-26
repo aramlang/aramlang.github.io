@@ -105,3 +105,13 @@ procedure zeroCross
         .startTime = Get starting point of interval
     endwhile
 endproc
+
+procedure selectFirstInterval textGridId
+    editor: textGridId
+        startTime = Get starting point of interval
+        while startTime <> 0
+            Select previous interval
+            startTime = Get starting point of interval
+        endwhile
+    endeditor
+endproc

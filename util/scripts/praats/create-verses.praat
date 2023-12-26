@@ -48,10 +48,4 @@ endfor
 plusObject: "Sound " + soundObjectName$
 View & Edit
 
-editor: textGridId
-    startTime = Get starting point of interval
-    while startTime <> 0
-        Select previous interval
-        startTime = Get starting point of interval
-    endwhile
-endeditor
+@selectFirstInterval: textGridId

@@ -47,7 +47,7 @@ if uscores.count == 2
   wavFile$ = fileBaseName$ + "_" + verse$ + ".wav"
   Save selected sound as WAV file: wavFile$
   clearinfo
-  writeInfoLine: verse$
+  writeInfo: verse$
 else
   outPath$ = folderName$ + "out/"
   appendInfoLine: outPath$
