@@ -245,7 +245,20 @@ $bible = @{
         "pad"      = 2
     }
 }
-     
+
+$cd = Split-Path -Path $PSScriptRoot -Parent
+$praatPath = Join-Path -Path $cd -ChildPath "praat"
+$praatExe = Join-Path -Path $praatPath -ChildPath "Praat.exe"
+
+if (Get-Item -Path $praatExe -Stream Zone.Identifier -ErrorAction SilentlyContinue) {
+    $files = Get-ChildItem -Path $cd -Recurse -File
+    foreach ($file in $files) {
+        Unblock-File -Path $file.FullName
+    }
+
+    Write-Host "All files in $cd and its subdirectories have been unblocked."
+}
+
 $bookNfo = $bible[$book]
 $bookNo = $bookNfo["no"]
 $chapters = $bookNfo["chapters"]
@@ -259,8 +272,8 @@ if ($chapter -lt 1 -or $chapter -gt $chapters) {
     
 $paddedChapter = $chapter.ToString().PadLeft($pad, '0')
 $workChapter = "${bookNo}_${book}_$paddedChapter"
-$cd = Get-Location
-$workPath = Join-Path -Path $cd $workChapter
+$workPath = Join-Path -Path $cd -ChildPath $workChapter
+$outPath = Join-Path -Path $workPath -ChildPath "out"
 
 if (-not (Test-Path -Path $workPath -PathType Container)) {
     $errorMsg = "`nFolder $workPath does not exists. Folder must exists for setup to complete."
@@ -268,9 +281,27 @@ if (-not (Test-Path -Path $workPath -PathType Container)) {
     exit 1
 }
 
-$wavFile = Join-Path $workPath "$workChapter.wav"
+$wavFile = Join-Path -Path $workPath -ChildPath "$workChapter.wav"
 if (-not (Test-Path -Path $wavFile -PathType Leaf)) {
     $errorMsg = "`nAudio $wavFile does not exists. Chapter audio wav file must exists for setup to complete."
     Write-Host $errorMsg
     exit 1
 }
+
+if (-Not (Test-Path -Path $outPath)) {
+    New-Item -Path $outPath -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
+}
+
+$runPraatCmd = Join-Path -Path $praatPath -ChildPath "run-praat.cmd"
+$runPraatTemplate = Join-Path -Path $praatPath -ChildPath "run-praat.template" 
+$runPratLnk = Join-Path -Path $cd -ChildPath "run-praat.lnk"
+
+Copy-Item -Path $runPraatTemplate -Destination $runPratLnk -Force
+
+$wsh = New-Object -ComObject WScript.Shell
+$shortcut = $wsh.CreateShortcut($runPratLnk)
+$shortcut.TargetPath = $runPraatCmd
+$shortcut.WorkingDirectory = $workPath
+$shortcut.Arguments = '"' + $workPath + '"'
+$shortcut.IconLocation = $praatExe
+$shortcut.Save()
