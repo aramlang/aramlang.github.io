@@ -41,6 +41,29 @@ procedure uscores: .text$
     endfor
 endproc
 
+procedure getPathSeparator .workPath$
+    if index(.workPath$, "/") > 0
+        .result$ = "/"
+    elsif index(.workPath$, "\") > 0
+        .result$ = "\"
+    else
+        .result$ = "\"
+    endif
+endproc
+
+procedure getSlashChapter .workPath$
+    @getPathSeparator: .workPath$
+    .separator$ = getPathSeparator.result$
+    .idx = rindex(.workPath$, .separator$)
+    .result$ = mid$(.workPath$, .idx, length(.workPath$) - .idx + 1)
+endproc
+
+procedure getChapter .workPath$
+    @getSlashChapter: .workPath$
+    slashChapter$ = getSlashChapter.result$
+    .result$ = mid$(.slashChapter$, .2, length(.slashChapter$) - 1)
+endproc
+
 procedure extractNfoValue .text$, .label$
   .labelPosition = index(.text$, .label$)
   if .labelPosition > 0

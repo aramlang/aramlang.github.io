@@ -7,4 +7,9 @@ IF "%~1"=="" (
 
 SET PRAAT-WORK-DIR=%~1
 
-start "Praat.exe" "%~dp0Praat.exe" --hide-picture --utf8 --pref-dir="%~dp0"
+SETLOCAL
+CD "%~dp0"
+
+Praat.exe --hide-picture --new-send launch-chapter.praat
+
+ENDLOCAL

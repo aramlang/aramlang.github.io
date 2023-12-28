@@ -293,15 +293,33 @@ if (-Not (Test-Path -Path $outPath)) {
 }
 
 $runPraatCmd = Join-Path -Path $praatPath -ChildPath "run-praat.cmd"
-$runPraatTemplate = Join-Path -Path $praatPath -ChildPath "run-praat.template" 
 $runPratLnk = Join-Path -Path $cd -ChildPath "run-praat.lnk"
-
-Copy-Item -Path $runPraatTemplate -Destination $runPratLnk -Force
 
 $wsh = New-Object -ComObject WScript.Shell
 $shortcut = $wsh.CreateShortcut($runPratLnk)
 $shortcut.TargetPath = $runPraatCmd
 $shortcut.WorkingDirectory = $workPath
-$shortcut.Arguments = '"' + $workPath + '"'
+$shortcut.Arguments = "`"$workPath`""
 $shortcut.IconLocation = $praatExe
+$shortcut.Description = "Launch a configured instance of Praat"
 $shortcut.Save()
+
+$praatConfig = Join-Path -Path $env:USERPROFILE -ChildPath "Praat"
+$buttonsIni = Join-Path -Path $praatConfig -ChildPath "Buttons5.ini"
+
+if (-Not (Test-Path -Path $praatConfig)) {
+    New-Item -Path $praatConfig -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
+}
+
+if (-Not (Test-Path -Path $buttonsIni)) {
+    New-Item -Path $buttonsIni -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null
+}
+
+$buttonsText = Get-Content -Path $buttonsIni -Raw
+if (-Not $buttonsText.Contains("Align / Save TextGrid")) {
+    $alignPath = Join-Path -Path $praatPath -ChildPath "align-save-grid.praat"
+    $buttonsText = $buttonsText + "`nAdd action command... Sound 0 TextGrid 0 `"`" 0 `"Align / Save TextGrid`" `"`" 0 $alignPath`n"
+    Set-Content -Path $buttonsIni -Value $buttonsText
+}
+
+Write-Host "`nPlease open $runPratLnk to run a configured instance of PRAAT"
