@@ -60,8 +60,18 @@ endproc
 
 procedure getChapter .workPath$
     @getSlashChapter: .workPath$
-    slashChapter$ = getSlashChapter.result$
-    .result$ = mid$(.slashChapter$, .2, length(.slashChapter$) - 1)
+    .slashChapter$ = getSlashChapter.result$
+    .result$ = mid$(.slashChapter$, 2, length(.slashChapter$) - 1)
+endproc
+
+procedure getChapterNo .workPath$
+    .lastUscore = rindex(.workPath$, "_")
+    .result$ = right$(.workPath$, length(.workPath$) - .lastUscore)
+endproc
+
+procedure getBookNo .workPath$
+    .firstUscore = index(.workPath$, "_")
+    .result$ = left$(.workPath$, .firstUscore - 1)
 endproc
 
 procedure extractNfoValue .text$, .label$
@@ -129,12 +139,30 @@ procedure zeroCross
     endwhile
 endproc
 
-procedure selectFirstInterval textGridId
-    editor: textGridId
-        startTime = Get starting point of interval
-        while startTime <> 0
+procedure selectFirstInterval .textGridId
+    editor: .textGridId
+        .startTime = Get starting point of interval
+        while .startTime <> 0
             Select previous interval
-            startTime = Get starting point of interval
+            .startTime = Get starting point of interval
         endwhile
     endeditor
 endproc
+
+procedure selectActiveInterval .textGridId .activeInterval
+    @selectFirstInterval: .textGridId
+    editor: .textGridId
+      for .i from 1 to .activeInterval - 1
+        Select next interval
+      endfor
+    endeditor
+endproc
+
+books["01-001"] = 31 ; Genesis 1 has 31 verses
+books["01-002"] = 25 ; Genesis 2
+
+books["02-001"] = 22 ; Exodus 1
+books["02-020"] = 23 ; Exodus 20
+
+books["01-01"] = 25 ; Mattai 1 has 25 verses
+books["01-06"] = 34 ; Mattai 6
