@@ -1,7 +1,5 @@
 include commons.praat
 
-workPath$ = shellDirectory$
-
 select all
 numberOfSelected = numberOfSelected()
 if numberOfSelected > 0 

@@ -276,37 +276,51 @@ $workPath = Join-Path -Path $cd -ChildPath $workChapter
 $outPath = Join-Path -Path $workPath -ChildPath "out"
 
 if (-not (Test-Path -Path $workPath -PathType Container)) {
-    $errorMsg = "`nFolder $workPath does not exists. Folder must exists for setup to complete."
-    Write-Host $errorMsg
-    exit 1
+    New-Item -Path $workPath -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
 }
 
 $wavFile = Join-Path -Path $workPath -ChildPath "$workChapter.wav"
 if (-not (Test-Path -Path $wavFile -PathType Leaf)) {
-    $errorMsg = "`nAudio $wavFile does not exists. Chapter audio wav file must exists for setup to complete."
-    Write-Host $errorMsg
-    exit 1
+    $warningMsg = "`nAudio $wavFile does not exists. Please add missing $wavFile"
+    Write-Warning $warningMsg
 }
 
 if (-Not (Test-Path -Path $outPath)) {
     New-Item -Path $outPath -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
 }
 
-$runPraatCmd = Join-Path -Path $praatPath -ChildPath "run-praat.cmd"
-$runPratLnk = Join-Path -Path $cd -ChildPath "run-praat.lnk"
+function SetShorcut {
+    param (
+        [string]$Path, # Required parameter
+        [string]$HotKey = $null            # Optional parameter
+    )
 
-$wsh = New-Object -ComObject WScript.Shell
-$shortcut = $wsh.CreateShortcut($runPratLnk)
-$shortcut.TargetPath = $runPraatCmd
-$shortcut.WorkingDirectory = $workPath
-$shortcut.Arguments = "`"$workPath`""
-$shortcut.IconLocation = $praatExe
-$shortcut.Description = "Launch a configured instance of Praat"
-$shortcut.Save()
+    $praatCmd = Join-Path -Path $praatPath -ChildPath "Praat.exe"
+    $loadFile = Join-Path -Path $praatPath -ChildPath "load-chapter.praat"
+    
+    $wsh = New-Object -ComObject WScript.Shell
+    $shortcut = $wsh.CreateShortcut("$Path.lnk")
+    $shortcut.TargetPath = $praatCmd
+    $shortcut.Arguments = "--hide-picture --send `"$loadFile`""
+    $shortcut.WorkingDirectory = $workPath
+    $shortcut.IconLocation = $praatExe
+    $shortcut.Description = "Launch a configured instance of Praat"
+    if ($HotKey -ne $null) {
+        $shortcut.Hotkey = $HotKey
+    }
+    $shortcut.Save()
+}
+
+
+$runPraatLnk = Join-Path -Path $cd -ChildPath "run-praat"
+SetShorcut -Path $runPraatLnk
+
+$desktopPath = [Environment]::GetFolderPath([Environment+SpecialFolder]::Desktop)
+$desktopPraatLnk = Join-Path -Path $desktopPath -ChildPath "run-praat"
+SetShorcut -Path $desktopPraatLnk -HotKey "Ctrl+Alt+P"
 
 $praatConfig = Join-Path -Path $env:USERPROFILE -ChildPath "Praat"
 $buttonsIni = Join-Path -Path $praatConfig -ChildPath "Buttons5.ini"
-
 if (-Not (Test-Path -Path $praatConfig)) {
     New-Item -Path $praatConfig -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
 }
@@ -315,11 +329,35 @@ if (-Not (Test-Path -Path $buttonsIni)) {
     New-Item -Path $buttonsIni -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null
 }
 
-$buttonsText = Get-Content -Path $buttonsIni -Raw
-if (-Not $buttonsText.Contains("Align / Save TextGrid")) {
-    $alignPath = Join-Path -Path $praatPath -ChildPath "align-save-grid.praat"
-    $buttonsText = $buttonsText + "`nAdd action command... Sound 0 TextGrid 0 `"`" 0 `"Align / Save TextGrid`" `"`" 0 $alignPath`n"
-    Set-Content -Path $buttonsIni -Value $buttonsText
+function SetButton {
+    param (
+        [string]$Name,
+        [string]$Script
+    )
+
+    $buttonsText = (Get-Content -Path $buttonsIni -Raw) -replace $null, ""
+    $search = "Add action command... TextGrid 0 `"`" 0 `"`" 0 `"$Name`" `"`" 0"
+    $scriptPath = Join-Path -Path $praatPath -ChildPath $Script
+    $command = "$search $scriptPath"
+    if (-Not $buttonsText.Contains($search)) {
+        Write-Host "Not contains: " + $search
+        $buttonsText = $buttonsText + "$command`n"
+    }
+    else {
+        Write-Host "Contains: " + $search
+        $searchRegex = [regex]::Escape($search)
+        $searchRegex = "^$alignSearchRegex.*$"
+        $buttonsText = $buttonsText -replace $searchRegex, $command
+    }
+    $buttonsText | Out-File -FilePath $buttonsIni -NoNewline -Encoding UTF8
 }
 
-Write-Host "`nPlease open $runPratLnk to run a configured instance of PRAAT"
+$alignButton = "Align / Save TextGrid"
+$alignSCript = "align-save-grid.praat"
+SetButton -Name $alignButton -Script $alignSCript
+
+$verseButton = "Load Verse"
+$verseScript = "load-verse.praat"
+SetButton -Name $verseButton -Script $verseScript
+
+Write-Host "`nPlease start Praat by launching $desktopPraatLnk link"
