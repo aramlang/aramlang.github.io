@@ -1,6 +1,23 @@
 include commons.praat
 
 workPath$ = shellDirectory$
+
+select all
+numberOfSelected = numberOfSelected()
+if numberOfSelected > 0 
+  for i to numberOfSelected
+    fullName$ = selected$ (i)
+    type$ = extractWord$ (fullName$, "")
+    if type$ = "TextGrid"
+      selectObject: i
+      i = numberOfSelected ; break
+    endif
+  endfor
+  @getChapter: workPath$
+  error$ = "Found " + string$(numberOfSelected) + " objects already loaded in Praat." + newline$ + "Skipping loading of '" + getChapter.result$ + "'!" + newline$
+  exitScript: error$
+endif
+
 @getSlashChapter: workPath$
 basePath$ = workPath$ + getSlashChapter.result$
 wavFile$ = basePath$ + ".wav"
