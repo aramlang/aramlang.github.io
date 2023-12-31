@@ -1,59 +1,61 @@
 include commons.praat
 
-select all
-numberOfSelected = numberOfSelected()
-if numberOfSelected > 0 
-  for i to numberOfSelected
-    fullName$ = selected$ (i)
-    type$ = extractWord$ (fullName$, "")
-    if type$ = "TextGrid"
-      selectObject: i
-      i = numberOfSelected ; break
-    endif
-  endfor
-  @getChapter: workPath$
-  error$ = "Found " + string$(numberOfSelected) + " objects already loaded in Praat." + newline$ + "Skipping loading of '" + getChapter.result$ + "'!" + newline$
-  exitScript: error$
-endif
+@exitOnLoaded:
 
-@getSlashChapter: workPath$
-basePath$ = workPath$ + getSlashChapter.result$
-wavFile$ = basePath$ + ".wav"
-textGridFile$ = basePath$ + ".TextGrid"
+wavFile$ = chapterPath$ + ".wav"
+textGridFile$ = chapterPath$ + ".TextGrid"
 
 soundId = Read from file: wavFile$
 if fileReadable(textGridFile$)
-  textGridId = Read from file: textGridFile$
+  @loadVerses
+else
+  @createVerses
+endif
+
+#############################################################
+
+procedure exitOnLoaded
+  select all
+  .numberOfSelected = numberOfSelected()
+  if .numberOfSelected > 0 
+    for .i to .numberOfSelected
+      .fullName$ = selected$(.i)
+      .type$ = extractWord$(.fullName$, "")
+      if .type$ == "TextGrid"
+        selectObject: .i
+        .i = .numberOfSelected ; break
+      endif
+    endfor
+    .error$ = "Found " + string$(.numberOfSelected) + " objects already loaded in Praat." + newline$ + "Loading of '" + chapter$ + "' aborted!!" + newline$
+    exitScript: .error$
+  endif  
+endproc
+
+procedure loadVerses
+  .textGridId = Read from file: textGridFile$
   plusObject: soundId
   View & Edit
  
-  selectObject: textGridId
-  tiers = Get number of tiers
-  intervals = Get number of intervals: 1
-  activeInterval = 0
-  for i from 1 to intervals
-    activeInterval = activeInterval + 1
-    status$ = Get label of interval: tiers, i
-    if status$ == "TODO"
-      i = intervals ; break
+  selectObject: .textGridId
+  .tiers = Get number of tiers
+  .intervals = Get number of intervals: 1
+  .activeInterval = 0
+  for .i from 1 to .intervals
+    .activeInterval = .activeInterval + 1
+    .status$ = Get label of interval: .tiers, .i
+    if .status$ == "TODO"
+      .i = .intervals ; break
     endif
   endfor
-  @selectActiveInterval: textGridId, activeInterval
-else
-  @createVerses: workPath$
-endif
+  if not .activeInterval
+    .activeInterval = 1
+  endif
+  @selectActiveInterval: .textGridId, .activeInterval
+endproc
 
-procedure createVerses .workPath$
-  @getChapter: .workPath$
-  @getBookNo: getChapter.result$
-  @getChapterNo: getChapter.result$
-  
-  .bookNo$ = getBookNo.result$
-  .chapterNo$ = getChapterNo.result$
-  .verses = books[.bookNo$ + "-" + .chapterNo$]
-
-  .isTorah = length(.chapterNo$) == 3
-  if .isTorah
+procedure createVerses
+  .verses = verses[bookNo$ + "-" + chapterNo$]
+  if isTorah
     .tiers$ = "Text Male Inter Phonetic Latin Section Verse Status"
   else
     .tiers$ = "Text Male Inter Verse Status"
@@ -71,14 +73,14 @@ procedure createVerses .workPath$
   .size = .totalDuration / .verses
 
   .textGridId = To TextGrid: .tiers$, ""
-  for .interval to .verses
+  for .interval from 1 to .verses
     .endTime = .interval * .size
     if .interval < .verses
       for .j to .tiers
         Insert boundary: .j, .endTime
        endfor
     endif
-    @zeroPadded: .chapterNo$, .interval
+    @zeroPadded: .interval
     Set interval text: .tiers - 1, .interval, zeroPadded.verse$
     Set interval text: .tiers, .interval, "TODO"
   endfor
@@ -88,3 +90,4 @@ procedure createVerses .workPath$
   selectObject: .textGridId
   @selectFirstInterval: .textGridId
 endproc
+

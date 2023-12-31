@@ -1,28 +1,58 @@
-workPath$ = shellDirectory$
-@getPathSeparator: workPath$
-workPathSlashed$ = workPath$ + getPathSeparator.result$
+@init:
 
-procedure isNumeric: .number$
-  .len = length(.number$)
-  if .len == 0
-    .result = 0
+procedure init
+  # pathSeparator
+  if windows
+    pathSeparator$ = "\"
   else
-    .result = 1
+    pathSeparator$ = "/"
   endif
-  if .result == 1
-    for .i from 1 to .len
-      .char$ = mid$(.number$, .i, 1)
-      if .char$ <> "0" and .char$ <> "1" and .char$ <> "2" and .char$ <> "3" and .char$ <> "4" and .char$ <> "5" and .char$ <> "6" and .char$ <> "7" and .char$ <> "8" and .char$ <> "9"
-        .result = 0
-        .i = .len ; break out of the loop
-      endif
-    endfor
-  endif
+
+  # chapter$ - e.g. 02_Shemot_020
+  .chapterIdx = rindex(shellDirectory$, pathSeparator$)
+  chapter$ = mid$(shellDirectory$, .chapterIdx + 1, length(shellDirectory$) - .chapterIdx)
+
+  # bookNo$
+  .firstUscore = index(chapter$, "_")
+  bookNo$ = left$(chapter$, .firstUscore - 1)
+
+  # chapterNo$
+  .lastUscore = rindex(chapter$, "_")
+  chapterNo$ = right$(chapter$, length(chapter$) - .lastUscore)
+
+  # isTorah
+  isTorah = length(chapterNo$) == 3
+
+  # paths
+  workPath$ = shellDirectory$ + pathSeparator$
+  chapterPath$ = workPath$ + chapter$
 endproc
 
-procedure zeroPadded: .paddedChapter$ .verse
+##########################################
+
+procedure selectFirstInterval .textGridId
+  editor: .textGridId
+    .startTime = Get starting point of interval
+    while .startTime <> 0
+      Select previous interval
+      .startTime = Get starting point of interval
+    endwhile
+  endeditor
+endproc
+
+procedure selectActiveInterval .textGridId .activeInterval
+  @selectFirstInterval: .textGridId
+
+  editor: .textGridId
+    for .i from 1 to .activeInterval - 1
+      Select next interval
+    endfor
+  endeditor
+endproc
+
+procedure zeroPadded: .verse
   .verse$ = string$(.verse)
-  if length(.paddedChapter$) == 3
+  if isTorah
     if .verse < 10
       .verse$ = "00" + .verse$
     elsif .verse < 100
@@ -32,75 +62,6 @@ procedure zeroPadded: .paddedChapter$ .verse
     if .verse < 10
       .verse$ = "0" + .verse$
     endif
-  endif
-endproc
-
-procedure uscores: .text$
-  .count = 0
-  .len = length(.text$)
-  for .i from 1 to .len
-    if (mid$(.text$, .i, 1) = "_")
-      .count = .count + 1
-    endif
-  endfor
-endproc
-
-procedure getPathSeparator .workPath$
-  if index(.workPath$, "/") > 0
-    .result$ = "/"
-  elsif index(.workPath$, "\") > 0
-    .result$ = "\"
-  else
-    .result$ = "\"
-  endif
-endproc
-
-procedure getSlashChapter .workPath$
-  @getPathSeparator: .workPath$
-  .separator$ = getPathSeparator.result$
-  .idx = rindex(.workPath$, .separator$)
-  .result$ = mid$(.workPath$, .idx, length(.workPath$) - .idx + 1)
-endproc
-
-procedure getChapter .workPath$
-  @getSlashChapter: .workPath$
-  .slashChapter$ = getSlashChapter.result$
-  .result$ = mid$(.slashChapter$, 2, length(.slashChapter$) - 1)
-endproc
-
-procedure getChapterPath .workPath$
-  @getSlashChapter: .workPath$
-  .result$ = .workPath$ + getSlashChapter.result$
-endproc
-
-procedure getChapterNo .workPath$
-   .lastUscore = rindex(.workPath$, "_")
-   .result$ = right$(.workPath$, length(.workPath$) - .lastUscore)
-endproc
-
-procedure getBookNo .workPath$
-  .firstUscore = index(.workPath$, "_")
-  .result$ = left$(.workPath$, .firstUscore - 1)
-endproc
-
-procedure extractNfoValue .text$, .label$
-  .labelPosition = index(.text$, .label$)
-  if .labelPosition > 0
-    .valuelPosition = .labelPosition + length(.label$)
-    .line$ = mid$(.text$, .valuelPosition, length(.text$) - .valuelPosition)
-    .endOfLine = index(.line$, newline$)
-    if .endOfLine > 0
-      .value$ = mid$(.line$, 1, .endOfLine - 1)
-      .secondsPos = index(.value$, " seconds")
-      if .secondsPos > 0
-        .value$ = left$(.value$, .secondsPos - 1)
-      endif
-    .result$ = .value$
-    else
-      .result$ = ""
-    endif
-  else
-    .result$ = ""
   endif
 endproc
 
@@ -121,8 +82,29 @@ procedure assureFirstTier
   .selectionEnd = number(extractNfoValue.result$)
   
   if .selectionStart == .selectionEnd
-    .error$ = "Please select working interval on tier #1." + newline$ + "Only a point selection has been found." + newline$
+    .error$ = "Please select tier #1 working interval." + newline$ + "Only a point selection has been found." + newline$
     exitScript: .error$
+  endif
+endproc
+
+procedure extractNfoValue .text$, .label$
+  .labelPosition = index(.text$, .label$)
+  if .labelPosition > 0
+    .valuelPosition = .labelPosition + length(.label$)
+    .line$ = mid$(.text$, .valuelPosition, length(.text$) - .valuelPosition)
+    .endOfLine = index(.line$, newline$)
+    if .endOfLine > 0
+      .value$ = mid$(.line$, 1, .endOfLine - 1)
+      .secondsPos = index(.value$, " seconds")
+      if .secondsPos > 0
+        .value$ = left$(.value$, .secondsPos - 1)
+      endif
+    .result$ = .value$
+    else
+      .result$ = ""
+    endif
+  else
+    .result$ = ""
   endif
 endproc
 
@@ -150,30 +132,39 @@ procedure zeroCross
     endwhile
 endproc
 
-procedure selectFirstInterval .textGridId
-  editor: .textGridId
-    .startTime = Get starting point of interval
-    while .startTime <> 0
-      Select previous interval
-      .startTime = Get starting point of interval
-    endwhile
-  endeditor
+procedure isNumeric: .number$
+  .len = length(.number$)
+  if .len == 0
+    .result = 0
+  else
+    .result = 1
+  endif
+  if .result == 1
+    for .i from 1 to .len
+      .char$ = mid$(.number$, .i, 1)
+      if .char$ <> "0" and .char$ <> "1" and .char$ <> "2" and .char$ <> "3" and .char$ <> "4" and .char$ <> "5" and .char$ <> "6" and .char$ <> "7" and .char$ <> "8" and .char$ <> "9"
+        .result = 0
+        .i = .len ; break out of the loop
+      endif
+    endfor
+  endif
 endproc
 
-procedure selectActiveInterval .textGridId .activeInterval
-  @selectFirstInterval: .textGridId
-  editor: .textGridId
-  for .i from 1 to .activeInterval - 1
-    Select next interval
+procedure uscores: .text$
+  .count = 0
+  .len = length(.text$)
+  for .i from 1 to .len
+    if (mid$(.text$, .i, 1) = "_")
+      .count = .count + 1
+    endif
   endfor
-  endeditor
 endproc
 
-books["01-001"] = 31 ; Genesis 1 has 31 verses
-books["01-002"] = 25 ; Genesis 2
+verses["01-001"] = 31 ; Genesis 1 has 31 verses
+verses["01-002"] = 25 ; Genesis 2
 
-books["02-001"] = 22 ; Exodus 1
-books["02-020"] = 23 ; Exodus 20
+verses["02-001"] = 22 ; Exodus 1
+verses["02-020"] = 23 ; Exodus 20
 
-books["01-01"] = 25 ; Mattai 1 has 25 verses
-books["01-06"] = 34 ; Mattai 6
+verses["01-01"] = 25 ; Mattai 1 has 25 verses
+verses["01-06"] = 34 ; Mattai 6

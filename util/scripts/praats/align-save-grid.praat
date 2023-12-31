@@ -47,5 +47,5 @@ for tier from 2 to numberOfTiers
 endfor
 
 textGridName$ = selected$ ("TextGrid")
-textGridPath$ = workPathSlashed$ + textGridName$ + ".TextGrid"
+textGridPath$ = workPath$ + textGridName$ + ".TextGrid"
 Save as text file: textGridPath$
