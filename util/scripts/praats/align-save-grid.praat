@@ -16,6 +16,12 @@ endeditor
 
 numberOfIntervals = Get number of intervals: 1
 for interval from 1 to numberOfIntervals
+  txt$ = Get label of interval: 1, interval
+  @trim(txt$)
+  trimmedTxt$ = trim.result$
+  if txt$ <> trimmedTxt$
+    Set interval text: 1, interval, trimmedTxt$
+  endif
   endTimes[interval] = Get end time of interval: 1, interval
 endfor
 
@@ -24,7 +30,13 @@ for tier from 2 to numberOfTiers
   tierIntervals = Get number of intervals: tier
   if tierIntervals == numberOfIntervals
     for tierInterval from 1 to tierIntervals
-      content$[tierInterval] = Get label of interval: tier, tierInterval
+      txt$ = Get label of interval: tier, tierInterval
+      @trim(txt$)
+      trimmedTxt$ = trim.result$
+      if txt$ <> trimmedTxt$
+        Set interval text: tier, tierInterval, trimmedTxt$
+      endif
+      content$[tierInterval] = trimmedTxt$
       tierEndTime = Get end time of interval: tier, tierInterval
       if tierEndTime <> endTimes[tierInterval]
         skipTier = 0

@@ -132,6 +132,37 @@ procedure zeroCross
     endwhile
 endproc
 
+procedure selectChapterTextGrid
+  select all
+  .numberOfSelected = numberOfSelected()
+  .id = 0
+  for .i to .numberOfSelected
+    .fullName$ = selected$(.i)
+    .type$ = extractWord$(.fullName$, "")
+    .name$ = extractLine$ (.fullName$, " ")
+    if .type$ == "TextGrid" and .name$ == chapter$
+      selectObject: .fullName$
+      .id = selected()
+      .i = .numberOfSelected ; break
+    endif
+  endfor
+endproc
+
+# define procedure for whitespace trimming
+procedure trim: .s$
+  .len = length(.s$)
+  .lindex = index_regex(.s$, "[^ \n\t\r]")
+  .beginning$ = right$(.s$, .len - .lindex + 1)
+  .rindex = index_regex(.beginning$, "[ \n\t\r]*$")
+  .result$ = left$(.beginning$, .rindex-1)
+endproc
+
+procedure trimmedLabel
+  .text$ = Get label of interval
+  @trim(.text$)
+  .result$ = trim.result$
+endproc
+
 procedure isNumeric: .number$
   .len = length(.number$)
   if .len == 0

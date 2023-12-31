@@ -12,7 +12,7 @@ else
   @createVerses
 endif
 
-#############################################################
+#########################################
 
 procedure exitOnLoaded
   select all
@@ -22,7 +22,7 @@ procedure exitOnLoaded
       .fullName$ = selected$(.i)
       .type$ = extractWord$(.fullName$, "")
       if .type$ == "TextGrid"
-        selectObject: .i
+        selectObject: .fullName$
         .i = .numberOfSelected ; break
       endif
     endfor
@@ -58,7 +58,7 @@ procedure createVerses
   if isTorah
     .tiers$ = "Text Male Inter Phonetic Latin Section Verse Status"
   else
-    .tiers$ = "Text Male Inter Verse Status"
+    .tiers$ = "Text Inter Verse Status"
   endif
 
   .tiers = 0
@@ -90,4 +90,3 @@ procedure createVerses
   selectObject: .textGridId
   @selectFirstInterval: .textGridId
 endproc
-
