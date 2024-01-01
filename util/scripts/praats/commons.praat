@@ -26,6 +26,9 @@ procedure init
   # paths
   workPath$ = shellDirectory$ + pathSeparator$
   chapterPath$ = workPath$ + chapter$
+
+  # verseVector
+  verseVector$# = empty$#(100) ; largest verse has Esther 8:9 with 90 words 
 endproc
 
 ##########################################
@@ -148,19 +151,50 @@ procedure selectChapterTextGrid
   endfor
 endproc
 
-# define procedure for whitespace trimming
 procedure trim: .s$
   .len = length(.s$)
   .lindex = index_regex(.s$, "[^ \n\t\r]")
   .beginning$ = right$(.s$, .len - .lindex + 1)
   .rindex = index_regex(.beginning$, "[ \n\t\r]*$")
-  .result$ = left$(.beginning$, .rindex-1)
+  .lrtrim$ = left$(.beginning$, .rindex-1)
+  # TextGrid can't handle \t, replace it with actual tabs
+  .result$ = replace$(.lrtrim$, "\t", tab$, 0)
 endproc
 
 procedure trimmedLabel
   .text$ = Get label of interval
   @trim(.text$)
   .result$ = trim.result$
+endproc
+
+procedure split .string$, .delimiter$
+  .len = 0
+  .substring$ = ""
+  for .i from 1 to length(.string$)
+    .char$ = mid$(.string$, .i, 1)
+    if .char$ == .delimiter$ or .char$ == "־" or .char$ == "׀"
+      if .char$ <> .delimiter$
+        .substring$ = .substring$ + .char$
+      endif
+      .len = .len + 1
+      verseVector$#[.len] = .substring$
+      .substring$ = "" 
+    else
+      .substring$ = .substring$ + .char$
+    endif
+  endfor
+
+  if length(.substring$) > 0
+    .len = .len + 1
+    verseVector$#[.len] = .substring$
+  endif
+endproc
+
+procedure copySplits dest$#
+  .len = size(dest$#)
+  for .i from 1 to .len
+    dest$#[.i] = verseVector$#[.i]
+  endfor
 endproc
 
 procedure isNumeric: .number$
