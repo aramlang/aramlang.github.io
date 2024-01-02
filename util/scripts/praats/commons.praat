@@ -194,13 +194,6 @@ procedure split .string$, .delimiter$
   endif
 endproc
 
-procedure copySplits dest$#
-  .len = size(dest$#)
-  for .i from 1 to .len
-    dest$#[.i] = verseVector$#[.i]
-  endfor
-endproc
-
 procedure isNumeric: .number$
   .len = length(.number$)
   if .len == 0
