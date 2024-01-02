@@ -79,10 +79,8 @@ procedure assureFirstTier
     .activeTier = number(extractNfoValue.result$)
   endwhile
   
-  @extractNfoValue: .nfo$, "Selection start: "
-  .selectionStart = number(extractNfoValue.result$)
-  @extractNfoValue: .nfo$, "Selection end: "
-  .selectionEnd = number(extractNfoValue.result$)
+  .selectionStart = Get starting point of interval
+  .selectionEnd = Get end point of interval
   
   if .selectionStart == .selectionEnd
     .error$ = "Please select tier #1 working interval." + newline$ + "Only a point selection has been found." + newline$
@@ -151,6 +149,18 @@ procedure selectChapterTextGrid
   endfor
 endproc
 
+procedure getSelectedInterval .selectionStart
+  .result = 1
+  .intervals = Get number of intervals: 1
+  for .i from 1 to .intervals
+    .intervalStart = Get start time of interval: 1, .i
+    if .selectionStart == .intervalStart
+      .result = .i
+      .i = .intervals ; break
+    endif
+  endfor
+endproc
+
 procedure trim: .s$
   .len = length(.s$)
   .lindex = index_regex(.s$, "[^ \n\t\r]")
@@ -159,12 +169,6 @@ procedure trim: .s$
   .lrtrim$ = left$(.beginning$, .rindex-1)
   # TextGrid can't handle \t, replace it with actual tabs
   .result$ = replace$(.lrtrim$, "\t", tab$, 0)
-endproc
-
-procedure trimmedLabel
-  .text$ = Get label of interval
-  @trim(.text$)
-  .result$ = trim.result$
 endproc
 
 procedure split .string$, .delimiter$
@@ -213,16 +217,6 @@ procedure isNumeric: .number$
       endif
     endfor
   endif
-endproc
-
-procedure uscores: .text$
-  .count = 0
-  .len = length(.text$)
-  for .i from 1 to .len
-    if (mid$(.text$, .i, 1) = "_")
-      .count = .count + 1
-    endif
-  endfor
 endproc
 
 verses["01-001"] = 31 ; Genesis 1 has 31 verses
