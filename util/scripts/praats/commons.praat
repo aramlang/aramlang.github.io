@@ -25,6 +25,7 @@ procedure init
 
   # paths
   workPath$ = shellDirectory$ + pathSeparator$
+  exePath$ = defaultDirectory$ + pathSeparator$
   chapterPath$ = workPath$ + chapter$
 
   # verseVector

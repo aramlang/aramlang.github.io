@@ -182,6 +182,8 @@ procedure createVerse
 
   selectObject: .verseTextGridId
   @selectFirstInterval: .verseTextGridId
+  cmd$ = exePath$ + "run-wisperx.cmd"
+  runSubprocess(cmd$, workPath$, verseWavPath$)
 endproc
 
 procedure exitOnEmpty .text$, .tier$
