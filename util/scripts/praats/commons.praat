@@ -172,6 +172,16 @@ procedure trim: .s$
   .result$ = replace$(.lrtrim$, "\t", tab$, 0)
 endproc
 
+procedure uscores: .text$
+  .count = 0
+  .len = length(.text$)
+  for .i from 1 to .len
+    if (mid$(.text$, .i, 1) = "_")
+      .count = .count + 1
+    endif
+  endfor
+endproc
+
 procedure split .string$, .delimiter$
   .len = 0
   .substring$ = ""
@@ -210,6 +220,9 @@ procedure isNumeric: .number$
         .i = .len ; break out of the loop
       endif
     endfor
+  endif
+  if .result == 1 and number(.number$) < 1
+    .result = 0
   endif
 endproc
 

@@ -6,8 +6,13 @@ IF "%~1"=="" (
 )
 
 IF "%~2"=="" (
-  echo Please provide file to process.
+  echo Please provide segment text.
   exit /b
 )
 
-start "whisperx" /D "%~1" /REALTIME whisperx --model large-v2 --align_model "imvladikon/wav2vec2-xls-r-1b-hebrew" --language he --output_format json "%~2"
+IF "%~3"=="" (
+  echo Please provide audio file to process.
+  exit /b
+)
+
+start "whisperx" /D "%~1" /REALTIME whisperx --model large-v2 --align_model "imvladikon/wav2vec2-xls-r-1b-hebrew" --language he --chunk_size 90 --output_format json segment_text="%~2" "%~3"

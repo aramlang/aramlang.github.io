@@ -1,20 +1,4 @@
-include commons.praat
-
-@selectChapterTextGrid:
-chapterTextGridId = selectChapterTextGrid.id
-
-if not chapterTextGridId
-  errorMsg$ = chapter$ + " TextGrid is not loaded." + newline$ + "Please run-praat again and do not remove objects." + newline$
-  exitScript: errorMsg$
-endif
-
-editor(chapterTextGridId)
-  @assureFirstTier
-  selectionStart = assureFirstTier.selectionStart
-endeditor
-
-@getSelectedInterval: selectionStart
-selectedInterval = getSelectedInterval.result
+include verse-commons.praat
 
 verseTiers$ = ""
 section$ = ""
@@ -89,8 +73,19 @@ for tier from 1 to tiers
     verse$ = text$
     @isNumeric: verse$
     if not isNumeric.result
-      errorMsg$ = tier$ + " tier contains a non-numeric value '" + verse$ + "'" + newline$
+      errorMsg$ = tier$ + " tier contains a non-numeric or non-positive value '" + verse$ + "'" + newline$
       exitScript: errorMsg$
+    endif
+    if isTorah
+      if length(verse$) <> 3
+        errorMsg$ = tier$ + " value expected to be 3 characters long. Found '" + verse$ + "'" + newline$
+        exitScript: errorMsg$
+      endif
+    else
+      if length(verse$) <> 2
+        errorMsg$ = tier$ + " value expected to be 2 characters long. Found '" + verse$ + "'" + newline$
+        exitScript: errorMsg$
+      endif
     endif
   elsif tier$ == "Status"
     status$ = text$
