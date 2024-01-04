@@ -14,7 +14,9 @@ for tier from 1 to tiers
 
   @trim: text$
   text$ = trim.result$
-  @exitOnEmpty: text$, tier$
+  if tier$ <> "Section"
+    @exitOnEmpty: text$, tier$
+  endif
 
   if tier$ == "Inter"
     delim$ = tab$
@@ -30,7 +32,8 @@ for tier from 1 to tiers
       words$#[i] = verseVector$#[i]
     endfor
   elsif tier$ == "Male"
-    @split: text$, delim$
+    males$ = text$ 
+    @split: males$, delim$
     males = split.len
     @exitOnDiffCount: males, tier$
     
@@ -177,8 +180,12 @@ procedure createVerse
 
   selectObject: .verseTextGridId
   @selectFirstInterval: .verseTextGridId
-  cmd$ = exePath$ + "run-wisperx.cmd"
-  runSubprocess(cmd$, workPath$, verseWavPath$)
+  if isTorah
+    cmd$ = exePath$ + "run-wisperx.cmd"
+    segmentPath$ = workPath$ + "segment.txt"
+    writeFile: segmentPath$, males$
+    nocheck runSubprocess(cmd$, workPath$, verseWavPath$)
+  endif
 endproc
 
 procedure exitOnEmpty .text$, .tier$
