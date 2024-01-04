@@ -5,6 +5,7 @@ C. Max Bain
 from dataclasses import dataclass
 from typing import Iterable, Union, List
 
+import os
 import numpy as np
 import pandas as pd
 import torch
@@ -122,6 +123,11 @@ def align(
     model_lang = align_model_metadata["language"]
     model_type = align_model_metadata["type"]
 
+    segment_text = ""
+    if os.path.exists("segment.txt"):
+      with open("segment.txt", 'r', encoding='utf-16') as file:
+        segment_text = file.read()
+
     # 1. Preprocess to keep only characters in dictionary
     total_segments = len(transcript)
     for sdx, segment in enumerate(transcript):
@@ -133,6 +139,8 @@ def align(
             
         num_leading = len(segment["text"]) - len(segment["text"].lstrip())
         num_trailing = len(segment["text"]) - len(segment["text"].rstrip())
+        if segment_text:
+          segment["text"] = segment_text
         text = segment["text"]
 
         # split into words
