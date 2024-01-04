@@ -4,7 +4,7 @@ verseTiers$ = ""
 section$ = ""
 tiers = Get number of tiers
 for tier from 1 to tiers
-  text$ = Get label of interval: tier, selectedInterval
+  text$ = Get label of interval: tier, selectedChapterInterval
   tier$ = Get tier name: tier
   if verseTiers$ == ""
     verseTiers$ = tier$

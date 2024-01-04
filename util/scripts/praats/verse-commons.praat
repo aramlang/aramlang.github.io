@@ -14,4 +14,4 @@ editor(chapterTextGridId)
 endeditor
 
 @getSelectedInterval: selectionStart
-selectedInterval = getSelectedInterval.result
+selectedChapterInterval = getSelectedInterval.result

@@ -340,11 +340,9 @@ function SetButton {
     $scriptPath = Join-Path -Path $praatPath -ChildPath $Script
     $command = "$search $scriptPath"
     if (-Not $buttonsText.Contains($search)) {
-        Write-Host "Not contains: " + $search
         $buttonsText = $buttonsText + "$command`n"
     }
     else {
-        Write-Host "Contains: " + $search
         $searchRegex = [regex]::Escape($search)
         $searchRegex = "^$alignSearchRegex.*$"
         $buttonsText = $buttonsText -replace $searchRegex, $command
@@ -359,5 +357,9 @@ SetButton -Name $alignButton -Script $alignSCript
 $verseButton = "Load Verse"
 $verseScript = "load-verse.praat"
 SetButton -Name $verseButton -Script $verseScript
+
+$finalizeButton = "Finalize Verse"
+$finalizeScript = "finalize-verse.praat"
+SetButton -Name $finalizeButton -Script $finalizeScript
 
 Write-Host "`nPlease start Praat by launching $desktopPraatLnk link"
