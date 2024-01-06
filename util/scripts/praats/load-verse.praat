@@ -166,7 +166,7 @@ procedure createVerse
   .points = 0
   if .endPoints$ <> ""
     .wordPoints = words - 1
-    @split endPoints$, ","
+    @split: .endPoints$, ","
     .points = split.len
     if .points <> .wordPoints
       appendInfoLine: "Warning: wisperx end point count " + string$(.points) + " is different than word end point count " + string$(.wordPoints)

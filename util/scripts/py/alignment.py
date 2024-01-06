@@ -46,7 +46,7 @@ DEFAULT_ALIGN_MODELS_HF = {
     "el": "jonatasgrosman/wav2vec2-large-xlsr-53-greek",
     "tr": "mpoyraz/wav2vec2-xls-r-300m-cv7-turkish",
     "da": "saattrupdan/wav2vec2-xls-r-300m-ftspeech",
-    "he": "imvladikon/wav2vec2-xls-r-300m-hebrew",
+    "he": "imvladikon/wav2vec2-xls-r-1b-hebrew",
     "vi": 'nguyenvulebinh/wav2vec2-base-vi',
     "ko": "kresnik/wav2vec2-large-xlsr-korean",
     "ur": "kingabzpro/wav2vec2-large-xls-r-300m-Urdu",
@@ -125,7 +125,7 @@ def align(
 
     segment_text = ""
     if os.path.exists("segment.txt"):
-      with open("segment.txt", 'r', encoding='utf-16') as file:
+      with open("segment.txt", 'r', encoding='utf-8') as file:
         segment_text = file.read()
 
     # 1. Preprocess to keep only characters in dictionary
