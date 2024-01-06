@@ -147,11 +147,41 @@ procedure loadVerse
 endproc
 
 procedure createVerse
+  .endPoints$ = ""
+  if isTorah
+    .verseJsonPath$ = verseBasePath$ + ".json"
+    .verseEndPointsPath$ = verseBasePath$ + ".txt"
+    .segmentPath$ = workPath$ + "segment.txt"
+
+    .cmd$ = exePath$ + "run-wisperx.cmd"
+    writeFile: .segmentPath$, males$
+    nocheck runSubprocess(.cmd$, workPath$, verseWavPath$)
+    .cmd$ = exePath$ + "extract-times.cmd"
+    nocheck runSubprocess(.cmd$, .verseJsonPath$)
+    if fileReadable(.verseEndPointsPath$)
+      .endPoints$ = readFile$(.verseEndPointsPath$)
+    endif
+  endif
+
+  .points = 0
+  if .endPoints$ <> ""
+    .wordPoints = words - 1
+    @split endPoints$, ","
+    .points = split.len
+    if .points <> .wordPoints
+      appendInfoLine: "Warning: wisperx end point count " + string$(.points) + " is different than word end point count " + string$(.wordPoints)
+    endif
+  endif
+  
   .totalDuration = Get total duration
-  .size = .totalDuration / words
+  .defaultSize = .totalDuration / words
   .verseTextGridId = To TextGrid: verseTiers$, ""
   for .interval from 1 to words
-    .endTime = .interval * .size
+    if .interval <= .points
+      .endTime = number(verseVector$#[.interval])
+    else
+      .endTime = .interval * .defaultSize
+    endif
       for .j to splitTier
         if .interval < words
           Insert boundary: .j, .endTime
@@ -170,6 +200,7 @@ procedure createVerse
         endif
       endfor
   endfor
+
   if section$ <> ""
     Set interval text: tiers - 2, 1, section$
   endif
@@ -180,12 +211,6 @@ procedure createVerse
 
   selectObject: .verseTextGridId
   @selectFirstInterval: .verseTextGridId
-  if isTorah
-    cmd$ = exePath$ + "run-wisperx.cmd"
-    segmentPath$ = workPath$ + "segment.txt"
-    writeFile: segmentPath$, males$
-    nocheck runSubprocess(cmd$, workPath$, verseWavPath$)
-  endif
 endproc
 
 procedure exitOnEmpty .text$, .tier$
