@@ -2,13 +2,13 @@ param (
     [Parameter(Mandatory = $true)]
     [ValidateSet("Bereshit", "Shemot", "Vayikra", "Bemidbar", "Devarim", 
         "Yehoshua", "Shoftim", "Rut", "Shmuel-Aleph", "Shmuel-Bet",
-        "Melakhim-Aleph", "Melakhim-Bet", "Divrei-Hayamim-Aleph", "Divrei-Hayamim-Bet",
-        "Ezra", "Nekhemiah", "Ester", "Iyov", "Tehillim",
+        "Melachim-Aleph", "Melachim-Bet", "Divrei-Hayamim-Aleph", "Divrei-Hayamim-Bet",
+        "Ezra", "Nechemiah", "Ester", "Iyov", "Tehillim",
         "Mishlei", "Kohelet", "Shir-Hashirim", "Yeshayahu", "Yirmeyahu",
-        "Eikhah", "Yekhezkel", "Daniel", "Hoshea", "Yoel", "Amos",
-        "Ovadyah", "Yonah", "Mikhah", "Nakhum", "Khavakuk",
-        "Tzefanyah", "Khaggai", "Zekhariah", "Malakhi", "Mattai",
-        "Marqus", "Luqa", "Yukhanan", "Acts")]
+        "Eichah", "Yechezkel", "Daniel", "Hoshea", "Yoel", "Amos",
+        "Ovadyah", "Yonah", "Michah", "Nachum", "Chavakuk",
+        "Tzefanyah", "Chaggai", "Zechariah", "Malachi", "Mattai",
+        "Marqus", "Luqa", "Yuchanan", "Acts")]
     [string]$book,
 
     [Parameter(Mandatory = $true)]
@@ -57,7 +57,7 @@ $bible = @{
     }
     "Shmuel-Aleph"         = @{
         "no"       = "08"
-        "chapters" = 30
+        "chapters" = 31
         "pad"      = 3
     }
     "Shmuel-Bet"           = @{
@@ -65,12 +65,12 @@ $bible = @{
         "chapters" = 24
         "pad"      = 3
     }
-    "Melakhim-Aleph"       = @{
+    "Melachim-Aleph"       = @{
         "no"       = "10"
         "chapters" = 22
         "pad"      = 3
     }
-    "Melakhim-Bet"         = @{
+    "Melachim-Bet"         = @{
         "no"       = "11"
         "chapters" = 25
         "pad"      = 3
@@ -82,10 +82,10 @@ $bible = @{
     }
     "Yirmeyahu"            = @{
         "no"       = "13"
-        "chapters" = 50
+        "chapters" = 52
         "pad"      = 3
     }
-    "Yekhezkel"            = @{
+    "Yechezkel"            = @{
         "no"       = "14"
         "chapters" = 48
         "pad"      = 3
@@ -115,17 +115,17 @@ $bible = @{
         "chapters" = 4
         "pad"      = 3
     }
-    "Mikhah"               = @{
+    "Michah"               = @{
         "no"       = "20"
         "chapters" = 7
         "pad"      = 3
     }
-    "Nakhum"               = @{
+    "Nachum"               = @{
         "no"       = "21"
         "chapters" = 3
         "pad"      = 3
     }
-    "Khavakuk"             = @{
+    "Chavakuk"             = @{
         "no"       = "22"
         "chapters" = 3
         "pad"      = 3
@@ -135,17 +135,17 @@ $bible = @{
         "chapters" = 3
         "pad"      = 3
     }
-    "Khaggai"              = @{
+    "Chaggai"              = @{
         "no"       = "24"
         "chapters" = 2
         "pad"      = 3
     }
-    "Zekhariah"            = @{
+    "Zechariah"            = @{
         "no"       = "25"
         "chapters" = 14
         "pad"      = 3
     }
-    "Malakhi"              = @{
+    "Malachi"              = @{
         "no"       = "26"
         "chapters" = 3
         "pad"      = 3
@@ -177,7 +177,7 @@ $bible = @{
         "chapters" = 4
         "pad"      = 3
     }
-    "Eikhah"               = @{
+    "Eichah"               = @{
         "no"       = "32"
         "chapters" = 5
         "pad"      = 3
@@ -202,7 +202,7 @@ $bible = @{
         "chapters" = 10
         "pad"      = 3
     } 
-    "Nekhemiah"            = @{
+    "Nechemiah"            = @{
         "no"       = "37"
         "chapters" = 13
         "pad"      = 3
