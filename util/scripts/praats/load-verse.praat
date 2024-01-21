@@ -1,10 +1,11 @@
 include verse-commons.praat
 
 verseTiers$ = ""
-section$ = ""
 tiers = Get number of tiers
 for tier from 1 to tiers
   text$ = Get label of interval: tier, selectedChapterInterval
+  
+  # build tier names
   tier$ = Get tier name: tier
   if verseTiers$ == ""
     verseTiers$ = tier$
@@ -14,24 +15,54 @@ for tier from 1 to tiers
 
   @trim: text$
   text$ = trim.result$
-  if tier$ <> "Section"
-    @exitOnEmpty: text$, tier$
-  endif
+  @exitOnEmpty: text$, tier$
 
   if tier$ == "Inter"
-    delim$ = tab$
+    delim$ = " "
   else
     delim$ = " "
   endif
 
-  if tier$ == "Text"
+  if tier$ == "Phonetic"
+    @split: text$, delim$
+    phonetics = split.len
+
+    phonetics$# = empty$#(phonetics)
+    for i from 1 to phonetics
+      phonetics$#[i] = verseVector$#[i]
+    endfor
+  elsif tier$ == "Text"
     @split: text$, delim$
     words = split.len
+    @exitOnDiffCount: words, tier$
+
     words$# = empty$#(words)
     for i from 1 to words
       words$#[i] = verseVector$#[i]
     endfor
+  elsif tier$ == "Inter"
+    if not isTorah
+      splitTier = tier
+    endif
+    @split: text$, delim$
+    inters = split.len
+    @exitOnDiffCount: inters, tier$
+
+    inters$# = empty$#(inters)
+    for i from 1 to inters
+      inters$#[i] = verseVector$#[i]
+    endfor
+  elsif tier$ == "Latin"
+    @split: text$, delim$
+    latins = split.len
+    @exitOnDiffCount: latins, tier$
+
+    latins$# = empty$#(latins)
+    for i from 1 to latins
+      latins$#[i] = verseVector$#[i]
+    endfor
   elsif tier$ == "Male"
+    splitTier = tier
     males$ = text$ 
     @split: males$, delim$
     males = split.len
@@ -41,37 +72,6 @@ for tier from 1 to tiers
     for i from 1 to males
       males$#[i] = verseVector$#[i]
     endfor
-  elsif tier$ == "Inter"
-    splitTier = tier
-    @split: text$, delim$
-    inters = split.len
-    @exitOnDiffCount: inters, tier$
-
-    inters$# = empty$#(inters)
-    for i from 1 to inters
-      inters$#[i] = verseVector$#[i]
-    endfor
-  elsif tier$ == "Phonetic"
-    @split: text$, delim$
-    phonetics = split.len
-    @exitOnDiffCount: phonetics, tier$
-
-    phonetics$# = empty$#(phonetics)
-    for i from 1 to phonetics
-      phonetics$#[i] = verseVector$#[i]
-    endfor
-  elsif tier$ == "Latin"
-    splitTier = tier
-    @split: text$, delim$
-    latins = split.len
-    @exitOnDiffCount: latins, tier$
-
-    latins$# = empty$#(latins)
-    for i from 1 to latins
-      latins$#[i] = verseVector$#[i]
-    endfor
-  elsif tier$ == "Section"
-    section$ = text$
   elsif tier$ == "Verse"
     verse$ = text$
     @isNumeric: verse$
@@ -161,6 +161,8 @@ procedure createVerse
     if fileReadable(.verseEndPointsPath$)
       .endPoints$ = readFile$(.verseEndPointsPath$)
     endif
+    deleteFile: .verseEndPointsPath$
+    deleteFile: .segmentPath$
   endif
 
   .points = 0
@@ -187,23 +189,20 @@ procedure createVerse
           Insert boundary: .j, .endTime
         endif
         .tier$ = Get tier name: .j
-        if .tier$ == "Text"
+        if .tier$ == "Phonetic"
+          Set interval text: .j, .interval, phonetics$#[.interval]
+        elsif .tier$ == "Text"
           Set interval text: .j, .interval, words$#[.interval]
-        elsif .tier$ == "Male"
-          Set interval text: .j, .interval, males$#[.interval]
         elsif .tier$ == "Inter"
           Set interval text: .j, .interval, inters$#[.interval]
-        elsif .tier$ == "Phonetic"
-          Set interval text: .j, .interval, phonetics$#[.interval]
         elsif .tier$ == "Latin"
           Set interval text: .j, .interval, latins$#[.interval]
+        elsif .tier$ == "Male"
+          Set interval text: .j, .interval, males$#[.interval]
         endif
       endfor
   endfor
 
-  if section$ <> ""
-    Set interval text: tiers - 2, 1, section$
-  endif
   Set interval text: tiers - 1, 1, verse$
   Set interval text: tiers, 1, "TODO"
   plusObject: verseSoundId
@@ -211,6 +210,7 @@ procedure createVerse
 
   selectObject: .verseTextGridId
   @selectFirstInterval: .verseTextGridId
+  Save as text file: verseTextGridPath$
 endproc
 
 procedure exitOnEmpty .text$, .tier$
@@ -221,8 +221,8 @@ procedure exitOnEmpty .text$, .tier$
 endproc
 
 procedure exitOnDiffCount .splitCount, .tier$
-  if .splitCount <> words
-    .errorMsg$ = .tier$ + " word count " + string$(.splitCount) + " <> text word count " + string$(words) + " !" + newline$
+  if .splitCount <> phonetics
+    .errorMsg$ = .tier$ + " word count " + string$(.splitCount) + " <> phonetics word count " + string$(phonetics) + " !" + newline$
     exitScript: .errorMsg$
   endif
 endproc

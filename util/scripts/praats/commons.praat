@@ -11,6 +11,7 @@ procedure init
   # chapter$ - e.g. 02_Shemot_020
   .chapterIdx = rindex(shellDirectory$, pathSeparator$)
   chapter$ = mid$(shellDirectory$, .chapterIdx + 1, length(shellDirectory$) - .chapterIdx)
+  .basePath$ = mid$(shellDirectory$, 1, .chapterIdx)
 
   # bookNo$
   .firstUscore = index(chapter$, "_")
@@ -27,9 +28,10 @@ procedure init
   workPath$ = shellDirectory$ + pathSeparator$
   exePath$ = defaultDirectory$ + pathSeparator$
   chapterPath$ = workPath$ + chapter$
+  textFile$ = .basePath$ + "text" + pathSeparator$ + chapter$ + ".txt"
 
   # verseVector
-  verseVector$# = empty$#(100) ; largest verse has Esther 8:9 with 90 words 
+  verseVector$# = empty$#(200) ; Psalm 119 has 176 verses 
 endproc
 
 ##########################################

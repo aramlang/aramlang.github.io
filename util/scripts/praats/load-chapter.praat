@@ -54,11 +54,84 @@ procedure loadVerses
 endproc
 
 procedure createVerses
+    # phonetic/text/inter common to both torah and peshitta
+  .phonetic$ = ""
+  .text$ = ""
+  .inter$ = ""
+
+  .latin$ = ""
+  .male$ = ""
+
+  .delim$ = " "
+  if fileReadable(textFile$)
+    .texts$ = readFile$(textFile$)
+    @split: .texts$, newline$
+
+    .phonetic$ = verseVector$#[1]
+    .text$ = verseVector$#[2]
+    .inter$ = verseVector$#[3]
+    if isTorah
+      .latin$ = verseVector$#[4]
+      .male$ = verseVector$#[5]
+    endif
+
+    @split: .text$, .delim$
+    .len = split.len
+    .text$# = empty$#(.len)
+    for .i from 1 to .len
+      .text$#[.i] = verseVector$#[.i]
+    endfor
+
+    @split: .phonetic$, .delim$
+    if .len <> split.len
+      .msg$ = "Phonetic verse count " + string$(split.len) + " <> sefaria verse count " + string$(.len)
+      exitScript: .msg$
+    endif
+    .phonetic$# = empty$#(.len)
+    for .i from 1 to .len
+      .phonetic$#[.i] = verseVector$#[.i]
+    endfor
+
+    @split: .inter$, .delim$
+    if .len <> split.len
+      appendInfoLine: .inter$
+      .msg$ = "Interlinear verse count " + string$(split.len) + " <> sefaria verse count " + string$(.len)
+      exitScript: .msg$
+    endif
+    .inter$# = empty$#(.len)
+    for .i from 1 to .len
+      .inter$#[.i] = verseVector$#[.i]
+    endfor
+  else
+    .msg$ = "Cannot find or read " + textFile$
+    exitScript: .msg$
+  endif  
+
   .verses = verses[bookNo$ + "-" + chapterNo$]
   if isTorah
-    .tiers$ = "Text Male Inter Phonetic Latin Section Verse Status"
+    .tiers$ = "Phonetic Text Inter Latin Male Verse Status"
+
+    @split: .latin$, .delim$
+    if .len <> split.len
+      .msg$ = "Latin verse count " + string$(split.len) + " <> sefaria verse count " + string$(.len)
+      exitScript: .msg$
+    endif
+    .latin$# = empty$#(.len)
+    for .i from 1 to .len
+      .latin$#[.i] = verseVector$#[.i]
+    endfor
+
+    @split: .male$, .delim$
+    if .len <> split.len
+      .msg$ = "Male verse count " + string$(split.len) + " <> sefaria verse count " + string$(.len)
+      exitScript: .msg$
+    endif
+    .male$# = empty$#(.len)
+    for .i from 1 to .len
+      .male$#[.i] = verseVector$#[.i]
+    endfor
   else
-    .tiers$ = "Text Inter Verse Status"
+    .tiers$ = "Phonetic Text Inter Verse Status"
   endif
 
   .tiers = 0
@@ -80,6 +153,22 @@ procedure createVerses
         Insert boundary: .j, .endTime
        endfor
     endif
+    if .phonetic$ <> ""
+      Set interval text: 1, .interval, .phonetic$#[.interval]
+    endif
+    if .text$ <> ""
+      Set interval text: 2, .interval, .text$#[.interval]
+    endif
+    if .inter$ <> ""
+      Set interval text: 3, .interval, .inter$#[.interval]
+    endif
+    if .latin$ <> ""
+      Set interval text: 4, .interval, .latin$#[.interval]
+    endif
+    if .male$ <> ""
+      Set interval text: 5, .interval, .male$#[.interval]
+    endif
+
     @zeroPadded: .interval
     Set interval text: .tiers - 1, .interval, zeroPadded.verse$
     Set interval text: .tiers, .interval, "TODO"
@@ -89,4 +178,5 @@ procedure createVerses
 
   selectObject: .textGridId
   @selectFirstInterval: .textGridId
+  Save as text file: textGridFile$
 endproc

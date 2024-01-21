@@ -20,6 +20,7 @@ if (Test-Path -Path $jsonFilePath) {
   }
   $filePath = $jsonFilePath -replace '\.json$', '.txt'
   Set-Content -Path $filePath -Value $csv
+  Remove-Item -Path $jsonFilePath -Force
 }
 else {
   Write-Error "File not found: $jsonFilePath"
