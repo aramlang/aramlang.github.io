@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assyrian Bible Audio Files</title>
+    <style>
+        /* Basic styling for clarity */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            margin: 5px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            width: 360px;
+        }
+        li:hover {
+            background-color: #ddd;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Assyrian Bible Audio Files</h1>
-    <ul>
-        <li><a href="Assyrian Bible  Matthew Beet Line 1-23 pg 7-8_L.m4a">Assyrian Bible Matthew Beet Line 1-23 pg 7-8_L.m4a</a></li>
+    <h3 id="song">Assyrian Bible Matthew Beet Line 1-23 pg 7-8_L.m4a</h3>
+    <audio controls loop preload="auto" id="audioPlayer">
+        <source src="./Beet.m4a" type="audio/aac">
+        Your browser does not support the audio tag.
+    </audio>
+    <ul id="playlist">
+        <li><a href="Beet.m4a">Assyrian Bible Matthew Beet Line 1-23 pg 7-8_L.m4a</a></li>
         <li><a href="Assyrina Bible Matthew Gammel_L.m4a">Assyrina Bible Matthew Gammel_L.m4a</a></li>
         <li><a href="Assyrian Bible Mattew Dallat_L.m4a">Assyrian Bible Mattew Dallat_L.m4a</a></li>
         <li><a href="Assyrian Bible Matthew Hee_L.m4a">Assyrian Bible Matthew Hee_L.m4a</a></li>
         <li><a href="Assyrian Bible Matthew Vov_01.m4a">Assyrian Bible Matthew Vov_01.m4a</a></li>
         <li><a href="Assyrian Bible Matthew Zen_L.m4a">Assyrian Bible Matthew Zen_L.m4a</a></li>
-        <li><a href="Assyrian Bible Mattew Khet # 8_L.m4a">Assyrian Bible Mattew Khet # 8_L.m4a</a></li>
-        <li><a href="Assyrian Bible Matthew TET # 9_L.m4a">Assyrian Bible Matthew TET # 9_L.m4a</a></li>
-        <li><a href="Assyrian Bible Mathew YOOD# 10_L.m4a">Assyrian Bible Mathew YOOD# 10_L.m4a</a></li>
+        <li><a href="Assyrian Bible Mattew Khet 8_L.m4a">Assyrian Bible Mattew Khet # 8_L.m4a</a></li>
+        <li><a href="Assyrian Bible Matthew TET 9_L.m4a">Assyrian Bible Matthew TET # 9_L.m4a</a></li>
+        <li><a href="Assyrian Bible Mathew YOOD 10_L.m4a">Assyrian Bible Mathew YOOD# 10_L.m4a</a></li>
         <li><a href="Assyrian Bilbe Matthew YOOD   BEET_L.m4a">Assyrian Bilbe Matthew YOOD   BEET_L.m4a</a></li>
         <li><a href="Assyrian Bible Matthew YOOD   GAMMAL_L.m4a">Assyrian Bible Matthew YOOD   GAMMAL_L.m4a</a></li>
         <li><a href="Assyrian Bible Matthew YOOD   HEE_L.m4a">Assyrian Bible Matthew YOOD   HEE_L.m4a</a></li>
     </ul>
+   <script>
+        // JavaScript to handle song clicks and set the audio source
+        document.getElementById('playlist').addEventListener('click', function(e) {
+            if (e.target && e.target.nodeName === "A") {
+                var selectedSong = e.target.getAttribute('href');
+                var player = document.getElementById('audioPlayer');
+                document.getElementById('song').innerHTML = e.target.innerHTML;
+                player.src = selectedSong;
+                player.play();
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
