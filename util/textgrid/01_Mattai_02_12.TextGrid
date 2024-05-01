@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.38657596371882 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 8.38657596371882 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3665265710244494 
+            text = "w)Et,xzyi" 
+        intervals [2]:
+            xmin = 1.3665265710244494 
+            xmax = 1.5883104670439605 
+            text = "lhwOn" 
+        intervals [3]:
+            xmin = 1.5883104670439605 
+            xmax = 2.4937301587301586 
+            text = "bxElmo):" 
+        intervals [4]:
+            xmin = 2.4937301587301586 
+            xmax = 3.114633361363297 
+            text = "dlo)" 
+        intervals [5]:
+            xmin = 3.114633361363297 
+            xmax = 3.811485902537115 
+            text = "nEhpk,wun" 
+        intervals [6]:
+            xmin = 3.811485902537115 
+            xmax = 4.088632944927146 
+            text = "lwot," 
+        intervals [7]:
+            xmin = 4.088632944927146 
+            xmax = 4.930839002267573 
+            text = "herwOdEs." 
+        intervals [8]:
+            xmin = 4.930839002267573 
+            xmax = 6.099027513758872 
+            text = "wab,)wurxo)" 
+        intervals [9]:
+            xmin = 6.099027513758872 
+            xmax = 6.633380667385351 
+            text = ")_xret,o)" 
+        intervals [10]:
+            xmin = 6.633380667385351 
+            xmax = 7.177959472536361 
+            text = ")Ezalw" 
+        intervals [11]:
+            xmin = 7.177959472536361 
+            xmax = 8.38657596371882 
+            text = "l)at,rhwOn." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 8.38657596371882 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3665265710244494 
+            text = "ܘܐܸܬ݂ܚܙܝܼ" 
+        intervals [2]:
+            xmin = 1.3665265710244494 
+            xmax = 1.5883104670439605 
+            text = "ܠܗܘܿܢ" 
+        intervals [3]:
+            xmin = 1.5883104670439605 
+            xmax = 2.4937301587301586 
+            text = "ܒܚܸܠܡܵܐ:" 
+        intervals [4]:
+            xmin = 2.4937301587301586 
+            xmax = 3.114633361363297 
+            text = "ܕܠܵܐ" 
+        intervals [5]:
+            xmin = 3.114633361363297 
+            xmax = 3.811485902537115 
+            text = "ܢܸܗܦܟ݂ܘܼܢ" 
+        intervals [6]:
+            xmin = 3.811485902537115 
+            xmax = 4.088632944927146 
+            text = "ܠܘܵܬ݂" 
+        intervals [7]:
+            xmin = 4.088632944927146 
+            xmax = 4.930839002267573 
+            text = "ܗܹܪܘܿܕܸܣ." 
+        intervals [8]:
+            xmin = 4.930839002267573 
+            xmax = 6.099027513758872 
+            text = "ܘܲܒ݂ܐܘܼܪܚܵܐ" 
+        intervals [9]:
+            xmin = 6.099027513758872 
+            xmax = 6.633380667385351 
+            text = "ܐ݇ܚܪܹܬ݂ܵܐ" 
+        intervals [10]:
+            xmin = 6.633380667385351 
+            xmax = 7.177959472536361 
+            text = "ܐܸܙܲܠܘ" 
+        intervals [11]:
+            xmin = 7.177959472536361 
+            xmax = 8.38657596371882 
+            text = "ܠܐܲܬ݂ܪܗܘܿܢ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.38657596371882 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3665265710244494 
+            text = "and was shown" 
+        intervals [2]:
+            xmin = 1.3665265710244494 
+            xmax = 1.5883104670439605 
+            text = "to them" 
+        intervals [3]:
+            xmin = 1.5883104670439605 
+            xmax = 2.4937301587301586 
+            text = "in a dream" 
+        intervals [4]:
+            xmin = 2.4937301587301586 
+            xmax = 3.114633361363297 
+            text = "that not" 
+        intervals [5]:
+            xmin = 3.114633361363297 
+            xmax = 3.811485902537115 
+            text = "they should return" 
+        intervals [6]:
+            xmin = 3.811485902537115 
+            xmax = 4.088632944927146 
+            text = "to" 
+        intervals [7]:
+            xmin = 4.088632944927146 
+            xmax = 4.930839002267573 
+            text = "Herodus" 
+        intervals [8]:
+            xmin = 4.930839002267573 
+            xmax = 6.099027513758872 
+            text = "and by a road" 
+        intervals [9]:
+            xmin = 6.099027513758872 
+            xmax = 6.633380667385351 
+            text = "different" 
+        intervals [10]:
+            xmin = 6.633380667385351 
+            xmax = 7.177959472536361 
+            text = "they went" 
+        intervals [11]:
+            xmin = 7.177959472536361 
+            xmax = 8.38657596371882 
+            text = "to their country" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 8.38657596371882 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.38657596371882 
+            text = "12" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 8.38657596371882 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.38657596371882 
+            text = "DONE" 
