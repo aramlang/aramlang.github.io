@@ -475,24 +475,24 @@ item []:
         intervals [18]:
             xmin = 186.55130492837404 
             xmax = 198.50423142264128 
-            text = "TODO" 
+            text = "DONE" 
         intervals [19]:
             xmin = 198.50423142264128 
             xmax = 207.98329523923618 
-            text = "TODO" 
+            text = "DONE" 
         intervals [20]:
             xmin = 207.98329523923618 
             xmax = 217.50346800687694 
-            text = "TODO" 
+            text = "DONE" 
         intervals [21]:
             xmin = 217.50346800687694 
             xmax = 222.65642518555606 
-            text = "TODO" 
+            text = "DONE" 
         intervals [22]:
             xmin = 222.65642518555606 
             xmax = 235.4767877728782 
-            text = "TODO" 
+            text = "DONE" 
         intervals [23]:
             xmin = 235.4767877728782 
             xmax = 245.96367346938774 
-            text = "TODO" 
+            text = "DONE" 

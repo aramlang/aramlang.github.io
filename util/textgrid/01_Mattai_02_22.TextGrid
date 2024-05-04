@@ -1,0 +1,274 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 12.820362811791384 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 12.820362811791384 
+        intervals: size = 19 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.120916400573835 
+            text = "kad," 
+        intervals [2]:
+            xmin = 2.120916400573835 
+            xmax = 2.3110159591262667 
+            text = "deyn" 
+        intervals [3]:
+            xmin = 2.3110159591262667 
+            xmax = 2.647329786615501 
+            text = "$ma(" 
+        intervals [4]:
+            xmin = 2.647329786615501 
+            xmax = 3.640324044632017 
+            text = "d)arkEl)ows" 
+        intervals [5]:
+            xmin = 3.640324044632017 
+            xmax = 3.920333394619109 
+            text = "hw~o)" 
+        intervals [6]:
+            xmin = 3.920333394619109 
+            xmax = 4.395746857509863 
+            text = "malko)" 
+        intervals [7]:
+            xmin = 4.395746857509863 
+            xmax = 5.074739984882842 
+            text = "bayhwud,:" 
+        intervals [8]:
+            xmin = 5.074739984882842 
+            xmax = 5.805427284427284 
+            text = "xlop" 
+        intervals [9]:
+            xmin = 5.805427284427284 
+            xmax = 6.486422560992268 
+            text = "herwOdEs" 
+        intervals [10]:
+            xmin = 6.486422560992268 
+            xmax = 7.308197278911565 
+            text = ")ab,wuhy:" 
+        intervals [11]:
+            xmin = 7.308197278911565 
+            xmax = 8.01433369980989 
+            text = "dxEl" 
+        intervals [12]:
+            xmin = 8.01433369980989 
+            xmax = 8.49786593829451 
+            text = "dne)zal" 
+        intervals [13]:
+            xmin = 8.49786593829451 
+            xmax = 9.217467120181407 
+            text = "ltamon." 
+        intervals [14]:
+            xmin = 9.217467120181407 
+            xmax = 10.282136898555041 
+            text = "w)Et,xzyi" 
+        intervals [15]:
+            xmin = 10.282136898555041 
+            xmax = 10.494791075006054 
+            text = "leh" 
+        intervals [16]:
+            xmin = 10.494791075006054 
+            xmax = 10.938474654161467 
+            text = "bxElmo)" 
+        intervals [17]:
+            xmin = 10.938474654161467 
+            xmax = 11.535338271471277 
+            text = "dne)zal" 
+        intervals [18]:
+            xmin = 11.535338271471277 
+            xmax = 11.882012521822888 
+            text = ")lat,ro)" 
+        intervals [19]:
+            xmin = 11.882012521822888 
+            xmax = 12.820362811791384 
+            text = "dag,lyilo)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 12.820362811791384 
+        intervals: size = 19 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.120916400573835 
+            text = "ܟܲܕ݂" 
+        intervals [2]:
+            xmin = 2.120916400573835 
+            xmax = 2.3110159591262667 
+            text = "ܕܹܝܢ" 
+        intervals [3]:
+            xmin = 2.3110159591262667 
+            xmax = 2.647329786615501 
+            text = "ܫܡܲܥ" 
+        intervals [4]:
+            xmin = 2.647329786615501 
+            xmax = 3.640324044632017 
+            text = "ܕܐܲܪܟܸܠܐܵܘܣ" 
+        intervals [5]:
+            xmin = 3.640324044632017 
+            xmax = 3.920333394619109 
+            text = "ܗܘ̣ܵܐ" 
+        intervals [6]:
+            xmin = 3.920333394619109 
+            xmax = 4.395746857509863 
+            text = "ܡܲܠܟܵܐ" 
+        intervals [7]:
+            xmin = 4.395746857509863 
+            xmax = 5.074739984882842 
+            text = "ܒܲܝܗܘܼܕ݂:" 
+        intervals [8]:
+            xmin = 5.074739984882842 
+            xmax = 5.805427284427284 
+            text = "ܚܠܵܦ" 
+        intervals [9]:
+            xmin = 5.805427284427284 
+            xmax = 6.486422560992268 
+            text = "ܗܹܪܘܿܕܸܣ" 
+        intervals [10]:
+            xmin = 6.486422560992268 
+            xmax = 7.308197278911565 
+            text = "ܐܲܒ݂ܘܼܗܝ:" 
+        intervals [11]:
+            xmin = 7.308197278911565 
+            xmax = 8.01433369980989 
+            text = "ܕܚܸܠ" 
+        intervals [12]:
+            xmin = 8.01433369980989 
+            xmax = 8.49786593829451 
+            text = "ܕܢܹܐܙܲܠ" 
+        intervals [13]:
+            xmin = 8.49786593829451 
+            xmax = 9.217467120181407 
+            text = "ܠܬܲܡܵܢ." 
+        intervals [14]:
+            xmin = 9.217467120181407 
+            xmax = 10.282136898555041 
+            text = "ܘܐܸܬ݂ܚܙܝܼ" 
+        intervals [15]:
+            xmin = 10.282136898555041 
+            xmax = 10.494791075006054 
+            text = "ܠܹܗ" 
+        intervals [16]:
+            xmin = 10.494791075006054 
+            xmax = 10.938474654161467 
+            text = "ܒܚܸܠܡܵܐ" 
+        intervals [17]:
+            xmin = 10.938474654161467 
+            xmax = 11.535338271471277 
+            text = "ܕܢܹܐܙܲܠ" 
+        intervals [18]:
+            xmin = 11.535338271471277 
+            xmax = 11.882012521822888 
+            text = "ܐܠܲܬ݂ܪܵܐ" 
+        intervals [19]:
+            xmin = 11.882012521822888 
+            xmax = 12.820362811791384 
+            text = "ܕܲܓ݂ܠܝܼܠܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 12.820362811791384 
+        intervals: size = 19 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.120916400573835 
+            text = "when" 
+        intervals [2]:
+            xmin = 2.120916400573835 
+            xmax = 2.3110159591262667 
+            text = "and" 
+        intervals [3]:
+            xmin = 2.3110159591262667 
+            xmax = 2.647329786615501 
+            text = "he heard" 
+        intervals [4]:
+            xmin = 2.647329786615501 
+            xmax = 3.640324044632017 
+            text = "that Arkhilius" 
+        intervals [5]:
+            xmin = 3.640324044632017 
+            xmax = 3.920333394619109 
+            text = "was" 
+        intervals [6]:
+            xmin = 3.920333394619109 
+            xmax = 4.395746857509863 
+            text = "king" 
+        intervals [7]:
+            xmin = 4.395746857509863 
+            xmax = 5.074739984882842 
+            text = "in Yehuda" 
+        intervals [8]:
+            xmin = 5.074739984882842 
+            xmax = 5.805427284427284 
+            text = "in place of" 
+        intervals [9]:
+            xmin = 5.805427284427284 
+            xmax = 6.486422560992268 
+            text = "Herodus" 
+        intervals [10]:
+            xmin = 6.486422560992268 
+            xmax = 7.308197278911565 
+            text = "his father" 
+        intervals [11]:
+            xmin = 7.308197278911565 
+            xmax = 8.01433369980989 
+            text = "he was afraid" 
+        intervals [12]:
+            xmin = 8.01433369980989 
+            xmax = 8.49786593829451 
+            text = "to go" 
+        intervals [13]:
+            xmin = 8.49786593829451 
+            xmax = 9.217467120181407 
+            text = "there" 
+        intervals [14]:
+            xmin = 9.217467120181407 
+            xmax = 10.282136898555041 
+            text = "and was revealed" 
+        intervals [15]:
+            xmin = 10.282136898555041 
+            xmax = 10.494791075006054 
+            text = "to him" 
+        intervals [16]:
+            xmin = 10.494791075006054 
+            xmax = 10.938474654161467 
+            text = "in a dream" 
+        intervals [17]:
+            xmin = 10.938474654161467 
+            xmax = 11.535338271471277 
+            text = "that he should go" 
+        intervals [18]:
+            xmin = 11.535338271471277 
+            xmax = 11.882012521822888 
+            text = "to the land" 
+        intervals [19]:
+            xmin = 11.882012521822888 
+            xmax = 12.820362811791384 
+            text = "of Galeela" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 12.820362811791384 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 12.820362811791384 
+            text = "22" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 12.820362811791384 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 12.820362811791384 
+            text = "DONE" 
