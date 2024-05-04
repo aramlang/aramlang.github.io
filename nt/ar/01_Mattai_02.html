@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mattai 2</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../css/site.css">
+</head>
+
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="spinner"></div>
+  </div>
+  <header class="sticky hrow">
+    <div class="hcol">
+      <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
+        The Preaching of Mattai
+      </div>
+      <div class="gridContainer">
+        <div>
+          <span class="label">
+            <input type="checkbox" id="loop" checked="true" title="Repet selected verses">
+            <label for="loop" title="Repet selected verses">Loop&nbsp;Verse</label>
+          </span>
+        </div>
+        <div>
+          <select id="startVerse" title="Start Verse">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+          </select>
+        </div>
+        <div>
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23" selected>23</option>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          <span class="label">
+            <input type="checkbox" id="chapterLoop" title="Repet selected chapters">
+            <label for="chapterLoop" title="Repet selected chapters">Loop&nbsp;Chapter&nbsp;</label>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          <select id="startChapter" title="Start Chapter">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+          </select>
+        </div>
+        <div style="visibility:hidden;">
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endChapter" title="End Chapter">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28" selected>28</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="srow">
+        <div title="Header will float, if checked">
+          <input type="checkbox" id="stickyHeader" checked="true">
+          <label for="stickyHeader">Float Bar</label>
+        </div>
+        <div title="Select Text Font">
+          <select id="fontFamily">
+            <option value="syr">East Assyrian</option>
+            <option value="ser">Serto</option>
+            <option value="est">Estrangela</option>
+            <option value="heb">Kthav Ashuri</option>
+            <option value="cal">CAL</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="hcol">
+      <div class="center smaller" style="visibility:hidden;">
+        <a href="index.html" title="ܦܸܫܝܼܛܬܵܐ">Peshitta</a>
+        <a href="01_Mattai_01.html" title="Go To Chapter 1">&lt;&nbsp;Prev</a>
+        <span class="label" title="Navigate to selected chapter">
+          &nbsp;&nbsp;<select id="gotoChapter">
+            <option value="1" title="Go To Chapter 1">1</option>
+            <option value="2" title="Chapter 2" selected>2</option>
+            <option value="3" title="Go To Chapter 3">3</option>
+            <option value="4" title="Go To Chapter 4">4</option>
+            <option value="5" title="Go To Chapter 5">5</option>
+            <option value="6" title="Go To Chapter 6">6</option>
+            <option value="7" title="Go To Chapter 7">7</option>
+            <option value="8" title="Go To Chapter 8">8</option>
+            <option value="9" title="Go To Chapter 9">9</option>
+            <option value="10" title="Go To Chapter 10">10</option>
+            <option value="11" title="Go To Chapter 11">11</option>
+            <option value="12" title="Go To Chapter 12">12</option>
+            <option value="13" title="Go To Chapter 13">13</option>
+            <option value="14" title="Go To Chapter 14">14</option>
+            <option value="15" title="Go To Chapter 15">15</option>
+            <option value="16" title="Go To Chapter 16">16</option>
+            <option value="17" title="Go To Chapter 17">17</option>
+            <option value="18" title="Go To Chapter 18">18</option>
+            <option value="19" title="Go To Chapter 19">19</option>
+            <option value="20" title="Go To Chapter 20">20</option>
+            <option value="21" title="Go To Chapter 21">21</option>
+            <option value="22" title="Go To Chapter 22">22</option>
+            <option value="23" title="Go To Chapter 23">23</option>
+            <option value="24" title="Go To Chapter 24">24</option>
+            <option value="25" title="Go To Chapter 25">25</option>
+            <option value="26" title="Go To Chapter 26">26</option>
+            <option value="27" title="Go To Chapter 27">27</option>
+            <option value="28" title="Go To Chapter 28">28</option>
+          </select>&nbsp;&nbsp;
+        </span>
+        <a href="01_Mattai_03.html" title="Go To Chapter 3">Next&nbsp;&gt;</a>
+
+        <a href="index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
+      </div>
+      <div class="srow smaller">
+        <div title="Select Playback Speed">
+          <span class="label">
+            <label for="speed">Speed</label>
+            <select id="speed">
+              <option value="0.5" title="Slow speed">0.50&times;</option>
+              <option value="0.75" title="Slower speed">0.75&times;</option>
+              <option value="1" selected title="Normal speed">Normal</option>
+              <option value="1.25" title="Faster speed">1.25&times;</option>
+              <option value="1.5" title="Fast speed">1.50&times;</option>
+              <option value="1.75" title="Very Fast speed">1.75&times;</option>
+              <option value="2" title="Fastest speed">2.00&times;</option>
+            </select>
+            &nbsp;
+          </span>
+        </div>
+        <!-- Controls -->
+        <div>
+          <div id="loading"></div>
+          <div class="btn" id="playBtn" title="Play Audio"></div>
+          <div class="btn" id="pauseBtn" title="Pause Audio"></div>
+        </div>
+        <div>
+          <div class="btn" id="volumeBtn" style="margin-left: 5px;" title="Audio Volume"></div>
+        </div>
+        <div>
+          <span class="label" title="Pause After Each Word">
+            <span title="Pause After Each Word">&nbsp;Pause</span>
+            <input type="number" min="0" max="100" value="0" id="wordPause">
+            <label for="wordPause" title="Pause After Each Word">Seconds</label>
+          </span>
+        </div>
+      </div>
+      <div class="center">
+      </div>
+    </div>
+    <div lang="syc" class="hcol syr t">
+      <div class="" title="The preaching of Mattai">
+        <span id="book"></span>
+      </div>
+      <div title="Chapter 2">
+        <span id="chapter"></span>
+      </div>
+      <div>
+        <span class="label">
+          <label for="zawae" title="Show/hide vowels and punctuation">
+            <span id="zawaeLabel"></span>
+          </label>
+          <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="clickable">
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="1-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">1</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="2-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">2</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="3-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">3</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="4-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">4</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="5-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">5</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="6-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">6</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="7-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">7</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="8-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">8</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="9-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">9</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="10-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">10</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="11-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">11</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="12-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">12</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="13-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">13</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="14-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">14</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="15-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">15</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="16-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">16</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="17-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">17</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="18-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">18</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="19-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">19</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="20-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">20</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="21-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">21</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="22-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">22</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="23-0w"></span></a><br>
+          <a href="#" title="Go Up" class="enn">23</a>
+        </div>
+      </div>
+      <div class="verse-text">
+
+      </div>
+    </div>
+
+    <br>
+  </main>
+  <hr>
+  <p class="nfo">
+    For script mapping help, see <a href="https://peshitta.github.io/help" target="_blank"
+      title="Script Help">https://peshitta.github.io/help</a>
+  </p>
+
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../../js/howler.core.min.js"></script>
+  <script type="module" src="../../js/player.js"></script>
+  <script type="module">
+    import init from '../../js/site.js';
+    init(1, 2);
+  </script>
+</body>
+</html>
