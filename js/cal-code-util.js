@@ -147,13 +147,15 @@ export const easternVowels = Object.freeze([v.zlama, v.rwaha]);
 export const vowels = Object.freeze(commonVowels.concat(easternVowels));
 
 /**
+ * See https://r12a.github.io/scripts/syrc/aii.html for more
  * Sedra/CAL diacritic name map
  * 1. qushaya: __'__ - dot above
  * 2. rukkakha: __,__ - dot below
  * 3. lineaOccultans: **_** - linea occultans
  * 4. seyame: __*__ - seyame, rebwe
- * 5. seyame: __`__ - misc dot above TODO
+ * 5. seyame: __`__ - misc dot above
  * 6. seyame: __~__ - misc dot below
+ * 7. breve: __>__ - Swadaya combining breve below
  * @constant
  * @type { Object.<string, string> }
  */
@@ -173,6 +175,8 @@ const d = diacriticsByName;
  * 2. __,__ dot below, Rukkakha
  * 3. **_** line under
  * 4. __*__ Seyame
+ * 5. seyame: __`__ - misc dot above
+ * 6. seyame: __~__ - misc dot below
  * @constant
  * @type { string[] }
  */
