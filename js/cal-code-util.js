@@ -164,7 +164,10 @@ export const diacriticsByName = Object.freeze(
     qushaya: { value: "'", enumerable: true },
     rukkakha: { value: ',', enumerable: true },
     lineaOccultans: { value: '_', enumerable: true },
-    seyame: { value: '*', enumerable: true }
+    seyame: { value: '*', enumerable: true },
+    dotAbove: { value: '`', enumerable: true },
+    dotBelow: { value: '~', enumerable: true },
+    breve: { value: '>', enumerable: true },
   })
 );
 
@@ -173,10 +176,11 @@ const d = diacriticsByName;
  * Sedra/CAL diacritic characters:
  * 1. __'__ dot above, Qushaya
  * 2. __,__ dot below, Rukkakha
- * 3. **_** line under
- * 4. __*__ Seyame
- * 5. seyame: __`__ - misc dot above
- * 6. seyame: __~__ - misc dot below
+ * 3. **_**  oblique line
+ * 4. __*__ seyame
+ * 5.  __`__ misc dot above
+ * 6.  __~__ misc dot below
+ * 7.  __>__ Swadaya combining breve below
  * @constant
  * @type { string[] }
  */
@@ -184,7 +188,10 @@ export const diacritics = Object.freeze([
   d.qushaya,
   d.rukkakha,
   d.lineaOccultans,
-  d.seyame
+  d.seyame,
+  d.dotAbove,
+  d.dotBelow,
+  d.breve
 ]);
 
 /**
@@ -238,7 +245,10 @@ export const letterAsciiMap = Object.freeze(
     [d.qushaya]: { value: '', enumerable: true },
     [d.rukkakha]: { value: ',', enumerable: true },
     [d.lineaOccultans]: { value: '', enumerable: true },
-    [d.seyame]: { value: '', enumerable: true }
+    [d.seyame]: { value: '', enumerable: true },
+    [d.dotAbove]: { value: '', enumerable: true },
+    [d.dotBelow]: { value: '', enumerable: true },
+    [d.breve]: { value: '', enumerable: true }
   })
 );
 

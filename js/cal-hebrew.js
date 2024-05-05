@@ -53,6 +53,9 @@ const callback = (word, i, fromTo, wordProp) => {
     case diacriticsByName.rukkakha:
     case diacriticsByName.lineaOccultans:
     case diacriticsByName.seyame:
+    case diacriticsByName.dotAbove:
+    case diacriticsByName.dotBelow:
+    case diacriticsByName.breve:
       return ''; // leave letter un-dotted as no equivalent exists
     case '&':
       return wordProp.isDotted ? dottedSin : shin;

@@ -15,7 +15,8 @@ import {
   commonDiacritics as syriacDiacritics,
   consonantsByName as syriacConsonantsByName,
   easternVowelsByName as syriacEasternVowelsByName,
-  westernVowelsByName as syriacWesternVowelsByName
+  westernVowelsByName as syriacWesternVowelsByName,
+  diacriticsByName as syriacDiacriticsByName
 } from './syriac-code-util.js';
 
 /**
@@ -45,7 +46,7 @@ const easternSyriacWriting = new Writing(
       [syriacEasternVowelsByName.hbasaEsasa].concat(easternSyriacOnlyVowels)
     )
   ),
-  syriacDiacritics
+  syriacDiacritics.concat(syriacDiacriticsByName.breve)
 );
 
 /**
@@ -73,7 +74,7 @@ const westernSyriacWriting = new Writing(
       syriacWesternVowelsByName.esasa
     )
   ),
-  syriacDiacritics
+  syriacDiacritics.concat(syriacDiacriticsByName.rukkakha)
 );
 
 /**

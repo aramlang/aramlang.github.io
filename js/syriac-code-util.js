@@ -280,7 +280,10 @@ export const diacriticsByName = Object.freeze(
     qushaya: { value: '\u0741', enumerable: true },
     rukkakha: { value: '\u0742', enumerable: true },
     lineaOccultans: { value: '\u0747', enumerable: true },
-    seyame: { value: '\u0308', enumerable: true }
+    seyame: { value: '\u0308', enumerable: true },
+    dotAbove: { value: '\u0307', enumerable: true },
+    dotBelow: { value: '\u0323', enumerable: true },
+    breve: { value: '\u032E', enumerable: true }
   })
 );
 
@@ -295,7 +298,9 @@ export const commonDiacritics = Object.freeze([
   d.qushaya, //  ݁ Syriac Qushshaya • indicates a plosive pronunciation
   d.rukkakha, //  ݂ Syriac Rukkakha • indicates an aspirated (spirantized) pronunciation
   d.lineaOccultans, //  ݇ Syriac Oblique Line Above • indication of a silent letter
-  d.seyame // ̈  Seyame, Rebwe: combining diaeresis
+  d.seyame, // ̈  Seyame, Rebwe: combining diaeresis
+  d.dotAbove, // ̇  Combining dot above: Use ܒ̇ on the feminine he ending: ܟܬܒܗ̇ ‘her book’, to mark present tense: ܟ̇ܬܒ ‘he is writing’, etc.
+  d.dotBelow // ̣  Combining dot below: Use ܒ̣ to mark past tense: ܟ̣ܬܒ ‘he wrote’, etc.
 ]);
 
 /**
@@ -306,7 +311,7 @@ export const commonDiacritics = Object.freeze([
 export const swadayaDiacritics = Object.freeze([
   '\u0303', // ̃  Swadaya combining tilde
   '\u0330', // ̰  Swadaya combining tilde below
-  '\u032E' // ̮  Swadaya combining breve below
+  d.breve // ̮  Swadaya combining breve below
 ]);
 
 /**
@@ -322,8 +327,6 @@ export const otherDiacritics = Object.freeze([
   '\u0748', //  ݈ Syriac Oblique Line Below • indication of a silent letter • also used to indicate numbers multiplied by a certain constant
   '\u0324', // ̤  Seyame Below: combining diaeresis below
   '\u0740', //  ݀ Syriac Feminine Dot • feminine marker used with the Taw feminine suffix
-  '\u0307', // ̇  Combining dot above: Use ܒ̇ on the feminine he ending: ܟܬܒܗ̇ ‘her book’, to mark present tense: ܟ̇ܬܒ ‘he is writing’, etc.
-  '\u0323', // ̣  Combining dot below: Use ܒ̣ to mark past tense: ܟ̣ܬܒ ‘he wrote’, etc.
   '\u0743', //  ݃ Syriac Two Vertical Dots Above • accent mark used in ancient manuscripts
   '\u0744', //  ݄ Syriac Two Vertical Dots Below • accent mark used in ancient manuscripts
   '\u0745', //  ݅ Syriac Three Dots Above • diacritic used in Turoyo for letters not found in Syriac
