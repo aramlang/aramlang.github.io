@@ -8,8 +8,8 @@ export default (bookNo, chapterNo) => {
   verses = books[bookNo][chapterNo];
   page.info = {
     book: {
-      w: books[0][0],
-      i: books[0][1],
+      w: books[bookNo - 1][0],
+      i: books[bookNo - 1][1],
       n: bookNo
     },
     chapter: {

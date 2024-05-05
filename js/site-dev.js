@@ -1,5 +1,5 @@
 'use strict';
-import books from './peshitta.js'
+import books from './peshitta-dev.js'
 import { removeDotting } from './cal-code-util.js'
 import { toHebrew } from './cal-hebrew.js';
 import { toEasternSyriac, toWesternSyriac } from './cal-syriac.js';
@@ -8,8 +8,8 @@ export default (bookNo, chapterNo) => {
   verses = books[bookNo][chapterNo];
   page.info = {
     book: {
-      w: books[0][0],
-      i: books[0][1],
+      w: books[bookNo - 1][0],
+      i: books[bookNo - 1][1],
       n: bookNo
     },
     chapter: {
@@ -232,10 +232,15 @@ const getBook = (key) => {
         ? `&nbsp;${toHebrew(prefix)}&nbsp;ד${toHebrew(page.info.book.w)}`
         : `&nbsp;${toHebrew(removeDotting(prefix))}&nbsp;ד${toHebrew(removeDotting(page.info.book.w))}`;
       break;
-    default:
+    case 'ser':
       cached = controls.zawae.checked
         ? `&nbsp;${toWesternSyriac(prefix)}&nbsp;ܕ${toWesternSyriac(page.info.book.w)}`
         : `&nbsp;${toWesternSyriac(removeDotting(prefix))}&nbsp;ܕ${toWesternSyriac(removeDotting(page.info.book.w))}`;
+      break;
+    default:
+      cached = controls.zawae.checked
+        ? `&nbsp;${prefix}&nbsp;d${page.info.book.w}`
+        : `&nbsp;${removeDotting(prefix)}&nbsp;d${removeDotting(page.info.book.w)}`;
       break;
   }
 
@@ -262,10 +267,15 @@ const getChapter = (key) => {
         ? `&nbsp;${toHebrew(prefix)}&nbsp;${cal_heb_no[page.info.chapter.w]}`
         : `&nbsp;${toHebrew(removeDotting(prefix))}&nbsp;${cal_heb_no[page.info.chapter.w]}`;
       break;
-    default:
+    case 'ser':
       cached = controls.zawae.checked
         ? `&nbsp;${toWesternSyriac(prefix)}&nbsp;${cal_syr_no[page.info.chapter.w]}`
         : `&nbsp;${toWesternSyriac(removeDotting(prefix))}&nbsp;${cal_syr_no[page.info.chapter.w]}`;
+      break;
+    default:
+      cached = controls.zawae.checked
+        ? `&nbsp;${prefix}&nbsp;${page.info.chapter.w}`
+        : `&nbsp;${removeDotting(prefix)}&nbsp;${page.info.chapter.w}`;
       break;
   }
 
@@ -292,10 +302,15 @@ const getZawaeLabel = (key) => {
         ? `&nbsp;${toHebrew(text)}`
         : `&nbsp;${toHebrew(removeDotting(text))}`;
       break;
-    default:
+    case 'ser':
       cached = controls.zawae.checked
         ? `&nbsp;${toWesternSyriac(text)}`
         : `&nbsp;${toWesternSyriac(removeDotting(text))}`;
+      break;
+    default:
+      cached = controls.zawae.checked
+        ? `&nbsp;${text}`
+        : `&nbsp;${removeDotting(text)}`;
       break;
   }
 
@@ -312,6 +327,8 @@ const getWordKey = () => {
       return controls.zawae.checked ? 'h' : 'j';
     case 'ser':
       return controls.zawae.checked ? 's' : 'c'; // consonant can be re-used for serto
+    case 'cal':
+      return controls.zawae.checked ? 'w' : 'x'; // CAL
     default:
       return '';
   }
@@ -347,8 +364,14 @@ const toggleText = (event) => {
     let words = verses[i];
     for (let j = 0; j < words.length; j++) {
       let wobj = words[j];
-      // verse number have no vowels so we can re-use 'h' or 'a' cache
-      const key = j == 0 ? (controls.fontFamily.value == 'heb' ? 'h' : 'a') : globalKey;
+      // verse number have no vowels so we can re-use 'h' or 'a' or 'w' cache
+      const key = j == 0
+        ? (controls.fontFamily.value == 'heb' ?
+          'h' :
+          controls.fontFamily.value == 'cal'
+            ? 'w'
+            : 'a')
+        : globalKey;
       let word = wobj[key];
       if (!word) {
         const fontFamily = controls.fontFamily.value
@@ -372,7 +395,9 @@ const toggleText = (event) => {
             }
             break;
           default:
-            alert('Unexpected un-cached font family ' + fontFamily);
+            wobj[key] = word = (controls.zawae.checked || j == 0)
+              ? wobj.w
+              : removeDotting(wobj.w);
             break;
         }
       }
