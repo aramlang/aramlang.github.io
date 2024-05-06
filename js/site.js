@@ -87,7 +87,7 @@ const passiveSupported = page.passiveSupported = (() => {
 })();
 
 const controls = {};
-const elemIds = ['stickyHeader', 'fontFamily', 'book', 'chapter', 'zawae', 'zawaeLabel', 'startVerse', 'endVerse'];
+const elemIds = ['stickyHeader', 'fontFamily', 'book', 'chapter', 'zawae', 'zawaeLabel', 'startVerse', 'endVerse', 'gotoChapter'];
 for (let i = 0; i < elemIds.length; i++) {
   const elemId = elemIds[i];
   if (!(controls[elemId] = document.getElementById(elemId))) {
@@ -434,3 +434,18 @@ controls.stickyHeader.addEventListener('click', (event) => {
     document.getElementsByTagName('header')[0].classList.remove('sticky');
   }
 }, (passiveSupported ? { passive: true } : false));
+
+function zeroFill(number, totalLength) {
+  let numberString = number.toString();
+  return numberString.padStart(totalLength, '0');
+}
+
+controls.gotoChapter.addEventListener('change',
+  function () {
+    const bookFill = zeroFill(page.info.book.n, 2);
+    const bookName = page.info.book.i;
+    const chapterFill = zeroFill(controls.gotoChapter.value, 2);
+    const selectedPage = `${bookFill}_${bookName}_${chapterFill}.html`;
+    window.location.href = selectedPage;
+  },
+  (passiveSupported ? { passive: true } : false));
