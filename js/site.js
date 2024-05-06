@@ -436,7 +436,7 @@ controls.stickyHeader.addEventListener('click', (event) => {
 }, (passiveSupported ? { passive: true } : false));
 
 function zeroFill(number, totalLength) {
-  let numberString = number.toString();
+  const numberString = number.toString();
   return numberString.padStart(totalLength, '0');
 }
 
