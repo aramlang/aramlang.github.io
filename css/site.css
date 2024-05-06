@@ -469,7 +469,7 @@ span.h {
 .sun::after {
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   font-size: small;
-  content: '.\00a0\0263c'
+  content: '\00a0\0263c'
 }
 
 .sunc::after {
