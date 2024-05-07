@@ -550,3 +550,7 @@ li {
   text-align: center;
   padding: 5px;
 }
+
+.master {
+  color: #DC143C; /* Crimson */
+}
