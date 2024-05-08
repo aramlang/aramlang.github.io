@@ -87,7 +87,7 @@ const passiveSupported = page.passiveSupported = (() => {
 })();
 
 const controls = {};
-const elemIds = ['stickyHeader', 'fontFamily', 'book', 'chapter', 'zawae', 'zawaeLabel', 'startVerse', 'endVerse', 'gotoChapter'];
+const elemIds = ['stickyHeader', 'fontFamily', 'book', 'chapter', 'zawae', 'zawaeLabel', 'startVerse', 'endVerse'];
 for (let i = 0; i < elemIds.length; i++) {
   const elemId = elemIds[i];
   if (!(controls[elemId] = document.getElementById(elemId))) {
@@ -440,12 +440,15 @@ function zeroFill(number, totalLength) {
   return numberString.padStart(totalLength, '0');
 }
 
-controls.gotoChapter.addEventListener('change',
-  function () {
-    const bookFill = zeroFill(page.info.book.n, 2);
-    const bookName = page.info.book.i;
-    const chapterFill = zeroFill(controls.gotoChapter.value, 2);
-    const selectedPage = `${bookFill}_${bookName}_${chapterFill}.html`;
-    window.location.href = selectedPage;
-  },
-  (passiveSupported ? { passive: true } : false));
+const gotoChapter = document.getElementById('gotoChapter');
+if (gotoChapter) {
+  gotoChapter.addEventListener('change',
+    function () {
+      const bookFill = zeroFill(page.info.book.n, 2);
+      const bookName = page.info.book.i;
+      const chapterFill = zeroFill(gotoChapter.value, 2);
+      const selectedPage = `${bookFill}_${bookName}_${chapterFill}.html`;
+      window.location.href = selectedPage;
+    },
+    (passiveSupported ? { passive: true } : false));
+}
