@@ -257,7 +257,7 @@ export const letterAsciiMap = Object.freeze(
  * @constant
  * @type { Array.<string> }
  */
-export const punctuation = Object.freeze([';', '?', '!', '.', '-', ':']);
+export const punctuation = Object.freeze([';', '?', '!', '.', '-', ':', '+']);
 
 /**
  * Vowels and diacritics: used for consonantal only mapping

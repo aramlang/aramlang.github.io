@@ -28,6 +28,7 @@ import {
 const calWriting = new Writing(calConsonants, calVowels, calDiacritics);
 
 const reversedPe = '\u0727';
+const horizontalColon = '\u0705'; // ܅ Syriac Horizontal Colon - joins two words closely together in a context to which a rising tone is suitable
 
 /**
  * @private
@@ -49,12 +50,25 @@ const easternSyriacWriting = new Writing(
   syriacDiacritics.concat(syriacDiacriticsByName.breve)
 );
 
+const easternCallback = (word, i, fromTo) => {
+  let m = '';
+  const c = word.charAt(i);
+  switch (c) {
+    case '+':
+      m = horizontalColon;
+    default:
+      m = map(c, fromTo);
+      break;
+  }
+  return m;
+}
+
 /**
  * Aramaic Eastern Mapper
  * @const
  * @type { Mapper }
  */
-export const easternMapper = new Mapper(calWriting, easternSyriacWriting);
+export const easternMapper = new Mapper(calWriting, easternSyriacWriting, easternCallback);
 
 /**
  * @private
@@ -140,6 +154,8 @@ const westernCallback = (word, i, fromTo) => {
             ? `${syriacWesternVowelsByName.zqapha}${syriacConsonantsByName.waw}`
             : map(c, fromTo);
       break;
+    case '+':
+      m = horizontalColon;
     default:
       m = map(c, fromTo);
       break;

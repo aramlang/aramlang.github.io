@@ -35,6 +35,7 @@ const hebrewWriting = new Writing(
 const shin = '\u05E9';
 const dottedShin = `${shin}\u05C1`;
 const dottedSin = `${shin}\u05C2`;
+const horizontalColon = '\u0705'; // ܅ Syriac Horizontal Colon - joins two words closely together in a context to which a rising tone is suitable
 
 /**
  * @private
@@ -56,6 +57,7 @@ const callback = (word, i, fromTo, wordProp) => {
     case diacriticsByName.dotAbove:
     case diacriticsByName.dotBelow:
     case diacriticsByName.breve:
+    case horizontalColon:
       return ''; // leave letter un-dotted as no equivalent exists
     case '&':
       return wordProp.isDotted ? dottedSin : shin;
