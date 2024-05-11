@@ -35,7 +35,7 @@ const hebrewWriting = new Writing(
 const shin = '\u05E9';
 const dottedShin = `${shin}\u05C1`;
 const dottedSin = `${shin}\u05C2`;
-const horizontalColon = '\u0705'; // ܅ Syriac Horizontal Colon - joins two words closely together in a context to which a rising tone is suitable
+const horizontalColon = '+'; // ܅ Syriac Horizontal Colon - joins two words closely together in a context to which a rising tone is suitable
 
 /**
  * @private

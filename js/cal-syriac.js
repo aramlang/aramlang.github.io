@@ -56,6 +56,7 @@ const easternCallback = (word, i, fromTo) => {
   switch (c) {
     case '+':
       m = horizontalColon;
+      break;
     default:
       m = map(c, fromTo);
       break;
@@ -156,6 +157,7 @@ const westernCallback = (word, i, fromTo) => {
       break;
     case '+':
       m = horizontalColon;
+      break;
     default:
       m = map(c, fromTo);
       break;
