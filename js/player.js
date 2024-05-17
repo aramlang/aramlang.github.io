@@ -195,7 +195,7 @@ document.addEventListener('pageCompleted', (event) => {
         const file = `${bookNo}_${book}_${chapterNo}_${verseNo}`;
         const howl = new Howl({
           src: [`../../media/${audioPrefix}${file}.${ext[0]}`],
-          html5: true,
+          html5: false,
           preload: true,
           onplayerror: function (_, e) {
             alert(`Error playing audio ${e}`);
