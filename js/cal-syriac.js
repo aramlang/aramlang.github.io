@@ -57,6 +57,12 @@ const easternCallback = (word, i, fromTo) => {
     case '+':
       m = horizontalColon;
       break;
+    case '[':
+      m = '(';
+      break;
+    case ']':
+      m = ')';
+      break;
     default:
       m = map(c, fromTo);
       break;
@@ -157,6 +163,12 @@ const westernCallback = (word, i, fromTo) => {
       break;
     case '+':
       m = horizontalColon;
+      break;
+    case '[':
+      m = '(';
+      break;
+    case ']':
+      m = ')';
       break;
     default:
       m = map(c, fromTo);
