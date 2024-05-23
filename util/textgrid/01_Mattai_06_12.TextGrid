@@ -14,34 +14,34 @@ item []:
         intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 1.314738427357475 
+            xmax = 0.8890873015873015 
             text = "wa$b,wOq" 
         intervals [2]:
-            xmin = 1.314738427357475 
-            xmax = 1.535517179023508 
+            xmin = 0.8890873015873015 
+            xmax = 1.778174603174603 
             text = "lan" 
         intervals [3]:
-            xmin = 1.535517179023508 
-            xmax = 3.1024800095476786 
+            xmin = 1.778174603174603 
+            xmax = 2.6672619047619044 
             text = "xowbay*n" 
         intervals [4]:
-            xmin = 3.1024800095476786 
-            xmax = 3.9587761647179045 
+            xmin = 2.6672619047619044 
+            xmax = 3.556349206349206 
             text = ")aykano)" 
         intervals [5]:
-            xmin = 3.9587761647179045 
-            xmax = 4.424107400535972 
+            xmin = 3.556349206349206 
+            xmax = 4.445436507936508 
             text = "d)op" 
         intervals [6]:
-            xmin = 4.424107400535972 
-            xmax = 5.062719743264537 
+            xmin = 4.445436507936508 
+            xmax = 5.334523809523809 
             text = "xnan" 
         intervals [7]:
-            xmin = 5.062719743264537 
-            xmax = 5.706446664195848 
+            xmin = 5.334523809523809 
+            xmax = 6.2236111111111105 
             text = "$baqn" 
         intervals [8]:
-            xmin = 5.706446664195848 
+            xmin = 6.2236111111111105 
             xmax = 7.107188 
             text = "lxayobay*n" 
     item [2]:
