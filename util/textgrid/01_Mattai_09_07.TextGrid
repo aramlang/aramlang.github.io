@@ -1,0 +1,82 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.260204081632653 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 2.260204081632653 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1441711627179607 
+            text = "wqom" 
+        intervals [2]:
+            xmin = 1.1441711627179607 
+            xmax = 1.5915793230872597 
+            text = ")Ezal" 
+        intervals [3]:
+            xmin = 1.5915793230872597 
+            xmax = 2.260204081632653 
+            text = "lbayteh." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 2.260204081632653 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1441711627179607 
+            text = "ܘܩܵܡ" 
+        intervals [2]:
+            xmin = 1.1441711627179607 
+            xmax = 1.5915793230872597 
+            text = "ܐܸܙܲܠ" 
+        intervals [3]:
+            xmin = 1.5915793230872597 
+            xmax = 2.260204081632653 
+            text = "ܠܒܲܝܬܹܗ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 2.260204081632653 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1441711627179607 
+            text = "/and he arose" 
+        intervals [2]:
+            xmin = 1.1441711627179607 
+            xmax = 1.5915793230872597 
+            text = "[and] went" 
+        intervals [3]:
+            xmin = 1.5915793230872597 
+            xmax = 2.260204081632653 
+            text = "to his house" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 2.260204081632653 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.260204081632653 
+            text = "07" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 2.260204081632653 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.260204081632653 
+            text = "DONE" 
