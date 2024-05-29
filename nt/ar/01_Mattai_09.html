@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mattai 9</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../css/site.css">
+</head>
+
+<body>
+  <header class="sticky hrow">
+    <div class="hcol">
+      <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
+        The Preaching of Mattai - IN PROGRESS
+      </div>
+      <div class="gridContainer">
+        <div>
+          <span class="label">
+            <input type="checkbox" id="loop" checked title="Repet selected verses">
+            <label for="loop" title="Repet selected verses">Loop&nbsp;Verse</label>
+          </span>
+        </div>
+        <div>
+          <select id="startVerse" title="Start Verse">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div>
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+            </select>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          <span class="label">
+            <input type="checkbox" id="chapterLoop" title="Repet selected chapters">
+            <label for="chapterLoop" title="Repet selected chapters">Loop&nbsp;Chapter&nbsp;</label>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          <select id="startChapter" title="Start Chapter">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+          </select>
+        </div>
+        <div style="visibility:hidden;">
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endChapter" title="End Chapter">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28" selected>28</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="srow">
+        <div title="Header will float, if checked">
+          <input type="checkbox" id="stickyHeader" checked>
+          <label for="stickyHeader">Float Bar</label>
+        </div>
+        <div title="Select Text Font">
+          <select id="fontFamily">
+            <option value="syr">East Assyrian</option>
+            <option value="ser">Serto</option>
+            <option value="est">Estrangela</option>
+            <option value="heb">Kthav Ashuri</option>
+            <option value="cal">CAL</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="hcol">
+      <div class="center smaller">
+        <a href="./index.html" title="ܦܸܫܝܼܛܬܵܐ">Peshitta</a>
+        <a href="01_Mattai_08.html" title="Go To Chapter 8">&lt;&nbsp;Prev</a>
+        <span class="label" title="Navigate to selected chapter">
+          &nbsp;&nbsp;<select id="gotoChapter">
+            <option value="1" title="Go To Chapter 1">1</option>
+            <option value="2" title="Go To Chapter 2">2</option>
+            <option value="3" title="Go To Chapter 3">3</option>
+            <option value="4" title="Go To Chapter 4">4</option>
+            <option value="5" title="Go To Chapter 5">5</option>
+            <option value="6" title="Go To Chapter 6">6</option>
+            <option value="7" title="Go To Chapter 7">7</option>
+            <option value="8" title="Go To Chapter 8">8</option>
+            <option value="9" title="Chapter 9" selected>9</option>
+          </select>&nbsp;&nbsp;
+        </span>
+        <a href="01_Mattai_01.html" title="Go To Chapter 1">Next&nbsp;&gt;</a>
+
+        <a href="./index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
+      </div>
+      <div class="srow smaller" style="display:none">
+        <div title="Select Playback Speed">
+          <span class="label">
+            <label for="speed">Speed</label>
+            <select id="speed">
+              <option value="0.5" title="Slow speed">0.50&times;</option>
+              <option value="0.75" title="Slower speed">0.75&times;</option>
+              <option value="1" selected title="Normal speed">Normal</option>
+              <option value="1.25" title="Faster speed">1.25&times;</option>
+              <option value="1.5" title="Fast speed">1.50&times;</option>
+              <option value="1.75" title="Very Fast speed">1.75&times;</option>
+              <option value="2" title="Fastest speed">2.00&times;</option>
+            </select>
+            &nbsp;
+          </span>
+        </div>
+        <!-- Controls -->
+        <div>
+          <div id="loading"></div>
+          <div class="btn" id="playBtn" title="Play Audio"></div>
+          <div class="btn" id="pauseBtn" title="Pause Audio"></div>
+        </div>
+        <div>
+          <div class="btn" id="volumeBtn" style="margin-left: 5px;" title="Audio Volume"></div>
+        </div>
+        <div>
+          <span class="label" title="Pause After Each Word">
+            <span title="Pause After Each Word">&nbsp;Pause</span>
+            <input type="number" min="0" max="100" value="0" id="wordPause">
+            <label for="wordPause" title="Pause After Each Word">Seconds</label>
+          </span>
+        </div>
+      </div>
+      <div class="center">
+      </div>
+    </div>
+    <div lang="syc" class="hcol syr t" style="display:none">
+      <div class="" title="The preaching of Mattai">
+        <span id="book"></span>
+      </div>
+      <div title="Chapter 9">
+        <span id="chapter"></span>
+      </div>
+      <div>
+        <span class="label">
+          <label for="zawae" title="Show/hide vowels and punctuation">
+            <span id="zawaeLabel"></span>
+          </label>
+          <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="clickable">
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="1-0w">ܐ</span></a><br>
+          <a href="#" title="Go Up" class="enn">1</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="1-1w" lang="syc" class="syr t">ܘܲܣܠܸܩ</div>
+          <div id="1-1i" class="eng">and he went up</div>
+        </div>
+        <div class="col">
+          <div id="1-2w" lang="syc" class="syr t">ܐܠܸܠܦܵܐ:</div>
+          <div id="1-2i" class="eng">into a ship</div>
+        </div>
+        <div class="col">
+          <div id="1-3w" lang="syc" class="syr t">ܘܲܥܒܲܪ</div>
+          <div id="1-3i" class="eng">and crossed over</div>
+        </div>
+        <div class="col">
+          <div id="1-4w" lang="syc" class="syr t">ܐܸܬ݂ܵܐ</div>
+          <div id="1-4i" class="eng">[and] came</div>
+        </div>
+        <div class="col">
+          <div id="1-5w" lang="syc" class="syr t sun">ܠܲܡܕ݂ܝܼܢ݇ܬܹܗ.</div>
+          <div id="1-5i" class="eng">to his city</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="2-0w">ܒ</span></a><br>
+          <a href="#" title="Go Up" class="enn">2</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="2-1w" lang="syc" class="syr t">ܘܩܲܪܸܒ݂ܘ</div>
+          <div id="2-1i" class="eng">and they brought</div>
+        </div>
+        <div class="col">
+          <div id="2-2w" lang="syc" class="syr t">ܠܹܗ</div>
+          <div id="2-2i" class="eng">to him</div>
+        </div>
+        <div class="col">
+          <div id="2-3w" lang="syc" class="syr t">ܡܫܲܪܝܵܐ</div>
+          <div id="2-3i" class="eng">a paralytic</div>
+        </div>
+        <div class="col">
+          <div id="2-4w" lang="syc" class="syr t">ܟܲܕ݂</div>
+          <div id="2-4i" class="eng">that</div>
+        </div>
+        <div class="col">
+          <div id="2-5w" lang="syc" class="syr t">ܪܡܹܐ</div>
+          <div id="2-5i" class="eng">lay</div>
+        </div>
+        <div class="col">
+          <div id="2-6w" lang="syc" class="syr t">ܒܥܲܪܣܵܐ.</div>
+          <div id="2-6i" class="eng">on a pallet</div>
+        </div>
+        <div class="col">
+          <div id="2-7w" lang="syc" class="syr t">ܘܲܚܙܵܐ</div>
+          <div id="2-7i" class="eng">and saw</div>
+        </div>
+        <div class="col">
+          <div id="2-8w" lang="syc" class="syr t">ܝܼܫܘܿܥ</div>
+          <div id="2-8i" class="eng">Yeshua</div>
+        </div>
+        <div class="col">
+          <div id="2-9w" lang="syc" class="syr t">ܗܲܝܡܵܢܘܼܬ݂ܗܘܿܢ:</div>
+          <div id="2-9i" class="eng">their faith</div>
+        </div>
+        <div class="col">
+          <div id="2-10w" lang="syc" class="syr t">ܘܐܸܡܲܪ</div>
+          <div id="2-10i" class="eng">and said</div>
+        </div>
+        <div class="col">
+          <div id="2-11w" lang="syc" class="syr t">ܠܗܲܘ</div>
+          <div id="2-11i" class="eng">to the</div>
+        </div>
+        <div class="col">
+          <div id="2-12w" lang="syc" class="syr t">ܡܫܲܪܝܵܐ.</div>
+          <div id="2-12i" class="eng">paralytic</div>
+        </div>
+        <div class="col">
+          <div id="2-13w" lang="syc" class="syr t master">ܐܸܬ݂ܠܲܒܒ݂</div>
+          <div id="2-13i" class="eng master">take heart</div>
+        </div>
+        <div class="col">
+          <div id="2-14w" lang="syc" class="syr t master">ܒܪܝ:</div>
+          <div id="2-14i" class="eng master">my son</div>
+        </div>
+        <div class="col">
+          <div id="2-15w" lang="syc" class="syr t master">ܫܒ݂ܝܼܩܝܼܢ</div>
+          <div id="2-15i" class="eng master">are forgiven</div>
+        </div>
+        <div class="col">
+          <div id="2-16w" lang="syc" class="syr t master">ܠܵܟ݂</div>
+          <div id="2-16i" class="eng master">you</div>
+        </div>
+        <div class="col">
+          <div id="2-17w" lang="syc" class="syr t master sun">ܚܛܵܗܲܝ̈ܟ.</div>
+          <div id="2-17i" class="eng master">your sins</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="3-0w">ܓ</span></a><br>
+          <a href="#" title="Go Up" class="enn">3</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="3-1w" lang="syc" class="syr t">ܐ݇ܢܵܫܵܐ</div>
+          <div id="3-1i" class="eng">some</div>
+        </div>
+        <div class="col">
+          <div id="3-2w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="3-2i" class="eng">but</div>
+        </div>
+        <div class="col">
+          <div id="3-3w" lang="syc" class="syr t">ܡܸܢ</div>
+          <div id="3-3i" class="eng">of</div>
+        </div>
+        <div class="col">
+          <div id="3-4w" lang="syc" class="syr t">ܣܵܦ̈ܪܹܐ.</div>
+          <div id="3-4i" class="eng">the scribes</div>
+        </div>
+        <div class="col">
+          <div id="3-5w" lang="syc" class="syr t">ܐܸܡܲܪܘ</div>
+          <div id="3-5i" class="eng">said</div>
+        </div>
+        <div class="col">
+          <div id="3-6w" lang="syc" class="syr t">ܒܢܲܦ̮ܫܗܘܿܢ:</div>
+          <div id="3-6i" class="eng">to themselves</div>
+        </div>
+        <div class="col">
+          <div id="3-7w" lang="syc" class="syr t">ܗܵܢܵܐ</div>
+          <div id="3-7i" class="eng">this one</div>
+        </div>
+        <div class="col">
+          <div id="3-8w" lang="syc" class="syr t sun">ܡܓܲܕܦ݂.</div>
+          <div id="3-8i" class="eng">blasphemes</div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </main>
+  <hr>
+  <p class="nfo">
+    For script mapping help, see <a href="https://peshitta.github.io/help" target="_blank"
+      title="Script Help">https://peshitta.github.io/help</a>
+  </p>
+
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
+
+</body>
+</html>
