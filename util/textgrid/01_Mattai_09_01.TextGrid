@@ -1,0 +1,106 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 5.658548752834467 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 5.658548752834467 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.8736979428087297 
+            text = "waslEq" 
+        intervals [2]:
+            xmin = 2.8736979428087297 
+            xmax = 3.42561686561417 
+            text = ")lElpo):" 
+        intervals [3]:
+            xmin = 3.42561686561417 
+            xmax = 4.039042328042328 
+            text = "wa(bar" 
+        intervals [4]:
+            xmin = 4.039042328042328 
+            xmax = 4.474692365835223 
+            text = ")Et,o)" 
+        intervals [5]:
+            xmin = 4.474692365835223 
+            xmax = 5.658548752834467 
+            text = "lamd,yin_teh." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 5.658548752834467 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.8736979428087297 
+            text = "ܘܲܣܠܸܩ" 
+        intervals [2]:
+            xmin = 2.8736979428087297 
+            xmax = 3.42561686561417 
+            text = "ܐܠܸܠܦܵܐ:" 
+        intervals [3]:
+            xmin = 3.42561686561417 
+            xmax = 4.039042328042328 
+            text = "ܘܲܥܒܲܪ" 
+        intervals [4]:
+            xmin = 4.039042328042328 
+            xmax = 4.474692365835223 
+            text = "ܐܸܬ݂ܵܐ" 
+        intervals [5]:
+            xmin = 4.474692365835223 
+            xmax = 5.658548752834467 
+            text = "ܠܲܡܕ݂ܝܼܢ݇ܬܹܗ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 5.658548752834467 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.8736979428087297 
+            text = "and he went up" 
+        intervals [2]:
+            xmin = 2.8736979428087297 
+            xmax = 3.42561686561417 
+            text = "into a ship" 
+        intervals [3]:
+            xmin = 3.42561686561417 
+            xmax = 4.039042328042328 
+            text = "and crossed over" 
+        intervals [4]:
+            xmin = 4.039042328042328 
+            xmax = 4.474692365835223 
+            text = "[and] came" 
+        intervals [5]:
+            xmin = 4.474692365835223 
+            xmax = 5.658548752834467 
+            text = "to his city" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 5.658548752834467 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.658548752834467 
+            text = "01" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 5.658548752834467 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.658548752834467 
+            text = "DONE" 
