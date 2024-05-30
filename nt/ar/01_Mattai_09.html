@@ -9,10 +9,13 @@
 </head>
 
 <body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="spinner"></div>
+  </div>
   <header class="sticky hrow">
     <div class="hcol">
       <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
-        The Preaching of Mattai - IN PROGRESS
+        The Preaching of Mattai
       </div>
       <div class="gridContainer">
         <div>
@@ -217,7 +220,7 @@
 
         <a href="./index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
       </div>
-      <div class="srow smaller" style="display:none">
+      <div class="srow smaller">
         <div title="Select Playback Speed">
           <span class="label">
             <label for="speed">Speed</label>
@@ -253,7 +256,7 @@
       <div class="center">
       </div>
     </div>
-    <div lang="syc" class="hcol syr t" style="display:none">
+    <div lang="syc" class="hcol syr t">
       <div class="" title="The preaching of Mattai">
         <span id="book"></span>
       </div>
@@ -359,11 +362,11 @@
           <div id="2-12i" class="eng">paralytic</div>
         </div>
         <div class="col">
-          <div id="2-13w" lang="syc" class="syr t master">ܐܸܬ݂ܠܲܒܒ݂</div>
+          <div id="2-13w" lang="syc" class="syr t master">ܐܸܬ݂ܠܲܒܲܒ݂</div>
           <div id="2-13i" class="eng master">take heart</div>
         </div>
         <div class="col">
-          <div id="2-14w" lang="syc" class="syr t master">ܒܪܝ:</div>
+          <div id="2-14w" lang="syc" class="syr t master">ܒܹܪܝ:</div>
           <div id="2-14i" class="eng master">my son</div>
         </div>
         <div class="col">
@@ -418,7 +421,7 @@
           <div id="3-7i" class="eng">this one</div>
         </div>
         <div class="col">
-          <div id="3-8w" lang="syc" class="syr t sun">ܡܓܲܕܦ݂.</div>
+          <div id="3-8w" lang="syc" class="syr t sun">ܡܓܲܕܸܦ݂.</div>
           <div id="3-8i" class="eng">blasphemes</div>
         </div>
       </div>
@@ -1655,7 +1658,7 @@
           <div id="22-6i" class="eng">to her</div>
         </div>
         <div class="col">
-          <div id="22-7w" lang="syc" class="syr t master">ܐܸܬ݂ܠܲܒܒ݂ܝ</div>
+          <div id="22-7w" lang="syc" class="syr t master">ܐܸܬ݂ܠܲܒܲܒ݂ܝ</div>
           <div id="22-7i" class="eng master">be comforted</div>
         </div>
         <div class="col">
@@ -2123,7 +2126,7 @@
           <div id="30-8i" class="eng master">see [that]</div>
         </div>
         <div class="col">
-          <div id="30-9w" lang="syc" class="syr t master">ܠܵܐ</div>
+          <div id="30-9w" lang="syc" class="syr t master">ܠܡܵܐ</div>
           <div id="30-9i" class="eng master">no</div>
         </div>
         <div class="col">
@@ -2576,5 +2579,12 @@
     <div id="sliderBtn"></div>
   </div>
 
+  <!-- Scripts -->
+  <script src="../../js/howler.core.min.js"></script>
+  <script type="module" src="../../js/player.js"></script>
+  <script type="module">
+    import init from '../../js/site.js';
+    init(1, 9);
+  </script>
 </body>
 </html>
