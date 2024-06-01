@@ -1,0 +1,658 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 300.1350113378685 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 300.1350113378685 
+        intervals: size = 31 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.578866213148775 
+            text = "wahwo) dk,ad, $alEm yi$wO( lampaqod,wu lat,rE(sar talmyid,ow*hy: $anyi mEn tamon. lmalopwu walmak,rozwu bamd,yi*not,hwOn." 
+        intervals [2]:
+            xmin = 14.578866213148775 
+            xmax = 22.8285034013637 
+            text = "ywOxanon deyn. kad, $ma( beyt, )asyi*re) (b,od,awhy dam$yixo): $adar byad, talmyid,ow*hy." 
+        intervals [3]:
+            xmin = 22.8285034013637 
+            xmax = 30.01506349206551 
+            text = "w)Emar leh. )an_t' hwu how: d)ote): )ow la)xreyn hwu msakeynan." 
+        intervals [4]:
+            xmin = 30.01506349206551 
+            xmax = 38.38309523809524 
+            text = "(no) yi$wO( w)Emar lhwOn. zElw )E$ta(ow lywOxanon )ayleyn d$om(yin )n_twOn wxoze`yn." 
+        intervals [5]:
+            xmin = 38.38309523809524 
+            xmax = 52.13039115646621 
+            text = "s*mayo) xoze`yn. waxg,yi*re). mhalk,yin. wga*rbe). mEt'dakyin. wxa*r$e). $om(yin. wmyi*te). qoymyin. wmEsken*e). mEstabryin." 
+        intervals [6]:
+            xmin = 52.13039115646621 
+            xmax = 55.85047052154116 
+            text = "wTwub,owhy la)yno) dlo) nEt,k$El byi." 
+        intervals [7]:
+            xmin = 55.85047052154116 
+            xmax = 68.83495842781221 
+            text = "kad, deyn )Ezalw: $aryi yi$wO( lme)mar lkEn$*e) (al ywOxanon. mono) npaqt'wOn lxwurbo) lmExzo): qanyo) dmEn rwuxo) mEt't'zyi(." 
+        intervals [8]:
+            xmin = 68.83495842781221 
+            xmax = 80.33633333333253 
+            text = "w)Elo) mono) npaqt'wOn lmExzo): gab,ro) dnax*te) *rakyeke) lb,yi$. ho) )ayleyn d*rakyike) lb,yi$yin beyt, malk*e) )EnwOn." 
+        intervals [9]:
+            xmin = 80.33633333333253 
+            xmax = 89.83265873015826 
+            text = "w)Elo) mono) npaqt'wOn lmExzo): nb,yio): )eyn )omar )_no) lk,wOn. wyatyir mEn nb,yio)." 
+        intervals [10]:
+            xmin = 89.83265873015826 
+            xmax = 99.78715419501134 
+            text = "honow geyr da(lowhy kt,yib,: dho) )Eno) m$adar )_no) mala)k,y qd,om parcwOpok,: dnat,qEn )wurxo) qd,omayk." 
+        intervals [11]:
+            xmin = 99.78715419501134 
+            xmax = 112.97075639779722 
+            text = ")omeyn )omarno) lk,wOn: dlo) qom byilyid,ay* nE$*e) drab mEn ywOxanon ma(md,ono). z(wOro) deyn bmalkwut, $mayo). rab hwu mEneh." 
+        intervals [12]:
+            xmin = 112.97075639779722 
+            xmax = 124.9874716553288 
+            text = "mEn yawmay* ywOxanon deyn ma(md,ono) wa(d,amo) lho$o): malkwut,o) da$mayo) baqTyiro) mEt'dab,ro): waqTyi*rone) mxaTpyin loh`." 
+        intervals [13]:
+            xmin = 124.9874716553288 
+            xmax = 130.7663696145159 
+            text = "klhwOn geyr nb,y*e) w)wOroyto): (d,amo) lywOxanon )Et,nabyiw." 
+        intervals [14]:
+            xmin = 130.7663696145159 
+            xmax = 137.19017006802721 
+            text = "w)En cob`eyn )n_twOn qabElw: dhwEywu )elyio) da(t,yid, lme)t,o)." 
+        intervals [15]:
+            xmin = 137.19017006802721 
+            xmax = 140.78862159257548 
+            text = "man d)yt, leh )Ed,n*e) dnE$ma( nE$ma(." 
+        intervals [16]:
+            xmin = 140.78862159257548 
+            xmax = 151.37173469387756 
+            text = "lman deyn )Ed,myih` l$arbt,o) hode). domyo) laTloy*e) dyot,b`yin b$wuqo): wqo(e`yn lxab,*rayhwOn." 
+        intervals [17]:
+            xmin = 151.37173469387756 
+            xmax = 159.3476445578288 
+            text = "w)omryin. zmarn lk,wOn. wlo) raqEd`t'wOn. w)alayn lk,wOn. wlo) )arqEd`t'wOn." 
+        intervals [18]:
+            xmin = 159.3476445578288 
+            xmax = 166.14333711262452 
+            text = ")Et,o) geyr ywOxanon dlo) )okel wlo) $ote): w)omryin. daywo) )yit, beh." 
+        intervals [19]:
+            xmin = 166.14333711262452 
+            xmax = 180.04620181405895 
+            text = ")Et,o) breh d)_no$o) )okel w$ote): w)omryin. ho) gab,ro) )ok,wOlo) w$ote) xamro): wroxmo) dmok,se*) wad,xaToy*e). w)Ezdadqat, xEk,mt,o) mEn (b,ode`yh`." 
+        intervals [20]:
+            xmin = 180.04620181405895 
+            xmax = 189.15955782312923 
+            text = "hoydeyn $aryi yi$wO( lamxasod,wu md,yi*not,o): )ayleyn dahwow bheyn xay*lowhy sagyi)*e). wlo) tob,w." 
+        intervals [21]:
+            xmin = 189.15955782312923 
+            xmax = 203.68375210575044 
+            text = "w)omar h_wo): woy lek,y kwurzyin+ woy lek,y beyt, cayod,o)+ d)Elwu bcwur wab,caydon hwow xay*)le )ayleyn dahwow bkeyn: kbar deyn bsaq*e) wab,qETmo) tob,w." 
+        intervals [22]:
+            xmin = 203.68375210575044 
+            xmax = 211.78908730168615 
+            text = "bram )omar )_no) lkeyn: dalcwOr walcaydon nEhwe) nyix byowmo) dd,yino): )ow lkeyn." 
+        intervals [23]:
+            xmin = 211.78908730168615 
+            xmax = 226.9080990173881 
+            text = "w)an_t'y kparnoxwOm hoy da(d,amo) la$mayo) )Et't'ryimt'y: (d,amo) la$ywOl tEtaxt'eyn. )Elwu basd,wum hwow xay*)le )ayleyn dahwow bek,y: qayomo) h_wot, (d,amo) lyowmono)." 
+        intervals [24]:
+            xmin = 226.9080990173881 
+            xmax = 234.8753741496605 
+            text = "bram )omarno) lek,y: dla)r(o) dasd,wum nEhwe) nyix byowmo) dd,yino). )ow lek,y." 
+        intervals [25]:
+            xmin = 234.8753741496605 
+            xmax = 251.7159523809524 
+            text = "bhow zab,no): (no) yi$wO( w)Emar. mowde) )_no) lok, )ob,y. moro) da$mayo) wd,a)r(o): dk,asyit' holeyn mEn xaky*me) wsakwult,on*e): wag,layt' )Eneyn lyalwud*e)." 
+        intervals [26]:
+            xmin = 251.7159523809524 
+            xmax = 256.9004308390017 
+            text = ")eyn )ob,y: dhokano) hw~o) cEb,yono) qd,omayk." 
+        intervals [27]:
+            xmin = 256.9004308390017 
+            xmax = 271.793896447469 
+            text = "kl mEdEm )E$t'lEm lyi mEn )ob,y. wlo) )_no$ yod,a( lab,ro) )Elo) )En )ab,o). )op lo) la)b,o) )_no$ yod,a( )Elo) )En bro). walman dcobe) bro) dnEg,le)." 
+        intervals [28]:
+            xmin = 271.793896447469 
+            xmax = 279.74466893424426 
+            text = "tow lwot,y klk,wOn la)yo) wa$qyilay* mowb)l*e. w)Eno) )anyixk,wOn." 
+        intervals [29]:
+            xmin = 279.74466893424426 
+            xmax = 290.13235040817847 
+            text = "$qwOlw nyiry (layk'wOn wyilapw mEny: dnyix )_no). wmak'yik, )_no) bleby: wmE$k'xyin )n_twOn nyoxo) lnap>*$ot,k,wOn." 
+        intervals [30]:
+            xmin = 290.13235040817847 
+            xmax = 297.8923026550303 
+            text = "nyiry geyr basyim h_wu: wmowbaly qalyilo) hy." 
+        intervals [31]:
+            xmin = 297.8923026550303 
+            xmax = 300.1350113378685 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 300.1350113378685 
+        intervals: size = 31 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.578866213148775 
+            text = "ܘܲܗܘܵܐ ܕܟ݂ܲܕ݂ ܫܲܠܸܡ ܝܼܫܘܿܥ ܠܲܡܦܲܩܵܕ݂ܘܼ ܠܲܬ݂ܪܸܥܣܲܪ ܬܲܠܡܝܼܕ݂ܵܘ̈ܗܝ: ܫܲܢܝܼ ܡܸܢ ܬܲܡܵܢ. ܠܡܲܠܵܦܘܼ ܘܲܠܡܲܟ݂ܪܵܙܘܼ ܒܲܡܕ݂ܝܼ̈ܢܵܬ݂ܗܘܿܢ." 
+        intervals [2]:
+            xmin = 14.578866213148775 
+            xmax = 22.8285034013637 
+            text = "ܝܘܿܚܲܢܵܢ ܕܹܝܢ. ܟܲܕ݂ ܫܡܲܥ ܒܹܝܬ݂ ܐܲܣܝܼ̈ܪܹܐ ܥܒ݂ܵܕ݂ܲܘܗܝ ܕܲܡܫܝܼܚܵܐ: ܫܲܕܲܪ ܒܝܲܕ݂ ܬܲܠܡܝܼܕ݂ܵܘ̈ܗܝ." 
+        intervals [3]:
+            xmin = 22.8285034013637 
+            xmax = 30.01506349206551 
+            text = "ܘܐܸܡܲܪ ܠܹܗ. ܐܲܢ݇ܬ݁ ܗܘܼ ܗܵܘ: ܕܐܵܬܹܐ: ܐܵܘ ܠܲܐܚܪܹܝܢ ܗܘܼ ܡܣܲܟܹܝܢܲܢ." 
+        intervals [4]:
+            xmin = 30.01506349206551 
+            xmax = 38.38309523809524 
+            text = "ܥܢܵܐ ܝܼܫܘܿܥ ܘܐܸܡܲܪ ܠܗܘܿܢ. ܙܸܠܘ ܐܸܫܬܲܥܵܘ ܠܝܘܿܚܲܢܵܢ ܐܲܝܠܹܝܢ ܕܫܵܡܥܝܼܢ ܐܢ݇ܬܘܿܢ ܘܚܵܙܹ̇ܝܢ." 
+        intervals [5]:
+            xmin = 38.38309523809524 
+            xmax = 52.13039115646621 
+            text = "ܣ̈ܡܲܝܵܐ ܚܵܙܹ̇ܝܢ. ܘܲܚܓ݂ܝܼ̈ܪܹܐ. ܡܗܲܠܟ݂ܝܼܢ. ܘܓܲ̈ܪܒܹܐ. ܡܸܬ݁ܕܲܟܝܼܢ. ܘܚܲ̈ܪܫܹܐ. ܫܵܡܥܝܼܢ. ܘܡܝܼ̈ܬܹܐ. ܩܵܝܡܝܼܢ. ܘܡܸܣܟܹܢܹ̈ܐ. ܡܸܣܬܲܒܪܝܼܢ." 
+        intervals [6]:
+            xmin = 52.13039115646621 
+            xmax = 55.85047052154116 
+            text = "ܘܛܘܼܒ݂ܵܘܗܝ ܠܲܐܝܢܵܐ ܕܠܵܐ ܢܸܬ݂ܟܫܸܠ ܒܝܼ." 
+        intervals [7]:
+            xmin = 55.85047052154116 
+            xmax = 68.83495842781221 
+            text = "ܟܲܕ݂ ܕܹܝܢ ܐܸܙܲܠܘ: ܫܲܪܝܼ ܝܼܫܘܿܥ ܠܡܹܐܡܲܪ ܠܟܸܢܫܹ̈ܐ ܥܲܠ ܝܘܿܚܲܢܵܢ. ܡܵܢܵܐ ܢܦܲܩܬ݁ܘܿܢ ܠܚܘܼܪܒܵܐ ܠܡܸܚܙܵܐ: ܩܲܢܝܵܐ ܕܡܸܢ ܪܘܼܚܵܐ ܡܸܬ݁ܬ݁ܙܝܼܥ." 
+        intervals [8]:
+            xmin = 68.83495842781221 
+            xmax = 80.33633333333253 
+            text = "ܘܐܸܠܵܐ ܡܵܢܵܐ ܢܦܲܩܬ݁ܘܿܢ ܠܡܸܚܙܵܐ: ܓܲܒ݂ܪܵܐ ܕܢܲܚ̈ܬܹܐ ̈ܪܲܟܝܹܟܹܐ ܠܒ݂ܝܼܫ. ܗܵܐ ܐܲܝܠܹܝܢ ܕ̈ܪܲܟܝܼܟܹܐ ܠܒ݂ܝܼܫܝܼܢ ܒܹܝܬ݂ ܡܲܠܟܹ̈ܐ ܐܸܢܘܿܢ." 
+        intervals [9]:
+            xmin = 80.33633333333253 
+            xmax = 89.83265873015826 
+            text = "ܘܐܸܠܵܐ ܡܵܢܵܐ ܢܦܲܩܬ݁ܘܿܢ ܠܡܸܚܙܵܐ: ܢܒ݂ܝܼܵܐ: ܐܹܝܢ ܐܵܡܲܪ ܐ݇ܢܵܐ ܠܟ݂ܘܿܢ. ܘܝܲܬܝܼܪ ܡܸܢ ܢܒ݂ܝܼܵܐ." 
+        intervals [10]:
+            xmin = 89.83265873015826 
+            xmax = 99.78715419501134 
+            text = "ܗܵܢܵܘ ܓܹܝܪ ܕܲܥܠܵܘܗܝ ܟܬ݂ܝܼܒ݂: ܕܗܵܐ ܐܸܢܵܐ ܡܫܲܕܲܪ ܐ݇ܢܵܐ ܡܲܠܲܐܟ݂ܝ ܩܕ݂ܵܡ ܦܲܪܨܘܿܦܵܟ݂: ܕܢܲܬ݂ܩܸܢ ܐܘܼܪܚܵܐ ܩܕ݂ܵܡܲܝܟ." 
+        intervals [11]:
+            xmin = 99.78715419501134 
+            xmax = 112.97075639779722 
+            text = "ܐܵܡܹܝܢ ܐܵܡܲܪܢܵܐ ܠܟ݂ܘܿܢ: ܕܠܵܐ ܩܵܡ ܒܝܼܠܝܼܕ݂ܲܝ̈ ܢܸܫܹ̈ܐ ܕܪܲܒ ܡܸܢ ܝܘܿܚܲܢܵܢ ܡܲܥܡܕ݂ܵܢܵܐ. ܙܥܘܿܪܵܐ ܕܹܝܢ ܒܡܲܠܟܘܼܬ݂ ܫܡܲܝܵܐ. ܪܲܒ ܗܘܼ ܡܸܢܹܗ." 
+        intervals [12]:
+            xmin = 112.97075639779722 
+            xmax = 124.9874716553288 
+            text = "ܡܸܢ ܝܲܘܡܲܝ̈ ܝܘܿܚܲܢܵܢ ܕܹܝܢ ܡܲܥܡܕ݂ܵܢܵܐ ܘܲܥܕ݂ܲܡܵܐ ܠܗܵܫܵܐ: ܡܲܠܟܘܼܬ݂ܵܐ ܕܲܫܡܲܝܵܐ ܒܲܩܛܝܼܪܵܐ ܡܸܬ݁ܕܲܒ݂ܪܵܐ: ܘܲܩܛܝܼ̈ܪܵܢܹܐ ܡܚܲܛܦܝܼܢ ܠܵܗ̇." 
+        intervals [13]:
+            xmin = 124.9874716553288 
+            xmax = 130.7663696145159 
+            text = "ܟܠܗܘܿܢ ܓܹܝܪ ܢܒ݂ܝܹ̈ܐ ܘܐܘܿܪܵܝܬܵܐ: ܥܕ݂ܲܡܵܐ ܠܝܘܿܚܲܢܵܢ ܐܸܬ݂ܢܲܒܝܼܘ." 
+        intervals [14]:
+            xmin = 130.7663696145159 
+            xmax = 137.19017006802721 
+            text = "ܘܐܸܢ ܨܵܒܹ̇ܝܢ ܐܢ݇ܬܘܿܢ ܩܲܒܸܠܘ: ܕܗܘܸܝܘܼ ܐܹܠܝܼܵܐ ܕܲܥܬ݂ܝܼܕ݂ ܠܡܹܐܬ݂ܵܐ." 
+        intervals [15]:
+            xmin = 137.19017006802721 
+            xmax = 140.78862159257548 
+            text = "ܡܲܢ ܕܐܝܬ݂ ܠܹܗ ܐܸܕ݂ܢܹ̈ܐ ܕܢܸܫܡܲܥ ܢܸܫܡܲܥ." 
+        intervals [16]:
+            xmin = 140.78862159257548 
+            xmax = 151.37173469387756 
+            text = "ܠܡܲܢ ܕܹܝܢ ܐܸܕ݂ܡܝܼܗ̇ ܠܫܲܪܒܬ݂ܵܐ ܗܵܕܹܐ. ܕܵܡܝܵܐ ܠܲܛܠܵܝܹ̈ܐ ܕܝܵܬ݂ܒ̇ܝܼܢ ܒܫܘܼܩܵܐ: ܘܩܵܥܹ̇ܝܢ ܠܚܲܒ݂̈ܪܲܝܗܘܿܢ." 
+        intervals [17]:
+            xmin = 151.37173469387756 
+            xmax = 159.3476445578288 
+            text = "ܘܐܵܡܪܝܼܢ. ܙܡܲܪܢ ܠܟ݂ܘܿܢ. ܘܠܵܐ ܪܲܩܸܕ̇ܬ݁ܘܿܢ. ܘܐܲܠܲܝܢ ܠܟ݂ܘܿܢ. ܘܠܵܐ ܐܲܪܩܸܕ̇ܬ݁ܘܿܢ." 
+        intervals [18]:
+            xmin = 159.3476445578288 
+            xmax = 166.14333711262452 
+            text = "ܐܸܬ݂ܵܐ ܓܹܝܪ ܝܘܿܚܲܢܵܢ ܕܠܵܐ ܐܵܟܹܠ ܘܠܵܐ ܫܵܬܹܐ: ܘܐܵܡܪܝܼܢ. ܕܲܝܘܵܐ ܐܝܼܬ݂ ܒܹܗ." 
+        intervals [19]:
+            xmin = 166.14333711262452 
+            xmax = 180.04620181405895 
+            text = "ܐܸܬ݂ܵܐ ܒܪܹܗ ܕܐ݇ܢܵܫܵܐ ܐܵܟܹܠ ܘܫܵܬܹܐ: ܘܐܵܡܪܝܼܢ. ܗܵܐ ܓܲܒ݂ܪܵܐ ܐܵܟ݂ܘܿܠܵܐ ܘܫܵܬܹܐ ܚܲܡܪܵܐ: ܘܪܵܚܡܵܐ ܕܡܵܟ݂ܣܹ̈ܐ ܘܲܕ݂ܚܲܛܵܝܹ̈ܐ. ܘܐܸܙܕܲܕܩܲܬ݂ ܚܸܟ݂ܡܬ݂ܵܐ ܡܸܢ ܥܒ݂ܵܕܹ̇ܝܗ̇." 
+        intervals [20]:
+            xmin = 180.04620181405895 
+            xmax = 189.15955782312923 
+            text = "ܗܵܝܕܹܝܢ ܫܲܪܝܼ ܝܼܫܘܿܥ ܠܲܡܚܲܣܵܕ݂ܘܼ ܡܕ݂ܝܼ̈ܢܵܬ݂ܵܐ: ܐܲܝܠܹܝܢ ܕܲܗܘܵܘ ܒܗܹܝܢ ܚܲܝ̈ܠܵܘܗܝ ܣܲܓܝܼܐܹ̈ܐ. ܘܠܵܐ ܬܵܒ݂ܘ." 
+        intervals [21]:
+            xmin = 189.15955782312923 
+            xmax = 203.68375210575044 
+            text = "ܘܐܵܡܲܪ ܗ݇ܘܵܐ: ܘܵܝ ܠܹܟ݂ܝ ܟܘܼܪܙܝܼܢ܅ ܘܵܝ ܠܹܟ݂ܝ ܒܹܝܬ݂ ܨܲܝܵܕ݂ܵܐ܅ ܕܐܸܠܘܼ ܒܨܘܼܪ ܘܲܒ݂ܨܲܝܕܵܢ ܗܘܵܘ ܚܲܝ̈ܐܠܹ ܐܲܝܠܹܝܢ ܕܲܗܘܵܘ ܒܟܹܝܢ: ܟܒܲܪ ܕܹܝܢ ܒܣܲܩܹ̈ܐ ܘܲܒ݂ܩܸܛܡܵܐ ܬܵܒ݂ܘ." 
+        intervals [22]:
+            xmin = 203.68375210575044 
+            xmax = 211.78908730168615 
+            text = "ܒܪܲܡ ܐܵܡܲܪ ܐ݇ܢܵܐ ܠܟܹܝܢ: ܕܲܠܨܘܿܪ ܘܲܠܨܲܝܕܵܢ ܢܸܗܘܹܐ ܢܝܼܚ ܒܝܵܘܡܵܐ ܕܕ݂ܝܼܢܵܐ: ܐܵܘ ܠܟܹܝܢ." 
+        intervals [23]:
+            xmin = 211.78908730168615 
+            xmax = 226.9080990173881 
+            text = "ܘܐܲܢ݇ܬ݁ܝ ܟܦܲܪܢܵܚܘܿܡ ܗܵܝ ܕܲܥܕ݂ܲܡܵܐ ܠܲܫܡܲܝܵܐ ܐܸܬ݁ܬ݁ܪܝܼܡܬ݁ܝ: ܥܕ݂ܲܡܵܐ ܠܲܫܝܘܿܠ ܬܸܬܲܚܬܹ݁ܝܢ. ܐܸܠܘܼ ܒܲܣܕ݂ܘܼܡ ܗܘܵܘ ܚܲܝ̈ܐܠܹ ܐܲܝܠܹܝܢ ܕܲܗܘܵܘ ܒܹܟ݂ܝ: ܩܲܝܵܡܵܐ ܗ݇ܘܵܬ݂ ܥܕ݂ܲܡܵܐ ܠܝܵܘܡܵܢܵܐ." 
+        intervals [24]:
+            xmin = 226.9080990173881 
+            xmax = 234.8753741496605 
+            text = "ܒܪܲܡ ܐܵܡܲܪܢܵܐ ܠܹܟ݂ܝ: ܕܠܲܐܪܥܵܐ ܕܲܣܕ݂ܘܼܡ ܢܸܗܘܹܐ ܢܝܼܚ ܒܝܵܘܡܵܐ ܕܕ݂ܝܼܢܵܐ. ܐܵܘ ܠܹܟ݂ܝ." 
+        intervals [25]:
+            xmin = 234.8753741496605 
+            xmax = 251.7159523809524 
+            text = "ܒܗܵܘ ܙܲܒ݂ܢܵܐ: ܥܢܵܐ ܝܼܫܘܿܥ ܘܐܸܡܲܪ. ܡܵܘܕܹܐ ܐ݇ܢܵܐ ܠܵܟ݂ ܐܵܒ݂ܝ. ܡܵܪܵܐ ܕܲܫܡܲܝܵܐ ܘܕ݂ܲܐܪܥܵܐ: ܕܟ݂ܲܣܝܼܬ݁ ܗܵܠܹܝܢ ܡܸܢ ܚܲܟܝ̈ܡܹܐ ܘܣܲܟܘܼܠܬ݂ܵܢܹ̈ܐ: ܘܲܓ݂ܠܲܝܬ݁ ܐܸܢܹܝܢ ܠܝܲܠܘܼܕܹ̈ܐ." 
+        intervals [26]:
+            xmin = 251.7159523809524 
+            xmax = 256.9004308390017 
+            text = "ܐܹܝܢ ܐܵܒ݂ܝ: ܕܗܵܟܲܢܵܐ ܗܘ̣ܵܐ ܨܸܒ݂ܝܵܢܵܐ ܩܕ݂ܵܡܲܝܟ." 
+        intervals [27]:
+            xmin = 256.9004308390017 
+            xmax = 271.793896447469 
+            text = "ܟܠ ܡܸܕܸܡ ܐܸܫܬ݁ܠܸܡ ܠܝܼ ܡܸܢ ܐܵܒ݂ܝ. ܘܠܵܐ ܐ݇ܢܵܫ ܝܵܕ݂ܲܥ ܠܲܒ݂ܪܵܐ ܐܸܠܵܐ ܐܸܢ ܐܲܒ݂ܵܐ. ܐܵܦ ܠܵܐ ܠܲܐܒ݂ܵܐ ܐ݇ܢܵܫ ܝܵܕ݂ܲܥ ܐܸܠܵܐ ܐܸܢ ܒܪܵܐ. ܘܲܠܡܲܢ ܕܨܵܒܹܐ ܒܪܵܐ ܕܢܸܓ݂ܠܹܐ." 
+        intervals [28]:
+            xmin = 271.793896447469 
+            xmax = 279.74466893424426 
+            text = "ܬܵܘ ܠܘܵܬ݂ܝ ܟܠܟ݂ܘܿܢ ܠܲܐܝܵܐ ܘܲܫܩܝܼܠܲܝ̈ ܡܵܘܒܐܠܹ̈. ܘܐܸܢܵܐ ܐܲܢܝܼܚܟ݂ܘܿܢ." 
+        intervals [29]:
+            xmin = 279.74466893424426 
+            xmax = 290.13235040817847 
+            text = "ܫܩܘܿܠܘ ܢܝܼܪܝ ܥܠܲܝܟ݁ܘܿܢ ܘܝܼܠܲܦܘ ܡܸܢܝ: ܕܢܝܼܚ ܐ݇ܢܵܐ. ܘܡܲܟ݁ܝܼܟ݂ ܐ݇ܢܵܐ ܒܠܹܒܝ: ܘܡܸܫܟ݁ܚܝܼܢ ܐܢ݇ܬܘܿܢ ܢܝܵܚܵܐ ܠܢܲܦ̮̈ܫܵܬ݂ܟ݂ܘܿܢ." 
+        intervals [30]:
+            xmin = 290.13235040817847 
+            xmax = 297.8923026550303 
+            text = "ܢܝܼܪܝ ܓܹܝܪ ܒܲܣܝܼܡ ܗ݇ܘܼ: ܘܡܵܘܒܲܠܝ ܩܲܠܝܼܠܵܐ ܗܝ." 
+        intervals [31]:
+            xmin = 297.8923026550303 
+            xmax = 300.1350113378685 
+            text = "" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 300.1350113378685 
+        intervals: size = 31 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.578866213148775 
+            text = "and it was that when finished Yeshua commanding the twelve his disciples he departed from there to teach and to preach in their cities" 
+        intervals [2]:
+            xmin = 14.578866213148775 
+            xmax = 22.8285034013637 
+            text = "Yukhanan and when heard [in] the house of prisoners the works of the Messiah he sent [word] through his disciples" 
+        intervals [3]:
+            xmin = 22.8285034013637 
+            xmax = 30.01506349206551 
+            text = "and said to him you are he who will come or another are to expect we" 
+        intervals [4]:
+            xmin = 30.01506349206551 
+            xmax = 38.38309523809524 
+            text = "answered Yeshua and said to them \go relate to Yukhanan that which have heard you and have seen" 
+        intervals [5]:
+            xmin = 38.38309523809524 
+            xmax = 52.13039115646621 
+            text = "the blind are seeing and the lame are walking and the lepers are cleansed and the deaf are hearing and the dead are rising and the poor are given hope" 
+        intervals [6]:
+            xmin = 52.13039115646621 
+            xmax = 55.85047052154116 
+            text = "and is blessed he that not is offended in me" 
+        intervals [7]:
+            xmin = 55.85047052154116 
+            xmax = 68.83495842781221 
+            text = "/when and they left started Yeshua to speak to the crowds concerning Yukhanan \what did you go out to the wilderness to see a reed that by the wind was shaken" 
+        intervals [8]:
+            xmin = 68.83495842781221 
+            xmax = 80.33633333333253 
+            text = "and if not what did you go out to see a man that robes soft was wearing behold those that soft things are wearing among kings are" 
+        intervals [9]:
+            xmin = 80.33633333333253 
+            xmax = 89.83265873015826 
+            text = "and if not what did you go out to see a prophet yes say I to you and more than a prophet" 
+        intervals [10]:
+            xmin = 89.83265873015826 
+            xmax = 99.78715419501134 
+            text = "this for is about whom it is written that behold <I> send I my messenger before your face that he might establish the way before you" 
+        intervals [11]:
+            xmin = 99.78715419501134 
+            xmax = 112.97075639779722 
+            text = "truly I say to you that not before was born [of] women one who is greater than Yukhanan the baptizer the least but in the kingdom [of] heaven is greater he than him" 
+        intervals [12]:
+            xmin = 112.97075639779722 
+            xmax = 124.9874716553288 
+            text = "from the days [of] Yukhanan now the baptizer <and> until now the kingdom of heaven has suffered violence and the violent are robbing it" 
+        intervals [13]:
+            xmin = 124.9874716553288 
+            xmax = 130.7663696145159 
+            text = "all for the prophets and the Torah until Yukhanan have prophesied" 
+        intervals [14]:
+            xmin = 130.7663696145159 
+            xmax = 137.19017006802721 
+            text = "and if desire you accept that this is Elia who was to come" 
+        intervals [15]:
+            xmin = 137.19017006802721 
+            xmax = 140.78862159257548 
+            text = "he who has ears to hear let him hear" 
+        intervals [16]:
+            xmin = 140.78862159257548 
+            xmax = 151.37173469387756 
+            text = "to what but should I liken generation this it is like children who sit in the street and beseech to their friends" 
+        intervals [17]:
+            xmin = 151.37173469387756 
+            xmax = 159.3476445578288 
+            text = "and say we sang to you and not did you dance and we mourned to you and not did you lament" 
+        intervals [18]:
+            xmin = 159.3476445578288 
+            xmax = 166.14333711262452 
+            text = "came for Yukhanan not eating nor drinking and they said that a demon there is in him" 
+        intervals [19]:
+            xmin = 166.14333711262452 
+            xmax = 180.04620181405895 
+            text = "came the son of man eating and drinking and they said behold a man gluttonous and he drinks wine and a friend of tax-collectors and of sinners but is justified wisdom by its works" 
+        intervals [20]:
+            xmin = 180.04620181405895 
+            xmax = 189.15955782312923 
+            text = "/then started Yeshua to revile the cities those that had in them his miracles many and not did they repent" 
+        intervals [21]:
+            xmin = 189.15955782312923 
+            xmax = 203.68375210575044 
+            text = "and he say would \woe unto you Khorzain woe unto you Beth-Saida for if in Tsur and in Sidan had been the miracles those that had been in you perhaps <and> in sackcloth and in ashes they [would have] repented" 
+        intervals [22]:
+            xmin = 203.68375210575044 
+            xmax = 211.78908730168615 
+            text = "but say I to you that on Tsur and on Sidan will be [more] tranquil in the day of judgement than for you" 
+        intervals [23]:
+            xmin = 211.78908730168615 
+            xmax = 226.9080990173881 
+            text = "and you Capurnakhum who that unto heaven has been raised unto Sheol will be brought down for if in Sadom had been the miracles those that had been in you standing she would be until this day" 
+        intervals [24]:
+            xmin = 226.9080990173881 
+            xmax = 234.8753741496605 
+            text = "but I say to you that for the land of Sadom it will be [more] tranquil in the day of judgement than for you" 
+        intervals [25]:
+            xmin = 234.8753741496605 
+            xmax = 251.7159523809524 
+            text = "/at that moment answered Yeshua and said \give thanks I to you my Father Lord of heaven and of earth that you have hidden these things from the wise and the intelligent and you have revealed them to the children" 
+        intervals [26]:
+            xmin = 251.7159523809524 
+            xmax = 256.9004308390017 
+            text = "yes my Father for such was the desire in front of you" 
+        intervals [27]:
+            xmin = 256.9004308390017 
+            xmax = 271.793896447469 
+            text = "every thing has been delivered to me from my Father and no man knows the son except the Father also no the Father man knows except the son and to whom that desires the son to reveal [him]" 
+        intervals [28]:
+            xmin = 271.793896447469 
+            xmax = 279.74466893424426 
+            text = "come to me all you who labour and bear burdens and I will give you rest" 
+        intervals [29]:
+            xmin = 279.74466893424426 
+            xmax = 290.13235040817847 
+            text = "bear my yoke upon you and learn from me that am tranquil I and am meek I in my heart and will find you tranquility in your souls" 
+        intervals [30]:
+            xmin = 290.13235040817847 
+            xmax = 297.8923026550303 
+            text = "my yoke for pleasant is and my burden light is" 
+        intervals [31]:
+            xmin = 297.8923026550303 
+            xmax = 300.1350113378685 
+            text = "" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 300.1350113378685 
+        intervals: size = 31 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.578866213148775 
+            text = "01" 
+        intervals [2]:
+            xmin = 14.578866213148775 
+            xmax = 22.8285034013637 
+            text = "02" 
+        intervals [3]:
+            xmin = 22.8285034013637 
+            xmax = 30.01506349206551 
+            text = "03" 
+        intervals [4]:
+            xmin = 30.01506349206551 
+            xmax = 38.38309523809524 
+            text = "04" 
+        intervals [5]:
+            xmin = 38.38309523809524 
+            xmax = 52.13039115646621 
+            text = "05" 
+        intervals [6]:
+            xmin = 52.13039115646621 
+            xmax = 55.85047052154116 
+            text = "06" 
+        intervals [7]:
+            xmin = 55.85047052154116 
+            xmax = 68.83495842781221 
+            text = "07" 
+        intervals [8]:
+            xmin = 68.83495842781221 
+            xmax = 80.33633333333253 
+            text = "08" 
+        intervals [9]:
+            xmin = 80.33633333333253 
+            xmax = 89.83265873015826 
+            text = "09" 
+        intervals [10]:
+            xmin = 89.83265873015826 
+            xmax = 99.78715419501134 
+            text = "10" 
+        intervals [11]:
+            xmin = 99.78715419501134 
+            xmax = 112.97075639779722 
+            text = "11" 
+        intervals [12]:
+            xmin = 112.97075639779722 
+            xmax = 124.9874716553288 
+            text = "12" 
+        intervals [13]:
+            xmin = 124.9874716553288 
+            xmax = 130.7663696145159 
+            text = "13" 
+        intervals [14]:
+            xmin = 130.7663696145159 
+            xmax = 137.19017006802721 
+            text = "14" 
+        intervals [15]:
+            xmin = 137.19017006802721 
+            xmax = 140.78862159257548 
+            text = "15" 
+        intervals [16]:
+            xmin = 140.78862159257548 
+            xmax = 151.37173469387756 
+            text = "16" 
+        intervals [17]:
+            xmin = 151.37173469387756 
+            xmax = 159.3476445578288 
+            text = "17" 
+        intervals [18]:
+            xmin = 159.3476445578288 
+            xmax = 166.14333711262452 
+            text = "18" 
+        intervals [19]:
+            xmin = 166.14333711262452 
+            xmax = 180.04620181405895 
+            text = "19" 
+        intervals [20]:
+            xmin = 180.04620181405895 
+            xmax = 189.15955782312923 
+            text = "20" 
+        intervals [21]:
+            xmin = 189.15955782312923 
+            xmax = 203.68375210575044 
+            text = "21" 
+        intervals [22]:
+            xmin = 203.68375210575044 
+            xmax = 211.78908730168615 
+            text = "22" 
+        intervals [23]:
+            xmin = 211.78908730168615 
+            xmax = 226.9080990173881 
+            text = "23" 
+        intervals [24]:
+            xmin = 226.9080990173881 
+            xmax = 234.8753741496605 
+            text = "24" 
+        intervals [25]:
+            xmin = 234.8753741496605 
+            xmax = 251.7159523809524 
+            text = "25" 
+        intervals [26]:
+            xmin = 251.7159523809524 
+            xmax = 256.9004308390017 
+            text = "26" 
+        intervals [27]:
+            xmin = 256.9004308390017 
+            xmax = 271.793896447469 
+            text = "27" 
+        intervals [28]:
+            xmin = 271.793896447469 
+            xmax = 279.74466893424426 
+            text = "28" 
+        intervals [29]:
+            xmin = 279.74466893424426 
+            xmax = 290.13235040817847 
+            text = "29" 
+        intervals [30]:
+            xmin = 290.13235040817847 
+            xmax = 297.8923026550303 
+            text = "30" 
+        intervals [31]:
+            xmin = 297.8923026550303 
+            xmax = 300.1350113378685 
+            text = "" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 300.1350113378685 
+        intervals: size = 31 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.578866213148775 
+            text = "TODO" 
+        intervals [2]:
+            xmin = 14.578866213148775 
+            xmax = 22.8285034013637 
+            text = "TODO" 
+        intervals [3]:
+            xmin = 22.8285034013637 
+            xmax = 30.01506349206551 
+            text = "TODO" 
+        intervals [4]:
+            xmin = 30.01506349206551 
+            xmax = 38.38309523809524 
+            text = "TODO" 
+        intervals [5]:
+            xmin = 38.38309523809524 
+            xmax = 52.13039115646621 
+            text = "TODO" 
+        intervals [6]:
+            xmin = 52.13039115646621 
+            xmax = 55.85047052154116 
+            text = "TODO" 
+        intervals [7]:
+            xmin = 55.85047052154116 
+            xmax = 68.83495842781221 
+            text = "TODO" 
+        intervals [8]:
+            xmin = 68.83495842781221 
+            xmax = 80.33633333333253 
+            text = "TODO" 
+        intervals [9]:
+            xmin = 80.33633333333253 
+            xmax = 89.83265873015826 
+            text = "TODO" 
+        intervals [10]:
+            xmin = 89.83265873015826 
+            xmax = 99.78715419501134 
+            text = "TODO" 
+        intervals [11]:
+            xmin = 99.78715419501134 
+            xmax = 112.97075639779722 
+            text = "TODO" 
+        intervals [12]:
+            xmin = 112.97075639779722 
+            xmax = 124.9874716553288 
+            text = "TODO" 
+        intervals [13]:
+            xmin = 124.9874716553288 
+            xmax = 130.7663696145159 
+            text = "TODO" 
+        intervals [14]:
+            xmin = 130.7663696145159 
+            xmax = 137.19017006802721 
+            text = "TODO" 
+        intervals [15]:
+            xmin = 137.19017006802721 
+            xmax = 140.78862159257548 
+            text = "TODO" 
+        intervals [16]:
+            xmin = 140.78862159257548 
+            xmax = 151.37173469387756 
+            text = "TODO" 
+        intervals [17]:
+            xmin = 151.37173469387756 
+            xmax = 159.3476445578288 
+            text = "TODO" 
+        intervals [18]:
+            xmin = 159.3476445578288 
+            xmax = 166.14333711262452 
+            text = "TODO" 
+        intervals [19]:
+            xmin = 166.14333711262452 
+            xmax = 180.04620181405895 
+            text = "TODO" 
+        intervals [20]:
+            xmin = 180.04620181405895 
+            xmax = 189.15955782312923 
+            text = "TODO" 
+        intervals [21]:
+            xmin = 189.15955782312923 
+            xmax = 203.68375210575044 
+            text = "TODO" 
+        intervals [22]:
+            xmin = 203.68375210575044 
+            xmax = 211.78908730168615 
+            text = "TODO" 
+        intervals [23]:
+            xmin = 211.78908730168615 
+            xmax = 226.9080990173881 
+            text = "TODO" 
+        intervals [24]:
+            xmin = 226.9080990173881 
+            xmax = 234.8753741496605 
+            text = "TODO" 
+        intervals [25]:
+            xmin = 234.8753741496605 
+            xmax = 251.7159523809524 
+            text = "TODO" 
+        intervals [26]:
+            xmin = 251.7159523809524 
+            xmax = 256.9004308390017 
+            text = "TODO" 
+        intervals [27]:
+            xmin = 256.9004308390017 
+            xmax = 271.793896447469 
+            text = "TODO" 
+        intervals [28]:
+            xmin = 271.793896447469 
+            xmax = 279.74466893424426 
+            text = "TODO" 
+        intervals [29]:
+            xmin = 279.74466893424426 
+            xmax = 290.13235040817847 
+            text = "TODO" 
+        intervals [30]:
+            xmin = 290.13235040817847 
+            xmax = 297.8923026550303 
+            text = "TODO" 
+        intervals [31]:
+            xmin = 297.8923026550303 
+            xmax = 300.1350113378685 
+            text = "" 
