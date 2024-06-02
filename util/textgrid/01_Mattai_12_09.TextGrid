@@ -1,0 +1,118 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 5.67562358276644 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 5.67562358276644 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.07330157908574 
+            text = "w$anyi" 
+        intervals [2]:
+            xmin = 2.07330157908574 
+            xmax = 2.308576511064196 
+            text = "mEn" 
+        intervals [3]:
+            xmin = 2.308576511064196 
+            xmax = 2.80139584135541 
+            text = "tamon" 
+        intervals [4]:
+            xmin = 2.80139584135541 
+            xmax = 3.4350626159554727 
+            text = "yi$wO(." 
+        intervals [5]:
+            xmin = 3.4350626159554727 
+            xmax = 4.133532123960696 
+            text = "w)Et,o)" 
+        intervals [6]:
+            xmin = 4.133532123960696 
+            xmax = 5.67562358276644 
+            text = "lak,nwu$t'hwOn." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 5.67562358276644 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.07330157908574 
+            text = "ܘܫܲܢܝܼ" 
+        intervals [2]:
+            xmin = 2.07330157908574 
+            xmax = 2.308576511064196 
+            text = "ܡܸܢ" 
+        intervals [3]:
+            xmin = 2.308576511064196 
+            xmax = 2.80139584135541 
+            text = "ܬܲܡܵܢ" 
+        intervals [4]:
+            xmin = 2.80139584135541 
+            xmax = 3.4350626159554727 
+            text = "ܝܼܫܘܿܥ." 
+        intervals [5]:
+            xmin = 3.4350626159554727 
+            xmax = 4.133532123960696 
+            text = "ܘܐܸܬ݂ܵܐ" 
+        intervals [6]:
+            xmin = 4.133532123960696 
+            xmax = 5.67562358276644 
+            text = "ܠܲܟ݂ܢܘܼܫܬ݁ܗܘܿܢ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 5.67562358276644 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.07330157908574 
+            text = "/and departed" 
+        intervals [2]:
+            xmin = 2.07330157908574 
+            xmax = 2.308576511064196 
+            text = "from" 
+        intervals [3]:
+            xmin = 2.308576511064196 
+            xmax = 2.80139584135541 
+            text = "there" 
+        intervals [4]:
+            xmin = 2.80139584135541 
+            xmax = 3.4350626159554727 
+            text = "Yeshua" 
+        intervals [5]:
+            xmin = 3.4350626159554727 
+            xmax = 4.133532123960696 
+            text = "and came" 
+        intervals [6]:
+            xmin = 4.133532123960696 
+            xmax = 5.67562358276644 
+            text = "to their assembly" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 5.67562358276644 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.67562358276644 
+            text = "09" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 5.67562358276644 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.67562358276644 
+            text = "DONE" 

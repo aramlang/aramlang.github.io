@@ -1,0 +1,190 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 9.80233560090703 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 9.80233560090703 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1762480226913217 
+            text = "qanyo)" 
+        intervals [2]:
+            xmin = 1.1762480226913217 
+            xmax = 1.8202558877140054 
+            text = "r(yi(o)" 
+        intervals [3]:
+            xmin = 1.8202558877140054 
+            xmax = 2.0415023836306174 
+            text = "lo)" 
+        intervals [4]:
+            xmin = 2.0415023836306174 
+            xmax = 2.892150415721844 
+            text = "nEt,bar." 
+        intervals [5]:
+            xmin = 2.892150415721844 
+            xmax = 4.519993858654573 
+            text = "wa$rog,o)" 
+        intervals [6]:
+            xmin = 4.519993858654573 
+            xmax = 5.216125388426976 
+            text = "damTapTEp." 
+        intervals [7]:
+            xmin = 5.216125388426976 
+            xmax = 5.519660414327543 
+            text = "lo)" 
+        intervals [8]:
+            xmin = 5.519660414327543 
+            xmax = 6.3988618524332805 
+            text = "nad,(Ek,." 
+        intervals [9]:
+            xmin = 6.3988618524332805 
+            xmax = 7.487083262589562 
+            text = "(d,amo)" 
+        intervals [10]:
+            xmin = 7.487083262589562 
+            xmax = 8.114940218511647 
+            text = "dnapEq" 
+        intervals [11]:
+            xmin = 8.114940218511647 
+            xmax = 8.552324263038548 
+            text = "dyino)" 
+        intervals [12]:
+            xmin = 8.552324263038548 
+            xmax = 9.80233560090703 
+            text = "lzokwut,o):" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 9.80233560090703 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1762480226913217 
+            text = "ܩܲܢܝܵܐ" 
+        intervals [2]:
+            xmin = 1.1762480226913217 
+            xmax = 1.8202558877140054 
+            text = "ܪܥܝܼܥܵܐ" 
+        intervals [3]:
+            xmin = 1.8202558877140054 
+            xmax = 2.0415023836306174 
+            text = "ܠܵܐ" 
+        intervals [4]:
+            xmin = 2.0415023836306174 
+            xmax = 2.892150415721844 
+            text = "ܢܸܬ݂ܒܲܪ." 
+        intervals [5]:
+            xmin = 2.892150415721844 
+            xmax = 4.519993858654573 
+            text = "ܘܲܫܪܵܓ݂ܵܐ" 
+        intervals [6]:
+            xmin = 4.519993858654573 
+            xmax = 5.216125388426976 
+            text = "ܕܲܡܛܲܦܛܸܦ." 
+        intervals [7]:
+            xmin = 5.216125388426976 
+            xmax = 5.519660414327543 
+            text = "ܠܵܐ" 
+        intervals [8]:
+            xmin = 5.519660414327543 
+            xmax = 6.3988618524332805 
+            text = "ܢܲܕ݂ܥܸܟ݂." 
+        intervals [9]:
+            xmin = 6.3988618524332805 
+            xmax = 7.487083262589562 
+            text = "ܥܕ݂ܲܡܵܐ" 
+        intervals [10]:
+            xmin = 7.487083262589562 
+            xmax = 8.114940218511647 
+            text = "ܕܢܲܦܸܩ" 
+        intervals [11]:
+            xmin = 8.114940218511647 
+            xmax = 8.552324263038548 
+            text = "ܕܝܼܢܵܐ" 
+        intervals [12]:
+            xmin = 8.552324263038548 
+            xmax = 9.80233560090703 
+            text = "ܠܙܵܟܘܼܬ݂ܵܐ:" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 9.80233560090703 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1762480226913217 
+            text = "the reed" 
+        intervals [2]:
+            xmin = 1.1762480226913217 
+            xmax = 1.8202558877140054 
+            text = "broken" 
+        intervals [3]:
+            xmin = 1.8202558877140054 
+            xmax = 2.0415023836306174 
+            text = "not" 
+        intervals [4]:
+            xmin = 2.0415023836306174 
+            xmax = 2.892150415721844 
+            text = "he will break" 
+        intervals [5]:
+            xmin = 2.892150415721844 
+            xmax = 4.519993858654573 
+            text = "and the lamp" 
+        intervals [6]:
+            xmin = 4.519993858654573 
+            xmax = 5.216125388426976 
+            text = "that is flickering" 
+        intervals [7]:
+            xmin = 5.216125388426976 
+            xmax = 5.519660414327543 
+            text = "not" 
+        intervals [8]:
+            xmin = 5.519660414327543 
+            xmax = 6.3988618524332805 
+            text = "he will extinguish" 
+        intervals [9]:
+            xmin = 6.3988618524332805 
+            xmax = 7.487083262589562 
+            text = "until" 
+        intervals [10]:
+            xmin = 7.487083262589562 
+            xmax = 8.114940218511647 
+            text = "he brings" 
+        intervals [11]:
+            xmin = 8.114940218511647 
+            xmax = 8.552324263038548 
+            text = "justice" 
+        intervals [12]:
+            xmin = 8.552324263038548 
+            xmax = 9.80233560090703 
+            text = "to victory" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 9.80233560090703 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.80233560090703 
+            text = "20" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 9.80233560090703 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.80233560090703 
+            text = "DONE" 

@@ -1,0 +1,226 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 12.452108843537415 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 12.452108843537415 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.733995250930561 
+            text = "yaldo)" 
+        intervals [2]:
+            xmin = 1.733995250930561 
+            xmax = 2.759880952380952 
+            text = "d)okEd,n*e)." 
+        intervals [3]:
+            xmin = 2.759880952380952 
+            xmax = 4.121221858645005 
+            text = ")aykano)" 
+        intervals [4]:
+            xmin = 4.121221858645005 
+            xmax = 4.675901796616082 
+            text = "mE$kxyin" 
+        intervals [5]:
+            xmin = 4.675901796616082 
+            xmax = 4.938066893424036 
+            text = ")n_twOn" 
+        intervals [6]:
+            xmin = 4.938066893424036 
+            xmax = 5.626139031576349 
+            text = "To*b,ot,o)" 
+        intervals [7]:
+            xmin = 5.626139031576349 
+            xmax = 6.545701109272538 
+            text = "lammalolwu" 
+        intervals [8]:
+            xmin = 6.545701109272538 
+            xmax = 7.14834640912326 
+            text = "db,yi$*e)" 
+        intervals [9]:
+            xmin = 7.14834640912326 
+            xmax = 8.099149659863945 
+            text = ")n_twOn." 
+        intervals [10]:
+            xmin = 8.099149659863945 
+            xmax = 9.387642820569088 
+            text = "mEn" 
+        intervals [11]:
+            xmin = 9.387642820569088 
+            xmax = 10.091812130177514 
+            text = "tawtoray" 
+        intervals [12]:
+            xmin = 10.091812130177514 
+            xmax = 10.521498905478497 
+            text = "lEbo)" 
+        intervals [13]:
+            xmin = 10.521498905478497 
+            xmax = 10.925223144625082 
+            text = "geyr" 
+        intervals [14]:
+            xmin = 10.925223144625082 
+            xmax = 11.427160241874528 
+            text = "mmalEl" 
+        intervals [15]:
+            xmin = 11.427160241874528 
+            xmax = 12.452108843537415 
+            text = "pwumo)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 12.452108843537415 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.733995250930561 
+            text = "ܝܲܠܕܵܐ" 
+        intervals [2]:
+            xmin = 1.733995250930561 
+            xmax = 2.759880952380952 
+            text = "ܕܐܵܟܸܕ݂ܢܹ̈ܐ." 
+        intervals [3]:
+            xmin = 2.759880952380952 
+            xmax = 4.121221858645005 
+            text = "ܐܲܝܟܲܢܵܐ" 
+        intervals [4]:
+            xmin = 4.121221858645005 
+            xmax = 4.675901796616082 
+            text = "ܡܸܫܟܚܝܼܢ" 
+        intervals [5]:
+            xmin = 4.675901796616082 
+            xmax = 4.938066893424036 
+            text = "ܐܢ݇ܬܘܿܢ" 
+        intervals [6]:
+            xmin = 4.938066893424036 
+            xmax = 5.626139031576349 
+            text = "ܛܵ̈ܒ݂ܵܬ݂ܵܐ" 
+        intervals [7]:
+            xmin = 5.626139031576349 
+            xmax = 6.545701109272538 
+            text = "ܠܲܡܡܲܠܵܠܘܼ" 
+        intervals [8]:
+            xmin = 6.545701109272538 
+            xmax = 7.14834640912326 
+            text = "ܕܒ݂ܝܼܫܹ̈ܐ" 
+        intervals [9]:
+            xmin = 7.14834640912326 
+            xmax = 8.099149659863945 
+            text = "ܐܢ݇ܬܘܿܢ." 
+        intervals [10]:
+            xmin = 8.099149659863945 
+            xmax = 9.387642820569088 
+            text = "ܡܸܢ" 
+        intervals [11]:
+            xmin = 9.387642820569088 
+            xmax = 10.091812130177514 
+            text = "ܬܲܘܬܵܪܲܝ" 
+        intervals [12]:
+            xmin = 10.091812130177514 
+            xmax = 10.521498905478497 
+            text = "ܠܸܒܵܐ" 
+        intervals [13]:
+            xmin = 10.521498905478497 
+            xmax = 10.925223144625082 
+            text = "ܓܹܝܪ" 
+        intervals [14]:
+            xmin = 10.925223144625082 
+            xmax = 11.427160241874528 
+            text = "ܡܡܲܠܸܠ" 
+        intervals [15]:
+            xmin = 11.427160241874528 
+            xmax = 12.452108843537415 
+            text = "ܦܘܼܡܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 12.452108843537415 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.733995250930561 
+            text = "generation" 
+        intervals [2]:
+            xmin = 1.733995250930561 
+            xmax = 2.759880952380952 
+            text = "of vipers" 
+        intervals [3]:
+            xmin = 2.759880952380952 
+            xmax = 4.121221858645005 
+            text = "how" 
+        intervals [4]:
+            xmin = 4.121221858645005 
+            xmax = 4.675901796616082 
+            text = "are able" 
+        intervals [5]:
+            xmin = 4.675901796616082 
+            xmax = 4.938066893424036 
+            text = "you" 
+        intervals [6]:
+            xmin = 4.938066893424036 
+            xmax = 5.626139031576349 
+            text = "good things" 
+        intervals [7]:
+            xmin = 5.626139031576349 
+            xmax = 6.545701109272538 
+            text = "to speak" 
+        intervals [8]:
+            xmin = 6.545701109272538 
+            xmax = 7.14834640912326 
+            text = "that evil" 
+        intervals [9]:
+            xmin = 7.14834640912326 
+            xmax = 8.099149659863945 
+            text = "you are" 
+        intervals [10]:
+            xmin = 8.099149659863945 
+            xmax = 9.387642820569088 
+            text = "from" 
+        intervals [11]:
+            xmin = 9.387642820569088 
+            xmax = 10.091812130177514 
+            text = "the fullness of" 
+        intervals [12]:
+            xmin = 10.091812130177514 
+            xmax = 10.521498905478497 
+            text = "the heart" 
+        intervals [13]:
+            xmin = 10.521498905478497 
+            xmax = 10.925223144625082 
+            text = "for" 
+        intervals [14]:
+            xmin = 10.925223144625082 
+            xmax = 11.427160241874528 
+            text = "speaks" 
+        intervals [15]:
+            xmin = 11.427160241874528 
+            xmax = 12.452108843537415 
+            text = "the mouth" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 12.452108843537415 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 12.452108843537415 
+            text = "34" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 12.452108843537415 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 12.452108843537415 
+            text = "DONE" 

@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.881224489795919 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 8.881224489795919 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.790147271029624 
+            text = "hoydeyn" 
+        intervals [2]:
+            xmin = 1.790147271029624 
+            xmax = 2.258672263724849 
+            text = ")Emar" 
+        intervals [3]:
+            xmin = 2.258672263724849 
+            xmax = 2.7820356009070295 
+            text = "lhow" 
+        intervals [4]:
+            xmin = 2.7820356009070295 
+            xmax = 3.5726530612244893 
+            text = "gab,ro):" 
+        intervals [5]:
+            xmin = 3.5726530612244893 
+            xmax = 4.142321023647554 
+            text = "p$wOT" 
+        intervals [6]:
+            xmin = 4.142321023647554 
+            xmax = 5.068503401360545 
+            text = ")yid,ok,." 
+        intervals [7]:
+            xmin = 5.068503401360545 
+            xmax = 6.287566893424036 
+            text = "wap$aT" 
+        intervals [8]:
+            xmin = 6.287566893424036 
+            xmax = 6.803913314089236 
+            text = ")yideh." 
+        intervals [9]:
+            xmin = 6.803913314089236 
+            xmax = 7.44812507459124 
+            text = "wtEqnat," 
+        intervals [10]:
+            xmin = 7.44812507459124 
+            xmax = 7.775526774812489 
+            text = ")ayk," 
+        intervals [11]:
+            xmin = 7.775526774812489 
+            xmax = 8.881224489795919 
+            text = "xbart,oh`." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 8.881224489795919 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.790147271029624 
+            text = "ܗܵܝܕܹܝܢ" 
+        intervals [2]:
+            xmin = 1.790147271029624 
+            xmax = 2.258672263724849 
+            text = "ܐܸܡܲܪ" 
+        intervals [3]:
+            xmin = 2.258672263724849 
+            xmax = 2.7820356009070295 
+            text = "ܠܗܵܘ" 
+        intervals [4]:
+            xmin = 2.7820356009070295 
+            xmax = 3.5726530612244893 
+            text = "ܓܲܒ݂ܪܵܐ:" 
+        intervals [5]:
+            xmin = 3.5726530612244893 
+            xmax = 4.142321023647554 
+            text = "ܦܫܘܿܛ" 
+        intervals [6]:
+            xmin = 4.142321023647554 
+            xmax = 5.068503401360545 
+            text = "ܐܝܼܕ݂ܵܟ݂." 
+        intervals [7]:
+            xmin = 5.068503401360545 
+            xmax = 6.287566893424036 
+            text = "ܘܲܦܫܲܛ" 
+        intervals [8]:
+            xmin = 6.287566893424036 
+            xmax = 6.803913314089236 
+            text = "ܐܝܼܕܹܗ." 
+        intervals [9]:
+            xmin = 6.803913314089236 
+            xmax = 7.44812507459124 
+            text = "ܘܬܸܩܢܲܬ݂" 
+        intervals [10]:
+            xmin = 7.44812507459124 
+            xmax = 7.775526774812489 
+            text = "ܐܲܝܟ݂" 
+        intervals [11]:
+            xmin = 7.775526774812489 
+            xmax = 8.881224489795919 
+            text = "ܚܒܲܪܬ݂ܵܗ̇." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.881224489795919 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.790147271029624 
+            text = "/then" 
+        intervals [2]:
+            xmin = 1.790147271029624 
+            xmax = 2.258672263724849 
+            text = "he said" 
+        intervals [3]:
+            xmin = 2.258672263724849 
+            xmax = 2.7820356009070295 
+            text = "to that" 
+        intervals [4]:
+            xmin = 2.7820356009070295 
+            xmax = 3.5726530612244893 
+            text = "man" 
+        intervals [5]:
+            xmin = 3.5726530612244893 
+            xmax = 4.142321023647554 
+            text = "\stretch out" 
+        intervals [6]:
+            xmin = 4.142321023647554 
+            xmax = 5.068503401360545 
+            text = "your hand" 
+        intervals [7]:
+            xmin = 5.068503401360545 
+            xmax = 6.287566893424036 
+            text = "/and he stretched out" 
+        intervals [8]:
+            xmin = 6.287566893424036 
+            xmax = 6.803913314089236 
+            text = "his hand" 
+        intervals [9]:
+            xmin = 6.803913314089236 
+            xmax = 7.44812507459124 
+            text = "and it was restored" 
+        intervals [10]:
+            xmin = 7.44812507459124 
+            xmax = 7.775526774812489 
+            text = "like" 
+        intervals [11]:
+            xmin = 7.775526774812489 
+            xmax = 8.881224489795919 
+            text = "the other" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 8.881224489795919 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.881224489795919 
+            text = "13" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 8.881224489795919 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.881224489795919 
+            text = "DONE" 

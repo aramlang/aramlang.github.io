@@ -1,0 +1,94 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.5699773242630384 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 3.5699773242630384 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5196778204661254 
+            text = "wak,)o)" 
+        intervals [2]:
+            xmin = 1.5196778204661254 
+            xmax = 1.9772675736961451 
+            text = "bhwOn." 
+        intervals [3]:
+            xmin = 1.9772675736961451 
+            xmax = 2.2959042505891247 
+            text = "dlo)" 
+        intervals [4]:
+            xmin = 2.2959042505891247 
+            xmax = 3.5699773242630384 
+            text = "nEg,lwOnoyhy." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 3.5699773242630384 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5196778204661254 
+            text = "ܘܲܟ݂ܐܵܐ" 
+        intervals [2]:
+            xmin = 1.5196778204661254 
+            xmax = 1.9772675736961451 
+            text = "ܒܗܘܿܢ." 
+        intervals [3]:
+            xmin = 1.9772675736961451 
+            xmax = 2.2959042505891247 
+            text = "ܕܠܵܐ" 
+        intervals [4]:
+            xmin = 2.2959042505891247 
+            xmax = 3.5699773242630384 
+            text = "ܢܸܓ݂ܠܘܿܢܵܝܗܝ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 3.5699773242630384 
+        intervals: size = 4 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5196778204661254 
+            text = "and he charged" 
+        intervals [2]:
+            xmin = 1.5196778204661254 
+            xmax = 1.9772675736961451 
+            text = "them" 
+        intervals [3]:
+            xmin = 1.9772675736961451 
+            xmax = 2.2959042505891247 
+            text = "that not" 
+        intervals [4]:
+            xmin = 2.2959042505891247 
+            xmax = 3.5699773242630384 
+            text = "they should reveal him" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 3.5699773242630384 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.5699773242630384 
+            text = "16" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 3.5699773242630384 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.5699773242630384 
+            text = "DONE" 

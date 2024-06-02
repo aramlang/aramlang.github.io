@@ -1,0 +1,130 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 6.53092970521542 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 6.53092970521542 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.409889181479043 
+            text = "wanpaqw" 
+        intervals [2]:
+            xmin = 2.409889181479043 
+            xmax = 3.060749297052154 
+            text = "p*ryi$e):" 
+        intervals [3]:
+            xmin = 3.060749297052154 
+            xmax = 3.5364287256852855 
+            text = "wmElko)" 
+        intervals [4]:
+            xmin = 3.5364287256852855 
+            xmax = 3.9979456654456653 
+            text = "nsab,w" 
+        intervals [5]:
+            xmin = 3.9979456654456653 
+            xmax = 4.511911881031482 
+            text = "(lowhy." 
+        intervals [6]:
+            xmin = 4.511911881031482 
+            xmax = 4.73249387755102 
+            text = ")ayk," 
+        intervals [7]:
+            xmin = 4.73249387755102 
+            xmax = 6.53092970521542 
+            text = "dnowbd,wunoyhy." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 6.53092970521542 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.409889181479043 
+            text = "ܘܲܢܦܲܩܘ" 
+        intervals [2]:
+            xmin = 2.409889181479043 
+            xmax = 3.060749297052154 
+            text = "ܦ̈ܪܝܼܫܹܐ:" 
+        intervals [3]:
+            xmin = 3.060749297052154 
+            xmax = 3.5364287256852855 
+            text = "ܘܡܸܠܟܵܐ" 
+        intervals [4]:
+            xmin = 3.5364287256852855 
+            xmax = 3.9979456654456653 
+            text = "ܢܣܲܒ݂ܘ" 
+        intervals [5]:
+            xmin = 3.9979456654456653 
+            xmax = 4.511911881031482 
+            text = "ܥܠܵܘܗܝ." 
+        intervals [6]:
+            xmin = 4.511911881031482 
+            xmax = 4.73249387755102 
+            text = "ܐܲܝܟ݂" 
+        intervals [7]:
+            xmin = 4.73249387755102 
+            xmax = 6.53092970521542 
+            text = "ܕܢܵܘܒܕ݂ܘܼܢܵܝܗܝ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 6.53092970521542 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.409889181479043 
+            text = "and went out" 
+        intervals [2]:
+            xmin = 2.409889181479043 
+            xmax = 3.060749297052154 
+            text = "the Pharisees" 
+        intervals [3]:
+            xmin = 3.060749297052154 
+            xmax = 3.5364287256852855 
+            text = "and counsel" 
+        intervals [4]:
+            xmin = 3.5364287256852855 
+            xmax = 3.9979456654456653 
+            text = "they took" 
+        intervals [5]:
+            xmin = 3.9979456654456653 
+            xmax = 4.511911881031482 
+            text = "about him" 
+        intervals [6]:
+            xmin = 4.511911881031482 
+            xmax = 4.73249387755102 
+            text = "so" 
+        intervals [7]:
+            xmin = 4.73249387755102 
+            xmax = 6.53092970521542 
+            text = "that they might destroy him" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 6.53092970521542 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.53092970521542 
+            text = "14" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 6.53092970521542 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.53092970521542 
+            text = "DONE" 

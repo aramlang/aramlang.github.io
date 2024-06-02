@@ -1,0 +1,130 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 4.894784580498866 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 4.894784580498866 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5567821831810313 
+            text = "dnEt,male)" 
+        intervals [2]:
+            xmin = 1.5567821831810313 
+            xmax = 2.084148400100781 
+            text = "mEdEm" 
+        intervals [3]:
+            xmin = 2.084148400100781 
+            xmax = 2.681429897227708 
+            text = "d)Et,)mar" 
+        intervals [4]:
+            xmin = 2.681429897227708 
+            xmax = 2.9529029142521206 
+            text = "byad," 
+        intervals [5]:
+            xmin = 2.9529029142521206 
+            xmax = 3.624109416660437 
+            text = ")e$(yo)" 
+        intervals [6]:
+            xmin = 3.624109416660437 
+            xmax = 4.119503968253968 
+            text = "nb,yio)" 
+        intervals [7]:
+            xmin = 4.119503968253968 
+            xmax = 4.894784580498866 
+            text = "d)Emar:" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 4.894784580498866 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5567821831810313 
+            text = "ܕܢܸܬ݂ܡܲܠܹܐ" 
+        intervals [2]:
+            xmin = 1.5567821831810313 
+            xmax = 2.084148400100781 
+            text = "ܡܸܕܸܡ" 
+        intervals [3]:
+            xmin = 2.084148400100781 
+            xmax = 2.681429897227708 
+            text = "ܕܐܸܬ݂ܐܡܲܪ" 
+        intervals [4]:
+            xmin = 2.681429897227708 
+            xmax = 2.9529029142521206 
+            text = "ܒܝܲܕ݂" 
+        intervals [5]:
+            xmin = 2.9529029142521206 
+            xmax = 3.624109416660437 
+            text = "ܐܹܫܥܝܵܐ" 
+        intervals [6]:
+            xmin = 3.624109416660437 
+            xmax = 4.119503968253968 
+            text = "ܢܒ݂ܝܼܵܐ" 
+        intervals [7]:
+            xmin = 4.119503968253968 
+            xmax = 4.894784580498866 
+            text = "ܕܐܸܡܲܪ:" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 4.894784580498866 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5567821831810313 
+            text = "that might be fulfilled" 
+        intervals [2]:
+            xmin = 1.5567821831810313 
+            xmax = 2.084148400100781 
+            text = "the thing" 
+        intervals [3]:
+            xmin = 2.084148400100781 
+            xmax = 2.681429897227708 
+            text = "which was spoken of" 
+        intervals [4]:
+            xmin = 2.681429897227708 
+            xmax = 2.9529029142521206 
+            text = "through" 
+        intervals [5]:
+            xmin = 2.9529029142521206 
+            xmax = 3.624109416660437 
+            text = "Eshaya" 
+        intervals [6]:
+            xmin = 3.624109416660437 
+            xmax = 4.119503968253968 
+            text = "the prophet" 
+        intervals [7]:
+            xmin = 4.119503968253968 
+            xmax = 4.894784580498866 
+            text = "who said" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 4.894784580498866 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.894784580498866 
+            text = "17" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 4.894784580498866 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.894784580498866 
+            text = "DONE" 
