@@ -1,0 +1,106 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.5984580498866214 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 3.5984580498866214 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.765687074829932 
+            text = "man" 
+        intervals [2]:
+            xmin = 0.765687074829932 
+            xmax = 1.2217101594736255 
+            text = "d)yt, leh" 
+        intervals [3]:
+            xmin = 1.2217101594736255 
+            xmax = 1.649017607042817 
+            text = ")Ed,n*e)" 
+        intervals [4]:
+            xmin = 1.649017607042817 
+            xmax = 2.4551436130007556 
+            text = "dnE$ma(" 
+        intervals [5]:
+            xmin = 2.4551436130007556 
+            xmax = 3.5984580498866214 
+            text = "nE$ma(." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 3.5984580498866214 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.765687074829932 
+            text = "ܡܲܢ" 
+        intervals [2]:
+            xmin = 0.765687074829932 
+            xmax = 1.2217101594736255 
+            text = "ܕܐܝܬ݂ ܠܹܗ" 
+        intervals [3]:
+            xmin = 1.2217101594736255 
+            xmax = 1.649017607042817 
+            text = "ܐܸܕ݂ܢܹ̈ܐ" 
+        intervals [4]:
+            xmin = 1.649017607042817 
+            xmax = 2.4551436130007556 
+            text = "ܕܢܸܫܡܲܥ" 
+        intervals [5]:
+            xmin = 2.4551436130007556 
+            xmax = 3.5984580498866214 
+            text = "ܢܸܫܡܲܥ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 3.5984580498866214 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.765687074829932 
+            text = "he" 
+        intervals [2]:
+            xmin = 0.765687074829932 
+            xmax = 1.2217101594736255 
+            text = "who has" 
+        intervals [3]:
+            xmin = 1.2217101594736255 
+            xmax = 1.649017607042817 
+            text = "ears" 
+        intervals [4]:
+            xmin = 1.649017607042817 
+            xmax = 2.4551436130007556 
+            text = "to hear" 
+        intervals [5]:
+            xmin = 2.4551436130007556 
+            xmax = 3.5984580498866214 
+            text = "let him hear" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 3.5984580498866214 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.5984580498866214 
+            text = "15" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 3.5984580498866214 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.5984580498866214 
+            text = "DONE" 

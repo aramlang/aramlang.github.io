@@ -1,0 +1,130 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 7.759954648526077 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 7.759954648526077 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.8051062520246193 
+            text = "nyiry" 
+        intervals [2]:
+            xmin = 2.8051062520246193 
+            xmax = 3.3848876072167995 
+            text = "geyr" 
+        intervals [3]:
+            xmin = 3.3848876072167995 
+            xmax = 4.057877936418309 
+            text = "basyim" 
+        intervals [4]:
+            xmin = 4.057877936418309 
+            xmax = 4.638532879818594 
+            text = "h_wu:" 
+        intervals [5]:
+            xmin = 4.638532879818594 
+            xmax = 6.055679768203578 
+            text = "wmowbaly" 
+        intervals [6]:
+            xmin = 6.055679768203578 
+            xmax = 7.02804239552964 
+            text = "qalyilo)" 
+        intervals [7]:
+            xmin = 7.02804239552964 
+            xmax = 7.759954648526077 
+            text = "hy." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 7.759954648526077 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.8051062520246193 
+            text = "ܢܝܼܪܝ" 
+        intervals [2]:
+            xmin = 2.8051062520246193 
+            xmax = 3.3848876072167995 
+            text = "ܓܹܝܪ" 
+        intervals [3]:
+            xmin = 3.3848876072167995 
+            xmax = 4.057877936418309 
+            text = "ܒܲܣܝܼܡ" 
+        intervals [4]:
+            xmin = 4.057877936418309 
+            xmax = 4.638532879818594 
+            text = "ܗ݇ܘܼ:" 
+        intervals [5]:
+            xmin = 4.638532879818594 
+            xmax = 6.055679768203578 
+            text = "ܘܡܵܘܒܲܠܝ" 
+        intervals [6]:
+            xmin = 6.055679768203578 
+            xmax = 7.02804239552964 
+            text = "ܩܲܠܝܼܠܵܐ" 
+        intervals [7]:
+            xmin = 7.02804239552964 
+            xmax = 7.759954648526077 
+            text = "ܗܝ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 7.759954648526077 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.8051062520246193 
+            text = "my yoke" 
+        intervals [2]:
+            xmin = 2.8051062520246193 
+            xmax = 3.3848876072167995 
+            text = "for" 
+        intervals [3]:
+            xmin = 3.3848876072167995 
+            xmax = 4.057877936418309 
+            text = "pleasant" 
+        intervals [4]:
+            xmin = 4.057877936418309 
+            xmax = 4.638532879818594 
+            text = "is" 
+        intervals [5]:
+            xmin = 4.638532879818594 
+            xmax = 6.055679768203578 
+            text = "and my burden" 
+        intervals [6]:
+            xmin = 6.055679768203578 
+            xmax = 7.02804239552964 
+            text = "light" 
+        intervals [7]:
+            xmin = 7.02804239552964 
+            xmax = 7.759954648526077 
+            text = "is" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 7.759954648526077 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.759954648526077 
+            text = "30" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 7.759954648526077 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.759954648526077 
+            text = "DONE" 

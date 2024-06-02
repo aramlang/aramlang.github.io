@@ -1,0 +1,190 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 13.747301587301587 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 13.747301587301587 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.607738594931387 
+            text = "s*mayo)" 
+        intervals [2]:
+            xmin = 1.607738594931387 
+            xmax = 2.5512188208616777 
+            text = "xoze`yn." 
+        intervals [3]:
+            xmin = 2.5512188208616777 
+            xmax = 4.024916839514768 
+            text = "waxg,yi*re)." 
+        intervals [4]:
+            xmin = 4.024916839514768 
+            xmax = 5.085249433106576 
+            text = "mhalk,yin." 
+        intervals [5]:
+            xmin = 5.085249433106576 
+            xmax = 6.245675695354594 
+            text = "wga*rbe)." 
+        intervals [6]:
+            xmin = 6.245675695354594 
+            xmax = 7.3748015873015875 
+            text = "mEt'dakyin." 
+        intervals [7]:
+            xmin = 7.3748015873015875 
+            xmax = 8.559582804873362 
+            text = "wxa*r$e)." 
+        intervals [8]:
+            xmin = 8.559582804873362 
+            xmax = 9.498431594860167 
+            text = "$om(yin." 
+        intervals [9]:
+            xmin = 9.498431594860167 
+            xmax = 10.624481420708987 
+            text = "wmyi*te)." 
+        intervals [10]:
+            xmin = 10.624481420708987 
+            xmax = 11.62231670445956 
+            text = "qoymyin." 
+        intervals [11]:
+            xmin = 11.62231670445956 
+            xmax = 12.658396507140868 
+            text = "wmEsken*e)." 
+        intervals [12]:
+            xmin = 12.658396507140868 
+            xmax = 13.747301587301587 
+            text = "mEstabryin." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 13.747301587301587 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.607738594931387 
+            text = "ܣ̈ܡܲܝܵܐ" 
+        intervals [2]:
+            xmin = 1.607738594931387 
+            xmax = 2.5512188208616777 
+            text = "ܚܵܙܹ̇ܝܢ." 
+        intervals [3]:
+            xmin = 2.5512188208616777 
+            xmax = 4.024916839514768 
+            text = "ܘܲܚܓ݂ܝܼ̈ܪܹܐ." 
+        intervals [4]:
+            xmin = 4.024916839514768 
+            xmax = 5.085249433106576 
+            text = "ܡܗܲܠܟ݂ܝܼܢ." 
+        intervals [5]:
+            xmin = 5.085249433106576 
+            xmax = 6.245675695354594 
+            text = "ܘܓܲ̈ܪܒܹܐ." 
+        intervals [6]:
+            xmin = 6.245675695354594 
+            xmax = 7.3748015873015875 
+            text = "ܡܸܬ݁ܕܲܟܝܼܢ." 
+        intervals [7]:
+            xmin = 7.3748015873015875 
+            xmax = 8.559582804873362 
+            text = "ܘܚܲ̈ܪܫܹܐ." 
+        intervals [8]:
+            xmin = 8.559582804873362 
+            xmax = 9.498431594860167 
+            text = "ܫܵܡܥܝܼܢ." 
+        intervals [9]:
+            xmin = 9.498431594860167 
+            xmax = 10.624481420708987 
+            text = "ܘܡܝܼ̈ܬܹܐ." 
+        intervals [10]:
+            xmin = 10.624481420708987 
+            xmax = 11.62231670445956 
+            text = "ܩܵܝܡܝܼܢ." 
+        intervals [11]:
+            xmin = 11.62231670445956 
+            xmax = 12.658396507140868 
+            text = "ܘܡܸܣܟܹܢܹ̈ܐ." 
+        intervals [12]:
+            xmin = 12.658396507140868 
+            xmax = 13.747301587301587 
+            text = "ܡܸܣܬܲܒܪܝܼܢ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 13.747301587301587 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.607738594931387 
+            text = "the blind" 
+        intervals [2]:
+            xmin = 1.607738594931387 
+            xmax = 2.5512188208616777 
+            text = "are seeing" 
+        intervals [3]:
+            xmin = 2.5512188208616777 
+            xmax = 4.024916839514768 
+            text = "and the lame" 
+        intervals [4]:
+            xmin = 4.024916839514768 
+            xmax = 5.085249433106576 
+            text = "are walking" 
+        intervals [5]:
+            xmin = 5.085249433106576 
+            xmax = 6.245675695354594 
+            text = "and the lepers" 
+        intervals [6]:
+            xmin = 6.245675695354594 
+            xmax = 7.3748015873015875 
+            text = "are cleansed" 
+        intervals [7]:
+            xmin = 7.3748015873015875 
+            xmax = 8.559582804873362 
+            text = "and the deaf" 
+        intervals [8]:
+            xmin = 8.559582804873362 
+            xmax = 9.498431594860167 
+            text = "are hearing" 
+        intervals [9]:
+            xmin = 9.498431594860167 
+            xmax = 10.624481420708987 
+            text = "and the dead" 
+        intervals [10]:
+            xmin = 10.624481420708987 
+            xmax = 11.62231670445956 
+            text = "are rising" 
+        intervals [11]:
+            xmin = 11.62231670445956 
+            xmax = 12.658396507140868 
+            text = "and the poor" 
+        intervals [12]:
+            xmin = 12.658396507140868 
+            xmax = 13.747301587301587 
+            text = "are given hope" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 13.747301587301587 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 13.747301587301587 
+            text = "05" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 13.747301587301587 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 13.747301587301587 
+            text = "DONE" 

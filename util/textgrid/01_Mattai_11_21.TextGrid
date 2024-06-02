@@ -1,0 +1,298 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 14.524195011337868 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 14.524195011337868 
+        intervals: size = 21 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9257592714505157 
+            text = "w)omar" 
+        intervals [2]:
+            xmin = 0.9257592714505157 
+            xmax = 1.3882766439909298 
+            text = "h_wo):" 
+        intervals [3]:
+            xmin = 1.3882766439909298 
+            xmax = 2.477150786240422 
+            text = "woy" 
+        intervals [4]:
+            xmin = 2.477150786240422 
+            xmax = 2.784273116654069 
+            text = "lek,y" 
+        intervals [5]:
+            xmin = 2.784273116654069 
+            xmax = 3.7140491828915474 
+            text = "kwurzyin+" 
+        intervals [6]:
+            xmin = 3.7140491828915474 
+            xmax = 4.811807956979088 
+            text = "woy" 
+        intervals [7]:
+            xmin = 4.811807956979088 
+            xmax = 5.080412042009787 
+            text = "lek,y" 
+        intervals [8]:
+            xmin = 5.080412042009787 
+            xmax = 6.461530612244898 
+            text = "beyt, cayod,o)+" 
+        intervals [9]:
+            xmin = 6.461530612244898 
+            xmax = 7.668600551331644 
+            text = "d)Elwu" 
+        intervals [10]:
+            xmin = 7.668600551331644 
+            xmax = 8.1072945867385 
+            text = "bcwur" 
+        intervals [11]:
+            xmin = 8.1072945867385 
+            xmax = 8.78529976933302 
+            text = "wab,caydon" 
+        intervals [12]:
+            xmin = 8.78529976933302 
+            xmax = 9.127101682778374 
+            text = "hwow" 
+        intervals [13]:
+            xmin = 9.127101682778374 
+            xmax = 9.613329193100462 
+            text = "xay*)le" 
+        intervals [14]:
+            xmin = 9.613329193100462 
+            xmax = 10.004240527128726 
+            text = ")ayleyn" 
+        intervals [15]:
+            xmin = 10.004240527128726 
+            xmax = 10.462342815914244 
+            text = "dahwow" 
+        intervals [16]:
+            xmin = 10.462342815914244 
+            xmax = 11.139096749811035 
+            text = "bkeyn:" 
+        intervals [17]:
+            xmin = 11.139096749811035 
+            xmax = 12.133739229024943 
+            text = "kbar" 
+        intervals [18]:
+            xmin = 12.133739229024943 
+            xmax = 12.412481791833732 
+            text = "deyn" 
+        intervals [19]:
+            xmin = 12.412481791833732 
+            xmax = 12.810073318216176 
+            text = "bsaq*e)" 
+        intervals [20]:
+            xmin = 12.810073318216176 
+            xmax = 13.565386747291509 
+            text = "wab,qETmo)" 
+        intervals [21]:
+            xmin = 13.565386747291509 
+            xmax = 14.524195011337868 
+            text = "tob,w." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 14.524195011337868 
+        intervals: size = 21 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9257592714505157 
+            text = "ܘܐܵܡܲܪ" 
+        intervals [2]:
+            xmin = 0.9257592714505157 
+            xmax = 1.3882766439909298 
+            text = "ܗ݇ܘܵܐ:" 
+        intervals [3]:
+            xmin = 1.3882766439909298 
+            xmax = 2.477150786240422 
+            text = "ܘܵܝ" 
+        intervals [4]:
+            xmin = 2.477150786240422 
+            xmax = 2.784273116654069 
+            text = "ܠܹܟ݂ܝ" 
+        intervals [5]:
+            xmin = 2.784273116654069 
+            xmax = 3.7140491828915474 
+            text = "ܟܘܼܪܙܝܼܢ܅" 
+        intervals [6]:
+            xmin = 3.7140491828915474 
+            xmax = 4.811807956979088 
+            text = "ܘܵܝ" 
+        intervals [7]:
+            xmin = 4.811807956979088 
+            xmax = 5.080412042009787 
+            text = "ܠܹܟ݂ܝ" 
+        intervals [8]:
+            xmin = 5.080412042009787 
+            xmax = 6.461530612244898 
+            text = "ܒܹܝܬ݂ ܨܲܝܵܕ݂ܵܐ܅" 
+        intervals [9]:
+            xmin = 6.461530612244898 
+            xmax = 7.668600551331644 
+            text = "ܕܐܸܠܘܼ" 
+        intervals [10]:
+            xmin = 7.668600551331644 
+            xmax = 8.1072945867385 
+            text = "ܒܨܘܼܪ" 
+        intervals [11]:
+            xmin = 8.1072945867385 
+            xmax = 8.78529976933302 
+            text = "ܘܲܒ݂ܨܲܝܕܵܢ" 
+        intervals [12]:
+            xmin = 8.78529976933302 
+            xmax = 9.127101682778374 
+            text = "ܗܘܵܘ" 
+        intervals [13]:
+            xmin = 9.127101682778374 
+            xmax = 9.613329193100462 
+            text = "ܚܲܝ̈ܐܠܹ" 
+        intervals [14]:
+            xmin = 9.613329193100462 
+            xmax = 10.004240527128726 
+            text = "ܐܲܝܠܹܝܢ" 
+        intervals [15]:
+            xmin = 10.004240527128726 
+            xmax = 10.462342815914244 
+            text = "ܕܲܗܘܵܘ" 
+        intervals [16]:
+            xmin = 10.462342815914244 
+            xmax = 11.139096749811035 
+            text = "ܒܟܹܝܢ:" 
+        intervals [17]:
+            xmin = 11.139096749811035 
+            xmax = 12.133739229024943 
+            text = "ܟܒܲܪ" 
+        intervals [18]:
+            xmin = 12.133739229024943 
+            xmax = 12.412481791833732 
+            text = "ܕܹܝܢ" 
+        intervals [19]:
+            xmin = 12.412481791833732 
+            xmax = 12.810073318216176 
+            text = "ܒܣܲܩܹ̈ܐ" 
+        intervals [20]:
+            xmin = 12.810073318216176 
+            xmax = 13.565386747291509 
+            text = "ܘܲܒ݂ܩܸܛܡܵܐ" 
+        intervals [21]:
+            xmin = 13.565386747291509 
+            xmax = 14.524195011337868 
+            text = "ܬܵܒ݂ܘ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 14.524195011337868 
+        intervals: size = 21 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.9257592714505157 
+            text = "and he say" 
+        intervals [2]:
+            xmin = 0.9257592714505157 
+            xmax = 1.3882766439909298 
+            text = "would" 
+        intervals [3]:
+            xmin = 1.3882766439909298 
+            xmax = 2.477150786240422 
+            text = "\woe" 
+        intervals [4]:
+            xmin = 2.477150786240422 
+            xmax = 2.784273116654069 
+            text = "unto you" 
+        intervals [5]:
+            xmin = 2.784273116654069 
+            xmax = 3.7140491828915474 
+            text = "Khorzain" 
+        intervals [6]:
+            xmin = 3.7140491828915474 
+            xmax = 4.811807956979088 
+            text = "woe" 
+        intervals [7]:
+            xmin = 4.811807956979088 
+            xmax = 5.080412042009787 
+            text = "unto you" 
+        intervals [8]:
+            xmin = 5.080412042009787 
+            xmax = 6.461530612244898 
+            text = "Beth-Saida" 
+        intervals [9]:
+            xmin = 6.461530612244898 
+            xmax = 7.668600551331644 
+            text = "for if" 
+        intervals [10]:
+            xmin = 7.668600551331644 
+            xmax = 8.1072945867385 
+            text = "in Tsur" 
+        intervals [11]:
+            xmin = 8.1072945867385 
+            xmax = 8.78529976933302 
+            text = "and in Sidan" 
+        intervals [12]:
+            xmin = 8.78529976933302 
+            xmax = 9.127101682778374 
+            text = "had been" 
+        intervals [13]:
+            xmin = 9.127101682778374 
+            xmax = 9.613329193100462 
+            text = "the miracles" 
+        intervals [14]:
+            xmin = 9.613329193100462 
+            xmax = 10.004240527128726 
+            text = "those" 
+        intervals [15]:
+            xmin = 10.004240527128726 
+            xmax = 10.462342815914244 
+            text = "that had been" 
+        intervals [16]:
+            xmin = 10.462342815914244 
+            xmax = 11.139096749811035 
+            text = "in you" 
+        intervals [17]:
+            xmin = 11.139096749811035 
+            xmax = 12.133739229024943 
+            text = "perhaps" 
+        intervals [18]:
+            xmin = 12.133739229024943 
+            xmax = 12.412481791833732 
+            text = "<and>" 
+        intervals [19]:
+            xmin = 12.412481791833732 
+            xmax = 12.810073318216176 
+            text = "in sackcloth" 
+        intervals [20]:
+            xmin = 12.810073318216176 
+            xmax = 13.565386747291509 
+            text = "and in ashes" 
+        intervals [21]:
+            xmin = 13.565386747291509 
+            xmax = 14.524195011337868 
+            text = "they [would have] repented" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 14.524195011337868 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.524195011337868 
+            text = "21" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 14.524195011337868 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 14.524195011337868 
+            text = "DONE" 

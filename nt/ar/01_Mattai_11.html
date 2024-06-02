@@ -9,10 +9,13 @@
 </head>
 
 <body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="spinner"></div>
+  </div>
   <header class="sticky hrow">
     <div class="hcol">
       <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
-        The Preaching of Mattai - IN PROGRESS
+        The Preaching of Mattai
       </div>
       <div class="gridContainer">
         <div>
@@ -197,13 +200,14 @@
             <option value="9" title="Go To Chapter 9">9</option>
             <option value="10" title="Go To Chapter 10">10</option>
             <option value="11" title="Chapter 11" selected>11</option>
+            <option value="12" title="Go To Chapter 12">12</option>
           </select>&nbsp;&nbsp;
         </span>
         <a href="01_Mattai_12.html" title="Go To Chapter 12">Next&nbsp;&gt;</a>
 
         <a href="./index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
       </div>
-      <div class="srow smaller" style="display:none">
+      <div class="srow smaller">
         <div title="Select Playback Speed">
           <span class="label">
             <label for="speed">Speed</label>
@@ -239,7 +243,7 @@
       <div class="center">
       </div>
     </div>
-    <div lang="syc" class="hcol syr t" style="display:none">
+    <div lang="syc" class="hcol syr t">
       <div class="" title="The preaching of Mattai">
         <span id="book"></span>
       </div>
@@ -2098,5 +2102,12 @@
     <div id="sliderBtn"></div>
   </div>
 
+  <!-- Scripts -->
+  <script src="../../js/howler.core.min.js"></script>
+  <script type="module" src="../../js/player.js"></script>
+  <script type="module">
+    import init from '../../js/site.js';
+    init(1, 11);
+  </script>
 </body>
 </html>

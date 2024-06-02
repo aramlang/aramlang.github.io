@@ -1,0 +1,154 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 7.975895691609978 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 7.975895691609978 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3243704783500703 
+            text = "w)omryin." 
+        intervals [2]:
+            xmin = 1.3243704783500703 
+            xmax = 2.3954643855045137 
+            text = "zmarn" 
+        intervals [3]:
+            xmin = 2.3954643855045137 
+            xmax = 2.9551206455736656 
+            text = "lk,wOn." 
+        intervals [4]:
+            xmin = 2.9551206455736656 
+            xmax = 3.2447600048193666 
+            text = "wlo)" 
+        intervals [5]:
+            xmin = 3.2447600048193666 
+            xmax = 4.213775510204082 
+            text = "raqEd`t'wOn." 
+        intervals [6]:
+            xmin = 4.213775510204082 
+            xmax = 5.7607491091674765 
+            text = "w)alayn" 
+        intervals [7]:
+            xmin = 5.7607491091674765 
+            xmax = 6.199829354772212 
+            text = "lk,wOn." 
+        intervals [8]:
+            xmin = 6.199829354772212 
+            xmax = 6.53738108933536 
+            text = "wlo)" 
+        intervals [9]:
+            xmin = 6.53738108933536 
+            xmax = 7.975895691609978 
+            text = ")arqEd`t'wOn." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 7.975895691609978 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3243704783500703 
+            text = "ܘܐܵܡܪܝܼܢ." 
+        intervals [2]:
+            xmin = 1.3243704783500703 
+            xmax = 2.3954643855045137 
+            text = "ܙܡܲܪܢ" 
+        intervals [3]:
+            xmin = 2.3954643855045137 
+            xmax = 2.9551206455736656 
+            text = "ܠܟ݂ܘܿܢ." 
+        intervals [4]:
+            xmin = 2.9551206455736656 
+            xmax = 3.2447600048193666 
+            text = "ܘܠܵܐ" 
+        intervals [5]:
+            xmin = 3.2447600048193666 
+            xmax = 4.213775510204082 
+            text = "ܪܲܩܸܕ̇ܬ݁ܘܿܢ." 
+        intervals [6]:
+            xmin = 4.213775510204082 
+            xmax = 5.7607491091674765 
+            text = "ܘܐܲܠܲܝܢ" 
+        intervals [7]:
+            xmin = 5.7607491091674765 
+            xmax = 6.199829354772212 
+            text = "ܠܟ݂ܘܿܢ." 
+        intervals [8]:
+            xmin = 6.199829354772212 
+            xmax = 6.53738108933536 
+            text = "ܘܠܵܐ" 
+        intervals [9]:
+            xmin = 6.53738108933536 
+            xmax = 7.975895691609978 
+            text = "ܐܲܪܩܸܕ̇ܬ݁ܘܿܢ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 7.975895691609978 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3243704783500703 
+            text = "and say" 
+        intervals [2]:
+            xmin = 1.3243704783500703 
+            xmax = 2.3954643855045137 
+            text = "we sang" 
+        intervals [3]:
+            xmin = 2.3954643855045137 
+            xmax = 2.9551206455736656 
+            text = "to you" 
+        intervals [4]:
+            xmin = 2.9551206455736656 
+            xmax = 3.2447600048193666 
+            text = "and not" 
+        intervals [5]:
+            xmin = 3.2447600048193666 
+            xmax = 4.213775510204082 
+            text = "did you dance" 
+        intervals [6]:
+            xmin = 4.213775510204082 
+            xmax = 5.7607491091674765 
+            text = "and we mourned" 
+        intervals [7]:
+            xmin = 5.7607491091674765 
+            xmax = 6.199829354772212 
+            text = "to you" 
+        intervals [8]:
+            xmin = 6.199829354772212 
+            xmax = 6.53738108933536 
+            text = "and not" 
+        intervals [9]:
+            xmin = 6.53738108933536 
+            xmax = 7.975895691609978 
+            text = "did you lament" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 7.975895691609978 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.975895691609978 
+            text = "17" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 7.975895691609978 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.975895691609978 
+            text = "DONE" 

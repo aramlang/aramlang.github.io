@@ -1,0 +1,142 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 6.423809523809524 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 6.423809523809524 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8729855241760004 
+            text = "w)En" 
+        intervals [2]:
+            xmin = 0.8729855241760004 
+            xmax = 1.4016303854875283 
+            text = "cob`eyn" 
+        intervals [3]:
+            xmin = 1.4016303854875283 
+            xmax = 1.7505916986083774 
+            text = ")n_twOn" 
+        intervals [4]:
+            xmin = 1.7505916986083774 
+            xmax = 2.3942783780178734 
+            text = "qabElw:" 
+        intervals [5]:
+            xmin = 2.3942783780178734 
+            xmax = 3.5968315018315016 
+            text = "dhwEywu" 
+        intervals [6]:
+            xmin = 3.5968315018315016 
+            xmax = 4.518572525784507 
+            text = ")elyio)" 
+        intervals [7]:
+            xmin = 4.518572525784507 
+            xmax = 5.464197476091886 
+            text = "da(t,yid," 
+        intervals [8]:
+            xmin = 5.464197476091886 
+            xmax = 6.423809523809524 
+            text = "lme)t,o)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 6.423809523809524 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8729855241760004 
+            text = "ܘܐܸܢ" 
+        intervals [2]:
+            xmin = 0.8729855241760004 
+            xmax = 1.4016303854875283 
+            text = "ܨܵܒܹ̇ܝܢ" 
+        intervals [3]:
+            xmin = 1.4016303854875283 
+            xmax = 1.7505916986083774 
+            text = "ܐܢ݇ܬܘܿܢ" 
+        intervals [4]:
+            xmin = 1.7505916986083774 
+            xmax = 2.3942783780178734 
+            text = "ܩܲܒܸܠܘ:" 
+        intervals [5]:
+            xmin = 2.3942783780178734 
+            xmax = 3.5968315018315016 
+            text = "ܕܗܘܸܝܘܼ" 
+        intervals [6]:
+            xmin = 3.5968315018315016 
+            xmax = 4.518572525784507 
+            text = "ܐܹܠܝܼܵܐ" 
+        intervals [7]:
+            xmin = 4.518572525784507 
+            xmax = 5.464197476091886 
+            text = "ܕܲܥܬ݂ܝܼܕ݂" 
+        intervals [8]:
+            xmin = 5.464197476091886 
+            xmax = 6.423809523809524 
+            text = "ܠܡܹܐܬ݂ܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 6.423809523809524 
+        intervals: size = 8 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.8729855241760004 
+            text = "and if" 
+        intervals [2]:
+            xmin = 0.8729855241760004 
+            xmax = 1.4016303854875283 
+            text = "desire" 
+        intervals [3]:
+            xmin = 1.4016303854875283 
+            xmax = 1.7505916986083774 
+            text = "you" 
+        intervals [4]:
+            xmin = 1.7505916986083774 
+            xmax = 2.3942783780178734 
+            text = "accept" 
+        intervals [5]:
+            xmin = 2.3942783780178734 
+            xmax = 3.5968315018315016 
+            text = "that this is" 
+        intervals [6]:
+            xmin = 3.5968315018315016 
+            xmax = 4.518572525784507 
+            text = "Elia" 
+        intervals [7]:
+            xmin = 4.518572525784507 
+            xmax = 5.464197476091886 
+            text = "who was" 
+        intervals [8]:
+            xmin = 5.464197476091886 
+            xmax = 6.423809523809524 
+            text = "to come" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 6.423809523809524 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.423809523809524 
+            text = "14" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 6.423809523809524 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.423809523809524 
+            text = "DONE" 

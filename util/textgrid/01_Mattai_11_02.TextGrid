@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.249637188208617 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 8.249637188208617 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.6590151171579743 
+            text = "ywOxanon" 
+        intervals [2]:
+            xmin = 1.6590151171579743 
+            xmax = 1.9547530864197533 
+            text = "deyn." 
+        intervals [3]:
+            xmin = 1.9547530864197533 
+            xmax = 2.2162615452685137 
+            text = "kad," 
+        intervals [4]:
+            xmin = 2.2162615452685137 
+            xmax = 2.6215317810973184 
+            text = "$ma(" 
+        intervals [5]:
+            xmin = 2.6215317810973184 
+            xmax = 2.845706555349412 
+            text = "beyt," 
+        intervals [6]:
+            xmin = 2.845706555349412 
+            xmax = 3.5488866693061705 
+            text = ")asyi*re)" 
+        intervals [7]:
+            xmin = 3.5488866693061705 
+            xmax = 4.208904275996113 
+            text = "(b,od,awhy" 
+        intervals [8]:
+            xmin = 4.208904275996113 
+            xmax = 5.454412950365331 
+            text = "dam$yixo):" 
+        intervals [9]:
+            xmin = 5.454412950365331 
+            xmax = 6.755589569160998 
+            text = "$adar" 
+        intervals [10]:
+            xmin = 6.755589569160998 
+            xmax = 7.048309712773999 
+            text = "byad," 
+        intervals [11]:
+            xmin = 7.048309712773999 
+            xmax = 8.249637188208617 
+            text = "talmyid,ow*hy." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 8.249637188208617 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.6590151171579743 
+            text = "ܝܘܿܚܲܢܵܢ" 
+        intervals [2]:
+            xmin = 1.6590151171579743 
+            xmax = 1.9547530864197533 
+            text = "ܕܹܝܢ." 
+        intervals [3]:
+            xmin = 1.9547530864197533 
+            xmax = 2.2162615452685137 
+            text = "ܟܲܕ݂" 
+        intervals [4]:
+            xmin = 2.2162615452685137 
+            xmax = 2.6215317810973184 
+            text = "ܫܡܲܥ" 
+        intervals [5]:
+            xmin = 2.6215317810973184 
+            xmax = 2.845706555349412 
+            text = "ܒܹܝܬ݂" 
+        intervals [6]:
+            xmin = 2.845706555349412 
+            xmax = 3.5488866693061705 
+            text = "ܐܲܣܝܼ̈ܪܹܐ" 
+        intervals [7]:
+            xmin = 3.5488866693061705 
+            xmax = 4.208904275996113 
+            text = "ܥܒ݂ܵܕ݂ܲܘܗܝ" 
+        intervals [8]:
+            xmin = 4.208904275996113 
+            xmax = 5.454412950365331 
+            text = "ܕܲܡܫܝܼܚܵܐ:" 
+        intervals [9]:
+            xmin = 5.454412950365331 
+            xmax = 6.755589569160998 
+            text = "ܫܲܕܲܪ" 
+        intervals [10]:
+            xmin = 6.755589569160998 
+            xmax = 7.048309712773999 
+            text = "ܒܝܲܕ݂" 
+        intervals [11]:
+            xmin = 7.048309712773999 
+            xmax = 8.249637188208617 
+            text = "ܬܲܠܡܝܼܕ݂ܵܘ̈ܗܝ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.249637188208617 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.6590151171579743 
+            text = "Yukhanan" 
+        intervals [2]:
+            xmin = 1.6590151171579743 
+            xmax = 1.9547530864197533 
+            text = "and" 
+        intervals [3]:
+            xmin = 1.9547530864197533 
+            xmax = 2.2162615452685137 
+            text = "when" 
+        intervals [4]:
+            xmin = 2.2162615452685137 
+            xmax = 2.6215317810973184 
+            text = "heard" 
+        intervals [5]:
+            xmin = 2.6215317810973184 
+            xmax = 2.845706555349412 
+            text = "[in] the house" 
+        intervals [6]:
+            xmin = 2.845706555349412 
+            xmax = 3.5488866693061705 
+            text = "of prisoners" 
+        intervals [7]:
+            xmin = 3.5488866693061705 
+            xmax = 4.208904275996113 
+            text = "the works" 
+        intervals [8]:
+            xmin = 4.208904275996113 
+            xmax = 5.454412950365331 
+            text = "of the Messiah" 
+        intervals [9]:
+            xmin = 5.454412950365331 
+            xmax = 6.755589569160998 
+            text = "he sent [word]" 
+        intervals [10]:
+            xmin = 6.755589569160998 
+            xmax = 7.048309712773999 
+            text = "through" 
+        intervals [11]:
+            xmin = 7.048309712773999 
+            xmax = 8.249637188208617 
+            text = "his disciples" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 8.249637188208617 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.249637188208617 
+            text = "02" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 8.249637188208617 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.249637188208617 
+            text = "DONE" 

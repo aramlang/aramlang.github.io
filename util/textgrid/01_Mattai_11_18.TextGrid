@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 6.795691609977324 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 6.795691609977324 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2099288579900824 
+            text = ")Et,o)" 
+        intervals [2]:
+            xmin = 1.2099288579900824 
+            xmax = 1.4969088217528643 
+            text = "geyr" 
+        intervals [3]:
+            xmin = 1.4969088217528643 
+            xmax = 2.0312421070992497 
+            text = "ywOxanon" 
+        intervals [4]:
+            xmin = 2.0312421070992497 
+            xmax = 2.2874828177872177 
+            text = "dlo)" 
+        intervals [5]:
+            xmin = 2.2874828177872177 
+            xmax = 2.805655141781798 
+            text = ")okel" 
+        intervals [6]:
+            xmin = 2.805655141781798 
+            xmax = 3.113062193051425 
+            text = "wlo)" 
+        intervals [7]:
+            xmin = 3.113062193051425 
+            xmax = 3.965630385487528 
+            text = "$ote):" 
+        intervals [8]:
+            xmin = 3.965630385487528 
+            xmax = 5.344926373841718 
+            text = "w)omryin." 
+        intervals [9]:
+            xmin = 5.344926373841718 
+            xmax = 5.800853432282003 
+            text = "daywo)" 
+        intervals [10]:
+            xmin = 5.800853432282003 
+            xmax = 6.0568541775684634 
+            text = ")yit," 
+        intervals [11]:
+            xmin = 6.0568541775684634 
+            xmax = 6.795691609977324 
+            text = "beh." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 6.795691609977324 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2099288579900824 
+            text = "ܐܸܬ݂ܵܐ" 
+        intervals [2]:
+            xmin = 1.2099288579900824 
+            xmax = 1.4969088217528643 
+            text = "ܓܹܝܪ" 
+        intervals [3]:
+            xmin = 1.4969088217528643 
+            xmax = 2.0312421070992497 
+            text = "ܝܘܿܚܲܢܵܢ" 
+        intervals [4]:
+            xmin = 2.0312421070992497 
+            xmax = 2.2874828177872177 
+            text = "ܕܠܵܐ" 
+        intervals [5]:
+            xmin = 2.2874828177872177 
+            xmax = 2.805655141781798 
+            text = "ܐܵܟܹܠ" 
+        intervals [6]:
+            xmin = 2.805655141781798 
+            xmax = 3.113062193051425 
+            text = "ܘܠܵܐ" 
+        intervals [7]:
+            xmin = 3.113062193051425 
+            xmax = 3.965630385487528 
+            text = "ܫܵܬܹܐ:" 
+        intervals [8]:
+            xmin = 3.965630385487528 
+            xmax = 5.344926373841718 
+            text = "ܘܐܵܡܪܝܼܢ." 
+        intervals [9]:
+            xmin = 5.344926373841718 
+            xmax = 5.800853432282003 
+            text = "ܕܲܝܘܵܐ" 
+        intervals [10]:
+            xmin = 5.800853432282003 
+            xmax = 6.0568541775684634 
+            text = "ܐܝܼܬ݂" 
+        intervals [11]:
+            xmin = 6.0568541775684634 
+            xmax = 6.795691609977324 
+            text = "ܒܹܗ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 6.795691609977324 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2099288579900824 
+            text = "came" 
+        intervals [2]:
+            xmin = 1.2099288579900824 
+            xmax = 1.4969088217528643 
+            text = "for" 
+        intervals [3]:
+            xmin = 1.4969088217528643 
+            xmax = 2.0312421070992497 
+            text = "Yukhanan" 
+        intervals [4]:
+            xmin = 2.0312421070992497 
+            xmax = 2.2874828177872177 
+            text = "not" 
+        intervals [5]:
+            xmin = 2.2874828177872177 
+            xmax = 2.805655141781798 
+            text = "eating" 
+        intervals [6]:
+            xmin = 2.805655141781798 
+            xmax = 3.113062193051425 
+            text = "nor" 
+        intervals [7]:
+            xmin = 3.113062193051425 
+            xmax = 3.965630385487528 
+            text = "drinking" 
+        intervals [8]:
+            xmin = 3.965630385487528 
+            xmax = 5.344926373841718 
+            text = "and they said" 
+        intervals [9]:
+            xmin = 5.344926373841718 
+            xmax = 5.800853432282003 
+            text = "that a demon" 
+        intervals [10]:
+            xmin = 5.800853432282003 
+            xmax = 6.0568541775684634 
+            text = "there is" 
+        intervals [11]:
+            xmin = 6.0568541775684634 
+            xmax = 6.795691609977324 
+            text = "in him" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 6.795691609977324 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.795691609977324 
+            text = "18" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 6.795691609977324 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.795691609977324 
+            text = "DONE" 

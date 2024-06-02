@@ -1,0 +1,106 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.7200907029478456 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 3.7200907029478456 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3052252553443031 
+            text = "wTwub,owhy" 
+        intervals [2]:
+            xmin = 1.3052252553443031 
+            xmax = 1.8254404590118876 
+            text = "la)yno)" 
+        intervals [3]:
+            xmin = 1.8254404590118876 
+            xmax = 2.161991915307156 
+            text = "dlo)" 
+        intervals [4]:
+            xmin = 2.161991915307156 
+            xmax = 2.8809977324263034 
+            text = "nEt,k$El" 
+        intervals [5]:
+            xmin = 2.8809977324263034 
+            xmax = 3.7200907029478456 
+            text = "byi." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 3.7200907029478456 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3052252553443031 
+            text = "ܘܛܘܼܒ݂ܵܘܗܝ" 
+        intervals [2]:
+            xmin = 1.3052252553443031 
+            xmax = 1.8254404590118876 
+            text = "ܠܲܐܝܢܵܐ" 
+        intervals [3]:
+            xmin = 1.8254404590118876 
+            xmax = 2.161991915307156 
+            text = "ܕܠܵܐ" 
+        intervals [4]:
+            xmin = 2.161991915307156 
+            xmax = 2.8809977324263034 
+            text = "ܢܸܬ݂ܟܫܸܠ" 
+        intervals [5]:
+            xmin = 2.8809977324263034 
+            xmax = 3.7200907029478456 
+            text = "ܒܝܼ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 3.7200907029478456 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3052252553443031 
+            text = "and is blessed" 
+        intervals [2]:
+            xmin = 1.3052252553443031 
+            xmax = 1.8254404590118876 
+            text = "he" 
+        intervals [3]:
+            xmin = 1.8254404590118876 
+            xmax = 2.161991915307156 
+            text = "that not" 
+        intervals [4]:
+            xmin = 2.161991915307156 
+            xmax = 2.8809977324263034 
+            text = "is offended" 
+        intervals [5]:
+            xmin = 2.8809977324263034 
+            xmax = 3.7200907029478456 
+            text = "in me" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 3.7200907029478456 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.7200907029478456 
+            text = "06" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 3.7200907029478456 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 3.7200907029478456 
+            text = "DONE" 
