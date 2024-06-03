@@ -1,0 +1,226 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 13.33655328798186 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 13.33655328798186 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2377891156462586 
+            text = "wlo)" 
+        intervals [2]:
+            xmin = 1.2377891156462586 
+            xmax = 1.8517591587093554 
+            text = "tarmolo)" 
+        intervals [3]:
+            xmin = 1.8517591587093554 
+            xmax = 2.768626228269085 
+            text = ")lwurxo):" 
+        intervals [4]:
+            xmin = 2.768626228269085 
+            xmax = 3.9150492707371014 
+            text = "wlo)" 
+        intervals [5]:
+            xmin = 3.9150492707371014 
+            xmax = 4.52874149659864 
+            text = "ta*rt'eyn" 
+        intervals [6]:
+            xmin = 4.52874149659864 
+            xmax = 5.932435122197027 
+            text = "kwt'yin*yin:" 
+        intervals [7]:
+            xmin = 5.932435122197027 
+            xmax = 6.7940292624986505 
+            text = "wlo)" 
+        intervals [8]:
+            xmin = 6.7940292624986505 
+            xmax = 7.579934345831356 
+            text = "mson*e)." 
+        intervals [9]:
+            xmin = 7.579934345831356 
+            xmax = 8.646292732966202 
+            text = "wlo)" 
+        intervals [10]:
+            xmin = 8.646292732966202 
+            xmax = 9.593427815570672 
+            text = "$ab,To)." 
+        intervals [11]:
+            xmin = 9.593427815570672 
+            xmax = 10.735288803185316 
+            text = "$owe)" 
+        intervals [12]:
+            xmin = 10.735288803185316 
+            xmax = 10.971408163265307 
+            text = "h_wu" 
+        intervals [13]:
+            xmin = 10.971408163265307 
+            xmax = 11.443133333333334 
+            text = "geyr" 
+        intervals [14]:
+            xmin = 11.443133333333334 
+            xmax = 12.065625850340137 
+            text = "po(lo)" 
+        intervals [15]:
+            xmin = 12.065625850340137 
+            xmax = 13.33655328798186 
+            text = "saybort'eh." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 13.33655328798186 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2377891156462586 
+            text = "ܘܠܵܐ" 
+        intervals [2]:
+            xmin = 1.2377891156462586 
+            xmax = 1.8517591587093554 
+            text = "ܬܲܪܡܵܠܵܐ" 
+        intervals [3]:
+            xmin = 1.8517591587093554 
+            xmax = 2.768626228269085 
+            text = "ܐܠܘܼܪܚܵܐ:" 
+        intervals [4]:
+            xmin = 2.768626228269085 
+            xmax = 3.9150492707371014 
+            text = "ܘܠܵܐ" 
+        intervals [5]:
+            xmin = 3.9150492707371014 
+            xmax = 4.52874149659864 
+            text = "ܬܲ̈ܪܬܹ݁ܝܢ" 
+        intervals [6]:
+            xmin = 4.52874149659864 
+            xmax = 5.932435122197027 
+            text = "ܟܘܬ݁ܝܼܢ̈ܝܼܢ:" 
+        intervals [7]:
+            xmin = 5.932435122197027 
+            xmax = 6.7940292624986505 
+            text = "ܘܠܵܐ" 
+        intervals [8]:
+            xmin = 6.7940292624986505 
+            xmax = 7.579934345831356 
+            text = "ܡܣܵܢܹ̈ܐ." 
+        intervals [9]:
+            xmin = 7.579934345831356 
+            xmax = 8.646292732966202 
+            text = "ܘܠܵܐ" 
+        intervals [10]:
+            xmin = 8.646292732966202 
+            xmax = 9.593427815570672 
+            text = "ܫܲܒ݂ܛܵܐ." 
+        intervals [11]:
+            xmin = 9.593427815570672 
+            xmax = 10.735288803185316 
+            text = "ܫܵܘܹܐ" 
+        intervals [12]:
+            xmin = 10.735288803185316 
+            xmax = 10.971408163265307 
+            text = "ܗ݇ܘܼ" 
+        intervals [13]:
+            xmin = 10.971408163265307 
+            xmax = 11.443133333333334 
+            text = "ܓܹܝܪ" 
+        intervals [14]:
+            xmin = 11.443133333333334 
+            xmax = 12.065625850340137 
+            text = "ܦܵܥܠܵܐ" 
+        intervals [15]:
+            xmin = 12.065625850340137 
+            xmax = 13.33655328798186 
+            text = "ܣܲܝܒܵܪܬܹ݁ܗ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 13.33655328798186 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2377891156462586 
+            text = "nor" 
+        intervals [2]:
+            xmin = 1.2377891156462586 
+            xmax = 1.8517591587093554 
+            text = "a wallet" 
+        intervals [3]:
+            xmin = 1.8517591587093554 
+            xmax = 2.768626228269085 
+            text = "for the road" 
+        intervals [4]:
+            xmin = 2.768626228269085 
+            xmax = 3.9150492707371014 
+            text = "nor" 
+        intervals [5]:
+            xmin = 3.9150492707371014 
+            xmax = 4.52874149659864 
+            text = "two" 
+        intervals [6]:
+            xmin = 4.52874149659864 
+            xmax = 5.932435122197027 
+            text = "coats" 
+        intervals [7]:
+            xmin = 5.932435122197027 
+            xmax = 6.7940292624986505 
+            text = "nor" 
+        intervals [8]:
+            xmin = 6.7940292624986505 
+            xmax = 7.579934345831356 
+            text = "shoes" 
+        intervals [9]:
+            xmin = 7.579934345831356 
+            xmax = 8.646292732966202 
+            text = "nor" 
+        intervals [10]:
+            xmin = 8.646292732966202 
+            xmax = 9.593427815570672 
+            text = "staff" 
+        intervals [11]:
+            xmin = 9.593427815570672 
+            xmax = 10.735288803185316 
+            text = "worthy [of]" 
+        intervals [12]:
+            xmin = 10.735288803185316 
+            xmax = 10.971408163265307 
+            text = "is" 
+        intervals [13]:
+            xmin = 10.971408163265307 
+            xmax = 11.443133333333334 
+            text = "for" 
+        intervals [14]:
+            xmin = 11.443133333333334 
+            xmax = 12.065625850340137 
+            text = "a worker" 
+        intervals [15]:
+            xmin = 12.065625850340137 
+            xmax = 13.33655328798186 
+            text = "his food" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 13.33655328798186 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 13.33655328798186 
+            text = "10" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 13.33655328798186 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 13.33655328798186 
+            text = "DONE" 

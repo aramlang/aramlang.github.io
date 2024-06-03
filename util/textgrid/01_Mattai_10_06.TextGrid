@@ -1,0 +1,166 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 7.614875283446712 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 7.614875283446712 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3335595508044489 
+            text = "zElw" 
+        intervals [2]:
+            xmin = 1.3335595508044489 
+            xmax = 1.6772150072150072 
+            text = "lk,wOn" 
+        intervals [3]:
+            xmin = 1.6772150072150072 
+            xmax = 1.9542368742368743 
+            text = "deyn" 
+        intervals [4]:
+            xmin = 1.9542368742368743 
+            xmax = 3.362142857142857 
+            text = "yatyiro)yit,:" 
+        intervals [5]:
+            xmin = 3.362142857142857 
+            xmax = 4.465494547025159 
+            text = "lwot," 
+        intervals [6]:
+            xmin = 4.465494547025159 
+            xmax = 5.011419460641399 
+            text = "(E*rbe)" 
+        intervals [7]:
+            xmin = 5.011419460641399 
+            xmax = 5.630159223109533 
+            text = "d)bad,w" 
+        intervals [8]:
+            xmin = 5.630159223109533 
+            xmax = 5.97125850340136 
+            text = "mEn" 
+        intervals [9]:
+            xmin = 5.97125850340136 
+            xmax = 6.229661483641075 
+            text = "beyt," 
+        intervals [10]:
+            xmin = 6.229661483641075 
+            xmax = 7.614875283446712 
+            text = "yisroyil." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 7.614875283446712 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3335595508044489 
+            text = "ܙܸܠܘ" 
+        intervals [2]:
+            xmin = 1.3335595508044489 
+            xmax = 1.6772150072150072 
+            text = "ܠܟ݂ܘܿܢ" 
+        intervals [3]:
+            xmin = 1.6772150072150072 
+            xmax = 1.9542368742368743 
+            text = "ܕܹܝܢ" 
+        intervals [4]:
+            xmin = 1.9542368742368743 
+            xmax = 3.362142857142857 
+            text = "ܝܲܬܝܼܪܵܐܝܼܬ݂:" 
+        intervals [5]:
+            xmin = 3.362142857142857 
+            xmax = 4.465494547025159 
+            text = "ܠܘܵܬ݂" 
+        intervals [6]:
+            xmin = 4.465494547025159 
+            xmax = 5.011419460641399 
+            text = "ܥܸ̈ܪܒܹܐ" 
+        intervals [7]:
+            xmin = 5.011419460641399 
+            xmax = 5.630159223109533 
+            text = "ܕܐܒܲܕ݂ܘ" 
+        intervals [8]:
+            xmin = 5.630159223109533 
+            xmax = 5.97125850340136 
+            text = "ܡܸܢ" 
+        intervals [9]:
+            xmin = 5.97125850340136 
+            xmax = 6.229661483641075 
+            text = "ܒܹܝܬ݂" 
+        intervals [10]:
+            xmin = 6.229661483641075 
+            xmax = 7.614875283446712 
+            text = "ܝܼܣܪܵܝܼܠ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 7.614875283446712 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.3335595508044489 
+            text = "go" 
+        intervals [2]:
+            xmin = 1.3335595508044489 
+            xmax = 1.6772150072150072 
+            text = "you" 
+        intervals [3]:
+            xmin = 1.6772150072150072 
+            xmax = 1.9542368742368743 
+            text = "but" 
+        intervals [4]:
+            xmin = 1.9542368742368743 
+            xmax = 3.362142857142857 
+            text = "rather" 
+        intervals [5]:
+            xmin = 3.362142857142857 
+            xmax = 4.465494547025159 
+            text = "to" 
+        intervals [6]:
+            xmin = 4.465494547025159 
+            xmax = 5.011419460641399 
+            text = "the sheep" 
+        intervals [7]:
+            xmin = 5.011419460641399 
+            xmax = 5.630159223109533 
+            text = "that are lost" 
+        intervals [8]:
+            xmin = 5.630159223109533 
+            xmax = 5.97125850340136 
+            text = "from" 
+        intervals [9]:
+            xmin = 5.97125850340136 
+            xmax = 6.229661483641075 
+            text = "the house" 
+        intervals [10]:
+            xmin = 6.229661483641075 
+            xmax = 7.614875283446712 
+            text = "[of] Israel" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 7.614875283446712 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.614875283446712 
+            text = "06" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 7.614875283446712 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.614875283446712 
+            text = "DONE" 

@@ -1,0 +1,130 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 6.801451247165533 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 6.801451247165533 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.390897226582941 
+            text = "wmo)" 
+        intervals [2]:
+            xmin = 1.390897226582941 
+            xmax = 2.0225175300889586 
+            text = "d(o)lyin" 
+        intervals [3]:
+            xmin = 2.0225175300889586 
+            xmax = 2.335982554678518 
+            text = ")n_twOn" 
+        intervals [4]:
+            xmin = 2.335982554678518 
+            xmax = 3.4342214663643236 
+            text = "lbayto):" 
+        intervals [5]:
+            xmin = 3.4342214663643236 
+            xmax = 5.092321876118868 
+            text = "$a)lw" 
+        intervals [6]:
+            xmin = 5.092321876118868 
+            xmax = 5.697431972789116 
+            text = "$lomeh" 
+        intervals [7]:
+            xmin = 5.697431972789116 
+            xmax = 6.801451247165533 
+            text = "dbayto)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 6.801451247165533 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.390897226582941 
+            text = "ܘܡܵܐ" 
+        intervals [2]:
+            xmin = 1.390897226582941 
+            xmax = 2.0225175300889586 
+            text = "ܕܥܵܐܠܝܼܢ" 
+        intervals [3]:
+            xmin = 2.0225175300889586 
+            xmax = 2.335982554678518 
+            text = "ܐܢ݇ܬܘܿܢ" 
+        intervals [4]:
+            xmin = 2.335982554678518 
+            xmax = 3.4342214663643236 
+            text = "ܠܒܲܝܬܵܐ:" 
+        intervals [5]:
+            xmin = 3.4342214663643236 
+            xmax = 5.092321876118868 
+            text = "ܫܲܐܠܘ" 
+        intervals [6]:
+            xmin = 5.092321876118868 
+            xmax = 5.697431972789116 
+            text = "ܫܠܵܡܹܗ" 
+        intervals [7]:
+            xmin = 5.697431972789116 
+            xmax = 6.801451247165533 
+            text = "ܕܒܲܝܬܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 6.801451247165533 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.390897226582941 
+            text = "and when" 
+        intervals [2]:
+            xmin = 1.390897226582941 
+            xmax = 2.0225175300889586 
+            text = "enter" 
+        intervals [3]:
+            xmin = 2.0225175300889586 
+            xmax = 2.335982554678518 
+            text = "you" 
+        intervals [4]:
+            xmin = 2.335982554678518 
+            xmax = 3.4342214663643236 
+            text = "into a house" 
+        intervals [5]:
+            xmin = 3.4342214663643236 
+            xmax = 5.092321876118868 
+            text = "ask [for]" 
+        intervals [6]:
+            xmin = 5.092321876118868 
+            xmax = 5.697431972789116 
+            text = "its peace" 
+        intervals [7]:
+            xmin = 5.697431972789116 
+            xmax = 6.801451247165533 
+            text = "that house" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 6.801451247165533 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.801451247165533 
+            text = "12" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 6.801451247165533 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.801451247165533 
+            text = "DONE" 

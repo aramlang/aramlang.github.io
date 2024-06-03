@@ -1,0 +1,166 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 11.80328798185941 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 11.80328798185941 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5676139493828851 
+            text = "k*ryihe)" 
+        intervals [2]:
+            xmin = 1.5676139493828851 
+            xmax = 2.5921579743008314 
+            text = ")asow" 
+        intervals [3]:
+            xmin = 2.5921579743008314 
+            xmax = 4.009041490470062 
+            text = "wgarb*e)" 
+        intervals [4]:
+            xmin = 4.009041490470062 
+            xmax = 5.157687074829932 
+            text = "dakow." 
+        intervals [5]:
+            xmin = 5.157687074829932 
+            xmax = 6.458559295063054 
+            text = "wd,ay*we)" 
+        intervals [6]:
+            xmin = 6.458559295063054 
+            xmax = 7.4830907029478455 
+            text = ")apEqw." 
+        intervals [7]:
+            xmin = 7.4830907029478455 
+            xmax = 8.56171097557797 
+            text = "magon" 
+        intervals [8]:
+            xmin = 8.56171097557797 
+            xmax = 9.641943310657595 
+            text = "nsab,t'wOn." 
+        intervals [9]:
+            xmin = 9.641943310657595 
+            xmax = 10.779347262714609 
+            text = "magon" 
+        intervals [10]:
+            xmin = 10.779347262714609 
+            xmax = 11.80328798185941 
+            text = "hab,w." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 11.80328798185941 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5676139493828851 
+            text = "ܟ̈ܪܝܼܗܹܐ" 
+        intervals [2]:
+            xmin = 1.5676139493828851 
+            xmax = 2.5921579743008314 
+            text = "ܐܲܣܵܘ" 
+        intervals [3]:
+            xmin = 2.5921579743008314 
+            xmax = 4.009041490470062 
+            text = "ܘܓܲܪܒܹ̈ܐ" 
+        intervals [4]:
+            xmin = 4.009041490470062 
+            xmax = 5.157687074829932 
+            text = "ܕܲܟܵܘ." 
+        intervals [5]:
+            xmin = 5.157687074829932 
+            xmax = 6.458559295063054 
+            text = "ܘܕ݂ܲܝ̈ܘܹܐ" 
+        intervals [6]:
+            xmin = 6.458559295063054 
+            xmax = 7.4830907029478455 
+            text = "ܐܲܦܸܩܘ." 
+        intervals [7]:
+            xmin = 7.4830907029478455 
+            xmax = 8.56171097557797 
+            text = "ܡܲܓܵܢ" 
+        intervals [8]:
+            xmin = 8.56171097557797 
+            xmax = 9.641943310657595 
+            text = "ܢܣܲܒ݂ܬ݁ܘܿܢ." 
+        intervals [9]:
+            xmin = 9.641943310657595 
+            xmax = 10.779347262714609 
+            text = "ܡܲܓܵܢ" 
+        intervals [10]:
+            xmin = 10.779347262714609 
+            xmax = 11.80328798185941 
+            text = "ܗܲܒ݂ܘ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 11.80328798185941 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.5676139493828851 
+            text = "the sick" 
+        intervals [2]:
+            xmin = 1.5676139493828851 
+            xmax = 2.5921579743008314 
+            text = "heal" 
+        intervals [3]:
+            xmin = 2.5921579743008314 
+            xmax = 4.009041490470062 
+            text = "and the lepers" 
+        intervals [4]:
+            xmin = 4.009041490470062 
+            xmax = 5.157687074829932 
+            text = "cleanse" 
+        intervals [5]:
+            xmin = 5.157687074829932 
+            xmax = 6.458559295063054 
+            text = "and demons" 
+        intervals [6]:
+            xmin = 6.458559295063054 
+            xmax = 7.4830907029478455 
+            text = "cast out" 
+        intervals [7]:
+            xmin = 7.4830907029478455 
+            xmax = 8.56171097557797 
+            text = "freely" 
+        intervals [8]:
+            xmin = 8.56171097557797 
+            xmax = 9.641943310657595 
+            text = "you have received" 
+        intervals [9]:
+            xmin = 9.641943310657595 
+            xmax = 10.779347262714609 
+            text = "freely" 
+        intervals [10]:
+            xmin = 10.779347262714609 
+            xmax = 11.80328798185941 
+            text = "give" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 11.80328798185941 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 11.80328798185941 
+            text = "08" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 11.80328798185941 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 11.80328798185941 
+            text = "DONE" 

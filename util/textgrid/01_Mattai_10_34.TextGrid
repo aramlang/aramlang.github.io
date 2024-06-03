@@ -1,0 +1,190 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 9.565555555555555 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 9.565555555555555 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4651759087473373 
+            text = "lo)" 
+        intervals [2]:
+            xmin = 1.4651759087473373 
+            xmax = 2.5770343375445415 
+            text = "tEsbrwun" 
+        intervals [3]:
+            xmin = 2.5770343375445415 
+            xmax = 3.6094683525584146 
+            text = "d)Et'eyt," 
+        intervals [4]:
+            xmin = 3.6094683525584146 
+            xmax = 4.129507741747005 
+            text = "d)arme)" 
+        intervals [5]:
+            xmin = 4.129507741747005 
+            xmax = 4.569100116236971 
+            text = "$ayno)" 
+        intervals [6]:
+            xmin = 4.569100116236971 
+            xmax = 5.392826152683296 
+            text = "b)ar(o)." 
+        intervals [7]:
+            xmin = 5.392826152683296 
+            xmax = 6.743381149561274 
+            text = "lo)" 
+        intervals [8]:
+            xmin = 6.743381149561274 
+            xmax = 7.081908363345338 
+            text = ")Ete'yt," 
+        intervals [9]:
+            xmin = 7.081908363345338 
+            xmax = 7.566049076773567 
+            text = "d)arme)" 
+        intervals [10]:
+            xmin = 7.566049076773567 
+            xmax = 8.13810119047619 
+            text = "$ayno)." 
+        intervals [11]:
+            xmin = 8.13810119047619 
+            xmax = 8.612540056315567 
+            text = ")Elo)" 
+        intervals [12]:
+            xmin = 8.612540056315567 
+            xmax = 9.565555555555555 
+            text = "xarbo)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 9.565555555555555 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4651759087473373 
+            text = "ܠܵܐ" 
+        intervals [2]:
+            xmin = 1.4651759087473373 
+            xmax = 2.5770343375445415 
+            text = "ܬܸܣܒܪܘܼܢ" 
+        intervals [3]:
+            xmin = 2.5770343375445415 
+            xmax = 3.6094683525584146 
+            text = "ܕܐܸܬܹ݁ܝܬ݂" 
+        intervals [4]:
+            xmin = 3.6094683525584146 
+            xmax = 4.129507741747005 
+            text = "ܕܐܲܪܡܹܐ" 
+        intervals [5]:
+            xmin = 4.129507741747005 
+            xmax = 4.569100116236971 
+            text = "ܫܲܝܢܵܐ" 
+        intervals [6]:
+            xmin = 4.569100116236971 
+            xmax = 5.392826152683296 
+            text = "ܒܐܲܪܥܵܐ." 
+        intervals [7]:
+            xmin = 5.392826152683296 
+            xmax = 6.743381149561274 
+            text = "ܠܵܐ" 
+        intervals [8]:
+            xmin = 6.743381149561274 
+            xmax = 7.081908363345338 
+            text = "ܐܸܬܹ݁ܝܬ݂" 
+        intervals [9]:
+            xmin = 7.081908363345338 
+            xmax = 7.566049076773567 
+            text = "ܕܐܲܪܡܹܐ" 
+        intervals [10]:
+            xmin = 7.566049076773567 
+            xmax = 8.13810119047619 
+            text = "ܫܲܝܢܵܐ." 
+        intervals [11]:
+            xmin = 8.13810119047619 
+            xmax = 8.612540056315567 
+            text = "ܐܸܠܵܐ" 
+        intervals [12]:
+            xmin = 8.612540056315567 
+            xmax = 9.565555555555555 
+            text = "ܚܲܪܒܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 9.565555555555555 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4651759087473373 
+            text = "not" 
+        intervals [2]:
+            xmin = 1.4651759087473373 
+            xmax = 2.5770343375445415 
+            text = "do think" 
+        intervals [3]:
+            xmin = 2.5770343375445415 
+            xmax = 3.6094683525584146 
+            text = "that I have come" 
+        intervals [4]:
+            xmin = 3.6094683525584146 
+            xmax = 4.129507741747005 
+            text = "to bring" 
+        intervals [5]:
+            xmin = 4.129507741747005 
+            xmax = 4.569100116236971 
+            text = "calm" 
+        intervals [6]:
+            xmin = 4.569100116236971 
+            xmax = 5.392826152683296 
+            text = "on earth" 
+        intervals [7]:
+            xmin = 5.392826152683296 
+            xmax = 6.743381149561274 
+            text = "not" 
+        intervals [8]:
+            xmin = 6.743381149561274 
+            xmax = 7.081908363345338 
+            text = "I have come" 
+        intervals [9]:
+            xmin = 7.081908363345338 
+            xmax = 7.566049076773567 
+            text = "to bring" 
+        intervals [10]:
+            xmin = 7.566049076773567 
+            xmax = 8.13810119047619 
+            text = "calm" 
+        intervals [11]:
+            xmin = 8.13810119047619 
+            xmax = 8.612540056315567 
+            text = "rather" 
+        intervals [12]:
+            xmin = 8.612540056315567 
+            xmax = 9.565555555555555 
+            text = "a sword" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 9.565555555555555 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.565555555555555 
+            text = "34" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 9.565555555555555 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.565555555555555 
+            text = "DONE" 

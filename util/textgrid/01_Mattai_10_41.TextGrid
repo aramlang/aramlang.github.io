@@ -1,0 +1,238 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 12.54249433106576 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 12.54249433106576 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.9774446604038443 
+            text = "man" 
+        intervals [2]:
+            xmin = 1.9774446604038443 
+            xmax = 2.7071713199168554 
+            text = "damqabEl" 
+        intervals [3]:
+            xmin = 2.7071713199168554 
+            xmax = 3.164185265712419 
+            text = "nb,yio)" 
+        intervals [4]:
+            xmin = 3.164185265712419 
+            xmax = 3.4547134704838633 
+            text = "b$Em" 
+        intervals [5]:
+            xmin = 3.4547134704838633 
+            xmax = 4.126858829001686 
+            text = "nb,yio):" 
+        intervals [6]:
+            xmin = 4.126858829001686 
+            xmax = 4.657628360868157 
+            text = ")ag,ro)" 
+        intervals [7]:
+            xmin = 4.657628360868157 
+            xmax = 5.149393187200807 
+            text = "danb,yio)" 
+        intervals [8]:
+            xmin = 5.149393187200807 
+            xmax = 6.103843537414966 
+            text = "noseb,." 
+        intervals [9]:
+            xmin = 6.103843537414966 
+            xmax = 7.336177187720966 
+            text = "wman" 
+        intervals [10]:
+            xmin = 7.336177187720966 
+            xmax = 7.999588871446014 
+            text = "damqabEl" 
+        intervals [11]:
+            xmin = 7.999588871446014 
+            xmax = 8.642659345263032 
+            text = "zadyiqo)" 
+        intervals [12]:
+            xmin = 8.642659345263032 
+            xmax = 8.993032879818594 
+            text = "b$Em" 
+        intervals [13]:
+            xmin = 8.993032879818594 
+            xmax = 10.034431216931218 
+            text = "zadyiqo):" 
+        intervals [14]:
+            xmin = 10.034431216931218 
+            xmax = 10.83947619047619 
+            text = ")ag,ro)" 
+        intervals [15]:
+            xmin = 10.83947619047619 
+            xmax = 11.473250728862974 
+            text = "dzadyiqo)" 
+        intervals [16]:
+            xmin = 11.473250728862974 
+            xmax = 12.54249433106576 
+            text = "noseb,." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 12.54249433106576 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.9774446604038443 
+            text = "ܡܲܢ" 
+        intervals [2]:
+            xmin = 1.9774446604038443 
+            xmax = 2.7071713199168554 
+            text = "ܕܲܡܩܲܒܸܠ" 
+        intervals [3]:
+            xmin = 2.7071713199168554 
+            xmax = 3.164185265712419 
+            text = "ܢܒ݂ܝܼܵܐ" 
+        intervals [4]:
+            xmin = 3.164185265712419 
+            xmax = 3.4547134704838633 
+            text = "ܒܫܸܡ" 
+        intervals [5]:
+            xmin = 3.4547134704838633 
+            xmax = 4.126858829001686 
+            text = "ܢܒ݂ܝܼܵܐ:" 
+        intervals [6]:
+            xmin = 4.126858829001686 
+            xmax = 4.657628360868157 
+            text = "ܐܲܓ݂ܪܵܐ" 
+        intervals [7]:
+            xmin = 4.657628360868157 
+            xmax = 5.149393187200807 
+            text = "ܕܲܢܒ݂ܝܼܵܐ" 
+        intervals [8]:
+            xmin = 5.149393187200807 
+            xmax = 6.103843537414966 
+            text = "ܢܵܣܹܒ݂." 
+        intervals [9]:
+            xmin = 6.103843537414966 
+            xmax = 7.336177187720966 
+            text = "ܘܡܲܢ" 
+        intervals [10]:
+            xmin = 7.336177187720966 
+            xmax = 7.999588871446014 
+            text = "ܕܲܡܩܲܒܸܠ" 
+        intervals [11]:
+            xmin = 7.999588871446014 
+            xmax = 8.642659345263032 
+            text = "ܙܲܕܝܼܩܵܐ" 
+        intervals [12]:
+            xmin = 8.642659345263032 
+            xmax = 8.993032879818594 
+            text = "ܒܫܸܡ" 
+        intervals [13]:
+            xmin = 8.993032879818594 
+            xmax = 10.034431216931218 
+            text = "ܙܲܕܝܼܩܵܐ:" 
+        intervals [14]:
+            xmin = 10.034431216931218 
+            xmax = 10.83947619047619 
+            text = "ܐܲܓ݂ܪܵܐ" 
+        intervals [15]:
+            xmin = 10.83947619047619 
+            xmax = 11.473250728862974 
+            text = "ܕܙܲܕܝܼܩܵܐ" 
+        intervals [16]:
+            xmin = 11.473250728862974 
+            xmax = 12.54249433106576 
+            text = "ܢܵܣܹܒ݂." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 12.54249433106576 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.9774446604038443 
+            text = "whoever" 
+        intervals [2]:
+            xmin = 1.9774446604038443 
+            xmax = 2.7071713199168554 
+            text = "accepts" 
+        intervals [3]:
+            xmin = 2.7071713199168554 
+            xmax = 3.164185265712419 
+            text = "a prophet" 
+        intervals [4]:
+            xmin = 3.164185265712419 
+            xmax = 3.4547134704838633 
+            text = "in the name" 
+        intervals [5]:
+            xmin = 3.4547134704838633 
+            xmax = 4.126858829001686 
+            text = "[of] a prophet" 
+        intervals [6]:
+            xmin = 4.126858829001686 
+            xmax = 4.657628360868157 
+            text = "a reward" 
+        intervals [7]:
+            xmin = 4.657628360868157 
+            xmax = 5.149393187200807 
+            text = "of a prophet" 
+        intervals [8]:
+            xmin = 5.149393187200807 
+            xmax = 6.103843537414966 
+            text = "will receive" 
+        intervals [9]:
+            xmin = 6.103843537414966 
+            xmax = 7.336177187720966 
+            text = "and whoever" 
+        intervals [10]:
+            xmin = 7.336177187720966 
+            xmax = 7.999588871446014 
+            text = "accepts" 
+        intervals [11]:
+            xmin = 7.999588871446014 
+            xmax = 8.642659345263032 
+            text = "a righteous man" 
+        intervals [12]:
+            xmin = 8.642659345263032 
+            xmax = 8.993032879818594 
+            text = "in the name" 
+        intervals [13]:
+            xmin = 8.993032879818594 
+            xmax = 10.034431216931218 
+            text = "[of] a righteous man" 
+        intervals [14]:
+            xmin = 10.034431216931218 
+            xmax = 10.83947619047619 
+            text = "a reward" 
+        intervals [15]:
+            xmin = 10.83947619047619 
+            xmax = 11.473250728862974 
+            text = "of a righteous man" 
+        intervals [16]:
+            xmin = 11.473250728862974 
+            xmax = 12.54249433106576 
+            text = "will receive" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 12.54249433106576 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 12.54249433106576 
+            text = "41" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 12.54249433106576 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 12.54249433106576 
+            text = "DONE" 

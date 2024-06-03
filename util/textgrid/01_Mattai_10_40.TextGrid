@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.204013605442176 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 8.204013605442176 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.256457555453259 
+            text = "man" 
+        intervals [2]:
+            xmin = 1.256457555453259 
+            xmax = 2.5920537414965987 
+            text = "damqabEl" 
+        intervals [3]:
+            xmin = 2.5920537414965987 
+            xmax = 3.2297988578147305 
+            text = "lk,wOn." 
+        intervals [4]:
+            xmin = 3.2297988578147305 
+            xmax = 3.5007142857142854 
+            text = "lyi" 
+        intervals [5]:
+            xmin = 3.5007142857142854 
+            xmax = 4.275498866213152 
+            text = "mqabEl." 
+        intervals [6]:
+            xmin = 4.275498866213152 
+            xmax = 5.312629228562173 
+            text = "wman" 
+        intervals [7]:
+            xmin = 5.312629228562173 
+            xmax = 5.53054211064957 
+            text = "dlyi" 
+        intervals [8]:
+            xmin = 5.53054211064957 
+            xmax = 6.147699708454811 
+            text = "mqabEl." 
+        intervals [9]:
+            xmin = 6.147699708454811 
+            xmax = 6.473418694400837 
+            text = "lman" 
+        intervals [10]:
+            xmin = 6.473418694400837 
+            xmax = 7.0841564625850335 
+            text = "d$alxany" 
+        intervals [11]:
+            xmin = 7.0841564625850335 
+            xmax = 8.204013605442176 
+            text = "mqabEl." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 8.204013605442176 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.256457555453259 
+            text = "ܡܲܢ" 
+        intervals [2]:
+            xmin = 1.256457555453259 
+            xmax = 2.5920537414965987 
+            text = "ܕܲܡܩܲܒܸܠ" 
+        intervals [3]:
+            xmin = 2.5920537414965987 
+            xmax = 3.2297988578147305 
+            text = "ܠܟ݂ܘܿܢ." 
+        intervals [4]:
+            xmin = 3.2297988578147305 
+            xmax = 3.5007142857142854 
+            text = "ܠܝܼ" 
+        intervals [5]:
+            xmin = 3.5007142857142854 
+            xmax = 4.275498866213152 
+            text = "ܡܩܲܒܸܠ." 
+        intervals [6]:
+            xmin = 4.275498866213152 
+            xmax = 5.312629228562173 
+            text = "ܘܡܲܢ" 
+        intervals [7]:
+            xmin = 5.312629228562173 
+            xmax = 5.53054211064957 
+            text = "ܕܠܝܼ" 
+        intervals [8]:
+            xmin = 5.53054211064957 
+            xmax = 6.147699708454811 
+            text = "ܡܩܲܒܸܠ." 
+        intervals [9]:
+            xmin = 6.147699708454811 
+            xmax = 6.473418694400837 
+            text = "ܠܡܲܢ" 
+        intervals [10]:
+            xmin = 6.473418694400837 
+            xmax = 7.0841564625850335 
+            text = "ܕܫܲܠܚܲܢܝ" 
+        intervals [11]:
+            xmin = 7.0841564625850335 
+            xmax = 8.204013605442176 
+            text = "ܡܩܲܒܸܠ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.204013605442176 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.256457555453259 
+            text = "whoever" 
+        intervals [2]:
+            xmin = 1.256457555453259 
+            xmax = 2.5920537414965987 
+            text = "accepts" 
+        intervals [3]:
+            xmin = 2.5920537414965987 
+            xmax = 3.2297988578147305 
+            text = "you" 
+        intervals [4]:
+            xmin = 3.2297988578147305 
+            xmax = 3.5007142857142854 
+            text = "me" 
+        intervals [5]:
+            xmin = 3.5007142857142854 
+            xmax = 4.275498866213152 
+            text = "accepts" 
+        intervals [6]:
+            xmin = 4.275498866213152 
+            xmax = 5.312629228562173 
+            text = "and whoever" 
+        intervals [7]:
+            xmin = 5.312629228562173 
+            xmax = 5.53054211064957 
+            text = "that me" 
+        intervals [8]:
+            xmin = 5.53054211064957 
+            xmax = 6.147699708454811 
+            text = "accepts" 
+        intervals [9]:
+            xmin = 6.147699708454811 
+            xmax = 6.473418694400837 
+            text = "to him" 
+        intervals [10]:
+            xmin = 6.473418694400837 
+            xmax = 7.0841564625850335 
+            text = "that sends me" 
+        intervals [11]:
+            xmin = 7.0841564625850335 
+            xmax = 8.204013605442176 
+            text = "accepts" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 8.204013605442176 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.204013605442176 
+            text = "40" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 8.204013605442176 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.204013605442176 
+            text = "DONE" 

@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 11.411337868480725 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 11.411337868480725 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.731211983075017 
+            text = "wpyilyipwOs" 
+        intervals [2]:
+            xmin = 1.731211983075017 
+            xmax = 3.1260506424792136 
+            text = "wbar twulmay." 
+        intervals [3]:
+            xmin = 3.1260506424792136 
+            xmax = 4.4611207692953725 
+            text = "wat,)wOmo)" 
+        intervals [4]:
+            xmin = 4.4611207692953725 
+            xmax = 5.227293846274142 
+            text = ".wmatay" 
+        intervals [5]:
+            xmin = 5.227293846274142 
+            xmax = 6.045943310657596 
+            text = "mok,so)." 
+        intervals [6]:
+            xmin = 6.045943310657596 
+            xmax = 7.234845392702535 
+            text = "wya(qwOb," 
+        intervals [7]:
+            xmin = 7.234845392702535 
+            xmax = 7.553183164422231 
+            text = "bar" 
+        intervals [8]:
+            xmin = 7.553183164422231 
+            xmax = 8.483898607061873 
+            text = "xalpay." 
+        intervals [9]:
+            xmin = 8.483898607061873 
+            xmax = 9.714209588597344 
+            text = "wlabay" 
+        intervals [10]:
+            xmin = 9.714209588597344 
+            xmax = 10.464822082679225 
+            text = "d)t,kanyi" 
+        intervals [11]:
+            xmin = 10.464822082679225 
+            xmax = 11.411337868480725 
+            text = "taday." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 11.411337868480725 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.731211983075017 
+            text = "ܘܦܝܼܠܝܼܦܘܿܣ" 
+        intervals [2]:
+            xmin = 1.731211983075017 
+            xmax = 3.1260506424792136 
+            text = "ܘܒܲܪ ܬܘܼܠܡܲܝ." 
+        intervals [3]:
+            xmin = 3.1260506424792136 
+            xmax = 4.4611207692953725 
+            text = "ܘܲܬ݂ܐܘܿܡܵܐ" 
+        intervals [4]:
+            xmin = 4.4611207692953725 
+            xmax = 5.227293846274142 
+            text = ".ܘܡܲܬܲܝ" 
+        intervals [5]:
+            xmin = 5.227293846274142 
+            xmax = 6.045943310657596 
+            text = "ܡܵܟ݂ܣܵܐ." 
+        intervals [6]:
+            xmin = 6.045943310657596 
+            xmax = 7.234845392702535 
+            text = "ܘܝܲܥܩܘܿܒ݂" 
+        intervals [7]:
+            xmin = 7.234845392702535 
+            xmax = 7.553183164422231 
+            text = "ܒܲܪ" 
+        intervals [8]:
+            xmin = 7.553183164422231 
+            xmax = 8.483898607061873 
+            text = "ܚܲܠܦܲܝ." 
+        intervals [9]:
+            xmin = 8.483898607061873 
+            xmax = 9.714209588597344 
+            text = "ܘܠܲܒܲܝ" 
+        intervals [10]:
+            xmin = 9.714209588597344 
+            xmax = 10.464822082679225 
+            text = "ܕܐܬ݂ܟܲܢܝܼ" 
+        intervals [11]:
+            xmin = 10.464822082679225 
+            xmax = 11.411337868480725 
+            text = "ܬܲܕܲܝ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 11.411337868480725 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.731211983075017 
+            text = "and Pileepos" 
+        intervals [2]:
+            xmin = 1.731211983075017 
+            xmax = 3.1260506424792136 
+            text = "and Bar-Tulmay" 
+        intervals [3]:
+            xmin = 3.1260506424792136 
+            xmax = 4.4611207692953725 
+            text = "and Tooma" 
+        intervals [4]:
+            xmin = 4.4611207692953725 
+            xmax = 5.227293846274142 
+            text = "and Mattai" 
+        intervals [5]:
+            xmin = 5.227293846274142 
+            xmax = 6.045943310657596 
+            text = "the tax-collector" 
+        intervals [6]:
+            xmin = 6.045943310657596 
+            xmax = 7.234845392702535 
+            text = "and Yaqub" 
+        intervals [7]:
+            xmin = 7.234845392702535 
+            xmax = 7.553183164422231 
+            text = "the son" 
+        intervals [8]:
+            xmin = 7.553183164422231 
+            xmax = 8.483898607061873 
+            text = "of Khalpai" 
+        intervals [9]:
+            xmin = 8.483898607061873 
+            xmax = 9.714209588597344 
+            text = "and Lewi" 
+        intervals [10]:
+            xmin = 9.714209588597344 
+            xmax = 10.464822082679225 
+            text = "who was called" 
+        intervals [11]:
+            xmin = 10.464822082679225 
+            xmax = 11.411337868480725 
+            text = "Taddi" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 11.411337868480725 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 11.411337868480725 
+            text = "03" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 11.411337868480725 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 11.411337868480725 
+            text = "DONE" 

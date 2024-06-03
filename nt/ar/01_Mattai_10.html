@@ -9,10 +9,13 @@
 </head>
 
 <body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="spinner"></div>
+  </div>
   <header class="sticky hrow">
     <div class="hcol">
       <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
-        The Preaching of Mattai - IN PROGRESS
+        The Preaching of Mattai
       </div>
       <div class="gridContainer">
         <div>
@@ -220,13 +223,15 @@
             <option value="8" title="Go To Chapter 8">8</option>
             <option value="9" title="Go To Chapter 9">9</option>
             <option value="10" title="Chapter 10" selected>10</option>
+            <option value="11" title="Go To Chapter 11">11</option>
+            <option value="12" title="Go To Chapter 12">12</option>
           </select>&nbsp;&nbsp;
         </span>
         <a href="01_Mattai_11.html" title="Go To Chapter 11">Next&nbsp;&gt;</a>
 
         <a href="./index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
       </div>
-      <div class="srow smaller" style="display:none">
+      <div class="srow smaller">
         <div title="Select Playback Speed">
           <span class="label">
             <label for="speed">Speed</label>
@@ -262,7 +267,7 @@
       <div class="center">
       </div>
     </div>
-    <div lang="syc" class="hcol syr t" style="display:none">
+    <div lang="syc" class="hcol syr t">
       <div class="" title="The preaching of Mattai">
         <span id="book"></span>
       </div>
@@ -808,7 +813,7 @@
           <div id="10-5i" class="eng master">two</div>
         </div>
         <div class="col">
-          <div id="10-6w" lang="syc" class="syr t master">ܟܘܬ݁ܝܼܢ̈ܝܼܢ:</div>
+          <div id="10-6w" lang="syc" class="syr t master">ܟܘܼܬ݁ܝܼܢ̈ܝܼܢ:</div>
           <div id="10-6i" class="eng master">coats</div>
         </div>
         <div class="col">
@@ -2929,5 +2934,12 @@
     <div id="sliderBtn"></div>
   </div>
 
+  <!-- Scripts -->
+  <script src="../../js/howler.core.min.js"></script>
+  <script type="module" src="../../js/player.js"></script>
+  <script type="module">
+    import init from '../../js/site.js';
+    init(1, 10);
+  </script>
 </body>
 </html>
