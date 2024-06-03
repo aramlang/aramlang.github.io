@@ -1,0 +1,1533 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mattai 28</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../css/site.css">
+</head>
+
+<body>
+  <header class="sticky hrow">
+    <div class="hcol">
+      <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
+        The Preaching of Mattai - IN PROGRESS
+      </div>
+      <div class="gridContainer">
+        <div>
+          <span class="label">
+            <input type="checkbox" id="loop" checked title="Repet selected verses">
+            <label for="loop" title="Repet selected verses">Loop&nbsp;Verse</label>
+          </span>
+        </div>
+        <div>
+          <select id="startVerse" title="Start Verse">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <div>
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20" selected>20</option>
+            </select>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          <span class="label">
+            <input type="checkbox" id="chapterLoop" title="Repet selected chapters">
+            <label for="chapterLoop" title="Repet selected chapters">Loop&nbsp;Chapter&nbsp;</label>
+          </span>
+        </div>
+        <div style="visibility:hidden;">
+          <select id="startChapter" title="Start Chapter">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+          </select>
+        </div>
+        <div style="visibility:hidden;">
+          <span class="label">
+            &nbsp;-&nbsp;<select id="endChapter" title="End Chapter">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28" selected>28</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="srow">
+        <div title="Header will float, if checked">
+          <input type="checkbox" id="stickyHeader" checked>
+          <label for="stickyHeader">Float Bar</label>
+        </div>
+        <div title="Select Text Font">
+          <select id="fontFamily">
+            <option value="syr">East Assyrian</option>
+            <option value="ser">Serto</option>
+            <option value="est">Estrangela</option>
+            <option value="heb">Kthav Ashuri</option>
+            <option value="cal">CAL</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="hcol">
+      <div class="center smaller">
+        <a href="./index.html" title="ܦܸܫܝܼܛܬܵܐ">Peshitta</a>
+        <a href="01_Mattai_27.html" title="Go To Chapter 27">&lt;&nbsp;Prev</a>
+        <span class="label" title="Navigate to selected chapter">
+          &nbsp;&nbsp;<select id="gotoChapter">
+            <option value="1" title="Go To Chapter 1">1</option>
+            <option value="2" title="Go To Chapter 2">2</option>
+            <option value="3" title="Go To Chapter 3">3</option>
+            <option value="4" title="Go To Chapter 4">4</option>
+            <option value="5" title="Go To Chapter 5">5</option>
+            <option value="6" title="Go To Chapter 6">6</option>
+            <option value="7" title="Go To Chapter 7">7</option>
+            <option value="8" title="Go To Chapter 8">8</option>
+            <option value="9" title="Go To Chapter 9">9</option>
+            <option value="10" title="Go To Chapter 10">10</option>
+            <option value="11" title="Go To Chapter 11">11</option>
+            <option value="12" title="Go To Chapter 12">12</option>
+            <option value="13" title="Go To Chapter 13">13</option>
+            <option value="14" title="Go To Chapter 14">14</option>
+            <option value="15" title="Go To Chapter 15">15</option>
+            <option value="16" title="Go To Chapter 16">16</option>
+            <option value="17" title="Go To Chapter 17">17</option>
+            <option value="18" title="Go To Chapter 18">18</option>
+            <option value="19" title="Go To Chapter 19">19</option>
+            <option value="20" title="Go To Chapter 20">20</option>
+            <option value="21" title="Go To Chapter 21">21</option>
+            <option value="22" title="Go To Chapter 22">22</option>
+            <option value="23" title="Go To Chapter 23">23</option>
+            <option value="24" title="Go To Chapter 24">24</option>
+            <option value="25" title="Go To Chapter 25">25</option>
+            <option value="26" title="Go To Chapter 26">26</option>
+            <option value="27" title="Go To Chapter 27">27</option>
+            <option value="28" title="Chapter 28" selected>28</option>
+          </select>&nbsp;&nbsp;
+        </span>
+        <a href="01_Mattai_01.html" title="Go To Chapter 1">Next&nbsp;&gt;</a>
+
+        <a href="./index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
+      </div>
+      <div class="srow smaller" style="display:none">
+        <div title="Select Playback Speed">
+          <span class="label">
+            <label for="speed">Speed</label>
+            <select id="speed">
+              <option value="0.5" title="Slow speed">0.50&times;</option>
+              <option value="0.75" title="Slower speed">0.75&times;</option>
+              <option value="1" selected title="Normal speed">Normal</option>
+              <option value="1.25" title="Faster speed">1.25&times;</option>
+              <option value="1.5" title="Fast speed">1.50&times;</option>
+              <option value="1.75" title="Very Fast speed">1.75&times;</option>
+              <option value="2" title="Fastest speed">2.00&times;</option>
+            </select>
+            &nbsp;
+          </span>
+        </div>
+        <!-- Controls -->
+        <div>
+          <div id="loading"></div>
+          <div class="btn" id="playBtn" title="Play Audio"></div>
+          <div class="btn" id="pauseBtn" title="Pause Audio"></div>
+        </div>
+        <div>
+          <div class="btn" id="volumeBtn" style="margin-left: 5px;" title="Audio Volume"></div>
+        </div>
+        <div>
+          <span class="label" title="Pause After Each Word">
+            <span title="Pause After Each Word">&nbsp;Pause</span>
+            <input type="number" min="0" max="100" value="0" id="wordPause">
+            <label for="wordPause" title="Pause After Each Word">Seconds</label>
+          </span>
+        </div>
+      </div>
+      <div class="center">
+      </div>
+    </div>
+    <div lang="syc" class="hcol syr t" style="display:none">
+      <div class="" title="The preaching of Mattai">
+        <span id="book"></span>
+      </div>
+      <div title="Chapter 28">
+        <span id="chapter"></span>
+      </div>
+      <div>
+        <span class="label">
+          <label for="zawae" title="Show/hide vowels and punctuation">
+            <span id="zawaeLabel"></span>
+          </label>
+          <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="clickable">
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="1-0w">ܐ</span></a><br>
+          <a href="#" title="Go Up" class="enn">1</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="1-1w" lang="syc" class="syr t">ܒܪܲܡܫܵܐ</div>
+          <div id="1-1i" class="eng">in the evening</div>
+        </div>
+        <div class="col">
+          <div id="1-2w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="1-2i" class="eng">now</div>
+        </div>
+        <div class="col">
+          <div id="1-3w" lang="syc" class="syr t">ܒܫܲܒ̇ܬ݂ܵܐ.</div>
+          <div id="1-3i" class="eng">of the Sabbath</div>
+        </div>
+        <div class="col">
+          <div id="1-4w" lang="syc" class="syr t">ܕܢܵܓܲܗ</div>
+          <div id="1-4i" class="eng">as it was twilight</div>
+        </div>
+        <div class="col">
+          <div id="1-5w" lang="syc" class="syr t">ܚܲܕ݂ܒܫܲܒܵܐ:</div>
+          <div id="1-5i" class="eng">the first of the week</div>
+        </div>
+        <div class="col">
+          <div id="1-6w" lang="syc" class="syr t">ܐܸܬ݂ܵܬ݂</div>
+          <div id="1-6i" class="eng">came</div>
+        </div>
+        <div class="col">
+          <div id="1-7w" lang="syc" class="syr t">ܡܲܪܝܲܡ</div>
+          <div id="1-7i" class="eng">Maryam</div>
+        </div>
+        <div class="col">
+          <div id="1-8w" lang="syc" class="syr t">ܡܲܓ݂ܕ݂ܠܵܝܬܵܐ</div>
+          <div id="1-8i" class="eng">of Magdala</div>
+        </div>
+        <div class="col">
+          <div id="1-9w" lang="syc" class="syr t">ܘܡܲܪܝܲܡ</div>
+          <div id="1-9i" class="eng">and Maryam</div>
+        </div>
+        <div class="col">
+          <div id="1-10w" lang="syc" class="syr t">ܐ݇ܚܪܹܬ݂ܵܐ.</div>
+          <div id="1-10i" class="eng">the other</div>
+        </div>
+        <div class="col">
+          <div id="1-11w" lang="syc" class="syr t">ܕܢܸܚܙܝܵܢ</div>
+          <div id="1-11i" class="eng">that they might see</div>
+        </div>
+        <div class="col">
+          <div id="1-12w" lang="syc" class="syr t sun">ܩܲܒ݂ܪܵܐ.</div>
+          <div id="1-12i" class="eng">the grave</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="2-0w">ܒ</span></a><br>
+          <a href="#" title="Go Up" class="enn">2</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="2-1w" lang="syc" class="syr t">ܘܗܵܐ</div>
+          <div id="2-1i" class="eng">and behold</div>
+        </div>
+        <div class="col">
+          <div id="2-2w" lang="syc" class="syr t">ܙܵܘܥܵܐ</div>
+          <div id="2-2i" class="eng">an earthquake</div>
+        </div>
+        <div class="col">
+          <div id="2-3w" lang="syc" class="syr t">ܪܲܒܵܐ</div>
+          <div id="2-3i" class="eng">great</div>
+        </div>
+        <div class="col">
+          <div id="2-4w" lang="syc" class="syr t">ܗܘܵܐ.</div>
+          <div id="2-4i" class="eng">occurred</div>
+        </div>
+        <div class="col">
+          <div id="2-5w" lang="syc" class="syr t">ܡܲܠܲܐܟ݂ܐ</div>
+          <div id="2-5i" class="eng">an angel</div>
+        </div>
+        <div class="col">
+          <div id="2-6w" lang="syc" class="syr t">ܓܹܝܪ</div>
+          <div id="2-6i" class="eng">for</div>
+        </div>
+        <div class="col">
+          <div id="2-7w" lang="syc" class="syr t">ܕܡܵܪܝܵܐ</div>
+          <div id="2-7i" class="eng">of the LORD</div>
+        </div>
+        <div class="col">
+          <div id="2-8w" lang="syc" class="syr t">ܢܚܸܬ݂</div>
+          <div id="2-8i" class="eng">descended</div>
+        </div>
+        <div class="col">
+          <div id="2-9w" lang="syc" class="syr t">ܡܸܢ</div>
+          <div id="2-9i" class="eng">from</div>
+        </div>
+        <div class="col">
+          <div id="2-10w" lang="syc" class="syr t">ܫܡܲܝܵܐ:</div>
+          <div id="2-10i" class="eng">heaven</div>
+        </div>
+        <div class="col">
+          <div id="2-11w" lang="syc" class="syr t">ܘܲܩܪܸܒ݂</div>
+          <div id="2-11i" class="eng">and came</div>
+        </div>
+        <div class="col">
+          <div id="2-12w" lang="syc" class="syr t">ܥܲܓܸܠ</div>
+          <div id="2-12i" class="eng">[and] rolled away</div>
+        </div>
+        <div class="col">
+          <div id="2-13w" lang="syc" class="syr t">ܟܹܐܦܵܐ</div>
+          <div id="2-13i" class="eng">the boulder</div>
+        </div>
+        <div class="col">
+          <div id="2-14w" lang="syc" class="syr t">ܡܸܢ</div>
+          <div id="2-14i" class="eng">from</div>
+        </div>
+        <div class="col">
+          <div id="2-15w" lang="syc" class="syr t">ܬܲܪܥܵܐ.</div>
+          <div id="2-15i" class="eng">the entrance</div>
+        </div>
+        <div class="col">
+          <div id="2-16w" lang="syc" class="syr t">ܘܝܵܬܹܒ݂</div>
+          <div id="2-16i" class="eng">and he sitting</div>
+        </div>
+        <div class="col">
+          <div id="2-17w" lang="syc" class="syr t">ܗܘ̣ܵܐ</div>
+          <div id="2-17i" class="eng">was</div>
+        </div>
+        <div class="col">
+          <div id="2-18w" lang="syc" class="syr t sun">ܥܠܹܝܗ̇.</div>
+          <div id="2-18i" class="eng">upon it</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="3-0w">ܓ</span></a><br>
+          <a href="#" title="Go Up" class="enn">3</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="3-1w" lang="syc" class="syr t">ܐܝܼܬ݂ܵܘܗܝ ܗܘ̣ܵܐ</div>
+          <div id="3-1i" class="eng">was</div>
+        </div>
+        <div class="col">
+          <div id="3-2w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="3-2i" class="eng">and</div>
+        </div>
+        <div class="col">
+          <div id="3-3w" lang="syc" class="syr t">ܚܸܙܘܹܗ.</div>
+          <div id="3-3i" class="eng">his appearance</div>
+        </div>
+        <div class="col">
+          <div id="3-4w" lang="syc" class="syr t">ܐܲܝܟ݂</div>
+          <div id="3-4i" class="eng">like</div>
+        </div>
+        <div class="col">
+          <div id="3-5w" lang="syc" class="syr t">ܒܲܪܩܵܐ.</div>
+          <div id="3-5i" class="eng">lightning</div>
+        </div>
+        <div class="col">
+          <div id="3-6w" lang="syc" class="syr t">ܘܲܠܒ݂ܘܼܫܹܗ</div>
+          <div id="3-6i" class="eng">and his clothes</div>
+        </div>
+        <div class="col">
+          <div id="3-7w" lang="syc" class="syr t">ܚܸܘܵܪ</div>
+          <div id="3-7i" class="eng">white</div>
+        </div>
+        <div class="col">
+          <div id="3-8w" lang="syc" class="syr t">ܗ݇ܘܵܐ.</div>
+          <div id="3-8i" class="eng">were</div>
+        </div>
+        <div class="col">
+          <div id="3-9w" lang="syc" class="syr t">ܐܲܝܟ݂</div>
+          <div id="3-9i" class="eng">like</div>
+        </div>
+        <div class="col">
+          <div id="3-10w" lang="syc" class="syr t sun">ܬܲܠܓܵܐ.</div>
+          <div id="3-10i" class="eng">snow</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="4-0w">ܕ</span></a><br>
+          <a href="#" title="Go Up" class="enn">4</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="4-1w" lang="syc" class="syr t">ܘܡܸܢ</div>
+          <div id="4-1i" class="eng">and from</div>
+        </div>
+        <div class="col">
+          <div id="4-2w" lang="syc" class="syr t">ܕܸܚܠܬܹܗ.</div>
+          <div id="4-2i" class="eng">the fear of him</div>
+        </div>
+        <div class="col">
+          <div id="4-3w" lang="syc" class="syr t">ܐܸܬ݁ܬ݁ܙܝܼܥܘ</div>
+          <div id="4-3i" class="eng">trembled</div>
+        </div>
+        <div class="col">
+          <div id="4-4w" lang="syc" class="syr t">ܐܲܝܠܹܝܢ</div>
+          <div id="4-4i" class="eng">those</div>
+        </div>
+        <div class="col">
+          <div id="4-5w" lang="syc" class="syr t">ܕܢܵܛܪܝܼܢ</div>
+          <div id="4-5i" class="eng">who watching</div>
+        </div>
+        <div class="col">
+          <div id="4-6w" lang="syc" class="syr t">ܗ݇ܘܼܵܘ</div>
+          <div id="4-6i" class="eng">were</div>
+        </div>
+        <div class="col">
+          <div id="4-7w" lang="syc" class="syr t">ܘܲܗܘܵܘ</div>
+          <div id="4-7i" class="eng">and they became</div>
+        </div>
+        <div class="col">
+          <div id="4-8w" lang="syc" class="syr t">ܐܲܝܟ݂</div>
+          <div id="4-8i" class="eng">like</div>
+        </div>
+        <div class="col">
+          <div id="4-9w" lang="syc" class="syr t sun">ܡܝܼܬܹ̈ܐ.</div>
+          <div id="4-9i" class="eng">the dead</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="5-0w">ܗ</span></a><br>
+          <a href="#" title="Go Up" class="enn">5</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="5-1w" lang="syc" class="syr t">ܥܢܵܐ</div>
+          <div id="5-1i" class="eng">answered</div>
+        </div>
+        <div class="col">
+          <div id="5-2w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="5-2i" class="eng">but</div>
+        </div>
+        <div class="col">
+          <div id="5-3w" lang="syc" class="syr t">ܡܲܠܲܐܟ݂ܐ.</div>
+          <div id="5-3i" class="eng">the angel</div>
+        </div>
+        <div class="col">
+          <div id="5-4w" lang="syc" class="syr t">ܘܐܸܡܲܪ</div>
+          <div id="5-4i" class="eng">and said</div>
+        </div>
+        <div class="col">
+          <div id="5-5w" lang="syc" class="syr t">ܠܢܸܫܹ̈ܐ.</div>
+          <div id="5-5i" class="eng">to the women</div>
+        </div>
+        <div class="col">
+          <div id="5-6w" lang="syc" class="syr t">ܐܲܢ݇ܬܹ݁ܝܢ</div>
+          <div id="5-6i" class="eng">&lt;you&gt;</div>
+        </div>
+        <div class="col">
+          <div id="5-7w" lang="syc" class="syr t">ܠܵܐ</div>
+          <div id="5-7i" class="eng">do not</div>
+        </div>
+        <div class="col">
+          <div id="5-8w" lang="syc" class="syr t">ܬܸܕ݂ܚܠܵܢ.</div>
+          <div id="5-8i" class="eng">fear</div>
+        </div>
+        <div class="col">
+          <div id="5-9w" lang="syc" class="syr t">ܝܵܕ݂ܲܥ</div>
+          <div id="5-9i" class="eng">know</div>
+        </div>
+        <div class="col">
+          <div id="5-10w" lang="syc" class="syr t">ܐ݇ܢܵܐ</div>
+          <div id="5-10i" class="eng">I</div>
+        </div>
+        <div class="col">
+          <div id="5-11w" lang="syc" class="syr t">ܓܹܝܪ.</div>
+          <div id="5-11i" class="eng">for</div>
+        </div>
+        <div class="col">
+          <div id="5-12w" lang="syc" class="syr t">ܕܲܠܝܼܫܘܿܥ</div>
+          <div id="5-12i" class="eng">that Yeshua</div>
+        </div>
+        <div class="col">
+          <div id="5-13w" lang="syc" class="syr t">ܕܐܙܕܩܸܦ</div>
+          <div id="5-13i" class="eng">who was crucified</div>
+        </div>
+        <div class="col">
+          <div id="5-14w" lang="syc" class="syr t">ܒܵܥܝܵܢ</div>
+          <div id="5-14i" class="eng">seek</div>
+        </div>
+        <div class="col">
+          <div id="5-15w" lang="syc" class="syr t sun">ܐ݇ܢܬܹܝܢ.</div>
+          <div id="5-15i" class="eng">you</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="6-0w">ܘ</span></a><br>
+          <a href="#" title="Go Up" class="enn">6</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="6-1w" lang="syc" class="syr t">ܠܵܐ</div>
+          <div id="6-1i" class="eng">not</div>
+        </div>
+        <div class="col">
+          <div id="6-2w" lang="syc" class="syr t">ܗܘ̣ܵܐ</div>
+          <div id="6-2i" class="eng">he is</div>
+        </div>
+        <div class="col">
+          <div id="6-3w" lang="syc" class="syr t">ܬܢܵܢ.</div>
+          <div id="6-3i" class="eng">here</div>
+        </div>
+        <div class="col">
+          <div id="6-4w" lang="syc" class="syr t">ܩܵܡ</div>
+          <div id="6-4i" class="eng">has risen</div>
+        </div>
+        <div class="col">
+          <div id="6-5w" lang="syc" class="syr t">ܠܹܗ</div>
+          <div id="6-5i" class="eng">he</div>
+        </div>
+        <div class="col">
+          <div id="6-6w" lang="syc" class="syr t">ܓܹܝܪ.</div>
+          <div id="6-6i" class="eng">for</div>
+        </div>
+        <div class="col">
+          <div id="6-7w" lang="syc" class="syr t">ܐܲܝܟܲܢܵܐ</div>
+          <div id="6-7i" class="eng">as</div>
+        </div>
+        <div class="col">
+          <div id="6-8w" lang="syc" class="syr t">ܕܐܸܡܲܪ.</div>
+          <div id="6-8i" class="eng">he said</div>
+        </div>
+        <div class="col">
+          <div id="6-9w" lang="syc" class="syr t">ܬܵܐܝܹܝܢ</div>
+          <div id="6-9i" class="eng">come</div>
+        </div>
+        <div class="col">
+          <div id="6-10w" lang="syc" class="syr t">ܚܙܵܝܹܝܢ</div>
+          <div id="6-10i" class="eng">see</div>
+        </div>
+        <div class="col">
+          <div id="6-11w" lang="syc" class="syr t">ܕܘܟܬ݂ܵܐ.</div>
+          <div id="6-11i" class="eng">the place</div>
+        </div>
+        <div class="col">
+          <div id="6-12w" lang="syc" class="syr t">ܕܣܝܼܡ</div>
+          <div id="6-12i" class="eng">laid</div>
+        </div>
+        <div class="col">
+          <div id="6-13w" lang="syc" class="syr t">ܗܘ̣ܵܐ</div>
+          <div id="6-13i" class="eng">was</div>
+        </div>
+        <div class="col">
+          <div id="6-14w" lang="syc" class="syr t">ܒܵܗ̇</div>
+          <div id="6-14i" class="eng">in which</div>
+        </div>
+        <div class="col">
+          <div id="6-15w" lang="syc" class="syr t sun">:ܡܵܪܲܢ.</div>
+          <div id="6-15i" class="eng">our Lord</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="7-0w">ܙ</span></a><br>
+          <a href="#" title="Go Up" class="enn">7</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="7-1w" lang="syc" class="syr t">ܘܙܸܠܹܝܢ</div>
+          <div id="7-1i" class="eng">now go</div>
+        </div>
+        <div class="col">
+          <div id="7-2w" lang="syc" class="syr t">ܒܲܥܓܲܠ</div>
+          <div id="7-2i" class="eng">quickly</div>
+        </div>
+        <div class="col">
+          <div id="7-3w" lang="syc" class="syr t">ܐܸܡܲ̈ܪܹܝܢ</div>
+          <div id="7-3i" class="eng">[and] tell</div>
+        </div>
+        <div class="col">
+          <div id="7-4w" lang="syc" class="syr t">ܠܬܲܠܡܝܼܕ݂ܵܘ̈ܗܝ</div>
+          <div id="7-4i" class="eng">his disciples</div>
+        </div>
+        <div class="col">
+          <div id="7-5w" lang="syc" class="syr t">ܕܩܵܡ</div>
+          <div id="7-5i" class="eng">that he has risen</div>
+        </div>
+        <div class="col">
+          <div id="7-6w" lang="syc" class="syr t">ܡܸܢ</div>
+          <div id="7-6i" class="eng">from</div>
+        </div>
+        <div class="col">
+          <div id="7-7w" lang="syc" class="syr t">ܒܹܝܬ݂ ܡܝܼܬܹ̈ܐ:</div>
+          <div id="7-7i" class="eng">the dead</div>
+        </div>
+        <div class="col">
+          <div id="7-8w" lang="syc" class="syr t">ܘܗܵܐ</div>
+          <div id="7-8i" class="eng">and behold</div>
+        </div>
+        <div class="col">
+          <div id="7-9w" lang="syc" class="syr t">ܩܵܕ݂ܡ</div>
+          <div id="7-9i" class="eng">he [goes] before</div>
+        </div>
+        <div class="col">
+          <div id="7-10w" lang="syc" class="syr t">ܠܟ݂ܘܿܢ.</div>
+          <div id="7-10i" class="eng">you</div>
+        </div>
+        <div class="col">
+          <div id="7-11w" lang="syc" class="syr t">ܠܲܓ݂ܠܝܼܠܵܐ:</div>
+          <div id="7-11i" class="eng">to Galeela</div>
+        </div>
+        <div class="col">
+          <div id="7-12w" lang="syc" class="syr t">ܬܲܡܵܢ</div>
+          <div id="7-12i" class="eng">there</div>
+        </div>
+        <div class="col">
+          <div id="7-13w" lang="syc" class="syr t">ܬܸܚܙܘܿܢܵܝܗܝ.</div>
+          <div id="7-13i" class="eng">you will see him</div>
+        </div>
+        <div class="col">
+          <div id="7-14w" lang="syc" class="syr t">ܗܵܐ</div>
+          <div id="7-14i" class="eng">behold</div>
+        </div>
+        <div class="col">
+          <div id="7-15w" lang="syc" class="syr t">ܐܸܡܪܹܬ݂</div>
+          <div id="7-15i" class="eng">I have told</div>
+        </div>
+        <div class="col">
+          <div id="7-16w" lang="syc" class="syr t sun">ܠܟܹܝܢ.</div>
+          <div id="7-16i" class="eng">you</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="8-0w">ܚ</span></a><br>
+          <a href="#" title="Go Up" class="enn">8</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="8-1w" lang="syc" class="syr t">ܘܐܸܙܲܠ</div>
+          <div id="8-1i" class="eng">and they departed</div>
+        </div>
+        <div class="col">
+          <div id="8-2w" lang="syc" class="syr t">ܥܓܲܠ</div>
+          <div id="8-2i" class="eng">quickly</div>
+        </div>
+        <div class="col">
+          <div id="8-3w" lang="syc" class="syr t">ܡܸܢ</div>
+          <div id="8-3i" class="eng">from</div>
+        </div>
+        <div class="col">
+          <div id="8-4w" lang="syc" class="syr t">ܩܲܒ݂ܪܵܐ.</div>
+          <div id="8-4i" class="eng">the grave</div>
+        </div>
+        <div class="col">
+          <div id="8-5w" lang="syc" class="syr t">ܒܕ݂ܚܠܬ݂ܵܐ.</div>
+          <div id="8-5i" class="eng">with fear</div>
+        </div>
+        <div class="col">
+          <div id="8-6w" lang="syc" class="syr t">ܘܲܒ݂ܚܲܕ݂ܘܼܬ݂ܵܐ</div>
+          <div id="8-6i" class="eng">and with joy</div>
+        </div>
+        <div class="col">
+          <div id="8-7w" lang="syc" class="syr t">ܪܲܒܬ݂ܵܐ.</div>
+          <div id="8-7i" class="eng">great</div>
+        </div>
+        <div class="col">
+          <div id="8-8w" lang="syc" class="syr t">ܘܪܵܗܛܵܢ</div>
+          <div id="8-8i" class="eng">and were running</div>
+        </div>
+        <div class="col">
+          <div id="8-9w" lang="syc" class="syr t">ܕܢܹܐܡܪܵܢ</div>
+          <div id="8-9i" class="eng">that they might tell</div>
+        </div>
+        <div class="col">
+          <div id="8-10w" lang="syc" class="syr t sun">ܠܬܲܠܡܝܼܕ݂ܵܘ̈ܗܝ.</div>
+          <div id="8-10i" class="eng">his disciples</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="9-0w">ܛ</span></a><br>
+          <a href="#" title="Go Up" class="enn">9</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="9-1w" lang="syc" class="syr t">ܘܗܵܐ</div>
+          <div id="9-1i" class="eng">and behold</div>
+        </div>
+        <div class="col">
+          <div id="9-2w" lang="syc" class="syr t">ܝܼܫܘܿܥ</div>
+          <div id="9-2i" class="eng">Yeshua</div>
+        </div>
+        <div class="col">
+          <div id="9-3w" lang="syc" class="syr t">ܦܓܲܥ</div>
+          <div id="9-3i" class="eng">met up</div>
+        </div>
+        <div class="col">
+          <div id="9-4w" lang="syc" class="syr t">ܒܗܹܝܢ.</div>
+          <div id="9-4i" class="eng">with them</div>
+        </div>
+        <div class="col">
+          <div id="9-5w" lang="syc" class="syr t">ܘܐܸܡܲܪ</div>
+          <div id="9-5i" class="eng">and said</div>
+        </div>
+        <div class="col">
+          <div id="9-6w" lang="syc" class="syr t">ܠܗܹܝܢ.</div>
+          <div id="9-6i" class="eng">to them</div>
+        </div>
+        <div class="col">
+          <div id="9-7w" lang="syc" class="syr t master">ܫܠܵܡ</div>
+          <div id="9-7i" class="eng master">peace</div>
+        </div>
+        <div class="col">
+          <div id="9-8w" lang="syc" class="syr t master">ܠܟܹܝܢ.</div>
+          <div id="9-8i" class="eng master">unto you</div>
+        </div>
+        <div class="col">
+          <div id="9-9w" lang="syc" class="syr t">ܗܸܢܹܝܢ</div>
+          <div id="9-9i" class="eng">they</div>
+        </div>
+        <div class="col">
+          <div id="9-10w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="9-10i" class="eng">and</div>
+        </div>
+        <div class="col">
+          <div id="9-11w" lang="syc" class="syr t">ܩܪܸܒ݂.</div>
+          <div id="9-11i" class="eng">drew near</div>
+        </div>
+        <div class="col">
+          <div id="9-12w" lang="syc" class="syr t">ܐܸܚܲܕ݂</div>
+          <div id="9-12i" class="eng">[and] grabbed</div>
+        </div>
+        <div class="col">
+          <div id="9-13w" lang="syc" class="syr t">̈ܪܸܓ݂ܠܵܘܗܝ.</div>
+          <div id="9-13i" class="eng">his feet</div>
+        </div>
+        <div class="col">
+          <div id="9-14w" lang="syc" class="syr t">ܘܲܣܓܸܕ݂ܝܢ</div>
+          <div id="9-14i" class="eng">and worshipped</div>
+        </div>
+        <div class="col">
+          <div id="9-15w" lang="syc" class="syr t sun">ܠܹܗ.</div>
+          <div id="9-15i" class="eng">him</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="10-0w">ܝ</span></a><br>
+          <a href="#" title="Go Up" class="enn">10</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="10-1w" lang="syc" class="syr t">ܗܵܝܕܹܝܢ</div>
+          <div id="10-1i" class="eng">then</div>
+        </div>
+        <div class="col">
+          <div id="10-2w" lang="syc" class="syr t">ܐܸܡܲܪ</div>
+          <div id="10-2i" class="eng">said</div>
+        </div>
+        <div class="col">
+          <div id="10-3w" lang="syc" class="syr t">ܠܗܹܝܢ</div>
+          <div id="10-3i" class="eng">to them</div>
+        </div>
+        <div class="col">
+          <div id="10-4w" lang="syc" class="syr t">ܝܼܫܘܿܥ.</div>
+          <div id="10-4i" class="eng">Yeshua</div>
+        </div>
+        <div class="col">
+          <div id="10-5w" lang="syc" class="syr t master">ܠܵܐ</div>
+          <div id="10-5i" class="eng master">not</div>
+        </div>
+        <div class="col">
+          <div id="10-6w" lang="syc" class="syr t master">ܬܸܕ݂ܚܠܵܢ.</div>
+          <div id="10-6i" class="eng master">do fear</div>
+        </div>
+        <div class="col">
+          <div id="10-7w" lang="syc" class="syr t master">ܐܸܠܵܐ</div>
+          <div id="10-7i" class="eng master">rather</div>
+        </div>
+        <div class="col">
+          <div id="10-8w" lang="syc" class="syr t master">ܙܸܠܝܢ</div>
+          <div id="10-8i" class="eng master">go</div>
+        </div>
+        <div class="col">
+          <div id="10-9w" lang="syc" class="syr t master">ܐܸܡܲ̈ܪܹܝܢ</div>
+          <div id="10-9i" class="eng master">[and] tell</div>
+        </div>
+        <div class="col">
+          <div id="10-10w" lang="syc" class="syr t master">ܠܲܐܚܲܝ̈:</div>
+          <div id="10-10i" class="eng master">my brothers</div>
+        </div>
+        <div class="col">
+          <div id="10-11w" lang="syc" class="syr t master">ܕܢܹܐܙܠ݇ܘܼܢ</div>
+          <div id="10-11i" class="eng master">to go</div>
+        </div>
+        <div class="col">
+          <div id="10-12w" lang="syc" class="syr t master">ܠܲܓ݂ܠܝܼܠܵܐ.</div>
+          <div id="10-12i" class="eng master">to Galeela</div>
+        </div>
+        <div class="col">
+          <div id="10-13w" lang="syc" class="syr t master">ܘܬܲܡܵܢ</div>
+          <div id="10-13i" class="eng master">and there</div>
+        </div>
+        <div class="col">
+          <div id="10-14w" lang="syc" class="syr t master sun">ܢܸܚܙܘܿܢܵܢܝ.</div>
+          <div id="10-14i" class="eng master">they will see me</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="11-0w">ܝܐ</span></a><br>
+          <a href="#" title="Go Up" class="enn">11</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="11-1w" lang="syc" class="syr t">ܟܲܕ݂</div>
+          <div id="11-1i" class="eng">when</div>
+        </div>
+        <div class="col">
+          <div id="11-2w" lang="syc" class="syr t">ܐܸܙܲܠܹܝ̈ܢ</div>
+          <div id="11-2i" class="eng">they had departed</div>
+        </div>
+        <div class="col">
+          <div id="11-3w" lang="syc" class="syr t">ܕܹܝܢ:</div>
+          <div id="11-3i" class="eng">now</div>
+        </div>
+        <div class="col">
+          <div id="11-4w" lang="syc" class="syr t">ܐܸܬ݂ܵܘ</div>
+          <div id="11-4i" class="eng">came</div>
+        </div>
+        <div class="col">
+          <div id="11-5w" lang="syc" class="syr t">ܐ݇ܢܵܫܵܐ</div>
+          <div id="11-5i" class="eng">some men</div>
+        </div>
+        <div class="col">
+          <div id="11-6w" lang="syc" class="syr t">ܡܸܢ</div>
+          <div id="11-6i" class="eng">from</div>
+        </div>
+        <div class="col">
+          <div id="11-7w" lang="syc" class="syr t">ܩܸܣܛܘܼܢܵ̈ܪܹܐ</div>
+          <div id="11-7i" class="eng">soldiers</div>
+        </div>
+        <div class="col">
+          <div id="11-8w" lang="syc" class="syr t">ܗܵܢܘܿܢ</div>
+          <div id="11-8i" class="eng">those</div>
+        </div>
+        <div class="col">
+          <div id="11-9w" lang="syc" class="syr t">ܠܲܡܕ݂ܝܼܢ݇ܬܵܐ:</div>
+          <div id="11-9i" class="eng">to the city</div>
+        </div>
+        <div class="col">
+          <div id="11-10w" lang="syc" class="syr t">ܘܐܸܡܲܪܘ</div>
+          <div id="11-10i" class="eng">and told</div>
+        </div>
+        <div class="col">
+          <div id="11-11w" lang="syc" class="syr t">ܠ̈ܪܲܒܲܝ</div>
+          <div id="11-11i" class="eng">the chief</div>
+        </div>
+        <div class="col">
+          <div id="11-12w" lang="syc" class="syr t">ܟܵܗܢܹ̈ܐ</div>
+          <div id="11-12i" class="eng">priests</div>
+        </div>
+        <div class="col">
+          <div id="11-13w" lang="syc" class="syr t">ܟܠܡܸܕܸܡ</div>
+          <div id="11-13i" class="eng">every thing</div>
+        </div>
+        <div class="col">
+          <div id="11-14w" lang="syc" class="syr t sun">ܕܲܗܘܵܐ.</div>
+          <div id="11-14i" class="eng">that happened</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="12-0w">ܝܒ</span></a><br>
+          <a href="#" title="Go Up" class="enn">12</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="12-1w" lang="syc" class="syr t">ܘܐܸܬ݂ܟܲܢܲܫܘ</div>
+          <div id="12-1i" class="eng">and they were assembled</div>
+        </div>
+        <div class="col">
+          <div id="12-2w" lang="syc" class="syr t">ܥܲܡ</div>
+          <div id="12-2i" class="eng">with</div>
+        </div>
+        <div class="col">
+          <div id="12-3w" lang="syc" class="syr t">ܩܲܫܝܼܫܹ̈ܐ.</div>
+          <div id="12-3i" class="eng">the elders</div>
+        </div>
+        <div class="col">
+          <div id="12-4w" lang="syc" class="syr t">ܘܲܢܣܲܒ݂ܘ</div>
+          <div id="12-4i" class="eng">and they took</div>
+        </div>
+        <div class="col">
+          <div id="12-5w" lang="syc" class="syr t">ܡܸܠܟܵܐ.</div>
+          <div id="12-5i" class="eng">counsel</div>
+        </div>
+        <div class="col">
+          <div id="12-6w" lang="syc" class="syr t">ܘܝܲܗ݇ܒ݂ܘ</div>
+          <div id="12-6i" class="eng">and they gave</div>
+        </div>
+        <div class="col">
+          <div id="12-7w" lang="syc" class="syr t">ܟܸܣܦܵܐ</div>
+          <div id="12-7i" class="eng">[of] money</div>
+        </div>
+        <div class="col">
+          <div id="12-8w" lang="syc" class="syr t">ܠܵܐ ܙܥܘܿܪ</div>
+          <div id="12-8i" class="eng">not a small [amount]</div>
+        </div>
+        <div class="col">
+          <div id="12-9w" lang="syc" class="syr t sun">ܠܩܸܣܛܘܼܢܵ̈ܪܹܐ.</div>
+          <div id="12-9i" class="eng">to the soldiers</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="13-0w">ܝܓ</span></a><br>
+          <a href="#" title="Go Up" class="enn">13</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="13-1w" lang="syc" class="syr t">ܘܐܵܡܪܝܼܢ</div>
+          <div id="13-1i" class="eng">and they said</div>
+        </div>
+        <div class="col">
+          <div id="13-2w" lang="syc" class="syr t">ܠܗܘܿܢ.</div>
+          <div id="13-2i" class="eng">to them</div>
+        </div>
+        <div class="col">
+          <div id="13-3w" lang="syc" class="syr t">ܐܸܡܲܪܘ:</div>
+          <div id="13-3i" class="eng">say</div>
+        </div>
+        <div class="col">
+          <div id="13-4w" lang="syc" class="syr t">ܕܬܲܠܡܝܼܕ݂ܵܘ̈ܗܝ</div>
+          <div id="13-4i" class="eng">that his disciples</div>
+        </div>
+        <div class="col">
+          <div id="13-5w" lang="syc" class="syr t">ܐܸܬ݂ܘ</div>
+          <div id="13-5i" class="eng">came</div>
+        </div>
+        <div class="col">
+          <div id="13-6w" lang="syc" class="syr t">ܓܲܢܒ̇ܘܼܗܝ</div>
+          <div id="13-6i" class="eng">[and] stole him</div>
+        </div>
+        <div class="col">
+          <div id="13-7w" lang="syc" class="syr t">ܒܠܸܠܝܵܐ.</div>
+          <div id="13-7i" class="eng">in the night</div>
+        </div>
+        <div class="col">
+          <div id="13-8w" lang="syc" class="syr t">ܟܲܕ݂</div>
+          <div id="13-8i" class="eng">while</div>
+        </div>
+        <div class="col">
+          <div id="13-9w" lang="syc" class="syr t">ܕܲܡܟ݁ܝܼܢ</div>
+          <div id="13-9i" class="eng">were sleeping</div>
+        </div>
+        <div class="col">
+          <div id="13-10w" lang="syc" class="syr t sun">ܚ݇ܢܲܢ.</div>
+          <div id="13-10i" class="eng">we</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="14-0w">ܝܕ</span></a><br>
+          <a href="#" title="Go Up" class="enn">14</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="14-1w" lang="syc" class="syr t">ܘܐܸܢ</div>
+          <div id="14-1i" class="eng">and if</div>
+        </div>
+        <div class="col">
+          <div id="14-2w" lang="syc" class="syr t">ܐܸܫܬܲܡܥܲܬܸ</div>
+          <div id="14-2i" class="eng">is heard</div>
+        </div>
+        <div class="col">
+          <div id="14-3w" lang="syc" class="syr t">ܗܵܕܹܐ</div>
+          <div id="14-3i" class="eng">this</div>
+        </div>
+        <div class="col">
+          <div id="14-4w" lang="syc" class="syr t">ܩܕ݂ܵܡ</div>
+          <div id="14-4i" class="eng">before</div>
+        </div>
+        <div class="col">
+          <div id="14-5w" lang="syc" class="syr t">ܗܸܓ݂ܡܘܿܢܵܐ:</div>
+          <div id="14-5i" class="eng">the governor</div>
+        </div>
+        <div class="col">
+          <div id="14-6w" lang="syc" class="syr t">ܚܢܲܢ</div>
+          <div id="14-6i" class="eng">&lt;we&gt;</div>
+        </div>
+        <div class="col">
+          <div id="14-7w" lang="syc" class="syr t">ܡܦܝܼܣܝܼܢ</div>
+          <div id="14-7i" class="eng">will persuade</div>
+        </div>
+        <div class="col">
+          <div id="14-8w" lang="syc" class="syr t">ܚ݇ܢܲܢ</div>
+          <div id="14-8i" class="eng">we</div>
+        </div>
+        <div class="col">
+          <div id="14-9w" lang="syc" class="syr t">ܠܹܗ.</div>
+          <div id="14-9i" class="eng">him</div>
+        </div>
+        <div class="col">
+          <div id="14-10w" lang="syc" class="syr t">ܘܲܠܟ݂ܘܿܢ.</div>
+          <div id="14-10i" class="eng">and for you</div>
+        </div>
+        <div class="col">
+          <div id="14-11w" lang="syc" class="syr t">ܕܠܵܐ</div>
+          <div id="14-11i" class="eng">not</div>
+        </div>
+        <div class="col">
+          <div id="14-12w" lang="syc" class="syr t">ܨܸܦܬ݂ܵܐ</div>
+          <div id="14-12i" class="eng">trouble</div>
+        </div>
+        <div class="col">
+          <div id="14-13w" lang="syc" class="syr t">ܥܵܒ݂ܕ݂ܝܼܢ</div>
+          <div id="14-13i" class="eng">will make</div>
+        </div>
+        <div class="col">
+          <div id="14-14w" lang="syc" class="syr t sun">ܚ݇ܢܲܢ.</div>
+          <div id="14-14i" class="eng">we</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="15-0w">ܝܗ</span></a><br>
+          <a href="#" title="Go Up" class="enn">15</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="15-1w" lang="syc" class="syr t">ܗܸܢܘܿܢ</div>
+          <div id="15-1i" class="eng">they</div>
+        </div>
+        <div class="col">
+          <div id="15-2w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="15-2i" class="eng">and</div>
+        </div>
+        <div class="col">
+          <div id="15-3w" lang="syc" class="syr t">ܟܲܕ݂</div>
+          <div id="15-3i" class="eng">when</div>
+        </div>
+        <div class="col">
+          <div id="15-4w" lang="syc" class="syr t">ܢܣܲܒ݂ܘ</div>
+          <div id="15-4i" class="eng">they took</div>
+        </div>
+        <div class="col">
+          <div id="15-5w" lang="syc" class="syr t">ܟܸܣܦܵܐ.</div>
+          <div id="15-5i" class="eng">the money</div>
+        </div>
+        <div class="col">
+          <div id="15-6w" lang="syc" class="syr t">ܥܒܲܕ݂ܘ</div>
+          <div id="15-6i" class="eng">did</div>
+        </div>
+        <div class="col">
+          <div id="15-7w" lang="syc" class="syr t">ܐܲܝܟ݂</div>
+          <div id="15-7i" class="eng">as</div>
+        </div>
+        <div class="col">
+          <div id="15-8w" lang="syc" class="syr t">ܕܐܲܠܸܦܘ</div>
+          <div id="15-8i" class="eng">they had instructed</div>
+        </div>
+        <div class="col">
+          <div id="15-9w" lang="syc" class="syr t">ܐܸܢܘܿܢ.</div>
+          <div id="15-9i" class="eng">them</div>
+        </div>
+        <div class="col">
+          <div id="15-10w" lang="syc" class="syr t">ܘܢܸܦܩܲܬ݂</div>
+          <div id="15-10i" class="eng">and has gone out</div>
+        </div>
+        <div class="col">
+          <div id="15-11w" lang="syc" class="syr t">ܡܸܠܬ݂ܵܐ</div>
+          <div id="15-11i" class="eng">word</div>
+        </div>
+        <div class="col">
+          <div id="15-12w" lang="syc" class="syr t">ܗܵܕܹܐ</div>
+          <div id="15-12i" class="eng">this</div>
+        </div>
+        <div class="col">
+          <div id="15-13w" lang="syc" class="syr t">ܒܹܝܬ݂</div>
+          <div id="15-13i" class="eng">among</div>
+        </div>
+        <div class="col">
+          <div id="15-14w" lang="syc" class="syr t">ܝܗ݇ܘܼܕ݂ܵܝܹ̈ܐ.</div>
+          <div id="15-14i" class="eng">the Jews</div>
+        </div>
+        <div class="col">
+          <div id="15-15w" lang="syc" class="syr t">ܥܕ݂ܲܡܵܐ</div>
+          <div id="15-15i" class="eng">to</div>
+        </div>
+        <div class="col">
+          <div id="15-16w" lang="syc" class="syr t sun">ܠܝܵܘܡܵܢܵܐ.</div>
+          <div id="15-16i" class="eng">this day</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="16-0w">ܝܘ</span></a><br>
+          <a href="#" title="Go Up" class="enn">16</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="16-1w" lang="syc" class="syr t">ܬܲܠܡܝܼܕ݂ܹ̈ܐ</div>
+          <div id="16-1i" class="eng">the disciples</div>
+        </div>
+        <div class="col">
+          <div id="16-2w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="16-2i" class="eng">now</div>
+        </div>
+        <div class="col">
+          <div id="16-3w" lang="syc" class="syr t">ܚܕ݂ܲܥܣܲܪ</div>
+          <div id="16-3i" class="eng">the eleven</div>
+        </div>
+        <div class="col">
+          <div id="16-4w" lang="syc" class="syr t">ܐܸܙܲܠܘ</div>
+          <div id="16-4i" class="eng">went</div>
+        </div>
+        <div class="col">
+          <div id="16-5w" lang="syc" class="syr t">ܠܲܓ݂ܠܝܼܠܵܐ</div>
+          <div id="16-5i" class="eng">to Galeela</div>
+        </div>
+        <div class="col">
+          <div id="16-6w" lang="syc" class="syr t">ܠܛܘܼܪܵܐ.</div>
+          <div id="16-6i" class="eng">to the mountain</div>
+        </div>
+        <div class="col">
+          <div id="16-7w" lang="syc" class="syr t">ܐܲܝܟܵܐ</div>
+          <div id="16-7i" class="eng">where</div>
+        </div>
+        <div class="col">
+          <div id="16-8w" lang="syc" class="syr t">ܕܘܲܥܸܕ݂</div>
+          <div id="16-8i" class="eng">had arranged to meet</div>
+        </div>
+        <div class="col">
+          <div id="16-9w" lang="syc" class="syr t">ܐܸܢܘܿܢ</div>
+          <div id="16-9i" class="eng">[for] them</div>
+        </div>
+        <div class="col">
+          <div id="16-10w" lang="syc" class="syr t sun">ܝܼܫܘܿܥ.</div>
+          <div id="16-10i" class="eng">Yeshua</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="17-0w">ܝܙ</span></a><br>
+          <a href="#" title="Go Up" class="enn">17</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="17-1w" lang="syc" class="syr t">ܘܟܲܕ݂</div>
+          <div id="17-1i" class="eng">and when</div>
+        </div>
+        <div class="col">
+          <div id="17-2w" lang="syc" class="syr t">ܚܙܵܐܘܼܗܝ.</div>
+          <div id="17-2i" class="eng">they saw him</div>
+        </div>
+        <div class="col">
+          <div id="17-3w" lang="syc" class="syr t">ܣܓܸܕ݂ܘ</div>
+          <div id="17-3i" class="eng">they worshipped</div>
+        </div>
+        <div class="col">
+          <div id="17-4w" lang="syc" class="syr t">ܠܹܗ.</div>
+          <div id="17-4i" class="eng">him</div>
+        </div>
+        <div class="col">
+          <div id="17-5w" lang="syc" class="syr t">ܡܸܢܗܘܿܢ</div>
+          <div id="17-5i" class="eng">some of them</div>
+        </div>
+        <div class="col">
+          <div id="17-6w" lang="syc" class="syr t">ܕܹܝܢ</div>
+          <div id="17-6i" class="eng">but</div>
+        </div>
+        <div class="col">
+          <div id="17-7w" lang="syc" class="syr t">ܐܸܬ݂ܦܲܠܲܓ݂ܘ</div>
+          <div id="17-7i" class="eng">doubting</div>
+        </div>
+        <div class="col">
+          <div id="17-8w" lang="syc" class="syr t sun">ܗ݇ܘܼܵܘ.</div>
+          <div id="17-8i" class="eng">were</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="18-0w">ܝܚ</span></a><br>
+          <a href="#" title="Go Up" class="enn">18</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="18-1w" lang="syc" class="syr t">ܘܲܩܪܸܒ݂</div>
+          <div id="18-1i" class="eng">and drew near</div>
+        </div>
+        <div class="col">
+          <div id="18-2w" lang="syc" class="syr t">ܝܼܫܘܿܥ</div>
+          <div id="18-2i" class="eng">Yeshua</div>
+        </div>
+        <div class="col">
+          <div id="18-3w" lang="syc" class="syr t">ܡܲܠܸܠ</div>
+          <div id="18-3i" class="eng">and spoke</div>
+        </div>
+        <div class="col">
+          <div id="18-4w" lang="syc" class="syr t">ܥܲܡܗܘܿܢ.</div>
+          <div id="18-4i" class="eng">with them</div>
+        </div>
+        <div class="col">
+          <div id="18-5w" lang="syc" class="syr t">ܘܐܸܡܲܪ</div>
+          <div id="18-5i" class="eng">and said</div>
+        </div>
+        <div class="col">
+          <div id="18-6w" lang="syc" class="syr t">ܠܗܘܿܢ.</div>
+          <div id="18-6i" class="eng">to them</div>
+        </div>
+        <div class="col">
+          <div id="18-7w" lang="syc" class="syr t master">ܐܸܬ݂ܝܼܗܸܒ݂</div>
+          <div id="18-7i" class="eng master">is given</div>
+        </div>
+        <div class="col">
+          <div id="18-8w" lang="syc" class="syr t master">ܠܝܼ</div>
+          <div id="18-8i" class="eng master">to me</div>
+        </div>
+        <div class="col">
+          <div id="18-9w" lang="syc" class="syr t master">ܟܠ</div>
+          <div id="18-9i" class="eng master">all</div>
+        </div>
+        <div class="col">
+          <div id="18-10w" lang="syc" class="syr t master">ܫܘܼܠܛܵܢ</div>
+          <div id="18-10i" class="eng master">authority</div>
+        </div>
+        <div class="col">
+          <div id="18-11w" lang="syc" class="syr t master">ܒܲܫܡܲܝܵܐ</div>
+          <div id="18-11i" class="eng master">in heaven</div>
+        </div>
+        <div class="col">
+          <div id="18-12w" lang="syc" class="syr t master">ܘܒܲܐܪܥܵܐ.</div>
+          <div id="18-12i" class="eng master">and on earth</div>
+        </div>
+        <div class="col">
+          <div id="18-13w" lang="syc" class="syr t master">ܘܐܲܝܟܲܢܵܐ</div>
+          <div id="18-13i" class="eng master">and as</div>
+        </div>
+        <div class="col">
+          <div id="18-14w" lang="syc" class="syr t master">ܕܫܲܕܪܲܢܝ</div>
+          <div id="18-14i" class="eng master">has sent me</div>
+        </div>
+        <div class="col">
+          <div id="18-15w" lang="syc" class="syr t master">ܐܵܒ݂ܝ.</div>
+          <div id="18-15i" class="eng master">my Father</div>
+        </div>
+        <div class="col">
+          <div id="18-16w" lang="syc" class="syr t master">ܡܫܲܕܲܪ</div>
+          <div id="18-16i" class="eng master">send</div>
+        </div>
+        <div class="col">
+          <div id="18-17w" lang="syc" class="syr t master">ܐ݇ܢܵܐ</div>
+          <div id="18-17i" class="eng master">I</div>
+        </div>
+        <div class="col">
+          <div id="18-18w" lang="syc" class="syr t master sun">ܠܟ݂ܘܿܢ.</div>
+          <div id="18-18i" class="eng master">you</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="19-0w">ܝܛ</span></a><br>
+          <a href="#" title="Go Up" class="enn">19</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="19-1w" lang="syc" class="syr t master">ܙܸܠܘ</div>
+          <div id="19-1i" class="eng master">go</div>
+        </div>
+        <div class="col">
+          <div id="19-2w" lang="syc" class="syr t master">ܗܵܟܹܝܠ</div>
+          <div id="19-2i" class="eng master">therefore</div>
+        </div>
+        <div class="col">
+          <div id="19-3w" lang="syc" class="syr t master">ܬܲܠܡܸܕ݂ܘ.</div>
+          <div id="19-3i" class="eng master">make disciples</div>
+        </div>
+        <div class="col">
+          <div id="19-4w" lang="syc" class="syr t master">ܟܠܗܘܿܢ</div>
+          <div id="19-4i" class="eng master">[of] all</div>
+        </div>
+        <div class="col">
+          <div id="19-5w" lang="syc" class="syr t master">ܥܲܡ̈ܡܹܐ.</div>
+          <div id="19-5i" class="eng master">nations</div>
+        </div>
+        <div class="col">
+          <div id="19-6w" lang="syc" class="syr t master">ܘܐܲܥܡܸܕ݂ܘ</div>
+          <div id="19-6i" class="eng master">and baptize</div>
+        </div>
+        <div class="col">
+          <div id="19-7w" lang="syc" class="syr t master">ܐܸܢܘܿܢ</div>
+          <div id="19-7i" class="eng master"> them</div>
+        </div>
+        <div class="col">
+          <div id="19-8w" lang="syc" class="syr t master">ܒܫܸܡ</div>
+          <div id="19-8i" class="eng master">in the name</div>
+        </div>
+        <div class="col">
+          <div id="19-9w" lang="syc" class="syr t master">ܐܲܒ݂ܵܐ</div>
+          <div id="19-9i" class="eng master">[of] the Father</div>
+        </div>
+        <div class="col">
+          <div id="19-10w" lang="syc" class="syr t master">ܘܲܒ݂ܪܵܐ.</div>
+          <div id="19-10i" class="eng master">and [of] the Son</div>
+        </div>
+        <div class="col">
+          <div id="19-11w" lang="syc" class="syr t master">ܘܪܘܼܚܵܐ</div>
+          <div id="19-11i" class="eng master">and [of] the Spirit</div>
+        </div>
+        <div class="col">
+          <div id="19-12w" lang="syc" class="syr t master sun">ܕܩܘܼܕ݂ܫܵܐ.</div>
+          <div id="19-12i" class="eng master">Holy</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verse">
+      <div class="verse-number">
+        <div class="no">
+          <a href="#" title="Go Up" lang="syc" class="syr r"><span id="20-0w">ܟ</span></a><br>
+          <a href="#" title="Go Up" class="enn">20</a>
+        </div>
+      </div>
+      <div class="verse-text">
+        <div class="col">
+          <div id="20-1w" lang="syc" class="syr t master">ܘܐܲܠܸܦܘ</div>
+          <div id="20-1i" class="eng master">and teach</div>
+        </div>
+        <div class="col">
+          <div id="20-2w" lang="syc" class="syr t master">ܐܸܢܘܿܢ.</div>
+          <div id="20-2i" class="eng master">them</div>
+        </div>
+        <div class="col">
+          <div id="20-3w" lang="syc" class="syr t master">ܕܢܸܛܪܘܼܢ</div>
+          <div id="20-3i" class="eng master">to keep</div>
+        </div>
+        <div class="col">
+          <div id="20-4w" lang="syc" class="syr t master">ܟܠܡܵܐ</div>
+          <div id="20-4i" class="eng master">all that</div>
+        </div>
+        <div class="col">
+          <div id="20-5w" lang="syc" class="syr t master">ܕܦܲܩܸܕ݂ܬ݁ܟ݂ܘܿܢ.</div>
+          <div id="20-5i" class="eng master">I have commanded you</div>
+        </div>
+        <div class="col">
+          <div id="20-6w" lang="syc" class="syr t master">ܘܗܵܐ</div>
+          <div id="20-6i" class="eng master">and behold</div>
+        </div>
+        <div class="col">
+          <div id="20-7w" lang="syc" class="syr t master">ܐܸܢܵܐ</div>
+          <div id="20-7i" class="eng master">&lt;I&gt;</div>
+        </div>
+        <div class="col">
+          <div id="20-8w" lang="syc" class="syr t master">ܥܲܡܟ݂ܘܿܢ</div>
+          <div id="20-8i" class="eng master">[am] with you</div>
+        </div>
+        <div class="col">
+          <div id="20-9w" lang="syc" class="syr t master">ܐ݇ܢܵܐ</div>
+          <div id="20-9i" class="eng master">I</div>
+        </div>
+        <div class="col">
+          <div id="20-10w" lang="syc" class="syr t master">ܟܠܗܘܿܢ</div>
+          <div id="20-10i" class="eng master">all</div>
+        </div>
+        <div class="col">
+          <div id="20-11w" lang="syc" class="syr t master">ܝܵܘ̈ܡܵܬ݂ܵܐ</div>
+          <div id="20-11i" class="eng master">the days</div>
+        </div>
+        <div class="col">
+          <div id="20-12w" lang="syc" class="syr t master">ܥܕ݂ܲܡܵܐ</div>
+          <div id="20-12i" class="eng master">until</div>
+        </div>
+        <div class="col">
+          <div id="20-13w" lang="syc" class="syr t master">ܠܫܘܼܠܵܡܹܗ</div>
+          <div id="20-13i" class="eng master">the end</div>
+        </div>
+        <div class="col">
+          <div id="20-14w" lang="syc" class="syr t master">ܕܥܵܠܡܵܐ.</div>
+          <div id="20-14i" class="eng master">of the world</div>
+        </div>
+        <div class="col">
+          <div id="20-15w" lang="syc" class="syr t sun">ܐܵܡܝܼܢ.</div>
+          <div id="20-15i" class="eng">Amen</div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </main>
+  <hr>
+  <p class="nfo">
+    For script mapping help, see <a href="https://peshitta.github.io/help" target="_blank"
+      title="Script Help">https://peshitta.github.io/help</a>
+  </p>
+
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
+
+</body>
+</html>
