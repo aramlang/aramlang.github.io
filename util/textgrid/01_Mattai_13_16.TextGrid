@@ -1,0 +1,130 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 7.395487528344671 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 7.395487528344671 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.682939794275198 
+            text = "dyilk,wOn" 
+        intervals [2]:
+            xmin = 1.682939794275198 
+            xmax = 1.9205004859086492 
+            text = "deyn" 
+        intervals [3]:
+            xmin = 1.9205004859086492 
+            xmax = 2.753092173806459 
+            text = "Twubayheyn" 
+        intervals [4]:
+            xmin = 2.753092173806459 
+            xmax = 3.584223792080935 
+            text = "l(aynay*kwOn" 
+        intervals [5]:
+            xmin = 3.584223792080935 
+            xmax = 4.514818594104308 
+            text = "dxozyon*." 
+        intervals [6]:
+            xmin = 4.514818594104308 
+            xmax = 6.258177402648302 
+            text = "w)lEd,nay*kwOn" 
+        intervals [7]:
+            xmin = 6.258177402648302 
+            xmax = 7.395487528344671 
+            text = "d$om*(on." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 7.395487528344671 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.682939794275198 
+            text = "ܕܝܼܠܟ݂ܘܿܢ" 
+        intervals [2]:
+            xmin = 1.682939794275198 
+            xmax = 1.9205004859086492 
+            text = "ܕܹܝܢ" 
+        intervals [3]:
+            xmin = 1.9205004859086492 
+            xmax = 2.753092173806459 
+            text = "ܛܘܼܒܲܝܗܹܝܢ" 
+        intervals [4]:
+            xmin = 2.753092173806459 
+            xmax = 3.584223792080935 
+            text = "ܠܥܲܝܢܲܝ̈ܟܘܿܢ" 
+        intervals [5]:
+            xmin = 3.584223792080935 
+            xmax = 4.514818594104308 
+            text = "ܕܚܵܙܝܵܢ̈." 
+        intervals [6]:
+            xmin = 4.514818594104308 
+            xmax = 6.258177402648302 
+            text = "ܘܐܠܸܕ݂ܢܲܝ̈ܟܘܿܢ" 
+        intervals [7]:
+            xmin = 6.258177402648302 
+            xmax = 7.395487528344671 
+            text = "ܕܫܵܡ̈ܥܵܢ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 7.395487528344671 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.682939794275198 
+            text = "to you" 
+        intervals [2]:
+            xmin = 1.682939794275198 
+            xmax = 1.9205004859086492 
+            text = "but" 
+        intervals [3]:
+            xmin = 1.9205004859086492 
+            xmax = 2.753092173806459 
+            text = "are blessed" 
+        intervals [4]:
+            xmin = 2.753092173806459 
+            xmax = 3.584223792080935 
+            text = "your eyes" 
+        intervals [5]:
+            xmin = 3.584223792080935 
+            xmax = 4.514818594104308 
+            text = "that see" 
+        intervals [6]:
+            xmin = 4.514818594104308 
+            xmax = 6.258177402648302 
+            text = "and your ears" 
+        intervals [7]:
+            xmin = 6.258177402648302 
+            xmax = 7.395487528344671 
+            text = "that hear" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 7.395487528344671 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.395487528344671 
+            text = "16" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 7.395487528344671 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.395487528344671 
+            text = "DONE" 

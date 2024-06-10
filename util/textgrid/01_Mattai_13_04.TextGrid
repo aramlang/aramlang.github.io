@@ -1,0 +1,166 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.582743764172335 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 8.582743764172335 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.586445308282043 
+            text = "wkad," 
+        intervals [2]:
+            xmin = 1.586445308282043 
+            xmax = 2.5168424036281176 
+            text = "zra(:" 
+        intervals [3]:
+            xmin = 2.5168424036281176 
+            xmax = 3.348298779829392 
+            text = ")yit," 
+        intervals [4]:
+            xmin = 3.348298779829392 
+            xmax = 3.9125165833968443 
+            text = "danpal" 
+        intervals [5]:
+            xmin = 3.9125165833968443 
+            xmax = 4.112982581921657 
+            text = "(al" 
+        intervals [6]:
+            xmin = 4.112982581921657 
+            xmax = 4.397955006564029 
+            text = "yad," 
+        intervals [7]:
+            xmin = 4.397955006564029 
+            xmax = 5.324402872260015 
+            text = ")wurxo):" 
+        intervals [8]:
+            xmin = 5.324402872260015 
+            xmax = 6.5483503401360545 
+            text = "w)Et,ot," 
+        intervals [9]:
+            xmin = 6.5483503401360545 
+            xmax = 7.339555334328853 
+            text = "poraxt,o)" 
+        intervals [10]:
+            xmin = 7.339555334328853 
+            xmax = 8.582743764172335 
+            text = "w)Ekalteh." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 8.582743764172335 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.586445308282043 
+            text = "ܘܟܲܕ݂" 
+        intervals [2]:
+            xmin = 1.586445308282043 
+            xmax = 2.5168424036281176 
+            text = "ܙܪܲܥ:" 
+        intervals [3]:
+            xmin = 2.5168424036281176 
+            xmax = 3.348298779829392 
+            text = "ܐܝܼܬ݂" 
+        intervals [4]:
+            xmin = 3.348298779829392 
+            xmax = 3.9125165833968443 
+            text = "ܕܲܢܦܲܠ" 
+        intervals [5]:
+            xmin = 3.9125165833968443 
+            xmax = 4.112982581921657 
+            text = "ܥܲܠ" 
+        intervals [6]:
+            xmin = 4.112982581921657 
+            xmax = 4.397955006564029 
+            text = "ܝܲܕ݂" 
+        intervals [7]:
+            xmin = 4.397955006564029 
+            xmax = 5.324402872260015 
+            text = "ܐܘܼܪܚܵܐ:" 
+        intervals [8]:
+            xmin = 5.324402872260015 
+            xmax = 6.5483503401360545 
+            text = "ܘܐܸܬ݂ܵܬ݂" 
+        intervals [9]:
+            xmin = 6.5483503401360545 
+            xmax = 7.339555334328853 
+            text = "ܦܵܪܲܚܬ݂ܵܐ" 
+        intervals [10]:
+            xmin = 7.339555334328853 
+            xmax = 8.582743764172335 
+            text = "ܘܐܸܟܲܠܬܹܗ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.582743764172335 
+        intervals: size = 10 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.586445308282043 
+            text = "and while" 
+        intervals [2]:
+            xmin = 1.586445308282043 
+            xmax = 2.5168424036281176 
+            text = "he was sowing" 
+        intervals [3]:
+            xmin = 2.5168424036281176 
+            xmax = 3.348298779829392 
+            text = "there was some" 
+        intervals [4]:
+            xmin = 3.348298779829392 
+            xmax = 3.9125165833968443 
+            text = "that fell" 
+        intervals [5]:
+            xmin = 3.9125165833968443 
+            xmax = 4.112982581921657 
+            text = "upon" 
+        intervals [6]:
+            xmin = 4.112982581921657 
+            xmax = 4.397955006564029 
+            text = "the side of" 
+        intervals [7]:
+            xmin = 4.397955006564029 
+            xmax = 5.324402872260015 
+            text = "the road" 
+        intervals [8]:
+            xmin = 5.324402872260015 
+            xmax = 6.5483503401360545 
+            text = "and came" 
+        intervals [9]:
+            xmin = 6.5483503401360545 
+            xmax = 7.339555334328853 
+            text = "a bird" 
+        intervals [10]:
+            xmin = 7.339555334328853 
+            xmax = 8.582743764172335 
+            text = "and ate it" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 8.582743764172335 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.582743764172335 
+            text = "04" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 8.582743764172335 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.582743764172335 
+            text = "DONE" 

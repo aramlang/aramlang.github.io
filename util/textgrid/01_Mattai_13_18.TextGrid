@@ -1,0 +1,106 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 4.429727891156462 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 4.429727891156462 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.99578825180866 
+            text = ")an_t'wOn" 
+        intervals [2]:
+            xmin = 1.99578825180866 
+            xmax = 2.3719342194152486 
+            text = "deyn" 
+        intervals [3]:
+            xmin = 2.3719342194152486 
+            xmax = 2.8746831829658577 
+            text = "$ma(w" 
+        intervals [4]:
+            xmin = 2.8746831829658577 
+            xmax = 3.3463464348702443 
+            text = "mat,lo)" 
+        intervals [5]:
+            xmin = 3.3463464348702443 
+            xmax = 4.429727891156462 
+            text = "dzar(o)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 4.429727891156462 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.99578825180866 
+            text = "ܐܲܢ݇ܬ݁ܘܿܢ" 
+        intervals [2]:
+            xmin = 1.99578825180866 
+            xmax = 2.3719342194152486 
+            text = "ܕܹܝܢ" 
+        intervals [3]:
+            xmin = 2.3719342194152486 
+            xmax = 2.8746831829658577 
+            text = "ܫܡܲܥܘ" 
+        intervals [4]:
+            xmin = 2.8746831829658577 
+            xmax = 3.3463464348702443 
+            text = "ܡܲܬ݂ܠܵܐ" 
+        intervals [5]:
+            xmin = 3.3463464348702443 
+            xmax = 4.429727891156462 
+            text = "ܕܙܲܪܥܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 4.429727891156462 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.99578825180866 
+            text = "you" 
+        intervals [2]:
+            xmin = 1.99578825180866 
+            xmax = 2.3719342194152486 
+            text = "but" 
+        intervals [3]:
+            xmin = 2.3719342194152486 
+            xmax = 2.8746831829658577 
+            text = "hear" 
+        intervals [4]:
+            xmin = 2.8746831829658577 
+            xmax = 3.3463464348702443 
+            text = "the parable" 
+        intervals [5]:
+            xmin = 3.3463464348702443 
+            xmax = 4.429727891156462 
+            text = "of the seed" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 4.429727891156462 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.429727891156462 
+            text = "18" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 4.429727891156462 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.429727891156462 
+            text = "DONE" 

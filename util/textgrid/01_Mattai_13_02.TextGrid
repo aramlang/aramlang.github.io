@@ -1,0 +1,238 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 13.125963718820861 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 13.125963718820861 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.7330574452003025 
+            text = "w)Et,kana$w" 
+        intervals [2]:
+            xmin = 1.7330574452003025 
+            xmax = 2.5853177752582512 
+            text = "lwoteh" 
+        intervals [3]:
+            xmin = 2.5853177752582512 
+            xmax = 3.2730009123965167 
+            text = "kEn$*e)*" 
+        intervals [4]:
+            xmin = 3.2730009123965167 
+            xmax = 4.49640589569161 
+            text = "sagyi)*e):" 
+        intervals [5]:
+            xmin = 4.49640589569161 
+            xmax = 5.468282438901486 
+            text = ")ayk," 
+        intervals [6]:
+            xmin = 5.468282438901486 
+            xmax = 6.142354497354497 
+            text = "dnEsaq" 
+        intervals [7]:
+            xmin = 6.142354497354497 
+            xmax = 6.795618702713016 
+            text = "nEt'Eb," 
+        intervals [8]:
+            xmin = 6.795618702713016 
+            xmax = 7.193149965114251 
+            text = "leh" 
+        intervals [9]:
+            xmin = 7.193149965114251 
+            xmax = 8.014319727891156 
+            text = "b)Elpo)." 
+        intervals [10]:
+            xmin = 8.014319727891156 
+            xmax = 9.203508642450691 
+            text = "wk,leh" 
+        intervals [11]:
+            xmin = 9.203508642450691 
+            xmax = 10.163582766439909 
+            text = "kn$o)." 
+        intervals [12]:
+            xmin = 10.163582766439909 
+            xmax = 11.045297862001943 
+            text = "qo)em" 
+        intervals [13]:
+            xmin = 11.045297862001943 
+            xmax = 11.412578849721706 
+            text = "hw~o)" 
+        intervals [14]:
+            xmin = 11.412578849721706 
+            xmax = 11.798928869793532 
+            text = "(al" 
+        intervals [15]:
+            xmin = 11.798928869793532 
+            xmax = 12.18610512723608 
+            text = "spor" 
+        intervals [16]:
+            xmin = 12.18610512723608 
+            xmax = 13.125963718820861 
+            text = "yamo)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 13.125963718820861 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.7330574452003025 
+            text = "ܘܐܸܬ݂ܟܲܢܲܫܘ" 
+        intervals [2]:
+            xmin = 1.7330574452003025 
+            xmax = 2.5853177752582512 
+            text = "ܠܘܵܬܹܗ" 
+        intervals [3]:
+            xmin = 2.5853177752582512 
+            xmax = 3.2730009123965167 
+            text = "ܟܸܢܫܹ̈ܐ̈" 
+        intervals [4]:
+            xmin = 3.2730009123965167 
+            xmax = 4.49640589569161 
+            text = "ܣܲܓܝܼܐܹ̈ܐ:" 
+        intervals [5]:
+            xmin = 4.49640589569161 
+            xmax = 5.468282438901486 
+            text = "ܐܲܝܟ݂" 
+        intervals [6]:
+            xmin = 5.468282438901486 
+            xmax = 6.142354497354497 
+            text = "ܕܢܸܣܲܩ" 
+        intervals [7]:
+            xmin = 6.142354497354497 
+            xmax = 6.795618702713016 
+            text = "ܢܸܬܸ݁ܒ݂" 
+        intervals [8]:
+            xmin = 6.795618702713016 
+            xmax = 7.193149965114251 
+            text = "ܠܹܗ" 
+        intervals [9]:
+            xmin = 7.193149965114251 
+            xmax = 8.014319727891156 
+            text = "ܒܐܸܠܦܵܐ." 
+        intervals [10]:
+            xmin = 8.014319727891156 
+            xmax = 9.203508642450691 
+            text = "ܘܟ݂ܠܹܗ" 
+        intervals [11]:
+            xmin = 9.203508642450691 
+            xmax = 10.163582766439909 
+            text = "ܟܢܫܵܐ." 
+        intervals [12]:
+            xmin = 10.163582766439909 
+            xmax = 11.045297862001943 
+            text = "ܩܵܐܹܡ" 
+        intervals [13]:
+            xmin = 11.045297862001943 
+            xmax = 11.412578849721706 
+            text = "ܗܘ̣ܵܐ" 
+        intervals [14]:
+            xmin = 11.412578849721706 
+            xmax = 11.798928869793532 
+            text = "ܥܲܠ" 
+        intervals [15]:
+            xmin = 11.798928869793532 
+            xmax = 12.18610512723608 
+            text = "ܣܦܵܪ" 
+        intervals [16]:
+            xmin = 12.18610512723608 
+            xmax = 13.125963718820861 
+            text = "ܝܲܡܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 13.125963718820861 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.7330574452003025 
+            text = "and gathered" 
+        intervals [2]:
+            xmin = 1.7330574452003025 
+            xmax = 2.5853177752582512 
+            text = "around him" 
+        intervals [3]:
+            xmin = 2.5853177752582512 
+            xmax = 3.2730009123965167 
+            text = "crowds" 
+        intervals [4]:
+            xmin = 3.2730009123965167 
+            xmax = 4.49640589569161 
+            text = "large" 
+        intervals [5]:
+            xmin = 4.49640589569161 
+            xmax = 5.468282438901486 
+            text = "so" 
+        intervals [6]:
+            xmin = 5.468282438901486 
+            xmax = 6.142354497354497 
+            text = "that he went up" 
+        intervals [7]:
+            xmin = 6.142354497354497 
+            xmax = 6.795618702713016 
+            text = "to sit" 
+        intervals [8]:
+            xmin = 6.795618702713016 
+            xmax = 7.193149965114251 
+            text = "himself" 
+        intervals [9]:
+            xmin = 7.193149965114251 
+            xmax = 8.014319727891156 
+            text = "on a boat" 
+        intervals [10]:
+            xmin = 8.014319727891156 
+            xmax = 9.203508642450691 
+            text = "and all" 
+        intervals [11]:
+            xmin = 9.203508642450691 
+            xmax = 10.163582766439909 
+            text = "the crowd" 
+        intervals [12]:
+            xmin = 10.163582766439909 
+            xmax = 11.045297862001943 
+            text = "standing" 
+        intervals [13]:
+            xmin = 11.045297862001943 
+            xmax = 11.412578849721706 
+            text = "was" 
+        intervals [14]:
+            xmin = 11.412578849721706 
+            xmax = 11.798928869793532 
+            text = "on" 
+        intervals [15]:
+            xmin = 11.798928869793532 
+            xmax = 12.18610512723608 
+            text = "the shore of" 
+        intervals [16]:
+            xmin = 12.18610512723608 
+            xmax = 13.125963718820861 
+            text = "the sea" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 13.125963718820861 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 13.125963718820861 
+            text = "02" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 13.125963718820861 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 13.125963718820861 
+            text = "DONE" 

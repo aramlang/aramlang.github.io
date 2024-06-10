@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 8.268526077097505 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 8.268526077097505 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.136300615484289 
+            text = "kad," 
+        intervals [2]:
+            xmin = 1.136300615484289 
+            xmax = 1.5319879062736206 
+            text = "dnax" 
+        intervals [3]:
+            xmin = 1.5319879062736206 
+            xmax = 1.901004875938815 
+            text = "deyn" 
+        intervals [4]:
+            xmin = 1.901004875938815 
+            xmax = 2.6539897883090595 
+            text = "$Em$o):" 
+        intervals [5]:
+            xmin = 2.6539897883090595 
+            xmax = 3.521519274376417 
+            text = "xam:" 
+        intervals [6]:
+            xmin = 3.521519274376417 
+            xmax = 4.691701587301587 
+            text = "wmETl" 
+        intervals [7]:
+            xmin = 4.691701587301587 
+            xmax = 5.006861797350519 
+            text = "dlayt'" 
+        intervals [8]:
+            xmin = 5.006861797350519 
+            xmax = 5.259297559819948 
+            text = "hw~o)" 
+        intervals [9]:
+            xmin = 5.259297559819948 
+            xmax = 5.62838246409675 
+            text = "leh" 
+        intervals [10]:
+            xmin = 5.62838246409675 
+            xmax = 6.5927702191987905 
+            text = "(Eqro):" 
+        intervals [11]:
+            xmin = 6.5927702191987905 
+            xmax = 8.268526077097505 
+            text = "yibE$." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 8.268526077097505 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.136300615484289 
+            text = "ܟܲܕ݂" 
+        intervals [2]:
+            xmin = 1.136300615484289 
+            xmax = 1.5319879062736206 
+            text = "ܕܢܲܚ" 
+        intervals [3]:
+            xmin = 1.5319879062736206 
+            xmax = 1.901004875938815 
+            text = "ܕܹܝܢ" 
+        intervals [4]:
+            xmin = 1.901004875938815 
+            xmax = 2.6539897883090595 
+            text = "ܫܸܡܫܵܐ:" 
+        intervals [5]:
+            xmin = 2.6539897883090595 
+            xmax = 3.521519274376417 
+            text = "ܚܲܡ:" 
+        intervals [6]:
+            xmin = 3.521519274376417 
+            xmax = 4.691701587301587 
+            text = "ܘܡܸܛܠ" 
+        intervals [7]:
+            xmin = 4.691701587301587 
+            xmax = 5.006861797350519 
+            text = "ܕܠܲܝܬ݁" 
+        intervals [8]:
+            xmin = 5.006861797350519 
+            xmax = 5.259297559819948 
+            text = "ܗܘ̣ܵܐ" 
+        intervals [9]:
+            xmin = 5.259297559819948 
+            xmax = 5.62838246409675 
+            text = "ܠܹܗ" 
+        intervals [10]:
+            xmin = 5.62838246409675 
+            xmax = 6.5927702191987905 
+            text = "ܥܸܩܪܵܐ:" 
+        intervals [11]:
+            xmin = 6.5927702191987905 
+            xmax = 8.268526077097505 
+            text = "ܝܼܒܸܫ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 8.268526077097505 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.136300615484289 
+            text = "when" 
+        intervals [2]:
+            xmin = 1.136300615484289 
+            xmax = 1.5319879062736206 
+            text = "came up" 
+        intervals [3]:
+            xmin = 1.5319879062736206 
+            xmax = 1.901004875938815 
+            text = "and" 
+        intervals [4]:
+            xmin = 1.901004875938815 
+            xmax = 2.6539897883090595 
+            text = "the sun" 
+        intervals [5]:
+            xmin = 2.6539897883090595 
+            xmax = 3.521519274376417 
+            text = "it became hot" 
+        intervals [6]:
+            xmin = 3.521519274376417 
+            xmax = 4.691701587301587 
+            text = "and because" 
+        intervals [7]:
+            xmin = 4.691701587301587 
+            xmax = 5.006861797350519 
+            text = "<that> not" 
+        intervals [8]:
+            xmin = 5.006861797350519 
+            xmax = 5.259297559819948 
+            text = "had" 
+        intervals [9]:
+            xmin = 5.259297559819948 
+            xmax = 5.62838246409675 
+            text = "it" 
+        intervals [10]:
+            xmin = 5.62838246409675 
+            xmax = 6.5927702191987905 
+            text = "root" 
+        intervals [11]:
+            xmin = 6.5927702191987905 
+            xmax = 8.268526077097505 
+            text = "it withered" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 8.268526077097505 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.268526077097505 
+            text = "06" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 8.268526077097505 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 8.268526077097505 
+            text = "DONE" 

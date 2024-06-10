@@ -1,0 +1,118 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 6.737460317460317 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 6.737460317460317 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.622348119803477 
+            text = "w)axreno)" 
+        intervals [2]:
+            xmin = 1.622348119803477 
+            xmax = 2.0683980483579196 
+            text = "npal" 
+        intervals [3]:
+            xmin = 2.0683980483579196 
+            xmax = 3.2764013605442175 
+            text = "beyt, kwub*e)." 
+        intervals [4]:
+            xmin = 3.2764013605442175 
+            xmax = 4.625883082204845 
+            text = "waslEqw" 
+        intervals [5]:
+            xmin = 4.625883082204845 
+            xmax = 5.232784284168212 
+            text = "kwub*e)" 
+        intervals [6]:
+            xmin = 5.232784284168212 
+            xmax = 6.737460317460317 
+            text = "wxanqwuhy." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 6.737460317460317 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.622348119803477 
+            text = "ܘܐܲܚܪܹܢܵܐ" 
+        intervals [2]:
+            xmin = 1.622348119803477 
+            xmax = 2.0683980483579196 
+            text = "ܢܦܲܠ" 
+        intervals [3]:
+            xmin = 2.0683980483579196 
+            xmax = 3.2764013605442175 
+            text = "ܒܹܝܬ݂ ܟܘܼܒܹ̈ܐ." 
+        intervals [4]:
+            xmin = 3.2764013605442175 
+            xmax = 4.625883082204845 
+            text = "ܘܲܣܠܸܩܘ" 
+        intervals [5]:
+            xmin = 4.625883082204845 
+            xmax = 5.232784284168212 
+            text = "ܟܘܼܒܹ̈ܐ" 
+        intervals [6]:
+            xmin = 5.232784284168212 
+            xmax = 6.737460317460317 
+            text = "ܘܚܲܢܩܘܼܗܝ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 6.737460317460317 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.622348119803477 
+            text = "and some others" 
+        intervals [2]:
+            xmin = 1.622348119803477 
+            xmax = 2.0683980483579196 
+            text = "fell" 
+        intervals [3]:
+            xmin = 2.0683980483579196 
+            xmax = 3.2764013605442175 
+            text = "[into] a thorny place" 
+        intervals [4]:
+            xmin = 3.2764013605442175 
+            xmax = 4.625883082204845 
+            text = "and grew up" 
+        intervals [5]:
+            xmin = 4.625883082204845 
+            xmax = 5.232784284168212 
+            text = "the thistles" 
+        intervals [6]:
+            xmin = 5.232784284168212 
+            xmax = 6.737460317460317 
+            text = "and choked it" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 6.737460317460317 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.737460317460317 
+            text = "07" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 6.737460317460317 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.737460317460317 
+            text = "DONE" 

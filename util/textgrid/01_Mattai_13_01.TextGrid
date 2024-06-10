@@ -1,0 +1,178 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 10.893673469387755 
+tiers? <exists> 
+size = 5 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Phonetic" 
+        xmin = 0 
+        xmax = 10.893673469387755 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.556237923289379 
+            text = "bhow" 
+        intervals [2]:
+            xmin = 2.556237923289379 
+            xmax = 3.0412218284956 
+            text = "deyn" 
+        intervals [3]:
+            xmin = 3.0412218284956 
+            xmax = 4.3655023547880685 
+            text = "yowmo)." 
+        intervals [4]:
+            xmin = 4.3655023547880685 
+            xmax = 5.878495942236544 
+            text = "npaq" 
+        intervals [5]:
+            xmin = 5.878495942236544 
+            xmax = 6.692224550534499 
+            text = "yi$wO(" 
+        intervals [6]:
+            xmin = 6.692224550534499 
+            xmax = 7.046324521369729 
+            text = "mEn" 
+        intervals [7]:
+            xmin = 7.046324521369729 
+            xmax = 8.00828798185941 
+            text = "bayto):" 
+        intervals [8]:
+            xmin = 8.00828798185941 
+            xmax = 9.117883867832848 
+            text = "wyitEb," 
+        intervals [9]:
+            xmin = 9.117883867832848 
+            xmax = 9.37296193866955 
+            text = "(al" 
+        intervals [10]:
+            xmin = 9.37296193866955 
+            xmax = 9.775850936865975 
+            text = "yad," 
+        intervals [11]:
+            xmin = 9.775850936865975 
+            xmax = 10.893673469387755 
+            text = "yamo)." 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Text" 
+        xmin = 0 
+        xmax = 10.893673469387755 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.556237923289379 
+            text = "ܒܗܵܘ" 
+        intervals [2]:
+            xmin = 2.556237923289379 
+            xmax = 3.0412218284956 
+            text = "ܕܹܝܢ" 
+        intervals [3]:
+            xmin = 3.0412218284956 
+            xmax = 4.3655023547880685 
+            text = "ܝܵܘܡܵܐ." 
+        intervals [4]:
+            xmin = 4.3655023547880685 
+            xmax = 5.878495942236544 
+            text = "ܢܦܲܩ" 
+        intervals [5]:
+            xmin = 5.878495942236544 
+            xmax = 6.692224550534499 
+            text = "ܝܼܫܘܿܥ" 
+        intervals [6]:
+            xmin = 6.692224550534499 
+            xmax = 7.046324521369729 
+            text = "ܡܸܢ" 
+        intervals [7]:
+            xmin = 7.046324521369729 
+            xmax = 8.00828798185941 
+            text = "ܒܲܝܬܵܐ:" 
+        intervals [8]:
+            xmin = 8.00828798185941 
+            xmax = 9.117883867832848 
+            text = "ܘܝܼܬܸܒ݂" 
+        intervals [9]:
+            xmin = 9.117883867832848 
+            xmax = 9.37296193866955 
+            text = "ܥܲܠ" 
+        intervals [10]:
+            xmin = 9.37296193866955 
+            xmax = 9.775850936865975 
+            text = "ܝܲܕ݂" 
+        intervals [11]:
+            xmin = 9.775850936865975 
+            xmax = 10.893673469387755 
+            text = "ܝܲܡܵܐ." 
+    item [3]:
+        class = "IntervalTier" 
+        name = "Inter" 
+        xmin = 0 
+        xmax = 10.893673469387755 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 2.556237923289379 
+            text = "on that" 
+        intervals [2]:
+            xmin = 2.556237923289379 
+            xmax = 3.0412218284956 
+            text = "now" 
+        intervals [3]:
+            xmin = 3.0412218284956 
+            xmax = 4.3655023547880685 
+            text = "day" 
+        intervals [4]:
+            xmin = 4.3655023547880685 
+            xmax = 5.878495942236544 
+            text = "went out" 
+        intervals [5]:
+            xmin = 5.878495942236544 
+            xmax = 6.692224550534499 
+            text = "Yeshua" 
+        intervals [6]:
+            xmin = 6.692224550534499 
+            xmax = 7.046324521369729 
+            text = "from" 
+        intervals [7]:
+            xmin = 7.046324521369729 
+            xmax = 8.00828798185941 
+            text = "the house" 
+        intervals [8]:
+            xmin = 8.00828798185941 
+            xmax = 9.117883867832848 
+            text = "and sat" 
+        intervals [9]:
+            xmin = 9.117883867832848 
+            xmax = 9.37296193866955 
+            text = "by" 
+        intervals [10]:
+            xmin = 9.37296193866955 
+            xmax = 9.775850936865975 
+            text = "the side" 
+        intervals [11]:
+            xmin = 9.775850936865975 
+            xmax = 10.893673469387755 
+            text = "of the sea" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "Verse" 
+        xmin = 0 
+        xmax = 10.893673469387755 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 10.893673469387755 
+            text = "01" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "Status" 
+        xmin = 0 
+        xmax = 10.893673469387755 
+        intervals: size = 1 
+        intervals [1]:
+            xmin = 0 
+            xmax = 10.893673469387755 
+            text = "DONE" 
