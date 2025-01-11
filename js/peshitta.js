@@ -29,7 +29,7 @@ export default [
           t: { s: 4.1857, e: 4.60746 }
         },
         {
-          w: "dd,wyid",
+          w: "dd,owyid",
           t: { s: 4.60746, e: 5.36974 }
         },
         {
