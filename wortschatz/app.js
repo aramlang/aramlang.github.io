@@ -231,7 +231,7 @@ fetch('vocabulary.json')
   .then((response) => { if (!response.ok) throw new Error(`Could not load vocabulary (${response.status})`); return response.json(); })
   .then((data) => {
     state.entries = data.sort((left, right) => (right.Sequence ?? 0) - (left.Sequence ?? 0));
-    datasetStatus.textContent = `${state.entries.length} entries loaded`;
+    datasetStatus.textContent = `${state.entries.length} words loaded`;
     statusDot.classList.add('ready');
     render();
   })
