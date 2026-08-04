@@ -2,6 +2,8 @@ const state = {
   entries: [],
   mode: 'literal',
   preferEnglish: true,
+  sortColumn: 'original',
+  sortDirection: 'ascending',
 };
 
 const categoryCodes = {
@@ -103,6 +105,39 @@ function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/gu, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 }
 
+function sortValue(entry, column) {
+  return ({
+    english: entry.English || '',
+    german: germanDisplay(entry),
+    gender: articleDisplay(entry),
+    category: categoryCodes[entry.LexicalClass] || '',
+    grammar: entry.GrammarNote || '',
+  })[column] || '';
+}
+
+function sortMatches(matches) {
+  if (state.sortColumn === 'original') return matches;
+  const direction = state.sortDirection === 'ascending' ? 1 : -1;
+  return matches.sort(({ entry: left }, { entry: right }) => {
+    const result = sortValue(left, state.sortColumn).localeCompare(sortValue(right, state.sortColumn), undefined, { sensitivity: 'base', numeric: true });
+    return result === 0 ? left.Sequence - right.Sequence : result * direction;
+  });
+}
+
+function renderSortControls() {
+  document.querySelectorAll('.sort-button').forEach((button) => {
+    const isActive = button.dataset.sort === state.sortColumn;
+    button.classList.toggle('is-active', isActive);
+    if (button.dataset.sort === 'original') {
+      button.textContent = 'Unsort';
+      return;
+    }
+    const direction = isActive ? (state.sortDirection === 'ascending' ? ' ↑' : ' ↓') : '';
+    button.textContent = `${button.dataset.sort === 'gender' ? 'Gen' : button.dataset.sort === 'category' ? 'Categ' : button.dataset.sort[0].toUpperCase() + button.dataset.sort.slice(1)}${direction}`;
+    button.setAttribute('aria-sort', isActive ? state.sortDirection : 'none');
+  });
+}
+
 function render() {
   const query = input.value.trim();
   let matches = state.entries.map((entry) => ({ entry, match: query ? rankedMatch(entry, query) : null })).filter(({ match }) => !query || match);
@@ -111,6 +146,7 @@ function render() {
     try { new RegExp(query, 'iu'); } catch (error) { regexError = error.message; matches = []; }
   }
   const selected = query ? matches.reduce((best, current) => !best || current.match.rank < best.match.rank || (current.match.rank === best.match.rank && current.entry.Sequence < best.entry.Sequence) ? current : best, null) : null;
+  sortMatches(matches);
   entriesElement.innerHTML = matches.map(({ entry }) => {
     const selectedClass = selected && selected.entry.Id === entry.Id ? ' selected' : '';
     return `<div class="entry${selectedClass}" role="row"><span role="cell">${escapeHtml(entry.English)}</span><span class="german" role="cell">${escapeHtml(germanDisplay(entry))}</span><span class="gender" role="cell">${escapeHtml(articleDisplay(entry))}</span><span class="category" role="cell">${escapeHtml(categoryCodes[entry.LexicalClass] || '')}</span><span class="grammar" role="cell" title="${escapeHtml(entry.GrammarNote || '')}">${escapeHtml(entry.GrammarNote || '')}</span></div>`;
@@ -118,7 +154,20 @@ function render() {
   emptyState.hidden = matches.length > 0;
   searchStatus.classList.toggle('error', Boolean(regexError));
   searchStatus.textContent = regexError || (query ? `${matches.length} matching ${matches.length === 1 ? 'entry' : 'entries'}` : `${state.entries.length} entries`);
+  renderSortControls();
 }
+
+document.querySelectorAll('.sort-button').forEach((button) => button.addEventListener('click', () => {
+  if (button.dataset.sort === 'original') {
+    state.sortColumn = 'original';
+  } else if (state.sortColumn === button.dataset.sort) {
+    state.sortDirection = state.sortDirection === 'ascending' ? 'descending' : 'ascending';
+  } else {
+    state.sortColumn = button.dataset.sort;
+    state.sortDirection = 'ascending';
+  }
+  render();
+}));
 
 document.querySelectorAll('.mode-button').forEach((button) => button.addEventListener('click', () => {
   state.mode = button.dataset.mode;
@@ -132,6 +181,7 @@ document.querySelectorAll('.language-button').forEach((button) => button.addEven
   render();
 }));
 
+input.addEventListener('focus', () => input.select());
 input.addEventListener('input', render);
 document.querySelector('#clear-button').addEventListener('click', () => { input.value = ''; input.focus(); render(); });
 
@@ -139,6 +189,7 @@ const helpSections = [
   ['Keyboard shortcuts', [['Ctrl+H', 'Open this Help window.'], ['Ctrl+G', 'Open the Gender Rules window (der/die/das suffix patterns).'], ['Esc', 'Clear the search box.']]],
   ['Search modes', [['≈ Fuzzy', 'Finds close spellings and transposed letters; exact and substring matches rank first.'], ['" Literal', 'Default. Finds the entered characters as a substring. Regex punctuation has no special meaning.'], ['.* Regex', 'Uses a regular expression. English is case-insensitive; German is case-sensitive unless an inline flag overrides it.']]],
   ['Prefer language', [['English', 'Both English and German columns are always searched. When a result matches equally well in both, prefer the English match.'], ['Deutsch', 'Both English and German columns are always searched. When a result matches equally well in both, prefer the German match.']]],
+  ['Sorting', [['Column headers', 'Select a column header to sort matching entries by that column. Select it again to reverse the order.'], ['Unsort', 'Restore the dataset\'s original order.']]],
   ['Regex examples', [['house', "Contains 'house'"], ['\\bhouse\\b', "Whole word 'house'"], ['small house', 'Exact phrase'], ['\\bHaus\\w*', "Starts with 'Haus'"], ['\\w*haus\\b', "Ends with 'haus'"], ['house|home', "Either 'house' or 'home'"], ['(?=.*small)(?=.*house)', 'Both terms, in any order'], ['colou?r', "Optional character: 'color' or 'colour'"], ['(?i)\\bhaus\\b', 'Force case-insensitive German search'], ['(?-i)\\bHouse\\b', 'Force case-sensitive English search'], ['(?:ä|ae)', "Match either 'ä' or 'ae'"], ['(?:ß|ss)', "Match either 'ß' or 'ss'"]]],
   ['Category (Categ column)', [['N', 'Noun'], ['PN', 'Proper noun'], ['PRN', 'Pronoun'], ['ADJ', 'Adjective'], ['ADV', 'Adverb'], ['ART', 'Article'], ['D', 'Determiner'], ['PRP', 'Preposition'], ['C', 'Conjunction'], ['I', 'Interjection'], ['NM', 'Numeral'], ['PRT', 'Particle'], ['V', 'Verb']]],
   ['Gender / person (Gen column)', [['M', 'Masculine (der)'], ['F', 'Feminine (die)'], ['N', 'Neuter (das)'], ['*', 'Plural only, shown after the gender (for example F*)'], ['1s / 2s / 3s', '1st/2nd/3rd person singular'], ['1p / 2p / 3p', '1st/2nd/3rd person plural'], ['M, 1s', 'Combined gender + person/number'], ['1s, 3s', 'Multiple person/number matches'], ['(hover)', 'If the full text does not fit, hover the cell to see it all']]],
