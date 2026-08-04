@@ -187,7 +187,7 @@ document.querySelector('#clear-button').addEventListener('click', () => { input.
 
 const helpSections = [
   ['Keyboard shortcuts', [['Ctrl+H', 'Open this Help window.'], ['Ctrl+G', 'Open the Gender Rules window (der/die/das suffix patterns).'], ['Esc', 'Clear the search box.']]],
-  ['Search modes', [['≈ Fuzzy', 'Finds close spellings and transposed letters; exact and substring matches rank first.'], ['" Literal', 'Default. Finds the entered characters as a substring. Regex punctuation has no special meaning.'], ['.* Regex', 'Uses a regular expression. English is case-insensitive; German is case-sensitive unless an inline flag overrides it.']]],
+  ['Search modes', [['≈ Fuzzy', 'Finds close spellings and transposed letters; exact and substring matches rank first. German search is case-sensitive by default.'], ['" Literal', 'Default. Finds the entered characters as a substring. English is case-insensitive; German is case-sensitive. Regex punctuation has no special meaning.'], ['.* Regex', 'Uses a regular expression. English is case-insensitive; German is case-sensitive unless an inline flag overrides it.']]],
   ['Prefer language', [['English', 'Both English and German columns are always searched. When a result matches equally well in both, prefer the English match.'], ['Deutsch', 'Both English and German columns are always searched. When a result matches equally well in both, prefer the German match.']]],
   ['Sorting', [['Column headers', 'Select a column header to sort matching entries by that column. Select it again to reverse the order.'], ['Unsort', 'Restore the dataset\'s original order.']]],
   ['Regex examples', [['house', "Contains 'house'"], ['\\bhouse\\b', "Whole word 'house'"], ['small house', 'Exact phrase'], ['\\bHaus\\w*', "Starts with 'Haus'"], ['\\w*haus\\b', "Ends with 'haus'"], ['house|home', "Either 'house' or 'home'"], ['(?=.*small)(?=.*house)', 'Both terms, in any order'], ['colou?r', "Optional character: 'color' or 'colour'"], ['(?i)\\bhaus\\b', 'Force case-insensitive German search'], ['(?-i)\\bHouse\\b', 'Force case-sensitive English search'], ['(?:ä|ae)', "Match either 'ä' or 'ae'"], ['(?:ß|ss)', "Match either 'ß' or 'ss'"]]],
@@ -230,7 +230,7 @@ document.addEventListener('keydown', (event) => {
 fetch('vocabulary.json')
   .then((response) => { if (!response.ok) throw new Error(`Could not load vocabulary (${response.status})`); return response.json(); })
   .then((data) => {
-    state.entries = data.sort((left, right) => (left.Sequence ?? 0) - (right.Sequence ?? 0));
+    state.entries = data.sort((left, right) => (right.Sequence ?? 0) - (left.Sequence ?? 0));
     datasetStatus.textContent = `${state.entries.length} entries loaded`;
     statusDot.classList.add('ready');
     render();
