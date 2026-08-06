@@ -18,6 +18,10 @@ const emptyState = document.querySelector('#empty-state');
 const searchStatus = document.querySelector('#search-status');
 const datasetStatus = document.querySelector('#dataset-status');
 const statusDot = document.querySelector('.status-dot');
+const copyToast = document.querySelector('#copy-toast');
+let lastTouchTime = 0;
+let lastTouchRow = null;
+let suppressClickUntil = 0;
 
 function fold(value, ignoreCase = true) {
   const source = ignoreCase ? value.toLocaleLowerCase('de-DE') : value;
@@ -149,13 +153,70 @@ function render() {
   sortMatches(matches);
   entriesElement.innerHTML = matches.map(({ entry }) => {
     const selectedClass = selected && selected.entry.Id === entry.Id ? ' selected' : '';
-    return `<div class="entry${selectedClass}" role="row"><span role="cell">${escapeHtml(entry.English)}</span><span class="german" role="cell">${escapeHtml(germanDisplay(entry))}</span><span class="gender" role="cell">${escapeHtml(articleDisplay(entry))}</span><span class="category" role="cell">${escapeHtml(categoryCodes[entry.LexicalClass] || '')}</span><span class="grammar" role="cell" title="${escapeHtml(entry.GrammarNote || '')}">${escapeHtml(entry.GrammarNote || '')}</span></div>`;
+    return `<div class="entry${selectedClass}" role="row" draggable="true" data-copy-text="${escapeHtml(entry.German || '')}"><span role="cell">${escapeHtml(entry.English)}</span><span class="german" role="cell">${escapeHtml(germanDisplay(entry))}</span><span class="gender" role="cell">${escapeHtml(articleDisplay(entry))}</span><span class="category" role="cell">${escapeHtml(categoryCodes[entry.LexicalClass] || '')}</span><span class="grammar" role="cell" title="${escapeHtml(entry.GrammarNote || '')}">${escapeHtml(entry.GrammarNote || '')}</span></div>`;
   }).join('');
   emptyState.hidden = matches.length > 0;
   searchStatus.classList.toggle('error', Boolean(regexError));
   searchStatus.textContent = regexError || (query ? `${matches.length} matching ${matches.length === 1 ? 'entry' : 'entries'}` : `${state.entries.length} entries`);
   renderSortControls();
 }
+
+function showCopyFeedback(message, isError = false) {
+  copyToast.textContent = message;
+  copyToast.classList.toggle('is-error', isError);
+  copyToast.classList.remove('is-visible');
+  requestAnimationFrame(() => copyToast.classList.add('is-visible'));
+  clearTimeout(showCopyFeedback.timeout);
+  showCopyFeedback.timeout = setTimeout(() => copyToast.classList.remove('is-visible'), 1400);
+}
+
+function flashRow(row) {
+  row.classList.remove('copy-flash');
+  requestAnimationFrame(() => row.classList.add('copy-flash'));
+}
+
+function copyRowText(row) {
+  const nounPayload = row.dataset.copyText || '';
+  if (!nounPayload) return;
+
+  // Start the clipboard write directly in the user gesture handler for iOS WebKit.
+  try {
+    const clipboardWrite = navigator.clipboard.writeText(nounPayload);
+    flashRow(row);
+    showCopyFeedback(`Copied ${nounPayload}`);
+    clipboardWrite.catch(() => showCopyFeedback('Copy failed', true));
+  } catch {
+    showCopyFeedback('Copy failed', true);
+  }
+}
+
+entriesElement.addEventListener('dblclick', (event) => {
+  if (Date.now() < suppressClickUntil) return;
+  const row = event.target.closest('.entry');
+  if (row) copyRowText(row);
+});
+
+entriesElement.addEventListener('touchend', (event) => {
+  const row = event.target.closest('.entry');
+  if (!row || event.changedTouches.length !== 1) return;
+  const now = Date.now();
+  if (row === lastTouchRow && now - lastTouchTime < 300) {
+    event.preventDefault();
+    suppressClickUntil = now + 500;
+    copyRowText(row);
+    lastTouchTime = 0;
+    lastTouchRow = null;
+    return;
+  }
+  lastTouchTime = now;
+  lastTouchRow = row;
+});
+
+entriesElement.addEventListener('dragstart', (event) => {
+  const row = event.target.closest('.entry');
+  const nounPayload = row?.dataset.copyText || '';
+  if (nounPayload) event.dataTransfer.setData('text/plain', nounPayload);
+});
 
 document.querySelectorAll('.sort-button').forEach((button) => button.addEventListener('click', () => {
   if (button.dataset.sort === 'original') {
@@ -231,7 +292,7 @@ fetch('vocabulary.json')
   .then((response) => { if (!response.ok) throw new Error(`Could not load vocabulary (${response.status})`); return response.json(); })
   .then((data) => {
     state.entries = data.sort((left, right) => (right.Sequence ?? 0) - (left.Sequence ?? 0));
-    datasetStatus.textContent = `${state.entries.length} words loaded`;
+    datasetStatus.textContent = `${state.entries.length}`;
     statusDot.classList.add('ready');
     render();
   })

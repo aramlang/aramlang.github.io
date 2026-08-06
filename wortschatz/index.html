@@ -26,7 +26,7 @@
           <span class="control-label">Sort</span>
           <button class="sort-button sort-reset is-active" type="button" data-sort="original">Unsort</button>
         </div>
-        <div class="control-group dataset-control" aria-label="Dataset status">
+        <div class="control-group dataset-control" aria-label="Vocabulary count" title="Vocabulary entries">
           <span class="status-dot"></span>
           <span id="dataset-status">Loading words...</span>
           <button id="help-button" class="help-button" type="button">Help</button>
@@ -53,6 +53,7 @@
       </div>
     </section>
   </main>
+  <div id="copy-toast" class="copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
   <section id="help-dialog" class="modal-panel" aria-labelledby="help-title" hidden>
     <div class="help-heading">
       <div>

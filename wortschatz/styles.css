@@ -22,7 +22,7 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-.shell { width: 100%; margin: 0; padding: 18px 24px 20px; }
+.shell { width: 100%; margin: 0; padding: 14px 12px 16px; }
 .masthead { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 16px; }
 .brand { display: flex; align-items: baseline; flex-shrink: 0; gap: 12px; min-width: 0; white-space: nowrap; }
 .eyebrow { margin: 0; color: var(--mint-strong); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
@@ -33,7 +33,7 @@ h1 { margin: 0; font-family: Newsreader, Georgia, serif; font-size: 1.65rem; fon
 .help-button { margin-left: 8px; padding: 7px 12px; color: var(--ink); background: var(--mint); border-color: var(--mint-strong); font-size: .78rem; font-weight: 700; }
 .help-button:hover { background: #b6d5c1; }
 
-.search-panel { padding: 18px; background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.search-panel { padding: 14px; background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .search-label { display: block; margin-bottom: 9px; color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .search-row { display: flex; gap: 10px; }
 input[type='search'] { width: 100%; min-height: 46px; padding: 0 14px; color: var(--ink); background: #f8f8f2; border: 1px solid var(--line); border-radius: 3px; font: inherit; font-size: 1rem; outline: none; }
@@ -44,7 +44,7 @@ button { color: inherit; background: transparent; border: 1px solid transparent;
 .controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 18px; margin: 0 0 16px; padding: 0 0 12px; border-bottom: 1px solid var(--line); }
 .control-group { display: flex; align-items: center; gap: 5px; }
 .dataset-control { margin-left: auto; color: var(--muted); font-size: .78rem; white-space: nowrap; }
-.control-label { margin-right: 5px; color: var(--muted); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.control-label { flex: 0 0 3.8rem; margin-right: 0; color: var(--muted); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
 .mode-button, .language-button { padding: 7px 11px; color: var(--muted); font-size: .84rem; }
 .mode-button:hover, .language-button:hover { color: var(--ink); background: #eef3ee; }
 .mode-button.is-active, .language-button.is-active { color: var(--ink); background: var(--mint); border-color: var(--mint-strong); }
@@ -57,7 +57,10 @@ button { color: inherit; background: transparent; border: 1px solid transparent;
 .table-head .sort-button { min-width: 0; padding: 12px 0; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-align: left; text-transform: uppercase; }
 .table-head .sort-button:hover, .table-head .sort-button.is-active { color: var(--ink); background: transparent; border-color: transparent; }
 .entry { position: relative; min-height: 48px; padding: 8px 16px; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.entry { cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .entry:hover, .entry.selected { background: #e9f2eb; }
+.entry.copy-flash { animation: copy-flash .35s ease-out; }
+@keyframes copy-flash { 50% { background: var(--mint); } }
 .entry.selected::before { position: absolute; left: 0; width: 4px; height: 28px; background: var(--coral); content: ''; }
 .entry > span { min-width: 0; overflow-wrap: anywhere; }
 .entry .german { font-weight: 600; }
@@ -65,6 +68,9 @@ button { color: inherit; background: transparent; border: 1px solid transparent;
 .entry .gender { color: var(--mint-strong); font-weight: 700; }
 .empty-state { padding: 46px 16px; color: var(--muted); text-align: center; }
 .table-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 16px; border-top: 1px solid var(--line); }
+.copy-toast { position: fixed; z-index: 20; right: 18px; bottom: 18px; max-width: min(360px, calc(100vw - 36px)); padding: 10px 14px; color: var(--panel); background: var(--mint-strong); box-shadow: var(--shadow); opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .15s ease, transform .15s ease; }
+.copy-toast.is-visible { opacity: 1; transform: translateY(0); }
+.copy-toast.is-error { background: #a74c35; }
 .sort-button { padding: 6px 8px; color: var(--muted); font-size: .76rem; }
 .sort-button:hover, .sort-button.is-active { color: var(--ink); background: var(--mint); border-color: var(--mint-strong); }
 
@@ -91,12 +97,20 @@ body.modal-open::before { position: fixed; z-index: 9; inset: 0; background: rgb
 .gender-rule-section .footer-note { margin: 12px 0 0 74px; }
 
 @media (max-width: 720px) {
-  .shell { width: min(100% - 20px, 560px); padding-top: 14px; }
+  .shell { width: 100%; padding: 8px 4px 12px; }
   .masthead { align-items: center; gap: 10px; margin-bottom: 12px; }
   .brand { gap: 8px; }
   h1 { font-size: 1.35rem; }
   .dataset { align-self: center; }
-  .search-panel { padding: 16px; }
+  .search-panel { padding: 8px; }
+  .controls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); justify-content: initial; gap: 7px 10px; margin-bottom: 12px; padding-bottom: 10px; overflow: hidden; }
+  .control-group { min-width: 0; gap: 0; }
+  .control-group:not(.dataset-control) { min-height: 31px; overflow: hidden; background: #f8f8f2; border: 1px solid var(--line); }
+  .control-label { flex: 0 0 auto; padding: 0 7px; font-size: .63rem; letter-spacing: .04em; text-align: left; }
+  .mode-button, .language-button { min-width: 0; flex: 1 1 0; height: 29px; padding: 5px 5px; border-left: 1px solid var(--line); border-radius: 0; font-size: .76rem; }
+  .control-group:not(.dataset-control) .sort-button { flex: 1 1 0; height: 29px; padding: 5px 8px; border-left: 1px solid var(--line); border-radius: 0; font-size: .72rem; }
+  .dataset-control { grid-column: 2; justify-content: flex-end; margin-left: 0; font-size: .74rem; }
+  .dataset-control .help-button { margin-left: 4px; padding: 6px 9px; font-size: .72rem; }
   .dataset { align-self: end; flex-wrap: wrap; justify-content: end; }
   .table-head, .entry { min-width: 700px; grid-template-columns: 1.15fr 1.15fr 86px 72px minmax(120px, .8fr); gap: 10px; padding-left: 10px; padding-right: 10px; }
   .table-foot { padding: 10px; }
