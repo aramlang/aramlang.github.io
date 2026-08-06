@@ -91,6 +91,10 @@ function germanDisplay(entry) {
   return article && entry.German ? `${article} ${entry.German}` : entry.German || '';
 }
 
+function germanCopyText(entry) {
+  return (entry.German || '').replace(/\s*\([^)]*\)/gu, '').trim();
+}
+
 function articleDisplay(entry) {
   const gender = entry.IsPluralOnly ? `${entry.Gender || ''}*` : entry.Gender || '';
   const personNumber = entry.PersonNumber || '';
@@ -153,7 +157,7 @@ function render() {
   sortMatches(matches);
   entriesElement.innerHTML = matches.map(({ entry }) => {
     const selectedClass = selected && selected.entry.Id === entry.Id ? ' selected' : '';
-    return `<div class="entry${selectedClass}" role="row" draggable="true" data-copy-text="${escapeHtml(entry.German || '')}"><span role="cell">${escapeHtml(entry.English)}</span><span class="german" role="cell">${escapeHtml(germanDisplay(entry))}</span><span class="gender" role="cell">${escapeHtml(articleDisplay(entry))}</span><span class="category" role="cell">${escapeHtml(categoryCodes[entry.LexicalClass] || '')}</span><span class="grammar" role="cell" title="${escapeHtml(entry.GrammarNote || '')}">${escapeHtml(entry.GrammarNote || '')}</span></div>`;
+    return `<div class="entry${selectedClass}" role="row" draggable="true" data-copy-text="${escapeHtml(germanCopyText(entry))}"><span role="cell">${escapeHtml(entry.English)}</span><span class="german" role="cell">${escapeHtml(germanDisplay(entry))}</span><span class="gender" role="cell">${escapeHtml(articleDisplay(entry))}</span><span class="category" role="cell">${escapeHtml(categoryCodes[entry.LexicalClass] || '')}</span><span class="grammar" role="cell" title="${escapeHtml(entry.GrammarNote || '')}">${escapeHtml(entry.GrammarNote || '')}</span></div>`;
   }).join('');
   emptyState.hidden = matches.length > 0;
   searchStatus.classList.toggle('error', Boolean(regexError));
