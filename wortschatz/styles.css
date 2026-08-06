@@ -51,7 +51,7 @@ button { color: inherit; background: transparent; border: 1px solid transparent;
 .search-status { min-height: 1.2em; margin: 0; color: var(--muted); font-size: .82rem; }
 .search-status.error { color: #a74c35; }
 
-.table-wrap { margin-top: 16px; overflow-x: auto; background: rgba(255, 253, 248, .72); border-top: 2px solid var(--ink); }
+.table-wrap { margin-top: 0; overflow-x: auto; background: rgba(255, 253, 248, .72); border-top: 2px solid var(--ink); }
 .table-head, .entry { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.15fr) 86px 72px minmax(120px, .8fr); gap: 16px; align-items: center; }
 .table-head { position: sticky; z-index: 2; top: 0; min-width: 700px; padding: 0 16px; background: var(--panel); border-bottom: 1px solid var(--line); box-shadow: 0 3px 8px rgba(47, 62, 55, .08); }
 .table-head .sort-button { min-width: 0; padding: 12px 0; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-align: left; text-transform: uppercase; }
