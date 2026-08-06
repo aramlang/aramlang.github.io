@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hebrew vocabulary search">
+  <title>Milim | Hebrew vocabulary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="search-panel" aria-label="Vocabulary search">
+      <div class="controls">
+        <div class="control-group" role="group" aria-label="Search mode">
+          <span class="control-label">Mode</span>
+          <button class="mode-button is-active" type="button" data-mode="literal">Literal</button>
+          <button class="mode-button" type="button" data-mode="fuzzy">Fuzzy</button>
+          <button class="mode-button" type="button" data-mode="regex">Regex</button>
+        </div>
+        <div class="control-group" role="group" aria-label="Tie-break language">
+          <span class="control-label">Prefer</span>
+          <button class="language-button is-active" type="button" data-language="english">English</button>
+          <button class="language-button" type="button" data-language="hebrew">Hebrew</button>
+        </div>
+        <div class="control-group" role="group" aria-label="Sort entries">
+          <span class="control-label">Sort</span>
+          <button class="sort-button sort-reset is-active" type="button" data-sort="original">Unsort</button>
+        </div>
+        <div class="control-group dataset-control" aria-label="Vocabulary count" title="Vocabulary entries">
+          <span class="status-dot"></span>
+          <span id="dataset-status">Loading words...</span>
+          <button id="help-button" class="help-button" type="button">Help</button>
+        </div>
+      </div>
+      <form id="search-form" class="search-row">
+        <input id="search-input" type="search" aria-label="Search English, Hebrew, or transliteration" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" list="search-history" placeholder="Search English, Hebrew, or transliteration" autofocus>
+        <datalist id="search-history"></datalist>
+        <button id="clear-button" class="clear-button" type="button" title="Clear search" aria-label="Clear search">Clear</button>
+      </form>
+    </section>
+
+    <section class="table-wrap" aria-label="Vocabulary entries">
+      <div class="table-head" role="row">
+        <button class="sort-button" type="button" data-sort="english" aria-label="Sort by English">English</button>
+        <button class="sort-button" type="button" data-sort="hebrew" aria-label="Sort by Hebrew">Hebrew</button>
+        <button class="sort-button" type="button" data-sort="gender" aria-label="Sort by gender or person">Gen</button>
+        <button class="sort-button" type="button" data-sort="category" aria-label="Sort by category">Categ</button>
+        <button class="sort-button" type="button" data-sort="grammar" aria-label="Sort by grammar">Grammar</button>
+      </div>
+      <div id="entries" class="entries" role="rowgroup"></div>
+      <p id="empty-state" class="empty-state" hidden>No matching entries.</p>
+      <div class="table-foot"><p id="search-status" class="search-status" aria-live="polite"></p></div>
+    </section>
+  </main>
+  <div id="copy-toast" class="copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <section id="help-dialog" class="modal-panel" aria-labelledby="help-title" hidden>
+    <div class="help-heading">
+      <div><p class="eyebrow">About this page</p><h2 id="help-title">Milim Help</h2></div>
+      <button id="close-help-button" class="close-button" type="button" aria-label="Close Help">Close</button>
+    </div>
+    <div id="help-sections" class="help-sections"></div>
+  </section>
+  <script src="app.js" defer></script>
+</body>
+</html>
