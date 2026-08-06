@@ -19,9 +19,48 @@ const searchStatus = document.querySelector('#search-status');
 const datasetStatus = document.querySelector('#dataset-status');
 const statusDot = document.querySelector('.status-dot');
 const copyToast = document.querySelector('#copy-toast');
+const searchForm = document.querySelector('#search-form');
+const searchHistoryElement = document.querySelector('#search-history');
+const searchHistoryKey = 'wortschatz_history';
+const maxSearchHistory = 50;
+let searchHistory = [];
 let lastTouchTime = 0;
 let lastTouchRow = null;
 let suppressClickUntil = 0;
+
+function renderSearchHistory() {
+  searchHistoryElement.replaceChildren(...searchHistory.map((term) => {
+    const option = document.createElement('option');
+    option.value = term;
+    return option;
+  }));
+}
+
+function loadSearchHistory() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(searchHistoryKey) || '[]');
+    searchHistory = Array.isArray(stored)
+      ? stored.filter((term) => typeof term === 'string' && term.trim()).slice(-maxSearchHistory)
+      : [];
+  } catch {
+    searchHistory = [];
+  }
+  renderSearchHistory();
+}
+
+function saveSearchTerm(value) {
+  const term = value.trim();
+  if (!term || searchHistory.includes(term)) return;
+  searchHistory = [...searchHistory, term].slice(-maxSearchHistory);
+  try {
+    localStorage.setItem(searchHistoryKey, JSON.stringify(searchHistory));
+  } catch {
+    return;
+  }
+  renderSearchHistory();
+}
+
+loadSearchHistory();
 
 function fold(value, ignoreCase = true) {
   const source = ignoreCase ? value.toLocaleLowerCase('de-DE') : value;
@@ -248,6 +287,12 @@ document.querySelectorAll('.language-button').forEach((button) => button.addEven
 
 input.addEventListener('focus', () => input.select());
 input.addEventListener('input', render);
+input.addEventListener('change', () => saveSearchTerm(input.value));
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  saveSearchTerm(input.value);
+  render();
+});
 document.querySelector('#clear-button').addEventListener('click', () => { input.value = ''; input.focus(); render(); });
 
 const helpSections = [

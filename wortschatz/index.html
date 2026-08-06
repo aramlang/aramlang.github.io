@@ -32,10 +32,11 @@
           <button id="help-button" class="help-button" type="button">Help</button>
         </div>
       </div>
-      <div class="search-row">
-        <input id="search-input" type="search" aria-label="Search English or German" autocomplete="off" spellcheck="false" placeholder="Search English or German" autofocus>
+      <form id="search-form" class="search-row">
+        <input id="search-input" type="search" aria-label="Search English or German" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" list="search-history" placeholder="Search English or German" autofocus>
+        <datalist id="search-history"></datalist>
         <button id="clear-button" class="clear-button" type="button" title="Clear search" aria-label="Clear search">Clear</button>
-      </div>
+      </form>
     </section>
 
     <section class="table-wrap" aria-label="Vocabulary entries">
