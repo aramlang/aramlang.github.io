@@ -35,6 +35,56 @@ a {
   text-decoration: none;
 }
 
+.chapter-actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 2px;
+}
+
+.practice-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 42px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 18px;
+  border: 1px solid #125d58;
+  border-radius: 6px;
+  background-color: #19736d;
+  box-shadow: 0 3px 0 #0d4d49, 0 6px 12px rgba(13, 77, 73, 0.2);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0;
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.practice-link:visited {
+  color: #fff;
+}
+
+.practice-link:hover {
+  background-color: #125f5a;
+  box-shadow: 0 4px 0 #0d4d49, 0 7px 14px rgba(13, 77, 73, 0.24);
+  transform: translateY(-1px);
+}
+
+.practice-link:focus-visible {
+  outline: 3px solid #c77918;
+  outline-offset: 3px;
+}
+
+.practice-link:active {
+  box-shadow: 0 1px 0 #0d4d49, 0 3px 7px rgba(13, 77, 73, 0.2);
+  transform: translateY(2px);
+}
+
+.practice-link-arrow {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
 input[type=number] {
   width: 3em;
 }
