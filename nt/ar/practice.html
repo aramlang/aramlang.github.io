@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peshitta Path</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="practice-game.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#practice-main">Skip to practice</a>
+  <div class="celebration" id="celebration" aria-hidden="true"></div>
+  <header class="app-header">
+    <div class="header-inner">
+      <a class="back-link" id="backLink" href="01_Mattai_01.html">
+        <span aria-hidden="true">&larr;</span>
+        <span>Chapter text</span>
+      </a>
+      <a class="brand" href="index.html" aria-label="Peshitta index">
+        <span class="brand-syriac" lang="syc">ܦܫܝܛܬܐ</span>
+        <span class="brand-copy">
+          <strong>Peshitta Path</strong>
+          <small>Syriac practice</small>
+        </span>
+      </a>
+      <label class="chapter-switch" for="chapterSelect">
+        <span>Course</span>
+        <select id="chapterSelect" aria-label="Choose chapter"></select>
+      </label>
+      <div class="stat-rack" aria-label="Learning statistics">
+        <div class="header-stat">
+          <span>XP</span>
+          <strong id="xpTotal">0</strong>
+        </div>
+        <div class="header-stat">
+          <span>Streak</span>
+          <strong id="streakTotal">0</strong>
+        </div>
+        <div class="header-stat">
+          <span>Level</span>
+          <strong id="levelTotal">1</strong>
+        </div>
+      </div>
+    </div>
+    <div class="daily-strip">
+      <div class="daily-inner">
+        <span>Daily goal</span>
+        <div class="daily-track" aria-hidden="true"><span id="dailyProgressBar"></span></div>
+        <strong id="dailyProgressText">0 / 120 XP</strong>
+      </div>
+    </div>
+  </header>
+
+  <main id="practice-main" class="app-grid">
+    <aside class="path-sidebar" aria-label="Chapter learning path">
+      <p class="chapter-kicker">Learning path</p>
+      <h1 id="chapterTitle">Mattai 1</h1>
+      <p class="chapter-subtitle" id="chapterSubtitle">25 verses</p>
+      <div class="chapter-progress-copy">
+        <span>Chapter mastery</span>
+        <strong id="chapterProgress">0 of 25 verses</strong>
+      </div>
+      <div class="chapter-track" aria-hidden="true"><span id="chapterProgressBar"></span></div>
+      <ol class="learning-path" id="learningPath"></ol>
+    </aside>
+
+    <section class="play-area" aria-live="polite">
+      <div class="loading-state" id="loadingState">Preparing your learning path...</div>
+      <div id="screen" hidden></div>
+    </section>
+
+    <aside class="record-sidebar" aria-label="Learning record">
+      <div>
+        <p class="panel-kicker">Your record</p>
+        <h2>Field notes</h2>
+      </div>
+      <dl class="record-list">
+        <div><dt>Verses mastered</dt><dd id="masteryTotal">0 / 25</dd></div>
+        <div><dt>Mastery stars</dt><dd id="starsTotal">0</dd></div>
+        <div><dt>Average accuracy</dt><dd id="accuracyTotal">0%</dd></div>
+        <div><dt>Next review</dt><dd id="nextReview">Verses 1-5</dd></div>
+      </dl>
+      <div class="badge-block">
+        <p class="badge-title">Achievement shelf</p>
+        <ul class="badge-shelf" id="badgeShelf"></ul>
+      </div>
+      <button class="reset-button" id="resetProgress" type="button">Reset chapter progress</button>
+    </aside>
+  </main>
+
+  <footer class="app-footer">
+    <span>Word-level audio timing from the Peshitta reading.</span>
+    <a id="footerChapterLink" href="index.html">Peshitta chapters</a>
+  </footer>
+
+  <script src="../../js/howler.core.min.js"></script>
+  <script type="module" src="practice-game.js"></script>
+</body>
+
+</html>
