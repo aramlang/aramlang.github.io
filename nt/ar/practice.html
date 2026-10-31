@@ -4,29 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f2">
   <title>Peshitta Path</title>
   <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
+  <link rel="stylesheet" href="interface.css">
   <link rel="stylesheet" type="text/css" media="screen" href="practice-game.css">
 </head>
 
-<body>
+<body class="site-page practice-page">
   <a class="skip-link" href="#practice-main">Skip to practice</a>
   <div class="celebration" id="celebration" aria-hidden="true"></div>
   <header class="app-header">
     <div class="header-inner">
-      <a class="back-link" id="backLink" href="01_Mattai_01.html">
-        <span aria-hidden="true">&larr;</span>
-        <span>Chapter text</span>
+      <a class="site-brand" href="index.html" aria-label="Peshitta home">
+        <span class="brand-mark" lang="syc" dir="rtl">ܦܫܝܛܬܐ</span>
+        <span class="brand-name"><strong>Peshitta</strong><small>Your practice path</small></span>
       </a>
-      <a class="brand" href="index.html" aria-label="Peshitta index">
-        <span class="brand-syriac" lang="syc">ܦܫܝܛܬܐ</span>
-        <span class="brand-copy">
-          <strong>Peshitta Path</strong>
-          <small>Syriac practice</small>
-        </span>
-      </a>
+      <nav class="site-nav practice-nav" aria-label="Main navigation">
+        <a href="index.html#chapters">Library</a>
+        <a id="backLink" href="01_Mattai_01.html">Read</a>
+      </nav>
       <label class="chapter-switch" for="chapterSelect">
-        <span>Course</span>
+        <span>Practice chapter</span>
         <select id="chapterSelect" aria-label="Choose chapter"></select>
       </label>
       <div class="stat-rack" aria-label="Learning statistics">
@@ -53,7 +52,7 @@
     </div>
   </header>
 
-  <main id="practice-main" class="app-grid">
+  <main id="practice-main" class="app-grid" tabindex="-1">
     <aside class="path-sidebar" aria-label="Chapter learning path">
       <p class="chapter-kicker">Learning path</p>
       <h1 id="chapterTitle">Mattai 1</h1>
@@ -91,10 +90,11 @@
   </main>
 
   <footer class="app-footer">
-    <span>Word-level audio timing from the Peshitta reading.</span>
-    <a id="footerChapterLink" href="index.html">Peshitta chapters</a>
+    <span>Peshitta Path <span aria-hidden="true">&middot;</span> A little practice, a deeper understanding.</span>
+    <a id="footerChapterLink" href="index.html#chapters">Explore all chapters</a>
   </footer>
 
+  <noscript><p class="reader-noscript">Practice needs JavaScript. You can still <a href="index.html#chapters">read the chapter texts</a>.</p></noscript>
   <script src="../../js/howler.core.min.js"></script>
   <script type="module" src="practice-game.js"></script>
 </body>

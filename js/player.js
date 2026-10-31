@@ -194,7 +194,7 @@ document.addEventListener('pageCompleted', (event) => {
         const title = `${book} ${chapterNo}:${verseNo}`;
         const file = `${bookNo}_${book}_${chapterNo}_${verseNo}`;
         const howl = new Howl({
-          src: [`../../media/${audioPrefix}${file}.${ext[0]}`],
+          src: ext.map(extension => `../../media/${audioPrefix}${file}.${extension}`),
           html5: false,
           preload: true,
           onplayerror: function (_, e) {
@@ -524,13 +524,14 @@ document.addEventListener('pageCompleted', (event) => {
     if (!sound) {
       return;
     }
-    if (!sound.playing()) {
-      return;
-    }
-
     const current = player.index;
     if (current < start || current > end) {
-      player.skipTo(start);
+      if (sound.playing()) {
+        player.skipTo(start);
+      }
+      else {
+        player.index = start;
+      }
     }
   }, (passiveSupported ? { passive: true } : false));
 

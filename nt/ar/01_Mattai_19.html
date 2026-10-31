@@ -3,268 +3,76 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mattai 19</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f2">
+  <title>Mattai 19 | Peshitta</title>
   <link rel="stylesheet" type="text/css" media="screen" href="../../font/font.css">
   <link rel="stylesheet" type="text/css" media="screen" href="../../css/site.css">
+  <link rel="stylesheet" href="interface.css">
 </head>
 
-<body>
-  <header class="sticky hrow">
-    <div class="hcol">
-      <div class="bold" title="ܟܵܪܘܼܙܘܼܬ݂ܵܐ ܕܡܲܬܲܝ">
-        The Preaching of Mattai - IN PROGRESS
-      </div>
-      <div class="gridContainer">
-        <div>
-          <span class="label">
-            <input type="checkbox" id="loop" checked title="Repet selected verses">
-            <label for="loop" title="Repet selected verses">Loop&nbsp;Verse</label>
-          </span>
-        </div>
-        <div>
-          <select id="startVerse" title="Start Verse">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-          </select>
-        </div>
-        <div>
-          <span class="label">
-            &nbsp;-&nbsp;<select id="endVerse" title="End Verse">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30" selected>30</option>
-            </select>
-          </span>
-        </div>
-        <div style="visibility:hidden;">
-          <span class="label">
-            <input type="checkbox" id="chapterLoop" title="Repet selected chapters">
-            <label for="chapterLoop" title="Repet selected chapters">Loop&nbsp;Chapter&nbsp;</label>
-          </span>
-        </div>
-        <div style="visibility:hidden;">
-          <select id="startChapter" title="Start Chapter">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-          </select>
-        </div>
-        <div style="visibility:hidden;">
-          <span class="label">
-            &nbsp;-&nbsp;<select id="endChapter" title="End Chapter">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28" selected>28</option>
-            </select>
-          </span>
-        </div>
-      </div>
-      <div class="srow">
-        <div title="Header will float, if checked">
-          <input type="checkbox" id="stickyHeader" checked>
-          <label for="stickyHeader">Float Bar</label>
-        </div>
-        <div title="Select Text Font">
-          <select id="fontFamily">
-            <option value="syr">East Assyrian</option>
-            <option value="ser">Serto</option>
-            <option value="est">Estrangela</option>
-            <option value="heb">Kthav Ashuri</option>
-            <option value="cal">CAL</option>
-          </select>
-        </div>
-      </div>
+<body class="site-page reader-page" data-audio="false">
+  <a class="skip-link" href="#reader-main">Skip to chapter text</a>
+  <div class="site-masthead" role="banner">
+    <a class="site-brand" href="index.html" aria-label="Peshitta home">
+      <span class="brand-mark" lang="syc" dir="rtl">ܦܫܝܛܬܐ</span>
+      <span class="brand-name"><strong>Peshitta</strong><small>Read &middot; Listen &middot; Learn</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html#chapters">Library</a>
+      <a href="index.html#practice">Practice</a>
+    </nav>
+  </div>
+  <section class="reader-intro" aria-labelledby="reader-title">
+    <div>
+      <p class="eyebrow">The Gospels &middot; Mattai</p>
+      <h1 id="reader-title">Mattai 19</h1>
+      <p class="reader-description">30 verses &middot; Syriac text with word-by-word English</p>
     </div>
-    <div class="hcol">
-      <div class="center smaller">
-        <a href="./index.html" title="ܦܸܫܝܼܛܬܵܐ">Peshitta</a>
-        <a href="01_Mattai_18.html" title="Go To Chapter 18">&lt;&nbsp;Prev</a>
-        <span class="label" title="Navigate to selected chapter">
-          &nbsp;&nbsp;<select id="gotoChapter">
-            <option value="1" title="Go To Chapter 1">1</option>
-            <option value="2" title="Go To Chapter 2">2</option>
-            <option value="3" title="Go To Chapter 3">3</option>
-            <option value="4" title="Go To Chapter 4">4</option>
-            <option value="5" title="Go To Chapter 5">5</option>
-            <option value="6" title="Go To Chapter 6">6</option>
-            <option value="7" title="Go To Chapter 7">7</option>
-            <option value="8" title="Go To Chapter 8">8</option>
-            <option value="9" title="Go To Chapter 9">9</option>
-            <option value="10" title="Go To Chapter 10">10</option>
-            <option value="11" title="Go To Chapter 11">11</option>
-            <option value="12" title="Go To Chapter 12">12</option>
-            <option value="13" title="Go To Chapter 13">13</option>
-            <option value="14" title="Go To Chapter 14">14</option>
-            <option value="15" title="Go To Chapter 15">15</option>
-            <option value="16" title="Go To Chapter 16">16</option>
-            <option value="17" title="Go To Chapter 17">17</option>
-            <option value="18" title="Go To Chapter 18">18</option>
-            <option value="19" title="Chapter 19" selected>19</option>
-          </select>&nbsp;&nbsp;
-        </span>
-        <a href="01_Mattai_01.html" title="Go To Chapter 1">Next&nbsp;&gt;</a>
-
-        <a href="./index.html" title="Peshitta">ܦܸܫܝܼܛܬܵܐ</a>
-      </div>
-      <div class="srow smaller" style="display:none">
-        <div title="Select Playback Speed">
-          <span class="label">
-            <label for="speed">Speed</label>
-            <select id="speed">
-              <option value="0.5" title="Slow speed">0.50&times;</option>
-              <option value="0.75" title="Slower speed">0.75&times;</option>
-              <option value="1" selected title="Normal speed">Normal</option>
-              <option value="1.25" title="Faster speed">1.25&times;</option>
-              <option value="1.5" title="Fast speed">1.50&times;</option>
-              <option value="1.75" title="Very Fast speed">1.75&times;</option>
-              <option value="2" title="Fastest speed">2.00&times;</option>
-            </select>
-            &nbsp;
-          </span>
-        </div>
-        <!-- Controls -->
-        <div>
-          <div id="loading"></div>
-          <div class="btn" id="playBtn" title="Play Audio"></div>
-          <div class="btn" id="pauseBtn" title="Pause Audio"></div>
-        </div>
-        <div>
-          <div class="btn" id="volumeBtn" style="margin-left: 5px;" title="Audio Volume"></div>
-        </div>
-        <div>
-          <span class="label" title="Pause After Each Word">
-            <span title="Pause After Each Word">&nbsp;Pause</span>
-            <input type="number" min="0" max="100" value="0" id="wordPause">
-            <label for="wordPause" title="Pause After Each Word">Seconds</label>
-          </span>
-        </div>
-      </div>
-      <div class="center">
-      </div>
+    <div class="reader-script" lang="syc" dir="rtl" aria-label="Mattai chapter 19 in Syriac">
+      <div class="syr"><span id="book">ܡܬܝ</span></div>
+      <div class="syr"><span id="chapter">ܨܚܵܚܵܐ ܝܛ</span></div>
     </div>
-    <div lang="syc" class="hcol syr t" style="display:none">
-      <div class="" title="The preaching of Mattai">
-        <span id="book"></span>
+  </section>
+  <header class="reader-controls sticky" role="region" aria-label="Reading controls">
+    <div class="playback-toolbar">
+      <div class="audio-state">
+        <span class="point-icon" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/></svg></span>
+        <div><strong>Text edition</strong><small>Audio and alternate scripts are not available for this chapter.</small></div>
       </div>
-      <div title="Chapter 19">
-        <span id="chapter"></span>
-      </div>
-      <div>
-        <span class="label">
-          <label for="zawae" title="Show/hide vowels and punctuation">
-            <span id="zawaeLabel"></span>
-          </label>
-          <input type="checkbox" id="zawae" checked title="Show/hide vowels and punctuation" accesskey="z">
-        </span>
-      </div>
+      <nav class="chapter-navigation" aria-label="Chapter navigation">
+        <a class="icon-button" href="01_Mattai_18.html" aria-label="Previous available chapter, Mattai 18" title="Mattai 18">&larr;</a>
+        <label class="sr-only" for="gotoChapter">Choose a chapter</label>
+        <select id="gotoChapter">
+          <option value="1">Chapter 1</option>
+          <option value="2">Chapter 2</option>
+          <option value="3">Chapter 3</option>
+          <option value="4">Chapter 4</option>
+          <option value="5">Chapter 5</option>
+          <option value="6">Chapter 6</option>
+          <option value="7">Chapter 7</option>
+          <option value="8">Chapter 8</option>
+          <option value="9">Chapter 9</option>
+          <option value="10">Chapter 10</option>
+          <option value="11">Chapter 11</option>
+          <option value="12">Chapter 12</option>
+          <option value="13">Chapter 13</option>
+          <option value="14">Chapter 14</option>
+          <option value="15">Chapter 15</option>
+          <option value="16">Chapter 16</option>
+          <option value="17">Chapter 17</option>
+          <option value="18">Chapter 18</option>
+          <option value="19" selected>Chapter 19</option>
+          <option value="28">Chapter 28</option>
+        </select>
+        <a class="icon-button" href="01_Mattai_28.html" aria-label="Next available chapter, Mattai 28" title="Mattai 28">&rarr;</a>
+      </nav>
     </div>
   </header>
-  <main class="clickable">
+  <div class="reader-help">
+    <p>Read at your own pace. Audio and guided practice are available for chapters 1&ndash;12.</p>
+  </div>
+  <main id="reader-main" tabindex="-1" aria-label="Mattai chapter 19 text">
     <div class="verse">
       <div class="verse-number">
         <div class="no">
@@ -2381,18 +2189,26 @@
 
     <br>
   </main>
+  <aside class="reader-notes" aria-label="Chapter notes">
   <hr>
   <p class="nfo">
     For script mapping help, see <a href="https://peshitta.github.io/help" target="_blank"
       title="Script Help">https://peshitta.github.io/help</a>
   </p>
 
-  <!-- Volume -->
-  <div id="volume" class="fadeout">
-    <div id="barFull" class="bar"></div>
-    <div id="barEmpty" class="bar"></div>
-    <div id="sliderBtn"></div>
-  </div>
-
+  </aside>
+  <nav class="reader-pagination" aria-label="Continue reading">
+    <a href="01_Mattai_18.html"><span>&larr; Previous available chapter</span><strong>Mattai 18</strong></a>
+    <a href="01_Mattai_28.html"><span>Next available chapter &rarr;</span><strong>Mattai 28</strong></a>
+  </nav>
+  <footer class="site-footer">
+    <p>Peshitta <span aria-hidden="true">&middot;</span> Read. Listen. Learn.</p>
+    <a href="index.html#chapters">Explore all chapters</a>
+  </footer>
+  <noscript>
+    <style>.loading-screen, .audio-actions, .reader-settings, #gotoChapter { display: none !important; }</style>
+    <p class="reader-noscript">You can still read the text and use the previous and next chapter links.</p>
+  </noscript>
+  <script type="module" src="reader-interface.js"></script>
 </body>
 </html>
